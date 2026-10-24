@@ -1,0 +1,4217 @@
+{
+ "base_vehicle": "Tuscan",
+ "default_slot": "Bottom",
+ "base_wheel": "Vista",
+ "ai_upscale": [
+  "Tex_CHEVELLE_INTERIOR",
+  "Tex_CHEVELLE_MISC",
+  "Tex_CHEVELLE_BADGING",
+  "Tex_CHEVELLE_ENGINE"
+ ],
+ "masked_texture_slots": [
+  "Tex_CHEVELLE_BADGING"
+ ],
+ "paintable_texture_slots": [
+  "Tex_CHEVELLE_WHEEL"
+ ],
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_CHEVELLE_KIT00_HEADLIGHT_ON": "HeadLight",
+  "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF": "TailLight",
+  "Tex_CHEVELLE_WHEEL": "Wheel_01",
+  "Paint2": "Body_02",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_T": "LeftTailLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_T": "RightTailLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_M": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_M": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "Tex_CHEVELLE_KIT00_HEADLIGHT_ON": "head",
+  "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF": "tail",
+  "Signal_L_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_L_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHEVELLE_MISC"
+  },
+  "Signal_L_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHEVELLE_BADGING"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHEVELLE_MISC"
+  },
+  "Signal_R_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHEVELLE_BADGING"
+  }
+ },
+ "car": "PS_CHEVELLE",
+ "display_name": "Chevrolet Chevelle SS 454 (ProStreet)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/geo/ps_chevelle",
+ "prefix": "CHEVELLE_KIT00",
+ "out_dir": "C:\\Users\\noust/mt-work/build/PS_CHEVELLE/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/tex/ps_chevelle/textures",
+ "cost": 90000,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xBEBC83C2": "Paint",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0xE4CEA025": "Bottom",
+  "0xA7D15952": "Tex_CHEVELLE_MISC",
+  "0x4B252052": "Tex_CHEVELLE_INTERIOR",
+  "0xCF37BA9C": "Tex_CHEVELLE_ENGINE",
+  "0xA2B0B13B": "Tex_CHEVELLE_WHEEL",
+  "0xB0B5D192": "Tex_CHEVELLE_BADGING",
+  "0xB59CAAD3": "Tex_CHEVELLE_KIT00_HEADLIGHT_ON",
+  "0xBADD814C": "Glass",
+  "0x894668C4": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF",
+  "0xA26A066C": "Paint",
+  "0x1B049702": "Bottom",
+  "0xA7D1D436": "Tex_MWCHEVELLE_CHEVELLENEON",
+  "0xBD1F0E0A": "Bottom",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x4C95C6F8": "Bottom",
+  "0x721AFF7C": "Tex_MWG_CARBONFIBRE",
+  "EXHAUST_CHROME": "Trim",
+  "EXHAUST_MUFFLER": "Bottom",
+  "EXHAUST_FACE": "Bottom"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BODY",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     }
+    },
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "skip_groups": [
+      2
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "skip_groups": [
+      2
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -32.3,
+      -42,
+      16.5
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -32.3,
+      42,
+      16.5
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     23,
+     -13.5,
+     97,
+     36,
+     13.5,
+     111
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_CHEVELLE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.03,
+      0.04,
+      0.62,
+      0.25
+     ]
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT08"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT09"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT06": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT08": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT08"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT09": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT09"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "BODY",
+     "prefix": "CHEVELLE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "DOOR_LEFT",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "DOOR_RIGHT",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHEVELLE_KITW01",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     },
+     "drop_coincident_with": {
+      "parts": [
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KITW01",
+      "tol": 1.0,
+      "also": [
+       {
+        "prefix": "CHEVELLE_KIT00",
+        "parts": [
+         "SKIRT_LEFT",
+         "SKIRT_RIGHT"
+        ]
+       }
+      ]
+     },
+     "blend": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY"
+      ],
+      "zones": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "BODY",
+     "prefix": "CHEVELLE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        147.2,
+        7,
+        56.0,
+        45.0
+       ],
+       [
+        -135.0,
+        9,
+        56.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -165.80700000000002,
+       178.28900000000002
+      ]
+     },
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "CHEVELLE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      201,
+      0,
+      -75.3
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99996,
+       1.00007,
+       1.00108
+      ],
+      "t": [
+       0.013,
+       0.0,
+       0.003
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -0.155,
+       0.0,
+       -0.028
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -240.998,
+       -60.196,
+       14.069
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -240.998,
+       60.696,
+       14.069
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99996,
+       1.00007,
+       1.00108
+      ],
+      "t": [
+       0.013,
+       0.0,
+       0.003
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -0.155,
+       0.0,
+       -0.028
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -244.096,
+       -29.798,
+       17.968
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -244.096,
+       29.798,
+       17.768
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00408,
+       1.0113,
+       1.00283
+      ],
+      "t": [
+       -0.04,
+       0.0,
+       0.733
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00408,
+        1.0113,
+        1.00283
+       ],
+       "t": [
+        -0.04,
+        0.0,
+        0.733
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00408,
+        1.0113,
+        1.00283
+       ],
+       "t": [
+        -0.04,
+        0.0,
+        0.733
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 53.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99996,
+       1.00007,
+       1.00108
+      ],
+      "t": [
+       0.013,
+       0.0,
+       0.003
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99996,
+        1.00007,
+        1.00108
+       ],
+       "t": [
+        0.013,
+        0.0,
+        0.003
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -0.155,
+       0.0,
+       -0.028
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99935,
+        0.99994,
+        0.9998
+       ],
+       "t": [
+        -0.155,
+        0.0,
+        -0.028
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -238.5,
+       -49.697,
+       14.469
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99935,
+       0.99994,
+       0.9998
+      ],
+      "t": [
+       -238.5,
+       49.697,
+       14.469
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00408,
+       1.0113,
+       1.00283
+      ],
+      "t": [
+       -0.04,
+       0.0,
+       0.733
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00408,
+        1.0113,
+        1.00283
+       ],
+       "t": [
+        -0.04,
+        0.0,
+        0.733
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/CHEVELLE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00408,
+        1.0113,
+        1.00283
+       ],
+       "t": [
+        -0.04,
+        0.0,
+        0.733
+       ]
+      },
+      "prefix": "CHEVELLE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 53.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99937,
+       1.00117,
+       0.99818
+      ],
+      "t": [
+       0.069,
+       0.0,
+       0.124
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "KIT00_HOOD",
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99937,
+       1.00117,
+       0.99818
+      ],
+      "t": [
+       0.069,
+       0.0,
+       0.124
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "STYLE01_HOOD",
+     "keep_nearest": {
+      "prefix": "CHEVELLE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99937,
+       1.00117,
+       0.99818
+      ],
+      "t": [
+       0.069,
+       0.0,
+       0.124
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "STYLE01_ATTACHMENT0"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_RearWing_MWSTYLE01_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00001,
+       1.00003,
+       0.99829
+      ],
+      "t": [
+       200.996,
+       0.0,
+       -75.14999999999999
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "STYLE01_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWSTYLE01_SPOILER_CF": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00001,
+       1.00003,
+       0.99829
+      ],
+      "t": [
+       200.996,
+       0.0,
+       -75.14999999999999
+      ]
+     },
+     "prefix": "CHEVELLE",
+     "part": "STYLE01_SPOILER_CF"
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "PS_CHEVELLE_R",
+  "Wheel_R": "PS_CHEVELLE_L",
+  "SteeringWheel": "PS_CHEVELLE"
+ },
+ "wheels": {
+  "front_x": 147.2,
+  "rear_x": -135.0,
+  "half_track": 75,
+  "z": 7,
+  "rear_z": 9,
+  "radius": 32,
+  "auto_arches": true
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    -6,
+    0,
+    38
+   ],
+   "size": [
+    494,
+    192,
+    50
+   ]
+  },
+  {
+   "center": [
+    -35,
+    0,
+    90
+   ],
+   "size": [
+    190,
+    140,
+    46
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     28.2,
+     -41.83,
+     64.73
+    ],
+    "rot": [
+     -12.84,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -248,
+     -60,
+     14
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -248,
+     60,
+     14
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -201,
+     0,
+     75.3
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     116
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -256,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     48.46,
+     -52.4,
+     66.3
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     47.98,
+     -39.77,
+     66.75
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     46.73,
+     -18.46,
+     70.19
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     47.49,
+     -18.9,
+     65.51
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     32.36,
+     -87.13,
+     79.18
+    ],
+    "rot": [
+     -5.43,
+     -13.28,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     32.36,
+     87.13,
+     79.18
+    ],
+    "rot": [
+     -3.4,
+     27.57,
+     0
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "wheel_display_name": "Chevelle SS '70 Stock (ProStreet)",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -31,
+    -42,
+    5.5
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -31,
+    42,
+    5.5
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -100,
+    35,
+    9
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -100,
+    -35,
+    9
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    29,
+    0,
+    103
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -10,
+    0,
+    108
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -70,
+    0,
+    106
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    228,
+    -70,
+    46
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    228,
+    70,
+    46
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    226,
+    69,
+    24
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    226,
+    -69,
+    24
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -260,
+    -75,
+    41
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -260,
+    75,
+    41
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -31,
+   -42,
+   93
+  ],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    5.0,
+    17.4,
+    0
+   ]
+  },
+  "body_mass": 1174
+ },
+ "stock_wing": false,
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    29,
+    -42,
+    64.5
+   ],
+   "radius": 22,
+   "x_range": [
+    18,
+    40
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    28.198999999999998,
+    -41.82599999999999,
+    64.72999999999999
+   ],
+   "tilt_deg": 12.84
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -260,
+    -90,
+    30,
+    -240,
+    -74.6,
+    52
+   ],
+   "note": "rear outer half: red US blinker",
+   "cuts": [
+    [
+     1,
+     -74.6
+    ],
+    [
+     1,
+     74.6
+    ],
+    [
+     1,
+     -66
+    ],
+    [
+     1,
+     66
+    ]
+   ]
+  },
+  {
+   "tag": "_T",
+   "from": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -260,
+    -74.6,
+    30,
+    -240,
+    -66,
+    52
+   ],
+   "note": "rear inner half -> Left/RightTailLight; |y|<66 sliver stays TailLight",
+   "cuts": [
+    [
+     1,
+     -74.6
+    ],
+    [
+     1,
+     74.6
+    ],
+    [
+     1,
+     -66
+    ],
+    [
+     1,
+     66
+    ]
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -260,
+    74.6,
+    30,
+    -240,
+    90,
+    52
+   ],
+   "note": "rear outer half: red US blinker",
+   "cuts": [
+    [
+     1,
+     -74.6
+    ],
+    [
+     1,
+     74.6
+    ],
+    [
+     1,
+     -66
+    ],
+    [
+     1,
+     66
+    ]
+   ]
+  },
+  {
+   "tag": "_T",
+   "from": "Tex_CHEVELLE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -260,
+    66,
+    30,
+    -240,
+    74.6,
+    52
+   ],
+   "note": "rear inner half -> Left/RightTailLight; |y|<66 sliver stays TailLight",
+   "cuts": [
+    [
+     1,
+     -74.6
+    ],
+    [
+     1,
+     74.6
+    ],
+    [
+     1,
+     -66
+    ],
+    [
+     1,
+     66
+    ]
+   ]
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_CHEVELLE_MISC",
+   "box": [
+    216.5,
+    -77,
+    18,
+    221,
+    -61.5,
+    27.6
+   ],
+   "note": "front bumper amber lamp left (box covers the widebody bumper lamp too)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_CHEVELLE_MISC",
+   "box": [
+    216.5,
+    61.5,
+    18,
+    221,
+    77,
+    27.6
+   ],
+   "note": "front bumper amber lamp right (box covers the widebody bumper lamp too)"
+  },
+  {
+   "tag": "_M",
+   "from": "Tex_CHEVELLE_BADGING",
+   "box": [
+    188,
+    -96,
+    12,
+    207,
+    -84,
+    24
+   ],
+   "note": "front side marker lens (amber BADGING) left"
+  },
+  {
+   "tag": "_M",
+   "from": "Tex_CHEVELLE_BADGING",
+   "box": [
+    188,
+    84,
+    12,
+    207,
+    96,
+    24
+   ],
+   "note": "front side marker lens right"
+  }
+ ],
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "PS_CHEVELLE_LS6",
+    "base_row": "SmallBlock_320HP",
+    "asset": "PS_CHEVELLE_LS6",
+    "base_asset": "Cars/Parts/Engine/81bb",
+    "display_name": "454 LS6 V8 (ProStreet Chevelle SS)",
+    "mass": 310,
+    "cost": 34000,
+    "max_torque_nm": 678.0,
+    "max_rpm": 6500,
+    "curve": [
+     [
+      0.1231,
+      0.3
+     ],
+     [
+      0.2308,
+      0.72
+     ],
+     [
+      0.3385,
+      0.88
+     ],
+     [
+      0.4615,
+      0.97
+     ],
+     [
+      0.5538,
+      1.0
+     ],
+     [
+      0.6769,
+      0.97
+     ],
+     [
+      0.7692,
+      0.92
+     ],
+     [
+      0.8615,
+      0.844
+     ],
+     [
+      0.9231,
+      0.77
+     ],
+     [
+      1.0,
+      0.6
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "Factory 1970 LS6: 450 bhp @ 5600, 500 lb-ft @ 3600 (ProStreet chevelle_track ~405 hp is low); More Tuning 81bb (big-block) sound"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "PS_CHEVELLE_M22",
+    "base_row": "4SpeedManual_Daffy",
+    "asset": "PS_CHEVELLE_M22",
+    "base_asset": "Cars/Parts/Transmission/Manual4Speed_Daffy",
+    "display_name": "Muncie M22 4-Speed (ProStreet Chevelle SS)",
+    "cost": 5000,
+    "mass": 80,
+    "ratios": {
+     "R": -2.26,
+     "1": 2.2,
+     "2": 1.64,
+     "3": 1.27,
+     "4": 1.0
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "PS_CHEVELLE_LS6",
+  "Transmission": "PS_CHEVELLE_M22",
+  "FinalDriveRatio": "104",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "PS_CHEVELLE",
+  "Wheel1": "PS_CHEVELLE",
+  "Wheel2": "PS_CHEVELLE",
+  "Wheel3": "PS_CHEVELLE",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "PS_CHEVELLE_FrontBumper_KIT00",
+  "RearBumper": "PS_CHEVELLE_RearBumper_KIT00",
+  "Bonnet": "PS_CHEVELLE_Bonnet_KIT00",
+  "SideSkirt": "PS_CHEVELLE_SideSkirt_KIT00",
+  "Fender": "PS_CHEVELLE_Fender_KIT00"
+ },
+ "performance_source": "ProStreet vehicle.yml chevelle_track: MASS 1600, FINAL_GEAR 3.73, GEAR_RATIO R3.4/2.20/1.64/1.28/1.00/0.65, RED_LINE 6000, MAX_RPM 6500; power set to the factory LS6 450 bhp / 500 lb-ft",
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     48.46,
+     -52.4,
+     66.3
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     47.98,
+     -39.77,
+     66.75
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     46.73,
+     -18.46,
+     70.19
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     47.49,
+     -18.9,
+     65.51
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.0
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": -6.0,
+   "width": 4.4,
+   "height": 1.1,
+   "out": 0.25
+  }
+ },
+ "gauge_faces": {
+  "Tex_CHEVELLE_INTERIOR": [
+   {
+    "center": [
+     0.2305,
+     0.108
+    ],
+    "face": [
+     0.2305,
+     0.108,
+     0.0305
+    ],
+    "radius": 0.0265,
+    "aspect": 1.42,
+    "rotate": 0,
+    "min": 0,
+    "max": 140,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.1465,
+     0.111
+    ],
+    "face": [
+     0.1465,
+     0.111,
+     0.0305
+    ],
+    "radius": 0.0265,
+    "aspect": 1.42,
+    "rotate": 0,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 6.5,
+    "font": 0.24,
+    "captions": []
+   },
+   {
+    "center": [
+     0.373,
+     0.076
+    ],
+    "face": [
+     0.373,
+     0.076,
+     0.0145
+    ],
+    "radius": 0.0125,
+    "aspect": 1.42,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.369,
+     0.123
+    ],
+    "face": [
+     0.369,
+     0.123,
+     0.0145
+    ],
+    "radius": 0.0125,
+    "aspect": 1.42,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "texture_upscale": {
+  "Tex_CHEVELLE_INTERIOR": 4
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_CHEVELLE_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_CHEVELLE_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "aero_parts": [
+  {
+   "row": "PS_CHEVELLE_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_KIT08",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT08",
+   "display_name": "Stratospeed Formula 4 Front Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_KIT09",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT09",
+   "display_name": "Stratospeed Formula 5 Front Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Front Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_KITW01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KITW01",
+   "display_name": "Stratospeed Widebody Front Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_KIT08",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT08",
+   "display_name": "Stratospeed Formula 4 Rear Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_KIT09",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT09",
+   "display_name": "Stratospeed Formula 5 Rear Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Rear Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_KITW01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KITW01",
+   "display_name": "Stratospeed Widebody Rear Bumper"
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_KIT01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT01",
+   "display_name": "Araxis Sport Hood"
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_KIT02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT02",
+   "display_name": "Araxis Sweeper Hood"
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_KIT03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT03",
+   "display_name": "Araxis Blitz Hood"
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_KIT06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT06",
+   "display_name": "Araxis Impact Hood"
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_KIT00",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT00",
+   "display_name": "Stock Side Skirts"
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_KIT08",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT08",
+   "display_name": "Stratospeed Formula 4 Side Skirts"
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_KIT09",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT09",
+   "display_name": "Stratospeed Formula 5 Side Skirts"
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Stratospeed Formula 7 Side Skirts"
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_KITW01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KITW01",
+   "display_name": "Stratospeed Widebody Side Skirts"
+  },
+  {
+   "row": "PS_CHEVELLE_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Front Fenders"
+  },
+  {
+   "row": "PS_CHEVELLE_Fender_KITW01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KITW01",
+   "display_name": "Stratospeed Widebody Front Fenders"
+  },
+  {
+   "row": "PS_CHEVELLE_RearWing_DRAG",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_DRAG",
+   "display_name": "Gentera Style 403 Wing"
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_MWKIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_MWKIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_MWKIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_MWKIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_MWKIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_FrontBumper_MWKIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_RearBumper_MWKIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_SideSkirt_MWKIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_MWKIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWKIT00",
+   "display_name": "Most Wanted Stock Hood",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_Bonnet_MWSTYLE01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE01",
+   "display_name": "Most Wanted Hood 1",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_RearWing_MWSTYLE01_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWSTYLE01_SPOILER",
+   "display_name": "Most Wanted Wing 1",
+   "mw": true
+  },
+  {
+   "row": "PS_CHEVELLE_RearWing_MWSTYLE01_SPOILER_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWSTYLE01_SPOILER_CF",
+   "display_name": "Most Wanted Wing 1 (Carbon)",
+   "mw": true
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "SideSkirt",
+  "Fender"
+ ],
+ "decals": [
+  {
+   "from": "Paint",
+   "to": "Paint2",
+   "projection": "top",
+   "min_up_nz": 0.2,
+   "meshes": [
+    "Body",
+    "Aero_Bonnet"
+   ],
+   "note": "70 SS hood/trunk stripes with pinstripe outlines (ProStreet stock vinyl), Body_02",
+   "polys": [
+    [
+     [
+      82,
+      5.4
+     ],
+     [
+      230,
+      5.4
+     ],
+     [
+      217,
+      43.0
+     ],
+     [
+      82,
+      43.0
+     ]
+    ],
+    [
+     [
+      80.8,
+      44.8
+     ],
+     [
+      80.8,
+      3.6
+     ],
+     [
+      80.2,
+      3.6
+     ],
+     [
+      80.2,
+      44.8
+     ]
+    ],
+    [
+     [
+      80.2,
+      4.2
+     ],
+     [
+      231.8,
+      4.2
+     ],
+     [
+      231.8,
+      3.6
+     ],
+     [
+      80.2,
+      3.6
+     ]
+    ],
+    [
+     [
+      231.72,
+      4.09
+     ],
+     [
+      217.55,
+      45.09
+     ],
+     [
+      218.11,
+      45.29
+     ],
+     [
+      232.29,
+      4.29
+     ]
+    ],
+    [
+     [
+      218.8,
+      44.2
+     ],
+     [
+      80.2,
+      44.2
+     ],
+     [
+      80.2,
+      44.8
+     ],
+     [
+      218.8,
+      44.8
+     ]
+    ],
+    [
+     [
+      82,
+      -5.4
+     ],
+     [
+      230,
+      -5.4
+     ],
+     [
+      217,
+      -43.0
+     ],
+     [
+      82,
+      -43.0
+     ]
+    ],
+    [
+     [
+      80.8,
+      -44.8
+     ],
+     [
+      80.8,
+      -3.6
+     ],
+     [
+      80.2,
+      -3.6
+     ],
+     [
+      80.2,
+      -44.8
+     ]
+    ],
+    [
+     [
+      80.2,
+      -4.2
+     ],
+     [
+      231.8,
+      -4.2
+     ],
+     [
+      231.8,
+      -3.6
+     ],
+     [
+      80.2,
+      -3.6
+     ]
+    ],
+    [
+     [
+      231.72,
+      -4.09
+     ],
+     [
+      217.55,
+      -45.09
+     ],
+     [
+      218.11,
+      -45.29
+     ],
+     [
+      232.29,
+      -4.29
+     ]
+    ],
+    [
+     [
+      218.8,
+      -44.2
+     ],
+     [
+      80.2,
+      -44.2
+     ],
+     [
+      80.2,
+      -44.8
+     ],
+     [
+      218.8,
+      -44.8
+     ]
+    ],
+    [
+     [
+      -236,
+      5.4
+     ],
+     [
+      -178,
+      5.4
+     ],
+     [
+      -178,
+      43.0
+     ],
+     [
+      -236,
+      43.0
+     ]
+    ],
+    [
+     [
+      -237.2,
+      44.8
+     ],
+     [
+      -237.2,
+      3.6
+     ],
+     [
+      -237.8,
+      3.6
+     ],
+     [
+      -237.8,
+      44.8
+     ]
+    ],
+    [
+     [
+      -237.8,
+      4.2
+     ],
+     [
+      -176.2,
+      4.2
+     ],
+     [
+      -176.2,
+      3.6
+     ],
+     [
+      -237.8,
+      3.6
+     ]
+    ],
+    [
+     [
+      -176.8,
+      3.6
+     ],
+     [
+      -176.8,
+      44.8
+     ],
+     [
+      -176.2,
+      44.8
+     ],
+     [
+      -176.2,
+      3.6
+     ]
+    ],
+    [
+     [
+      -176.2,
+      44.2
+     ],
+     [
+      -237.8,
+      44.2
+     ],
+     [
+      -237.8,
+      44.8
+     ],
+     [
+      -176.2,
+      44.8
+     ]
+    ],
+    [
+     [
+      -236,
+      -5.4
+     ],
+     [
+      -178,
+      -5.4
+     ],
+     [
+      -178,
+      -43.0
+     ],
+     [
+      -236,
+      -43.0
+     ]
+    ],
+    [
+     [
+      -237.2,
+      -44.8
+     ],
+     [
+      -237.2,
+      -3.6
+     ],
+     [
+      -237.8,
+      -3.6
+     ],
+     [
+      -237.8,
+      -44.8
+     ]
+    ],
+    [
+     [
+      -237.8,
+      -4.2
+     ],
+     [
+      -176.2,
+      -4.2
+     ],
+     [
+      -176.2,
+      -3.6
+     ],
+     [
+      -237.8,
+      -3.6
+     ]
+    ],
+    [
+     [
+      -176.8,
+      -3.6
+     ],
+     [
+      -176.8,
+      -44.8
+     ],
+     [
+      -176.2,
+      -44.8
+     ],
+     [
+      -176.2,
+      -3.6
+     ]
+    ],
+    [
+     [
+      -176.2,
+      -44.2
+     ],
+     [
+      -237.8,
+      -44.2
+     ],
+     [
+      -237.8,
+      -44.8
+     ],
+     [
+      -176.2,
+      -44.8
+     ]
+    ]
+   ]
+  }
+ ],
+ "surface_tweaks": [
+  {
+   "from": "Tex_CHEVELLE_MISC",
+   "box": [
+    -190,
+    60,
+    5,
+    -80,
+    101,
+    56
+   ],
+   "lift": 0.25,
+   "normal_blend": 0.6,
+   "note": "rear chrome arch lips: out of the quarter panel's shadow (flickered in game)"
+  },
+  {
+   "from": "Tex_CHEVELLE_MISC",
+   "box": [
+    95,
+    60,
+    5,
+    200,
+    101,
+    56
+   ],
+   "lift": 0.25,
+   "normal_blend": 0.6,
+   "note": "front chrome arch lips, same"
+  }
+ ],
+ "skins": {
+  "dir": "~/nfs-work/vinyl/livery/textures",
+  "pick": [
+   "CHEVELLE_AFTERMIX_CHEVELLE",
+   "CHEVELLE_BM_ORGOPP_CHEVELLE01",
+   "CHEVELLE_BOD_CHEVELLE",
+   "CHEVELLE_DRAG_CHEVELLE",
+   "CHEVELLE_GENERIC_CHEVELLE",
+   "CHEVELLE_HUB_CHEVELLE",
+   "CHEVELLE_SPEED_CHEVELLE"
+  ],
+  "labels": {
+   "CHEVELLE_AFTERMIX_CHEVELLE": "Aftermix Livery (ProStreet)",
+   "CHEVELLE_BM_ORGOPP_CHEVELLE01": "Bm Orgopp Livery (ProStreet)",
+   "CHEVELLE_BOD_CHEVELLE": "Bod Livery (ProStreet)",
+   "CHEVELLE_DRAG_CHEVELLE": "Drag Livery (ProStreet)",
+   "CHEVELLE_GENERIC_CHEVELLE": "Generic Livery (ProStreet)",
+   "CHEVELLE_HUB_CHEVELLE": "Hub Livery (ProStreet)",
+   "CHEVELLE_SPEED_CHEVELLE": "Speed Livery (ProStreet)"
+  }
+ },
+ "texture_sources": {
+  "Tex_MWCHEVELLE_CHEVELLENEON": "0xA7D1D436",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C"
+ },
+ "texture_dirs": {
+  "Tex_MWCHEVELLE_CHEVELLENEON": "C:\\Users\\noust\\nfs-work/db\\mw\\CHEVELLE\\tex\\textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "mw_parts": {
+  "CHEVELLE": {
+   "xform": {
+    "s": [
+     1.00001,
+     1.00003,
+     0.99829
+    ],
+    "t": [
+     -0.004,
+     0.0,
+     0.15
+    ]
+   },
+   "front_cut": 178.3,
+   "rear_cut": -165.8,
+   "residual_cm": [
+    0.57,
+    1.97
+   ]
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   16,
+   16,
+   17
+  ],
+  "ink": [
+   238,
+   236,
+   226
+  ],
+  "red_color": [
+   230,
+   50,
+   30
+  ],
+  "font_file": "framd.ttf",
+  "ring": [
+   [
+    205,
+    205,
+    210
+   ],
+   0.08
+  ],
+  "glow_color": [
+   200,
+   255,
+   190
+  ],
+  "glow_red": [
+   255,
+   60,
+   30
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 140,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  255,
+  110,
+  20
+ ],
+ "needle_scales": {
+  "RPM": 0.773,
+  "Speed": 0.773,
+  "Fuel": 0.728,
+  "Temp": 0.728
+ },
+ "arch_zones": [
+  [
+   147.2,
+   7,
+   56.0,
+   45.0
+  ],
+  [
+   -135.0,
+   9,
+   56.0,
+   45.0
+  ]
+ ],
+ "ps_meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "skip_groups": [
+      2
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "skip_groups": [
+      2
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -32.3,
+      -42,
+      16.5
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -32.3,
+      42,
+      16.5
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     23,
+     -13.5,
+     97,
+     36,
+     13.5,
+     111
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_CHEVELLE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.03,
+      0.04,
+      0.62,
+      0.25
+     ]
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHEVELLE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT08"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT09"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT06": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHEVELLE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT08": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT08"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT09": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT09"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHEVELLE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHEVELLE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHEVELLE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHEVELLE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ]
+    },
+    {
+     "part": "DOOR_LEFT",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "DOOR_RIGHT",
+     "prefix": "CHEVELLE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHEVELLE_KIT00",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "CHEVELLE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      201,
+      0,
+      -75.3
+     ]
+    }
+   ],
+   "aero": true
+  }
+ }
+}

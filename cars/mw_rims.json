@@ -1,0 +1,23 @@
+{
+ "kind": "rims",
+ "car": "MW_Rims",
+ "geo_dir": "~/nfs-work/packs/mw_WHEELS",
+ "size": 18,
+ "source_scale": 100.0,
+ "out_dir": "~/mt-work/build/MW_Rims/meshes",
+ "vehicle_keys": [
+  "PS_350Z",
+  "PS_SUPRA",
+  "PS_ELISE",
+  "PS_997TT",
+  "PS_SKYLINE",
+  "PS_SHELBY67",
+  "PS_CHALLENGER71",
+  "PS_CHEVELLE",
+  "PS_VIPER",
+  "MW_M3GTR",
+  "MW_993RWB"
+ ],
+ "cost": 1500,
+ "base_wheel": "Zino"
+}

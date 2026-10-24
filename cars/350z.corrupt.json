@@ -1,0 +1,342 @@
+{
+ "car": "PS_350Z",
+ "display_name": "Nissan 350Z (ProStreet)",
+ "geometry_dir": "C:/Users/noust/nfs-work/geo/ps_350z",
+ "prefix": "350Z_KIT00",
+ "lod": "A",
+ "out_dir": "C:/Users/noust/mt-work/build/PS_350Z/meshes",
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0x621F43FC": "Tex_350Z_MISC",
+  "0xFA5C4FFC": "Tex_350Z_INTERIOR",
+  "0xE490B3FC": "Tex_350Z_BADGING",
+  "0xA6BBF125": "Tex_350Z_WHEEL",
+  "0x54AAF7C6": "Tex_350Z_ENGINE",
+  "0xAA6AF6FD": "Tex_350Z_KIT00_HEADLIGHT_ON",
+  "0xBF30889B": "Trim",
+  "0x7D42C4F6": "Glass",
+  "0xEAD8676E": "Tex_350Z_KIT00_BRAKELIGHT_OFF",
+  "0x9B4396C7": "Tex_350Z_KIT00_BRAKELIGHT_GLASS_OFF"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "HEADLIGHT_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_RIGHT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -25,
+      -37,
+      12
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -25,
+      37,
+      12
+     ]
+    }
+   ],
+   "drop_slots": [
+    "Tex_350Z_KIT00_BRAKELIGHT_GLASS_OFF"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_350Z_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.2,
+      0.52,
+      0.72,
+      0.72
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     12,
+     -18,
+     97,
+     30,
+     18,
+     113
+    ]
+   ]
+  },
+  "Door_L": {
+   "parts": [
+    "DOOR_LEFT",
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "Door_R": {
+   "parts": [
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "350Z_KIT00",
+      "tol": 1.0,
+      "_grid": 

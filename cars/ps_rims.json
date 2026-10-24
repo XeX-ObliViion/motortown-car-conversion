@@ -1,0 +1,34 @@
+{
+ "kind": "rims",
+ "car": "PS_Rims",
+ "groups": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "variant": "FRONT",
+ "geo_root": "~/nfs-work/geo/ps_group{g:02d}",
+ "tex_root": "~/nfs-work/tex/ps_group{g:02d}/textures",
+ "out_dir": "~/mt-work/build/PS_Rims/meshes",
+ "vehicle_keys": [
+  "PS_350Z",
+  "PS_SUPRA",
+  "PS_ELISE",
+  "PS_997TT",
+  "PS_SKYLINE",
+  "PS_SHELBY67",
+  "PS_CHALLENGER71",
+  "PS_CHEVELLE",
+  "PS_VIPER",
+  "MW_M3GTR",
+  "MW_993RWB"
+ ],
+ "cost": 1500,
+ "base_wheel": "Zino",
+ "names": "ps_rim_names.json"
+}

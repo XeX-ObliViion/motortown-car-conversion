@@ -1,0 +1,8231 @@
+{
+ "car": "PS_SKYLINE",
+ "display_name": "Nissan Skyline GT-R R34 (ProStreet)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/geo/ps_skyline",
+ "prefix": "SKYLINE_KIT00",
+ "out_dir": "C:\\Users\\noust/mt-work/build/PS_SKYLINE/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/tex/ps_skyline/textures",
+ "base_vehicle": "Vista",
+ "cost": 120000,
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xBEBC83C2": "Paint",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x192A14A9": "Tex_SKYLINE_MISC",
+  "0xE689AF29": "Tex_SKYLINE_INTERIOR",
+  "0xF9ACA7B3": "Tex_SKYLINE_ENGINE",
+  "0x3F20D772": "Tex_SKYLINE_WHEEL",
+  "0x29C86189": "Tex_SKYLINE_BADGING",
+  "0x4B66F26A": "Tex_SKYLINE_KIT00_HEADLIGHT_ON",
+  "0xCE9ADE23": "Glass",
+  "0xBAC0F21B": "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF",
+  "0x3EDA2CA3": "Paint",
+  "0x1B049702": "Bottom",
+  "0x721AFF7C": "Tex_MWG_CARBONFIBRE",
+  "0xBD1F0E0A": "Bottom",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x4C95C6F8": "Bottom",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x8C283C65": "Bottom",
+  "EXHAUST_CHROME": "Trim",
+  "EXHAUST_MUFFLER": "Bottom",
+  "EXHAUST_FACE": "Bottom"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BODY",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    "BASE",
+    "TRUNK",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -34,
+      -37,
+      13
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -34,
+      37,
+      13
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     17,
+     -12.5,
+     95,
+     26,
+     11.5,
+     109.5
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_SKYLINE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.47,
+      0.4,
+      0.7,
+      0.73
+     ]
+    }
+   ]
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -3.2,
+     -6.8,
+     0
+    ]
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -5.0,
+     -6.2,
+     0
+    ],
+    "mirror_frame": true
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SKYLINE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "SKYLINE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT04": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT03"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT04"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "BODY",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SKYLINE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "SKYLINE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SKYLINE_KITW01",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "drop_coincident_with": {
+      "parts": [
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "prefix": "SKYLINE_KITW01",
+      "tol": 1.0,
+      "also": [
+       {
+        "prefix": "SKYLINE_KIT00",
+        "parts": [
+         "SKIRT_LEFT",
+         "SKIRT_RIGHT"
+        ]
+       }
+      ]
+     },
+     "blend": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY"
+      ],
+      "zones": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "BODY",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "SPOILER",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Door_Left": {
+   "parts": [
+    "DOOR_LEFT",
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    }
+   ],
+   "bbox_collision": true
+  },
+  "Door_Right": {
+   "parts": [
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    }
+   ],
+   "bbox_collision": true
+  },
+  "Aero_FrontBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       -45.614,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       -34.91,
+       13.223
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT01_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       -45.614,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       -34.91,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       34.91,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.434,
+       45.514,
+       13.223
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT02_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -234.975,
+       -45.614,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -234.975,
+       -34.91,
+       13.223
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT03_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -226.93,
+       -30.509,
+       12.83
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT04_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -72.597,
+       -89.127,
+       18.92
+      ],
+      "rot_z": 90.0
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -72.597,
+       89.127,
+       18.92
+      ],
+      "rot_z": -90.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        134.1,
+        17,
+        57.0,
+        45.0
+       ],
+       [
+        -132.5,
+        19,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -157.262,
+       158.727
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -220.872,
+       51.015,
+       13.223
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -222.362,
+       55.017,
+       12.241
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -222.362,
+       61.759,
+       12.241
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00239,
+       1.00073,
+       0.99551
+      ],
+      "t": [
+       -0.555,
+       0.0,
+       0.141
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00239,
+        1.00073,
+        0.99551
+       ],
+       "t": [
+        -0.555,
+        0.0,
+        0.141
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -1.587,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99314,
+        1.0003,
+        0.98226
+       ],
+       "t": [
+        -1.587,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -221.17,
+       -56.717,
+       13.223
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99314,
+       1.0003,
+       0.98226
+      ],
+      "t": [
+       -221.17,
+       56.717,
+       13.223
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00064,
+       1.00408,
+       0.95748
+      ],
+      "t": [
+       0.111,
+       0.0,
+       0.65
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/SKYLINE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00064,
+        1.00408,
+        0.95748
+       ],
+       "t": [
+        0.111,
+        0.0,
+        0.65
+       ]
+      },
+      "prefix": "SKYLINE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 64.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT00_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE02_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE03_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE04_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE05_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE06_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE07_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE09_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE10_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE13": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE13_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE16": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE16_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE17": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE17_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE20": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE20_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE21": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE21_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE23": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE23_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE26": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE26_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE31": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE31_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE32": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99761,
+       1.00111,
+       0.99622
+      ],
+      "t": [
+       0.349,
+       0.0,
+       0.251
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "STYLE32_HOOD",
+     "keep_nearest": {
+      "prefix": "SKYLINE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_RearWing_MWKIT00_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99984,
+       0.99974,
+       0.98709
+      ],
+      "t": [
+       204.993,
+       0.0,
+       -81.262
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT00_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWKIT00_SPOILER_CF": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\SKYLINE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99984,
+       0.99974,
+       0.98709
+      ],
+      "t": [
+       204.993,
+       0.0,
+       -81.262
+      ]
+     },
+     "prefix": "SKYLINE",
+     "part": "KIT00_SPOILER_CF"
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "PS_SKYLINE_R",
+  "Wheel_R": "PS_SKYLINE_L",
+  "SteeringWheel": "PS_SKYLINE"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_SKYLINE_KIT00_HEADLIGHT_ON": "HeadLight",
+  "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF": "TailLight",
+  "Tex_SKYLINE_WHEEL": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "Tex_SKYLINE_KIT00_HEADLIGHT_ON": "head",
+  "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_MISC"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_MISC"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_SKYLINE_WHEEL"
+ ],
+ "masked_texture_slots": [
+  "Tex_SKYLINE_BADGING",
+  "Tex_MWG_GRILL01"
+ ],
+ "ai_upscale": [
+  "Tex_SKYLINE_INTERIOR",
+  "Tex_SKYLINE_MISC",
+  "Tex_SKYLINE_BADGING",
+  "Tex_SKYLINE_ENGINE"
+ ],
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror:mirror"
+ },
+ "wheels": {
+  "front_x": 134.1,
+  "rear_x": -132.5,
+  "half_track": 75,
+  "z": 17,
+  "rear_z": 19,
+  "radius": 33,
+  "auto_arches": true
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    40
+   ],
+   "size": [
+    450,
+    178,
+    50
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    92
+   ],
+   "size": [
+    215,
+    145,
+    46
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     30.3,
+     39.69,
+     68.87
+    ],
+    "rot": [
+     -15.36,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -226,
+     -40,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -226,
+     -40,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -205,
+     0,
+     82
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     116
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -228,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     24.301,
+     -7.83,
+     7.878
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -98.36
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     24.243,
+     5.56,
+     8.277
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -98.36
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     24.759,
+     13.95,
+     4.738
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -98.36
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     24.775,
+     -16.49,
+     4.607
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -98.36
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "wheel_display_name": "Skyline GT-R Stock (ProStreet)",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -34,
+    38,
+    6
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -34,
+    -38,
+    6
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    22,
+    0,
+    103
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -10,
+    0,
+    108
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -60,
+    0,
+    108
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    222,
+    -58,
+    47
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    222,
+    58,
+    47
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    228,
+    62,
+    35
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    228,
+    -62,
+    35
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -226,
+    -56,
+    64
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -226,
+    56,
+    64
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -34,
+   38,
+   94
+  ],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    4.9,
+    -17.0,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -3.2,
+    -6.8,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -5.0,
+    -6.2,
+    0
+   ]
+  },
+  "body_mass": 1074,
+  "body_material": "/Game/Cars/Materials/Body/M_Body",
+  "set_props": {
+   "LeftDoor_GEN_VARIABLE": {
+    "DoorType": "PassengerDoor"
+   },
+   "RightDoor_GEN_VARIABLE": {
+    "DoorType": "DriverDoor"
+   }
+  }
+ },
+ "stock_wing": true,
+ "drivetrain": "awd",
+ "recentered": {
+  "SideMirror": [
+   41.97,
+   -87.38,
+   77.83
+  ],
+  "RightSideMirror": [
+   41.97,
+   -87.38,
+   77.83
+  ]
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    30,
+    40,
+    67
+   ],
+   "radius": 20,
+   "x_range": [
+    18,
+    40
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    30.304499999999997,
+    39.689,
+    68.86500000000001
+   ],
+   "tilt_deg": 15.36
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     55.82,
+     31.86,
+     70.03
+    ],
+    "rot": [
+     0,
+     -90,
+     -83.0
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     55.87,
+     45.25,
+     70.43
+    ],
+    "rot": [
+     0,
+     -90,
+     -83.0
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     55.43,
+     53.64,
+     66.88
+    ],
+    "rot": [
+     0,
+     -90,
+     -83.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     55.41,
+     23.2,
+     66.75
+    ],
+    "rot": [
+     0,
+     -90,
+     -83.0
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": -3.4,
+   "width": 4.6,
+   "height": 1.2,
+   "out": 0.25
+  }
+ },
+ "texture_upscale": {
+  "Tex_SKYLINE_INTERIOR": 4
+ },
+ "gauge_faces": {
+  "Tex_SKYLINE_INTERIOR": [
+   {
+    "center": [
+     0.558,
+     0.595
+    ],
+    "face": [
+     0.558,
+     0.595,
+     0.04
+    ],
+    "radius": 0.0352,
+    "rotate": 52.5,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000",
+      0.22,
+      270
+     ]
+    ],
+    "caption_font": 0.11
+   },
+   {
+    "center": [
+     0.6165,
+     0.5145
+    ],
+    "face": [
+     0.6165,
+     0.5145,
+     0.04
+    ],
+    "radius": 0.0352,
+    "rotate": 52.5,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.6785,
+     0.4855
+    ],
+    "face": [
+     0.6785,
+     0.4855,
+     0.0185
+    ],
+    "radius": 0.01628,
+    "rotate": 52.5,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.541,
+     0.663
+    ],
+    "face": [
+     0.541,
+     0.663,
+     0.0195
+    ],
+    "radius": 0.01716,
+    "rotate": 52.5,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_SKYLINE_INTERIOR",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_SKYLINE_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "PS_SKYLINE_RB26",
+    "base_row": "I6Sport_200HP",
+    "asset": "PS_SKYLINE_RB26",
+    "base_asset": "Cars/Parts/Engine/RB26DET276HP",
+    "display_name": "RB26DETT (ProStreet Skyline GT-R)",
+    "mass": 230,
+    "cost": 40000,
+    "max_torque_nm": 392.0,
+    "max_rpm": 8600,
+    "curve": [
+     [
+      0.093,
+      0.3139
+     ],
+     [
+      0.2957,
+      0.4826
+     ],
+     [
+      0.3598,
+      0.5654
+     ],
+     [
+      0.407,
+      0.6196
+     ],
+     [
+      0.4515,
+      0.8125
+     ],
+     [
+      0.5,
+      0.998
+     ],
+     [
+      0.5035,
+      1.0
+     ],
+     [
+      0.5503,
+      0.9974
+     ],
+     [
+      0.6074,
+      0.9344
+     ],
+     [
+      0.7356,
+      0.7874
+     ],
+     [
+      0.9244,
+      0.6327
+     ],
+     [
+      1.0,
+      0.5693
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ProStreet skyline_track TORQUE (800..7950 rpm, 110..243 Nm) x turbocharger 6.5 psi from 4300 rpm (ramp 3500-4300), scaled to the factory 392 Nm (~277 hp at 7950); More Tuning RB26DET276HP for its recorded sound (the user's pick)"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "PS_SKYLINE_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "PS_SKYLINE_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "Getrag 6-Speed (ProStreet Skyline GT-R)",
+    "cost": 8000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.32,
+     "1": 3.827,
+     "2": 2.36,
+     "3": 1.685,
+     "4": 1.312,
+     "5": 1.0,
+     "6": 0.793
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "PS_SKYLINE_RB26",
+  "Transmission": "PS_SKYLINE_6MT",
+  "FinalDriveRatio": "103",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "PS_SKYLINE",
+  "Wheel1": "PS_SKYLINE",
+  "Wheel2": "PS_SKYLINE",
+  "Wheel3": "PS_SKYLINE",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "PS_SKYLINE_FrontBumper_KIT00",
+  "RearBumper": "PS_SKYLINE_RearBumper_KIT00",
+  "Bonnet": "PS_SKYLINE_Bonnet_KIT00",
+  "SideSkirt": "PS_SKYLINE_SideSkirt_KIT00",
+  "Fender": "PS_SKYLINE_Fender_KIT00",
+  "RearWing": "PS_SKYLINE_RearWing_STOCK"
+ },
+ "performance_source": "ProStreet vehicle.yml skyline_track: MASS 1540, FINAL_GEAR 3.545, GEAR_RATIO R3.32/3.827/2.36/1.685/1.312/1.0/0.793, RED_LINE 7950, MAX_RPM 8600, TORQUE_SPLIT 0.5, turbocharger; torque scaled to the factory 392 Nm",
+ "aero_parts": [
+  {
+   "row": "PS_SKYLINE_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Stock Autosculpt Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Stratospeed Formula 4 Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Stratospeed Formula 5 Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_KITW01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KITW01",
+   "display_name": "Stratospeed Widebody Front Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Stock Autosculpt Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Stratospeed Formula 4 Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Stratospeed Formula 5 Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_KITW01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KITW01",
+   "display_name": "Stratospeed Widebody Rear Bumper"
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_KIT01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT01",
+   "display_name": "Araxis Sport Hood"
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_KIT02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT02",
+   "display_name": "Araxis Sweeper Hood"
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_KIT03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT03",
+   "display_name": "Araxis Blitz Hood"
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_KIT04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT04",
+   "display_name": "Araxis Impact Hood"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KIT00",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT00",
+   "display_name": "Stock Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Stock Autosculpt Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Stratospeed Formula 4 Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Stratospeed Formula 5 Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Stratospeed Formula 7 Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_KITW01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KITW01",
+   "display_name": "Stratospeed Widebody Side Skirts"
+  },
+  {
+   "row": "PS_SKYLINE_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Front Fenders"
+  },
+  {
+   "row": "PS_SKYLINE_Fender_KITW01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KITW01",
+   "display_name": "Stratospeed Widebody Front Fenders"
+  },
+  {
+   "row": "PS_SKYLINE_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  },
+  {
+   "row": "PS_SKYLINE_RearWing_EVO",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_EVO",
+   "display_name": "Gentera Style 402 Wing"
+  },
+  {
+   "row": "PS_SKYLINE_RearWing_DRAG",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_DRAG",
+   "display_name": "Gentera Style 403 Wing"
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Fender_MWKIT01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Fender_MWKIT02",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Fender_MWKIT03",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Fender_MWKIT04",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT06",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT06",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT06",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_FrontBumper_MWKIT07",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearBumper_MWKIT07",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_SideSkirt_MWKIT07",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWKIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWKIT00",
+   "display_name": "Most Wanted Stock Hood",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE02",
+   "display_name": "Most Wanted Hood 2",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE03",
+   "display_name": "Most Wanted Hood 3",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE04",
+   "display_name": "Most Wanted Hood 4",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE05",
+   "display_name": "Most Wanted Hood 5",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE06",
+   "display_name": "Most Wanted Hood 6",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE07",
+   "display_name": "Most Wanted Hood 7",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE09",
+   "display_name": "Most Wanted Hood 9",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE10",
+   "display_name": "Most Wanted Hood 10",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE13",
+   "display_name": "Most Wanted Hood 13",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE16",
+   "display_name": "Most Wanted Hood 16",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE17",
+   "display_name": "Most Wanted Hood 17",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE20",
+   "display_name": "Most Wanted Hood 20",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE21",
+   "display_name": "Most Wanted Hood 21",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE23",
+   "display_name": "Most Wanted Hood 23",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE26",
+   "display_name": "Most Wanted Hood 26",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE31",
+   "display_name": "Most Wanted Hood 31",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_Bonnet_MWSTYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE32",
+   "display_name": "Most Wanted Hood 32",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearWing_MWKIT00_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWKIT00_SPOILER",
+   "display_name": "Most Wanted Stock Wing",
+   "mw": true
+  },
+  {
+   "row": "PS_SKYLINE_RearWing_MWKIT00_SPOILER_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWKIT00_SPOILER_CF",
+   "display_name": "Most Wanted Stock Wing (Carbon)",
+   "mw": true
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "SideSkirt",
+  "Fender"
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_SKYLINE_MISC",
+   "box": [
+    195,
+    -85,
+    22,
+    235,
+    85,
+    45
+   ],
+   "note": "front indicators: the amber lenses in the bumper corners (MISC large amber lens) (z>22: the lower amber-textured piece is a vent, the user)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_SKYLINE_MISC",
+   "amber": true,
+   "box": [
+    75,
+    -95,
+    40,
+    100,
+    95,
+    60
+   ],
+   "note": "side repeaters on the front fenders"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -230,
+    -54.5,
+    50,
+    -205,
+    -36,
+    80
+   ],
+   "note": "rear left: the whole inner round lamp (signal_tail: red tail/brake + amber flash); outer lamp stays TailLight. The amber-texel rule only caught a thin edge ring."
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_SKYLINE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -230,
+    36,
+    50,
+    -205,
+    54.5,
+    80
+   ],
+   "note": "rear right inner lamp"
+  }
+ ],
+ "detail_textures": [
+  {
+   "mesh": "SteeringWheel",
+   "from": "Tex_SKYLINE_INTERIOR",
+   "box": [
+    0.0,
+    0.31,
+    0.32,
+    0.96
+   ],
+   "to": "Tex_SKYLINE_SWHEEL",
+   "size": [
+    2048,
+    4096
+   ]
+  }
+ ],
+ "skins": {
+  "dir": "~/nfs-work/vinyl/livery/textures",
+  "pick": [
+   "SKYLINE_APEXGLIDE_SKYLINE",
+   "SKYLINE_DDAY_SHOWDOWN_KING_SKYLINE",
+   "SKYLINE_DRAG_SKYLINE",
+   "SKYLINE_GENERIC_SKYLINE",
+   "SKYLINE_GRIP_SKYLINE",
+   "SKYLINE_HUB_SKYLINE",
+   "SKYLINE_RUBBERDUX_SKYLINE",
+   "SKYLINE_SHOWDOWN_KING_DDAY",
+   "SKYLINE_SPEED_SKYLINE"
+  ],
+  "labels": {
+   "SKYLINE_APEXGLIDE_SKYLINE": "Apexglide Livery (ProStreet)",
+   "SKYLINE_DDAY_SHOWDOWN_KING_SKYLINE": "Dday Showdown King Livery (ProStreet)",
+   "SKYLINE_DRAG_SKYLINE": "Drag Livery (ProStreet)",
+   "SKYLINE_GENERIC_SKYLINE": "Generic Livery (ProStreet)",
+   "SKYLINE_GRIP_SKYLINE": "Grip Livery (ProStreet)",
+   "SKYLINE_HUB_SKYLINE": "Hub Livery (ProStreet)",
+   "SKYLINE_RUBBERDUX_SKYLINE": "Rubberdux Livery (ProStreet)",
+   "SKYLINE_SHOWDOWN_KING_DDAY": "Showdown King Dday Livery (ProStreet)",
+   "SKYLINE_SPEED_SKYLINE": "Speed Livery (ProStreet)"
+  }
+ },
+ "texture_sources": {
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565"
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "mw_parts": {
+  "SKYLINE": {
+   "xform": {
+    "s": [
+     0.99984,
+     0.99974,
+     0.98709
+    ],
+    "t": [
+     -0.007,
+     0.0,
+     0.738
+    ]
+   },
+   "front_cut": 158.7,
+   "rear_cut": -157.3,
+   "residual_cm": [
+    0.69,
+    5.98
+   ]
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   238,
+   238,
+   236
+  ],
+  "ink": [
+   15,
+   15,
+   18
+  ],
+  "minor_ink": [
+   55,
+   55,
+   60
+  ],
+  "red_color": [
+   215,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf",
+  "glow_face": [
+   170,
+   185,
+   215
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 9
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  220,
+  25,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.835,
+  "Speed": 0.835,
+  "Fuel": 0.802,
+  "Temp": 0.802
+ },
+ "arch_zones": [
+  [
+   134.1,
+   17,
+   57.0,
+   45.0
+  ],
+  [
+   -132.5,
+   19,
+   57.0,
+   45.0
+  ]
+ ],
+ "ps_meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -34,
+      -37,
+      13
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -34,
+      37,
+      13
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     17,
+     -12.5,
+     95,
+     26,
+     11.5,
+     109.5
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_SKYLINE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.47,
+      0.4,
+      0.7,
+      0.73
+     ]
+    }
+   ]
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -3.2,
+     -6.8,
+     0
+    ]
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -5.0,
+     -6.2,
+     0
+    ],
+    "mirror_frame": true
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SKYLINE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SKYLINE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "SKYLINE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT04": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT03"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT04"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "SKYLINE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "SKYLINE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SKYLINE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "SKYLINE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "SPOILER",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "SKYLINE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Door_Left": {
+   "parts": [
+    "DOOR_LEFT",
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    }
+   ],
+   "bbox_collision": true
+  },
+  "Door_Right": {
+   "parts": [
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    }
+   ],
+   "bbox_collision": true
+  }
+ }
+}

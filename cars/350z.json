@@ -1,0 +1,7221 @@
+{
+ "car": "PS_350Z",
+ "display_name": "Nissan 350Z (ProStreet)",
+ "geometry_dir": "C:/Users/noust/nfs-work/geo/ps_350z",
+ "prefix": "350Z_KIT00",
+ "lod": "A",
+ "out_dir": "C:/Users/noust/mt-work/build/PS_350Z/meshes",
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0x621F43FC": "Tex_350Z_MISC",
+  "0xFA5C4FFC": "Tex_350Z_INTERIOR",
+  "0xE490B3FC": "Tex_350Z_BADGING",
+  "0xA6BBF125": "Tex_350Z_WHEEL",
+  "0x54AAF7C6": "Tex_350Z_ENGINE",
+  "0xAA6AF6FD": "Tex_350Z_KIT00_HEADLIGHT_ON",
+  "0xBF30889B": "Trim",
+  "0x7D42C4F6": "Glass",
+  "0xEAD8676E": "Tex_350Z_KIT00_BRAKELIGHT_OFF",
+  "0x9B4396C7": "Tex_350Z_KIT00_BRAKELIGHT_GLASS_OFF",
+  "0xA6754656": "Paint",
+  "0x1B049702": "Bottom",
+  "0x721AFF7C": "Tex_MWG_CARBONFIBRE",
+  "0xBD1F0E0A": "Bottom",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x4C95C6F8": "Bottom",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x8C283C65": "Bottom",
+  "EXHAUST_CHROME": "Trim",
+  "EXHAUST_MUFFLER": "Bottom",
+  "EXHAUST_FACE": "Bottom"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BODY",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    "BASE",
+    "TRUNK",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "HEADLIGHT_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_RIGHT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -25,
+      -37,
+      12
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -25,
+      37,
+      12
+     ]
+    }
+   ],
+   "drop_slots": [
+    "Tex_350Z_KIT00_BRAKELIGHT_GLASS_OFF"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_350Z_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.2,
+      0.52,
+      0.72,
+      0.72
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     12,
+     -18,
+     97,
+     30,
+     18,
+     113
+    ]
+   ]
+  },
+  "Door_L": {
+   "parts": [
+    "DOOR_LEFT",
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "Door_R": {
+   "parts": [
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "350Z_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT04": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT03"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT04"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "BODY",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "350Z_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "drop_coincident_with": {
+      "parts": [
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "prefix": "350Z_KITW01",
+      "tol": 1.0,
+      "also": [
+       {
+        "prefix": "350Z_KIT00",
+        "parts": [
+         "SKIRT_LEFT",
+         "SKIRT_RIGHT"
+        ]
+       }
+      ]
+     },
+     "blend": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY"
+      ],
+      "zones": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "BODY",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "SPOILER",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -209.875,
+       -39.484,
+       9.306
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -209.875,
+       39.484,
+       9.306
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT01_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -211.774,
+       -44.182,
+       11.505
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -211.774,
+       43.982,
+       11.505
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT02_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -208.875,
+       -39.784,
+       8.807
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -208.875,
+       39.784,
+       8.807
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT03_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -216.574,
+       -39.684,
+       12.405
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -216.574,
+       39.684,
+       12.405
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT04_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -209.275,
+       -43.882,
+       5.109
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -209.275,
+       43.882,
+       5.109
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        135.5,
+        24,
+        56.0,
+        47.0
+       ],
+       [
+        -129.2,
+        26,
+        56.0,
+        47.0
+       ]
+      ],
+      "x_range": [
+       -154.607,
+       160.67999999999998
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99697,
+       0.99873,
+       0.99999
+      ],
+      "t": [
+       0.644,
+       0.0,
+       -0.051
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99697,
+        0.99873,
+        0.99999
+       ],
+       "t": [
+        0.644,
+        0.0,
+        -0.051
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -0.002,
+       0.0,
+       0.011
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99987,
+        0.9996,
+        0.99951
+       ],
+       "t": [
+        -0.002,
+        0.0,
+        0.011
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -211.475,
+       -45.882,
+       15.703
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       0.99987,
+       0.9996,
+       0.99951
+      ],
+      "t": [
+       -211.475,
+       45.882,
+       15.703
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99712,
+       1.00657,
+       0.99557
+      ],
+      "t": [
+       0.339,
+       0.0,
+       0.289
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/350Z/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.99712,
+        1.00657,
+        0.99557
+       ],
+       "t": [
+        0.339,
+        0.0,
+        0.289
+       ]
+      },
+      "prefix": "350Z",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "KIT00_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE02_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE03_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE04_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE05_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE06_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE07_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE09_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE10_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE13": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE13_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE16": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE16_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE17": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE17_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE20": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE20_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE21": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE21_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE23": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE23_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE26": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE26_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE31": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE31_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE32": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99752,
+       1.00041,
+       0.99203
+      ],
+      "t": [
+       0.169,
+       0.0,
+       0.608
+      ]
+     },
+     "prefix": "350Z",
+     "part": "STYLE32_HOOD",
+     "keep_nearest": {
+      "prefix": "350Z_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_GLASS_LEFT",
+       "BRAKELIGHT_GLASS_RIGHT",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR",
+       "WINDOW_REAR_LEFT",
+       "WINDOW_REAR_RIGHT"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  }
+ },
+ "wheels": {
+  "front_x": 135.5,
+  "rear_x": -129.2,
+  "half_track": 77,
+  "z": 24,
+  "radius": 32,
+  "rear_z": 26,
+  "arch_note": "x = measured arch-opening centres (z 20-30): front 136.2, rear -129.6",
+  "auto_arches": true
+ },
+ "base_vehicle": "Zino",
+ "texture_dir": "C:/Users/noust/nfs-work/tex/ps_350z/textures",
+ "mesh_names": {
+  "Wheel_L": "PS_350Z_R",
+  "Wheel_R": "PS_350Z_L",
+  "SteeringWheel": "PS_350Z"
+ },
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     24.02,
+     -40.12,
+     66.97
+    ],
+    "rot": [
+     -12.31,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -210,
+     -40,
+     10
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -185,
+     0,
+     81
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ],
+    "note": "trunk-lid top: the game's universal wings sit here; our ProStreet wing meshes are offset by -loc"
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -15,
+     0,
+     118
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -212,
+     0,
+     26
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     38.82,
+     -40.29,
+     73.31
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     38.51,
+     -30.87,
+     72.22
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     38.48,
+     -51.98,
+     71.41
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     38.81,
+     -47.11,
+     71.8
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     22.44,
+     -88.08,
+     83.05
+    ],
+    "rot": [
+     -2.26,
+     -17.51,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     22.44,
+     88.08,
+     83.05
+    ],
+    "rot": [
+     -1.32,
+     29.97,
+     0
+    ]
+   }
+  ]
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -25,
+    -40,
+    20
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -25,
+    37,
+    20
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -75,
+    30,
+    30
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -75,
+    -30,
+    30
+   ]
+  },
+  "cockpit_camera": [
+   -28,
+   -40,
+   88
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    21,
+    0,
+    104
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -40,
+    0,
+    110
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    8,
+    0,
+    111
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    200,
+    -62,
+    66
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    200,
+    62,
+    66
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    208,
+    58,
+    48
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    208,
+    -58,
+    48
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -210,
+    -58,
+    66
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -210,
+    58,
+    66
+   ]
+  },
+  "hide_meshes": [],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    10,
+    17,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 1014
+ },
+ "cost": 38000,
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    43
+   ],
+   "size": [
+    424,
+    172,
+    58
+   ]
+  },
+  {
+   "center": [
+    -18,
+    0,
+    93
+   ],
+   "size": [
+    156,
+    140,
+    42
+   ]
+  }
+ ],
+ "strip_part_slots": [
+  "Trunk",
+  "Headlight"
+ ],
+ "part_overrides": {
+  "Wheel0": "PS_350Z",
+  "Wheel1": "PS_350Z",
+  "Wheel2": "PS_350Z",
+  "Wheel3": "PS_350Z",
+  "Engine": "PS_VQ35DE_287HP",
+  "Transmission": "PS_CD009_6MT",
+  "FinalDriveRatio": "103",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "CoolantRadiator": "SmallRadiator_110",
+  "FrontBumper": "PS_350Z_FrontBumper_KIT00",
+  "RearBumper": "PS_350Z_RearBumper_KIT00",
+  "Bonnet": "PS_350Z_Bonnet_KIT00",
+  "SideSkirt": "PS_350Z_SideSkirt_KIT00",
+  "Fender": "PS_350Z_Fender_KIT00"
+ },
+ "wheel_part": true,
+ "wheel_display_name": "350Z Stock (ProStreet)",
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    24.5,
+    -40.4,
+    66.5
+   ],
+   "radius": 17,
+   "x_range": [
+    17,
+    32
+   ],
+   "socket": "SteeringWheel",
+   "pivot": [
+    24.018500000000003,
+    -40.1165,
+    66.97300000000001
+   ],
+   "align_x": true,
+   "tilt_deg": 12.31
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     38.82,
+     -40.29,
+     73.31
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     38.51,
+     -30.87,
+     72.22
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     38.48,
+     -51.98,
+     71.41
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     38.81,
+     -47.11,
+     71.8
+    ],
+    "rot": [
+     0,
+     -90,
+     -102
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": 5.2,
+   "width": 7,
+   "height": 1.5
+  }
+ },
+ "texture_upscale": {
+  "Tex_350Z_INTERIOR": 4
+ },
+ "gauge_faces": {
+  "Tex_350Z_INTERIOR": [
+   {
+    "center": [
+     0.455,
+     0.62
+    ],
+    "face": [
+     0.455,
+     0.62,
+     0.06
+    ],
+    "radius": 0.057,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 6.6,
+    "font": 0.23,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.55,
+      90
+     ]
+    ]
+   },
+   {
+    "center": [
+     0.6,
+     0.635
+    ],
+    "face": [
+     0.6,
+     0.635,
+     0.057
+    ],
+    "radius": 0.054,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.275,
+     0.645
+    ],
+    "face": [
+     0.31,
+     0.634,
+     0.054
+    ],
+    "radius": 0.024,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.42,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.35,
+     0.645
+    ],
+    "radius": 0.024,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.42,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_350Z_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_350Z_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_350Z_KIT00_HEADLIGHT_ON": "HeadLight",
+  "Tex_350Z_KIT00_BRAKELIGHT_OFF": "TailLight",
+  "Tex_350Z_WHEEL": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "PS_VQ35DE_287HP",
+    "base_row": "I6Sport_200HP",
+    "asset": "PS_VQ35DE",
+    "base_asset": "Cars/Parts/Engine/V6Sport_DOHC_200HP",
+    "display_name": "VQ35DE 3.5L V6 (287HP)",
+    "mass": 190,
+    "cost": 18000,
+    "max_torque_nm": 371,
+    "max_rpm": 6800,
+    "curve_note": "time = rpm/6800: 680rpm .62, 2380 .85, 4800 peak 371Nm, 6200 = 287hp (.888), 6800 limiter .78",
+    "curve": [
+     [
+      0.1,
+      0.62
+     ],
+     [
+      0.35,
+      0.85
+     ],
+     [
+      0.706,
+      1.0
+     ],
+     [
+      0.912,
+      0.888
+     ],
+     [
+      1.0,
+      0.78
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "sound": "/Game/Cars/Parts/Engine/Sound/V6Sport/V6Sport_02/EngineSoundData.EngineSoundData"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "PS_CD009_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "PS_CD009",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "CD009 6-Speed Manual (350Z)",
+    "cost": 6000,
+    "ratios": {
+     "R": -3.446,
+     "1": 3.794,
+     "2": 2.324,
+     "3": 1.624,
+     "4": 1.271,
+     "5": 1.0,
+     "6": 0.794
+    },
+    "mass": 100
+   }
+  ]
+ },
+ "lamp_slots": {
+  "Tex_350Z_KIT00_HEADLIGHT_ON": "head",
+  "Tex_350Z_KIT00_BRAKELIGHT_OFF": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_350Z_MISC"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_350Z_MISC"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_350Z_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_350Z_KIT00_BRAKELIGHT_OFF"
+  }
+ },
+ "aero_parts": [
+  {
+   "row": "PS_350Z_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Stock Autosculpt Front Bumper"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Stratospeed Formula 4 Front Bumper"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Stratospeed Formula 5 Front Bumper"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Front Bumper"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_KITW01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KITW01",
+   "display_name": "Stratospeed Widebody Front Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Stock Autosculpt Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Stratospeed Formula 4 Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Stratospeed Formula 5 Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_RearBumper_KITW01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KITW01",
+   "display_name": "Stratospeed Widebody Rear Bumper"
+  },
+  {
+   "row": "PS_350Z_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "PS_350Z_Bonnet_KIT01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT01",
+   "display_name": "Araxis Sport Hood"
+  },
+  {
+   "row": "PS_350Z_Bonnet_KIT02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT02",
+   "display_name": "Araxis Sweeper Hood"
+  },
+  {
+   "row": "PS_350Z_Bonnet_KIT03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT03",
+   "display_name": "Araxis Blitz Hood"
+  },
+  {
+   "row": "PS_350Z_Bonnet_KIT04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT04",
+   "display_name": "Araxis Impact Hood"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KIT00",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT00",
+   "display_name": "Stock Side Skirts"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Stock Autosculpt Side Skirts"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Stratospeed Formula 4 Side Skirts"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Stratospeed Formula 5 Side Skirts"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Stratospeed Formula 7 Side Skirts"
+  },
+  {
+   "row": "PS_350Z_SideSkirt_KITW01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KITW01",
+   "display_name": "Stratospeed Widebody Side Skirts"
+  },
+  {
+   "row": "PS_350Z_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Front Fenders"
+  },
+  {
+   "row": "PS_350Z_Fender_KITW01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KITW01",
+   "display_name": "Stratospeed Widebody Front Fenders"
+  },
+  {
+   "row": "PS_350Z_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  },
+  {
+   "row": "PS_350Z_RearWing_EVO",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_EVO",
+   "display_name": "Gentera Style 402 Wing"
+  },
+  {
+   "row": "PS_350Z_RearWing_DRAG",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_DRAG",
+   "display_name": "Gentera Style 403 Wing"
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Fender_MWKIT01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_SideSkirt_MWKIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Fender_MWKIT02",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_SideSkirt_MWKIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Fender_MWKIT03",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_SideSkirt_MWKIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Fender_MWKIT04",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_SideSkirt_MWKIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_FrontBumper_MWKIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_RearBumper_MWKIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_SideSkirt_MWKIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWKIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWKIT00",
+   "display_name": "Most Wanted Stock Hood",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE02",
+   "display_name": "Most Wanted Hood 2",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE03",
+   "display_name": "Most Wanted Hood 3",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE04",
+   "display_name": "Most Wanted Hood 4",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE05",
+   "display_name": "Most Wanted Hood 5",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE06",
+   "display_name": "Most Wanted Hood 6",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE07",
+   "display_name": "Most Wanted Hood 7",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE09",
+   "display_name": "Most Wanted Hood 9",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE10",
+   "display_name": "Most Wanted Hood 10",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE13",
+   "display_name": "Most Wanted Hood 13",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE16",
+   "display_name": "Most Wanted Hood 16",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE17",
+   "display_name": "Most Wanted Hood 17",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE20",
+   "display_name": "Most Wanted Hood 20",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE21",
+   "display_name": "Most Wanted Hood 21",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE23",
+   "display_name": "Most Wanted Hood 23",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE26",
+   "display_name": "Most Wanted Hood 26",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE31",
+   "display_name": "Most Wanted Hood 31",
+   "mw": true
+  },
+  {
+   "row": "PS_350Z_Bonnet_MWSTYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE32",
+   "display_name": "Most Wanted Hood 32",
+   "mw": true
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "SideSkirt",
+  "Fender"
+ ],
+ "paintable_texture_slots": [
+  "Tex_350Z_WHEEL"
+ ],
+ "ai_upscale": [
+  "Tex_350Z_INTERIOR",
+  "Tex_350Z_MISC",
+  "Tex_350Z_BADGING",
+  "Tex_350Z_ENGINE"
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_350Z_KIT00_BRAKELIGHT_OFF",
+   "uv_box": [
+    0.2,
+    0,
+    0.5,
+    1
+   ],
+   "note": "rear: inner section of each tail lamp (US 350Z combines turn signal with the tail lamp)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_350Z_MISC",
+   "amber": true,
+   "box": [
+    180,
+    -80,
+    5,
+    200,
+    80,
+    40
+   ],
+   "note": "front indicators: amber lenses in the bumper corners"
+  }
+ ],
+ "masked_texture_slots": [
+  "Tex_350Z_BADGING",
+  "Tex_MWG_GRILL01"
+ ],
+ "skins": {
+  "dir": "~/nfs-work/vinyl/livery/textures",
+  "pick": [
+   "350Z_DRAG_350Z",
+   "350Z_DRIFT_350Z",
+   "350Z_GENERIC_350Z",
+   "350Z_GRIP_350Z",
+   "350Z_HUB_350Z",
+   "350Z_MOSHI_350Z",
+   "350Z_PHAT_350Z",
+   "350Z_RUBBERDUX_350Z",
+   "350Z_SPEED_350Z",
+   "350Z_TOGUEUNION_350Z"
+  ],
+  "labels": {
+   "350Z_DRAG_350Z": "Drag Livery (ProStreet)",
+   "350Z_DRIFT_350Z": "Drift Livery (ProStreet)",
+   "350Z_GENERIC_350Z": "Generic Livery (ProStreet)",
+   "350Z_GRIP_350Z": "Grip Livery (ProStreet)",
+   "350Z_HUB_350Z": "Hub Livery (ProStreet)",
+   "350Z_MOSHI_350Z": "Moshi Livery (ProStreet)",
+   "350Z_PHAT_350Z": "Phat Livery (ProStreet)",
+   "350Z_RUBBERDUX_350Z": "Rubberdux Livery (ProStreet)",
+   "350Z_SPEED_350Z": "Speed Livery (ProStreet)",
+   "350Z_TOGUEUNION_350Z": "Togueunion Livery (ProStreet)"
+  }
+ },
+ "texture_sources": {
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565"
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "mw_parts": {
+  "350Z": {
+   "xform": {
+    "s": [
+     0.99987,
+     0.9996,
+     0.99951
+    ],
+    "t": [
+     -0.002,
+     0.0,
+     0.011
+    ]
+   },
+   "front_cut": 160.7,
+   "rear_cut": -154.6,
+   "residual_cm": [
+    0.68,
+    4.64
+   ]
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   12,
+   12,
+   14
+  ],
+  "ink": [
+   255,
+   155,
+   45
+  ],
+  "red_color": [
+   235,
+   45,
+   30
+  ],
+  "font_file": "segoeuib.ttf",
+  "ring": [
+   [
+    175,
+    175,
+    180
+   ],
+   0.05
+  ],
+  "glow_color": [
+   255,
+   140,
+   30
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  235,
+  45,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.722,
+  "Speed": 0.683,
+  "Fuel": 0.608,
+  "Temp": 0.604
+ },
+ "arch_zones": [
+  [
+   135.5,
+   24,
+   56.0,
+   47.0
+  ],
+  [
+   -129.2,
+   26,
+   56.0,
+   47.0
+  ]
+ ],
+ "ps_meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "HEADLIGHT_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_RIGHT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "HEADLIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_RIGHT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_LEFT"
+    },
+    {
+     "part": "BRAKELIGHT_GLASS_RIGHT"
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -25,
+      -37,
+      12
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -25,
+      37,
+      12
+     ]
+    }
+   ],
+   "drop_slots": [
+    "Tex_350Z_KIT00_BRAKELIGHT_GLASS_OFF"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_350Z_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.2,
+      0.52,
+      0.72,
+      0.72
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     12,
+     -18,
+     97,
+     30,
+     18,
+     113
+    ]
+   ]
+  },
+  "Door_L": {
+   "parts": [
+    "DOOR_LEFT",
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "Door_R": {
+   "parts": [
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "350Z_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "350Z_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT04": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT03"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT04"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "350Z_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "350Z_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "350Z_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "350Z_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "SPOILER",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "350Z_KIT00",
+     "slot": "Paint",
+     "offset": [
+      185,
+      0,
+      -81
+     ]
+    }
+   ],
+   "aero": true
+  }
+ }
+}

@@ -1,0 +1,15 @@
+# NFS dealership at the Ara dragstrip lot: a copy of the Seoguipo Luxury Cars showroom (world-partition cell
+# 9MJDS5G1ANMPZP6AB7AG07IOP), rotated so it faces into the lot from the left edge the user marked with F6
+# ((367129,1109348) and (378373,1109532), facing yaw ~90). Ground: Seoguipo -20877, Ara -19097.
+# v3: walls' back corner 1 m inside the lot corner the user marked (378740,1109286), doors facing yaw 90 (v2 faced the wrong way), +30 cm (sat slightly low).
+bbox 7680 14337 146678 153648
+pivot 10481 149250 -20877
+target 374536 1113431 -19067 255.1
+prefix NFSD_
+skip ^Resident_C$
+skip ^Char_
+skip ^MTDealerVehicleSpawnPoint$
+skip Spawner
+skip ^POI_
+skip ^MTAreaVolume$
+skipmesh ^(TownRoad|SM_TownRoad|CrossroadCurve|Line_White|SM_Env_Road|SM_PowerLines|SM_Excavator|SM_Prop_Scaffold|SM_Env_Dirt|SM_Prop_Fence_Concrete|SM_Bld_Concrete)

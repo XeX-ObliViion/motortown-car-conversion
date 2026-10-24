@@ -1,0 +1,2444 @@
+{
+ "car": "MW_M3GTR",
+ "display_name": "BMW M3 GTR (Most Wanted)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/mw/geo/bmwm3gtr",
+ "prefix": "BMWM3GTR",
+ "out_dir": "C:\\Users\\noust/mt-work/build/MW_M3GTR/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/mw/tex/bmwm3gtr/textures",
+ "base_vehicle": "Cora",
+ "cost": 110000,
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x70768157": "Paint",
+  "0x41751DC1": "Bottom",
+  "0x1B049702": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0x721AFF7C": "Bottom",
+  "0xBD1F0E0A": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x267D188C": "Glass",
+  "0xF68EF19F": "Glass",
+  "0xBF30889B": "Trim",
+  "0x33CCB33D": "Tex_M3GTR_BADGING",
+  "0x5CC81B3D": "Tex_M3GTR_INTERIOR",
+  "0xA7E6EA53": "Tex_M3GTR_HEADLIGHT",
+  "0xD947F346": "Tex_M3GTR_BRAKELIGHT",
+  "0x09BDCC99": "Tex_M3GTR_WHEEL",
+  "0x03C906EF": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x7811C147": "Bottom",
+  "0x4174A2DD": "Tex_M3GTR_MISC"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    },
+    "BASE",
+    "KIT00_INTERIOR",
+    "KIT00_ATTACHMENT4",
+    "KIT00_ATTACHMENT9",
+    "KIT00_ATTACHMENT0",
+    "KIT00_ATTACHMENT1",
+    "KIT00_ATTACHMENT2",
+    {
+     "part": "KIT00_FRONT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_LEFT_HEADLIGHT",
+    {
+     "part": "KIT00_LEFT_HEADLIGHT_GLASS",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_LEFT_BRAKELIGHT",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "skip_groups": [
+      1
+     ]
+    }
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_M3GTR_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.645,
+      0.27,
+      0.765,
+      0.585
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     38,
+     -11,
+     99,
+     46,
+     11,
+     109
+    ]
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "radius_slot": {
+    "r": 25.3,
+    "slot": "Bottom",
+    "from": [
+     "Tex_M3GTR_WHEEL"
+    ]
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "radius_slot": {
+    "r": 25.3,
+    "slot": "Bottom",
+    "from": [
+     "Tex_M3GTR_WHEEL"
+    ]
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      196,
+      99999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      196,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      196,
+      99999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     },
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      196,
+      99999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     },
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      196,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      196,
+      99999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     },
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      196,
+      99999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      -99999,
+      -150
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      -150,
+      196
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "BMWM3GTR",
+      "tol": 1.0
+     },
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE33": {
+   "parts": [
+    {
+     "part": "STYLE33_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE34": {
+   "parts": [
+    {
+     "part": "STYLE34_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      190,
+      0,
+      -87
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STYLE00_SPOILER": {
+   "parts": [
+    {
+     "part": "STYLE00_SPOILER",
+     "offset": [
+      190,
+      0,
+      -87
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STYLE01_SPOILER": {
+   "parts": [
+    {
+     "part": "STYLE01_SPOILER",
+     "offset": [
+      190,
+      0,
+      -87
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STYLE01_SPOILER_CF": {
+   "parts": [
+    {
+     "part": "STYLE01_SPOILER_CF",
+     "offset": [
+      190,
+      0,
+      -87
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     -999,
+     0,
+     -999,
+     999,
+     999,
+     999
+    ]
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -16.3,
+     14.2,
+     0
+    ]
+   }
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     -999,
+     0,
+     -999,
+     999,
+     999,
+     999
+    ]
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -13.7,
+     -0.6,
+     0
+    ],
+    "mirror_frame": true
+   }
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Fender_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Fender_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Fender_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Fender_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        161.7,
+        23,
+        57.0,
+        45.0
+       ],
+       [
+        -112.3,
+        23,
+        57.0,
+        45.0
+       ]
+      ],
+      "x_range": [
+       -150,
+       196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_M3GTR_R",
+  "Wheel_R": "MW_M3GTR_L",
+  "SteeringWheel": "MW_M3GTR"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_M3GTR_HEADLIGHT": "HeadLight",
+  "Tex_M3GTR_BRAKELIGHT": "TailLight",
+  "Tex_M3GTR_WHEEL": "Wheel_01",
+  "Paint2": "Body_02",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_F": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "Tex_M3GTR_HEADLIGHT": "head",
+  "Tex_M3GTR_BRAKELIGHT": "tail_red",
+  "Signal_L_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_M3GTR_BRAKELIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_M3GTR_HEADLIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_M3GTR_BRAKELIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_M3GTR_HEADLIGHT"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_M3GTR_WHEEL"
+ ],
+ "masked_texture_slots": [
+  "Tex_M3GTR_BADGING"
+ ],
+ "ai_upscale": [
+  "Tex_M3GTR_INTERIOR",
+  "Tex_M3GTR_MISC",
+  "Tex_M3GTR_BADGING"
+ ],
+ "wheels": {
+  "front_x": 161.7,
+  "rear_x": -112.3,
+  "half_track": 75,
+  "z": 23,
+  "rear_z": 23,
+  "radius": 33,
+  "auto_arches": true
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    16,
+    0,
+    40
+   ],
+   "size": [
+    450,
+    176,
+    52
+   ]
+  },
+  {
+   "center": [
+    -20,
+    0,
+    100
+   ],
+   "size": [
+    200,
+    140,
+    44
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     53.4,
+     -40.16,
+     61.25
+    ],
+    "rot": [
+     -7.71,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -213,
+     -32,
+     17
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -213,
+     32,
+     17
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -190,
+     0,
+     87
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -20,
+     0,
+     126
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -214,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     15.296,
+     -5.71,
+     19.549
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -91.91
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     15.305,
+     6.04,
+     19.631
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -91.91
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     15.369,
+     -15.12,
+     16.996
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -91.91
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     15.395,
+     15.09,
+     17.251
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -91.91
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     62.4,
+     -84.19,
+     81.34
+    ],
+    "rot": [
+     -7.18,
+     -12.44,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     62.4,
+     84.19,
+     81.34
+    ],
+    "rot": [
+     -4.85,
+     25.92,
+     0
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [
+  "Fender",
+  "Headlight"
+ ],
+ "wheel_part": true,
+ "wheel_display_name": "M3 GTR Stock (Most Wanted)",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -8,
+    -38,
+    12
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -8,
+    38,
+    12
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -75,
+    32,
+    14
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -75,
+    -32,
+    14
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    42,
+    0,
+    104
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    10,
+    0,
+    116
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -60,
+    0,
+    116
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    230,
+    -64,
+    48
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    230,
+    64,
+    48
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    229,
+    74,
+    47
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    229,
+    -74,
+    47
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -207,
+    -58,
+    66
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -207,
+    58,
+    66
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -6,
+   -38,
+   101
+  ],
+  "body_mass": 914,
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    3.4,
+    19.2,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -16.3,
+    14.2,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -13.7,
+    -0.6,
+    0
+   ]
+  }
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_M3GTR_V8",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_M3GTR_V8",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "4.0 V8 (Most Wanted M3 GTR)",
+    "mass": 200,
+    "cost": 42000,
+    "max_torque_nm": 383.7,
+    "max_rpm": 9500,
+    "curve": [
+     [
+      0.0842,
+      0.5265
+     ],
+     [
+      0.1987,
+      0.6325
+     ],
+     [
+      0.3132,
+      0.7845
+     ],
+     [
+      0.4276,
+      0.9399
+     ],
+     [
+      0.5421,
+      1.0
+     ],
+     [
+      0.6566,
+      0.9717
+     ],
+     [
+      0.7711,
+      0.9011
+     ],
+     [
+      0.8855,
+      0.8304
+     ],
+     [
+      1.0,
+      0.8057
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "MW Rework IV engine bmwm3gtr: 283 lb-ft peak, ~412 hp at the 9500 limit (redline 8500); sound: More Tuning S58 (the user's pick) via the cloned S58 asset"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_M3GTR_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "MW_M3GTR_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Sequential (Most Wanted M3 GTR)",
+    "cost": 9000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.79,
+     "1": 3.4,
+     "2": 2.085,
+     "3": 1.5,
+     "4": 1.25,
+     "5": 1.09,
+     "6": 0.91
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "MW_M3GTR_V8",
+  "Transmission": "MW_M3GTR_6MT",
+  "FinalDriveRatio": "104",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "MW_M3GTR",
+  "Wheel1": "MW_M3GTR",
+  "Wheel2": "MW_M3GTR",
+  "Wheel3": "MW_M3GTR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "MW_M3GTR_FrontBumper_KIT00",
+  "RearBumper": "MW_M3GTR_RearBumper_KIT00",
+  "Bonnet": "MW_M3GTR_Bonnet_KIT00",
+  "RearWing": "MW_M3GTR_RearWing_STOCK",
+  "Fender": "MW_M3GTR_Fender_KIT00"
+ },
+ "performance_source": "MW Rework IV attributes: engine bmwm3gtr TORQUE lb-ft [149,179,222,266,283,275,255,235,228] over 800..9500, RED_LINE 8500; GEAR_RATIO R3.79/3.40/2.085/1.50/1.25/1.09/0.91, FINAL_GEAR 3.85; MASS 1350; engineaudio bmw_m3_gtr (GIN_AC_BMW)",
+ "source_scale": 100.0,
+ "texture_sources": {
+  "Tex_M3GTR_INTERIOR": "0x5CC81B3D",
+  "Tex_M3GTR_HEADLIGHT": "0xF6944B9E",
+  "Tex_M3GTR_BRAKELIGHT": "0xB1A80AF1",
+  "Tex_M3GTR_WHEEL": "0x09BDCC99",
+  "Tex_M3GTR_BADGING": "0x33CCB33D",
+  "Tex_M3GTR_MISC": "0x4174A2DD"
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    50,
+    -40.2,
+    69.2
+   ],
+   "radius": 19,
+   "x_range": [
+    44,
+    60
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    53.401650000000004,
+    -40.161049999999996,
+    69.24965
+   ],
+   "tilt_deg": 7.71,
+   "socket_offset": [
+    0,
+    0,
+    -8
+   ],
+   "scale": 1.12
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_M3GTR_BRAKELIGHT",
+   "box": [
+    -210,
+    -80,
+    50,
+    -180,
+    -50,
+    82
+   ],
+   "uv_box": [
+    0.0,
+    0.05,
+    1.0,
+    0.6
+   ],
+   "copy": true,
+   "lift": 0.08,
+   "note": "outer (quarter) tail lamp: masked copy, only the white/clear sections flash (signal_overlay)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_M3GTR_HEADLIGHT",
+   "box": [
+    195,
+    -80,
+    38,
+    232,
+    -58,
+    60
+   ],
+   "uv_box": [
+    0.67,
+    0.0,
+    0.975,
+    1.0
+   ],
+   "note": "amber outer corner of the headlamp only (housing at u .98 excluded)"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_M3GTR_BRAKELIGHT",
+   "box": [
+    -210,
+    50,
+    50,
+    -180,
+    80,
+    82
+   ],
+   "uv_box": [
+    0.0,
+    0.05,
+    1.0,
+    0.6
+   ],
+   "copy": true,
+   "lift": 0.08,
+   "note": "outer (quarter) tail lamp: masked copy, only the white/clear sections flash (signal_overlay)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_M3GTR_HEADLIGHT",
+   "box": [
+    195,
+    58,
+    38,
+    232,
+    80,
+    60
+   ],
+   "uv_box": [
+    0.67,
+    0.0,
+    0.975,
+    1.0
+   ],
+   "note": "amber outer corner of the headlamp only (housing at u .98 excluded)"
+  }
+ ],
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     71.18,
+     -45.87,
+     78.57
+    ],
+    "rot": [
+     0,
+     -90,
+     -84.2
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     71.2,
+     -34.12,
+     78.65
+    ],
+    "rot": [
+     0,
+     -90,
+     -84.2
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     70.91,
+     -55.28,
+     76.03
+    ],
+    "rot": [
+     0,
+     -90,
+     -84.2
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     70.97,
+     -25.07,
+     76.28
+    ],
+    "rot": [
+     0,
+     -90,
+     -84.2
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed",
+    "Niddle_RPM"
+   ],
+   "up": 5.5,
+   "width": 6.0,
+   "height": 1.5,
+   "out": 0.25
+  },
+  "parent_socket": "SteeringWheel"
+ },
+ "gauge_faces": {
+  "Tex_M3GTR_INTERIOR": [
+   {
+    "center": [
+     0.6966,
+     0.4736
+    ],
+    "face": [
+     0.6966,
+     0.4736,
+     0.039
+    ],
+    "radius": 0.034,
+    "aspect": 1.11,
+    "rotate": 90,
+    "min": 0,
+    "max": 200,
+    "text_step": 40,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.6966,
+     0.3857
+    ],
+    "face": [
+     0.6966,
+     0.3857,
+     0.039
+    ],
+    "radius": 0.034,
+    "aspect": 1.11,
+    "rotate": 90,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8.5,
+    "font": 0.24,
+    "captions": []
+   },
+   {
+    "center": [
+     0.7145,
+     0.5453
+    ],
+    "face": [
+     0.7145,
+     0.5453,
+     0.02
+    ],
+    "radius": 0.017,
+    "aspect": 1.11,
+    "rotate": 90,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.7129,
+     0.3174
+    ],
+    "face": [
+     0.7129,
+     0.3174,
+     0.02
+    ],
+    "radius": 0.017,
+    "aspect": 1.11,
+    "rotate": 90,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "texture_upscale": {
+  "Tex_M3GTR_INTERIOR": 4
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_M3GTR_INTERIOR",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_M3GTR_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "mw_kits": {
+  "front_split": 196,
+  "rear_split": -150
+ },
+ "aero_parts": [
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_FrontBumper_KIT06",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT06",
+   "display_name": "Kit 6 Front Bumper"
+  },
+  {
+   "row": "MW_M3GTR_RearBumper_KIT06",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT06",
+   "display_name": "Kit 6 Rear Bumper"
+  },
+  {
+   "row": "MW_M3GTR_SideSkirt_KIT06",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT06",
+   "display_name": "Kit 6 Side Skirts"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE33",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE33",
+   "display_name": "Hood 33"
+  },
+  {
+   "row": "MW_M3GTR_Bonnet_STYLE34",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE34",
+   "display_name": "Hood 34"
+  },
+  {
+   "row": "MW_M3GTR_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  },
+  {
+   "row": "MW_M3GTR_RearWing_STYLE00_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STYLE00_SPOILER",
+   "display_name": "Wing 0"
+  },
+  {
+   "row": "MW_M3GTR_RearWing_STYLE01_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STYLE01_SPOILER",
+   "display_name": "Wing 1"
+  },
+  {
+   "row": "MW_M3GTR_RearWing_STYLE01_SPOILER_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STYLE01_SPOILER_CF",
+   "display_name": "Wing 1 (Carbon)"
+  },
+  {
+   "row": "MW_M3GTR_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Fenders",
+   "arch_fender": true
+  },
+  {
+   "row": "MW_M3GTR_Fender_KIT02",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT02",
+   "display_name": "Kit 2 Widebody",
+   "arch_fender": true
+  },
+  {
+   "row": "MW_M3GTR_Fender_KIT03",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT03",
+   "display_name": "Kit 3 Widebody",
+   "arch_fender": true
+  },
+  {
+   "row": "MW_M3GTR_Fender_KIT05",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT05",
+   "display_name": "Kit 5 Widebody",
+   "arch_fender": true
+  },
+  {
+   "row": "MW_M3GTR_Fender_KIT06",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT06",
+   "display_name": "Kit 6 Widebody",
+   "arch_fender": true
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "Fender"
+ ],
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror:mirror"
+ },
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "recentered": {
+  "SideMirror": [
+   62.4,
+   -84.19,
+   81.34
+  ],
+  "RightSideMirror": [
+   62.4,
+   -84.19,
+   81.34
+  ]
+ },
+ "base_wheel": "Vista",
+ "skins": {
+  "dir": "~/nfs-work/mw/vin/bmwm3gtr/textures",
+  "pick": [
+   "01RAZORCALLAHA",
+   "02TUROSATO",
+   "03RONNIEMCCREA",
+   "04JOEVEGA",
+   "05WESALLEN",
+   "06HECTORDOMING",
+   "07KIRANAZAKATO",
+   "08JADEBARRETT",
+   "09PIERREDUPONT",
+   "10KARLSMIT",
+   "11LOUPARK",
+   "12ISABELDIAZ",
+   "13VICTORVASQUE",
+   "14VINCEKILIC",
+   "15TONYHO",
+   "BMW_24",
+   "MOTOGTR",
+   "CE01",
+   "CE02",
+   "CE03"
+  ],
+  "labels": {
+   "01RAZORCALLAHA": "Blacklist #1 Razor",
+   "02TUROSATO": "Blacklist #2 Bull",
+   "03RONNIEMCCREA": "Blacklist #3 Ronnie",
+   "04JOEVEGA": "Blacklist #4 JV",
+   "05WESALLEN": "Blacklist #5 Webster",
+   "06HECTORDOMING": "Blacklist #6 Ming",
+   "07KIRANAZAKATO": "Blacklist #7 Kaze",
+   "08JADEBARRETT": "Blacklist #8 Jewels",
+   "09PIERREDUPONT": "Blacklist #9 Baron",
+   "10KARLSMIT": "Blacklist #10 Earl",
+   "11LOUPARK": "Blacklist #11 Big Lou",
+   "12ISABELDIAZ": "Blacklist #12 Izzy",
+   "13VICTORVASQUE": "Blacklist #13 Vic",
+   "14VINCEKILIC": "Blacklist #14 Taz",
+   "15TONYHO": "Blacklist #15 Sonny",
+   "BMW_24": "BMW #24 Livery",
+   "MOTOGTR": "Moto GTR Livery",
+   "CE01": "Collector's Edition 1",
+   "CE02": "Collector's Edition 2",
+   "CE03": "Collector's Edition 3"
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   232,
+   232,
+   228
+  ],
+  "ink": [
+   18,
+   18,
+   20
+  ],
+  "minor_ink": [
+   60,
+   60,
+   64
+  ],
+  "red_color": [
+   230,
+   80,
+   20
+  ],
+  "font_file": "bahnschrift.ttf",
+  "ring": [
+   [
+    90,
+    90,
+    95
+   ],
+   0.05
+  ],
+  "glow_face": [
+   190,
+   120,
+   70
+  ],
+  "glow_red": [
+   255,
+   50,
+   10
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  255,
+  120,
+  30
+ ],
+ "needle_scales": {
+  "RPM": 0.815,
+  "Speed": 0.807,
+  "Fuel": 0.755,
+  "Temp": 0.759
+ },
+ "arch_zones": [
+  [
+   161.7,
+   23,
+   57.0,
+   45.0
+  ],
+  [
+   -112.3,
+   23,
+   57.0,
+   45.0
+  ]
+ ]
+}

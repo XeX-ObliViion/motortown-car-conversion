@@ -1,0 +1,6908 @@
+{
+ "base_vehicle": "Tuscan",
+ "default_slot": "Bottom",
+ "base_wheel": "Vista",
+ "ai_upscale": [
+  "Tex_CHALLENGER71_INTERIOR",
+  "Tex_CHALLENGER71_MISC",
+  "Tex_CHALLENGER71_BADGING",
+  "Tex_CHALLENGER71_ENGINE"
+ ],
+ "masked_texture_slots": [
+  "Tex_CHALLENGER71_BADGING"
+ ],
+ "paintable_texture_slots": [
+  "Tex_CHALLENGER71_WHEEL"
+ ],
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_CHALLENGER71_KIT00_HEADLIGHT_ON": "HeadLight",
+  "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF": "TailLight",
+  "Tex_CHALLENGER71_WHEEL": "Wheel_01",
+  "Paint2": "Body_02",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_T": "LeftTailLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_T": "RightTailLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_M": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_M": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "Tex_CHALLENGER71_KIT00_HEADLIGHT_ON": "head",
+  "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF": "tail",
+  "Signal_L_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_L_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHALLENGER71_MISC"
+  },
+  "Signal_L_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHALLENGER71_BADGING"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHALLENGER71_MISC"
+  },
+  "Signal_R_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_CHALLENGER71_BADGING"
+  }
+ },
+ "car": "PS_CHALLENGER71",
+ "display_name": "Dodge Challenger R/T (ProStreet)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/geo/ps_challenger71",
+ "prefix": "CHALLENGER71_KIT00",
+ "out_dir": "C:\\Users\\noust/mt-work/build/PS_CHALLENGER71/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/tex/ps_challenger71/textures",
+ "cost": 95000,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xBEBC83C2": "Paint",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0xE4CEA025": "Bottom",
+  "0x94A628C7": "Tex_CHALLENGER71_MISC",
+  "0x2C0EA247": "Tex_CHALLENGER71_INTERIOR",
+  "0x447E3B51": "Tex_CHALLENGER71_ENGINE",
+  "0x2A1F6F50": "Tex_CHALLENGER71_WHEEL",
+  "0xCECC68E7": "Tex_CHALLENGER71_BADGING",
+  "0xE6D4E308": "Tex_CHALLENGER71_KIT00_HEADLIGHT_ON",
+  "0xA32E4D41": "Glass",
+  "0xE96D8239": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "skip_groups": [
+      3
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "skip_groups": [
+      3
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -37,
+      -38,
+      12
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -37,
+      38,
+      12
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     13,
+     -13.5,
+     93,
+     22.5,
+     13,
+     104.5
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_CHALLENGER71_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.88,
+      0.03,
+      1.0,
+      0.33
+     ]
+    }
+   ]
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      3
+     ]
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Mirror",
+     "groups": [
+      3
+     ]
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHALLENGER71_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHALLENGER71_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHALLENGER71_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHALLENGER71_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "CHALLENGER71_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHALLENGER71_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHALLENGER71_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT08": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHALLENGER71_KIT08"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHALLENGER71_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT09": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHALLENGER71_KIT09"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHALLENGER71_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHALLENGER71_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHALLENGER71_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "CHALLENGER71_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "CHALLENGER71_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHALLENGER71_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHALLENGER71_KIT00",
+      "tol": 1.0,
+      "keep_boxes": [
+       [
+        -82,
+        -100,
+        18,
+        -66,
+        -60,
+        33
+       ],
+       [
+        -82,
+        60,
+        18,
+        -66,
+        100,
+        33
+       ]
+      ]
+     },
+     "x_range": [
+      -9999,
+      0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHALLENGER71_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHALLENGER71_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHALLENGER71_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHALLENGER71_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT06": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "CHALLENGER71_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHALLENGER71_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHALLENGER71_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT08": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHALLENGER71_KIT08"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHALLENGER71_KIT08"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT09": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHALLENGER71_KIT09"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHALLENGER71_KIT09"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHALLENGER71_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHALLENGER71_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KITW01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "CHALLENGER71_KITW01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "CHALLENGER71_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHALLENGER71_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHALLENGER71_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "CHALLENGER71_KITW01"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "CHALLENGER71_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "CHALLENGER71_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHALLENGER71_KIT00",
+      "tol": 1.0,
+      "keep_boxes": [
+       [
+        -82,
+        -100,
+        18,
+        -66,
+        -60,
+        33
+       ],
+       [
+        -82,
+        60,
+        18,
+        -66,
+        100,
+        33
+       ]
+      ]
+     },
+     "x_range": [
+      0,
+      9999
+     ]
+    },
+    {
+     "part": "DOOR_LEFT",
+     "prefix": "CHALLENGER71_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHALLENGER71_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "DOOR_RIGHT",
+     "prefix": "CHALLENGER71_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "CHALLENGER71_KIT00",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "SPOILER",
+     "prefix": "CHALLENGER71_KIT00",
+     "slot": "Paint",
+     "offset": [
+      232,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "CHALLENGER71_KIT00",
+     "slot": "Paint",
+     "offset": [
+      232,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "PS_CHALLENGER71_R",
+  "Wheel_R": "PS_CHALLENGER71_L",
+  "SteeringWheel": "PS_CHALLENGER71"
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "wheels": {
+  "front_x": 148.5,
+  "rear_x": -140.6,
+  "half_track": 75,
+  "z": 3,
+  "rear_z": 7,
+  "radius": 32,
+  "auto_arches": true
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    38
+   ],
+   "size": [
+    480,
+    185,
+    50
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    88
+   ],
+   "size": [
+    200,
+    140,
+    45
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     24.29,
+     -39.48,
+     60.23
+    ],
+    "rot": [
+     -13.69,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -234,
+     -42,
+     20
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -234,
+     42,
+     20
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -232,
+     0,
+     72
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     112
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -242,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     19.45,
+     -86.36,
+     77.28
+    ],
+    "rot": [
+     -5.45,
+     -15.64,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     19.45,
+     86.36,
+     77.28
+    ],
+    "rot": [
+     -3.32,
+     28.75,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     49.56,
+     -54.15,
+     65.22
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     50.06,
+     -34.75,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     50.06,
+     -43.34,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     50.06,
+     -26.5,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "wheel_display_name": "Challenger '71 Stock (ProStreet)",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -36,
+    -39.5,
+    4
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -36,
+    39.5,
+    4
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -100,
+    35,
+    8
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -100,
+    -35,
+    8
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    18,
+    0,
+    99
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -10,
+    0,
+    104
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -70,
+    0,
+    102
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    232,
+    -65,
+    45
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    232,
+    65,
+    45
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    236,
+    55,
+    30
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    236,
+    -55,
+    30
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -245,
+    -55,
+    50
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -245,
+    55,
+    50
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -36,
+   -39.5,
+   90
+  ],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    4.9,
+    18.0,
+    0
+   ]
+  },
+  "body_mass": 924
+ },
+ "stock_wing": true,
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    21,
+    -39.5,
+    60.3
+   ],
+   "radius": 22,
+   "x_range": [
+    8,
+    34
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    24.2925,
+    -39.475500000000004,
+    60.22800000000001
+   ],
+   "tilt_deg": 13.69
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     49.56,
+     -54.15,
+     65.22
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     50.06,
+     -34.75,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     50.06,
+     -43.34,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     50.06,
+     -26.5,
+     67.11
+    ],
+    "rot": [
+     0,
+     -90,
+     -75.1
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": -3.2,
+   "width": 4.4,
+   "height": 1.1,
+   "out": 0.25
+  }
+ },
+ "texture_upscale": {
+  "Tex_CHALLENGER71_INTERIOR": 4
+ },
+ "gauge_faces": {
+  "Tex_CHALLENGER71_INTERIOR": [
+   {
+    "center": [
+     0.94,
+     0.278
+    ],
+    "face": [
+     0.94,
+     0.278,
+     0.028
+    ],
+    "radius": 0.024640000000000002,
+    "aspect": 1.365,
+    "rotate": 90,
+    "min": 0,
+    "max": 150,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.925,
+     0.165
+    ],
+    "face": [
+     0.925,
+     0.165,
+     0.017
+    ],
+    "radius": 0.014960000000000001,
+    "aspect": 1.365,
+    "rotate": 90,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 5.5,
+    "font": 0.24,
+    "captions": []
+   },
+   {
+    "center": [
+     0.925,
+     0.215
+    ],
+    "face": [
+     0.925,
+     0.215,
+     0.017
+    ],
+    "radius": 0.014960000000000001,
+    "aspect": 1.365,
+    "rotate": 90,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.925,
+     0.117
+    ],
+    "face": [
+     0.925,
+     0.117,
+     0.017
+    ],
+    "radius": 0.014960000000000001,
+    "aspect": 1.365,
+    "rotate": 90,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   },
+   {
+    "center": [
+     0.925,
+     0.066
+    ],
+    "face": [
+     0.925,
+     0.066,
+     0.017
+    ],
+    "radius": 0.014960000000000001,
+    "aspect": 1.365,
+    "rotate": 90,
+    "min": 0,
+    "max": 10,
+    "text_step": 5,
+    "line_step": 1,
+    "start": 210,
+    "end": 330,
+    "font": 0.32,
+    "labels": {
+     "0": "0",
+     "5": "5",
+     "10": "10"
+    },
+    "captions": [
+     [
+      "OIL",
+      0.45,
+      90
+     ]
+    ],
+    "caption_font": 0.2
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_CHALLENGER71_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_CHALLENGER71_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -250,
+    -76.5,
+    40,
+    -230,
+    -58.7,
+    60
+   ],
+   "note": "rear left outer lamp: red US blinker (signal_tail_red)"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -250,
+    58.7,
+    40,
+    -230,
+    76.5,
+    60
+   ],
+   "note": "rear right outer lamp"
+  },
+  {
+   "tag": "_T",
+   "from": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -250,
+    -55,
+    40,
+    -230,
+    -37.4,
+    60
+   ],
+   "note": "middle lamp left -> LeftTailLight (Tuscan slot names)"
+  },
+  {
+   "tag": "_T",
+   "from": "Tex_CHALLENGER71_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -250,
+    37.4,
+    40,
+    -230,
+    55,
+    60
+   ],
+   "note": "middle lamp right -> RightTailLight"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_CHALLENGER71_MISC",
+   "amber": true,
+   "box": [
+    210,
+    -90,
+    -3,
+    232,
+    90,
+    30
+   ],
+   "note": "front: amber parking/turn lamps in the lower valance; box down to z -3 for the widebody bumper lamp (z 0-5)"
+  },
+  {
+   "tag": "_M",
+   "from": "Tex_CHALLENGER71_BADGING",
+   "amber": true,
+   "box": [
+    195,
+    -95,
+    30,
+    222,
+    95,
+    45
+   ],
+   "note": "front amber side markers"
+  }
+ ],
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "PS_CHALLENGER71_RT440",
+    "base_row": "SmallBlock_320HP",
+    "asset": "PS_CHALLENGER71_RT440",
+    "base_asset": "Cars/Parts/Engine/Hemi392_525HP",
+    "display_name": "440 Magnum V8 (ProStreet Challenger R/T)",
+    "mass": 300,
+    "cost": 32000,
+    "max_torque_nm": 651.0,
+    "max_rpm": 7200,
+    "curve": [
+     [
+      0.1111,
+      0.2867
+     ],
+     [
+      0.2797,
+      0.7133
+     ],
+     [
+      0.4089,
+      1.0
+     ],
+     [
+      0.5489,
+      0.9892
+     ],
+     [
+      0.6278,
+      0.9176
+     ],
+     [
+      0.7031,
+      0.8387
+     ],
+     [
+      0.7893,
+      0.7565
+     ],
+     [
+      0.8843,
+      0.6668
+     ],
+     [
+      0.9722,
+      0.6007
+     ],
+     [
+      1.0,
+      0.5526
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ProStreet challenger71_track TORQUE shape scaled to 480 lb-ft, top end trimmed to 385 bhp @ 6800 (the user's car-lot figures); More Tuning Hemi392 for a Mopar V8 sound"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "PS_CHALLENGER71_TF3",
+    "base_row": "302",
+    "asset": "PS_CHALLENGER71_TF3",
+    "base_asset": "Cars/Parts/Transmission/TQ4SpeedMuscle",
+    "display_name": "TorqueFlite 3-Speed Auto (ProStreet Challenger R/T)",
+    "cost": 5000,
+    "mass": 80,
+    "drop_gears": [
+     "4"
+    ],
+    "ratios": {
+     "R": -2.9,
+     "1": 3.4,
+     "2": 1.7,
+     "3": 1.18
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "PS_CHALLENGER71_RT440",
+  "Transmission": "PS_CHALLENGER71_TF3",
+  "FinalDriveRatio": "103",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "PS_CHALLENGER71",
+  "Wheel1": "PS_CHALLENGER71",
+  "Wheel2": "PS_CHALLENGER71",
+  "Wheel3": "PS_CHALLENGER71",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "PS_CHALLENGER71_FrontBumper_KIT00",
+  "RearBumper": "PS_CHALLENGER71_RearBumper_KIT00",
+  "Bonnet": "PS_CHALLENGER71_Bonnet_KIT00",
+  "SideSkirt": "PS_CHALLENGER71_SideSkirt_KIT00",
+  "Fender": "PS_CHALLENGER71_Fender_KIT00",
+  "RearWing": "PS_CHALLENGER71_RearWing_STOCK"
+ },
+ "performance_source": "ProStreet vehicle.yml challenger71_track: MASS 1440, FINAL_GEAR 3.55, GEAR_RATIO R2.9/3.4/1.7/1.18 (3-speed), RED_LINE 6800, MAX_RPM 7200; torque scaled to 480 lb-ft / 385 bhp @ 6800",
+ "aero_parts": [
+  {
+   "row": "PS_CHALLENGER71_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_FrontBumper_KIT08",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT08",
+   "display_name": "Stratospeed Formula 4 Front Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_FrontBumper_KIT09",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT09",
+   "display_name": "Stratospeed Formula 5 Front Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Front Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_FrontBumper_KITW01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KITW01",
+   "display_name": "Stratospeed Widebody Front Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearBumper_KIT08",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT08",
+   "display_name": "Stratospeed Formula 4 Rear Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearBumper_KIT09",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT09",
+   "display_name": "Stratospeed Formula 5 Rear Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Rear Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearBumper_KITW01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KITW01",
+   "display_name": "Stratospeed Widebody Rear Bumper"
+  },
+  {
+   "row": "PS_CHALLENGER71_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "PS_CHALLENGER71_Bonnet_KIT01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT01",
+   "display_name": "Araxis Sport Hood"
+  },
+  {
+   "row": "PS_CHALLENGER71_Bonnet_KIT02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT02",
+   "display_name": "Araxis Sweeper Hood"
+  },
+  {
+   "row": "PS_CHALLENGER71_Bonnet_KIT03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT03",
+   "display_name": "Araxis Blitz Hood"
+  },
+  {
+   "row": "PS_CHALLENGER71_Bonnet_KIT06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT06",
+   "display_name": "Araxis Impact Hood"
+  },
+  {
+   "row": "PS_CHALLENGER71_SideSkirt_KIT00",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT00",
+   "display_name": "Stock Side Skirts"
+  },
+  {
+   "row": "PS_CHALLENGER71_SideSkirt_KIT08",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT08",
+   "display_name": "Stratospeed Formula 4 Side Skirts"
+  },
+  {
+   "row": "PS_CHALLENGER71_SideSkirt_KIT09",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT09",
+   "display_name": "Stratospeed Formula 5 Side Skirts"
+  },
+  {
+   "row": "PS_CHALLENGER71_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Stratospeed Formula 7 Side Skirts"
+  },
+  {
+   "row": "PS_CHALLENGER71_SideSkirt_KITW01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KITW01",
+   "display_name": "Stratospeed Widebody Side Skirts"
+  },
+  {
+   "row": "PS_CHALLENGER71_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Front Fenders"
+  },
+  {
+   "row": "PS_CHALLENGER71_Fender_KITW01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KITW01",
+   "display_name": "Stratospeed Widebody Front Fenders"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  },
+  {
+   "row": "PS_CHALLENGER71_RearWing_DRAG",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_DRAG",
+   "display_name": "Gentera Style 403 Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "SideSkirt",
+  "Fender"
+ ],
+ "widebody_keep_boxes": [
+  [
+   -82,
+   -100,
+   18,
+   -66,
+   -60,
+   33
+  ],
+  [
+   -82,
+   60,
+   18,
+   -66,
+   100,
+   33
+  ]
+ ],
+ "decals": [
+  {
+   "from": "Paint",
+   "to": "Paint2",
+   "min_side_ny": 0.35,
+   "note": "71 R/T strobe stripe (ProStreet stock vinyl), traced from the ProStreet showroom; Body_02",
+   "left": [
+    [
+     [
+      208,
+      56.56
+     ],
+     [
+      206,
+      56.74
+     ],
+     [
+      204,
+      56.95
+     ],
+     [
+      202,
+      57.18
+     ],
+     [
+      200,
+      57.43
+     ],
+     [
+      198,
+      57.69
+     ],
+     [
+      196,
+      57.95
+     ],
+     [
+      194,
+      58.2
+     ],
+     [
+      192,
+      58.44
+     ],
+     [
+      190,
+      58.68
+     ],
+     [
+      188,
+      58.92
+     ],
+     [
+      186,
+      59.14
+     ],
+     [
+      184,
+      59.37
+     ],
+     [
+      182,
+      59.58
+     ],
+     [
+      180,
+      59.79
+     ],
+     [
+      178,
+      59.98
+     ],
+     [
+      176,
+      60.16
+     ],
+     [
+      174,
+      60.33
+     ],
+     [
+      172,
+      60.5
+     ],
+     [
+      170,
+      60.66
+     ],
+     [
+      168,
+      60.81
+     ],
+     [
+      166,
+      60.96
+     ],
+     [
+      164,
+      61.1
+     ],
+     [
+      162,
+      61.23
+     ],
+     [
+      160,
+      61.36
+     ],
+     [
+      158,
+      61.48
+     ],
+     [
+      156,
+      61.59
+     ],
+     [
+      154,
+      61.71
+     ],
+     [
+      152,
+      61.82
+     ],
+     [
+      150,
+      61.93
+     ],
+     [
+      148,
+      62.05
+     ],
+     [
+      146,
+      62.17
+     ],
+     [
+      144,
+      62.29
+     ],
+     [
+      142,
+      62.41
+     ],
+     [
+      140,
+      62.53
+     ],
+     [
+      138,
+      62.65
+     ],
+     [
+      136,
+      62.77
+     ],
+     [
+      134,
+      62.9
+     ],
+     [
+      132,
+      63.02
+     ],
+     [
+      130,
+      63.15
+     ],
+     [
+      128,
+      63.27
+     ],
+     [
+      126,
+      63.4
+     ],
+     [
+      124,
+      63.52
+     ],
+     [
+      122,
+      63.64
+     ],
+     [
+      120,
+      63.75
+     ],
+     [
+      118,
+      63.87
+     ],
+     [
+      116,
+      63.98
+     ],
+     [
+      114,
+      64.09
+     ],
+     [
+      112,
+      64.19
+     ],
+     [
+      110,
+      64.3
+     ],
+     [
+      108,
+      64.4
+     ],
+     [
+      106,
+      64.5
+     ],
+     [
+      104,
+      64.6
+     ],
+     [
+      102,
+      64.7
+     ],
+     [
+      100,
+      64.8
+     ],
+     [
+      98,
+      64.9
+     ],
+     [
+      96,
+      65.0
+     ],
+     [
+      94,
+      65.1
+     ],
+     [
+      92,
+      65.2
+     ],
+     [
+      90,
+      65.3
+     ],
+     [
+      88,
+      65.4
+     ],
+     [
+      86,
+      65.5
+     ],
+     [
+      84,
+      65.6
+     ],
+     [
+      82,
+      65.7
+     ],
+     [
+      80,
+      65.8
+     ],
+     [
+      78,
+      65.89
+     ],
+     [
+      76,
+      65.98
+     ],
+     [
+      74,
+      66.06
+     ],
+     [
+      72,
+      66.14
+     ],
+     [
+      70,
+      66.21
+     ],
+     [
+      68,
+      66.29
+     ],
+     [
+      66,
+      66.35
+     ],
+     [
+      64,
+      66.42
+     ],
+     [
+      62,
+      66.47
+     ],
+     [
+      60,
+      66.53
+     ],
+     [
+      58,
+      66.58
+     ],
+     [
+      56,
+      66.63
+     ],
+     [
+      54,
+      66.67
+     ],
+     [
+      52,
+      66.72
+     ],
+     [
+      50,
+      66.76
+     ],
+     [
+      48,
+      66.8
+     ],
+     [
+      46,
+      66.84
+     ],
+     [
+      44,
+      66.88
+     ],
+     [
+      42,
+      66.91
+     ],
+     [
+      40,
+      66.93
+     ],
+     [
+      38,
+      66.96
+     ],
+     [
+      36,
+      66.98
+     ],
+     [
+      34,
+      67.0
+     ],
+     [
+      32,
+      67.01
+     ],
+     [
+      30,
+      67.03
+     ],
+     [
+      28,
+      67.04
+     ],
+     [
+      26,
+      67.04
+     ],
+     [
+      24,
+      67.05
+     ],
+     [
+      22,
+      67.05
+     ],
+     [
+      20,
+      67.06
+     ],
+     [
+      18,
+      67.07
+     ],
+     [
+      16,
+      67.07
+     ],
+     [
+      14,
+      67.08
+     ],
+     [
+      12,
+      67.08
+     ],
+     [
+      10,
+      67.09
+     ],
+     [
+      8,
+      67.1
+     ],
+     [
+      6,
+      67.1
+     ],
+     [
+      4,
+      67.11
+     ],
+     [
+      2,
+      67.11
+     ],
+     [
+      0,
+      67.12
+     ],
+     [
+      -2,
+      67.13
+     ],
+     [
+      -4,
+      67.13
+     ],
+     [
+      -6,
+      67.14
+     ],
+     [
+      -8,
+      67.14
+     ],
+     [
+      -10,
+      67.15
+     ],
+     [
+      -12,
+      67.16
+     ],
+     [
+      -14,
+      67.16
+     ],
+     [
+      -16,
+      67.17
+     ],
+     [
+      -18,
+      67.17
+     ],
+     [
+      -20,
+      67.18
+     ],
+     [
+      -22,
+      67.19
+     ],
+     [
+      -24,
+      67.19
+     ],
+     [
+      -26,
+      67.2
+     ],
+     [
+      -28,
+      67.2
+     ],
+     [
+      -30,
+      67.21
+     ],
+     [
+      -32,
+      67.22
+     ],
+     [
+      -34,
+      67.22
+     ],
+     [
+      -36,
+      67.23
+     ],
+     [
+      -38,
+      67.23
+     ],
+     [
+      -40,
+      67.24
+     ],
+     [
+      -42,
+      67.25
+     ],
+     [
+      -44,
+      67.25
+     ],
+     [
+      -46,
+      67.26
+     ],
+     [
+      -48,
+      67.26
+     ],
+     [
+      -50,
+      67.27
+     ],
+     [
+      -52,
+      67.27
+     ],
+     [
+      -54,
+      67.28
+     ],
+     [
+      -56,
+      67.28
+     ],
+     [
+      -58,
+      67.29
+     ],
+     [
+      -60,
+      67.29
+     ],
+     [
+      -62,
+      67.29
+     ],
+     [
+      -64,
+      67.3
+     ],
+     [
+      -66,
+      67.3
+     ],
+     [
+      -68,
+      67.3
+     ],
+     [
+      -70,
+      67.3
+     ],
+     [
+      -72,
+      67.3
+     ],
+     [
+      -74,
+      67.3
+     ],
+     [
+      -76,
+      67.3
+     ],
+     [
+      -78,
+      67.34
+     ],
+     [
+      -80,
+      67.48
+     ],
+     [
+      -82,
+      67.7
+     ],
+     [
+      -84,
+      68.02
+     ],
+     [
+      -86,
+      68.42
+     ],
+     [
+      -88,
+      68.92
+     ],
+     [
+      -90,
+      69.5
+     ],
+     [
+      -92,
+      70.18
+     ],
+     [
+      -94,
+      70.94
+     ],
+     [
+      -96,
+      71.8
+     ],
+     [
+      -98,
+      72.7
+     ],
+     [
+      -99,
+      73.15
+     ],
+     [
+      -99,
+      71.75
+     ],
+     [
+      -98,
+      71.3
+     ],
+     [
+      -96,
+      70.4
+     ],
+     [
+      -94,
+      69.54
+     ],
+     [
+      -92,
+      68.78
+     ],
+     [
+      -90,
+      68.1
+     ],
+     [
+      -88,
+      67.52
+     ],
+     [
+      -86,
+      67.02
+     ],
+     [
+      -84,
+      66.62
+     ],
+     [
+      -82,
+      66.3
+     ],
+     [
+      -80,
+      66.08
+     ],
+     [
+      -78,
+      65.94
+     ],
+     [
+      -76,
+      65.9
+     ],
+     [
+      -74,
+      65.9
+     ],
+     [
+      -72,
+      65.9
+     ],
+     [
+      -70,
+      65.9
+     ],
+     [
+      -68,
+      65.9
+     ],
+     [
+      -66,
+      65.9
+     ],
+     [
+      -64,
+      65.9
+     ],
+     [
+      -62,
+      65.89
+     ],
+     [
+      -60,
+      65.89
+     ],
+     [
+      -58,
+      65.89
+     ],
+     [
+      -56,
+      65.88
+     ],
+     [
+      -54,
+      65.88
+     ],
+     [
+      -52,
+      65.87
+     ],
+     [
+      -50,
+      65.87
+     ],
+     [
+      -48,
+      65.86
+     ],
+     [
+      -46,
+      65.86
+     ],
+     [
+      -44,
+      65.85
+     ],
+     [
+      -42,
+      65.85
+     ],
+     [
+      -40,
+      65.84
+     ],
+     [
+      -38,
+      65.83
+     ],
+     [
+      -36,
+      65.83
+     ],
+     [
+      -34,
+      65.82
+     ],
+     [
+      -32,
+      65.82
+     ],
+     [
+      -30,
+      65.81
+     ],
+     [
+      -28,
+      65.8
+     ],
+     [
+      -26,
+      65.8
+     ],
+     [
+      -24,
+      65.79
+     ],
+     [
+      -22,
+      65.79
+     ],
+     [
+      -20,
+      65.78
+     ],
+     [
+      -18,
+      65.77
+     ],
+     [
+      -16,
+      65.77
+     ],
+     [
+      -14,
+      65.76
+     ],
+     [
+      -12,
+      65.76
+     ],
+     [
+      -10,
+      65.75
+     ],
+     [
+      -8,
+      65.74
+     ],
+     [
+      -6,
+      65.74
+     ],
+     [
+      -4,
+      65.73
+     ],
+     [
+      -2,
+      65.73
+     ],
+     [
+      0,
+      65.72
+     ],
+     [
+      2,
+      65.71
+     ],
+     [
+      4,
+      65.71
+     ],
+     [
+      6,
+      65.7
+     ],
+     [
+      8,
+      65.7
+     ],
+     [
+      10,
+      65.69
+     ],
+     [
+      12,
+      65.68
+     ],
+     [
+      14,
+      65.68
+     ],
+     [
+      16,
+      65.67
+     ],
+     [
+      18,
+      65.67
+     ],
+     [
+      20,
+      65.66
+     ],
+     [
+      22,
+      65.65
+     ],
+     [
+      24,
+      65.65
+     ],
+     [
+      26,
+      65.64
+     ],
+     [
+      28,
+      65.64
+     ],
+     [
+      30,
+      65.63
+     ],
+     [
+      32,
+      65.61
+     ],
+     [
+      34,
+      65.6
+     ],
+     [
+      36,
+      65.58
+     ],
+     [
+      38,
+      65.56
+     ],
+     [
+      40,
+      65.53
+     ],
+     [
+      42,
+      65.51
+     ],
+     [
+      44,
+      65.48
+     ],
+     [
+      46,
+      65.44
+     ],
+     [
+      48,
+      65.4
+     ],
+     [
+      50,
+      65.36
+     ],
+     [
+      52,
+      65.32
+     ],
+     [
+      54,
+      65.27
+     ],
+     [
+      56,
+      65.23
+     ],
+     [
+      58,
+      65.18
+     ],
+     [
+      60,
+      65.13
+     ],
+     [
+      62,
+      65.07
+     ],
+     [
+      64,
+      65.02
+     ],
+     [
+      66,
+      64.95
+     ],
+     [
+      68,
+      64.89
+     ],
+     [
+      70,
+      64.81
+     ],
+     [
+      72,
+      64.74
+     ],
+     [
+      74,
+      64.66
+     ],
+     [
+      76,
+      64.58
+     ],
+     [
+      78,
+      64.49
+     ],
+     [
+      80,
+      64.4
+     ],
+     [
+      82,
+      64.3
+     ],
+     [
+      84,
+      64.2
+     ],
+     [
+      86,
+      64.1
+     ],
+     [
+      88,
+      64.0
+     ],
+     [
+      90,
+      63.9
+     ],
+     [
+      92,
+      63.8
+     ],
+     [
+      94,
+      63.7
+     ],
+     [
+      96,
+      63.6
+     ],
+     [
+      98,
+      63.5
+     ],
+     [
+      100,
+      63.4
+     ],
+     [
+      102,
+      63.3
+     ],
+     [
+      104,
+      63.2
+     ],
+     [
+      106,
+      63.1
+     ],
+     [
+      108,
+      63.0
+     ],
+     [
+      110,
+      62.9
+     ],
+     [
+      112,
+      62.79
+     ],
+     [
+      114,
+      62.69
+     ],
+     [
+      116,
+      62.58
+     ],
+     [
+      118,
+      62.47
+     ],
+     [
+      120,
+      62.35
+     ],
+     [
+      122,
+      62.24
+     ],
+     [
+      124,
+      62.12
+     ],
+     [
+      126,
+      62.0
+     ],
+     [
+      128,
+      61.87
+     ],
+     [
+      130,
+      61.75
+     ],
+     [
+      132,
+      61.62
+     ],
+     [
+      134,
+      61.5
+     ],
+     [
+      136,
+      61.37
+     ],
+     [
+      138,
+      61.25
+     ],
+     [
+      140,
+      61.13
+     ],
+     [
+      142,
+      61.01
+     ],
+     [
+      144,
+      60.89
+     ],
+     [
+      146,
+      60.77
+     ],
+     [
+      148,
+      60.65
+     ],
+     [
+      150,
+      60.53
+     ],
+     [
+      152,
+      60.42
+     ],
+     [
+      154,
+      60.31
+     ],
+     [
+      156,
+      60.19
+     ],
+     [
+      158,
+      60.08
+     ],
+     [
+      160,
+      59.96
+     ],
+     [
+      162,
+      59.83
+     ],
+     [
+      164,
+      59.7
+     ],
+     [
+      166,
+      59.56
+     ],
+     [
+      168,
+      59.41
+     ],
+     [
+      170,
+      59.26
+     ],
+     [
+      172,
+      59.1
+     ],
+     [
+      174,
+      58.93
+     ],
+     [
+      176,
+      58.76
+     ],
+     [
+      178,
+      58.58
+     ],
+     [
+      180,
+      58.39
+     ],
+     [
+      182,
+      58.18
+     ],
+     [
+      184,
+      57.97
+     ],
+     [
+      186,
+      57.74
+     ],
+     [
+      188,
+      57.52
+     ],
+     [
+      190,
+      57.28
+     ],
+     [
+      192,
+      57.04
+     ],
+     [
+      194,
+      56.8
+     ],
+     [
+      196,
+      56.55
+     ],
+     [
+      198,
+      56.29
+     ],
+     [
+      200,
+      56.03
+     ],
+     [
+      202,
+      55.78
+     ],
+     [
+      204,
+      55.55
+     ],
+     [
+      206,
+      55.34
+     ],
+     [
+      208,
+      55.16
+     ]
+    ],
+    [
+     [
+      208,
+      53.46
+     ],
+     [
+      206,
+      53.64
+     ],
+     [
+      204,
+      53.85
+     ],
+     [
+      202,
+      54.08
+     ],
+     [
+      200,
+      54.33
+     ],
+     [
+      198,
+      54.59
+     ],
+     [
+      196,
+      54.85
+     ],
+     [
+      194,
+      55.1
+     ],
+     [
+      192,
+      55.34
+     ],
+     [
+      190,
+      55.58
+     ],
+     [
+      188,
+      55.82
+     ],
+     [
+      186,
+      56.04
+     ],
+     [
+      184,
+      56.27
+     ],
+     [
+      182,
+      56.48
+     ],
+     [
+      180,
+      56.69
+     ],
+     [
+      178,
+      56.88
+     ],
+     [
+      176,
+      57.06
+     ],
+     [
+      174,
+      57.23
+     ],
+     [
+      172,
+      57.4
+     ],
+     [
+      170,
+      57.56
+     ],
+     [
+      168,
+      57.71
+     ],
+     [
+      166,
+      57.86
+     ],
+     [
+      164,
+      58.0
+     ],
+     [
+      162,
+      58.13
+     ],
+     [
+      160,
+      58.26
+     ],
+     [
+      158,
+      58.38
+     ],
+     [
+      156,
+      58.49
+     ],
+     [
+      154,
+      58.61
+     ],
+     [
+      152,
+      58.72
+     ],
+     [
+      150,
+      58.83
+     ],
+     [
+      148,
+      58.95
+     ],
+     [
+      146,
+      59.07
+     ],
+     [
+      144,
+      59.19
+     ],
+     [
+      142,
+      59.31
+     ],
+     [
+      140,
+      59.43
+     ],
+     [
+      138,
+      59.55
+     ],
+     [
+      136,
+      59.67
+     ],
+     [
+      134,
+      59.8
+     ],
+     [
+      132,
+      59.92
+     ],
+     [
+      130,
+      60.05
+     ],
+     [
+      128,
+      60.17
+     ],
+     [
+      126,
+      60.3
+     ],
+     [
+      124,
+      60.42
+     ],
+     [
+      122,
+      60.54
+     ],
+     [
+      120,
+      60.65
+     ],
+     [
+      118,
+      60.77
+     ],
+     [
+      116,
+      60.88
+     ],
+     [
+      114,
+      60.99
+     ],
+     [
+      112,
+      61.09
+     ],
+     [
+      110,
+      61.2
+     ],
+     [
+      108,
+      61.3
+     ],
+     [
+      106,
+      61.4
+     ],
+     [
+      104,
+      61.5
+     ],
+     [
+      102,
+      61.6
+     ],
+     [
+      100,
+      61.7
+     ],
+     [
+      98,
+      61.8
+     ],
+     [
+      96,
+      61.9
+     ],
+     [
+      94,
+      62.0
+     ],
+     [
+      92,
+      62.1
+     ],
+     [
+      90,
+      62.2
+     ],
+     [
+      88,
+      62.3
+     ],
+     [
+      86,
+      62.4
+     ],
+     [
+      84,
+      62.5
+     ],
+     [
+      82,
+      62.6
+     ],
+     [
+      80,
+      62.7
+     ],
+     [
+      78,
+      62.79
+     ],
+     [
+      76,
+      62.88
+     ],
+     [
+      74,
+      62.96
+     ],
+     [
+      72,
+      63.04
+     ],
+     [
+      70,
+      63.11
+     ],
+     [
+      68,
+      63.19
+     ],
+     [
+      66,
+      63.25
+     ],
+     [
+      64,
+      63.32
+     ],
+     [
+      62,
+      63.37
+     ],
+     [
+      60,
+      63.43
+     ],
+     [
+      58,
+      63.48
+     ],
+     [
+      56,
+      63.53
+     ],
+     [
+      54,
+      63.57
+     ],
+     [
+      52,
+      63.62
+     ],
+     [
+      50,
+      63.66
+     ],
+     [
+      48,
+      63.7
+     ],
+     [
+      46,
+      63.74
+     ],
+     [
+      44,
+      63.78
+     ],
+     [
+      42,
+      63.81
+     ],
+     [
+      40,
+      63.83
+     ],
+     [
+      38,
+      63.86
+     ],
+     [
+      36,
+      63.88
+     ],
+     [
+      34,
+      63.9
+     ],
+     [
+      32,
+      63.91
+     ],
+     [
+      30,
+      63.93
+     ],
+     [
+      28,
+      63.94
+     ],
+     [
+      26,
+      63.94
+     ],
+     [
+      24,
+      63.95
+     ],
+     [
+      22,
+      63.95
+     ],
+     [
+      20,
+      63.96
+     ],
+     [
+      18,
+      63.97
+     ],
+     [
+      16,
+      63.97
+     ],
+     [
+      14,
+      63.98
+     ],
+     [
+      12,
+      63.98
+     ],
+     [
+      10,
+      63.99
+     ],
+     [
+      8,
+      64.0
+     ],
+     [
+      6,
+      64.0
+     ],
+     [
+      4,
+      64.01
+     ],
+     [
+      2,
+      64.01
+     ],
+     [
+      0,
+      64.02
+     ],
+     [
+      -2,
+      64.03
+     ],
+     [
+      -4,
+      64.03
+     ],
+     [
+      -6,
+      64.04
+     ],
+     [
+      -8,
+      64.04
+     ],
+     [
+      -10,
+      64.05
+     ],
+     [
+      -12,
+      64.06
+     ],
+     [
+      -14,
+      64.06
+     ],
+     [
+      -16,
+      64.07
+     ],
+     [
+      -18,
+      64.07
+     ],
+     [
+      -20,
+      64.08
+     ],
+     [
+      -22,
+      64.09
+     ],
+     [
+      -24,
+      64.09
+     ],
+     [
+      -26,
+      64.1
+     ],
+     [
+      -28,
+      64.1
+     ],
+     [
+      -30,
+      64.11
+     ],
+     [
+      -32,
+      64.12
+     ],
+     [
+      -34,
+      64.12
+     ],
+     [
+      -36,
+      64.13
+     ],
+     [
+      -38,
+      64.13
+     ],
+     [
+      -40,
+      64.14
+     ],
+     [
+      -42,
+      64.15
+     ],
+     [
+      -44,
+      64.15
+     ],
+     [
+      -46,
+      64.16
+     ],
+     [
+      -48,
+      64.16
+     ],
+     [
+      -50,
+      64.17
+     ],
+     [
+      -52,
+      64.17
+     ],
+     [
+      -54,
+      64.18
+     ],
+     [
+      -56,
+      64.18
+     ],
+     [
+      -58,
+      64.19
+     ],
+     [
+      -60,
+      64.19
+     ],
+     [
+      -62,
+      64.19
+     ],
+     [
+      -64,
+      64.2
+     ],
+     [
+      -66,
+      64.2
+     ],
+     [
+      -68,
+      64.2
+     ],
+     [
+      -70,
+      64.2
+     ],
+     [
+      -72,
+      64.2
+     ],
+     [
+      -74,
+      64.2
+     ],
+     [
+      -76,
+      64.2
+     ],
+     [
+      -78,
+      64.25
+     ],
+     [
+      -80,
+      64.38
+     ],
+     [
+      -82,
+      64.61
+     ],
+     [
+      -84,
+      64.92
+     ],
+     [
+      -86,
+      65.33
+     ],
+     [
+      -88,
+      65.82
+     ],
+     [
+      -90,
+      66.41
+     ],
+     [
+      -92,
+      67.08
+     ],
+     [
+      -94,
+      67.84
+     ],
+     [
+      -96,
+      68.7
+     ],
+     [
+      -98,
+      69.6
+     ],
+     [
+      -100,
+      70.5
+     ],
+     [
+      -102,
+      71.4
+     ],
+     [
+      -103,
+      71.85
+     ],
+     [
+      -103,
+      68.45
+     ],
+     [
+      -102,
+      68.0
+     ],
+     [
+      -100,
+      67.1
+     ],
+     [
+      -98,
+      66.2
+     ],
+     [
+      -96,
+      65.3
+     ],
+     [
+      -94,
+      64.44
+     ],
+     [
+      -92,
+      63.68
+     ],
+     [
+      -90,
+      63.0
+     ],
+     [
+      -88,
+      62.42
+     ],
+     [
+      -86,
+      61.92
+     ],
+     [
+      -84,
+      61.52
+     ],
+     [
+      -82,
+      61.2
+     ],
+     [
+      -80,
+      60.98
+     ],
+     [
+      -78,
+      60.84
+     ],
+     [
+      -76,
+      60.8
+     ],
+     [
+      -74,
+      60.8
+     ],
+     [
+      -72,
+      60.8
+     ],
+     [
+      -70,
+      60.8
+     ],
+     [
+      -68,
+      60.8
+     ],
+     [
+      -66,
+      60.8
+     ],
+     [
+      -64,
+      60.8
+     ],
+     [
+      -62,
+      60.79
+     ],
+     [
+      -60,
+      60.79
+     ],
+     [
+      -58,
+      60.79
+     ],
+     [
+      -56,
+      60.78
+     ],
+     [
+      -54,
+      60.78
+     ],
+     [
+      -52,
+      60.77
+     ],
+     [
+      -50,
+      60.77
+     ],
+     [
+      -48,
+      60.76
+     ],
+     [
+      -46,
+      60.76
+     ],
+     [
+      -44,
+      60.75
+     ],
+     [
+      -42,
+      60.75
+     ],
+     [
+      -40,
+      60.74
+     ],
+     [
+      -38,
+      60.73
+     ],
+     [
+      -36,
+      60.73
+     ],
+     [
+      -34,
+      60.72
+     ],
+     [
+      -32,
+      60.72
+     ],
+     [
+      -30,
+      60.71
+     ],
+     [
+      -28,
+      60.7
+     ],
+     [
+      -26,
+      60.7
+     ],
+     [
+      -24,
+      60.69
+     ],
+     [
+      -22,
+      60.69
+     ],
+     [
+      -20,
+      60.68
+     ],
+     [
+      -18,
+      60.67
+     ],
+     [
+      -16,
+      60.67
+     ],
+     [
+      -14,
+      60.66
+     ],
+     [
+      -12,
+      60.66
+     ],
+     [
+      -10,
+      60.65
+     ],
+     [
+      -8,
+      60.64
+     ],
+     [
+      -6,
+      60.64
+     ],
+     [
+      -4,
+      60.63
+     ],
+     [
+      -2,
+      60.63
+     ],
+     [
+      0,
+      60.62
+     ],
+     [
+      2,
+      60.61
+     ],
+     [
+      4,
+      60.61
+     ],
+     [
+      6,
+      60.6
+     ],
+     [
+      8,
+      60.6
+     ],
+     [
+      10,
+      60.59
+     ],
+     [
+      12,
+      60.58
+     ],
+     [
+      14,
+      60.58
+     ],
+     [
+      16,
+      60.57
+     ],
+     [
+      18,
+      60.57
+     ],
+     [
+      20,
+      60.56
+     ],
+     [
+      22,
+      60.55
+     ],
+     [
+      24,
+      60.55
+     ],
+     [
+      26,
+      60.54
+     ],
+     [
+      28,
+      60.54
+     ],
+     [
+      30,
+      60.53
+     ],
+     [
+      32,
+      60.51
+     ],
+     [
+      34,
+      60.5
+     ],
+     [
+      36,
+      60.48
+     ],
+     [
+      38,
+      60.46
+     ],
+     [
+      40,
+      60.43
+     ],
+     [
+      42,
+      60.41
+     ],
+     [
+      44,
+      60.38
+     ],
+     [
+      46,
+      60.34
+     ],
+     [
+      48,
+      60.3
+     ],
+     [
+      50,
+      60.26
+     ],
+     [
+      52,
+      60.22
+     ],
+     [
+      54,
+      60.17
+     ],
+     [
+      56,
+      60.13
+     ],
+     [
+      58,
+      60.08
+     ],
+     [
+      60,
+      60.03
+     ],
+     [
+      62,
+      59.97
+     ],
+     [
+      64,
+      59.92
+     ],
+     [
+      66,
+      59.85
+     ],
+     [
+      68,
+      59.79
+     ],
+     [
+      70,
+      59.71
+     ],
+     [
+      72,
+      59.64
+     ],
+     [
+      74,
+      59.56
+     ],
+     [
+      76,
+      59.48
+     ],
+     [
+      78,
+      59.39
+     ],
+     [
+      80,
+      59.3
+     ],
+     [
+      82,
+      59.2
+     ],
+     [
+      84,
+      59.1
+     ],
+     [
+      86,
+      59.0
+     ],
+     [
+      88,
+      58.9
+     ],
+     [
+      90,
+      58.8
+     ],
+     [
+      92,
+      58.7
+     ],
+     [
+      94,
+      58.6
+     ],
+     [
+      96,
+      58.5
+     ],
+     [
+      98,
+      58.4
+     ],
+     [
+      100,
+      58.3
+     ],
+     [
+      102,
+      58.2
+     ],
+     [
+      104,
+      58.1
+     ],
+     [
+      106,
+      58.0
+     ],
+     [
+      108,
+      57.9
+     ],
+     [
+      110,
+      57.8
+     ],
+     [
+      112,
+      57.69
+     ],
+     [
+      114,
+      57.59
+     ],
+     [
+      116,
+      57.48
+     ],
+     [
+      118,
+      57.37
+     ],
+     [
+      120,
+      57.25
+     ],
+     [
+      122,
+      57.14
+     ],
+     [
+      124,
+      57.02
+     ],
+     [
+      126,
+      56.9
+     ],
+     [
+      128,
+      56.77
+     ],
+     [
+      130,
+      56.65
+     ],
+     [
+      132,
+      56.52
+     ],
+     [
+      134,
+      56.4
+     ],
+     [
+      136,
+      56.27
+     ],
+     [
+      138,
+      56.15
+     ],
+     [
+      140,
+      56.03
+     ],
+     [
+      142,
+      55.91
+     ],
+     [
+      144,
+      55.79
+     ],
+     [
+      146,
+      55.67
+     ],
+     [
+      148,
+      55.55
+     ],
+     [
+      150,
+      55.43
+     ],
+     [
+      152,
+      55.32
+     ],
+     [
+      154,
+      55.21
+     ],
+     [
+      156,
+      55.09
+     ],
+     [
+      158,
+      54.98
+     ],
+     [
+      160,
+      54.86
+     ],
+     [
+      162,
+      54.73
+     ],
+     [
+      164,
+      54.6
+     ],
+     [
+      166,
+      54.46
+     ],
+     [
+      168,
+      54.31
+     ],
+     [
+      170,
+      54.16
+     ],
+     [
+      172,
+      54.0
+     ],
+     [
+      174,
+      53.83
+     ],
+     [
+      176,
+      53.66
+     ],
+     [
+      178,
+      53.48
+     ],
+     [
+      180,
+      53.29
+     ],
+     [
+      182,
+      53.08
+     ],
+     [
+      184,
+      52.87
+     ],
+     [
+      186,
+      52.64
+     ],
+     [
+      188,
+      52.42
+     ],
+     [
+      190,
+      52.18
+     ],
+     [
+      192,
+      51.94
+     ],
+     [
+      194,
+      51.7
+     ],
+     [
+      196,
+      51.45
+     ],
+     [
+      198,
+      51.19
+     ],
+     [
+      200,
+      50.93
+     ],
+     [
+      202,
+      50.68
+     ],
+     [
+      204,
+      50.45
+     ],
+     [
+      206,
+      50.24
+     ],
+     [
+      208,
+      50.06
+     ]
+    ],
+    [
+     [
+      -101.0,
+      73.5
+     ],
+     [
+      -103.03,
+      72.65
+     ],
+     [
+      -105.1,
+      81.2
+     ],
+     [
+      -103.07,
+      82.05
+     ]
+    ],
+    [
+     [
+      -102.66,
+      80.34
+     ],
+     [
+      -108.75,
+      77.79
+     ],
+     [
+      -109.16,
+      79.5
+     ],
+     [
+      -103.07,
+      82.05
+     ]
+    ],
+    [
+     [
+      -101.93,
+      77.32
+     ],
+     [
+      -108.02,
+      74.76
+     ],
+     [
+      -108.43,
+      76.47
+     ],
+     [
+      -102.34,
+      79.03
+     ]
+    ],
+    [
+     [
+      -106.55,
+      75.95
+     ],
+     [
+      -108.58,
+      75.1
+     ],
+     [
+      -109.47,
+      78.79
+     ],
+     [
+      -107.44,
+      79.64
+     ]
+    ],
+    [
+     [
+      -105.5,
+      71.61
+     ],
+     [
+      -107.67,
+      70.7
+     ],
+     [
+      -107.03,
+      75.32
+     ],
+     [
+      -104.86,
+      76.23
+     ]
+    ],
+    [
+     [
+      -108.69,
+      70.27
+     ],
+     [
+      -110.42,
+      69.54
+     ],
+     [
+      -115.11,
+      77.0
+     ],
+     [
+      -113.37,
+      77.73
+     ]
+    ],
+    [
+     [
+      -115.13,
+      75.11
+     ],
+     [
+      -121.8,
+      72.3
+     ],
+     [
+      -122.21,
+      74.02
+     ],
+     [
+      -115.54,
+      76.82
+     ]
+    ],
+    [
+     [
+      -115.79,
+      67.29
+     ],
+     [
+      -117.82,
+      66.44
+     ],
+     [
+      -119.51,
+      73.41
+     ],
+     [
+      -117.48,
+      74.26
+     ]
+    ]
+   ],
+   "right": [
+    [
+     [
+      208,
+      56.56
+     ],
+     [
+      206,
+      56.74
+     ],
+     [
+      204,
+      56.95
+     ],
+     [
+      202,
+      57.18
+     ],
+     [
+      200,
+      57.43
+     ],
+     [
+      198,
+      57.69
+     ],
+     [
+      196,
+      57.95
+     ],
+     [
+      194,
+      58.2
+     ],
+     [
+      192,
+      58.44
+     ],
+     [
+      190,
+      58.68
+     ],
+     [
+      188,
+      58.92
+     ],
+     [
+      186,
+      59.14
+     ],
+     [
+      184,
+      59.37
+     ],
+     [
+      182,
+      59.58
+     ],
+     [
+      180,
+      59.79
+     ],
+     [
+      178,
+      59.98
+     ],
+     [
+      176,
+      60.16
+     ],
+     [
+      174,
+      60.33
+     ],
+     [
+      172,
+      60.5
+     ],
+     [
+      170,
+      60.66
+     ],
+     [
+      168,
+      60.81
+     ],
+     [
+      166,
+      60.96
+     ],
+     [
+      164,
+      61.1
+     ],
+     [
+      162,
+      61.23
+     ],
+     [
+      160,
+      61.36
+     ],
+     [
+      158,
+      61.48
+     ],
+     [
+      156,
+      61.59
+     ],
+     [
+      154,
+      61.71
+     ],
+     [
+      152,
+      61.82
+     ],
+     [
+      150,
+      61.93
+     ],
+     [
+      148,
+      62.05
+     ],
+     [
+      146,
+      62.17
+     ],
+     [
+      144,
+      62.29
+     ],
+     [
+      142,
+      62.41
+     ],
+     [
+      140,
+      62.53
+     ],
+     [
+      138,
+      62.65
+     ],
+     [
+      136,
+      62.77
+     ],
+     [
+      134,
+      62.9
+     ],
+     [
+      132,
+      63.02
+     ],
+     [
+      130,
+      63.15
+     ],
+     [
+      128,
+      63.27
+     ],
+     [
+      126,
+      63.4
+     ],
+     [
+      124,
+      63.52
+     ],
+     [
+      122,
+      63.64
+     ],
+     [
+      120,
+      63.75
+     ],
+     [
+      118,
+      63.87
+     ],
+     [
+      116,
+      63.98
+     ],
+     [
+      114,
+      64.09
+     ],
+     [
+      112,
+      64.19
+     ],
+     [
+      110,
+      64.3
+     ],
+     [
+      108,
+      64.4
+     ],
+     [
+      106,
+      64.5
+     ],
+     [
+      104,
+      64.6
+     ],
+     [
+      102,
+      64.7
+     ],
+     [
+      100,
+      64.8
+     ],
+     [
+      98,
+      64.9
+     ],
+     [
+      96,
+      65.0
+     ],
+     [
+      94,
+      65.1
+     ],
+     [
+      92,
+      65.2
+     ],
+     [
+      90,
+      65.3
+     ],
+     [
+      88,
+      65.4
+     ],
+     [
+      86,
+      65.5
+     ],
+     [
+      84,
+      65.6
+     ],
+     [
+      82,
+      65.7
+     ],
+     [
+      80,
+      65.8
+     ],
+     [
+      78,
+      65.89
+     ],
+     [
+      76,
+      65.98
+     ],
+     [
+      74,
+      66.06
+     ],
+     [
+      72,
+      66.14
+     ],
+     [
+      70,
+      66.21
+     ],
+     [
+      68,
+      66.29
+     ],
+     [
+      66,
+      66.35
+     ],
+     [
+      64,
+      66.42
+     ],
+     [
+      62,
+      66.47
+     ],
+     [
+      60,
+      66.53
+     ],
+     [
+      58,
+      66.58
+     ],
+     [
+      56,
+      66.63
+     ],
+     [
+      54,
+      66.67
+     ],
+     [
+      52,
+      66.72
+     ],
+     [
+      50,
+      66.76
+     ],
+     [
+      48,
+      66.8
+     ],
+     [
+      46,
+      66.84
+     ],
+     [
+      44,
+      66.88
+     ],
+     [
+      42,
+      66.91
+     ],
+     [
+      40,
+      66.93
+     ],
+     [
+      38,
+      66.96
+     ],
+     [
+      36,
+      66.98
+     ],
+     [
+      34,
+      67.0
+     ],
+     [
+      32,
+      67.01
+     ],
+     [
+      30,
+      67.03
+     ],
+     [
+      28,
+      67.04
+     ],
+     [
+      26,
+      67.04
+     ],
+     [
+      24,
+      67.05
+     ],
+     [
+      22,
+      67.05
+     ],
+     [
+      20,
+      67.06
+     ],
+     [
+      18,
+      67.07
+     ],
+     [
+      16,
+      67.07
+     ],
+     [
+      14,
+      67.08
+     ],
+     [
+      12,
+      67.08
+     ],
+     [
+      10,
+      67.09
+     ],
+     [
+      8,
+      67.1
+     ],
+     [
+      6,
+      67.1
+     ],
+     [
+      4,
+      67.11
+     ],
+     [
+      2,
+      67.11
+     ],
+     [
+      0,
+      67.12
+     ],
+     [
+      -2,
+      67.13
+     ],
+     [
+      -4,
+      67.13
+     ],
+     [
+      -6,
+      67.14
+     ],
+     [
+      -8,
+      67.14
+     ],
+     [
+      -10,
+      67.15
+     ],
+     [
+      -12,
+      67.16
+     ],
+     [
+      -14,
+      67.16
+     ],
+     [
+      -16,
+      67.17
+     ],
+     [
+      -18,
+      67.17
+     ],
+     [
+      -20,
+      67.18
+     ],
+     [
+      -22,
+      67.19
+     ],
+     [
+      -24,
+      67.19
+     ],
+     [
+      -26,
+      67.2
+     ],
+     [
+      -28,
+      67.2
+     ],
+     [
+      -30,
+      67.21
+     ],
+     [
+      -32,
+      67.22
+     ],
+     [
+      -34,
+      67.22
+     ],
+     [
+      -36,
+      67.23
+     ],
+     [
+      -38,
+      67.23
+     ],
+     [
+      -40,
+      67.24
+     ],
+     [
+      -42,
+      67.25
+     ],
+     [
+      -44,
+      67.25
+     ],
+     [
+      -46,
+      67.26
+     ],
+     [
+      -48,
+      67.26
+     ],
+     [
+      -50,
+      67.27
+     ],
+     [
+      -52,
+      67.27
+     ],
+     [
+      -54,
+      67.28
+     ],
+     [
+      -56,
+      67.28
+     ],
+     [
+      -58,
+      67.29
+     ],
+     [
+      -60,
+      67.29
+     ],
+     [
+      -62,
+      67.29
+     ],
+     [
+      -64,
+      67.3
+     ],
+     [
+      -66,
+      67.3
+     ],
+     [
+      -68,
+      67.3
+     ],
+     [
+      -70,
+      67.3
+     ],
+     [
+      -72,
+      67.3
+     ],
+     [
+      -74,
+      67.3
+     ],
+     [
+      -76,
+      67.3
+     ],
+     [
+      -78,
+      67.34
+     ],
+     [
+      -80,
+      67.48
+     ],
+     [
+      -82,
+      67.7
+     ],
+     [
+      -84,
+      68.02
+     ],
+     [
+      -86,
+      68.42
+     ],
+     [
+      -88,
+      68.92
+     ],
+     [
+      -90,
+      69.5
+     ],
+     [
+      -92,
+      70.18
+     ],
+     [
+      -94,
+      70.94
+     ],
+     [
+      -96,
+      71.8
+     ],
+     [
+      -98,
+      72.7
+     ],
+     [
+      -99,
+      73.15
+     ],
+     [
+      -99,
+      71.75
+     ],
+     [
+      -98,
+      71.3
+     ],
+     [
+      -96,
+      70.4
+     ],
+     [
+      -94,
+      69.54
+     ],
+     [
+      -92,
+      68.78
+     ],
+     [
+      -90,
+      68.1
+     ],
+     [
+      -88,
+      67.52
+     ],
+     [
+      -86,
+      67.02
+     ],
+     [
+      -84,
+      66.62
+     ],
+     [
+      -82,
+      66.3
+     ],
+     [
+      -80,
+      66.08
+     ],
+     [
+      -78,
+      65.94
+     ],
+     [
+      -76,
+      65.9
+     ],
+     [
+      -74,
+      65.9
+     ],
+     [
+      -72,
+      65.9
+     ],
+     [
+      -70,
+      65.9
+     ],
+     [
+      -68,
+      65.9
+     ],
+     [
+      -66,
+      65.9
+     ],
+     [
+      -64,
+      65.9
+     ],
+     [
+      -62,
+      65.89
+     ],
+     [
+      -60,
+      65.89
+     ],
+     [
+      -58,
+      65.89
+     ],
+     [
+      -56,
+      65.88
+     ],
+     [
+      -54,
+      65.88
+     ],
+     [
+      -52,
+      65.87
+     ],
+     [
+      -50,
+      65.87
+     ],
+     [
+      -48,
+      65.86
+     ],
+     [
+      -46,
+      65.86
+     ],
+     [
+      -44,
+      65.85
+     ],
+     [
+      -42,
+      65.85
+     ],
+     [
+      -40,
+      65.84
+     ],
+     [
+      -38,
+      65.83
+     ],
+     [
+      -36,
+      65.83
+     ],
+     [
+      -34,
+      65.82
+     ],
+     [
+      -32,
+      65.82
+     ],
+     [
+      -30,
+      65.81
+     ],
+     [
+      -28,
+      65.8
+     ],
+     [
+      -26,
+      65.8
+     ],
+     [
+      -24,
+      65.79
+     ],
+     [
+      -22,
+      65.79
+     ],
+     [
+      -20,
+      65.78
+     ],
+     [
+      -18,
+      65.77
+     ],
+     [
+      -16,
+      65.77
+     ],
+     [
+      -14,
+      65.76
+     ],
+     [
+      -12,
+      65.76
+     ],
+     [
+      -10,
+      65.75
+     ],
+     [
+      -8,
+      65.74
+     ],
+     [
+      -6,
+      65.74
+     ],
+     [
+      -4,
+      65.73
+     ],
+     [
+      -2,
+      65.73
+     ],
+     [
+      0,
+      65.72
+     ],
+     [
+      2,
+      65.71
+     ],
+     [
+      4,
+      65.71
+     ],
+     [
+      6,
+      65.7
+     ],
+     [
+      8,
+      65.7
+     ],
+     [
+      10,
+      65.69
+     ],
+     [
+      12,
+      65.68
+     ],
+     [
+      14,
+      65.68
+     ],
+     [
+      16,
+      65.67
+     ],
+     [
+      18,
+      65.67
+     ],
+     [
+      20,
+      65.66
+     ],
+     [
+      22,
+      65.65
+     ],
+     [
+      24,
+      65.65
+     ],
+     [
+      26,
+      65.64
+     ],
+     [
+      28,
+      65.64
+     ],
+     [
+      30,
+      65.63
+     ],
+     [
+      32,
+      65.61
+     ],
+     [
+      34,
+      65.6
+     ],
+     [
+      36,
+      65.58
+     ],
+     [
+      38,
+      65.56
+     ],
+     [
+      40,
+      65.53
+     ],
+     [
+      42,
+      65.51
+     ],
+     [
+      44,
+      65.48
+     ],
+     [
+      46,
+      65.44
+     ],
+     [
+      48,
+      65.4
+     ],
+     [
+      50,
+      65.36
+     ],
+     [
+      52,
+      65.32
+     ],
+     [
+      54,
+      65.27
+     ],
+     [
+      56,
+      65.23
+     ],
+     [
+      58,
+      65.18
+     ],
+     [
+      60,
+      65.13
+     ],
+     [
+      62,
+      65.07
+     ],
+     [
+      64,
+      65.02
+     ],
+     [
+      66,
+      64.95
+     ],
+     [
+      68,
+      64.89
+     ],
+     [
+      70,
+      64.81
+     ],
+     [
+      72,
+      64.74
+     ],
+     [
+      74,
+      64.66
+     ],
+     [
+      76,
+      64.58
+     ],
+     [
+      78,
+      64.49
+     ],
+     [
+      80,
+      64.4
+     ],
+     [
+      82,
+      64.3
+     ],
+     [
+      84,
+      64.2
+     ],
+     [
+      86,
+      64.1
+     ],
+     [
+      88,
+      64.0
+     ],
+     [
+      90,
+      63.9
+     ],
+     [
+      92,
+      63.8
+     ],
+     [
+      94,
+      63.7
+     ],
+     [
+      96,
+      63.6
+     ],
+     [
+      98,
+      63.5
+     ],
+     [
+      100,
+      63.4
+     ],
+     [
+      102,
+      63.3
+     ],
+     [
+      104,
+      63.2
+     ],
+     [
+      106,
+      63.1
+     ],
+     [
+      108,
+      63.0
+     ],
+     [
+      110,
+      62.9
+     ],
+     [
+      112,
+      62.79
+     ],
+     [
+      114,
+      62.69
+     ],
+     [
+      116,
+      62.58
+     ],
+     [
+      118,
+      62.47
+     ],
+     [
+      120,
+      62.35
+     ],
+     [
+      122,
+      62.24
+     ],
+     [
+      124,
+      62.12
+     ],
+     [
+      126,
+      62.0
+     ],
+     [
+      128,
+      61.87
+     ],
+     [
+      130,
+      61.75
+     ],
+     [
+      132,
+      61.62
+     ],
+     [
+      134,
+      61.5
+     ],
+     [
+      136,
+      61.37
+     ],
+     [
+      138,
+      61.25
+     ],
+     [
+      140,
+      61.13
+     ],
+     [
+      142,
+      61.01
+     ],
+     [
+      144,
+      60.89
+     ],
+     [
+      146,
+      60.77
+     ],
+     [
+      148,
+      60.65
+     ],
+     [
+      150,
+      60.53
+     ],
+     [
+      152,
+      60.42
+     ],
+     [
+      154,
+      60.31
+     ],
+     [
+      156,
+      60.19
+     ],
+     [
+      158,
+      60.08
+     ],
+     [
+      160,
+      59.96
+     ],
+     [
+      162,
+      59.83
+     ],
+     [
+      164,
+      59.7
+     ],
+     [
+      166,
+      59.56
+     ],
+     [
+      168,
+      59.41
+     ],
+     [
+      170,
+      59.26
+     ],
+     [
+      172,
+      59.1
+     ],
+     [
+      174,
+      58.93
+     ],
+     [
+      176,
+      58.76
+     ],
+     [
+      178,
+      58.58
+     ],
+     [
+      180,
+      58.39
+     ],
+     [
+      182,
+      58.18
+     ],
+     [
+      184,
+      57.97
+     ],
+     [
+      186,
+      57.74
+     ],
+     [
+      188,
+      57.52
+     ],
+     [
+      190,
+      57.28
+     ],
+     [
+      192,
+      57.04
+     ],
+     [
+      194,
+      56.8
+     ],
+     [
+      196,
+      56.55
+     ],
+     [
+      198,
+      56.29
+     ],
+     [
+      200,
+      56.03
+     ],
+     [
+      202,
+      55.78
+     ],
+     [
+      204,
+      55.55
+     ],
+     [
+      206,
+      55.34
+     ],
+     [
+      208,
+      55.16
+     ]
+    ],
+    [
+     [
+      208,
+      53.46
+     ],
+     [
+      206,
+      53.64
+     ],
+     [
+      204,
+      53.85
+     ],
+     [
+      202,
+      54.08
+     ],
+     [
+      200,
+      54.33
+     ],
+     [
+      198,
+      54.59
+     ],
+     [
+      196,
+      54.85
+     ],
+     [
+      194,
+      55.1
+     ],
+     [
+      192,
+      55.34
+     ],
+     [
+      190,
+      55.58
+     ],
+     [
+      188,
+      55.82
+     ],
+     [
+      186,
+      56.04
+     ],
+     [
+      184,
+      56.27
+     ],
+     [
+      182,
+      56.48
+     ],
+     [
+      180,
+      56.69
+     ],
+     [
+      178,
+      56.88
+     ],
+     [
+      176,
+      57.06
+     ],
+     [
+      174,
+      57.23
+     ],
+     [
+      172,
+      57.4
+     ],
+     [
+      170,
+      57.56
+     ],
+     [
+      168,
+      57.71
+     ],
+     [
+      166,
+      57.86
+     ],
+     [
+      164,
+      58.0
+     ],
+     [
+      162,
+      58.13
+     ],
+     [
+      160,
+      58.26
+     ],
+     [
+      158,
+      58.38
+     ],
+     [
+      156,
+      58.49
+     ],
+     [
+      154,
+      58.61
+     ],
+     [
+      152,
+      58.72
+     ],
+     [
+      150,
+      58.83
+     ],
+     [
+      148,
+      58.95
+     ],
+     [
+      146,
+      59.07
+     ],
+     [
+      144,
+      59.19
+     ],
+     [
+      142,
+      59.31
+     ],
+     [
+      140,
+      59.43
+     ],
+     [
+      138,
+      59.55
+     ],
+     [
+      136,
+      59.67
+     ],
+     [
+      134,
+      59.8
+     ],
+     [
+      132,
+      59.92
+     ],
+     [
+      130,
+      60.05
+     ],
+     [
+      128,
+      60.17
+     ],
+     [
+      126,
+      60.3
+     ],
+     [
+      124,
+      60.42
+     ],
+     [
+      122,
+      60.54
+     ],
+     [
+      120,
+      60.65
+     ],
+     [
+      118,
+      60.77
+     ],
+     [
+      116,
+      60.88
+     ],
+     [
+      114,
+      60.99
+     ],
+     [
+      112,
+      61.09
+     ],
+     [
+      110,
+      61.2
+     ],
+     [
+      108,
+      61.3
+     ],
+     [
+      106,
+      61.4
+     ],
+     [
+      104,
+      61.5
+     ],
+     [
+      102,
+      61.6
+     ],
+     [
+      100,
+      61.7
+     ],
+     [
+      98,
+      61.8
+     ],
+     [
+      96,
+      61.9
+     ],
+     [
+      94,
+      62.0
+     ],
+     [
+      92,
+      62.1
+     ],
+     [
+      90,
+      62.2
+     ],
+     [
+      88,
+      62.3
+     ],
+     [
+      86,
+      62.4
+     ],
+     [
+      84,
+      62.5
+     ],
+     [
+      82,
+      62.6
+     ],
+     [
+      80,
+      62.7
+     ],
+     [
+      78,
+      62.79
+     ],
+     [
+      76,
+      62.88
+     ],
+     [
+      74,
+      62.96
+     ],
+     [
+      72,
+      63.04
+     ],
+     [
+      70,
+      63.11
+     ],
+     [
+      68,
+      63.19
+     ],
+     [
+      66,
+      63.25
+     ],
+     [
+      64,
+      63.32
+     ],
+     [
+      62,
+      63.37
+     ],
+     [
+      60,
+      63.43
+     ],
+     [
+      58,
+      63.48
+     ],
+     [
+      56,
+      63.53
+     ],
+     [
+      54,
+      63.57
+     ],
+     [
+      52,
+      63.62
+     ],
+     [
+      50,
+      63.66
+     ],
+     [
+      48,
+      63.7
+     ],
+     [
+      46,
+      63.74
+     ],
+     [
+      44,
+      63.78
+     ],
+     [
+      42,
+      63.81
+     ],
+     [
+      40,
+      63.83
+     ],
+     [
+      38,
+      63.86
+     ],
+     [
+      36,
+      63.88
+     ],
+     [
+      34,
+      63.9
+     ],
+     [
+      32,
+      63.91
+     ],
+     [
+      30,
+      63.93
+     ],
+     [
+      28,
+      63.94
+     ],
+     [
+      26,
+      63.94
+     ],
+     [
+      24,
+      63.95
+     ],
+     [
+      22,
+      63.95
+     ],
+     [
+      20,
+      63.96
+     ],
+     [
+      18,
+      63.97
+     ],
+     [
+      16,
+      63.97
+     ],
+     [
+      14,
+      63.98
+     ],
+     [
+      12,
+      63.98
+     ],
+     [
+      10,
+      63.99
+     ],
+     [
+      8,
+      64.0
+     ],
+     [
+      6,
+      64.0
+     ],
+     [
+      4,
+      64.01
+     ],
+     [
+      2,
+      64.01
+     ],
+     [
+      0,
+      64.02
+     ],
+     [
+      -2,
+      64.03
+     ],
+     [
+      -4,
+      64.03
+     ],
+     [
+      -6,
+      64.04
+     ],
+     [
+      -8,
+      64.04
+     ],
+     [
+      -10,
+      64.05
+     ],
+     [
+      -12,
+      64.06
+     ],
+     [
+      -14,
+      64.06
+     ],
+     [
+      -16,
+      64.07
+     ],
+     [
+      -18,
+      64.07
+     ],
+     [
+      -20,
+      64.08
+     ],
+     [
+      -22,
+      64.09
+     ],
+     [
+      -24,
+      64.09
+     ],
+     [
+      -26,
+      64.1
+     ],
+     [
+      -28,
+      64.1
+     ],
+     [
+      -30,
+      64.11
+     ],
+     [
+      -32,
+      64.12
+     ],
+     [
+      -34,
+      64.12
+     ],
+     [
+      -36,
+      64.13
+     ],
+     [
+      -38,
+      64.13
+     ],
+     [
+      -40,
+      64.14
+     ],
+     [
+      -42,
+      64.15
+     ],
+     [
+      -44,
+      64.15
+     ],
+     [
+      -46,
+      64.16
+     ],
+     [
+      -48,
+      64.16
+     ],
+     [
+      -50,
+      64.17
+     ],
+     [
+      -52,
+      64.17
+     ],
+     [
+      -54,
+      64.18
+     ],
+     [
+      -56,
+      64.18
+     ],
+     [
+      -58,
+      64.19
+     ],
+     [
+      -60,
+      64.19
+     ],
+     [
+      -62,
+      64.19
+     ],
+     [
+      -64,
+      64.2
+     ],
+     [
+      -66,
+      64.2
+     ],
+     [
+      -68,
+      64.2
+     ],
+     [
+      -70,
+      64.2
+     ],
+     [
+      -72,
+      64.2
+     ],
+     [
+      -74,
+      64.2
+     ],
+     [
+      -76,
+      64.2
+     ],
+     [
+      -78,
+      64.25
+     ],
+     [
+      -80,
+      64.38
+     ],
+     [
+      -82,
+      64.61
+     ],
+     [
+      -84,
+      64.92
+     ],
+     [
+      -86,
+      65.33
+     ],
+     [
+      -88,
+      65.82
+     ],
+     [
+      -90,
+      66.41
+     ],
+     [
+      -92,
+      67.08
+     ],
+     [
+      -94,
+      67.84
+     ],
+     [
+      -96,
+      68.7
+     ],
+     [
+      -98,
+      69.6
+     ],
+     [
+      -100,
+      70.5
+     ],
+     [
+      -102,
+      71.4
+     ],
+     [
+      -103,
+      71.85
+     ],
+     [
+      -103,
+      68.45
+     ],
+     [
+      -102,
+      68.0
+     ],
+     [
+      -100,
+      67.1
+     ],
+     [
+      -98,
+      66.2
+     ],
+     [
+      -96,
+      65.3
+     ],
+     [
+      -94,
+      64.44
+     ],
+     [
+      -92,
+      63.68
+     ],
+     [
+      -90,
+      63.0
+     ],
+     [
+      -88,
+      62.42
+     ],
+     [
+      -86,
+      61.92
+     ],
+     [
+      -84,
+      61.52
+     ],
+     [
+      -82,
+      61.2
+     ],
+     [
+      -80,
+      60.98
+     ],
+     [
+      -78,
+      60.84
+     ],
+     [
+      -76,
+      60.8
+     ],
+     [
+      -74,
+      60.8
+     ],
+     [
+      -72,
+      60.8
+     ],
+     [
+      -70,
+      60.8
+     ],
+     [
+      -68,
+      60.8
+     ],
+     [
+      -66,
+      60.8
+     ],
+     [
+      -64,
+      60.8
+     ],
+     [
+      -62,
+      60.79
+     ],
+     [
+      -60,
+      60.79
+     ],
+     [
+      -58,
+      60.79
+     ],
+     [
+      -56,
+      60.78
+     ],
+     [
+      -54,
+      60.78
+     ],
+     [
+      -52,
+      60.77
+     ],
+     [
+      -50,
+      60.77
+     ],
+     [
+      -48,
+      60.76
+     ],
+     [
+      -46,
+      60.76
+     ],
+     [
+      -44,
+      60.75
+     ],
+     [
+      -42,
+      60.75
+     ],
+     [
+      -40,
+      60.74
+     ],
+     [
+      -38,
+      60.73
+     ],
+     [
+      -36,
+      60.73
+     ],
+     [
+      -34,
+      60.72
+     ],
+     [
+      -32,
+      60.72
+     ],
+     [
+      -30,
+      60.71
+     ],
+     [
+      -28,
+      60.7
+     ],
+     [
+      -26,
+      60.7
+     ],
+     [
+      -24,
+      60.69
+     ],
+     [
+      -22,
+      60.69
+     ],
+     [
+      -20,
+      60.68
+     ],
+     [
+      -18,
+      60.67
+     ],
+     [
+      -16,
+      60.67
+     ],
+     [
+      -14,
+      60.66
+     ],
+     [
+      -12,
+      60.66
+     ],
+     [
+      -10,
+      60.65
+     ],
+     [
+      -8,
+      60.64
+     ],
+     [
+      -6,
+      60.64
+     ],
+     [
+      -4,
+      60.63
+     ],
+     [
+      -2,
+      60.63
+     ],
+     [
+      0,
+      60.62
+     ],
+     [
+      2,
+      60.61
+     ],
+     [
+      4,
+      60.61
+     ],
+     [
+      6,
+      60.6
+     ],
+     [
+      8,
+      60.6
+     ],
+     [
+      10,
+      60.59
+     ],
+     [
+      12,
+      60.58
+     ],
+     [
+      14,
+      60.58
+     ],
+     [
+      16,
+      60.57
+     ],
+     [
+      18,
+      60.57
+     ],
+     [
+      20,
+      60.56
+     ],
+     [
+      22,
+      60.55
+     ],
+     [
+      24,
+      60.55
+     ],
+     [
+      26,
+      60.54
+     ],
+     [
+      28,
+      60.54
+     ],
+     [
+      30,
+      60.53
+     ],
+     [
+      32,
+      60.51
+     ],
+     [
+      34,
+      60.5
+     ],
+     [
+      36,
+      60.48
+     ],
+     [
+      38,
+      60.46
+     ],
+     [
+      40,
+      60.43
+     ],
+     [
+      42,
+      60.41
+     ],
+     [
+      44,
+      60.38
+     ],
+     [
+      46,
+      60.34
+     ],
+     [
+      48,
+      60.3
+     ],
+     [
+      50,
+      60.26
+     ],
+     [
+      52,
+      60.22
+     ],
+     [
+      54,
+      60.17
+     ],
+     [
+      56,
+      60.13
+     ],
+     [
+      58,
+      60.08
+     ],
+     [
+      60,
+      60.03
+     ],
+     [
+      62,
+      59.97
+     ],
+     [
+      64,
+      59.92
+     ],
+     [
+      66,
+      59.85
+     ],
+     [
+      68,
+      59.79
+     ],
+     [
+      70,
+      59.71
+     ],
+     [
+      72,
+      59.64
+     ],
+     [
+      74,
+      59.56
+     ],
+     [
+      76,
+      59.48
+     ],
+     [
+      78,
+      59.39
+     ],
+     [
+      80,
+      59.3
+     ],
+     [
+      82,
+      59.2
+     ],
+     [
+      84,
+      59.1
+     ],
+     [
+      86,
+      59.0
+     ],
+     [
+      88,
+      58.9
+     ],
+     [
+      90,
+      58.8
+     ],
+     [
+      92,
+      58.7
+     ],
+     [
+      94,
+      58.6
+     ],
+     [
+      96,
+      58.5
+     ],
+     [
+      98,
+      58.4
+     ],
+     [
+      100,
+      58.3
+     ],
+     [
+      102,
+      58.2
+     ],
+     [
+      104,
+      58.1
+     ],
+     [
+      106,
+      58.0
+     ],
+     [
+      108,
+      57.9
+     ],
+     [
+      110,
+      57.8
+     ],
+     [
+      112,
+      57.69
+     ],
+     [
+      114,
+      57.59
+     ],
+     [
+      116,
+      57.48
+     ],
+     [
+      118,
+      57.37
+     ],
+     [
+      120,
+      57.25
+     ],
+     [
+      122,
+      57.14
+     ],
+     [
+      124,
+      57.02
+     ],
+     [
+      126,
+      56.9
+     ],
+     [
+      128,
+      56.77
+     ],
+     [
+      130,
+      56.65
+     ],
+     [
+      132,
+      56.52
+     ],
+     [
+      134,
+      56.4
+     ],
+     [
+      136,
+      56.27
+     ],
+     [
+      138,
+      56.15
+     ],
+     [
+      140,
+      56.03
+     ],
+     [
+      142,
+      55.91
+     ],
+     [
+      144,
+      55.79
+     ],
+     [
+      146,
+      55.67
+     ],
+     [
+      148,
+      55.55
+     ],
+     [
+      150,
+      55.43
+     ],
+     [
+      152,
+      55.32
+     ],
+     [
+      154,
+      55.21
+     ],
+     [
+      156,
+      55.09
+     ],
+     [
+      158,
+      54.98
+     ],
+     [
+      160,
+      54.86
+     ],
+     [
+      162,
+      54.73
+     ],
+     [
+      164,
+      54.6
+     ],
+     [
+      166,
+      54.46
+     ],
+     [
+      168,
+      54.31
+     ],
+     [
+      170,
+      54.16
+     ],
+     [
+      172,
+      54.0
+     ],
+     [
+      174,
+      53.83
+     ],
+     [
+      176,
+      53.66
+     ],
+     [
+      178,
+      53.48
+     ],
+     [
+      180,
+      53.29
+     ],
+     [
+      182,
+      53.08
+     ],
+     [
+      184,
+      52.87
+     ],
+     [
+      186,
+      52.64
+     ],
+     [
+      188,
+      52.42
+     ],
+     [
+      190,
+      52.18
+     ],
+     [
+      192,
+      51.94
+     ],
+     [
+      194,
+      51.7
+     ],
+     [
+      196,
+      51.45
+     ],
+     [
+      198,
+      51.19
+     ],
+     [
+      200,
+      50.93
+     ],
+     [
+      202,
+      50.68
+     ],
+     [
+      204,
+      50.45
+     ],
+     [
+      206,
+      50.24
+     ],
+     [
+      208,
+      50.06
+     ]
+    ],
+    [
+     [
+      -122.21,
+      73.5
+     ],
+     [
+      -120.18,
+      72.65
+     ],
+     [
+      -118.11,
+      81.2
+     ],
+     [
+      -120.14,
+      82.05
+     ]
+    ],
+    [
+     [
+      -120.55,
+      80.34
+     ],
+     [
+      -114.46,
+      77.79
+     ],
+     [
+      -114.05,
+      79.5
+     ],
+     [
+      -120.14,
+      82.05
+     ]
+    ],
+    [
+     [
+      -121.29,
+      77.32
+     ],
+     [
+      -115.2,
+      74.76
+     ],
+     [
+      -114.78,
+      76.47
+     ],
+     [
+      -120.87,
+      79.03
+     ]
+    ],
+    [
+     [
+      -116.67,
+      75.95
+     ],
+     [
+      -114.64,
+      75.1
+     ],
+     [
+      -113.74,
+      78.79
+     ],
+     [
+      -115.77,
+      79.64
+     ]
+    ],
+    [
+     [
+      -117.72,
+      71.61
+     ],
+     [
+      -115.54,
+      70.7
+     ],
+     [
+      -116.18,
+      75.32
+     ],
+     [
+      -118.36,
+      76.23
+     ]
+    ],
+    [
+     [
+      -114.53,
+      70.27
+     ],
+     [
+      -112.79,
+      69.54
+     ],
+     [
+      -108.1,
+      77.0
+     ],
+     [
+      -109.84,
+      77.73
+     ]
+    ],
+    [
+     [
+      -108.08,
+      75.11
+     ],
+     [
+      -101.41,
+      72.3
+     ],
+     [
+      -101.0,
+      74.02
+     ],
+     [
+      -107.67,
+      76.82
+     ]
+    ],
+    [
+     [
+      -107.42,
+      67.29
+     ],
+     [
+      -105.39,
+      66.44
+     ],
+     [
+      -103.7,
+      73.41
+     ],
+     [
+      -105.73,
+      74.26
+     ]
+    ]
+   ]
+  }
+ ],
+ "skins": {
+  "dir": "~/nfs-work/vinyl/livery/textures",
+  "pick": [
+   "CHALLENGER71_AFTERMIX_CHALLENGER71",
+   "CHALLENGER71_DRAG_CHALLENGER71",
+   "CHALLENGER71_SPEED_CHALLENGER71",
+   "CHALLENGER71_TEAMGO_CHALLENGER71",
+   "CHALLENGER71_TUFFBLAST_CHALLENGER7"
+  ],
+  "labels": {
+   "CHALLENGER71_AFTERMIX_CHALLENGER71": "Aftermix Livery (ProStreet)",
+   "CHALLENGER71_DRAG_CHALLENGER71": "Drag Livery (ProStreet)",
+   "CHALLENGER71_SPEED_CHALLENGER71": "Speed Livery (ProStreet)",
+   "CHALLENGER71_TEAMGO_CHALLENGER71": "Teamgo Livery (ProStreet)",
+   "CHALLENGER71_TUFFBLAST_CHALLENGER7": "Tuffblast Livery (ProStreet)"
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   14,
+   14,
+   15
+  ],
+  "ink": [
+   236,
+   232,
+   218
+  ],
+  "red_color": [
+   230,
+   70,
+   30
+  ],
+  "font_file": "framd.ttf",
+  "glow_color": [
+   255,
+   215,
+   150
+  ],
+  "glow_red": [
+   255,
+   60,
+   30
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 150,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  255,
+  120,
+  20
+ ],
+ "needle_scales": {
+  "RPM": 0.5,
+  "Speed": 0.5,
+  "Fuel": 0.7,
+  "Temp": 0.7
+ }
+}

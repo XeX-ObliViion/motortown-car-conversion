@@ -1,0 +1,332 @@
+{
+ "car": "PS_SUPRA",
+ "display_name": "Toyota Supra (ProStreet)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/geo/ps_supra",
+ "prefix": "SUPRA_KIT00",
+ "out_dir": "C:\\Users\\noust/mt-work/build/PS_SUPRA/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/tex/ps_supra/textures",
+ "base_vehicle": "Magis",
+ "cost": 52000,
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xBEBC83C2": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0xCDB9CDD5": "Tex_SUPRA_INTERIOR",
+  "0x929DBD55": "Tex_SUPRA_MISC",
+  "0x9EAD2B5F": "Tex_SUPRA_ENGINE",
+  "0xE709959E": "Tex_SUPRA_WHEEL",
+  "0x6ED95AB5": "Tex_SUPRA_BADGING",
+  "0x661E5816": "Tex_SUPRA_KIT00_HEADLIGHT_ON",
+  "0x48AAD4CF": "Glass",
+  "0x60E872C7": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
+  "0xE0EF00E0": "Tex_SUPRA_KIT00_BRAKELIGHT_GLASS_OFF"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    "BRAKELIGHT_GLASS_LEFT",
+    "BRAKELIGHT_GLASS_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -33,
+      -36.3,
+      12
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -33,
+      36.3,
+      12
+     ]
+    }
+   ],
+   "drop_slots": [
+    "Tex_SUPRA_KIT00_BRAKELIGHT_GLASS_OFF"
+   ],
+   "drop_boxes": [
+    [
+     1,
+     -12,
+     94,
+     9,
+     12,
+     109
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_SUPRA_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.35,
+      0.35,
+      0.98,
+      0.66
+     ]
+    }
+   ]
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "SUPRA_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KIT00"
+    },
+    {
+     "part": "BUMPER_REAR_EXTRA",
+     "prefix": "SUPRA_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KIT01"
+    },
+    {
+     "part": "BUMPER_REAR_EXTRA",
+     "prefix": "SUPRA_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KIT03"
+    },
+    {
+     "part": "BUMPER_REAR_EXTRA",
+     "prefix": "SUPRA_KIT03"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KIT04"
+    },
+    {
+     "part": "BUMPER_REAR_EXTRA",
+     "prefix": "SUPRA_KIT04"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KIT04"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KIT11"
+    },
+    {
+     "part": "BUMPER_REAR_EXTRA",
+     "prefix": "SUPRA_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "SUPRA_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "SUPRA_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "SUPRA_KITW01",
+     "drop_coincident_with": {
+      "part": "BODY",
+      "prefix": "SUPRA_KIT00",
+      "tol": 1.0,
+      "_grid": 

@@ -1,0 +1,1751 @@
+{
+ "kind": "aero_pack",
+ "car": "NFS_Wings",
+ "out_dir": "~/mt-work/build/NFS_Wings/meshes",
+ "paint_slot": "Body_01",
+ "vehicle_keys": [
+  "PS_350Z",
+  "PS_SUPRA",
+  "PS_ELISE",
+  "PS_997TT",
+  "PS_SKYLINE",
+  "PS_SHELBY67",
+  "PS_CHALLENGER71",
+  "PS_CHEVELLE",
+  "PS_VIPER",
+  "MW_M3GTR",
+  "MW_993RWB"
+ ],
+ "sources": [
+  {
+   "tag": "PSW",
+   "dir": "~/nfs-work/packs/ps_SPOILER",
+   "scale": 1000.0,
+   "match": "^SPOILER_KIT\\d+_(HATCH|SMALL|MEDIUM|LARGE)$",
+   "texture_slots": {
+    "0xBF30889B": "Paint",
+    "0x721AFF7C": "Bottom",
+    "0x48A68363": "Trim",
+    "0x027FF2DC": "Bottom"
+   }
+  },
+  {
+   "tag": "MWW",
+   "dir": "~/nfs-work/packs/mw_SPOILER",
+   "scale": 100.0,
+   "match": "^SPOILER_STYLE\\d+(_CF)?$",
+   "texture_slots": {
+    "0xE9B62482": "Paint",
+    "0x721AFF7C": "Bottom",
+    "0x1B049702": "Bottom",
+    "0xBF30889B": "Trim"
+   }
+  }
+ ],
+ "aero_parts": [
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT01_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT01_HATCH",
+   "display_name": "ProStreet Wing 1 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT01_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT01_LARGE",
+   "display_name": "ProStreet Wing 1 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT01_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT01_MEDIUM",
+   "display_name": "ProStreet Wing 1 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT01_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT01_SMALL",
+   "display_name": "ProStreet Wing 1 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT02_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT02_HATCH",
+   "display_name": "ProStreet Wing 2 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT02_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT02_LARGE",
+   "display_name": "ProStreet Wing 2 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT02_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT02_MEDIUM",
+   "display_name": "ProStreet Wing 2 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT02_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT02_SMALL",
+   "display_name": "ProStreet Wing 2 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT03_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT03_HATCH",
+   "display_name": "ProStreet Wing 3 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT03_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT03_LARGE",
+   "display_name": "ProStreet Wing 3 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT03_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT03_MEDIUM",
+   "display_name": "ProStreet Wing 3 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT03_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT03_SMALL",
+   "display_name": "ProStreet Wing 3 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT04_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT04_HATCH",
+   "display_name": "ProStreet Wing 4 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT04_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT04_LARGE",
+   "display_name": "ProStreet Wing 4 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT04_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT04_MEDIUM",
+   "display_name": "ProStreet Wing 4 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT04_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT04_SMALL",
+   "display_name": "ProStreet Wing 4 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT05_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT05_HATCH",
+   "display_name": "ProStreet Wing 5 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT05_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT05_LARGE",
+   "display_name": "ProStreet Wing 5 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT05_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT05_MEDIUM",
+   "display_name": "ProStreet Wing 5 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT05_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT05_SMALL",
+   "display_name": "ProStreet Wing 5 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT06_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT06_HATCH",
+   "display_name": "ProStreet Wing 6 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT06_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT06_LARGE",
+   "display_name": "ProStreet Wing 6 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT06_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT06_MEDIUM",
+   "display_name": "ProStreet Wing 6 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT06_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT06_SMALL",
+   "display_name": "ProStreet Wing 6 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT07_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT07_HATCH",
+   "display_name": "ProStreet Wing 7 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT07_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT07_LARGE",
+   "display_name": "ProStreet Wing 7 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT07_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT07_MEDIUM",
+   "display_name": "ProStreet Wing 7 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT07_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT07_SMALL",
+   "display_name": "ProStreet Wing 7 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT08_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT08_HATCH",
+   "display_name": "ProStreet Wing 8 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT08_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT08_LARGE",
+   "display_name": "ProStreet Wing 8 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT08_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT08_MEDIUM",
+   "display_name": "ProStreet Wing 8 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT08_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT08_SMALL",
+   "display_name": "ProStreet Wing 8 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT09_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT09_HATCH",
+   "display_name": "ProStreet Wing 9 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT09_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT09_LARGE",
+   "display_name": "ProStreet Wing 9 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT09_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT09_MEDIUM",
+   "display_name": "ProStreet Wing 9 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT09_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT09_SMALL",
+   "display_name": "ProStreet Wing 9 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT10_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT10_HATCH",
+   "display_name": "ProStreet Wing 10 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT10_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT10_LARGE",
+   "display_name": "ProStreet Wing 10 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT10_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT10_MEDIUM",
+   "display_name": "ProStreet Wing 10 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT10_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT10_SMALL",
+   "display_name": "ProStreet Wing 10 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT11_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT11_HATCH",
+   "display_name": "ProStreet Wing 11 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT11_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT11_LARGE",
+   "display_name": "ProStreet Wing 11 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT11_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT11_MEDIUM",
+   "display_name": "ProStreet Wing 11 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT11_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT11_SMALL",
+   "display_name": "ProStreet Wing 11 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT12_HATCH",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT12_HATCH",
+   "display_name": "ProStreet Wing 12 (Hatch)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT12_LARGE",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT12_LARGE",
+   "display_name": "ProStreet Wing 12 (Large)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT12_MEDIUM",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT12_MEDIUM",
+   "display_name": "ProStreet Wing 12 (Medium)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_PSW_SPOILER_KIT12_SMALL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "PSW_SPOILER_KIT12_SMALL",
+   "display_name": "ProStreet Wing 12 (Small)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE01",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE01",
+   "display_name": "Most Wanted Wing 1",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE01_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE01_CF",
+   "display_name": "Most Wanted Wing 1 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE02",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE02",
+   "display_name": "Most Wanted Wing 2",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE02_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE02_CF",
+   "display_name": "Most Wanted Wing 2 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE03",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE03",
+   "display_name": "Most Wanted Wing 3",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE03_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE03_CF",
+   "display_name": "Most Wanted Wing 3 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE04",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE04",
+   "display_name": "Most Wanted Wing 4",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE04_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE04_CF",
+   "display_name": "Most Wanted Wing 4 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE05",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE05",
+   "display_name": "Most Wanted Wing 5",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE05_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE05_CF",
+   "display_name": "Most Wanted Wing 5 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE06",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE06",
+   "display_name": "Most Wanted Wing 6",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE06_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE06_CF",
+   "display_name": "Most Wanted Wing 6 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE07",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE07",
+   "display_name": "Most Wanted Wing 7",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE07_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE07_CF",
+   "display_name": "Most Wanted Wing 7 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE08",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE08",
+   "display_name": "Most Wanted Wing 8",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE08_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE08_CF",
+   "display_name": "Most Wanted Wing 8 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE09",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE09",
+   "display_name": "Most Wanted Wing 9",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE09_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE09_CF",
+   "display_name": "Most Wanted Wing 9 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE10",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE10",
+   "display_name": "Most Wanted Wing 10",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE10_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE10_CF",
+   "display_name": "Most Wanted Wing 10 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE11",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE11",
+   "display_name": "Most Wanted Wing 11",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE11_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE11_CF",
+   "display_name": "Most Wanted Wing 11 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE13",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE13",
+   "display_name": "Most Wanted Wing 13",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE13_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE13_CF",
+   "display_name": "Most Wanted Wing 13 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE15",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE15",
+   "display_name": "Most Wanted Wing 15",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE15_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE15_CF",
+   "display_name": "Most Wanted Wing 15 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE16",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE16",
+   "display_name": "Most Wanted Wing 16",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE16_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE16_CF",
+   "display_name": "Most Wanted Wing 16 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE17",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE17",
+   "display_name": "Most Wanted Wing 17",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE17_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE17_CF",
+   "display_name": "Most Wanted Wing 17 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE18",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE18",
+   "display_name": "Most Wanted Wing 18",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE18_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE18_CF",
+   "display_name": "Most Wanted Wing 18 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE26",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE26",
+   "display_name": "Most Wanted Wing 26",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE26_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE26_CF",
+   "display_name": "Most Wanted Wing 26 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE27",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE27",
+   "display_name": "Most Wanted Wing 27",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE27_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE27_CF",
+   "display_name": "Most Wanted Wing 27 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE29",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE29",
+   "display_name": "Most Wanted Wing 29",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE29_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE29_CF",
+   "display_name": "Most Wanted Wing 29 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE30",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE30",
+   "display_name": "Most Wanted Wing 30",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE30_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE30_CF",
+   "display_name": "Most Wanted Wing 30 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE31",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE31",
+   "display_name": "Most Wanted Wing 31",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE31_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE31_CF",
+   "display_name": "Most Wanted Wing 31 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE32",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE32",
+   "display_name": "Most Wanted Wing 32",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE32_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE32_CF",
+   "display_name": "Most Wanted Wing 32 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE34",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE34",
+   "display_name": "Most Wanted Wing 34",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE34_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE34_CF",
+   "display_name": "Most Wanted Wing 34 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE36",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE36",
+   "display_name": "Most Wanted Wing 36",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE36_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE36_CF",
+   "display_name": "Most Wanted Wing 36 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE38",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE38",
+   "display_name": "Most Wanted Wing 38",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE38_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE38_CF",
+   "display_name": "Most Wanted Wing 38 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE40",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE40",
+   "display_name": "Most Wanted Wing 40",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE40_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE40_CF",
+   "display_name": "Most Wanted Wing 40 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE41",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE41",
+   "display_name": "Most Wanted Wing 41",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE41_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE41_CF",
+   "display_name": "Most Wanted Wing 41 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE42",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE42",
+   "display_name": "Most Wanted Wing 42",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE42_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE42_CF",
+   "display_name": "Most Wanted Wing 42 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE43",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE43",
+   "display_name": "Most Wanted Wing 43",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE43_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE43_CF",
+   "display_name": "Most Wanted Wing 43 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE44",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE44",
+   "display_name": "Most Wanted Wing 44",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE44_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE44_CF",
+   "display_name": "Most Wanted Wing 44 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE45",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE45",
+   "display_name": "Most Wanted Wing 45",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE45_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE45_CF",
+   "display_name": "Most Wanted Wing 45 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE46",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE46",
+   "display_name": "Most Wanted Wing 46",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE46_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE46_CF",
+   "display_name": "Most Wanted Wing 46 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE47",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE47",
+   "display_name": "Most Wanted Wing 47",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE47_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE47_CF",
+   "display_name": "Most Wanted Wing 47 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE48",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE48",
+   "display_name": "Most Wanted Wing 48",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE48_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE48_CF",
+   "display_name": "Most Wanted Wing 48 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE49",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE49",
+   "display_name": "Most Wanted Wing 49",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE49_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE49_CF",
+   "display_name": "Most Wanted Wing 49 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE50",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE50",
+   "display_name": "Most Wanted Wing 50",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE50_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE50_CF",
+   "display_name": "Most Wanted Wing 50 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE51",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE51",
+   "display_name": "Most Wanted Wing 51",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE51_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE51_CF",
+   "display_name": "Most Wanted Wing 51 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE52",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE52",
+   "display_name": "Most Wanted Wing 52",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE52_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE52_CF",
+   "display_name": "Most Wanted Wing 52 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE53",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE53",
+   "display_name": "Most Wanted Wing 53",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE53_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE53_CF",
+   "display_name": "Most Wanted Wing 53 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE54",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE54",
+   "display_name": "Most Wanted Wing 54",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE54_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE54_CF",
+   "display_name": "Most Wanted Wing 54 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE55",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE55",
+   "display_name": "Most Wanted Wing 55",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE55_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE55_CF",
+   "display_name": "Most Wanted Wing 55 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE56",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE56",
+   "display_name": "Most Wanted Wing 56",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE56_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE56_CF",
+   "display_name": "Most Wanted Wing 56 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE57",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE57",
+   "display_name": "Most Wanted Wing 57",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE57_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE57_CF",
+   "display_name": "Most Wanted Wing 57 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE58",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE58",
+   "display_name": "Most Wanted Wing 58",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE58_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE58_CF",
+   "display_name": "Most Wanted Wing 58 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE59",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE59",
+   "display_name": "Most Wanted Wing 59",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE59_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE59_CF",
+   "display_name": "Most Wanted Wing 59 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE60",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE60",
+   "display_name": "Most Wanted Wing 60",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE60_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE60_CF",
+   "display_name": "Most Wanted Wing 60 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE61",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE61",
+   "display_name": "Most Wanted Wing 61",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE61_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE61_CF",
+   "display_name": "Most Wanted Wing 61 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE62",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE62",
+   "display_name": "Most Wanted Wing 62",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE62_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE62_CF",
+   "display_name": "Most Wanted Wing 62 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE63",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE63",
+   "display_name": "Most Wanted Wing 63",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE63_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE63_CF",
+   "display_name": "Most Wanted Wing 63 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE64",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE64",
+   "display_name": "Most Wanted Wing 64",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE64_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE64_CF",
+   "display_name": "Most Wanted Wing 64 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE65",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE65",
+   "display_name": "Most Wanted Wing 65",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE65_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE65_CF",
+   "display_name": "Most Wanted Wing 65 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE66",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE66",
+   "display_name": "Most Wanted Wing 66",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE66_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE66_CF",
+   "display_name": "Most Wanted Wing 66 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE67",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE67",
+   "display_name": "Most Wanted Wing 67",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE67_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE67_CF",
+   "display_name": "Most Wanted Wing 67 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE68",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE68",
+   "display_name": "Most Wanted Wing 68",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE68_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE68_CF",
+   "display_name": "Most Wanted Wing 68 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE69",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE69",
+   "display_name": "Most Wanted Wing 69",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE69_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE69_CF",
+   "display_name": "Most Wanted Wing 69 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE70",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE70",
+   "display_name": "Most Wanted Wing 70",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE70_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE70_CF",
+   "display_name": "Most Wanted Wing 70 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE71",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE71",
+   "display_name": "Most Wanted Wing 71",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE71_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE71_CF",
+   "display_name": "Most Wanted Wing 71 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE72",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE72",
+   "display_name": "Most Wanted Wing 72",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE72_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE72_CF",
+   "display_name": "Most Wanted Wing 72 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE73",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE73",
+   "display_name": "Most Wanted Wing 73",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE73_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE73_CF",
+   "display_name": "Most Wanted Wing 73 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE74",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE74",
+   "display_name": "Most Wanted Wing 74",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE74_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE74_CF",
+   "display_name": "Most Wanted Wing 74 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE75",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE75",
+   "display_name": "Most Wanted Wing 75",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE75_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE75_CF",
+   "display_name": "Most Wanted Wing 75 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE76",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE76",
+   "display_name": "Most Wanted Wing 76",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE76_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE76_CF",
+   "display_name": "Most Wanted Wing 76 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE77",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE77",
+   "display_name": "Most Wanted Wing 77",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE77_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE77_CF",
+   "display_name": "Most Wanted Wing 77 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE78",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE78",
+   "display_name": "Most Wanted Wing 78",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE78_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE78_CF",
+   "display_name": "Most Wanted Wing 78 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE79_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE79_CF",
+   "display_name": "Most Wanted Wing 79 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE80",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE80",
+   "display_name": "Most Wanted Wing 80",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE80_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE80_CF",
+   "display_name": "Most Wanted Wing 80 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE81",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE81",
+   "display_name": "Most Wanted Wing 81",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE81_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE81_CF",
+   "display_name": "Most Wanted Wing 81 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE82",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE82",
+   "display_name": "Most Wanted Wing 82",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE82_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE82_CF",
+   "display_name": "Most Wanted Wing 82 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE83",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE83",
+   "display_name": "Most Wanted Wing 83",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE83_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE83_CF",
+   "display_name": "Most Wanted Wing 83 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE84",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE84",
+   "display_name": "Most Wanted Wing 84",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE84_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE84_CF",
+   "display_name": "Most Wanted Wing 84 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE85",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE85",
+   "display_name": "Most Wanted Wing 85",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE85_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE85_CF",
+   "display_name": "Most Wanted Wing 85 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE86",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE86",
+   "display_name": "Most Wanted Wing 86",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE86_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE86_CF",
+   "display_name": "Most Wanted Wing 86 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE87",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE87",
+   "display_name": "Most Wanted Wing 87",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE87_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE87_CF",
+   "display_name": "Most Wanted Wing 87 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE88",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE88",
+   "display_name": "Most Wanted Wing 88",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE88_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE88_CF",
+   "display_name": "Most Wanted Wing 88 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE89",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE89",
+   "display_name": "Most Wanted Wing 89",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE89_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE89_CF",
+   "display_name": "Most Wanted Wing 89 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE90",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE90",
+   "display_name": "Most Wanted Wing 90",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE90_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE90_CF",
+   "display_name": "Most Wanted Wing 90 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE91",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE91",
+   "display_name": "Most Wanted Wing 91",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE91_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE91_CF",
+   "display_name": "Most Wanted Wing 91 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE92",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE92",
+   "display_name": "Most Wanted Wing 92",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE92_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE92_CF",
+   "display_name": "Most Wanted Wing 92 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE93",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE93",
+   "display_name": "Most Wanted Wing 93",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE93_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE93_CF",
+   "display_name": "Most Wanted Wing 93 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE94",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE94",
+   "display_name": "Most Wanted Wing 94",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE94_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE94_CF",
+   "display_name": "Most Wanted Wing 94 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE95",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE95",
+   "display_name": "Most Wanted Wing 95",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE95_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE95_CF",
+   "display_name": "Most Wanted Wing 95 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE96",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE96",
+   "display_name": "Most Wanted Wing 96",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE96_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE96_CF",
+   "display_name": "Most Wanted Wing 96 (Carbon)",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE97",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE97",
+   "display_name": "Most Wanted Wing 97",
+   "cost": 2000
+  },
+  {
+   "row": "NFS_Wings_MWW_SPOILER_STYLE97_CF",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "MWW_SPOILER_STYLE97_CF",
+   "display_name": "Most Wanted Wing 97 (Carbon)",
+   "cost": 2000
+  }
+ ]
+}

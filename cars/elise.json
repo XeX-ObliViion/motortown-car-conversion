@@ -1,0 +1,9700 @@
+{
+ "car": "PS_ELISE",
+ "display_name": "Lotus Elise (ProStreet)",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/geo/ps_elise",
+ "prefix": "ELISE_KIT00",
+ "out_dir": "C:\\Users\\noust/mt-work/build/PS_ELISE/meshes",
+ "texture_dir": "C:\\Users\\noust/nfs-work/tex/ps_elise/textures",
+ "base_vehicle": "Fortem",
+ "cost": 60000,
+ "default_slot": "Bottom",
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xBEBC83C2": "Paint",
+  "0x4441A26B": "Trim",
+  "0x04BEBD9C": "Tex_ELISE_INTERIOR",
+  "0x222BE19C": "Tex_ELISE_MISC",
+  "0x4A557D66": "Tex_ELISE_ENGINE",
+  "0x685C42C5": "Tex_ELISE_WHEEL",
+  "0x8F8BED9C": "Tex_ELISE_BADGING",
+  "0x6A6AEC9D": "Tex_ELISE_KIT00_HEADLIGHT_ON",
+  "0x990C7296": "Glass",
+  "0xAAAC450E": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+  "0x681597F6": "Paint",
+  "0x721AFF7C": "Tex_MWG_CARBONFIBRE",
+  "0x1B049702": "Bottom",
+  "0x32283A11": "Bottom",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0xBD1F0E0A": "Bottom",
+  "0x222B6D41": "Bottom",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x4C95C6F8": "Bottom",
+  "0x8C283C65": "Bottom",
+  "0x68100815": "Tex_MWG_RADIATOR",
+  "EXHAUST_CHROME": "Trim",
+  "EXHAUST_MUFFLER": "Bottom",
+  "EXHAUST_FACE": "Bottom"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BODY",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -26,
+      -25,
+      5
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -26,
+      25,
+      5
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     17,
+     -16,
+     84,
+     31,
+     16,
+     97
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_ELISE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.22,
+      0.43,
+      0.4,
+      0.52
+     ]
+    }
+   ]
+  },
+  "LeftSideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT06": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT06": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT06"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT05": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT05"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT06": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT06"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "BODY",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_LIP": {
+   "parts": [
+    {
+     "part": "SPOILER_LIP",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "WIDEBODY",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ],
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "DOOR_LEFT",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "DOOR_RIGHT",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "ELISE_KITW01",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "drop_coincident_with": {
+      "parts": [],
+      "prefix": "ELISE_KITW01",
+      "tol": 1.0,
+      "also": [
+       {
+        "prefix": "ELISE_KIT00",
+        "parts": [
+         "SKIRT_LEFT",
+         "SKIRT_RIGHT"
+        ]
+       }
+      ]
+     },
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "replaced": [],
+      "proud": 1.5,
+      "far": 6.0,
+      "lamp_clear": 8.0,
+      "keep_far": true
+     }
+    },
+    {
+     "part": "BODY",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT00_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -161.773,
+       -0.57,
+       7.636
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -179.369,
+       -39.998,
+       18.196
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT01": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT01_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -181.501,
+       -24.247,
+       13.82
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -181.06,
+       25.156,
+       12.951
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT02_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -170.991,
+       38.869,
+       14.409
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT03_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -184.143,
+       0.61,
+       44.051
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT04_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT05_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -176.707,
+       -22.318,
+       26.208
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -176.707,
+       23.018,
+       26.208
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT05_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -173.864,
+       -38.179,
+       25.499
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -173.864,
+       39.109,
+       25.499
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT06_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT07_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -173.524,
+       -32.113,
+       23.67
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -173.524,
+       30.154,
+       23.67
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT07_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT08": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT08_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT08": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT08_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT08": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT08_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -182.371,
+       -0.04,
+       46.438
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT08": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT08_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT09_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT09_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT09_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -188.487,
+       -32.762,
+       28.685
+      ]
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -188.487,
+       32.642,
+       28.685
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT09_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Fender_MWKIT10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT10_BODY",
+     "zones": {
+      "mode": "keep",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 3,
+     "blend": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT"
+      ],
+      "zones": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "band": 15.0,
+      "max": 10.0
+     }
+    },
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_MWKIT10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.0005,
+       1.00079,
+       0.99954
+      ],
+      "t": [
+       -0.126,
+       0.0,
+       0.018
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT10_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.0005,
+        1.00079,
+        0.99954
+       ],
+       "t": [
+        -0.126,
+        0.0,
+        0.018
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "FrontBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_FRONT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_RearBumper_MWKIT10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       0.159,
+       0.0,
+       0.053
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT10_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        1.00088,
+        0.99946,
+        0.99904
+       ],
+       "t": [
+        0.159,
+        0.0,
+        0.053
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "RearBumper"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "BUMPER_REAR",
+       "EXHAUST"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 4.0,
+      "edge": 1.0,
+      "drop_far": true
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -67.2,
+       78.378,
+       7.056
+      ],
+      "rot_z": -90.0
+     }
+    },
+    {
+     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
+     "src_scale": 100.0,
+     "prefix": "EXHAUST",
+     "part": "STYLE01_LEVEL1",
+     "xform": {
+      "s": [
+       1.00088,
+       0.99946,
+       0.99904
+      ],
+      "t": [
+       -51.456,
+       74.979,
+       6.587
+      ],
+      "rot_z": -90.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_SideSkirt_MWKIT10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.98837,
+       1.00441,
+       0.99185
+      ],
+      "t": [
+       -0.953,
+       0.0,
+       0.315
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT10_BODY",
+     "drop_coincident_with": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "parts": [
+       "KIT00_BODY",
+       "KIT00_DOORLINE",
+       "KIT00_DOOR_LEFT",
+       "KIT00_DOOR_RIGHT",
+       "KIT00_FRONT_ROTOR",
+       "KIT00_HOOD",
+       "KIT00_LEFT_HEADLIGHT",
+       "KIT00_LEFT_HEADLIGHT_GLASS",
+       "KIT00_LEFT_SIDE_MIRROR",
+       "KIT00_REAR_ROTOR",
+       "KIT00_RIGHT_HEADLIGHT",
+       "KIT00_RIGHT_HEADLIGHT_GLASS",
+       "KIT00_RIGHT_SIDE_MIRROR",
+       "KIT00_ROOF"
+      ],
+      "tol": 0.5
+     },
+     "slot_label": {
+      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/ELISE/geo",
+      "src_scale": 100.0,
+      "xform": {
+       "s": [
+        0.98837,
+        1.00441,
+        0.99185
+       ],
+       "t": [
+        -0.953,
+        0.0,
+        0.315
+       ]
+      },
+      "prefix": "ELISE",
+      "pieces": {
+       "FrontBumper": [
+        "KIT00_FRONT_BUMPER"
+       ],
+       "RearBumper": [
+        "KIT00_REAR_BUMPER"
+       ],
+       "SideSkirt": [
+        "KIT00_SKIRT"
+       ]
+      },
+      "keep": "SideSkirt"
+     },
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4,
+     "z_max": 70.0,
+     "zones": {
+      "mode": "drop",
+      "list": [
+       [
+        111.2,
+        24,
+        56.0,
+        40.5
+       ],
+       [
+        -119.3,
+        26,
+        56.0,
+        40.5
+       ]
+      ],
+      "x_range": [
+       -135.472,
+       128.758
+      ]
+     }
+    },
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00",
+     "fill_gaps": {
+      "far": 8.0,
+      "edge": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "min_island": 150.0,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWKIT00": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT00_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "KIT00_ATTACHMENT0"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE02": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE02_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE02_ATTACHMENT0"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE03": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE03_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE03_ATTACHMENT0"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE04": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE04_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    },
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE04_ATTACHMENT0"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE05": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE05_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE06": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE06_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE07": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE07_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE09": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE09_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE10": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE10_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE13": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE13_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE16": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE16_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE17": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE17_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE20": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE20_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE21": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE21_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE23": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE23_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE26": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE26_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE31": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE31_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_Bonnet_MWSTYLE32": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       1.00191,
+       1.00193,
+       0.99948
+      ],
+      "t": [
+       -0.325,
+       0.0,
+       0.064
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "STYLE32_HOOD",
+     "keep_nearest": {
+      "prefix": "ELISE_KIT00",
+      "parts": [
+       "BODY",
+       "BRAKELIGHT_LEFT",
+       "BRAKELIGHT_RIGHT",
+       "BUMPER_FRONT",
+       "BUMPER_REAR",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
+       "EXHAUST",
+       "FENDER_FRONT_LEFT",
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_GLASS_LEFT",
+       "HEADLIGHT_GLASS_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT",
+       "HOOD",
+       "SIDEMIRROR_LEFT",
+       "SIDEMIRROR_RIGHT",
+       "SKIRT_LEFT",
+       "SKIRT_RIGHT",
+       "TRUNK",
+       "WINDOW_FRONT",
+       "WINDOW_FRONT_LEFT",
+       "WINDOW_FRONT_RIGHT",
+       "WINDOW_REAR"
+      ],
+      "replaced": [
+       "HOOD"
+      ],
+      "proud": 2.5,
+      "far": 6.0,
+      "lamp_clear": 8.0
+     },
+     "refine_drop": 4
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_RearWing_MWNEW_STYLE01_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE01_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWNEW_STYLE02_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE02_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWNEW_STYLE03_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE03_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWNEW_STYLE04_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE04_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWNEW_STYLE05_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE05_SPOILER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MWNEW_STYLE06_SPOILER": {
+   "parts": [
+    {
+     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
+     "src_scale": 100.0,
+     "xform": {
+      "s": [
+       0.99983,
+       0.99978,
+       1.00042
+      ],
+      "t": [
+       170.033,
+       0.0,
+       -72.048
+      ]
+     },
+     "prefix": "ELISE",
+     "part": "NEW_STYLE06_SPOILER"
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "PS_ELISE_R",
+  "Wheel_R": "PS_ELISE_L",
+  "SteeringWheel": "PS_ELISE"
+ },
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Windows",
+  "Tex_ELISE_KIT00_HEADLIGHT_ON": "HeadLight",
+  "Tex_ELISE_KIT00_BRAKELIGHT_OFF": "TailLight",
+  "Tex_ELISE_WHEEL": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_L_M": "LeftSignalLight",
+  "Signal_R_M": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "Tex_ELISE_KIT00_HEADLIGHT_ON": "head",
+  "Tex_ELISE_KIT00_BRAKELIGHT_OFF": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_ELISE_BADGING"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_ELISE_BADGING"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF"
+  },
+  "Signal_L_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_ELISE_MISC"
+  },
+  "Signal_R_M": {
+   "kind": "signal",
+   "texture_slot": "Tex_ELISE_MISC"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_ELISE_WHEEL"
+ ],
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
+  "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
+ },
+ "wheels": {
+  "front_x": 111.2,
+  "rear_x": -119.3,
+  "half_track": 70.5,
+  "z": 24,
+  "rear_z": 26,
+  "radius": 32,
+  "auto_arches": true,
+  "rear_half_track": 73.5
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    38
+   ],
+   "size": [
+    372,
+    165,
+    46
+   ]
+  },
+  {
+   "center": [
+    -15,
+    0,
+    80
+   ],
+   "size": [
+    140,
+    125,
+    38
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     24.93,
+     -25.07,
+     54.16
+    ],
+    "rot": [
+     -14.23,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -172,
+     0,
+     8
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -172,
+     0,
+     8
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -170,
+     0,
+     72
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -25,
+     0,
+     101
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -188,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     14.072,
+     -4.87,
+     8.706
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -109.63
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     14.184,
+     4.88,
+     8.425
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -109.63
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     15.502,
+     -4.89,
+     4.736
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -109.63
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     15.502,
+     5.26,
+     4.736
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -109.63
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "wheel_display_name": "Elise Stock (ProStreet)",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -26,
+    -25,
+    0
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -26,
+    25,
+    0
+   ]
+  },
+  "cockpit_camera": [
+   -29,
+   -25,
+   79
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    24,
+    0,
+    90
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -20,
+    0,
+    94
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    151,
+    -63,
+    47
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    151,
+    63,
+    47
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    177,
+    40,
+    38
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    177,
+    -40,
+    38
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -184,
+    -56,
+    60
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -184,
+    56,
+    60
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -186,
+    40,
+    61
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -186,
+    -40,
+    61
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    4.4,
+    12.5,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 525
+ },
+ "stock_wing": true,
+ "recentered": {
+  "LeftSideMirror": [
+   27.02,
+   -84.73,
+   68.5
+  ]
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    23,
+    -25,
+    54
+   ],
+   "radius": 18,
+   "x_range": [
+    12,
+    32
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    24.933999999999997,
+    -25.071,
+    54.1555
+   ],
+   "tilt_deg": 14.23
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     40.71,
+     -29.94,
+     59.14
+    ],
+    "rot": [
+     0,
+     -90,
+     -95.4
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     40.75,
+     -20.19,
+     58.84
+    ],
+    "rot": [
+     0,
+     -90,
+     -95.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     41.12,
+     -29.96,
+     54.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -95.4
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     41.12,
+     -19.81,
+     54.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -95.4
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed",
+    "Niddle_RPM"
+   ],
+   "up": 5.4,
+   "width": 8,
+   "height": 1.6
+  }
+ },
+ "texture_upscale": {
+  "Tex_ELISE_INTERIOR": 4
+ },
+ "gauge_faces": {
+  "Tex_ELISE_INTERIOR": [
+   {
+    "center": [
+     0.269,
+     0.48
+    ],
+    "face": [
+     0.269,
+     0.48,
+     0.0335
+    ],
+    "radius": 0.0315,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "aspect": 0.614,
+    "caption_font": 0.12,
+    "clip_below": 0.4945
+   },
+   {
+    "center": [
+     0.353,
+     0.481
+    ],
+    "face": [
+     0.353,
+     0.481,
+     0.0335
+    ],
+    "radius": 0.0315,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.2,
+      270
+     ]
+    ],
+    "aspect": 0.614,
+    "clip_below": 0.4945
+   },
+   {
+    "center": [
+     0.269,
+     0.505
+    ],
+    "radius": 0.011,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.55,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    },
+    "aspect": 0.614
+   },
+   {
+    "center": [
+     0.353,
+     0.505
+    ],
+    "radius": 0.011,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.55,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110,
+    "aspect": 0.614
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_ELISE_INTERIOR",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_ELISE_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "PS_ELISE_I4",
+    "base_row": "I4_150HP",
+    "asset": "PS_ELISE_I4",
+    "base_asset": "Cars/Parts/Engine/I4Sport_150HP",
+    "display_name": "1.8 VVTL-i I4 (ProStreet Elise)",
+    "mass": 130,
+    "cost": 15000,
+    "max_torque_nm": 130.0,
+    "max_rpm": 8600,
+    "curve": [
+     [
+      0.093,
+      0.3677
+     ],
+     [
+      0.1601,
+      0.4485
+     ],
+     [
+      0.2427,
+      0.5569
+     ],
+     [
+      0.3286,
+      0.6654
+     ],
+     [
+      0.4851,
+      0.8446
+     ],
+     [
+      0.5866,
+      0.9377
+     ],
+     [
+      0.6795,
+      0.9815
+     ],
+     [
+      0.7776,
+      1.0
+     ],
+     [
+      0.8515,
+      0.9938
+     ],
+     [
+      0.9186,
+      0.9785
+     ],
+     [
+      1.0,
+      0.9077
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ProStreet elise_track TORQUE; ~141 hp at the 7900 redline"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "PS_ELISE_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "PS_ELISE_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Manual (ProStreet Elise)",
+    "cost": 6000,
+    "mass": 100,
+    "ratios": {
+     "R": -4.2,
+     "1": 3.17,
+     "2": 2.05,
+     "3": 1.48,
+     "4": 1.17,
+     "5": 0.92,
+     "6": 0.81
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "PS_ELISE_I4",
+  "Transmission": "PS_ELISE_6MT",
+  "FinalDriveRatio": "106",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "PS_ELISE",
+  "Wheel1": "PS_ELISE",
+  "Wheel2": "PS_ELISE",
+  "Wheel3": "PS_ELISE",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "PS_ELISE_FrontBumper_KIT00",
+  "RearBumper": "PS_ELISE_RearBumper_KIT00",
+  "Bonnet": "PS_ELISE_Bonnet_KIT00",
+  "SideSkirt": "PS_ELISE_SideSkirt_KIT00",
+  "Fender": "PS_ELISE_Fender_KIT00",
+  "RearWing": "PS_ELISE_RearWing_LIP"
+ },
+ "performance_source": "ProStreet vehicle.yml elise_track: MASS 891.3, FINAL_GEAR 4.53, GEAR_RATIO R4.2/3.17/2.05/1.48/1.17/0.92/0.81, RED_LINE 7900, MAX_RPM 8600",
+ "aero_parts": [
+  {
+   "row": "PS_ELISE_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Stock Autosculpt Front Bumper"
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_KIT06",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT06",
+   "display_name": "Stratospeed Formula 5 Front Bumper"
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Front Bumper"
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_KITW01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KITW01",
+   "display_name": "Stratospeed Widebody Front Bumper"
+  },
+  {
+   "row": "PS_ELISE_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "PS_ELISE_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Stock Autosculpt Rear Bumper"
+  },
+  {
+   "row": "PS_ELISE_RearBumper_KIT06",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT06",
+   "display_name": "Stratospeed Formula 5 Rear Bumper"
+  },
+  {
+   "row": "PS_ELISE_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Stratospeed Formula 7 Rear Bumper"
+  },
+  {
+   "row": "PS_ELISE_RearBumper_KITW01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KITW01",
+   "display_name": "Stratospeed Widebody Rear Bumper"
+  },
+  {
+   "row": "PS_ELISE_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "PS_ELISE_Bonnet_KIT01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT01",
+   "display_name": "Araxis Sport Hood"
+  },
+  {
+   "row": "PS_ELISE_Bonnet_KIT02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT02",
+   "display_name": "Araxis Sweeper Hood"
+  },
+  {
+   "row": "PS_ELISE_Bonnet_KIT03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT03",
+   "display_name": "Araxis Blitz Hood"
+  },
+  {
+   "row": "PS_ELISE_Bonnet_KIT05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT05",
+   "display_name": "Araxis Impact Hood"
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_KIT00",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT00",
+   "display_name": "Stock Side Skirts"
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Stock Autosculpt Side Skirts"
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_KIT06",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT06",
+   "display_name": "Stratospeed Formula 5 Side Skirts"
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Stratospeed Formula 7 Side Skirts"
+  },
+  {
+   "row": "PS_ELISE_Fender_KIT00",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KIT00",
+   "display_name": "Stock Front Fenders"
+  },
+  {
+   "row": "PS_ELISE_Fender_KITW01",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_KITW01",
+   "display_name": "Stratospeed Widebody Front Fenders"
+  },
+  {
+   "row": "PS_ELISE_RearWing_LIP",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_LIP",
+   "display_name": "Stock Lip Spoiler"
+  },
+  {
+   "row": "PS_ELISE_RearWing_EVO",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_EVO",
+   "display_name": "Gentera Style 402 Wing"
+  },
+  {
+   "row": "PS_ELISE_RearWing_DRAG",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_DRAG",
+   "display_name": "Gentera Style 403 Wing"
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT00",
+   "display_name": "Most Wanted Stock Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT01",
+   "display_name": "Most Wanted Kit 1 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT02",
+   "display_name": "Most Wanted Kit 2 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT03",
+   "display_name": "Most Wanted Kit 3 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT04",
+   "display_name": "Most Wanted Kit 4 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Fender_MWKIT05",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT05",
+   "display_name": "Most Wanted Kit 5 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT06",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT06",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT06",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT06",
+   "display_name": "Most Wanted Kit 6 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Fender_MWKIT07",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT07",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT07",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT07",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT07",
+   "display_name": "Most Wanted Kit 7 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Fender_MWKIT08",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT08",
+   "display_name": "Most Wanted Kit 8 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT08",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT08",
+   "display_name": "Most Wanted Kit 8 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT08",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT08",
+   "display_name": "Most Wanted Kit 8 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT08",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT08",
+   "display_name": "Most Wanted Kit 8 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Fender_MWKIT09",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT09",
+   "display_name": "Most Wanted Kit 9 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT09",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT09",
+   "display_name": "Most Wanted Kit 9 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT09",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT09",
+   "display_name": "Most Wanted Kit 9 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT09",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT09",
+   "display_name": "Most Wanted Kit 9 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Fender_MWKIT10",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_MWKIT10",
+   "display_name": "Most Wanted Kit 10 Widebody",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_FrontBumper_MWKIT10",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MWKIT10",
+   "display_name": "Most Wanted Kit 10 Front Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearBumper_MWKIT10",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MWKIT10",
+   "display_name": "Most Wanted Kit 10 Rear Bumper",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_SideSkirt_MWKIT10",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_MWKIT10",
+   "display_name": "Most Wanted Kit 10 Side Skirts",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWKIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWKIT00",
+   "display_name": "Most Wanted Stock Hood",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE02",
+   "display_name": "Most Wanted Hood 2",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE03",
+   "display_name": "Most Wanted Hood 3",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE04",
+   "display_name": "Most Wanted Hood 4",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE05",
+   "display_name": "Most Wanted Hood 5",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE06",
+   "display_name": "Most Wanted Hood 6",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE07",
+   "display_name": "Most Wanted Hood 7",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE09",
+   "display_name": "Most Wanted Hood 9",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE10",
+   "display_name": "Most Wanted Hood 10",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE13",
+   "display_name": "Most Wanted Hood 13",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE16",
+   "display_name": "Most Wanted Hood 16",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE17",
+   "display_name": "Most Wanted Hood 17",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE20",
+   "display_name": "Most Wanted Hood 20",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE21",
+   "display_name": "Most Wanted Hood 21",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE23",
+   "display_name": "Most Wanted Hood 23",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE26",
+   "display_name": "Most Wanted Hood 26",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE31",
+   "display_name": "Most Wanted Hood 31",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_Bonnet_MWSTYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MWSTYLE32",
+   "display_name": "Most Wanted Hood 32",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE01_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE01_SPOILER",
+   "display_name": "Most Wanted New Wing 1",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE02_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE02_SPOILER",
+   "display_name": "Most Wanted New Wing 2",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE03_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE03_SPOILER",
+   "display_name": "Most Wanted New Wing 3",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE04_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE04_SPOILER",
+   "display_name": "Most Wanted New Wing 4",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE05_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE05_SPOILER",
+   "display_name": "Most Wanted New Wing 5",
+   "mw": true
+  },
+  {
+   "row": "PS_ELISE_RearWing_MWNEW_STYLE06_SPOILER",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MWNEW_STYLE06_SPOILER",
+   "display_name": "Most Wanted New Wing 6",
+   "mw": true
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "SideSkirt",
+  "Fender"
+ ],
+ "ai_upscale": [
+  "Tex_ELISE_INTERIOR",
+  "Tex_ELISE_MISC",
+  "Tex_ELISE_BADGING",
+  "Tex_ELISE_ENGINE"
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_ELISE_BADGING",
+   "box": [
+    150,
+    -60,
+    28,
+    185,
+    60,
+    50
+   ],
+   "uv_box": [
+    0,
+    0.1,
+    0.34,
+    1
+   ],
+   "note": "front indicators: the oval amber/clear lens in the clam inboard of each headlight"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "box": [
+    -183,
+    -47,
+    52,
+    -178.5,
+    47,
+    70
+   ],
+   "note": "rear indicators: the inner pair of round lamps"
+  },
+  {
+   "tag": "_M",
+   "from": "Tex_ELISE_MISC",
+   "amber": true,
+   "box": [
+    130,
+    -90,
+    15,
+    150,
+    90,
+    45
+   ],
+   "note": "front side markers: amber lenses at the bumper corners"
+  }
+ ],
+ "masked_texture_slots": [
+  "Tex_ELISE_BADGING",
+  "Tex_MWG_GRILL01"
+ ],
+ "skins": {
+  "dir": "~/nfs-work/vinyl/livery/textures",
+  "pick": [
+   "ELISE_GRIP_ELISE",
+   "ELISE_RAYLESS_ELISE",
+   "ELISE_SPEED_ELISE"
+  ],
+  "labels": {
+   "ELISE_GRIP_ELISE": "Grip Livery (ProStreet)",
+   "ELISE_RAYLESS_ELISE": "Rayless Livery (ProStreet)",
+   "ELISE_SPEED_ELISE": "Speed Livery (ProStreet)"
+  }
+ },
+ "texture_sources": {
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_MWG_RADIATOR": "0x68100815"
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "mw_parts": {
+  "ELISE": {
+   "xform": {
+    "s": [
+     0.99983,
+     0.99978,
+     1.00042
+    ],
+    "t": [
+     0.033,
+     0.0,
+     -0.048
+    ]
+   },
+   "front_cut": 128.8,
+   "rear_cut": -135.5,
+   "residual_cm": [
+    0.6,
+    5.37
+   ]
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   236,
+   236,
+   230
+  ],
+  "ink": [
+   18,
+   18,
+   20
+  ],
+  "minor_ink": [
+   60,
+   60,
+   64
+  ],
+  "red_color": [
+   210,
+   30,
+   25
+  ],
+  "font_file": "seguisb.ttf",
+  "ring": [
+   [
+    150,
+    150,
+    155
+   ],
+   0.05
+  ],
+  "glow_face": [
+   150,
+   165,
+   190
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 9
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  220,
+  30,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.773,
+  "Speed": 0.738,
+  "Fuel": 0.515,
+  "Temp": 0.515
+ },
+ "arch_zones": [
+  [
+   111.2,
+   24,
+   56.0,
+   40.5
+  ],
+  [
+   -119.3,
+   26,
+   56.0,
+   40.5
+  ]
+ ],
+ "ps_meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BASE",
+    "TRUNK",
+    "DOOR_LEFT",
+    "DOOR_RIGHT",
+    {
+     "part": "WINDOW_FRONT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_REAR",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_LEFT",
+     "slot": "Glass"
+    },
+    {
+     "part": "WINDOW_FRONT_RIGHT",
+     "slot": "Glass"
+    },
+    "HEADLIGHT_LEFT",
+    "HEADLIGHT_RIGHT",
+    "HEADLIGHT_GLASS_LEFT",
+    "HEADLIGHT_GLASS_RIGHT",
+    "BRAKELIGHT_LEFT",
+    "BRAKELIGHT_RIGHT",
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Paint",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SIDEMIRROR_RIGHT",
+     "slot": "Paint",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "SEAT_LEFT",
+     "offset": [
+      -26,
+      -25,
+      5
+     ]
+    },
+    {
+     "part": "SEAT_RIGHT",
+     "offset": [
+      -26,
+      25,
+      5
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     17,
+     -16,
+     84,
+     31,
+     16,
+     97
+    ]
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_ELISE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.22,
+      0.43,
+      0.4,
+      0.52
+     ]
+    }
+   ]
+  },
+  "LeftSideMirror": {
+   "parts": [
+    {
+     "part": "SIDEMIRROR_LEFT",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {}
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "offset": [
+      0,
+      11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_TIRE_FRONT",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.5,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT06": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_FRONT",
+     "prefix": "ELISE_KITW01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT06": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT06"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KIT11"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KITW01": {
+   "parts": [
+    {
+     "part": "BUMPER_REAR",
+     "prefix": "ELISE_KITW01"
+    },
+    {
+     "part": "EXHAUST",
+     "prefix": "ELISE_KITW01"
+    },
+    {
+     "part": "WIDEBODY",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      -9999,
+      0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT01": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT02": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT02"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT03": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT03"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_KIT05": {
+   "parts": [
+    {
+     "part": "HOOD",
+     "prefix": "ELISE_KIT05"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT00": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT01"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT01"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT06": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT06"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT06"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "SKIRT_LEFT",
+     "prefix": "ELISE_KIT11"
+    },
+    {
+     "part": "SKIRT_RIGHT",
+     "prefix": "ELISE_KIT11"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KIT00": {
+   "parts": [
+    {
+     "part": "FENDER_FRONT_LEFT",
+     "prefix": "ELISE_KIT00"
+    },
+    {
+     "part": "FENDER_FRONT_RIGHT",
+     "prefix": "ELISE_KIT00"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_LIP": {
+   "parts": [
+    {
+     "part": "SPOILER_LIP",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_EVO": {
+   "parts": [
+    {
+     "part": "SPOILER_EVO",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_DRAG": {
+   "parts": [
+    {
+     "part": "SPOILER_DRAG",
+     "prefix": "ELISE_KIT00",
+     "slot": "Paint",
+     "offset": [
+      170,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_KITW01": {
+   "parts": [
+    {
+     "part": "WIDEBODY",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     },
+     "x_range": [
+      0,
+      9999
+     ]
+    },
+    {
+     "part": "DOOR_LEFT",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "DOOR_RIGHT",
+     "prefix": "ELISE_KITW01",
+     "drop_coincident_with": {
+      "parts": [
+       "BODY",
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "ELISE_KIT00",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true
+  }
+ }
+}
