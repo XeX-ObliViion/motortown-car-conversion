@@ -62,7 +62,7 @@ Problems?
 - Cars missing or no body kits: make sure every .pak from this folder is in the Paks folder, then
   allow and restart.
 - Single-player saves: cars bought in an old save before an update may lose parts. Buy a fresh one.
-- Uninstall: delete the PS_*, MW_*, NFS_* .pak files from the Paks folder. For the F8 menu, delete
+- Uninstall: delete the PS_*, MW_*, NFS_* and zzKitFix_* .pak files from the Paks folder. For the F8 menu, delete
   version.dll, dwmapi.dll, mt_spawner.ini and the ue4ss folder from Win64.
 
 These are fan conversions for private play with friends. Please don't re-upload them anywhere.
