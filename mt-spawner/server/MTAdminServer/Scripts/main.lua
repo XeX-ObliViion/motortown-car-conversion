@@ -1,7 +1,7 @@
 -- MTAdminServer: server-side half of the F8 menu's Admin tab (time and weather on a dedicated server).
 -- The menu sends ServerCommand("mta <what> [arg]"); this hook runs on the server, checks that the sender is an
 -- admin (PlayerState.bIsAdmin) and runs the game's own cheat on the server, which replicates to every player.
-local VERSION = "0.3.0"
+local VERSION = "0.3.1"
 local function log(fmt, ...) print(string.format("[MTAdminServer] " .. fmt .. "\n", ...)) end
 
 local function find_pc(name)
@@ -13,7 +13,7 @@ local function find_pc(name)
 end
 
 -- job payout multipliers per level type (0 Driver .. 6 Police), set by an admin from the F8 menu
-local payout = { [0] = 1, 1, 1, 1, 1, 1, 1 }
+local payout = { [0] = 1, 1, 1, 1, 1, 1, 1, 0, 1 }   -- 7 = long taxi ride pay threshold ($), 8 = its multiplier
 
 local function handle(pc, cmd)
     local mode, amount, target = cmd:match("^mta%s+money%s+(%S+)%s+(%-?%d+)%s+(.+)$")
@@ -36,7 +36,7 @@ local function handle(pc, cmd)
         pcall(function() admin = pc.PlayerState.bIsAdmin end)
         if not admin then log("refused %s (not admin)", cmd); return end
         local i = 0
-        for v in list:gmatch("[^,]+") do if i <= 6 then payout[i] = tonumber(v) or 1 end; i = i + 1 end
+        for v in list:gmatch("[^,]+") do if i <= 8 then payout[i] = tonumber(v) or payout[i] end; i = i + 1 end
         log("payouts now %s", list)
         return
     end
@@ -84,6 +84,7 @@ local function try_payout_hook()
             pcall(function() m = money:get() end)
             pcall(function() lt = level:get() end)
             local mult = payout[lt] or 1
+            if lt == 1 and payout[7] > 0 and (tonumber(m) or 0) >= payout[7] then mult = payout[8] end
             if mult == 1 or (tonumber(m) or 0) <= 0 then return end
             local extra = math.floor(m * (mult - 1))
             ExecuteInGameThread(function()

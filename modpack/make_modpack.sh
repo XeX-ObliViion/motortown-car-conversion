@@ -9,7 +9,11 @@ OUT=~/OneDrive/Documents/"NFS Car Pack"
 STAGE=~/mt-work/modpack_stage
 rm -rf "$STAGE"; mkdir -p "$STAGE/NFS Car Pack" "$OUT"
 # zzKitFix_*: the friend's MW kit fitment fixes (override our kit meshes, load last)
-for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/zzKitFix_*_P.pak; do cp "$f" "$STAGE/NFS Car Pack/"; done
+for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/zzKitFix_*_P.pak; do
+    # the economy pak goes out only when it is on the server too (cargo data must match): INCLUDE_ECONOMY=1
+    case "$f" in */NFS_Economy_P.pak) [ "$INCLUDE_ECONOMY" = 1 ] || continue ;; esac
+    cp "$f" "$STAGE/NFS Car Pack/"
+done
 cp "$HERE/README.txt" "$STAGE/NFS Car Pack/README.txt"
 # F8 menu (spawner + Tuning tab): UE4SS loader + our overlay + only the MTSpawner Lua mod (none of the user's probes)
 W="/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Binaries/Win64"

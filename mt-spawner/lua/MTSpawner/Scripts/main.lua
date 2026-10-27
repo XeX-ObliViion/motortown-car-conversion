@@ -4,7 +4,7 @@
 -- Spawning uses the game's own MotorTownPlayerController:ServerSpawnVehicle, so spawned vehicles are real,
 -- replicated to everyone and saved like any other. Only the host or a server admin may spawn.
 
-local VERSION = "0.6.0"
+local VERSION = "0.6.1"
 local DIR = (os.getenv("LOCALAPPDATA") or ".") .. "\\MTSpawner\\"
 local CMD_FILE, STATE_FILE, LIST_FILE = DIR .. "cmd.txt", DIR .. "state.txt", DIR .. "vehicles.txt"
 
@@ -726,7 +726,8 @@ end
 -- ClientAddMoney. On a dedicated server the payment is the server's: the multipliers go to the MTAdminServer mod
 -- (ServerCommand "mta payout ..."), which applies them for every player once the server can run it.
 local PAYOUT_FILE = DIR .. "payouts.txt"
-local payout = { [0] = 1, 1, 1, 1, 1, 1, 1 }   -- index = EMTCharacterLevelType (0 Driver .. 6 Police)
+local payout = { [0] = 1, 1, 1, 1, 1, 1, 1, 0, 1 }   -- 0..6 = EMTCharacterLevelType (Driver .. Police);
+                                                   -- 7 = long taxi ride: base pay at or above this ($, 0 = off), 8 = its multiplier
 local payouts_seen = {}                        -- context -> count, for the log
 
 local function payouts_load()
@@ -741,7 +742,7 @@ end
 local function payouts_save()
     local f = io.open(PAYOUT_FILE, "w")
     if not f then return end
-    for i = 0, 6 do f:write(string.format("%d=%g\n", i, payout[i])) end
+    for i = 0, 8 do f:write(string.format("%d=%g\n", i, payout[i])) end
     f:close()
 end
 payouts_load()
@@ -750,12 +751,13 @@ local function set_payouts(list)
     local pc, host = require_admin(); if not pc then return end
     local i = 0
     for v in (list or ""):gmatch("[^,]+") do
-        if i <= 6 then payout[i] = math.max(0, math.min(20, tonumber(v) or 1)) end
+        if i <= 6 or i == 8 then payout[i] = math.max(0, math.min(100, tonumber(v) or 1))
+        elseif i == 7 then payout[i] = math.max(0, tonumber(v) or 0) end
         i = i + 1
     end
     payouts_save()
     local parts = {}
-    for k = 0, 6 do parts[#parts + 1] = string.format("%g", payout[k]) end
+    for k = 0, 8 do parts[#parts + 1] = string.format("%g", payout[k]) end
     if not host then pcall(function() pc:ServerCommand("mta payout " .. table.concat(parts, ",")) end) end
     message = "job payouts: " .. table.concat(parts, " ") .. (host and "" or " (sent to the server mod)")
     log("%s", message)
@@ -770,6 +772,8 @@ pcall(function()
         pcall(function() cx = context:get():ToString() end)
         payouts_seen[cx] = (payouts_seen[cx] or 0) + 1
         local mult = payout[lt] or 1
+        -- long taxi rides (the pay grows with distance): their own multiplier, like Easy Money's big taxi fares
+        if lt == 1 and payout[7] > 0 and (tonumber(m) or 0) >= payout[7] then mult = payout[8] end
         log("job paid: %s $%s level %s (x%g)", cx, tostring(m), tostring(lt), mult)
         local host = false
         pcall(function() host = pc:HasAuthority() and pc:IsLocalController() end)
@@ -870,7 +874,7 @@ local function write_state()
         "style=" .. (style.enabled and 1 or 0),
         "style_level=" .. style.level,
         "style_mult=" .. string.format("%g", style.mult),
-        "payouts=" .. string.format("%g,%g,%g,%g,%g,%g,%g", payout[0], payout[1], payout[2], payout[3], payout[4], payout[5], payout[6]),
+        "payouts=" .. string.format("%g,%g,%g,%g,%g,%g,%g,%g,%g", payout[0], payout[1], payout[2], payout[3], payout[4], payout[5], payout[6], payout[7], payout[8]),
         "message=" .. message:gsub("[\r\n]", " "),
     }
     local tmp = STATE_FILE .. ".tmp"
