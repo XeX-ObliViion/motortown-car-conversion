@@ -4,7 +4,7 @@
 -- Spawning uses the game's own MotorTownPlayerController:ServerSpawnVehicle, so spawned vehicles are real,
 -- replicated to everyone and saved like any other. Only the host or a server admin may spawn.
 
-local VERSION = "0.6.1"
+local VERSION = "0.6.2"
 local DIR = (os.getenv("LOCALAPPDATA") or ".") .. "\\MTSpawner\\"
 local CMD_FILE, STATE_FILE, LIST_FILE = DIR .. "cmd.txt", DIR .. "state.txt", DIR .. "vehicles.txt"
 
@@ -196,10 +196,21 @@ local TURBO_SLOT = 7   -- EMTVehiclePartSlot::Turbocharger
 local turbo = { key = "", id = nil, psi = 0 }   -- what the player's current car has fitted
 local tuning_open = false   -- the menu says when its Tuning tab is visible
 
+-- only the car being driven right now (the controller possesses it): LastVehicle can point at a car the game has
+-- already freed, and reading its Net_Parts crashed the game when F8 opened (2026-10-27)
+local TURBO_VEHICLE_CLASS
+local function driven_vehicle(pc)
+    local pawn = pc and pc.Pawn
+    if not valid(pawn) then return nil end
+    TURBO_VEHICLE_CLASS = TURBO_VEHICLE_CLASS or StaticFindObject("/Script/MotorTown.MTVehicle")
+    local ok, is_vehicle = pcall(function() return pawn:IsA(TURBO_VEHICLE_CLASS) end)
+    return (ok and is_vehicle) and pawn or nil
+end
+
 local function read_turbo(pc)
     local t = { key = "", id = nil, psi = 0 }
-    local v = pc and pc.LastVehicle
-    if not valid(v) then return t end
+    local v = driven_vehicle(pc)
+    if not v then return t end
     pcall(function()
         v.Net_Parts:ForEach(function(_, e)
             local p = e:get()
@@ -214,8 +225,8 @@ end
 local function set_boost(psi)
     local pc = local_controller()
     if not pc then message = "not in a game"; return end
-    local v = pc.LastVehicle
-    if not valid(v) then message = "get in your car first"; return end
+    local v = driven_vehicle(pc)
+    if not v then message = "get in your car first"; return end
     local t = read_turbo(pc)
     if t.psi == 0 then message = "fit the ProStreet Adjustable Turbo in the garage first"; return end
     psi = math.floor((tonumber(psi) or 10) * 2 + 0.5) / 2
