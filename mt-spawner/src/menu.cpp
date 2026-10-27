@@ -272,45 +272,6 @@ void DrawAdminTab(const State& s, bool can, bool host) {
                                   : "Pick another player in the list above to change their money instead.");
     }
 
-    ImGui::SeparatorText("Job payouts");
-    {
-        // multipliers per level type, the same order as kLevels; synced from Lua's state on first draw
-        // 0..6 per level type, 7 = long taxi ride threshold ($ of base pay, 0 = off), 8 = long ride multiplier
-        static float mult[9] = {1, 1, 1, 1, 1, 1, 1, 0, 1};
-        static bool synced;
-        std::string cur = Get(s, "payouts");
-        if (!synced && !cur.empty()) {
-            sscanf(cur.c_str(), "%f,%f,%f,%f,%f,%f,%f,%f,%f", &mult[0], &mult[1], &mult[2], &mult[3], &mult[4], &mult[5], &mult[6],
-                   &mult[7], &mult[8]);
-            synced = true;
-        }
-        const char* jobs[7] = {"Driver jobs", "Taxi", "Bus", "Truck / deliveries", "Racing", "Wrecker / towing", "Police"};
-        bool changed = false;
-        for (int i = 0; i < 7; i++) {
-            ImGui::SetNextItemWidth(ImGui::GetFontSize() * 12);
-            changed |= ImGui::SliderFloat(jobs[i], &mult[i], 0.0f, 50.0f, "x%.2f");
-        }
-        ImGui::SetNextItemWidth(ImGui::GetFontSize() * 12);
-        changed |= ImGui::SliderFloat("Long taxi ride from ($ pay)", &mult[7], 0.0f, 20000.0f, mult[7] > 0 ? "$%.0f" : "off");
-        ImGui::SetNextItemWidth(ImGui::GetFontSize() * 12);
-        changed |= ImGui::SliderFloat("Long taxi ride multiplier", &mult[8], 0.0f, 50.0f, "x%.2f");
-        if (ImGui::Button("Reset to x1")) {
-            for (int i = 0; i < 9; i++) mult[i] = i == 7 ? 0.0f : 1.0f;
-            changed = true;
-        }
-        // send once the slider is let go, not on every drag step
-        static bool pending;
-        pending |= changed;
-        if (pending && !ImGui::IsMouseDown(0)) {
-            char b[128];
-            snprintf(b, sizeof b, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.0f,%.2f", mult[0], mult[1], mult[2], mult[3], mult[4], mult[5],
-                     mult[6], mult[7], mult[8]);
-            ipc::Send("payouts", {b});
-            pending = false;
-        }
-        ImGui::TextDisabled(host ? "Multiplies what every job pays you." : "On the server this needs the server-side admin mod.");
-    }
-
     ImGui::SeparatorText("XP");
     static int xp_level = 4;
     static int xp_amount = 1000;
