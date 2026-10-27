@@ -25,6 +25,7 @@ import make_mt_assets as m   # noqa: E402  (reads MT_UNPACKED at import)
 
 BASE = 2.0      # every job
 HARD = 20.0     # hard deliveries
+LOGS = 1000.0   # every log delivery (user choice 2026-10-27, Easy Money style money maker)
 BALANCE = {"TaxiPaymentPer100Meter": 1000.0}   # x1000 like Easy Money (user choice 2026-10-27)   # field -> multiplier
 HARD_CARGO = [   # heavy, oversize, fragile, timed or hazardous: these pay HARD x
     "Log_30ft_30t", "Log_Oak_24ft", "Container_30ft_20t", "Container_40ft_01", "SteelCoil_10t", "lHBeam_6m",
@@ -64,7 +65,7 @@ def main():
     if missing:
         print("not in this game version:", missing)
     for name, row in rows.items():
-        mult = HARD if name in HARD_CARGO else BASE
+        mult = LOGS if name.startswith("Log_") else HARD if name in HARD_CARGO else BASE
         for p in row.get("Value", []):
             if p["Name"] in PAY_FIELDS and isinstance(p.get("Value"), (int, float)):
                 v = p["Value"] * mult
