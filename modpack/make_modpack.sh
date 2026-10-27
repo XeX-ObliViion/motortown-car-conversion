@@ -10,8 +10,8 @@ STAGE=~/mt-work/modpack_stage
 rm -rf "$STAGE"; mkdir -p "$STAGE/NFS Car Pack" "$OUT"
 # zzKitFix_*: the friend's MW kit fitment fixes (override our kit meshes, load last)
 for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/zzKitFix_*_P.pak; do
-    # the economy pak goes out only when it is on the server too (cargo data must match): INCLUDE_ECONOMY=1
-    case "$f" in */NFS_Economy_P.pak) [ "$INCLUDE_ECONOMY" = 1 ] || continue ;; esac
+    # the economy pak is on the server since 2026-10-27 (cargo + taxi data must match it): INCLUDE_ECONOMY=0 leaves it out
+    case "$f" in */NFS_Economy_P.pak) [ "$INCLUDE_ECONOMY" = 0 ] && continue ;; esac
     cp "$f" "$STAGE/NFS Car Pack/"
 done
 cp "$HERE/README.txt" "$STAGE/NFS Car Pack/README.txt"

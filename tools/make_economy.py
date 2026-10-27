@@ -25,8 +25,7 @@ import make_mt_assets as m   # noqa: E402  (reads MT_UNPACKED at import)
 
 BASE = 2.0      # every job
 HARD = 20.0     # hard deliveries
-BALANCE_FIELDS = ("TaxiPaymentPer100Meter", "AmbulancePaymentPer100Meter", "BusPayment", "BusPaymentPer100Meter",
-                  "NavigatedTowRequestBasePayment", "RescueRequestBasePayment", "RescueRequestPaymentPer1Km")
+BALANCE = {"TaxiPaymentPer100Meter": 1000.0}   # x1000 like Easy Money (user choice 2026-10-27)   # field -> multiplier
 HARD_CARGO = [   # heavy, oversize, fragile, timed or hazardous: these pay HARD x
     "Log_30ft_30t", "Log_Oak_24ft", "Container_30ft_20t", "Container_40ft_01", "SteelCoil_10t", "lHBeam_6m",
     "CopperRodCoil_2t", "Transformer_5MVA", "Transformer_20MVA", "Transformer_50MVA", "Tank_250kL",
@@ -53,7 +52,7 @@ def main():
     key = open(os.path.expanduser("~/mt-work/aes.key")).read().strip()
     src = os.path.join(WORK, "src")
     os.makedirs(src)
-    for name in ("Cargos",):
+    for name in ("Cargos", "GameResource"):
         for ext in ("uasset", "uexp"):
             data = subprocess.check_output([REPAK, "--aes-key", key, "get", sh(PAK_SRC[TARGET]), f"MotorTown/Content/DataAsset/{name}.{ext}"])
             open(os.path.join(src, f"{name}.{ext}"), "wb").write(data)
@@ -72,9 +71,20 @@ def main():
                 p["Value"] = int(round(v)) if isinstance(p["Value"], int) else float(v)
     m.fromjson(t, os.path.join(WORK, "Cargos_out.json"), os.path.join(stage, "MotorTown/Content/DataAsset/Cargos.uasset"))
 
-    # The balance table (taxi / ambulance / bus / tow / rescue pay, DataAsset/GameResource) can't be modded: the game
-    # loads it before mod paks are mounted, so an override never shows up (checked in game and on the server,
-    # 2026-10-27). Those jobs are scaled by the F8 menu (host) / the MTAdminServer mod (dedicated server) instead.
+    # balance table (DataAsset/GameResource): taxi pay per 100 m, like the old Easy Money mod (x1000 there). Reading
+    # the value from memory showed the vanilla 25, but a real taxi ride paid the new rate (2026-10-27): it works.
+    t = m.tojson(os.path.join(src, "GameResource.uasset"), os.path.join(WORK, "GameResource.json"))
+    hits = []
+    def scale(o):
+        if isinstance(o, dict):
+            if o.get("Name") in BALANCE and isinstance(o.get("Value"), (int, float)):
+                o["Value"] = type(o["Value"])(o["Value"] * BALANCE[o["Name"]]); hits.append(o["Name"])
+            for x in o.values(): scale(x)
+        elif isinstance(o, list):
+            for x in o: scale(x)
+    scale(t)
+    print("balance fields scaled:", hits)
+    m.fromjson(t, os.path.join(WORK, "GameResource_out.json"), os.path.join(stage, "MotorTown/Content/DataAsset/GameResource.uasset"))
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     subprocess.check_call([REPAK, "pack", "--version", "V11", sh(stage), sh(OUT)])
