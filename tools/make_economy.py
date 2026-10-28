@@ -32,6 +32,9 @@ HARD_CARGO = [   # heavy, oversize, fragile, timed or hazardous: these pay HARD 
     "CopperRodCoil_2t", "Transformer_5MVA", "Transformer_20MVA", "Transformer_50MVA", "Tank_250kL",
     "CircuitBoardPallet", "LiveFish_01", "AirlineMealPallet", "MilitarySupplyBox_01", "Fuel", "Oil", "CrudeOil",
 ]
+FARM_CARGO = [   # the Gapa farms' crops (corn, cabbage, hemp, beans): pay LOGS x like the logs (user choice 2026-10-27)
+    "CornPallet", "CornBox", "CabbagePallet", "HempPallet", "BeanPallet",
+]
 PAY_FIELDS = ("PaymentPer1Km", "BasePayment", "ManualLoadingPayment")
 
 PAK_SRC = {"client": "/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Content/Paks/MotorTown-Windows.pak",
@@ -61,11 +64,11 @@ def main():
     # cargo table: every delivery BASE x, the hard ones HARD x
     t = m.tojson(os.path.join(src, "Cargos.uasset"), os.path.join(WORK, "Cargos.json"))
     rows = {r["Name"]: r for r in t["Exports"][0]["Table"]["Data"]}
-    missing = [c for c in HARD_CARGO if c not in rows]
+    missing = [c for c in HARD_CARGO + FARM_CARGO if c not in rows]
     if missing:
         print("not in this game version:", missing)
     for name, row in rows.items():
-        mult = LOGS if name.startswith("Log_") else HARD if name in HARD_CARGO else BASE
+        mult = LOGS if name.startswith("Log_") or name in FARM_CARGO else HARD if name in HARD_CARGO else BASE
         for p in row.get("Value", []):
             if p["Name"] in PAY_FIELDS and isinstance(p.get("Value"), (int, float)):
                 v = p["Value"] * mult
