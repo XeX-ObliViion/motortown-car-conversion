@@ -8,7 +8,8 @@ PAKS="/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Content/Paks"
 OUT=~/OneDrive/Documents/"NFS Car Pack"
 STAGE=~/mt-work/modpack_stage
 rm -rf "$STAGE"; mkdir -p "$STAGE/NFS Car Pack" "$OUT"
-# zzKitFix_*: the friend's MW kit fitment fixes (override our kit meshes, load last)
+# zzKitFix_*: the friend's MW kit fitment fixes, renamed zzKitFix_X_50_P (priority 5100 > car paks 100, deterministic);
+# our per-car overrides are zzKitFix_E_<Car>_99_P (10000). Equal-priority paks resolve conflicts in an unstable order
 for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/zzKitFix_*_P.pak; do
     # the economy pak is on the server since 2026-10-27 (cargo + taxi data must match it): INCLUDE_ECONOMY=0 leaves it out
     case "$f" in */NFS_Economy_P.pak) [ "$INCLUDE_ECONOMY" = 0 ] && continue ;; esac

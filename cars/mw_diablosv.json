@@ -1,0 +1,1650 @@
+{
+ "base_vehicle": "Tuscan",
+ "base_wheel": "Vista",
+ "default_slot": "Bottom",
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    10,
+    -34,
+    -10
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    10,
+    34,
+    -10
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    10,
+    34,
+    -10
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    10,
+    -34,
+    -10
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    38,
+    0,
+    88
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    30,
+    0,
+    92
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    0,
+    0,
+    92
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    190,
+    -55,
+    45
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    190,
+    55,
+    45
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    220,
+    50,
+    28
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    220,
+    -50,
+    28
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -210,
+    -65,
+    64
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -210,
+    65,
+    64
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   10,
+   -34,
+   74
+  ],
+  "body_mass": 950,
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    3.7,
+    13.9,
+    0
+   ]
+  }
+ },
+ "strip_part_slots": [
+  "Bonnet",
+  "Fender",
+  "SideSkirt"
+ ],
+ "wheel_part": true,
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     57.61,
+     -32.27,
+     58.66
+    ],
+    "rot": [
+     -18.6,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -224,
+     -10,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -224,
+     10,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     10,
+     0,
+     101
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -225,
+     0,
+     20
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -182,
+     0,
+     77
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ],
+    "note": "engine-cover tail: the SV wing mount; universal wings sit here"
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     81.39,
+     -98.75,
+     63.79
+    ],
+    "rot": [
+     -3.35,
+     -16.76,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     81.39,
+     98.75,
+     63.79
+    ],
+    "rot": [
+     -2.37,
+     26.55,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     91.37,
+     -35.54,
+     59.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     91.37,
+     -26.35,
+     59.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     91.37,
+     -42.89,
+     57.85
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     91.37,
+     -18.63,
+     57.85
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   }
+  ]
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    30
+   ],
+   "size": [
+    446,
+    196,
+    44
+   ]
+  },
+  {
+   "center": [
+    20,
+    0,
+    78
+   ],
+   "size": [
+    150,
+    140,
+    36
+   ]
+  }
+ ],
+ "gauge_style": {
+  "face_color": [
+   18,
+   18,
+   20
+  ],
+  "ink": [
+   236,
+   236,
+   232
+  ],
+  "minor_ink": [
+   170,
+   170,
+   170
+  ],
+  "red_color": [
+   225,
+   40,
+   25
+  ],
+  "font_file": "seguisb.ttf",
+  "ring": [
+   [
+    120,
+    120,
+    126
+   ],
+   0.05
+  ],
+  "glow_face": [
+   90,
+   95,
+   105
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "needle_color": [
+  230,
+  30,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 1.003,
+  "Speed": 0.856,
+  "Fuel": 0.918,
+  "Temp": 0.709
+ },
+ "ai_upscale": [
+  "Tex_DIABLO_LOGO"
+ ],
+ "texture_upscale": {
+  "Tex_DIABLO_LOGO": 8
+ },
+ "car": "MW_DIABLOSV",
+ "display_name": "Lamborghini Diablo SV (Most Wanted)",
+ "prefix": "GALLARDO",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mw/DIABLO/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mw/DIABLO/tex/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_DIABLOSV/meshes",
+ "cost": 250000,
+ "wheel_display_name": "Diablo SV Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "performance_source": "Diablo SV MY1999: 5.7 V12 530 PS @ 7100, 605 Nm @ 5500, 5MT 2.31/1.52/1.12/0.88/0.68 R2.12, FD 2.53, 1530 kg, RWD (supercars.net, lambocars.com)",
+ "texture_slots": {
+  "0x8FDFC88F": "Paint",
+  "0x7B220DDF": "Glass",
+  "0x721AFF7C": "Bottom",
+  "0x4E8CF857": "DriverFigure",
+  "0x78B5E315": "Tex_DIABLO_MISC",
+  "0x78B56EBA": "Tex_DIABLO_LOGO",
+  "0x513BE5D1": "Tex_DIABLO_RIM",
+  "0x78B9B99D": "Bottom",
+  "0x2C420D64": "Bottom",
+  "0x8FDFC892": "Tex_DIABLO_SKIN4",
+  "0xD2A4A875": "Tex_DIABLO_BADGING"
+ },
+ "texture_sources": {
+  "Tex_DIABLO_MISC": "0x78B5E315",
+  "Tex_DIABLO_LOGO": "0x78B56EBA",
+  "Tex_DIABLO_RIM": "0x513BE5D1",
+  "Tex_DIABLO_SKIN4": "0x8FDFC892",
+  "Tex_DIABLO_BADGING": "0xD2A4A875"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_DIABLO_RIM": "Wheel_01",
+  "Signal_L_V": "ReverseLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_T": "LeftTailLight",
+  "Signal_L_B": "TailLight",
+  "Signal_L_H": "HeadLight",
+  "Signal_L_G": "HeadLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_V": "ReverseLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_T": "RightTailLight",
+  "Signal_R_B": "TailLight",
+  "Signal_R_H": "HeadLight",
+  "Signal_R_G": "HeadLight",
+  "Signal_R_F": "RightSignalLight"
+ },
+ "paintable_texture_slots": [
+  "Tex_DIABLO_RIM"
+ ],
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BASE",
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ]
+    }
+   ],
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_DIABLO_LOGO",
+     "to": "Gauges",
+     "box": [
+      0.07,
+      0.3,
+      0.4,
+      0.4
+     ]
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "smooth_normals": 45,
+   "radius_slot": {
+    "slot": "Trim",
+    "r": 20.5,
+    "from": [
+     "Tex_DIABLO_RIM"
+    ],
+    "note": "rim lip/barrel: its UVs land on a patterned corner of the rim texture (grid in game) -> plain metal"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "smooth_normals": 45,
+   "radius_slot": {
+    "slot": "Trim",
+    "r": 20.5,
+    "from": [
+     "Tex_DIABLO_RIM"
+    ],
+    "note": "rim lip/barrel: its UVs land on a patterned corner of the rim texture (grid in game) -> plain metal"
+   }
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "keep_boxes": [
+    [
+     76,
+     -103,
+     54,
+     94,
+     -93,
+     72
+    ]
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "keep_boxes": [
+    [
+     76,
+     93,
+     54,
+     94,
+     103,
+     72
+    ]
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ],
+     "scale": [
+      1,
+      1.4,
+      1
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "smooth_normals": 45,
+   "radius_slot": {
+    "slot": "Trim",
+    "r": 20.5,
+    "from": [
+     "Tex_DIABLO_RIM"
+    ],
+    "note": "rim lip/barrel: its UVs land on a patterned corner of the rim texture (grid in game) -> plain metal"
+   }
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ],
+     "scale": [
+      1,
+      1.4,
+      1
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "smooth_normals": 45,
+   "radius_slot": {
+    "slot": "Trim",
+    "r": 20.5,
+    "from": [
+     "Tex_DIABLO_RIM"
+    ],
+    "note": "rim lip/barrel: its UVs land on a patterned corner of the rim texture (grid in game) -> plain metal"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "GALLARDO",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "lift": {
+    "prefix": "GALLARDO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "GALLARDO",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "lift": {
+    "prefix": "GALLARDO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "GALLARDO",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "lift": {
+    "prefix": "GALLARDO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "GALLARDO",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "lift": {
+    "prefix": "GALLARDO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      168.0,
+      99999
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -165.0
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -165.0,
+      168.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "GALLARDO",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "lift": {
+    "prefix": "GALLARDO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      182,
+      0,
+      -77
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "DriverFigure"
+   ]
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_DIABLOSV_R",
+  "Wheel_R": "MW_DIABLOSV_L",
+  "SteeringWheel": "MW_DIABLOSV",
+  "Wheel_RL": "MW_DIABLOSV_REAR_R",
+  "Wheel_RR": "MW_DIABLOSV_REAR_L"
+ },
+ "wheels": {
+  "front_x": 130.1,
+  "rear_x": -126.6,
+  "half_track": 79,
+  "z": 25.5,
+  "rear_z": 30,
+  "radius": 33,
+  "auto_arches": true,
+  "rear_half_track": 80
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_DIABLOSV_V12",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_DIABLOSV_V12",
+    "base_asset": "Cars/Parts/Engine/Ferrari_275_V12_400HP",
+    "display_name": "5.7L V12 (Lamborghini Diablo SV)",
+    "mass": 260,
+    "cost": 60000,
+    "max_torque_nm": 605,
+    "max_rpm": 7500,
+    "curve": [
+     [
+      0.1333,
+      0.55
+     ],
+     [
+      0.2667,
+      0.7
+     ],
+     [
+      0.4,
+      0.82
+     ],
+     [
+      0.5333,
+      0.92
+     ],
+     [
+      0.6667,
+      0.98
+     ],
+     [
+      0.7333,
+      1.0
+     ],
+     [
+      0.8,
+      0.98
+     ],
+     [
+      0.8667,
+      0.94
+     ],
+     [
+      0.9467,
+      0.878
+     ],
+     [
+      1.0,
+      0.8
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "605 Nm @ 5500, 530 PS @ 7100 (0.878 x 605 = 531 Nm), limiter 7500; the game's Ferrari 275 V12 for the V12 sound"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_DIABLOSV_5MT",
+    "base_row": "5SpeedSports",
+    "asset": "MW_DIABLOSV_5MT",
+    "base_asset": "Cars/Parts/Transmission/Manual_5SpeedSports",
+    "display_name": "5-Speed Manual (Lamborghini Diablo SV)",
+    "cost": 8000,
+    "mass": 90,
+    "ratios": {
+     "R": -2.12,
+     "1": 2.31,
+     "2": 1.52,
+     "3": 1.12,
+     "4": 0.88,
+     "5": 0.68
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "MW_DIABLOSV_V12",
+  "Transmission": "MW_DIABLOSV_5MT",
+  "FinalDriveRatio": "101",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_15",
+  "Tire1": "PerformanceTire_15",
+  "Tire2": "PerformanceTire_15",
+  "Tire3": "PerformanceTire_15",
+  "Wheel0": "MW_DIABLOSV",
+  "Wheel1": "MW_DIABLOSV",
+  "Wheel2": "MW_DIABLOSV",
+  "Wheel3": "MW_DIABLOSV",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "MW_DIABLOSV_FrontBumper_KIT00",
+  "RearBumper": "MW_DIABLOSV_RearBumper_KIT00",
+  "RearWing": "MW_DIABLOSV_RearWing_STOCK"
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_DIABLO_LOGO",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_DIABLOSV_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_V",
+   "from": "Tex_DIABLO_LOGO",
+   "uv_box": [
+    0.89,
+    0.715,
+    1,
+    0.815
+   ],
+   "box": [
+    -240,
+    -120,
+    30,
+    -150,
+    120,
+    100
+   ],
+   "copy": true,
+   "lift": 0.08,
+   "note": "reverse: white lens of the right outer tail lamp (real SV: one reverse lamp)"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_DIABLO_LOGO",
+   "uv_box": [
+    0.89,
+    0.715,
+    1,
+    0.925
+   ],
+   "box": [
+    -240,
+    -120,
+    30,
+    -150,
+    120,
+    100
+   ],
+   "note": "outer tail lamps: red on brake, amber segment flashes"
+  },
+  {
+   "tag": "_T",
+   "from": "Tex_DIABLO_LOGO",
+   "uv_box": [
+    0.89,
+    0.6,
+    1,
+    0.715
+   ],
+   "box": [
+    -240,
+    -120,
+    30,
+    -150,
+    120,
+    100
+   ],
+   "note": "inner red tail/brake lamps"
+  },
+  {
+   "tag": "_B",
+   "from": "Tex_DIABLO_LOGO",
+   "uv_box": [
+    0.3,
+    0.8,
+    0.9,
+    0.87
+   ],
+   "box": [
+    -140,
+    -60,
+    70,
+    -100,
+    60,
+    100
+   ],
+   "note": "third brake light bar"
+  },
+  {
+   "tag": "_H",
+   "from": "Tex_DIABLO_LOGO",
+   "box": [
+    172,
+    -80,
+    30,
+    195,
+    80,
+    56
+   ],
+   "note": "headlamp reflectors behind the glass covers"
+  },
+  {
+   "tag": "_G",
+   "from": "Tex_DIABLO_MISC",
+   "box": [
+    172,
+    -80,
+    30,
+    195,
+    80,
+    56
+   ],
+   "note": "headlamp housings (MISC) behind the covers"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_DIABLO_MISC",
+   "box": [
+    205,
+    -75,
+    15,
+    230,
+    75,
+    40
+   ],
+   "note": "front indicators: lamps behind the lower bumper glass"
+  }
+ ],
+ "lamp_slots": {
+  "Signal_L_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail_tex",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_L_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_L_B": {
+   "kind": "tail",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_L_H": {
+   "kind": "head",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_L_G": {
+   "kind": "head",
+   "texture_slot": "Tex_DIABLO_MISC"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_DIABLO_MISC"
+  },
+  "Signal_R_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail_tex",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_R_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_R_B": {
+   "kind": "tail",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_R_H": {
+   "kind": "head",
+   "texture_slot": "Tex_DIABLO_LOGO"
+  },
+  "Signal_R_G": {
+   "kind": "head",
+   "texture_slot": "Tex_DIABLO_MISC"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_DIABLO_MISC"
+  }
+ },
+ "slot_boxes": [
+  {
+   "meshes": [
+    "Body"
+   ],
+   "from": "Tex_DIABLO_MISC",
+   "to": "MirrorGlassDup",
+   "box": [
+    76,
+    93,
+    54,
+    94,
+    103,
+    72
+   ],
+   "abs_y": true,
+   "note": "mirror glass is in the SideMirror meshes",
+   "drop": true
+  }
+ ],
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    56,
+    -32,
+    60
+   ],
+   "radius": 16,
+   "x_range": [
+    50,
+    64
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    57.61365000000001,
+    -32.2652,
+    58.661150000000006
+   ],
+   "tilt_deg": 18.6
+  }
+ },
+ "gauge_faces": {
+  "Tex_DIABLO_LOGO": [
+   {
+    "center": [
+     0.18,
+     0.345
+    ],
+    "face": [
+     0.18,
+     0.345,
+     0.026
+    ],
+    "radius": 0.023,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 7.5,
+    "font": 0.26,
+    "captions": []
+   },
+   {
+    "center": [
+     0.28,
+     0.345
+    ],
+    "face": [
+     0.28,
+     0.345,
+     0.026
+    ],
+    "radius": 0.023,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 0,
+    "max": 220,
+    "text_step": 40,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.2,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.14
+   },
+   {
+    "center": [
+     0.1,
+     0.358
+    ],
+    "face": [
+     0.1,
+     0.358,
+     0.016
+    ],
+    "radius": 0.013,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.36,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.364,
+     0.358
+    ],
+    "face": [
+     0.364,
+     0.358,
+     0.016
+    ],
+    "radius": 0.013,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.36,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 9
+  },
+  "Speed": {
+   "max": 220,
+   "value_scale": 1.609344
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     91.37,
+     -35.54,
+     59.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     91.37,
+     -26.35,
+     59.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     91.37,
+     -42.89,
+     57.85
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     91.37,
+     -18.63,
+     57.85
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": -3.2,
+   "width": 3.0,
+   "height": 0.8,
+   "out": 0.25
+  }
+ },
+ "mw_kits": {
+  "front_split": 168.0,
+  "rear_split": -165.0
+ },
+ "aero_parts": [
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_DIABLOSV_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_DIABLOSV_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_DIABLOSV_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "masked_texture_slots": [
+  "Tex_DIABLO_SKIN4"
+ ]
+}

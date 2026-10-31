@@ -1,0 +1,885 @@
+{
+ "car": "MW_COPSUV",
+ "display_name": "Rockport PD4 (Most Wanted)",
+ "base_vehicle": "Muhan_Police",
+ "base_dir": "Muhan",
+ "base_wheel": "Muhan",
+ "base_parts": {
+  "Police_Body": "Body"
+ },
+ "prefix": "COPSUV",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mw/COPSUV/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mw/COPSUV/tex/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_COPSUV/meshes",
+ "cost": 100000,
+ "wheel_display_name": "Rockport PD4 Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "default_slot": "Bottom",
+ "wheel_part": true,
+ "performance_source": "MW Rockport PD4 = 2005 Jeep Grand Cherokee-style police SUV: 5.7 V8 ~330 hp, AWD -> kept the Muhan Police drivetrain (V8 320 HP, AWD, 6-speed)",
+ "strip_part_slots": [
+  "FrontBumper",
+  "Bullbar",
+  "Winch0",
+  "SideSkirt",
+  "Fender"
+ ],
+ "texture_slots": {
+  "0xE122D1E4": "Tex_COPSUV_SKIN1",
+  "0x80CF5B0A": "Tex_COPSUV_BADGING",
+  "0xCC772AFB": "Bottom",
+  "0xBD1F0E0A": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0x1B049702": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0xD195BE56": "Glass",
+  "0x7B220DDF": "Glass",
+  "0xA7E6EA53": "Tex_COPSUV_HEADLIGHT",
+  "0xA532FC46": "Tex_COPSUV_HEADLIGHT",
+  "0xD947F346": "Tex_COPSUV_BRAKELIGHT",
+  "0x54666C52": "Tex_COPSUV_TIRE",
+  "0x03C906EF": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x7811C146": "Bottom",
+  "0xBF19330C": "DriverFigure",
+  "0x1FF7CE3E": "Tex_COPSUV_BRAKELIGHTON"
+ },
+ "texture_sources": {
+  "Tex_COPSUV_SKIN1": "0xE122D1E4",
+  "Tex_COPSUV_BADGING": "0x80CF5B0A",
+  "Tex_COPSUV_HEADLIGHT": "0xD322594B",
+  "Tex_COPSUV_BRAKELIGHT": "0x1EF1953C",
+  "Tex_COPSUV_TIRE": "0x54666C52",
+  "Tex_COPSUV_BRAKELIGHTON": "0x1FF7CE3E"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_COPSUV_HEADLIGHT": "HeadLight",
+  "Tex_COPSUV_BRAKELIGHT": "TailLight",
+  "Tex_COPSUV_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_V": "ReverseLight"
+ },
+ "lamp_slots": {
+  "Tex_COPSUV_HEADLIGHT": "head",
+  "Tex_COPSUV_BRAKELIGHT": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_COPSUV_HEADLIGHT"
+  },
+  "Signal_L_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_COPSUV_BRAKELIGHTON"
+  },
+  "Signal_L_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_COPSUV_BRAKELIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_COPSUV_HEADLIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_COPSUV_BRAKELIGHTON"
+  },
+  "Signal_R_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_COPSUV_BRAKELIGHT"
+  }
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "KIT00_DAMAGE0_BODY",
+    "KIT00_DAMAGE0_COP_LIGHTS",
+    "KIT00_DAMAGE0_FRONT_BUMPER",
+    "KIT00_DAMAGE0_HOOD",
+    "KIT00_DAMAGE0_LEFT_BRAKELIGHT",
+    "KIT00_DAMAGE0_RIGHT_BRAKELIGHT",
+    "KIT00_DAMAGE0_LEFT_DOOR",
+    "KIT00_DAMAGE0_RIGHT_DOOR",
+    "KIT00_DAMAGE0_LEFT_REAR_DOOR",
+    "KIT00_DAMAGE0_RIGHT_REAR_DOOR",
+    "KIT00_DAMAGE0_LEFT_HEADLIGHT",
+    "KIT00_DAMAGE0_RIGHT_HEADLIGHT",
+    "KIT00_DAMAGE0_REAR_BUMPER",
+    "KIT00_DAMAGE0_TRUNK",
+    "KIT00_DAMAGE0_FRONT_WINDOW"
+   ],
+   "offset": [
+    0,
+    0,
+    16
+   ],
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_COPSUV_SKIN1",
+     "to": "EmergencyRed",
+     "box": [
+      0.0,
+      0.625,
+      0.125,
+      0.75
+     ]
+    },
+    {
+     "from": "Tex_COPSUV_SKIN1",
+     "to": "EmergencyBlue",
+     "box": [
+      0.125,
+      0.625,
+      0.25,
+      0.75
+     ]
+    },
+    {
+     "from": "Tex_COPSUV_SKIN1",
+     "to": "Gauges",
+     "box": [
+      0.75,
+      0.875,
+      0.875,
+      0.9375
+     ]
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "KIT00_DAMAGE0_LEFT_DOOR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "offset": [
+    -0.3,
+    0,
+    16
+   ],
+   "keep_boxes": [
+    [
+     63,
+     -119,
+     90,
+     74,
+     -93,
+     132
+    ]
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "KIT00_DAMAGE0_RIGHT_DOOR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "offset": [
+    -0.3,
+    0,
+    16
+   ],
+   "keep_boxes": [
+    [
+     63,
+     93,
+     90,
+     74,
+     119,
+     132
+    ]
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_COPSUV_R",
+  "Wheel_R": "MW_COPSUV_L",
+  "SteeringWheel": "MW_COPSUV"
+ },
+ "wheels": {
+  "front_x": 157.9,
+  "rear_x": -135.8,
+  "half_track": 80,
+  "z": 50,
+  "rear_z": 50,
+  "radius": 40,
+  "auto_arches": true
+ },
+ "part_overrides": {
+  "Wheel0": "MW_COPSUV",
+  "Wheel1": "MW_COPSUV",
+  "Wheel2": "MW_COPSUV",
+  "Wheel3": "MW_COPSUV"
+ },
+ "blueprint": {
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   8,
+   -44,
+   140
+  ],
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    10,
+    -44,
+    63
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    10,
+    44,
+    63
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -75,
+    40,
+    66
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -75,
+    -40,
+    66
+   ],
+   "PassengerSeat4_GEN_VARIABLE": [
+    -75,
+    0,
+    66
+   ],
+   "PassengerSeat5_GEN_VARIABLE": [
+    -75,
+    40,
+    66
+   ],
+   "PassengerSeat6_GEN_VARIABLE": [
+    -75,
+    -40,
+    66
+   ],
+   "PassengerSeat7_GEN_VARIABLE": [
+    -75,
+    0,
+    66
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    60,
+    0,
+    150
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    40,
+    0,
+    160
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -40,
+    0,
+    160
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    234,
+    -67,
+    82
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    234,
+    67,
+    82
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    232,
+    82,
+    84
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    232,
+    -82,
+    84
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -222,
+    84,
+    96
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -222,
+    -84,
+    96
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -222,
+    -84,
+    104
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -222,
+    84,
+    104
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -222,
+    -84,
+    100
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -222,
+    84,
+    100
+   ]
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_COPSUV_HEADLIGHT",
+   "uv_box": [
+    0.78,
+    0.08,
+    1,
+    0.45
+   ],
+   "note": "front indicators: amber corner of each headlamp"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_COPSUV_BRAKELIGHT",
+   "copy": true,
+   "lift": 0.16,
+   "note": "reverse: white strip (reverse_overlay keeps only white texels); above the indicator overlay"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_COPSUV_BRAKELIGHT",
+   "copy": true,
+   "lift": 0.08,
+   "note": "rear indicators: lower lens, amber in MW's lit texture (signal_overlay on that texture; the strip is covered by the reverse overlay)"
+  }
+ ],
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    66,
+    -44.5,
+    112
+   ],
+   "radius": 21,
+   "x_range": [
+    56,
+    74
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    65.1233,
+    -44.52,
+    110.6481
+   ],
+   "tilt_deg": 14.22
+  }
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    2,
+    0,
+    62
+   ],
+   "size": [
+    490,
+    190,
+    80
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    135
+   ],
+   "size": [
+    330,
+    176,
+    50
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     65.12,
+     -44.52,
+     110.65
+    ],
+    "rot": [
+     -14.22,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -240,
+     60,
+     30
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -10,
+     0,
+     171
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -250,
+     0,
+     40
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Winch0",
+    "loc": [
+     262,
+     0,
+     45
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Seat_01",
+    "loc": [
+     10,
+     -44,
+     63
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Seat_02",
+    "loc": [
+     10,
+     44,
+     63
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     77.0,
+     -35.37,
+     120.24
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     77.0,
+     -53.67,
+     120.71
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     77.0,
+     -26.47,
+     117.77
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     77.0,
+     -60.37,
+     117.77
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     68.15,
+     -105.78,
+     119.61
+    ],
+    "rot": [
+     -7.47,
+     -18.22,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     68.15,
+     105.78,
+     119.61
+    ],
+    "rot": [
+     -4.58,
+     29.61,
+     0
+    ]
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   14,
+   14,
+   16
+  ],
+  "ink": [
+   240,
+   240,
+   236
+  ],
+  "minor_ink": [
+   170,
+   170,
+   170
+  ],
+  "red_color": [
+   225,
+   40,
+   25
+  ],
+  "font_file": "seguisb.ttf",
+  "ring": [
+   [
+    150,
+    150,
+    156
+   ],
+   0.06
+  ],
+  "glow_face": [
+   80,
+   110,
+   140
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_faces": {
+  "Tex_COPSUV_SKIN1": [
+   {
+    "center": [
+     0.793,
+     0.911
+    ],
+    "face": [
+     0.793,
+     0.911,
+     0.016
+    ],
+    "radius": 0.0145,
+    "min": 0,
+    "max": 140,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.24,
+    "captions": [
+     [
+      "MPH",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.15,
+    "flip_x": true
+   },
+   {
+    "center": [
+     0.834,
+     0.909
+    ],
+    "face": [
+     0.834,
+     0.909,
+     0.016
+    ],
+    "radius": 0.0145,
+    "min": 0,
+    "max": 7,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 5.5,
+    "font": 0.28,
+    "captions": [],
+    "flip_x": true
+   },
+   {
+    "center": [
+     0.773,
+     0.921
+    ],
+    "face": [
+     0.773,
+     0.921,
+     0.008
+    ],
+    "radius": 0.007,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.4,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    },
+    "flip_x": true
+   },
+   {
+    "center": [
+     0.849,
+     0.921
+    ],
+    "face": [
+     0.849,
+     0.921,
+     0.008
+    ],
+    "radius": 0.007,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.4,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110,
+    "flip_x": true
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 7
+  },
+  "Speed": {
+   "max": 140,
+   "value_scale": 1.609344
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     77.0,
+     -35.37,
+     120.24
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     77.0,
+     -53.67,
+     120.71
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     77.0,
+     -26.47,
+     117.77
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     77.0,
+     -60.37,
+     117.77
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": -2.5,
+   "width": 2.5,
+   "height": 0.7,
+   "out": 0.25
+  }
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_COPSUV_SKIN1",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_COPSUV_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "texture_upscale": {
+  "Tex_COPSUV_SKIN1": 8
+ },
+ "needle_color": [
+  230,
+  30,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.5,
+  "Speed": 0.5,
+  "Fuel": 0.25,
+  "Temp": 0.25
+ }
+}

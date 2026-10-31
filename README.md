@@ -34,3 +34,14 @@ Cars converted from EA games are for personal use; don't publish them.
 
 Paths in the scripts and the skill are the original author's (`C:\Users\noust\...`, `D:\SteamLibrary\...`);
 change them to yours, or let Claude Code adapt them while it follows the skill.
+
+## What's new (2026-10-31)
+- **Most Wanted twins** (`tools/mw_twin.py`, `tools/mw_materials.py`): build a car on its own MW body (so MW body kits fit natively), copying drivetrain, stance, blueprint and gauges from an existing ProStreet port, and mapping MW materials to Motor Town slots by texture. Examples: `cars/mw_supra.json`, `mw_viper.json`, `mw_elise.json`, `mw_350z.json`.
+- **One-piece bodies on door bases:** `drop_coincident_with` takes `keep_only` (cut doors out of a one-piece body along a reference car's door panels).
+- **Add-on / modder cars:** generic material names are keyed by texture hash automatically; driver figures are dropped via a texture slot (`cars/mw_diablosv.json`).
+- **Police vehicles** (`cars/mw_copsuv.json`): `base_vehicle` can be a variant blueprint (`base_dir`, `base_parts`), e.g. the game's Muhan_Police, which brings the police tags, licence, siren, light bar and NPC police AI. Light-bar lenses go to slots `EmergencyRed` / `EmergencyBlue`.
+- **Lamps:** reverse lamps (signal rule tag `_V`), masked overlay kinds `reverse_overlay` / `signal_overlay` for lenses that mix red with white/amber; keep red brake sections in `TailLight` (signal-named slots don't get the brake glow).
+- **Gauges:** `gauge_faces` entries take `flip_x` for dash art that is UV-mirrored on the car.
+- **Wheels / meshes:** `smooth_normals` (per-mesh), `radius_slot` to give a rim lip its own material; `slot_boxes` take `drop: true`.
+- **Dealerships:** second copied showroom (`dealers/nfs_dealership/showroom_mw.txt`); `skip <class regex>` removes source actors (e.g. the turntable); `bay <CAR> x y z yaw` adds a fixed world-space bay; mappatch now remaps (multicast) delegates when transplanting/cloning actors (copied lights work).
+- **Base car defaults:** strip every default part the base row fits that would sit on your body (`strip_part_slots`, e.g. SideSkirt/Fender/Bonnet); see the skill for the full checklist.

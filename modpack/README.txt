@@ -3,15 +3,19 @@ NFS CAR PACK FOR MOTOR TOWN (for Obliv's server)
 
 What's inside
 -------------
-11 cars from Need for Speed ProStreet and Most Wanted, all with full body kits, Most Wanted kits,
+14 cars from Need for Speed ProStreet and Most Wanted, all with full body kits,
 liveries, real gauges (mph) and their own engines:
 
   Nissan 350Z, Toyota Supra, Lotus Elise, Porsche 911 Turbo (997), Nissan Skyline GT-R R34,
   Shelby GT500 '67, Dodge Challenger R/T '71, Chevrolet Chevelle SS 454, Dodge Viper SRT-10,
-  BMW M3 GTR (Most Wanted), Porsche 911 GT2 993 RWB (Most Wanted)
+  BMW M3 GTR (Most Wanted), Porsche 911 GT2 993 RWB (Most Wanted),
+  Toyota Supra (Most Wanted), Dodge Viper SRT-10 (Most Wanted), Lotus Elise (Most Wanted)
+
+The Most Wanted versions use their own Most Wanted bodies, so all their Most Wanted kits fit properly.
 
 Plus: the ProStreet rim pack (96 rims), the Most Wanted rim pack (41 rims) and the NFS wing pack.
-The cars are sold at dealer spots around the map.
+The ProStreet cars are sold at the NFS dealership at the Ara drag strip (and a few other dealer spots);
+the Most Wanted cars at the "MOST WANTED" dealership (see the map icon).
 
 
 Install (5 minutes)
@@ -48,6 +52,13 @@ Updating
 --------
 When there's a new version, close the game, replace the old .pak files with the new ones, then start the
 game, allow the mods again and restart once. If body kits are missing after that, restart one more time.
+Update of 31 Oct 2026: new MW Lotus Elise (MW_ELISE_P is new), working reverse lights on the MW Supra
+and MW Elise. Replace every .pak.
+Update of 30 Oct 2026: new MOST WANTED dealership, MW Supra + MW Viper, the NFS dealership now faces the drag strip
+and its lights work. Replace every .pak (MW_SUPRA_P and MW_VIPER_P are new).
+Update of 29 Oct 2026: the kit-fix files were renamed (zzKitFix_A_50_P.pak ... plus zzKitFix_E_Viper_99_P.pak).
+Delete the old zzKitFix_A_P.pak, zzKitFix_B_P.pak, zzKitFix_C_P.pak, zzKitFix_D_P.pak and zzKitFix_E_Viper_P.pak
+from your Paks folder if you have them.
 
 
 Tuning parts

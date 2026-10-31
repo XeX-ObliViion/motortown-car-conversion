@@ -38,7 +38,7 @@
   "BODY_DULL_PLASTIC": "Bottom",
   "BODY_PLAINNOTHING": "Bottom",
   "CARBONFIBRE_BODY": "Tex_MWG_CARBONFIBREBODY",
-  "BODY_CHROME": "Trim",
+  "BODY_CHROME": "Tex_MWG_METAL",
   "BODY_ALUMINUM": "Trim",
   "GRILL_02": "Tex_MWG_GRILL02",
   "BOTTOM": "Bottom",
@@ -46,7 +46,7 @@
   "PLAIN_ALUMINUM": "Trim",
   "BODY_RUBBER_ACCORDIAN": "Bottom",
   "RADIATOR": "Tex_MWG_RADIATOR",
-  "EXHAUST_CHROME": "Trim",
+  "EXHAUST_CHROME": "Tex_MWG_METAL",
   "EXHAUST_MUFFLER": "Bottom",
   "EXHAUST_FACE": "Bottom"
  },
@@ -58,18 +58,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -363,18 +397,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -498,18 +566,52 @@
      "zones": {
       "mode": "keep",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -541,18 +643,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -573,49 +709,57 @@
      }
     },
     {
-     "part": "DOOR_LEFT",
-     "prefix": "VIPER_KITW01",
-     "drop_coincident_with": {
-      "parts": [
-       "BODY",
-       "DOOR_LEFT",
-       "DOOR_RIGHT"
-      ],
-      "prefix": "VIPER_KIT00",
-      "tol": 1.0
-     }
-    },
-    {
-     "part": "DOOR_RIGHT",
-     "prefix": "VIPER_KITW01",
-     "drop_coincident_with": {
-      "parts": [
-       "BODY",
-       "DOOR_LEFT",
-       "DOOR_RIGHT"
-      ],
-      "prefix": "VIPER_KIT00",
-      "tol": 1.0
-     }
-    },
-    {
      "part": "WIDEBODY",
      "prefix": "VIPER_KITW01",
      "zones": {
       "mode": "keep",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -642,18 +786,52 @@
        "BODY"
       ],
       "zones": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "band": 15.0,
       "max": 10.0
@@ -677,18 +855,52 @@
      "zones": {
       "mode": "keep",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -887,7 +1099,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     },
@@ -903,7 +1119,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_RearBumper_MWKIT00": {
    "parts": [
@@ -1019,7 +1253,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     },
@@ -1073,7 +1311,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_FrontBumper_MWKIT01": {
    "parts": [
@@ -1188,7 +1444,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     },
@@ -1204,7 +1464,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_RearBumper_MWKIT01": {
    "parts": [
@@ -1320,7 +1598,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     },
@@ -1374,7 +1656,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_SideSkirt_MWKIT01": {
    "parts": [
@@ -1490,7 +1790,21 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_far_boxes": [
+       [
+        20,
+        60,
+        0,
+        95,
+        110,
+        45
+       ]
+      ],
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "z_max": 69.0
@@ -1514,7 +1828,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_Fender_MWKIT02": {
    "parts": [
@@ -1538,85 +1870,129 @@
      "zones": {
       "mode": "keep",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
        154.088
       ]
      },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "BODY",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 3,
      "blend": {
       "prefix": "VIPER_KIT00",
       "parts": [
        "BODY",
+       "BUMPER_FRONT",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
        "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT"
       ],
       "zones": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "band": 15.0,
-      "max": 10.0
+      "max": 10.0,
+      "snap": 2.5
+     },
+     "drop_coincident_with": {
+      "parts": [
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "VIPER_KIT00",
+      "tol": 1.5
      }
     },
     {
@@ -1625,18 +2001,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -1650,18 +2060,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -1671,7 +2115,38 @@
     }
    ],
    "aero": true,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "HOOD",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 1.5,
+    "reach": 12.0,
+    "slot": "Paint"
+   },
+   "min_island": 150.0,
+   "edge_snap": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "HEADLIGHT_LEFT",
+     "HEADLIGHT_RIGHT",
+     "HEADLIGHT_GLASS_LEFT",
+     "HEADLIGHT_GLASS_RIGHT"
+    ],
+    "dist": 7.0
+   },
+   "blend": null
   },
   "Aero_FrontBumper_MWKIT02": {
    "parts": [
@@ -1786,24 +2261,62 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -1823,7 +2336,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_RearBumper_MWKIT02": {
    "parts": [
@@ -1939,24 +2470,62 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2052,7 +2621,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_SideSkirt_MWKIT02": {
    "parts": [
@@ -2168,29 +2755,87 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_far_boxes": [
+       [
+        20,
+        60,
+        0,
+        95,
+        110,
+        45
+       ]
+      ],
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "z_max": 69.0,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
        154.088
+      ],
+      "except": [
+       [
+        15,
+        60,
+        0,
+        100,
+        110,
+        50
+       ]
       ]
      }
     },
@@ -2213,7 +2858,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_Fender_MWKIT03": {
    "parts": [
@@ -2237,85 +2900,129 @@
      "zones": {
       "mode": "keep",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
        154.088
       ]
      },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "BODY",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 3,
      "blend": {
       "prefix": "VIPER_KIT00",
       "parts": [
        "BODY",
+       "BUMPER_FRONT",
+       "DOOR_LEFT",
+       "DOOR_RIGHT",
        "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
+       "FENDER_FRONT_RIGHT",
+       "HEADLIGHT_LEFT",
+       "HEADLIGHT_RIGHT"
       ],
       "zones": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "band": 15.0,
-      "max": 10.0
+      "max": 10.0,
+      "snap": 2.5
+     },
+     "drop_coincident_with": {
+      "parts": [
+       "DOOR_LEFT",
+       "DOOR_RIGHT"
+      ],
+      "prefix": "VIPER_KIT00",
+      "tol": 1.5
      }
     },
     {
@@ -2324,18 +3031,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2349,18 +3090,52 @@
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2370,7 +3145,38 @@
     }
    ],
    "aero": true,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "HOOD",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 1.5,
+    "reach": 12.0,
+    "slot": "Paint"
+   },
+   "min_island": 150.0,
+   "edge_snap": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "HEADLIGHT_LEFT",
+     "HEADLIGHT_RIGHT",
+     "HEADLIGHT_GLASS_LEFT",
+     "HEADLIGHT_GLASS_RIGHT"
+    ],
+    "dist": 7.0
+   },
+   "blend": null
   },
   "Aero_FrontBumper_MWKIT03": {
    "parts": [
@@ -2485,24 +3291,62 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2522,7 +3366,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_RearBumper_MWKIT03": {
    "parts": [
@@ -2638,24 +3500,62 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2751,7 +3651,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_SideSkirt_MWKIT03": {
    "parts": [
@@ -2867,25 +3785,73 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_far_boxes": [
+       [
+        20,
+        60,
+        0,
+        95,
+        110,
+        45
+       ]
+      ],
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4,
      "z_max": 69.0,
      "zones": {
       "mode": "drop",
       "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
+       {
+        "box": [
+         6,
+         260,
+         20,
+         72
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         69,
+         260,
+         -50,
+         20
+        ],
+        "ymin": [
+         [
+          1000000000.0,
+          48
+         ]
+        ]
+       },
+       {
+        "box": [
+         -260,
+         -91.4,
+         -50,
+         84
+        ],
+        "ymin": [
+         [
+          60,
+          49.5
+         ],
+         [
+          1000000000.0,
+          74
+         ]
+        ]
+       }
       ],
       "x_range": [
        -160.863,
@@ -2912,706 +3878,25 @@
    ],
    "aero": true,
    "min_island": 150.0,
-   "double_sided": true
-  },
-  "Aero_Fender_MWKIT04": {
-   "parts": [
-    {
-     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\VIPER\\geo",
-     "src_scale": 100.0,
-     "xform": {
-      "s": [
-       0.9996,
-       1.00274,
-       0.98258
-      ],
-      "t": [
-       -0.049,
-       0.0,
-       0.28
-      ]
-     },
-     "prefix": "VIPER",
-     "part": "KIT04_BODY",
-     "zones": {
-      "mode": "keep",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "BODY",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 3,
-     "blend": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT"
-      ],
-      "zones": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "band": 15.0,
-      "max": 10.0
-     }
-    },
-    {
-     "part": "FENDER_FRONT_LEFT",
-     "prefix": "VIPER_KIT00",
-     "zones": {
-      "mode": "drop",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     }
-    },
-    {
-     "part": "FENDER_FRONT_RIGHT",
-     "prefix": "VIPER_KIT00",
-     "zones": {
-      "mode": "drop",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     }
-    }
-   ],
-   "aero": true,
-   "double_sided": true
-  },
-  "Aero_FrontBumper_MWKIT04": {
-   "parts": [
-    {
-     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\VIPER\\geo",
-     "src_scale": 100.0,
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       0.001,
-       0.0,
-       0.05
-      ]
-     },
-     "prefix": "VIPER",
-     "part": "KIT04_BODY",
-     "drop_coincident_with": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.99993,
-        1.00004,
-        0.9987
-       ],
-       "t": [
-        0.001,
-        0.0,
-        0.05
-       ]
-      },
-      "prefix": "VIPER",
-      "parts": [
-       "KIT00_BODY",
-       "KIT00_DOORLINE",
-       "KIT00_DOOR_LEFT",
-       "KIT00_DOOR_RIGHT",
-       "KIT00_HOOD",
-       "KIT00_LEFT_HEADLIGHT",
-       "KIT00_LEFT_HEADLIGHT_GLASS",
-       "KIT00_LEFT_SIDE_MIRROR",
-       "KIT00_RIGHT_HEADLIGHT",
-       "KIT00_RIGHT_HEADLIGHT_GLASS",
-       "KIT00_RIGHT_SIDE_MIRROR",
-       "KIT00_ROOF"
-      ],
-      "tol": 0.5
-     },
-     "slot_label": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.99993,
-        1.00004,
-        0.9987
-       ],
-       "t": [
-        0.001,
-        0.0,
-        0.05
-       ]
-      },
-      "prefix": "VIPER",
-      "pieces": {
-       "FrontBumper": [
-        "KIT00_FRONT_BUMPER"
-       ],
-       "RearBumper": [
-        "KIT00_REAR_BUMPER"
-       ],
-       "SideSkirt": [
-        "KIT00_SKIRT"
-       ]
-      },
-      "keep": "FrontBumper"
-     },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "BUMPER_FRONT"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 4,
-     "zones": {
-      "mode": "drop",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     }
-    },
-    {
-     "part": "BUMPER_FRONT",
-     "prefix": "VIPER_KIT00",
-     "fill_gaps": {
-      "far": 4.0,
-      "edge": 1.0,
-      "drop_far": true
-     }
-    }
-   ],
-   "aero": true,
-   "min_island": 150.0,
-   "double_sided": true
-  },
-  "Aero_RearBumper_MWKIT04": {
-   "parts": [
-    {
-     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\VIPER\\geo",
-     "src_scale": 100.0,
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       0.001,
-       0.0,
-       0.05
-      ]
-     },
-     "prefix": "VIPER",
-     "part": "KIT04_BODY",
-     "drop_coincident_with": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.99993,
-        1.00004,
-        0.9987
-       ],
-       "t": [
-        0.001,
-        0.0,
-        0.05
-       ]
-      },
-      "prefix": "VIPER",
-      "parts": [
-       "KIT00_BODY",
-       "KIT00_DOORLINE",
-       "KIT00_DOOR_LEFT",
-       "KIT00_DOOR_RIGHT",
-       "KIT00_HOOD",
-       "KIT00_LEFT_HEADLIGHT",
-       "KIT00_LEFT_HEADLIGHT_GLASS",
-       "KIT00_LEFT_SIDE_MIRROR",
-       "KIT00_RIGHT_HEADLIGHT",
-       "KIT00_RIGHT_HEADLIGHT_GLASS",
-       "KIT00_RIGHT_SIDE_MIRROR",
-       "KIT00_ROOF"
-      ],
-      "tol": 0.5
-     },
-     "slot_label": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.99993,
-        1.00004,
-        0.9987
-       ],
-       "t": [
-        0.001,
-        0.0,
-        0.05
-       ]
-      },
-      "prefix": "VIPER",
-      "pieces": {
-       "FrontBumper": [
-        "KIT00_FRONT_BUMPER"
-       ],
-       "RearBumper": [
-        "KIT00_REAR_BUMPER"
-       ],
-       "SideSkirt": [
-        "KIT00_SKIRT"
-       ]
-      },
-      "keep": "RearBumper"
-     },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "BUMPER_REAR",
-       "EXHAUST"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 4,
-     "zones": {
-      "mode": "drop",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     }
-    },
-    {
-     "part": "BUMPER_REAR",
-     "prefix": "VIPER_KIT00",
-     "fill_gaps": {
-      "far": 4.0,
-      "edge": 1.0,
-      "drop_far": true
-     }
-    },
-    {
-     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
-     "src_scale": 100.0,
-     "prefix": "EXHAUST",
-     "part": "STYLE01_LEVEL1",
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       -72.154,
-       -100.064,
-       8.619
-      ],
-      "rot_z": 90.0
-     }
-    },
-    {
-     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
-     "src_scale": 100.0,
-     "prefix": "EXHAUST",
-     "part": "STYLE01_LEVEL1",
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       -72.154,
-       100.064,
-       8.619
-      ],
-      "rot_z": -90.0
-     }
-    },
-    {
-     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
-     "src_scale": 100.0,
-     "prefix": "EXHAUST",
-     "part": "STYLE01_LEVEL1",
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       -60.435,
-       -100.064,
-       8.619
-      ],
-      "rot_z": 90.0
-     }
-    },
-    {
-     "geo": "C:\\Users\\noust/nfs-work/db/nfsc/EXHAUST/geo",
-     "src_scale": 100.0,
-     "prefix": "EXHAUST",
-     "part": "STYLE01_LEVEL1",
-     "xform": {
-      "s": [
-       0.99993,
-       1.00004,
-       0.9987
-      ],
-      "t": [
-       -60.435,
-       100.064,
-       8.619
-      ],
-      "rot_z": -90.0
-     }
-    }
-   ],
-   "aero": true,
-   "min_island": 150.0,
-   "double_sided": true
-  },
-  "Aero_SideSkirt_MWKIT04": {
-   "parts": [
-    {
-     "geo": "C:\\Users\\noust\\nfs-work/db\\mw\\VIPER\\geo",
-     "src_scale": 100.0,
-     "xform": {
-      "s": [
-       0.9996,
-       1.00274,
-       0.98258
-      ],
-      "t": [
-       -0.049,
-       0.0,
-       0.28
-      ]
-     },
-     "prefix": "VIPER",
-     "part": "KIT04_BODY",
-     "drop_coincident_with": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.9996,
-        1.00274,
-        0.98258
-       ],
-       "t": [
-        -0.049,
-        0.0,
-        0.28
-       ]
-      },
-      "prefix": "VIPER",
-      "parts": [
-       "KIT00_BODY",
-       "KIT00_DOORLINE",
-       "KIT00_DOOR_LEFT",
-       "KIT00_DOOR_RIGHT",
-       "KIT00_HOOD",
-       "KIT00_LEFT_HEADLIGHT",
-       "KIT00_LEFT_HEADLIGHT_GLASS",
-       "KIT00_LEFT_SIDE_MIRROR",
-       "KIT00_RIGHT_HEADLIGHT",
-       "KIT00_RIGHT_HEADLIGHT_GLASS",
-       "KIT00_RIGHT_SIDE_MIRROR",
-       "KIT00_ROOF"
-      ],
-      "tol": 0.5
-     },
-     "slot_label": {
-      "geo": "C:\\Users\\noust/nfs-work/db/nfsc/VIPER/geo",
-      "src_scale": 100.0,
-      "xform": {
-       "s": [
-        0.9996,
-        1.00274,
-        0.98258
-       ],
-       "t": [
-        -0.049,
-        0.0,
-        0.28
-       ]
-      },
-      "prefix": "VIPER",
-      "pieces": {
-       "FrontBumper": [
-        "KIT00_FRONT_BUMPER"
-       ],
-       "RearBumper": [
-        "KIT00_REAR_BUMPER"
-       ],
-       "SideSkirt": [
-        "KIT00_SKIRT"
-       ]
-      },
-      "keep": "SideSkirt"
-     },
-     "keep_nearest": {
-      "prefix": "VIPER_KIT00",
-      "parts": [
-       "BODY",
-       "BRAKELIGHT_LEFT",
-       "BRAKELIGHT_RIGHT",
-       "BUMPER_FRONT",
-       "BUMPER_REAR",
-       "DOOR_LEFT",
-       "DOOR_RIGHT",
-       "EXHAUST",
-       "FENDER_FRONT_LEFT",
-       "FENDER_FRONT_RIGHT",
-       "HEADLIGHT_GLASS_LEFT",
-       "HEADLIGHT_GLASS_RIGHT",
-       "HEADLIGHT_LEFT",
-       "HEADLIGHT_RIGHT",
-       "HOOD",
-       "SIDEMIRROR_LEFT",
-       "SIDEMIRROR_RIGHT",
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT",
-       "TRUNK",
-       "WINDOW_FRONT",
-       "WINDOW_FRONT_LEFT",
-       "WINDOW_FRONT_RIGHT",
-       "WINDOW_REAR"
-      ],
-      "replaced": [
-       "SKIRT_LEFT",
-       "SKIRT_RIGHT"
-      ],
-      "proud": 2.5,
-      "far": 6.0,
-      "lamp_clear": 8.0
-     },
-     "refine_drop": 4,
-     "z_max": 69.0,
-     "zones": {
-      "mode": "drop",
-      "list": [
-       [
-        125.1,
-        20.5,
-        56.0,
-        49.5
-       ],
-       [
-        -124.3,
-        25,
-        56.0,
-        49.5
-       ]
-      ],
-      "x_range": [
-       -160.863,
-       154.088
-      ]
-     }
-    },
-    {
-     "part": "SKIRT_LEFT",
-     "prefix": "VIPER_KIT00",
-     "fill_gaps": {
-      "far": 8.0,
-      "edge": 1.0
-     }
-    },
-    {
-     "part": "SKIRT_RIGHT",
-     "prefix": "VIPER_KIT00",
-     "fill_gaps": {
-      "far": 8.0,
-      "edge": 1.0
-     }
-    }
-   ],
-   "aero": true,
-   "min_island": 150.0,
-   "double_sided": true
+   "double_sided": true,
+   "backstop": {
+    "prefix": "VIPER_KIT00",
+    "parts": [
+     "BODY",
+     "BUMPER_FRONT",
+     "BUMPER_REAR",
+     "FENDER_FRONT_LEFT",
+     "FENDER_FRONT_RIGHT",
+     "SKIRT_LEFT",
+     "SKIRT_RIGHT",
+     "HOOD",
+     "DOOR_LEFT",
+     "DOOR_RIGHT",
+     "TRUNK"
+    ],
+    "depth": 3.0,
+    "reach": 12.0
+   }
   },
   "Aero_Bonnet_MWKIT00": {
    "parts": [
@@ -3665,7 +3950,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -3725,7 +4014,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -3785,7 +4078,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -3845,7 +4142,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -3905,7 +4206,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -3965,7 +4270,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4025,7 +4334,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4085,7 +4398,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4145,7 +4462,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4205,7 +4526,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4265,7 +4590,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4325,7 +4654,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4385,7 +4718,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4445,7 +4782,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4505,7 +4846,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4565,7 +4910,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4625,7 +4974,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4685,7 +5038,11 @@
       ],
       "proud": 2.5,
       "far": 6.0,
-      "lamp_clear": 8.0
+      "lamp_clear": 8.0,
+      "keep_slots": [
+       "Tex_MWG_GRILL02",
+       "Tex_MWG_RADIATOR"
+      ]
      },
      "refine_drop": 4
     }
@@ -4748,7 +5105,8 @@
  ],
  "masked_texture_slots": [
   "Tex_VIPER_BADGING",
-  "Tex_MWVIPER_BADGING"
+  "Tex_MWVIPER_BADGING",
+  "Tex_MWG_GRILL02"
  ],
  "ai_upscale": [
   "Tex_VIPER_INTERIOR",
@@ -4761,8 +5119,8 @@
   "SideMirror_R": "SideMirror_R"
  },
  "wheels": {
-  "front_x": 125.1,
-  "rear_x": -124.3,
+  "front_x": 124.9,
+  "rear_x": -124.1,
   "half_track": 79.5,
   "z": 20.5,
   "rear_z": 25,
@@ -5712,38 +6070,6 @@
    "mw": true
   },
   {
-   "row": "PS_VIPER_Fender_MWKIT04",
-   "slot": "Fender",
-   "part_type": "Fender",
-   "mesh": "Aero_Fender_MWKIT04",
-   "display_name": "Most Wanted Kit 4 Widebody",
-   "mw": true
-  },
-  {
-   "row": "PS_VIPER_FrontBumper_MWKIT04",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_MWKIT04",
-   "display_name": "Most Wanted Kit 4 Front Bumper",
-   "mw": true
-  },
-  {
-   "row": "PS_VIPER_RearBumper_MWKIT04",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_MWKIT04",
-   "display_name": "Most Wanted Kit 4 Rear Bumper",
-   "mw": true
-  },
-  {
-   "row": "PS_VIPER_SideSkirt_MWKIT04",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_MWKIT04",
-   "display_name": "Most Wanted Kit 4 Side Skirts",
-   "mw": true
-  },
-  {
    "row": "PS_VIPER_Bonnet_MWKIT00",
    "slot": "Bonnet",
    "part_type": "Bonnet",
@@ -5911,7 +6237,17 @@
     ]
    ],
    "max_abs_ny": 0.6,
-   "note": "Viper twin stripes nose-to-tail (ProStreet stock vinyl, scaled from the licence plate in the user's rear shot), Body_02"
+   "note": "Viper twin stripes nose-to-tail (ProStreet stock vinyl, scaled from the licence plate in the user's rear shot), Body_02",
+   "except_boxes": [
+    [
+     -260,
+     -50,
+     -20,
+     -200,
+     50,
+     26
+    ]
+   ]
   }
  ],
  "rear_wheel_meshes": true,
@@ -5948,13 +6284,15 @@
   "Tex_MWG_CARBONFIBREBODY": "0x721AFF7C",
   "Tex_MWG_GRILL02": "0x69C032BA",
   "Tex_MWVIPER_BADGING": "0x99483910",
-  "Tex_MWG_RADIATOR": "0x68100815"
+  "Tex_MWG_RADIATOR": "0x68100815",
+  "Tex_MWG_METAL": "0xBF30889B"
  },
  "texture_dirs": {
   "Tex_MWG_CARBONFIBREBODY": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
   "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
   "Tex_MWVIPER_BADGING": "C:\\Users\\noust\\nfs-work/db\\mw\\VIPER\\tex\\textures",
-  "Tex_MWG_RADIATOR": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+  "Tex_MWG_RADIATOR": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_METAL": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
  },
  "mw_parts": {
   "VIPER": {
@@ -6040,18 +6378,52 @@
   "Temp": 0.709
  },
  "arch_zones": [
-  [
-   125.1,
-   20.5,
-   56.0,
-   49.5
-  ],
-  [
-   -124.3,
-   25,
-   56.0,
-   49.5
-  ]
+  {
+   "box": [
+    6,
+    260,
+    20,
+    72
+   ],
+   "ymin": [
+    [
+     1000000000.0,
+     48
+    ]
+   ]
+  },
+  {
+   "box": [
+    69,
+    260,
+    -50,
+    20
+   ],
+   "ymin": [
+    [
+     1000000000.0,
+     48
+    ]
+   ]
+  },
+  {
+   "box": [
+    -260,
+    -91.4,
+    -50,
+    84
+   ],
+   "ymin": [
+    [
+     60,
+     49.5
+    ],
+    [
+     1000000000.0,
+     74
+    ]
+   ]
+  }
  ],
  "ps_meshes": {
   "Body": {
@@ -6574,5 +6946,83 @@
    }
   }
  },
- "engine_label": "Viper 8.4L V10"
+ "engine_label": "Viper 8.4L V10",
+ "arch_zones_override": [
+  {
+   "box": [
+    6,
+    260,
+    20,
+    72
+   ],
+   "ymin": [
+    [
+     1000000000.0,
+     48
+    ]
+   ]
+  },
+  {
+   "box": [
+    69,
+    260,
+    -50,
+    20
+   ],
+   "ymin": [
+    [
+     1000000000.0,
+     48
+    ]
+   ]
+  },
+  {
+   "box": [
+    -260,
+    -91.4,
+    -50,
+    84
+   ],
+   "ymin": [
+    [
+     60,
+     49.5
+    ],
+    [
+     1000000000.0,
+     74
+    ]
+   ]
+  }
+ ],
+ "slot_boxes": [
+  {
+   "from": "Bottom",
+   "to": "Paint",
+   "box": [
+    160,
+    40,
+    40,
+    206,
+    92,
+    66
+   ],
+   "abs_y": true,
+   "meshes": [
+    "Aero_Fender_MW",
+    "Aero_FrontBumper_MW"
+   ]
+  }
+ ],
+ "texture_gain": {
+  "Tex_MWG_CARBONFIBREBODY": 0.45,
+  "Tex_MWG_METAL": 1.6
+ },
+ "grille_backing": {
+  "slots": [
+   "Tex_MWG_GRILL02"
+  ],
+  "depth": 2.0,
+  "to": "Bottom"
+ }
 }

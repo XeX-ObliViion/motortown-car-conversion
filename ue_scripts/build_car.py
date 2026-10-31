@@ -29,6 +29,9 @@ GAME_MATERIALS = {
     "HeadLight": "/Game/Cars/Materials/M_HeadLight",
     "TailLight": "/Game/Cars/Materials/M_TailLight",
     "Mirror": "/Game/Cars/Materials/M_Mirror",
+    # police light bar lenses: the game's MTPoliceVehicleComponent flashes these (Muhan_Police's Police_Body slots)
+    "EmergencyRed": "/Game/Cars/Materials/M_EmergencyLight_Red",
+    "EmergencyBlue": "/Game/Cars/Materials/M_EmergencyLight_Blue",
     # the game renders its dashboard widgets (upper MFD: turn arrows, warning icons) through this material
     "DashboardUpperMFD": "/Game/Cars/Materials/M_WidgetRender",
 }
@@ -200,6 +203,8 @@ LAMP_WEIGHTS = {
     # overlay copy of a lamp face (the lamp itself stays TailLight): visible only on the clear lens section
     # (opacity mask = 2 x texture green^2), flashes amber
     "signal_overlay": {"TurnLight": 40.0},
+    # same overlay for a reverse lamp: only the white lens centre shows, glows white with ReverseLight
+    "reverse_overlay": {"ReverseLight": 15.0},
 }
 # per-parameter emissive tint (None = the lamp's own texture colour); kinds not listed use LAMP_TINT / the texture
 LAMP_PARAM_TINT = {"signal_tail": {"TurnLight": (1.0, 0.42, 0.04), "BrakeLight": (1.0, 0.04, 0.02), "HeadLight": (1.0, 0.04, 0.02)},
@@ -222,7 +227,7 @@ def ensure_lamp_material(path, kind, masked=False):
         MEL.connect_material_property(tex, "A", unreal.MaterialProperty.MP_OPACITY_MASK)
     total = None
     y = 200
-    if kind == "signal_overlay":
+    if kind in ("signal_overlay", "reverse_overlay"):
         mat.set_editor_property("blend_mode", unreal.BlendMode.BLEND_MASKED)
         g2 = MEL.create_material_expression(mat, unreal.MaterialExpressionMultiply, -500, 450)
         MEL.connect_material_expressions(tex, "G", g2, "A"); MEL.connect_material_expressions(tex, "G", g2, "B")
@@ -231,10 +236,11 @@ def ensure_lamp_material(path, kind, masked=False):
         MEL.connect_material_expressions(g2, "", mask, "A"); MEL.connect_material_expressions(two, "", mask, "B")
         MEL.connect_material_property(mask, "", unreal.MaterialProperty.MP_OPACITY_MASK)
         sp = MEL.create_material_expression(mat, unreal.MaterialExpressionScalarParameter, -700, 200)
-        sp.set_editor_property("parameter_name", "TurnLight"); sp.set_editor_property("default_value", 0.0)
+        (param, w), = LAMP_WEIGHTS[kind].items()
+        sp.set_editor_property("parameter_name", param); sp.set_editor_property("default_value", 0.0)
         amber = MEL.create_material_expression(mat, unreal.MaterialExpressionConstant3Vector, -700, 300)
-        w = LAMP_WEIGHTS[kind]["TurnLight"]
-        amber.set_editor_property("constant", unreal.LinearColor(1.0 * w, 0.42 * w, 0.04 * w, 1.0))
+        r, g, b = (1.0, 0.42, 0.04) if param == "TurnLight" else (1.0, 1.0, 1.0)
+        amber.set_editor_property("constant", unreal.LinearColor(r * w, g * w, b * w, 1.0))
         em = MEL.create_material_expression(mat, unreal.MaterialExpressionMultiply, -350, 200)
         MEL.connect_material_expressions(sp, "", em, "A"); MEL.connect_material_expressions(amber, "", em, "B")
         MEL.connect_material_property(em, "", unreal.MaterialProperty.MP_EMISSIVE_COLOR)
@@ -483,6 +489,8 @@ def build(build_dir):
             if slot.endswith("Mat") and slot[:-3] in slot_materials:   # the OBJ importer appends "Mat" to usemtl names
                 slot = slot[:-3]
             mat = slot_materials.get(slot)
+            if mat is None:   # an old asset that couldn't be deleted (file locked) keeps its final slot names
+                mat = slot_materials.get(next((k for k, v in car.get("final_slot_names", {}).items() if v == slot), ""))
             if mat is None:
                 log("WARNING slot %s on %s has no material, using Trim" % (slot, mesh["name"]))
                 mat = slot_materials.get("Trim")

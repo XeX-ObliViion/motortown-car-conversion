@@ -66,6 +66,14 @@ for mi, m in enumerate(want):
                                    float), (len(P), 1))
         T.append(P); C.append(col); M.append(np.full(len(P), mi)); NS.append(NN)
 T, C, M, NS = np.vstack(T), np.vstack(C), np.concatenate(M), np.vstack(NS)
+if os.environ.get("BYMESH"):        # colour by mesh (which part owns what), legend printed
+    PAL = np.array([(230,120,40),(40,140,230),(60,190,80),(220,60,60),(200,200,60),(160,80,200),(80,200,200),(120,120,120),(250,160,200),(140,90,40)], float)
+    C = PAL[M % len(PAL)]
+    print("legend:", {want[i]: tuple(int(v) for v in PAL[i % len(PAL)]) for i in range(len(want))})
+if os.environ.get("BOX"):          # close-up: BOX=x0,y0,z0,x1,y1,z1 keeps triangles whose centroid is inside
+    b_ = np.array([float(v) for v in os.environ["BOX"].split(",")]); c_ = T.mean(1)
+    k_ = ((c_ >= b_[:3]) & (c_ <= b_[3:])).all(1)
+    T, C, M, NS = T[k_], C[k_], M[k_], NS[k_]
 # winding convention of these meshes: the side the stored normals agree with (the game culls by winding)
 GN = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0])
 CONV = 1.0 if np.mean(np.sign((GN * NS).sum(1))) >= 0 else -1.0
@@ -131,7 +139,8 @@ def render(yaw, pitch):
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
 
-views = [render(150, 12), render(-150, 12), render(30, 12), render(90, 3)]
+VIEWS = [tuple(float(a) for a in v.split(",")) for v in os.environ.get("VIEWS", "150,12;-150,12;30,12;90,3").split(";")]
+views = [render(*v) for v in VIEWS] + [Image.new("RGB", (1, 1), "white")] * max(0, 4 - len(VIEWS))
 Wt = max(v.width for v in views)
 sheet = Image.new("RGB", (Wt * 2, max(views[0].height, views[1].height) + max(views[2].height, views[3].height)), "white")
 sheet.paste(views[0], (0, 0)); sheet.paste(views[1], (Wt, 0))

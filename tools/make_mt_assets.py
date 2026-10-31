@@ -199,17 +199,22 @@ def add_skins(d, car, skins):
 def clone_blueprint(spec, work, out_root):
     base = spec["base_vehicle"]
     car = spec["car"]
-    src = os.path.join(UNPACKED, "Cars/Models/%s/%s.uasset" % (base, base))
+    # variant blueprints live in their family's folder and reuse its wheels / steering wheel
+    # (Muhan_Police: Cars/Models/Muhan/Muhan_Police.uasset, Muhan_L/R, SteeringWheels/Muhan)
+    bdir, wb = spec.get("base_dir", base), spec.get("base_dir", base)
+    src = os.path.join(UNPACKED, "Cars/Models/%s/%s.uasset" % (bdir, base))
     d = tojson(src, os.path.join(work, "%s_base.json" % base))
     pairs = [
-        ("/Game/Cars/Models/%s/%s" % (base, base), "/Game/Cars/Models/%s/%s" % (car, car)),
+        ("/Game/Cars/Models/%s/%s" % (bdir, base), "/Game/Cars/Models/%s/%s" % (car, car)),
         ("Default__%s_C" % base, "Default__%s_C" % car),
         ("%s_C" % base, "%s_C" % car),
-        ("/Game/Cars/Parts/Wheels/%s_L" % base, "/Game/Cars/Parts/Wheels/%s_L" % car),
-        ("/Game/Cars/Parts/Wheels/%s_R" % base, "/Game/Cars/Parts/Wheels/%s_R" % car),
-        ("%s_L" % base, "%s_L" % car),
-        ("%s_R" % base, "%s_R" % car),
+        ("/Game/Cars/Parts/Wheels/%s_L" % wb, "/Game/Cars/Parts/Wheels/%s_L" % car),
+        ("/Game/Cars/Parts/Wheels/%s_R" % wb, "/Game/Cars/Parts/Wheels/%s_R" % car),
+        ("%s_L" % wb, "%s_L" % car),
+        ("%s_R" % wb, "%s_R" % car),
     ]
+    for a, b in spec.get("base_parts", {}).items():     # e.g. Police_Body -> our Body
+        pairs += [("/Game/Cars/Models/%s/%s" % (bdir, a), "/Game/Cars/Models/%s/%s" % (car, b)), (a, b)]
     if spec.get("gauge_ranges") or spec.get("needle_color") or spec.get("needle_scales"):
         # the Dashboard component's GaugeConfigs map (RPM/Speed/Fuel/Temp): needle range must match our painted dials
         # (every base stops the RPM needle at 8 x1000 and the Tuscan's speed at 180), and our own coloured needles
@@ -246,11 +251,11 @@ def clone_blueprint(spec, work, out_root):
                                 d["NameMap"].append(n)
                         print("  needle %s -> %s" % (big, pkg["ObjectName"]))
     if "SteeringWheel" in spec.get("extract", {}):   # the car's own steering wheel replaces the base car's
-        pairs = [("/Game/Cars/Parts/SteeringWheels/%s" % base, "/Game/Cars/Parts/SteeringWheels/%s" % car)] + pairs
+        pairs = [("/Game/Cars/Parts/SteeringWheels/%s" % wb, "/Game/Cars/Parts/SteeringWheels/%s" % car)] + pairs
     parts = ["Body", "Door_L", "Door_R", "Door_Left", "Door_Right", "SideMirror_L", "SideMirror_R", "SideMirror", "LeftSideMirror"] + \
         (["Dashboard"] if spec.get("dashboard") else [])
     for part in parts:
-        pairs.append(("/Game/Cars/Models/%s/%s" % (base, part), "/Game/Cars/Models/%s/%s" % (car, part)))
+        pairs.append(("/Game/Cars/Models/%s/%s" % (bdir, part), "/Game/Cars/Models/%s/%s" % (car, part)))
     d["NameMap"] = [deep_replace(n, pairs) for n in d["NameMap"]]
     for imp in d["Imports"]:
         for k in ("ObjectName", "ClassName", "ClassPackage"):

@@ -49,6 +49,8 @@ static class P
                 ar.Value = ar.Value.Select(x => Remap((PropertyData)x.Clone(), map)).ToArray(); break;
             case StructPropertyData st:
                 st.Value = st.Value.Select(x => Remap((PropertyData)x.Clone(), map)).ToList(); break;
+            case MulticastDelegatePropertyData md:
+                md.Value = (md.Value ?? new FDelegate[0]).Select(d => new FDelegate(d.Object.IsExport() && map.ContainsKey(d.Object.Index) ? new FPackageIndex(map[d.Object.Index]) : d.Object, d.Delegate)).ToArray(); break;
         }
         return p;
     }
@@ -107,6 +109,9 @@ static class P
         // new settings on the copy
         var actor = (NormalExport)a.Exports[map[si + 1] - 1];
         // dealer spots get their vehicle row; other actors (e.g. a map icon, key "-") are only moved
+        // non-dealer copies (key "-") may carry "pitch=<deg>" in the parts field (paved ramps from floor tiles)
+        double pitch = 0;
+        if (key == "-" && parts != null && parts.StartsWith("pitch=")) { pitch = double.Parse(parts.Substring(6)); parts = null; }
         var vp = actor.Data.OfType<ArrayPropertyData>().FirstOrDefault(p => p.Name.ToString() == "VehicleParams");
         var row = vp != null ? (StructPropertyData)vp.Value[0] : null;
         if (vp != null) vp.Value = new PropertyData[] { row };
@@ -149,7 +154,7 @@ static class P
         foreach (var p in rc.Data.OfType<StructPropertyData>())
         {
             if (p.Name.ToString() == "RelativeLocation") ((VectorPropertyData)p.Value[0]).Value = new FVector(x, y, z);
-            if (p.Name.ToString() == "RelativeRotation") ((RotatorPropertyData)p.Value[0]).Value = new FRotator(0, yaw, 0);
+            if (p.Name.ToString() == "RelativeRotation") ((RotatorPropertyData)p.Value[0]).Value = new FRotator(pitch, yaw, 0);
         }
         Console.WriteLine($"spot {newName}: sells '{key}' at ({x},{y},{z}) yaw {yaw}");
     }
@@ -230,6 +235,10 @@ static class P
             case ArrayPropertyData ar: foreach (var x in ar.Value) RemapX(src, dst, x, exp, imp); break;
             case StructPropertyData st: foreach (var x in st.Value) RemapX(src, dst, x, exp, imp); break;
             case MapPropertyData mp: foreach (var kv in mp.Value) { RemapX(src, dst, kv.Key, exp, imp); RemapX(src, dst, kv.Value, exp, imp); } break;
+            // event bindings (e.g. the lights' MTComponentLOD.OnUpdate -> the light actor): left unmapped they pointed at
+            // whatever export had that index in the map, so copied lights never switched on
+            case MulticastDelegatePropertyData md: foreach (var d in md.Value ?? new FDelegate[0]) d.Object = MapIdx(src, dst, d.Object, exp, imp); break;
+            case DelegatePropertyData dp when dp.Value != null: dp.Value.Object = MapIdx(src, dst, dp.Value.Object, exp, imp); break;
         }
     }
 

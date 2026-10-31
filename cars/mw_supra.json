@@ -1,0 +1,2617 @@
+{
+ "base_vehicle": "Magis",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Window",
+  "Tex_SUPRA_HEADLIGHT": "HeadLight",
+  "Tex_SUPRA_BRAKELIGHT": "TailLight",
+  "Tex_SUPRA_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_V": "ReverseLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -33,
+    -36.3,
+    8
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -33,
+    36.3,
+    8
+   ]
+  },
+  "cockpit_camera": [
+   -36,
+   -36.3,
+   91
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    5,
+    0,
+    100
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -25,
+    0,
+    106
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    201,
+    -53,
+    46
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    201,
+    53,
+    46
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    212,
+    66,
+    44
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    212,
+    -66,
+    44
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -220,
+    -52,
+    68
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -220,
+    52,
+    68
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    5.9,
+    20.6,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 1054,
+  "room_mirror_aim_z": -0.03
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror:mirror"
+ },
+ "strip_part_slots": [
+  "RearWing"
+ ],
+ "wheel_part": true,
+ "car": "MW_SUPRA",
+ "display_name": "Toyota Supra (Most Wanted)",
+ "prefix": "SUPRA",
+ "geometry_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\SUPRA\\geo",
+ "texture_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\SUPRA\\tex\\textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_SUPRA/meshes",
+ "cost": 52000,
+ "wheel_display_name": "Supra Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Bottom",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "0xE6C2EACF": "Paint",
+  "0x1273A669": "Tex_SUPRA_BRAKELIGHT",
+  "0x48AAD4CF": "Tex_SUPRA_HEADLIGHT",
+  "0x6ED95AB5": "Tex_SUPRA_BADGING",
+  "0x929DBD55": "Tex_SUPRA_MISC",
+  "0x9EAD2B5F": "Tex_SUPRA_ENGINE",
+  "0xCDB9CDD5": "Tex_SUPRA_INTERIOR",
+  "0xA7E6EA53": "Tex_SUPRA_HEADLIGHT",
+  "0x02B52399": "Tex_SUPRA_BRAKELIGHT",
+  "0x3617DCFC": "Tex_SUPRA_BRAKELIGHT",
+  "0x01F40B32": "LampGlass",
+  "0x267D188C": "LampGlass",
+  "0xE7E4EF49": "Glass",
+  "0x92A193DD": "Tex_SUPRA_TIRE",
+  "0x03C906EF": "Bottom",
+  "0xA532FC46": "Tex_SUPRA_HEADLIGHT",
+  "0xF68EF19F": "LampGlass"
+ },
+ "texture_sources": {
+  "Tex_SUPRA_BRAKELIGHT": "0x60E872C7",
+  "Tex_SUPRA_HEADLIGHT": "0x661E5816",
+  "Tex_SUPRA_BADGING": "0x6ED95AB5",
+  "Tex_SUPRA_MISC": "0x929DBD55",
+  "Tex_SUPRA_ENGINE": "0x9EAD2B5F",
+  "Tex_SUPRA_INTERIOR": "0xCDB9CDD5",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_MWG_RADIATOR": "0x68100815",
+  "Tex_MWG_METAL": "0xBF30889B",
+  "Tex_SUPRA_TIRE": "0x92A193DD"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BASE",
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ]
+    },
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_LEFT_HEADLIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_REAR_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    },
+    "KIT00_LEFT_BRAKELIGHT",
+    "KIT00_LEFT_BRAKELIGHT_GLASS",
+    "KIT00_RIGHT_BRAKELIGHT",
+    "KIT00_RIGHT_BRAKELIGHT_GLASS",
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ],
+   "drop_slots": [
+    "LampGlass"
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {}
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT06": {
+   "parts": [
+    {
+     "part": "KIT06_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT07": {
+   "parts": [
+    {
+     "part": "KIT07_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT07": {
+   "parts": [
+    {
+     "part": "KIT07_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT07": {
+   "parts": [
+    {
+     "part": "KIT07_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT08": {
+   "parts": [
+    {
+     "part": "KIT08_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT08": {
+   "parts": [
+    {
+     "part": "KIT08_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT08": {
+   "parts": [
+    {
+     "part": "KIT08_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT09": {
+   "parts": [
+    {
+     "part": "KIT09_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT09": {
+   "parts": [
+    {
+     "part": "KIT09_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT09": {
+   "parts": [
+    {
+     "part": "KIT09_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT10": {
+   "parts": [
+    {
+     "part": "KIT10_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT10": {
+   "parts": [
+    {
+     "part": "KIT10_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT10": {
+   "parts": [
+    {
+     "part": "KIT10_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT11": {
+   "parts": [
+    {
+     "part": "KIT11_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT11": {
+   "parts": [
+    {
+     "part": "KIT11_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT11": {
+   "parts": [
+    {
+     "part": "KIT11_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT12": {
+   "parts": [
+    {
+     "part": "KIT12_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT12": {
+   "parts": [
+    {
+     "part": "KIT12_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT12": {
+   "parts": [
+    {
+     "part": "KIT12_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT13": {
+   "parts": [
+    {
+     "part": "KIT13_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT13": {
+   "parts": [
+    {
+     "part": "KIT13_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT13": {
+   "parts": [
+    {
+     "part": "KIT13_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT14": {
+   "parts": [
+    {
+     "part": "KIT14_BODY",
+     "x_range": [
+      157.6,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT14": {
+   "parts": [
+    {
+     "part": "KIT14_BODY",
+     "x_range": [
+      -99999,
+      -141.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT14": {
+   "parts": [
+    {
+     "part": "KIT14_BODY",
+     "x_range": [
+      -141.8,
+      157.6
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "SUPRA",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "SUPRA",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE01": {
+   "parts": [
+    {
+     "part": "STYLE01_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE08": {
+   "parts": [
+    {
+     "part": "STYLE08_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE11": {
+   "parts": [
+    {
+     "part": "STYLE11_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE12": {
+   "parts": [
+    {
+     "part": "STYLE12_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE14": {
+   "parts": [
+    {
+     "part": "STYLE14_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE15": {
+   "parts": [
+    {
+     "part": "STYLE15_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE18": {
+   "parts": [
+    {
+     "part": "STYLE18_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE19": {
+   "parts": [
+    {
+     "part": "STYLE19_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE22": {
+   "parts": [
+    {
+     "part": "STYLE22_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE24": {
+   "parts": [
+    {
+     "part": "STYLE24_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE25": {
+   "parts": [
+    {
+     "part": "STYLE25_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE27": {
+   "parts": [
+    {
+     "part": "STYLE27_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE28": {
+   "parts": [
+    {
+     "part": "STYLE28_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE29": {
+   "parts": [
+    {
+     "part": "STYLE29_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE30": {
+   "parts": [
+    {
+     "part": "STYLE30_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE33": {
+   "parts": [
+    {
+     "part": "STYLE33_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE34": {
+   "parts": [
+    {
+     "part": "STYLE34_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE35": {
+   "parts": [
+    {
+     "part": "STYLE35_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE36": {
+   "parts": [
+    {
+     "part": "STYLE36_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE37": {
+   "parts": [
+    {
+     "part": "STYLE37_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      200,
+      0,
+      -86
+     ]
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_SUPRA_R",
+  "Wheel_R": "MW_SUPRA_L",
+  "SteeringWheel": "MW_SUPRA"
+ },
+ "wheels": {
+  "front_x": 127.7,
+  "rear_x": -124.5,
+  "half_track": 79,
+  "z": 24,
+  "rear_z": 25,
+  "radius": 32,
+  "auto_arches": true
+ },
+ "part_overrides": {
+  "Engine": "PS_2JZGTE_PS",
+  "Transmission": "PS_V160_6MT",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "MW_SUPRA",
+  "Wheel1": "MW_SUPRA",
+  "Wheel2": "MW_SUPRA",
+  "Wheel3": "MW_SUPRA",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "MW_SUPRA_FrontBumper_KIT00",
+  "RearBumper": "MW_SUPRA_RearBumper_KIT00",
+  "Bonnet": "MW_SUPRA_Bonnet_KIT00",
+  "RearWing": "MW_SUPRA_RearWing_STOCK"
+ },
+ "performance_source": "same drivetrain as PS_SUPRA (2JZ-GTE, V160 6MT, FD 3.31): ProStreet vehicle.yml supra_track: MASS 1510, FINAL_GEAR 3.266, GEAR_RATIO R3.446/3.827/2.36/1.685/1.312/1/0.793, RED_LINE 7000, MAX_RPM 7600",
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    43
+   ],
+   "size": [
+    430,
+    174,
+    58
+   ]
+  },
+  {
+   "center": [
+    -25,
+    0,
+    92
+   ],
+   "size": [
+    170,
+    140,
+    40
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -219,
+     -55,
+     17
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -219,
+     -55,
+     17
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -200,
+     0,
+     86
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ],
+    "note": "trunk-lid top: the game's universal wings sit here; our ProStreet wing meshes are offset by -loc"
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -30,
+     0,
+     113
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -222,
+     0,
+     28
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     16.15,
+     -36.33,
+     66.17
+    ],
+    "rot": [
+     -19.16,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     15.433,
+     -10.63,
+     8.019
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -118.76
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     13.869,
+     -0.79,
+     10.874
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -118.76
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     16.003,
+     7.51,
+     6.989
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -118.76
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     16.003,
+     11.34,
+     6.989
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -118.76
+    ]
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   10,
+   10,
+   12
+  ],
+  "ink": [
+   240,
+   236,
+   226
+  ],
+  "red_color": [
+   235,
+   60,
+   30
+  ],
+  "font_file": "arialbd.ttf",
+  "ring": [
+   [
+    60,
+    60,
+    64
+   ],
+   0.05
+  ],
+  "glow_color": [
+   255,
+   125,
+   25
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 9
+  },
+  "Speed": {
+   "max": 180,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  255,
+  90,
+  20
+ ],
+ "texture_upscale": {
+  "Tex_SUPRA_INTERIOR": 4
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_METAL": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "texture_gain": {
+  "Tex_MWG_CARBONFIBREBODY": 0.45,
+  "Tex_MWG_METAL": 1.6
+ },
+ "grille_backing": {
+  "slots": [
+   "Tex_MWG_GRILL02"
+  ],
+  "depth": 2.0,
+  "to": "Bottom"
+ },
+ "paintable_texture_slots": [],
+ "ai_upscale": [
+  "Tex_SUPRA_INTERIOR",
+  "Tex_SUPRA_MISC",
+  "Tex_SUPRA_BADGING",
+  "Tex_SUPRA_ENGINE"
+ ],
+ "masked_texture_slots": [
+  "Tex_MWG_GRILL01",
+  "Tex_MWG_GRILL02",
+  "Tex_SUPRA_BADGING"
+ ],
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_SUPRA_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_SUPRA_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "lamp_slots": {
+  "Tex_SUPRA_HEADLIGHT": "head",
+  "Tex_SUPRA_BRAKELIGHT": "tail",
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_SUPRA_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_SUPRA_BRAKELIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SUPRA_BADGING"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SUPRA_BADGING"
+  },
+  "Signal_L_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_SUPRA_BRAKELIGHT"
+  },
+  "Signal_R_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_SUPRA_BRAKELIGHT"
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_V",
+   "from": "Tex_SUPRA_BRAKELIGHT",
+   "uv_box": [
+    0,
+    0,
+    0.32,
+    0.84
+   ],
+   "note": "reverse lamps: the white round lens of each tail cluster"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_SUPRA_BRAKELIGHT",
+   "amber": true,
+   "box": [
+    -235,
+    -90,
+    40,
+    -180,
+    -10,
+    95
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_SUPRA_BRAKELIGHT",
+   "amber": true,
+   "box": [
+    -235,
+    10,
+    40,
+    -180,
+    90,
+    95
+   ]
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_SUPRA_BADGING",
+   "amber": true,
+   "box": [
+    150,
+    -100,
+    10,
+    240,
+    100,
+    50
+   ],
+   "note": "front indicators: amber corner lamps (bumpers)"
+  }
+ ],
+ "recentered": {
+  "SideMirror": [
+   26.46,
+   -87.08,
+   76.34
+  ]
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    16,
+    -36.3,
+    66.5
+   ],
+   "radius": 18,
+   "x_range": [
+    4,
+    29
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    16.14565,
+    -36.3294,
+    66.17410000000001
+   ],
+   "tilt_deg": 19.16
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     33.36,
+     -46.96,
+     68.68
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.6
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     32.82,
+     -37.12,
+     71.89
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.6
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     33.56,
+     -28.82,
+     67.52
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.6
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     33.56,
+     -24.99,
+     67.52
+    ],
+    "rot": [
+     0,
+     -90,
+     -99.6
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": 5.0,
+   "width": 7,
+   "height": 1.5
+  }
+ },
+ "gauge_faces": {
+  "Tex_SUPRA_INTERIOR": [
+   {
+    "center": [
+     0.625,
+     0.415
+    ],
+    "face": [
+     0.625,
+     0.415,
+     0.031
+    ],
+    "radius": 0.029,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 6.8,
+    "font": 0.26,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.55,
+      90
+     ]
+    ]
+   },
+   {
+    "center": [
+     0.538,
+     0.437
+    ],
+    "face": [
+     0.538,
+     0.437,
+     0.033
+    ],
+    "radius": 0.031,
+    "min": 0,
+    "max": 180,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.697,
+     0.445
+    ],
+    "face": [
+     0.712,
+     0.438,
+     0.034
+    ],
+    "radius": 0.014,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.45,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.728,
+     0.445
+    ],
+    "radius": 0.014,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.45,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "needle_scales": {
+  "RPM": 0.62,
+  "Speed": 0.662,
+  "Fuel": 0.67,
+  "Temp": 0.67
+ },
+ "mw_kits": {
+  "front_split": 157.6,
+  "rear_split": -141.8
+ },
+ "aero_parts": [
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT06",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT06",
+   "display_name": "Kit 6 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT06",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT06",
+   "display_name": "Kit 6 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT06",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT06",
+   "display_name": "Kit 6 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT07",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT07",
+   "display_name": "Kit 7 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT07",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT07",
+   "display_name": "Kit 7 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT07",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT07",
+   "display_name": "Kit 7 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT08",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT08",
+   "display_name": "Kit 8 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT08",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT08",
+   "display_name": "Kit 8 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT08",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT08",
+   "display_name": "Kit 8 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT09",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT09",
+   "display_name": "Kit 9 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT09",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT09",
+   "display_name": "Kit 9 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT09",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT09",
+   "display_name": "Kit 9 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT10",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT10",
+   "display_name": "Kit 10 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT10",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT10",
+   "display_name": "Kit 10 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT10",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT10",
+   "display_name": "Kit 10 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT11",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT11",
+   "display_name": "Kit 11 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT11",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT11",
+   "display_name": "Kit 11 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT11",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT11",
+   "display_name": "Kit 11 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT12",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT12",
+   "display_name": "Kit 12 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT12",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT12",
+   "display_name": "Kit 12 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT12",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT12",
+   "display_name": "Kit 12 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT13",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT13",
+   "display_name": "Kit 13 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT13",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT13",
+   "display_name": "Kit 13 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT13",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT13",
+   "display_name": "Kit 13 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_FrontBumper_KIT14",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT14",
+   "display_name": "Kit 14 Front Bumper"
+  },
+  {
+   "row": "MW_SUPRA_RearBumper_KIT14",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT14",
+   "display_name": "Kit 14 Rear Bumper"
+  },
+  {
+   "row": "MW_SUPRA_SideSkirt_KIT14",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT14",
+   "display_name": "Kit 14 Side Skirts"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE01",
+   "display_name": "Hood 1"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE08",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE08",
+   "display_name": "Hood 8"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE11",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE11",
+   "display_name": "Hood 11"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE12",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE12",
+   "display_name": "Hood 12"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE14",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE14",
+   "display_name": "Hood 14"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE15",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE15",
+   "display_name": "Hood 15"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE18",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE18",
+   "display_name": "Hood 18"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE19",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE19",
+   "display_name": "Hood 19"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE22",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE22",
+   "display_name": "Hood 22"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE24",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE24",
+   "display_name": "Hood 24"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE25",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE25",
+   "display_name": "Hood 25"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE27",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE27",
+   "display_name": "Hood 27"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE28",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE28",
+   "display_name": "Hood 28"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE29",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE29",
+   "display_name": "Hood 29"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE30",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE30",
+   "display_name": "Hood 30"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE33",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE33",
+   "display_name": "Hood 33"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE34",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE34",
+   "display_name": "Hood 34"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE35",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE35",
+   "display_name": "Hood 35"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE36",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE36",
+   "display_name": "Hood 36"
+  },
+  {
+   "row": "MW_SUPRA_Bonnet_STYLE37",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE37",
+   "display_name": "Hood 37"
+  },
+  {
+   "row": "MW_SUPRA_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ]
+}

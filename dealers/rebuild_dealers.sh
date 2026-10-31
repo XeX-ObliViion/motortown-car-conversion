@@ -32,7 +32,7 @@ for ext in umap uexp; do
         "$REPAK" --aes-key "$(cat ~/mt-work/aes.key)" get "$SRCPAK" "$MAP/_Generated_/$c.$ext" > "$WORK/src/$c.$ext"
     done
 done
-py -3.13 "$HERE/nfs_dealership/gen_spots.py" > /dev/null
+py -3.13 "$HERE/nfs_dealership/gen_spots.py" > /dev/null; py -3.13 "$HERE/nfs_dealership/gen_spots.py" mw > /dev/null
 "$MP" clone "$(w "$WORK/src/Jeju_World.umap")" "$USMAP" "$(w "$WORK/tmp/a.umap")" "$(w "$HERE/spots.txt")" | tail -1
 prev="$WORK/tmp/a.umap"; n=0
 for c in $CELLS; do
@@ -40,9 +40,17 @@ for c in $CELLS; do
     "$MP" transplant "$(w "$prev")" "$USMAP" "$(w "$WORK/tmp/t$n.umap")" "$(w "$WORK/src/$c.umap")" "$(w "$HERE/nfs_dealership/showroom.txt")" "NFSD${n}_" | tail -3
     prev="$WORK/tmp/t$n.umap"
 done
+# the MW dealership: a second copy of the same showroom beside it (nfs_dealership/showroom_mw.txt)
+for c in $CELLS; do
+    n=$((n + 1))
+    "$MP" transplant "$(w "$prev")" "$USMAP" "$(w "$WORK/tmp/t$n.umap")" "$(w "$WORK/src/$c.umap")" "$(w "$HERE/nfs_dealership/showroom_mw.txt")" "MWD${n}_" | tail -3
+    prev="$WORK/tmp/t$n.umap"
+done
 cp "$prev" "$WORK/tmp/b.umap"; cp "${prev%.umap}.uexp" "$WORK/tmp/b.uexp"
 "$MP" clone "$(w "$WORK/tmp/b.umap")" "$USMAP" "$(w "$WORK/tmp/c.umap")" "$(w "$HERE/nfs_dealership/spots_nfs.txt")" | tail -1
-"$MP" label "$(w "$WORK/tmp/c.umap")" "$USMAP" "$(w "$WORK/stage/$MAP.umap")" NFSD_MapIcon NFS | tail -2
+"$MP" clone "$(w "$WORK/tmp/c.umap")" "$USMAP" "$(w "$WORK/tmp/d.umap")" "$(w "$HERE/nfs_dealership/spots_mw.txt")" | tail -1
+"$MP" label "$(w "$WORK/tmp/d.umap")" "$USMAP" "$(w "$WORK/tmp/e.umap")" NFSD_MapIcon NFS | tail -2
+"$MP" label "$(w "$WORK/tmp/e.umap")" "$USMAP" "$(w "$WORK/stage/$MAP.umap")" MWD_MapIcon "MOST WANTED" | tail -2
 "$REPAK" pack --version V11 "$WORK/stage" "$WORK/PS_Dealers_P.pak"
 if [ "$PLATFORM" = server ]; then
     echo "server pak: $WORK/PS_Dealers_P.pak"

@@ -1,0 +1,21 @@
+# MW dealership v5 (2026-10-30): Ara site had grass + solid foliage trees under it -> user picked an existing paved lot; F6 at the front-centre (-286476,200472,-21961) yaw 96.2; glass front on that point, ground = F6 z - 90, +30 like the dragstrip copy. (v4 Ara + apron kept in MODLOG.)
+# NFS dealership at the Ara dragstrip lot: a copy of the Seoguipo Luxury Cars showroom (world-partition cell
+# 9MJDS5G1ANMPZP6AB7AG07IOP), rotated so it faces into the lot from the left edge the user marked with F6
+# ((367129,1109348) and (378373,1109532), facing yaw ~90). Ground: Seoguipo -20877, Ara -19097.
+# v4 (2026-10-30): square to the drag strip (user F6 on the strip: yaw -0.2), front (SM_CarDealershipLogo2 side, source yaw -115) facing it (yaw 89.8); back 2 m off the lot's north edge, east end at the lot corner. v3 sat 45 deg off.
+# v3: walls' back corner 1 m inside the lot corner the user marked (378740,1109286), doors facing yaw 90 (v2 faced the wrong way), +30 cm (sat slightly low).
+bbox 7680 14337 146678 153648
+pivot 10481 149250 -20877
+target -286557 198602 -22021 211.2
+prefix MWD_
+skip ^Resident_C$
+skip ^Char_
+skip ^MTDealerVehicleSpawnPoint$
+skip Spawner
+skip ^POI_
+skip ^MTAreaVolume$
+skipmesh ^(TownRoad|SM_TownRoad|CrossroadCurve|Line_White|SM_Env_Road|SM_PowerLines|SM_Excavator|SM_Prop_Scaffold|SM_Env_Dirt|SM_Prop_Fence_Concrete|SM_Bld_Concrete)
+# 2026-10-31: the centre turntable (DisplayStand_01_C: raised spinning pedestal + display model) is left out; the buyable
+# Diablo SV stands on the floor where it was, nose to the glass front (front faces yaw 96.2)
+skip ^DisplayStand_01_C$
+bay MW_DIABLOSV -286412 198726 -22034 96.2

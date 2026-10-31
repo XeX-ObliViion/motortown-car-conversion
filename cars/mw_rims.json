@@ -16,7 +16,12 @@
   "PS_CHEVELLE",
   "PS_VIPER",
   "MW_M3GTR",
-  "MW_993RWB"
+  "MW_993RWB",
+  "MW_SUPRA",
+  "MW_VIPER",
+  "MW_ELISE",
+  "MW_350Z",
+  "MW_DIABLOSV"
  ],
  "cost": 1500,
  "base_wheel": "Zino"

@@ -19,6 +19,12 @@ def load_dae(path):
     """-> list of (material_texture_hash, [((pos,nrm,uv) x3) ...])"""
     root = ET.parse(path).getroot()
     mats = [m.get("name", "").replace("TextureMTL-", "") for m in root.iterfind(".//c:material", NS)]
+    if any(mats.count(m) > 1 or m.startswith("Material") for m in mats if not m.startswith("0x")):
+        # modder cars (Remaster Diablo): generic names ("Material", repeated) -> key by the effect's texture hash
+        fx = {e.get("id"): (re.findall(r"texture-(0x[0-9A-Fa-f]+)", ET.tostring(e, encoding="unicode")) or ["?"])[0]
+              for e in root.iterfind(".//c:effect", NS)}
+        mats = [fx.get(m.find("c:instance_effect", NS).get("url", "#")[1:], n) if not n.startswith("0x") else n
+                for m, n in zip(root.iterfind(".//c:material", NS), mats)]
     out = []
     for geom in root.iterfind(".//c:geometry", NS):
         mesh = geom.find("c:mesh", NS)
@@ -63,6 +69,30 @@ def nrm_mt(n, mirror=False):
     if mirror:
         y = -y
     return [x, y, z]
+
+
+def zone_ymin(z_, zc):
+    """inner |y| limit of an arch zone: cylinders [x, z, r, ymin] have one; box zones {"box": [x0, x1, z0, z1],
+    "ymin": [[z_below, y], ...]} step it by height (deep arch liners low down, outboard of the trunk lid higher up)"""
+    if not isinstance(z_, dict):
+        return z_[3]
+    for zb, y in z_["ymin"]:
+        if zc < zb:
+            return y
+    return z_["ymin"][-1][1]
+
+
+def zone_depth(z_, q, tol):
+    """how far point q (MT cm) lies inside the zone (distance to its nearest edge), None when outside by > tol.
+    A box's bottom face is not an edge (it only bounds the zone below the car)"""
+    if isinstance(z_, dict):
+        x0, x1, z0, z1 = z_["box"]
+        d = min(q[0] - x0, x1 - q[0], z1 - q[2], abs(q[1]) - zone_ymin(z_, q[2]))
+        return d if d >= -tol and q[2] >= z0 - tol else None
+    rr = ((q[0] - z_[0]) ** 2 + (q[2] - z_[1]) ** 2) ** 0.5
+    if abs(q[1]) < z_[3] - tol or rr > z_[2] + tol:
+        return None
+    return min(z_[2] - rr, abs(q[1]) - z_[3])
 
 
 def load_src(geo, prefix, pname, lod, opts):
@@ -220,6 +250,8 @@ def build(spec):
                     _COINCIDENT_CACHE[sl_key] = (cKDTree(np.vstack(pts)), np.array(lab))
                 def sl_drop(m):
                     tree_, L_ = _COINCIDENT_CACHE[sl_key]
+                    if m[0] < sl_.get("x_min", -1e9):
+                        return False     # x_min: the labelling only applies ahead of x (Viper MW fender lamp surround)
                     return L_[tree_.query(m)[1]] != sl_["keep"]
                 # keep_nearest {prefix, parts, replaced, proud, far, lamp, lamp_clear}: each piece of a kit shell is
                 # given to the nearest ProStreet stock part. Kept only when that part is one the kit replaces (bumper /
@@ -252,6 +284,11 @@ def build(spec):
                     if dd > kn.get("far", 6.0):
                         # away from every ProStreet panel: new shapes outside the car stay; the MW shell's inner
                         # walls / undersides (inside the car, behind the panels) go, or they show through seams
+                        # keep_far_boxes [[x0,|y|0,z0,x1,|y|1,z1]]: inner surfaces kept there anyway (MW side-gill insides,
+                        # Viper Kit 2: without them the stock fender's gill recess showed black through the openings)
+                        if any(b_[0] <= m[0] <= b_[3] and b_[1] <= abs(m[1]) <= b_[4] and b_[2] <= m[2] <= b_[5]
+                               for b_ in kn.get("keep_far_boxes", [])):
+                            return False
                         return sd < 0 and not kn.get("keep_far")
                     li = L_[ii]
                     if rep[li]:
@@ -363,7 +400,8 @@ def build(spec):
                         m = to_mt(c[0], mirror, offset)
                         return z_[2] ** 2 - ((m[0] - z_[0]) ** 2 + (m[2] - z_[1]) ** 2)
                     def zg(c, z_, sg):       # >0 on the outer side of the ymin plane
-                        return sg * to_mt(c[0], mirror, offset)[1] - z_[3]
+                        m = to_mt(c[0], mirror, offset)
+                        return sg * m[1] - zone_ymin(z_, m[2])
                     def mix(A, B_, t):
                         return tuple([[A[j][i] + t * (B_[j][i] - A[j][i]) for i in range(len(A[j]))] for j in range(3)])
                     def clipf(poly, fn, keep_pos):
@@ -379,7 +417,8 @@ def build(spec):
                         return out_ if len(out_) >= 3 else []
                     def split(c, depth=4):
                         ms = [to_mt(cn[0], mirror, offset) for cn in c]
-                        near = any(abs(((ms[0][0] - z_[0]) ** 2 + (ms[0][2] - z_[1]) ** 2) ** 0.5 - z_[2]) < 60 for z_ in zn["list"])
+                        near = any(zone_depth(z_, ms[0], 60) is not None if isinstance(z_, dict) else
+                                   abs(((ms[0][0] - z_[0]) ** 2 + (ms[0][2] - z_[1]) ** 2) ** 0.5 - z_[2]) < 60 for z_ in zn["list"])
                         edge = max(sum((ms[a][k] - ms[b][k]) ** 2 for k in range(3)) ** 0.5 for a, b in ((0, 1), (1, 2), (0, 2)))
                         if depth == 0 or edge < 4.0 or not near:
                             return [c]
@@ -388,12 +427,25 @@ def build(spec):
                     new_tris = []
                     xr_z = zn.get("x_range")          # zones stop at the bumper lines: bumpers stay whole with any fender
                     def cons(z_, sg):
-                        fs = [lambda c_, z_=z_: zf(c_, z_), lambda c_, z_=z_, sg=sg: zg(c_, z_, sg)]
+                        if isinstance(z_, dict):     # box zone: x / z planes plus the (stepped) ymin
+                            x0, x1, z0, z1 = z_["box"]
+                            fs = [lambda c_: to_mt(c_[0], mirror, offset)[0] - x0, lambda c_: x1 - to_mt(c_[0], mirror, offset)[0],
+                                  lambda c_: to_mt(c_[0], mirror, offset)[2] - z0, lambda c_: z1 - to_mt(c_[0], mirror, offset)[2],
+                                  lambda c_, z_=z_, sg=sg: zg(c_, z_, sg)]
+                        else:
+                            fs = [lambda c_, z_=z_: zf(c_, z_), lambda c_, z_=z_, sg=sg: zg(c_, z_, sg)]
                         if xr_z:
                             fs += [lambda c_: to_mt(c_[0], mirror, offset)[0] - xr_z[0],
                                    lambda c_: xr_z[1] - to_mt(c_[0], mirror, offset)[0]]
                         return fs
                     for c in tris:
+                        # except [[x0,|y|0,z0,x1,|y|1,z1]]: triangles centred there are left as they are (Viper MW Kit 2
+                        # skirt: its side gill sits inside the front fender zone, cut away it left the stock recess showing)
+                        cm_ = [sum(to_mt(cn[0], mirror, offset)[k] for cn in c) / 3 for k in range(3)]
+                        if any(b_[0] <= cm_[0] <= b_[3] and b_[1] <= abs(cm_[1]) <= b_[4] and b_[2] <= cm_[2] <= b_[5]
+                               for b_ in zn.get("except", [])):
+                            new_tris.append(c)
+                            continue
                         for sub in split(c):
                             sg = 1 if sum(to_mt(cn[0], mirror, offset)[1] for cn in sub) >= 0 else -1
                             if zn["mode"] == "keep":
@@ -440,8 +492,14 @@ def build(spec):
                         _COINCIDENT_CACHE[bkey] = (cKDTree(P_bl), P_bl)
                     bl_tree, P_bl = _COINCIDENT_CACHE[bkey]
                     def blend_q(q):
-                        din = min(min(z_[2] - ((q[0] - z_[0]) ** 2 + (q[2] - z_[1]) ** 2) ** 0.5, abs(q[1]) - z_[3])
-                                  for z_ in bl["zones"] if abs(q[1]) >= z_[3] - 1 and (q[0] - z_[0]) ** 2 + (q[2] - z_[1]) ** 2 <= (z_[2] + 1) ** 2)                             if any(abs(q[1]) >= z_[3] - 1 and (q[0] - z_[0]) ** 2 + (q[2] - z_[1]) ** 2 <= (z_[2] + 1) ** 2 for z_ in bl["zones"]) else None
+                        if bl.get("snap"):
+                            # snap: any kit vertex within `snap` cm of the stock surface goes onto it, so the skin's
+                            # edges sit flush (Viper MW Kit 3: fender skin ~1-2 cm proud round the headlamps, see-through)
+                            dd, ii = bl_tree.query(q)
+                            if dd <= bl["snap"]:
+                                return list(P_bl[ii])
+                        ds_ = [d_ for d_ in (zone_depth(z_, q, 1) for z_ in bl["zones"]) if d_ is not None]
+                        din = min(ds_) if ds_ else None
                         if din is None:
                             return q
                         w = max(0.0, 1.0 - max(din, 0.0) / bl.get("band", 15.0))
@@ -460,7 +518,7 @@ def build(spec):
                         m = to_mt(q)
                         if sl_ and sl_drop(m):
                             return True
-                        if kn and kn_drop(m):
+                        if kn and slot not in kn.get("keep_slots", []) and kn_drop(m):
                             return True
                         if dc:
                             tl = dc.get("tol", 1.0); k = tuple(round(v / tl) for v in m)
@@ -490,8 +548,17 @@ def build(spec):
                 for corners in tris:
                     if sl_ and sl_drop([sum(to_mt(cn[0])[k] for cn in corners) / 3 for k in range(3)]):
                         continue
-                    if kn and kn_drop([sum(to_mt(cn[0])[k] for cn in corners) / 3 for k in range(3)]):
+                    # keep_slots: e.g. MW mesh grilles sit recessed behind the ProStreet surface, inside the car, and
+                    # were trimmed as inner shell (Viper Kit 4: black bumper openings)
+                    if kn and slot not in kn.get("keep_slots", []) and kn_drop([sum(to_mt(cn[0])[k] for cn in corners) / 3 for k in range(3)]):
                         continue
+                    # skip_boxes / only_boxes [[x0,|y|0,z0,x1,|y|1,z1]] (both sides): leave out, or keep only, triangles
+                    # centred there (Viper MW Kit 4: the stock fender round the headlamps, where the MW shell sat proud)
+                    if opts.get("skip_boxes") or opts.get("only_boxes"):
+                        cm_ = [sum(to_mt(cn[0], mirror, offset)[k] for cn in corners) / 3 for k in range(3)]
+                        inb = lambda bl_: any(b_[0] <= cm_[0] <= b_[3] and b_[1] <= abs(cm_[1]) <= b_[4] and b_[2] <= cm_[2] <= b_[5] for b_ in bl_)
+                        if inb(opts.get("skip_boxes", [])) or (opts.get("only_boxes") and not inb(opts["only_boxes"])):
+                            continue
                     if "z_max" in opts and sum(to_mt(cn[0])[2] for cn in corners) / 3 > opts["z_max"]:
                         continue            # e.g. side skirts: nothing above the sills / arch tops
 
@@ -499,7 +566,10 @@ def build(spec):
                         tree_, P_, N_ = _COINCIDENT_CACHE[ds_key]
                         cm = [sum(to_mt(cn[0])[k] for cn in corners) / 3 for k in range(3)]
                         dd, ii = tree_.query(cm)
-                        if dd <= ds.get("far", 6.0):
+                        # keep_boxes [[x0,|y|0,z0,x1,|y|1,z1]]: not dropped there (mesh `lift` raises it over the door)
+                        kb_ = any(b_[0] <= cm[0] <= b_[3] and b_[1] <= abs(cm[1]) <= b_[4] and b_[2] <= cm[2] <= b_[5]
+                                  for b_ in ds.get("keep_boxes", []))
+                        if dd <= ds.get("far", 6.0) and not kb_:
                             sd = sum((cm[k] - P_[ii][k]) * N_[ii][k] for k in range(3))
                             if sd < ds.get("tol", 2.5) and dd * dd - sd * sd <= ds.get("edge", 1.2) ** 2:
                                 continue
@@ -514,7 +584,11 @@ def build(spec):
                         # skirt doesn't)
                         cm = [sum(to_mt(cn[0])[k] for cn in corners) / 3 for k in range(3)]
                         kept = any(all(bx[k] <= cm[k] <= bx[k + 3] for k in range(3)) for bx in dc.get("keep_boxes", []))
-                        if not kept and all(near(cn[0]) for cn in corners):
+                        coinc = all(near(cn[0]) for cn in corners)
+                        if dc.get("keep_only"):     # the inverse: keep only what lies on the reference (MW doors cut
+                            if not coinc:           # out of the one-piece MW body along the ProStreet door panels)
+                                continue
+                        elif not kept and coinc:
                             continue
                     if xr and not opts.get("x_clip"):
                         cx = sum(to_mt(cn[0])[0] for cn in corners) / 3
@@ -589,6 +663,76 @@ def build(spec):
                 b.update(keep)
             for k in [k for k, b in slots.items() if not b["positions"]]:
                 slots.pop(k)
+        es = mdef.get("edge_snap")
+        if es and slots:
+            # edge_snap {prefix, parts, dist}: the kit skin's OPEN edges (edges used by one triangle) within dist cm of
+            # those stock parts move onto them, so the panel closes against e.g. the headlamp instead of leaving a
+            # see-through gap (Viper MW fenders: up to 6 cm off the lamps). Interior vertices stay put (no crumpling)
+            import numpy as np
+            from scipy.spatial import cKDTree
+            R = np.vstack([np.array([to_mt(cn[0]) for cn in t]) for rp in es["parts"]
+                           for _, rt in (load_src(geo, es["prefix"], rp, lod, {}) or []) for t in rt])
+            # sample the reference surface densely so edge vertices land on the surface, not just its vertices
+            Rt = R.reshape(-1, 3, 3); smp = []
+            for t in Rt:
+                k = max(3, int(np.linalg.norm(np.cross(t[1] - t[0], t[2] - t[0])) / 0.5))
+                r = np.random.default_rng(len(smp)).random((k, 2)); m = r.sum(1) > 1; r[m] = 1 - r[m]
+                smp.append(t[0] + r[:, :1] * (t[1] - t[0]) + r[:, 1:] * (t[2] - t[0]))
+            Rs = np.vstack(smp); rtree = cKDTree(Rs)
+            key = lambda v: (round(v[0], 2), round(v[1], 2), round(v[2], 2))
+            cnt = {}
+            for b_ in slots.values():
+                P_ = b_["positions"]
+                for i in range(0, len(P_), 3):
+                    for a_, c_ in ((0, 1), (1, 2), (2, 0)):
+                        e_ = tuple(sorted((key(P_[i + a_]), key(P_[i + c_]))))
+                        cnt[e_] = cnt.get(e_, 0) + 1
+            edge_v = {v for e_, n_ in cnt.items() if n_ == 1 for v in e_}
+            moved = {}
+            for v in edge_v:
+                d_, j_ = rtree.query(v)
+                if d_ <= es.get("dist", 7.0):
+                    moved[v] = Rs[j_].tolist()
+            for b_ in slots.values():
+                b_["positions"] = [moved.get(key(q), q) for q in b_["positions"]]
+            report.setdefault("edge_snap", {})[mesh_name] = len(moved)
+        lf = mdef.get("lift")
+        if lf and slots:
+            # lift {prefix, parts, off, box [x0,|y|0,z0,x1,|y|1,z1], edge, depth}: kit vertices in box lying under (or
+            # within off cm of) the stock surface move out to off cm above it. Supra MW Kit 5: the side scoop dips under
+            # the stock door, which showed through a hole with flickering edges; lifted it reads as a shallow scoop
+            import numpy as np
+            from scipy.spatial import cKDTree
+            smp, nrm = [], []
+            for rp in lf["parts"]:
+                for _, rt in load_src(geo, lf["prefix"], rp, lod, {}) or []:
+                    for t in rt:
+                        T_ = np.array([to_mt(cn[0]) for cn in t])
+                        n_ = np.cross(T_[1] - T_[0], T_[2] - T_[0]); a_ = np.linalg.norm(n_); n_ /= a_ + 1e-9
+                        if np.dot(n_, np.mean([nrm_mt(cn[1]) for cn in t], 0)) < 0:
+                            n_ = -n_
+                        k = max(3, int(a_ / 0.5))
+                        r = np.random.default_rng(len(smp)).random((k, 2)); m = r.sum(1) > 1; r[m] = 1 - r[m]
+                        smp.append(T_[0] + r[:, :1] * (T_[1] - T_[0]) + r[:, 1:] * (T_[2] - T_[0])); nrm.append(np.repeat(n_[None], k, 0))
+            Rs, Rn = np.vstack(smp), np.vstack(nrm); rtree = cKDTree(Rs)
+            bx, off, edge = lf["box"], lf.get("off", 0.6), lf.get("edge", 2.0)
+            n_l = 0
+            for b_ in slots.values():
+                P_ = np.array(b_["positions"], float)
+                if not len(P_):
+                    continue
+                inb = ((P_[:, 0] >= bx[0]) & (P_[:, 0] <= bx[3]) & (np.abs(P_[:, 1]) >= bx[1]) & (np.abs(P_[:, 1]) <= bx[4])
+                       & (P_[:, 2] >= bx[2]) & (P_[:, 2] <= bx[5]))
+                idx = np.nonzero(inb)[0]
+                if not len(idx):
+                    continue
+                dd, jj = rtree.query(P_[idx])
+                sd = ((P_[idx] - Rs[jj]) * Rn[jj]).sum(1)
+                ok = (sd < off) & (dd * dd - sd * sd <= edge * edge) & (sd > -lf.get("depth", 15.0))
+                P_[idx[ok]] += (off - sd[ok])[:, None] * Rn[jj[ok]]
+                n_l += int(ok.sum())
+                b_["positions"] = P_.tolist()
+            report.setdefault("lift", {})[mesh_name] = n_l
         if mdef.get("double_sided"):
             # kit panels are single-sided shells: seen from behind (low angles, inside the arches) they vanish. Add a
             # reversed copy of every triangle (the culled side shows the panel instead of a hole)
@@ -686,6 +830,34 @@ def build(spec):
                 for b in slots.values():
                     b["positions"] = [[p[0] - c[0], p[1] - c[1], p[2] - c[2]] for p in b["positions"]]
                 spec.setdefault("recentered", {})[mesh_name] = [round(v, 2) for v in c]
+        sn = mdef.get("smooth_normals")
+        if sn:
+            # flat-shaded source meshes (Diablo rim lip: every triangle edge showed as a grid line): per vertex, average
+            # the face normals of all triangles sharing its position within `sn` degrees of its own face
+            import math
+            cos_ = math.cos(math.radians(float(sn)))
+            for b_ in slots.values():
+                P_ = b_["positions"]; fn = []
+                for i in range(0, len(P_), 3):
+                    e1 = [P_[i + 1][k] - P_[i][k] for k in range(3)]; e2 = [P_[i + 2][k] - P_[i][k] for k in range(3)]
+                    n_ = [e1[1] * e2[2] - e1[2] * e2[1], e1[2] * e2[0] - e1[0] * e2[2], e1[0] * e2[1] - e1[1] * e2[0]]
+                    l_ = math.sqrt(sum(v * v for v in n_)) or 1.0
+                    # keep the source winding's side: flip to agree with the stored vertex normals
+                    s_ = 1.0 if sum(n_[k] * sum(b_["normals"][i + j][k] for j in range(3)) for k in range(3)) >= 0 else -1.0
+                    fn.append([s_ * v / l_ for v in n_])
+                groups = {}
+                for i, q in enumerate(P_):
+                    groups.setdefault(tuple(round(v, 2) for v in q), []).append(i)
+                out = []
+                for i, q in enumerate(P_):
+                    f0 = fn[i // 3]; acc = [0.0, 0.0, 0.0]
+                    for j in groups[tuple(round(v, 2) for v in q)]:
+                        f1 = fn[j // 3]
+                        if sum(f0[k] * f1[k] for k in range(3)) >= cos_:
+                            acc = [acc[k] + f1[k] for k in range(3)]
+                    l_ = math.sqrt(sum(v * v for v in acc)) or 1.0
+                    out.append([v / l_ for v in acc])
+                b_["normals"] = out
         pu = mdef.get("planar_uv")
         if pu is not None:
             # e.g. side-mirror glass: the game stretches the live reflection over UV 0..1, so project the glass flat
@@ -768,6 +940,9 @@ def build(spec):
                     dz = prof[j - 1][1] + t * (prof[j][1] - prof[j - 1][1])
                 return q[ax] - dz
             def inband(c):
+                # except_boxes [[x0,y0,z0,x1,y1,z1]]: no stripe there (Viper MW Kit 4 diffuser bar)
+                if any(all(b_[k] <= c[k] <= b_[k + 3] for k in range(3)) for b_ in st.get("except_boxes", [])):
+                    return False
                 return any(lo <= val(c) <= hi for lo, hi in st["bands"]) and xr[0] <= c[0] <= xr[1]
             def lerp(a_, b_, t):
                 return [a_[k] + (b_[k] - a_[k]) * t for k in range(len(a_))]
@@ -946,7 +1121,7 @@ def build(spec):
             sides = {s_: slots.setdefault(names[s_], {k: [] for k in src}) for s_ in ("Signal_L", "Signal_R")}
             box, ubox = rule.get("box"), rule.get("uv_box")
             img = None
-            if rule.get("amber"):
+            if rule.get("amber") or rule.get("white"):
                 from PIL import Image
                 img = Image.open(os.path.join(os.path.dirname(os.path.expanduser(spec["out_dir"])), "textures",
                                               rule["from"].replace("Tex_", "") + ".png")).convert("RGB")
@@ -955,7 +1130,10 @@ def build(spec):
                 for w in ((1/3, 1/3, 1/3), (.6, .2, .2), (.2, .6, .2), (.2, .2, .6)):
                     u = sum(w[j] * uvs[j][0] for j in range(3)) % 1; r_ = (1 - sum(w[j] * uvs[j][1] for j in range(3))) % 1
                     R, G, B = img.getpixel((min(img.width - 1, int(u * img.width)), min(img.height - 1, int(r_ * img.height))))
-                    hits += R > 60 and R > 1.25 * G and G > 0.35 * R and B < 0.55 * G
+                    if rule.get("white"):     # clear / white lens sections (reverse lamps in a tail cluster)
+                        hits += min(R, G, B) > 120 and max(R, G, B) - min(R, G, B) < 45
+                    else:
+                        hits += R > 60 and R > 1.25 * G and G > 0.35 * R and B < 0.55 * G
                 return hits >= 3
             n = {"Signal_L": 0, "Signal_R": 0}
             for i in range(0, len(src["positions"]), 3):
@@ -985,6 +1163,8 @@ def build(spec):
             if n["Signal_L"] or n["Signal_R"]:
                 print("signal lamps %s: %s -> L %d / R %d tris" % (mesh_name, rule["from"], n["Signal_L"], n["Signal_R"]))
         for sb in spec.get("slot_boxes", []):
+            if sb.get("meshes") and not any(mesh_name.startswith(m_) for m_ in sb["meshes"]):
+                continue                 # e.g. MW kit meshes only (not the Body's lamp housings)
             # move a slot's triangles inside a car-space box to another slot, no left/right split (993: the lamp atlas
             # serves headlamps and the tail bar; the bar becomes one TailLight slot on the Zino base)
             if sb["from"] not in slots:
@@ -992,12 +1172,73 @@ def build(spec):
             src = slots[sb["from"]]; keep = {k: [] for k in src}
             dst = slots.setdefault(sb["to"], {k: [] for k in src}); bx = sb["box"]
             for i in range(0, len(src["positions"]), 3):
-                inside = all(all(bx[a] <= src["positions"][i + j][a] <= bx[a + 3] for a in range(3)) for j in range(3))
+                ay = sb.get("abs_y")     # box y range applies to |y| (both sides)
+                inside = all(all(bx[a] <= (abs(src["positions"][i + j][a]) if ay and a == 1 else src["positions"][i + j][a]) <= bx[a + 3]
+                                 for a in range(3)) for j in range(3))
                 for k in src:
                     (dst if inside else keep)[k] += src[k][i:i + 3]
             slots[sb["from"]] = keep
-            for k in [k for k in (sb["from"], sb["to"]) if not slots[k]["positions"]]:
+            if sb.get("drop"):           # remove them instead (Diablo: mirror glass that lives in the SideMirror meshes)
+                slots.pop(sb["to"], None)
+            for k in [k for k in (sb["from"], sb["to"]) if k in slots and not slots[k]["positions"]]:
                 slots.pop(k)
+        gb = mdef.get("grille_backing") or spec.get("grille_backing")
+        if gb:
+            # a dark surface `depth` cm behind each grille face (MW mesh grilles: the openings behind them were empty,
+            # so the wheel / ground showed through, Viper Kit 3 side vent)
+            dst = None
+            for gs in gb["slots"]:
+                if gs not in slots:
+                    continue
+                dst = dst or slots.setdefault(gb.get("to", "Bottom"), {"positions": [], "normals": [], "uvs": []})
+                src = slots[gs]
+                # double_sided meshes already carry a reversed copy (second half): backing those put the black layer
+                # 2 cm IN FRONT of the grille (Viper Kit 4: grille openings read solid black). Originals only
+                n_src = len(src["positions"]) // 2 if mdef.get("double_sided") else len(src["positions"])
+                for i in range(0, n_src, 3):
+                    n = [sum(src["normals"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                    ln = sum(x * x for x in n) ** 0.5 or 1
+                    for j in range(3):
+                        dst["positions"].append([src["positions"][i + j][k] - n[k] / ln * gb.get("depth", 2.0) for k in range(3)])
+                        dst["normals"].append(list(src["normals"][i + j])); dst["uvs"].append([0.5, 0.5])
+        bs = mdef.get("backstop")
+        if bs and slots:
+            # backstop: a dark copy of the stock panels `depth` cm under this kit piece, only where the kit surface
+            # lies outward of it. Any opening or edge gap in the kit then shows a dark inner skin (as the MW car's own
+            # inner body does) instead of the ground / sky behind: nothing on the body is see-through
+            import numpy as np
+            from scipy.spatial import cKDTree
+            K = np.vstack([np.array(b_["positions"]) for b_ in slots.values() if b_["positions"]])
+            Kc = K.reshape(-1, 3, 3).mean(1)
+            Kpaint = np.concatenate([np.full(len(b_["positions"]) // 3, k_ == "Paint") for k_, b_ in slots.items()
+                                     if b_["positions"]])
+            ktree = cKDTree(Kc)
+            # slot: Bottom (dark inner body) or Paint (gaps closed up in body colour, the user's choice for the Viper
+            # widebody fenders 2026-10-29)
+            dst = slots.setdefault(bs.get("slot", "Bottom"), {"positions": [], "normals": [], "uvs": []})
+            dep = bs.get("depth", 3.0)
+            for rp in bs["parts"]:
+                for _, rt in load_src(geo, bs["prefix"], rp, lod, {}) or []:
+                    T = np.array([[to_mt(cn[0]) for cn in t] for t in rt])
+                    if not len(T):
+                        continue
+                    N = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0])
+                    N /= np.linalg.norm(N, axis=1, keepdims=True) + 1e-9
+                    S = np.array([[nrm_mt(cn[1]) for cn in t] for t in rt]).mean(1)
+                    N *= np.sign((N * S).sum(1, keepdims=True) + 1e-9)      # outward, by the stored normals
+                    C = T.mean(1) - N * dep
+                    dd, ii = ktree.query(C)
+                    out_ = ((Kc[ii] - C) * N).sum(1)                       # kit surface outward of the backstop
+                    keep = (dd < bs.get("reach", 12.0)) & (out_ > 0.5)
+                    for t, n, kp in zip(T[keep], N[keep], Kpaint[ii[keep]]):
+                        # a Paint backstop stays dark behind grilles / dark kit faces (white showed through the
+                        # Supra Kit 5 grilles)
+                        d_ = dst if kp else slots.setdefault("Bottom", {"positions": [], "normals": [], "uvs": []})
+                        q = t - n * dep
+                        if np.dot(np.cross(q[1] - q[0], q[2] - q[0]), n) < 0:
+                            q = q[[0, 2, 1]]
+                        for v in q:
+                            d_["positions"].append(v.tolist()); d_["normals"].append(n.tolist()); d_["uvs"].append([0.5, 0.5])
         out = {"name": mesh_name, "slots": [{"slot": k, **v} for k, v in slots.items()]}
         with open(os.path.join(spec["out_dir"], mesh_name + ".json"), "w") as f:
             json.dump(out, f)
@@ -1314,7 +1555,7 @@ def draw_gauge(im, g):
     vertically so it is round on the car: the gauge is drawn on a square canvas, then resized and pasted."""
     a_ = g.get("aspect", 1.0)
     rot_ = g.get("rotate", 0.0)   # degrees counter-clockwise in the texture (dial art drawn rotated, e.g. the R34 cluster)
-    if abs(a_ - 1.0) > 1e-3 or abs(rot_) > 1e-3:
+    if abs(a_ - 1.0) > 1e-3 or abs(rot_) > 1e-3 or g.get("flip_x"):
         from PIL import Image
         W, H = im.size
         cx, cy = g["center"][0] * W, g["center"][1] * H
@@ -1323,13 +1564,15 @@ def draw_gauge(im, g):
             ext = max(ext, g["face"][2] * W + abs(g["face"][0] * W - cx), g["face"][2] * W + abs(g["face"][1] * H - cy) / a_)
         half = int(ext * 1.1) + 2
         tmp = Image.new("RGBA", (2 * half, 2 * half), (0, 0, 0, 0))
-        g2 = dict(g, aspect=1.0, rotate=0.0, center=[half / tmp.width, half / tmp.height])
+        g2 = dict(g, aspect=1.0, rotate=0.0, flip_x=False, center=[half / tmp.width, half / tmp.height])
         g2["radius"] = g["radius"] * W / tmp.width
         if "face" in g:
             g2["face"] = [(half + g["face"][0] * W - cx) / tmp.width, (half + (g["face"][1] * H - cy) / a_) / tmp.height,
                           g["face"][2] * W / tmp.width]
         draw_gauge(tmp, g2)
         tmp = tmp.resize((tmp.width, max(1, int(round(tmp.height * a_)))), Image.LANCZOS)
+        if g.get("flip_x"):   # dash art mapped mirrored on the car (MW Rockport PD4): mirror the face so it reads right
+            tmp = tmp.transpose(Image.FLIP_LEFT_RIGHT)
         if abs(rot_) > 1e-3:
             tmp = tmp.rotate(rot_, resample=Image.BICUBIC, expand=True)
             half = tmp.width // 2
@@ -1481,6 +1724,11 @@ def write_textures(spec):
             from PIL import ImageOps
             a = ImageOps.grayscale(im.convert("RGB")).point(lambda v: 0 if v < 28 else min(255, (v - 28) * 6))
             im.putalpha(a)
+        g_ = spec.get("texture_gain", {}).get(slot)
+        if g_:
+            # darken / brighten a whole texture (MW carbon read light grey in Motor Town's lighting)
+            from PIL import ImageEnhance
+            im = Image.merge("RGBA", ImageEnhance.Brightness(im.convert("RGB")).enhance(g_).split() + (im.getchannel("A"),))
         for patch in spec.get("texture_patches", {}).get(slot, []):
             # erase painted (red) needles inside a circle, so only the game's live needles show on the dial
             W, H = im.size

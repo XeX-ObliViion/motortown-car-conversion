@@ -140,6 +140,7 @@ def main():
     ZR = wh.get("radius", 32) + 24.0
     ZY = wh.get("half_track", 75) - 30.0
     zl = [[wh.get("front_x", 130), wh.get("z", 30), ZR, ZY], [wh.get("rear_x", -130), wh.get("rear_z", wh.get("z", 30)), ZR, ZY]]
+    zl = spec.get("arch_zones_override", zl)     # seam-following box zones (ps_to_mt zone_depth), e.g. the Viper
     zkeep, zdrop = {"mode": "keep", "list": zl, "x_range": [R, F]}, {"mode": "drop", "list": zl, "x_range": [R, F]}
     spec["arch_zones"] = zl
     # idempotent: start from the ProStreet meshes as they were before any arch zones (kept in spec["ps_meshes"])
@@ -217,8 +218,8 @@ def main():
             _wb_cache["base"] = cKDTree(samples([mfile("KIT00_BODY")], MW_SCALE, step=1.0) * np.array(xf["s"]) + np.array(xf["t"]))
         S_ = samples([mfile(kit + "_BODY")], MW_SCALE, step=2.0) * np.array(xf["s"]) + np.array(xf["t"])
         inz = np.zeros(len(S_), bool)
-        for x0, z0, r0, y0 in zl:
-            inz |= (np.abs(S_[:, 1]) >= y0) & ((S_[:, 0] - x0) ** 2 + (S_[:, 2] - z0) ** 2 <= r0 ** 2)
+        for z_ in zl:
+            inz |= np.array([P.zone_depth(z_, q, 0) is not None for q in S_])
         if inz.sum() < 50:
             return False
         d_, _ = _wb_cache["base"].query(S_[inz])
@@ -285,11 +286,17 @@ def main():
             for p_ in (fb, rb_, sk):
                 p_["zones"] = zdrop
             fx = XF.get("SideSkirt", xf) if carbon else xf
-            knf = dict(kn("Fender"), replaced=sorted(set(["BODY"] + [p_ for p_ in stock("Fender")])))
+            knf = dict(kn("Fender"), replaced=sorted(set(["BODY"] + [p_ for p_ in stock("Fender")])),
+                       keep_far=True)   # nothing stock is left inside the zones: keep vent / scoop insides (Viper Kit 3/4)
             add("Fender", kit, [dict(part(kit + "_BODY"), xform=fx, zones=zkeep, keep_nearest=knf, refine_drop=3,
                                      blend={"prefix": pk, "parts": ["BODY"] + [p_ for p_ in stock("Fender") if p_ != "BODY"],
-                                            "zones": zl, "band": 15.0, "max": 10.0})]
-                + [{"part": p_, "prefix": pk, "zones": zdrop} for p_ in stock("Fender") if p_ != "BODY"], lab + " Widebody")
+                                            "zones": zl, "band": 15.0, "max": 10.0,
+                                            # skin edges onto the stock surface: flush round the lamps, no see-through
+                                            "snap": 2.5})]
+                + [{"part": p_, "prefix": pk, "zones": zdrop} for p_ in stock("Fender") if p_ != "BODY"]
+                # stock fender where the MW shell leaves the zone open (Viper: black ring round the headlamps, open vents)
+                + [{"part": p_, "prefix": pk, "zones": zkeep, "fill_gaps": {"far": 10.0, "edge": 1.0}}
+                   for p_ in stock("Fender") if p_ != "BODY"], lab + " Widebody")
         add("FrontBumper", kit, [fb] + fill("FrontBumper"), lab + " Front Bumper")
         add("RearBumper", kit, [rb_] + fill("RearBumper") + (mw_tips(kit) or exhaust), lab + " Rear Bumper")
         if n:
