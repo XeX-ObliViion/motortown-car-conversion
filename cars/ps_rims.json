@@ -31,7 +31,14 @@
   "MW_VIPER",
   "MW_ELISE",
   "MW_350Z",
-  "MW_DIABLOSV"
+  "MW_DIABLOSV",
+  "MW_997TT",
+  "MW_SKYLINE",
+  "HEAT_SKYLINE",
+  "MW_CLIO",
+  "MW_CORVETTE",
+  "AC_SUPRA",
+  "AC_GALLARDO"
  ],
  "cost": 1500,
  "base_wheel": "Zino",

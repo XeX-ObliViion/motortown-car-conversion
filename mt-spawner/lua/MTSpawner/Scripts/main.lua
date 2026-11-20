@@ -4,7 +4,7 @@
 -- Spawning uses the game's own MotorTownPlayerController:ServerSpawnVehicle, so spawned vehicles are real,
 -- replicated to everyone and saved like any other. Only the host or a server admin may spawn.
 
-local VERSION = "0.7.0"
+local VERSION = "0.9.8"
 local DIR = (os.getenv("LOCALAPPDATA") or ".") .. "\\MTSpawner\\"
 local CMD_FILE, STATE_FILE, LIST_FILE = DIR .. "cmd.txt", DIR .. "state.txt", DIR .. "vehicles.txt"
 
@@ -116,6 +116,36 @@ end
 
 -- spawn attempts: on a dedicated server the game rejects drop points that overlap anything ("Space already
 -- occupied"), and the client's origin rebasing can differ from the server's: retry higher / with the raw location
+-- Game 0.7.20 changed some RPC signatures (ServerResetVehicleAt gained a 6th parameter). Read a UFunction's parameter
+-- list at runtime, log it once, and build calls from it instead of hard-coding argument counts.
+local SIG_LOGGED = {}
+local function params_of(path)
+    local f = StaticFindObject(path)
+    if not (f and f:IsValid()) then log("sig %s: not found", path); return nil end
+    local list = {}
+    f:ForEachProperty(function(p)
+        local e = { name = p:GetFName():ToString(), type = p:GetClass():GetFName():ToString() }
+        if e.type == "StructProperty" then
+            pcall(function()
+                local fs = {}
+                p:GetStruct():ForEachProperty(function(q)
+                    fs[#fs + 1] = q:GetFName():ToString() .. ":" .. q:GetClass():GetFName():ToString()
+                end)
+                e.fields = table.concat(fs, ",")
+            end)
+        end
+        list[#list + 1] = e
+    end)
+    if not SIG_LOGGED[path] then
+        SIG_LOGGED[path] = true
+        local parts = {}
+        for _, e in ipairs(list) do parts[#parts + 1] = e.name .. ":" .. e.type .. (e.fields and ("{" .. e.fields .. "}") or "") end
+        log("sig %s: %s", path, table.concat(parts, " "))
+    end
+    return list
+end
+
+
 local ATTEMPTS = {
     { z = 60,  extra = 0, rebase = true },
     { z = 180, extra = 0, rebase = false },
@@ -140,6 +170,18 @@ local function spawn(key, dist, use_cheat, attempt)
         log("%s", message)
         return
     end
+    if admin and not host then
+        -- dedicated server (0.7.20): a client's ServerSpawnVehicle is dropped, so the server mod spawns it
+        local abs = A.rebase and to_absolute(pc, at) or at
+        local ok, err = pcall(function()
+            pc:ServerCommand(string.format("mta spawn %s %.1f %.1f %.1f %.1f", key, abs.X, abs.Y, abs.Z, yaw + 90))
+        end)
+        message = ok and string.format("asked the server to spawn %s %.0f m ahead (try %d)...", key, d, attempt)
+            or ("spawn failed: " .. tostring(err))
+        if ok then pending = { key = key, at = at, deadline = os.clock() + 4, dist = dist, attempt = attempt } end
+        log("%s", message)
+        return
+    end
     local params = {
         VehicleKey = FName(key),
         AbsoluteLocation = A.rebase and to_absolute(pc, at) or at,
@@ -148,6 +190,7 @@ local function spawn(key, dist, use_cheat, attempt)
         bResetIfCollide = true,
         bForceSimulate = true,
     }
+    params_of("/Script/MotorTown.MotorTownPlayerController:ServerSpawnVehicle")   -- logs the 0.7.20 parameter struct once
     local ok, err = pcall(function() pc:ServerSpawnVehicle(params) end)
     if ok then
         message = string.format("spawning %s %.0f m ahead (try %d)...", key, d, attempt)
@@ -331,7 +374,7 @@ local function seated_vehicle(pc)
     return nil
 end
 
-local function teleport_to(pc, abs, with_car)
+local function teleport_to(pc, abs, with_car, yaw_override)
     local v = with_car == "1" and seated_vehicle(pc) or nil
     local ok, err
     if v then
@@ -343,6 +386,7 @@ local function teleport_to(pc, abs, with_car)
             pcall(function() local r = gs:RebaseZeroOriginOntoLocal(pc, abs); if r and r.X then loc = { X = r.X, Y = r.Y, Z = r.Z } end end)
             local yaw = 0
             pcall(function() yaw = v:K2_GetActorRotation().Yaw end)
+            yaw = yaw_override or yaw
             pc:ServerResetVehicleAt(v, loc, { Pitch = 0, Yaw = yaw, Roll = 0 }, false, true)
         end)
         if not ok then ok, err = pcall(function() pc:ServerTeleportVehicle(v, abs) end) end
@@ -363,17 +407,21 @@ local function tp_player(name, with_car)
 end
 
 -- ground height under an absolute X/Y, by a straight-down line trace in local (rebased) coordinates
-local function ground_z(pc, abs)
+local function ground_z(pc, abs, top_z)
     local gs = StaticFindObject("/Script/Engine.Default__GameplayStatics")
     local ks = StaticFindObject("/Script/Engine.Default__KismetSystemLibrary")
     local z
     pcall(function()
-        local top = { X = abs.X, Y = abs.Y, Z = 300000 }
+        local top = { X = abs.X, Y = abs.Y, Z = top_z or 300000 }
         local bottom = { X = abs.X, Y = abs.Y, Z = -100000 }
         local lt, lb = top, bottom
         pcall(function() lt = gs:RebaseZeroOriginOntoLocal(pc, top); lb = gs:RebaseZeroOriginOntoLocal(pc, bottom) end)
         local hit = {}
-        if ks:LineTraceSingle(pc, lt, lb, 0, false, {}, 0, hit, true, { R = 0, G = 0, B = 0, A = 0 }, { R = 0, G = 0, B = 0, A = 0 }, 0) then
+        -- ignore our own car / character: while held in the air above the target the trace would hit them first
+        local ignore = {}
+        pcall(function() if valid(pc.Pawn) then ignore[#ignore + 1] = pc.Pawn end end)
+        pcall(function() if valid(pc.LastVehicle) then ignore[#ignore + 1] = pc.LastVehicle end end)
+        if ks:LineTraceSingle(pc, lt, lb, 0, false, ignore, 0, hit, true, { R = 0, G = 0, B = 0, A = 0 }, { R = 0, G = 0, B = 0, A = 0 }, 0) then
             local p = hit.ImpactPoint or hit.Location
             if p then
                 local back = gs:RebaseLocalOriginOntoZero(pc, { X = p.X, Y = p.Y, Z = p.Z })
@@ -388,37 +436,76 @@ end
 -- height put players under the map, 2026-10-23). Teleport 300 m above the waypoint, then keep tracing every half
 -- second while the terrain streams in, and drop onto the ground as soon as it is there.
 local tp_generation = 0
+-- Long teleports: the destination's ground streams in a few seconds after you arrive, and until it does the car falls
+-- through the world (user report 2026-10-31). So hold the car at the target point - re-placing it every 0.5 s, which
+-- also zeroes its fall - until a downward trace finds the ground, then set it down 2 m above it and call done().
+-- top_z limits the trace start (pickup points: just above the point, so refinery tanks / roofs aren't hit).
+-- A spot where the whole rig fits: the pickup marker's own centre can be inside a loading bay, so the truck or its
+-- trailer landed in a wall or on equipment and was wrecked at once (user report 2026-10-31). Try the marker and rings
+-- 10 / 20 m around it, facing the current way or the marker's way, and take the first where traces over the rig's
+-- footprint (5 m ahead to 18 m behind, 1.5 m each side) all hit ground at about the same height, near the marker's.
+local function clear_spot(pc, abs, top_z, yaws, near_z)
+    local best, best_spread
+    for _, r in ipairs({ 0, 1000, 2000 }) do
+        for k = 0, (r == 0 and 0 or 7) do
+            local a = k * math.pi / 4
+            local cx, cy = abs.X + r * math.cos(a), abs.Y + r * math.sin(a)
+            for _, yaw in ipairs(yaws) do
+                local fx, fy = math.cos(math.rad(yaw)), math.sin(math.rad(yaw))
+                local lo, hi, ok = 1e9, -1e9, true
+                for _, o in ipairs({ { 500, 0 }, { 0, 150 }, { 0, -150 }, { -900, 0 }, { -1800, 150 }, { -1800, -150 } }) do
+                    local z = ground_z(pc, { X = cx + o[1] * fx - o[2] * fy, Y = cy + o[1] * fy + o[2] * fx }, top_z)
+                    if not z then ok = false; break end
+                    lo, hi = math.min(lo, z), math.max(hi, z)
+                end
+                if ok and math.abs(hi - near_z) < 400 then
+                    if hi - lo < 60 then return { X = cx, Y = cy, Z = hi + 150 }, yaw end
+                    if not best_spread or hi - lo < best_spread then best, best_spread = { { X = cx, Y = cy, Z = hi + 200 }, yaw }, hi - lo end
+                end
+            end
+        end
+    end
+    if best then return best[1], best[2] end
+end
+
+local function teleport_settled(pc, abs, with_car, top_z, done, spot)
+    tp_generation = tp_generation + 1
+    local gen, tries = tp_generation, 0
+    local function step()
+        if gen ~= tp_generation then return end   -- a newer teleport took over
+        tries = tries + 1
+        local z = ground_z(pc, abs, top_z)
+        if z then
+            local dest, yaw = { X = abs.X, Y = abs.Y, Z = z + 200 }, nil
+            if spot then
+                local d, y = spot(z)
+                if d then dest, yaw = d, y end
+            end
+            pcall(teleport_to, pc, dest, with_car, yaw)
+            log("ground found after %.1f s: %.0f -> %.0f %.0f %.0f", tries * 0.5, z, dest.X, dest.Y, dest.Z)
+            if done then later(1.5, function() if gen == tp_generation then done(true) end end) end
+        elseif tries < 60 then
+            pcall(teleport_to, pc, abs, with_car)
+            later(0.5, step)
+        else
+            message = "the ground there didn't load - you may need to drive a bit"
+            if done then done(false) end
+        end
+    end
+    local ok, err = teleport_to(pc, abs, with_car)
+    if not ok then message = "teleport failed: " .. tostring(err); log("%s", message); return false end
+    later(0.5, step)
+    return true
+end
 local function tp_waypoint(with_car)
     local pc = require_admin(); if not pc then return end
-    tp_generation = tp_generation + 1
-    local gen = tp_generation
     local d
     pcall(function() d = vec(pc.PlayerState.CustomDestinationAbsoluteLocation) end)
     if not d or (d.X == 0 and d.Y == 0) then message = "set a waypoint on the map first"; return end
     local z = ground_z(pc, d)
     local abs = { X = d.X, Y = d.Y, Z = z and (z + 200) or (d.Z + 30000) }
-    local ok, err, car = teleport_to(pc, abs, with_car)
-    if not ok then message = "teleport failed: " .. tostring(err); log("%s", message); return end
-    message = string.format("teleported %sto your waypoint%s", car and "with your car " or "", z and "" or " (finding the ground...)")
-    log("%s (%.0f %.0f %.0f, ground %s, waypoint z %.0f)", message, abs.X, abs.Y, abs.Z, tostring(z), d.Z)
-    if z then return end
-    local tries = 0
-    local function settle()
-        if gen ~= tp_generation then return end   -- a newer teleport took over
-        tries = tries + 1
-        local z2 = ground_z(pc, d)
-        if z2 then
-            pcall(teleport_to, pc, { X = d.X, Y = d.Y, Z = z2 + 200 }, with_car)
-            message = string.format("teleported %sto your waypoint", car and "with your car " or "")
-            log("waypoint ground found after %.1f s: %.0f", tries * 0.5, z2)
-        elseif tries < 40 then
-            later(0.5, settle)
-        else
-            message = "waypoint ground didn't load - you may need to drive a bit"
-            log("%s", message)
-        end
-    end
-    later(0.5, settle)
+    message = "teleporting to your waypoint..."
+    teleport_settled(pc, abs, with_car, nil, function(ok) if ok then message = "teleported to your waypoint" end end)
 end
 
 -- the car a player owns that is nearest to them (their current car, normally)
@@ -474,6 +561,12 @@ local function repair()
     log("%s", message)
 end
 
+-- after a cargo teleport: undo any knock the landing gave the truck
+local function repair_quiet(pc)
+    local v = seated_vehicle(pc); if not v then return end
+    pcall(function() v.Net_Parts:ForEach(function(_, e) local slot = e:get().Slot; pcall(function() pc:ServerSetVehiclePartDamage(v, slot, 0.0) end) end) end)
+end
+
 local function refuel()
     local pc = require_admin(); if not pc then return end
     local v = my_car(pc); if not v then return end
@@ -484,13 +577,27 @@ local function refuel()
     log("%s", message)
 end
 
+
 local function flip()
     local pc = require_admin(); if not pc then return end
     local v = my_car(pc); if not v then return end
     local ok, err = pcall(function()
         local p = v:K2_GetActorLocation()
         local yaw = v:K2_GetActorRotation().Yaw
-        pc:ServerResetVehicleAt(v, { X = p.X, Y = p.Y, Z = p.Z + 150 }, { Pitch = 0, Yaw = yaw, Roll = 0 }, false, false)
+        local at, rot = { X = p.X, Y = p.Y, Z = p.Z + 150 }, { Pitch = 0, Yaw = yaw, Roll = 0 }
+        local sig = params_of("/Script/MotorTown.MotorTownPlayerController:ServerResetVehicleAt") or {}
+        local args, nstruct = {}, 0
+        for _, e in ipairs(sig) do   -- by type: vehicle, location, rotation, then defaults (bools false)
+            if e.type == "ObjectProperty" then args[#args + 1] = v
+            elseif e.type == "StructProperty" then
+                nstruct = nstruct + 1
+                args[#args + 1] = (e.name:find("Rot") or nstruct == 2) and rot or at
+            elseif e.type == "BoolProperty" then args[#args + 1] = false
+            elseif e.type == "NameProperty" then args[#args + 1] = FName("None")
+            else args[#args + 1] = 0 end
+        end
+        if #args == 0 then args = { v, at, rot, false, false } end
+        pc:ServerResetVehicleAt(table.unpack(args))
     end)
     message = ok and "car flipped upright" or ("flip failed: " .. tostring(err))
     log("%s", message)
@@ -731,6 +838,17 @@ local function admin_money(target, mode, amount)
     log("%s", message)
 end
 
+-- log only: what each job paid (to check the economy pak against real payments)
+pcall(function()
+    RegisterHook("/Script/MotorTown.MotorTownPlayerController:ClientAddMoneyAndExp", function(ctx, context, money, level)
+        local m, lt, cx = "?", "?", "?"
+        pcall(function() m = money:get() end)
+        pcall(function() lt = level:get() end)
+        pcall(function() cx = context:get():ToString() end)
+        log("job paid: %s $%s level %s", tostring(cx), tostring(m), tostring(lt))
+    end)
+end)
+
 -- Admin: give or take admin rights (the game's own ServerAddAdmin / ServerRemoveAdmin; the server checks that the
 -- caller is an admin, and removing another admin needs bAllowAdminToRemoveAdmin in the server config)
 local function set_admin(name, on)
@@ -750,6 +868,360 @@ local function set_admin(name, on)
     log("%s", message)
 end
 
+-- Admin: companies / corporations. The game state's Net_CompanySystem holds the companies this client knows about
+-- (on a server: the ones the server syncs to you). Its property names aren't in our dumps, so the company array is
+-- found by shape: an array of structs with Guid + Money + Settings fields. Changes go through the game's own RPCs
+-- (ServerAddCompanyMoney, ServerAdd/RemoveCompanyVehicleSlot); the server decides whether an admin may use them.
+-- companies.txt: index<TAB>name<TAB>owner<TAB>money<TAB>added slots<TAB>corp
+local COMPANIES_FILE = DIR .. "companies.txt"
+-- On a client the companies arrive on the player controller (Companies = ones you're in, Net_CompaniesBase = every
+-- company / corporation on the server); the company system's Server_Companies is filled only where the game is the
+-- server. Money is an MTShadowedInt64 (BaseValue = the amount).
+local function companies()
+    local out, seen = {}, {}
+    local function add(arr)
+        pcall(function()
+            arr:ForEach(function(_, e)
+                pcall(function()
+                    local co = e:get()
+                    local g = co.Guid
+                    local k = string.format("%d.%d.%d.%d", g.A, g.B, g.C, g.D)
+                    if seen[k] then return end
+                    seen[k] = true
+                    local name, owner, money = "", "", nil
+                    pcall(function() name = co.Settings.Name:ToString() end)
+                    pcall(function() owner = co.OwnerCharacterName:ToString() end)
+                    pcall(function() money = co.Money.BaseValue end)
+                    out[#out + 1] = { guid = { A = g.A, B = g.B, C = g.C, D = g.D }, name = name, owner = owner,
+                        money = money, slots = co.AddedVehicleSlots, corp = co.bIsCorporation }
+                end)
+            end)
+        end)
+    end
+    local pc = local_controller()
+    if pc then add(pc.Companies); add(pc.Net_CompaniesBase) end
+    pcall(function() add(FindFirstOf("MotorTownGameState").Net_CompanySystem.Server_Companies) end)
+    return out
+end
+local function write_companies()
+    local lines = {}
+    for i, c in ipairs(companies()) do
+        lines[#lines + 1] = string.format("%d\t%s\t%s\t%s\t%s\t%s", i, c.name ~= "" and c.name or "(unnamed)", c.owner,
+            c.money and string.format("%.0f", c.money) or "?", tostring(c.slots or 0), c.corp and "corp" or "")
+    end
+    local f = io.open(COMPANIES_FILE .. ".tmp", "w")
+    if not f then return end
+    f:write(table.concat(lines, "\n"), "\n")
+    f:close()
+    os.remove(COMPANIES_FILE)
+    os.rename(COMPANIES_FILE .. ".tmp", COMPANIES_FILE)
+end
+local function company_cmd(what, idx, amount)
+    local pc = require_admin(); if not pc then return end
+    local c = companies()[tonumber(idx) or 0]
+    if not c then message = "company not found (refresh the list)"; return end
+    local ok, err
+    if what == "money" then
+        amount = math.floor(tonumber(amount) or 0)
+        ok, err = pcall(function() pc:ServerAddCompanyMoney(c.guid, 0, amount, 0, "Admin", "") end)
+        message = ok and string.format("asked the server to %s $%d %s %s", amount >= 0 and "add" or "remove", math.abs(amount),
+            amount >= 0 and "to" or "from", c.name) or ("company money failed: " .. tostring(err))
+    elseif what == "slot_add" then
+        ok, err = pcall(function() pc:ServerAddCompanyVehicleSlot(c.guid) end)
+        message = ok and ("asked for one more vehicle slot for " .. c.name) or ("slot failed: " .. tostring(err))
+    elseif what == "slot_remove" then
+        ok, err = pcall(function() pc:ServerRemoveCompanyVehicleSlot(c.guid) end)
+        message = ok and ("asked to remove a vehicle slot from " .. c.name) or ("slot failed: " .. tostring(err))
+    end
+    log("%s", message)
+    later(1.5, write_companies)   -- the server's change arrives by replication
+end
+
+-- Admin: construction. A building under construction is an MTBuilding with a Construction actor; it is finished by
+-- delivering each step's materials (cargo) to its delivery point, and the server then raises Net_BuildingStep. There
+-- is no client RPC for delivering or finishing, so "Finish next step" only works where this game IS the server
+-- (single player / hosting): it raises the step the way the server would and replicates it.
+-- construction.txt: one line "key<TAB>step<TAB>distance m<TAB>delivered (Material xCount, ...)" for the nearest site
+local CONSTRUCTION_FILE = DIR .. "construction.txt"
+local function nearest_site(pc)
+    local me = pc.Pawn:K2_GetActorLocation()
+    local best, bd
+    for _, b in ipairs(FindAllOf("MTBuilding") or {}) do
+        pcall(function()
+            if not (valid(b) and valid(b.Construction)) then return end
+            local l = b:K2_GetActorLocation()
+            local d = math.sqrt((l.X - me.X) ^ 2 + (l.Y - me.Y) ^ 2) / 100
+            if d < 150 and (not bd or d < bd) then best, bd = b, d end
+        end)
+    end
+    return best, bd
+end
+local function write_construction()
+    local line = ""
+    pcall(function()
+        local pc = local_controller()
+        local b, d = nearest_site(pc)
+        if not b then return end
+        local mats = {}
+        pcall(function()
+            b.Net_DeliveredMaterials:ForEach(function(_, e)
+                local m = e:get()
+                mats[#mats + 1] = m.MaterialKey:ToString() .. " x" .. tostring(m.Count)
+            end)
+        end)
+        line = string.format("%s\t%d\t%.0f\t%s", b.Net_BuildingKey:ToString(), b.Net_BuildingStep, d, table.concat(mats, ", "))
+    end)
+    local f = io.open(CONSTRUCTION_FILE, "w")
+    if f then f:write(line, "\n"); f:close() end
+end
+local function finish_step()
+    local pc, host = require_admin(); if not pc then return end
+    if not host then message = "finishing construction only works in your own world for now (the server decides)"; return end
+    local b = nearest_site(pc)
+    if not b then message = "no construction site within 150 m"; return end
+    local ok, err = pcall(function()
+        b.Net_BuildingStep = b.Net_BuildingStep + 1
+        b:OnRep_BuildingStep()
+        pcall(function() b:MulticastSpawnConstructionSmokes() end)
+    end)
+    message = ok and ("construction advanced to step " .. tostring(b.Net_BuildingStep)) or ("finish failed: " .. tostring(err))
+    log("%s", message)
+    later(1, write_construction)
+end
+
+-- Admin: cargo. Every job on the map is an MTDelivery in the game state's Net_DeliverySystem.Deliveries (ID, cargo,
+-- count, sender / receiver points). Loading goes through the game's own ServerAcceptDelivery(ID, true, cargo space),
+-- the call the job screen makes, so the server spawns real cargo that pays and counts for construction as usual.
+-- The server may insist that you are at the pickup point: "Go to pickup" teleports you (and your car) there first.
+-- cargo.txt: id<TAB>cargo<TAB>count<TAB>from<TAB>to<TAB>distance km (nearest first, at most 500)
+local CARGO_FILE = DIR .. "cargo.txt"
+-- a point's map name: "Plastic Factory 2" (DeliveryPointName text + number), else its mission name, else the actor
+-- name without the _C_UAID_... suffix
+local function point_name(p)
+    if not valid(p) then return "?" end
+    local n = ""
+    pcall(function()
+        n = p.DeliveryPointName.Name:ToString()
+        local num = p.DeliveryPointName.Number
+        if n ~= "" and num and num > 0 then n = n .. " " .. num end
+    end)
+    if n == "" then pcall(function() n = p.MissionPointName:ToString() end) end
+    if n == "" then pcall(function() n = p:GetFName():ToString():gsub("_C_UAID.*", ""):gsub("_", " ") end) end
+    return n
+end
+local function deliveries()
+    local out = {}
+    local ok, err = pcall(function()
+        -- never touch the job's own SenderPoint / ReceiverPoint pointers: on a client they can be stale, and reading
+        -- one crashed the game (access violation, 2026-10-31). Match the live delivery-point actors by guid instead.
+        local function gk(g) return string.format("%d.%d.%d.%d", g.A, g.B, g.C, g.D) end
+        local points = {}
+        for _, pt in ipairs(FindAllOf("MTDeliveryPoint") or {}) do
+            pcall(function() if valid(pt) then points[gk(pt.DeliveryPointGuid)] = pt end end)
+        end
+        local ds = FindFirstOf("MotorTownGameState").Net_DeliverySystem
+        ds.Deliveries:ForEach(function(_, e)
+            pcall(function()
+                local d = e:get()
+                out[#out + 1] = { id = d.ID, key = d.CargoKey:ToString(), n = d.NumCargos,
+                    from = points[gk(d.SenderPointGuid)], to = points[gk(d.ReceiverPointGuid)] }
+            end)
+        end)
+    end)
+    if not ok then log("deliveries unreadable: %s", tostring(err)) end
+    return out
+end
+-- construction sites all share one name, so a drop-off at a building under construction is labelled with the
+-- building and its owner ("Construction Site: LargeGarage_01 (you)"), and every job shows how far its drop-off is
+-- from you, so the one for your own site is the one ~0 km away
+local function site_owners()
+    local names, mine = {}, ""
+    pcall(function() mine = local_controller().PlayerState.UniqueId:ToString() end)
+    for _, p in ipairs(players()) do pcall(function() names[p.ps.UniqueId:ToString()] = p.name end) end
+    local sites = {}
+    for _, b in ipairs(FindAllOf("MTBuilding") or {}) do
+        pcall(function()
+            if not (valid(b) and valid(b.Construction)) then return end
+            local id = b.Net_OwnerUniqueNetId:ToString()
+            sites[#sites + 1] = { at = b:K2_GetActorLocation(), key = b.Net_BuildingKey:ToString(),
+                owner = (id ~= "" and id == mine) and "you" or (names[id] or "someone offline") }
+        end)
+    end
+    return sites
+end
+local function drop_name(p, sites)
+    local n = point_name(p)
+    pcall(function()
+        local l = p:K2_GetActorLocation()
+        for _, st in ipairs(sites) do
+            if (st.at.X - l.X) ^ 2 + (st.at.Y - l.Y) ^ 2 < 6000 * 6000 then n = n .. ": " .. st.key .. " (" .. st.owner .. ")"; return end
+        end
+    end)
+    return n
+end
+local function km(p, me)
+    local d = -1
+    pcall(function()
+        local l = p:K2_GetActorLocation()
+        d = math.sqrt((l.X - me.X) ^ 2 + (l.Y - me.Y) ^ 2) / 100000
+    end)
+    return d
+end
+local function write_cargo()
+    local pc = local_controller()
+    local me = pc and view_of(pc)
+    local sites = site_owners()
+    local rows = {}
+    for _, d in ipairs(deliveries()) do rows[#rows + 1] = { d = d, dist = km(d.from, me), drop = km(d.to, me) } end
+    table.sort(rows, function(a, b) return a.dist < b.dist end)
+    local lines = {}
+    for i = 1, math.min(#rows, 500) do
+        local r = rows[i]
+        lines[#lines + 1] = string.format("%d\t%s\t%d\t%s\t%s\t%.1f\t%.1f", r.d.id, r.d.key, r.d.n, point_name(r.d.from),
+            drop_name(r.d.to, sites), r.dist, r.drop)
+    end
+    local f = io.open(CARGO_FILE .. ".tmp", "w")
+    if not f then return end
+    f:write(table.concat(lines, "\n"), "\n")
+    f:close()
+    os.remove(CARGO_FILE)
+    os.rename(CARGO_FILE .. ".tmp", CARGO_FILE)
+    message = string.format("%d cargo jobs on the map", #rows)
+end
+-- the cargo space to fill: a trailer hitched near you first, else your own vehicle's bed
+local function my_cargo_space(pc)
+    local car = seated_vehicle(pc) or pc.LastVehicle
+    local me = view_of(pc)
+    local best, best_d
+    for _, c in ipairs(FindAllOf("MTVehicleCargoSpaceComponent") or {}) do
+        pcall(function()
+            if not (valid(c) and c.bCanLoadCargo) then return end
+            local owner = c:GetOwner()
+            local l = owner:K2_GetActorLocation()
+            local d = math.sqrt((l.X - me.X) ^ 2 + (l.Y - me.Y) ^ 2)
+            local is_car = valid(car) and owner:GetAddress() == car:GetAddress()
+            if d > 3000 and not is_car then return end
+            local score = is_car and d + 2000 or d   -- a trailer behind you beats the truck's own bed
+            if not best_d or score < best_d then best, best_d = c, score end
+        end)
+    end
+    return best
+end
+local function pickup_of(id)
+    for _, d in ipairs(deliveries()) do if tostring(d.id) == id then return d end end
+    message = "that job is gone (refresh)"
+end
+-- load the picked job only, all of its units: ServerAcceptDelivery hands out one cargo per call (user test on the
+-- server 2026-11-02: one call per job loaded 1 of every order at the mill instead of the 4 planks one site needed), so
+-- call it again for the same job until its count is used up, the job is gone, or the trailer stops taking more.
+local function job_count(id)
+    for _, d in ipairs(deliveries()) do if d.id == id then return d.n end end
+    return 0
+end
+local function load_many(pc, job, done)
+    if not my_cargo_space(pc) then message = "no truck or trailer with cargo space near you"; return end
+    local want, n, stalls = math.max(1, job.n or 1), 0, 0
+    local function step(k)
+        local left = job_count(job.id)
+        if n >= want or left <= 0 or stalls >= 2 or k > want + 4 then
+            message = string.format("loaded %d of %d %s at %s", n, want, job.key, point_name(job.from)); log("%s", message)
+            if done then done(n) end
+            return
+        end
+        local space = my_cargo_space(pc)
+        local before = left
+        if space then pcall(function() pc:ServerAcceptDelivery(job.id, k == 1, space) end) end
+        message = string.format("loading %s %d / %d...", job.key, n + 1, want)
+        later(0.6, function()
+            if job_count(job.id) < before then n = n + 1; stalls = 0 else stalls = stalls + 1 end
+            step(k + 1)
+        end)
+    end
+    step(1)
+end
+-- strap everything on the cargo space (the game's own ServerStrapCargo, as the strap button does) so the load stays
+-- put through the teleport back (user 2026-11-02: cargo fell off the trailer on the return jump)
+local function cargo_on(space)
+    local out = {}
+    pcall(function() space.Cargos:ForEach(function(_, e) local c = e:get(); if valid(c) then out[#out + 1] = c end end) end)
+    if #out > 0 then return out end
+    pcall(function()
+        local owner = space:GetOwner(); local o = owner:K2_GetActorLocation()
+        for _, c in ipairs(FindAllOf("MTCargo") or {}) do
+            pcall(function()
+                if not valid(c) then return end
+                local parent = nil
+                pcall(function() parent = c:GetAttachParentActor() end)
+                local l = c:K2_GetActorLocation()
+                local near = (l.X - o.X) ^ 2 + (l.Y - o.Y) ^ 2 < 900 * 900 and math.abs(l.Z - o.Z) < 400
+                if (valid(parent) and parent:GetAddress() == owner:GetAddress()) or near then out[#out + 1] = c end
+            end)
+        end
+    end)
+    return out
+end
+local function strap_all(pc)
+    local space = my_cargo_space(pc); if not space then return 0 end
+    local n = 0
+    for _, c in ipairs(cargo_on(space)) do
+        if pcall(function() pc:ServerStrapCargo(c) end) then n = n + 1 end
+    end
+    log("strapped %d cargo", n)
+    return n
+end
+local function cargo_load(id)
+    local pc = require_admin(); if not pc then return end
+    local job = pickup_of(id); if not job then return end
+    load_many(pc, job, function() later(1.5, function() strap_all(pc) end) end)
+end
+-- the server only loads a job into a vehicle at its pickup point (user test 2026-10-31: loading from a distance gave
+-- an error), so: teleport there with the car (a hitched trailer follows), load once it has settled, then bring the
+-- car back to where it started
+local function to_pickup(pc, job, done)
+    if not valid(job.from) then message = "that job's pickup isn't known to your game"; return false end
+    local l = job.from:K2_GetActorLocation()
+    local abs = to_absolute(pc, { X = l.X, Y = l.Y, Z = l.Z + 300 })
+    local yaws = {}
+    pcall(function() yaws[#yaws + 1] = seated_vehicle(pc):K2_GetActorRotation().Yaw end)
+    pcall(function() local y = job.from:K2_GetActorRotation().Yaw; yaws[#yaws + 1] = y; yaws[#yaws + 1] = y + 180 end)
+    if #yaws == 0 then yaws[1] = 0 end
+    message = "going to " .. point_name(job.from) .. "..."
+    -- trace from 8 m above the marker only: higher, canopies and pipe racks over the bay count as ground
+    local top = abs.Z + 500
+    return teleport_settled(pc, abs, "1", top, function(ok)
+        if ok then repair_quiet(pc) end
+        if done then done(ok) end
+    end, function(z) return clear_spot(pc, abs, top, yaws, z) end)
+end
+local function cargo_fetch(id)
+    local pc = require_admin(); if not pc then return end
+    if not seated_vehicle(pc) then message = "get in your truck first"; return end
+    local job = pickup_of(id); if not job then return end
+    local here = view_of(pc)
+    local home = to_absolute(pc, { X = here.X, Y = here.Y, Z = here.Z + 150 })
+    to_pickup(pc, job, function(ok)
+        if not ok then return end
+        later(1.5, function()   -- let the trailer settle
+            load_many(pc, job, function(n)
+                later(1.5, function()   -- let the loaded cargo settle on the bed, then strap it down
+                    local st = strap_all(pc)
+                    later(1.5, function()
+                        teleport_settled(pc, home, "1", home.Z + 1500, function(back)
+                            if back then repair_quiet(pc) end
+                            message = back and string.format("back; loaded %d %s, strapped %d", n, job.key, st) or message
+                        end)
+                    end)
+                end)
+            end)
+        end)
+    end)
+end
+local function cargo_goto(id)
+    local pc = require_admin(); if not pc then return end
+    local job = pickup_of(id); if not job then return end
+    to_pickup(pc, job, function(ok) if ok then message = "at the pickup: " .. point_name(job.from) .. " (now press Load here)" end end)
+end
+
 local function run(line)
     local parts = {}
     for p in (line .. "\t"):gmatch("([^\t]*)\t") do parts[#parts + 1] = p end
@@ -763,7 +1235,14 @@ local function run(line)
         if tuning_open then turbo = read_turbo(local_controller()) end
     elseif cmd == "admin_tab" then
         admin_open = parts[3] == "1"
-        if admin_open then write_players() end
+        if admin_open then write_players(); write_companies(); write_construction() end
+    elseif cmd == "companies_refresh" then write_companies(); write_construction(); message = "lists refreshed"
+    elseif cmd == "company" then company_cmd(parts[3], parts[4], parts[5])
+    elseif cmd == "finish_step" then finish_step()
+    elseif cmd == "cargo_refresh" then write_cargo()
+    elseif cmd == "cargo_load" then cargo_load(parts[3])
+    elseif cmd == "cargo_goto" then cargo_goto(parts[3])
+    elseif cmd == "cargo_fetch" then cargo_fetch(parts[3])
     elseif cmd == "tp_player" then tp_player(parts[3], parts[4])
     elseif cmd == "tp_waypoint" then tp_waypoint(parts[3])
     elseif cmd == "bring_car" then bring_car(parts[3])
@@ -869,6 +1348,22 @@ local function tick()
                     else
                         message = "nothing appeared for " .. p_.key .. " - move to open flat ground and try again"
                         log("%s", message)
+                        -- diagnosis: which of the mod car's packages fails to load? (class first, then its parts)
+                        local k = p_.key
+                        local m = "/Game/Cars/Models/" .. k .. "/"
+                        local paths = { m .. k .. "." .. k .. "_C", m .. "Body.Body", m .. "Dashboard.Dashboard",
+                                m .. "SideMirror_Left.SideMirror_Left", m .. "Tailgate.Tailgate",
+                                "/Game/Cars/Parts/SteeringWheels/" .. k .. "." .. k,
+                                "/Game/Cars/Parts/Wheels/" .. k .. "_L." .. k .. "_L",
+                                "/Game/Cars/Parts/Engine/Sound/" .. k .. "/SC_" .. k .. ".SC_" .. k,
+                                -- controls from a pak that works (Diablo spawns at its dealer)
+                                "/Game/Cars/Models/MW_DIABLOSV/Body.Body", "/Game/Cars/Models/MW_DIABLOSV/MW_DIABLOSV.MW_DIABLOSV_C" }
+                        ExecuteInGameThread(function()   -- LoadAsset only works on the game thread
+                            for _, path in ipairs(paths) do
+                                local okl, a = pcall(function() return LoadAsset(path) end)
+                                log("diag load %s: ok=%s valid=%s", path, tostring(okl), tostring(okl and a ~= nil and a:IsValid()))
+                            end
+                        end)
                     end
                 end
             end

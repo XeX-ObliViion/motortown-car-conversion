@@ -5465,8 +5465,8 @@
   "Tire3": "PerformanceTire_15",
   "Wheel0": "PS_VIPER",
   "Wheel1": "PS_VIPER",
-  "Wheel2": "PS_VIPER",
-  "Wheel3": "PS_VIPER",
+  "Wheel2": "PS_VIPER_REAR",
+  "Wheel3": "PS_VIPER_REAR",
   "BrakePad0": "BrakePad_Small_02",
   "BrakePad1": "BrakePad_Small_02",
   "BrakePad2": "BrakePad_Small_02",
@@ -7024,5 +7024,6 @@
   ],
   "depth": 2.0,
   "to": "Bottom"
- }
+ },
+ "rear_wheel_part": true
 }

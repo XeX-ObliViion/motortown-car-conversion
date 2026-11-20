@@ -1,0 +1,285 @@
+{
+ "kind": "rims",
+ "car": "BNG_Rims",
+ "out_dir": "~/mt-work/build/BNG_Rims/meshes",
+ "source_dir": "~/mt-work/bng",
+ "mods": [
+  "s550",
+  "fairlady"
+ ],
+ "cost": 1500,
+ "base_wheel": "Zino",
+ "two_tone": false,
+ "reduce": 0.5,
+ "rims": [
+  {
+   "row": "BNG_Rims_DB1RWide",
+   "mesh": "1320DragB1RWide",
+   "tyre": "t1320DragMPSSlick",
+   "display": "15x10 1320 B1R Drag Wheel (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DBSCWide",
+   "mesh": "1320DragBSCWide",
+   "tyre": "t1320DragMPSSlick",
+   "display": "15x10 1320 BSC Drag Wheel (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DGBLWide",
+   "mesh": "1320DragGBLWide",
+   "tyre": "t1320DragMPSSlick",
+   "display": "15x10 1320 GBL Drag Wheel (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DMAGWide",
+   "mesh": "1320DragMAGWide",
+   "tyre": "t1320DragMPSSlick",
+   "display": "15x10 1320 MAG Drag Wheel (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DWVSWide",
+   "mesh": "1320DragWVSWide",
+   "tyre": "t1320DragMPSSlick",
+   "display": "15x10 1320 WVS Drag Wheel (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DB1RSkinny",
+   "mesh": "1320DragB1RSkinny",
+   "tyre": "t1320DragFHSkinny",
+   "display": "15x4 1320 B1R Drag Wheel (skinny) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DBSCSkinny",
+   "mesh": "1320DragBSCSkinny",
+   "tyre": "t1320DragFHSkinny",
+   "display": "15x4 1320 BSC Drag Wheel (skinny) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DGBLSkinny",
+   "mesh": "1320DragGBLSkinny",
+   "tyre": "t1320DragFHSkinny",
+   "display": "15x4 1320 GBL Drag Wheel (skinny) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DMAGSkinny",
+   "mesh": "1320DragMAGSkinny",
+   "tyre": "t1320DragFHSkinny",
+   "display": "15x4 1320 MAG Drag Wheel (skinny) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_DWVSkinny",
+   "mesh": "1320DragWVSkinny",
+   "tyre": "t1320DragFHSkinny",
+   "display": "15x4 1320 WVS Drag Wheel (skinny) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_tshvolkte37high",
+   "mesh": "tsh_volk_te37_high",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "GR Supra's Volk TE37 Ultra (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_grsuprawheel",
+   "mesh": "grsuprawheel",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "GR Supra (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_grsuprawheelb",
+   "mesh": "grsuprawheelb",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "GR Supra A91 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_grsupragt4wheel",
+   "mesh": "grsupra_gt4wheel",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "GR Supra GT4 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_grsuprawheelh",
+   "mesh": "grsuprawheelh",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "GR Supra Heritage (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_grsuprawheelhre",
+   "mesh": "grsupra_wheelhre",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "HRE P107SC (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55009a19x9",
+   "mesh": "s550_wheel_09a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang Mach 1 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55009a19x11",
+   "mesh": "s550_wheel_09a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang Mach 1 (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55001a19x9",
+   "mesh": "s550_wheel_01a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang GT (Black) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55001a19x11",
+   "mesh": "s550_wheel_01a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang GT (Black) (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55001b19x9",
+   "mesh": "s550_wheel_01b_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang GT (Silver) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55001b19x11",
+   "mesh": "s550_wheel_01b_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang GT (Silver) (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55002a19x11",
+   "mesh": "s550_wheel_02a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Shelby GT350R (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55003a19x9",
+   "mesh": "s550_wheel_03a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang Heritage (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55003a19x11",
+   "mesh": "s550_wheel_03a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang Heritage (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55004a19x9",
+   "mesh": "s550_wheel_04a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang EcoBoost Performance Package (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55004a19x11",
+   "mesh": "s550_wheel_04a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang EcoBoost Performance Package (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55005a19x11",
+   "mesh": "s550_wheel_05a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "RTR Tech-7, (Green) (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55005b19x11",
+   "mesh": "s550_wheel_05b_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "RTR Tech-7, (Gray) (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55006a20x11",
+   "mesh": "s550_wheel_06a_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "Ford Shelby GT500 CF Handling Package (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55007a20x11",
+   "mesh": "s550_wheel_07a_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "RTR Aero-7, (Green) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55007b20x11",
+   "mesh": "s550_wheel_07b_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "RTR Aero-7, (Gray) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55007c20x11",
+   "mesh": "s550_wheel_07c_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "RTR Aero-8 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55008a20x11",
+   "mesh": "s550_wheel_08a_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "DeBerti Design (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55013a20x11",
+   "mesh": "s550_wheel_13a_20x11",
+   "tyre": "tire_01a_20x11_25_s550",
+   "display": "Ford Shelby GT500 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55014a18x9",
+   "mesh": "s550_wheel_14a_18x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang EcoBoost (Black) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55014b18x9",
+   "mesh": "s550_wheel_14b_18x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang EcoBoost (Silver) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55015a19x9",
+   "mesh": "s550_wheel_15a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Roush Mustang Stage 3 (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55015a19x11",
+   "mesh": "s550_wheel_15a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Roush Mustang Stage 3 (wide) (BeamNG)"
+  },
+  {
+   "row": "BNG_Rims_S55010a19x9",
+   "mesh": "s550_wheel_10a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang Style 10 (BeamNG)",
+   "note": "in the mod's model, unused by its parts lists"
+  },
+  {
+   "row": "BNG_Rims_S55010a19x11",
+   "mesh": "s550_wheel_10a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang Style 10 (wide) (BeamNG)",
+   "note": "in the mod's model, unused by its parts lists"
+  },
+  {
+   "row": "BNG_Rims_S55011a19x9",
+   "mesh": "s550_wheel_11a_19x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang Style 11 (BeamNG)",
+   "note": "in the mod's model, unused by its parts lists"
+  },
+  {
+   "row": "BNG_Rims_S55011a19x11",
+   "mesh": "s550_wheel_11a_19x11",
+   "tyre": "tire_01a_19x11_26_s550",
+   "display": "Ford Mustang Style 11 (wide) (BeamNG)",
+   "note": "in the mod's model, unused by its parts lists"
+  },
+  {
+   "row": "BNG_Rims_S55012a18x9",
+   "mesh": "s550_wheel_12a_18x9",
+   "tyre": "tire_01a_19x9_26_s550",
+   "display": "Ford Mustang Style 12 (BeamNG)",
+   "note": "in the mod's model, unused by its parts lists"
+  }
+ ]
+}

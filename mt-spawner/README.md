@@ -16,6 +16,7 @@ Only the **host** (single player, or whoever hosts the session) or a **server ad
 - **Remove nearest** despawns the closest vehicle within 15 m. It can be someone else's, so be careful.
 - **Use developer spawn** falls back to the developers' `Cheat_AddVehicle` if the normal spawn doesn't produce a vehicle. The status line says so when that happens.
 - Recent spawns appear as quick buttons.
+- **Hotkeys tab:** bind your own keys or combos (Ctrl/Shift/Alt + key) to actions: repair, refuel, flip, teleport to waypoint, remove nearest, time and weather, spawn a chosen vehicle, and the menu toggle itself. Saved in `mt_spawner.ini` under `[Hotkeys]`. They work with the menu closed, only while the game window is in front and not while typing in the menu.
 
 ## Files
 - `src/` holds the overlay. It reuses the RV trainer's DX12 hook, IPC and proxy. The proxy works because Motor Town's modules load VERSION.dll from the Win64 folder.

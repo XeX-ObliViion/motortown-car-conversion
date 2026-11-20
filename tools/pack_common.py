@@ -16,6 +16,56 @@ PLATFORM = os.environ.get("MT_PLATFORM", "Windows")
 BUILD = os.path.expanduser("~/mt-work/build") + ("" if PLATFORM == "Windows" else "/server")
 os.makedirs(BUILD, exist_ok=True)
 SHARED = ("DataAsset/", "Cars/Parts/Engine/", "Cars/Parts/Transmission/")
+# PACK_EXCLUDE=HEAT_RX7,...: leave a work-in-progress car's engine/gearbox/sound files out (release builds)
+EXCL = [x for x in os.environ.get("PACK_EXCLUDE", "").split(",") if x]
+
+
+# 0.7.20: qxZap's DataTable Framework (AAAA_DataTableFramework_99_P, priority 99, needed by More Tuning 3.0) owns the
+# Vehicles / VehicleParts composites; mods register their own tables at reserved slot paths it lists as parents.
+# So our composites are left out and our tables are renamed onto slots 25-28 (DTF=0: the old composite override).
+DTF_SLOTS = {"DataAsset/VehicleParts/Wheels_ProStreet": "ReservedRegistration/Slots/Slot25/DT_VehicleParts",
+             "DataAsset/VehicleParts/Aero_ProStreet": "ReservedRegistration/Slots/Slot26/DT_VehicleParts",
+             "DataAsset/VehicleParts/Headlights_ProStreet": "ReservedRegistration/Slots/Slot27/DT_VehicleParts",
+             "DataAsset/VehicleParts/Tuning_ProStreet": "ReservedRegistration/Slots/Slot28/DT_VehicleParts",
+             "DataAsset/Vehicles/Vehicles_ProStreet": "ReservedRegistration/Slots/Slot25/DT_Vehicles"}
+UAG = os.path.expanduser("~/tools/uassetgui/UAssetGUI.exe")
+
+
+def dtf_slots(stage):
+    import json
+    root = os.path.join(stage, "MotorTown", "Content")
+    for comp in ("DataAsset/VehicleParts/VehicleParts", "DataAsset/Vehicles/Vehicles"):
+        for ext in (".uasset", ".uexp"):
+            f = os.path.join(root, comp + ext)
+            if os.path.exists(f):
+                os.remove(f)
+    for src, dst in DTF_SLOTS.items():
+        a = os.path.join(root, src + ".uasset")
+        if not os.path.exists(a):
+            continue
+        j = a + ".json"
+        subprocess.run([UAG, "tojson", a, j, "VER_UE5_5", "MotorTown"], check=True, cwd=os.path.dirname(UAG))
+        txt = open(j, encoding="utf-8").read()
+        old_pkg, new_pkg = "/Game/" + src, "/Game/" + dst
+        old_obj, new_obj = src.rsplit("/", 1)[1], dst.rsplit("/", 1)[1]
+        d = json.loads(txt)
+        d["NameMap"] = [new_pkg if n == old_pkg else new_obj if n == old_obj else n for n in d["NameMap"]]
+        for e in d["Exports"]:
+            if e.get("ObjectName") == old_obj:
+                e["ObjectName"] = new_obj
+        if d.get("PackageGuid") is None:
+            pass
+        out = os.path.join(root, dst + ".uasset")
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        jo = out + ".json"
+        json.dump(d, open(jo, "w", encoding="utf-8"))
+        subprocess.run([UAG, "fromjson", jo, out, "MotorTown"], check=True, cwd=os.path.dirname(UAG))
+        for f in (j, jo, a, a[:-7] + ".uexp"):
+            if os.path.exists(f):
+                os.remove(f)
+        if not os.path.exists(out[:-7] + ".uexp"):
+            raise SystemExit("dtf slot write failed: " + out)
+        print("  table %s -> %s" % (src, dst))
 
 
 def main():
@@ -28,7 +78,7 @@ def main():
             continue
         for f in files:
             rel = os.path.relpath(os.path.join(dirpath, f), gen).replace(os.sep, "/")
-            if rel.startswith(SHARED):
+            if rel.startswith(SHARED) and not any(x in rel for x in EXCL):
                 dst = os.path.join(stage, "MotorTown", "Content", rel)
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy2(os.path.join(dirpath, f), dst); n += 1
@@ -38,10 +88,12 @@ def main():
     for dirpath, _, files in os.walk(snd):
         for f in files:
             rel = os.path.relpath(os.path.join(dirpath, f), cooked).replace(os.sep, "/")
-            if rel.startswith(("Cars/Parts/Engine/Sound/PS_", "Cars/Parts/Engine/Sound/MW_")) and not os.path.basename(f).startswith("SC_"):
+            if rel.startswith(("Cars/Parts/Engine/Sound/PS_", "Cars/Parts/Engine/Sound/MW_", "Cars/Parts/Engine/Sound/AC_", "Cars/Parts/Engine/Sound/HEAT_", "Cars/Parts/Engine/Sound/BNG_")) and not os.path.basename(f).startswith("SC_") and not any(x in rel for x in EXCL):
                 dst = os.path.join(stage, "MotorTown", "Content", rel)
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy2(os.path.join(dirpath, f), dst); n += 1
+    if os.environ.get("DTF", "1") == "1":
+        dtf_slots(stage)
     out = os.path.join(BUILD, "PS_Common_P.pak")
     subprocess.run([REPAK, "pack", "--version", "V11", stage, out], check=True)
     print("packed %d files -> %s" % (n, out))

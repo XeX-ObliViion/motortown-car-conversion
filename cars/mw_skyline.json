@@ -1,0 +1,3220 @@
+{
+ "base_vehicle": "Vista",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_SKYLINE_HEADLIGHT": "HeadLight",
+  "Tex_SKYLINE_BRAKELIGHT": "TailLight",
+  "Tex_SKYLINE_RIM": "Wheel_01",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_V": "ReverseLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -34,
+    38,
+    6
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -34,
+    -38,
+    6
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    21,
+    0,
+    100
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -10,
+    0,
+    108
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -60,
+    0,
+    108
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    222,
+    -58,
+    47
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    222,
+    58,
+    47
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    228,
+    62,
+    35
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    228,
+    -62,
+    35
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -226,
+    -56,
+    64
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -226,
+    56,
+    64
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -34,
+   38,
+   94
+  ],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    4.9,
+    -17.0,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -3.0,
+    -7.0,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -4.7,
+    -5.8,
+    0
+   ]
+  },
+  "body_mass": 1074,
+  "body_material": "/Game/Cars/Materials/Body/M_Body",
+  "set_props": {
+   "LeftDoor_GEN_VARIABLE": {
+    "DoorType": "PassengerDoor"
+   },
+   "RightDoor_GEN_VARIABLE": {
+    "DoorType": "DriverDoor"
+   }
+  }
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror:mirror"
+ },
+ "strip_part_slots": [
+  "Fender",
+  "SideSkirt"
+ ],
+ "wheel_part": true,
+ "car": "MW_SKYLINE",
+ "display_name": "Nissan Skyline GT-R R34 (Most Wanted)",
+ "prefix": "CTS",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mwr/SKYLINE34R/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mwr/SKYLINE34R/tex/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_SKYLINE/meshes",
+ "cost": 120000,
+ "wheel_display_name": "Skyline GT-R Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "0x3EDA2CA3": "Paint",
+  "0x192A14A9": "Tex_SKYLINE_MISC",
+  "0x29C86189": "Tex_SKYLINE_BADGING",
+  "0x4B66F26A": "Tex_SKYLINE_HEADLIGHT",
+  "0xA0CF8B3D": "Tex_SKYLINE_BRAKELIGHT",
+  "0xE689AF29": "Tex_SKYLINE_INTERIOR",
+  "0x02B52399": "Tex_SKYLINE_BRAKELIGHT",
+  "0x0AB88F5D": "Glass",
+  "0x267D188C": "LampGlass",
+  "0x3617DCFC": "Tex_SKYLINE_BRAKELIGHT",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x4CDEBFCA": "Glass",
+  "0x60F8B13C": "Glass",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x7811C146": "Tex_MWG_ROTOR1",
+  "0x8C283C65": "Bottom",
+  "0x8C6634E5": "Tex_SKYLINE_RIM",
+  "0xA532FC46": "Tex_SKYLINE_HEADLIGHT",
+  "0xA7E6EA53": "Tex_SKYLINE_HEADLIGHT",
+  "0xBD1F0E0A": "Bottom",
+  "0xCE9ADE23": "Tex_SKYLINE_HEADLIGHT",
+  "0xE7E4EF49": "Glass",
+  "0xF68EF19F": "LampGlass",
+  "0xCE4AFE9C": "Paint",
+  "0xE2A5C626": "Glass",
+  "0x825C0B82": "Tex_SKYLINE_MISC",
+  "0x898D008F": "Tex_SKYLINE_MISC",
+  "0x58B595C2": "Tex_SKYLINE_BADGING",
+  "0xF31D6A82": "Tex_SKYLINE_INTERIOR",
+  "0x30221F8F": "Tex_SKYLINE_GAUGES",
+  "0x825B9727": "Tex_SKYLINE_LOGO",
+  "0x7737B8CC": "Tex_SKYLINE_ENGINE",
+  "0x9758349E": "Tex_SKYLINE_RIM",
+  "0x825FE20A": "Tex_SKYLINE_TIRE",
+  "0x68100815": "Tex_MWG_RADIATOR",
+  "0x3FCF7AF4": "Tex_SKYLINE_BRAKELIGHT",
+  "0x9553DCF6": "Tex_SKYLINE_BRAKELIGHT",
+  "0x32283A11": "Bottom"
+ },
+ "texture_sources": {
+  "Tex_SKYLINE_MISC": "0x825C0B82",
+  "Tex_SKYLINE_BADGING": "0x58B595C2",
+  "Tex_SKYLINE_BRAKELIGHT": "0x9553DCF6",
+  "Tex_SKYLINE_INTERIOR": "0xF31D6A82",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_SKYLINE_RIM": "0x9758349E",
+  "Tex_SKYLINE_TIRE": "0x825FE20A",
+  "Tex_SKYLINE_LOGO": "0x825B9727",
+  "Tex_SKYLINE_ENGINE": "0x7737B8CC",
+  "Tex_MWG_RADIATOR": "0x68100815",
+  "Tex_SKYLINE_GAUGES": "0x30221F8F",
+  "Tex_SKYLINE_HEADLIGHT": "0x9553DCF6",
+  "Tex_MWG_ROTOR1": "0x7811C146"
+ },
+ "meshes": {
+  "Body": {
+   "drop_slots": [
+    "LampGlass"
+   ],
+   "drop_boxes": [
+    [
+     17,
+     -12.6,
+     95,
+     24.5,
+     11.5,
+     109.5
+    ]
+   ],
+   "parts": [
+    {
+     "part": "BASE",
+     "skip_groups": [
+      0
+     ],
+     "note": "group 0 = the mirror glass (SideMirror meshes)"
+    },
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ]
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW"
+    },
+    {
+     "part": "KIT00_INTERIOR"
+    },
+    {
+     "part": "KIT00_FRONT_BRAKE",
+     "offset": [
+      132.3,
+      -64,
+      33
+     ],
+     "note": "brakes in the body at each hub (user 2026-11-06: not part of the wheel; hub z = tyre radius)"
+    },
+    {
+     "part": "KIT00_FRONT_BRAKE",
+     "offset": [
+      132.3,
+      64,
+      33
+     ],
+     "mirror": true,
+     "note": "brakes in the body at each hub (user 2026-11-06: not part of the wheel; hub z = tyre radius)"
+    },
+    {
+     "part": "KIT00_REAR_BRAKE",
+     "offset": [
+      -133.3,
+      -64,
+      33
+     ],
+     "note": "brakes in the body at each hub (user 2026-11-06: not part of the wheel; hub z = tyre radius)"
+    },
+    {
+     "part": "KIT00_REAR_BRAKE",
+     "offset": [
+      -133.3,
+      64,
+      33
+     ],
+     "mirror": true,
+     "note": "brakes in the body at each hub (user 2026-11-06: not part of the wheel; hub z = tyre radius)"
+    }
+   ],
+   "clip_boxes": [
+    [
+     -52,
+     -100,
+     12,
+     69,
+     -60,
+     75
+    ],
+    [
+     -57,
+     -100,
+     75,
+     66,
+     -52,
+     103
+    ],
+    [
+     -52,
+     60,
+     12,
+     69,
+     100,
+     75
+    ],
+    [
+     -57,
+     52,
+     75,
+     66,
+     100,
+     103
+    ]
+   ],
+   "clip_mode": "drop",
+   "uv_split": [
+    {
+     "from": "Tex_SKYLINE_GAUGES",
+     "to": "Gauges",
+     "box": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "box3d": [
+      45,
+      15,
+      55,
+      62,
+      60,
+      80
+     ]
+    },
+    {
+     "from": "Tex_SKYLINE_BRAKELIGHT",
+     "to": "Tex_SKYLINE_HEADLIGHT",
+     "box": [
+      0.75,
+      0,
+      1,
+      1
+     ],
+     "box3d": [
+      150,
+      -100,
+      20,
+      260,
+      100,
+      80
+     ]
+    }
+   ],
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_GAUGES",
+     "uv": [
+      0.96,
+      0.0,
+      1.0,
+      0.04
+     ],
+     "box": [
+      45,
+      -60,
+      58,
+      58,
+      60,
+      80
+     ],
+     "note": "the MW model's own static 3D needles (sample the red corner swatch of the dial atlas); user 2026-11-12: second pair of needles"
+    },
+    {
+     "slot": "Tex_SKYLINE_GAUGES",
+     "uv": [
+      0.96,
+      0.96,
+      1.0,
+      1.0
+     ],
+     "box": [
+      45,
+      -60,
+      58,
+      58,
+      60,
+      80
+     ],
+     "note": "the MW model's own static 3D needles (sample the red corner swatch of the dial atlas); user 2026-11-12: second pair of needles"
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Door_Left": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ]
+    },
+    {
+     "part": "KIT00_INTERIOR"
+    },
+    {
+     "part": "BASE",
+     "skip_groups": [
+      0
+     ]
+    }
+   ],
+   "bbox_collision": true,
+   "clip_boxes": [
+    [
+     -52,
+     -100,
+     12,
+     69,
+     -60,
+     75
+    ],
+    [
+     -57,
+     -100,
+     75,
+     66,
+     -52,
+     103
+    ]
+   ],
+   "clip_mode": "keep"
+  },
+  "Door_Right": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ]
+    },
+    {
+     "part": "KIT00_INTERIOR"
+    },
+    {
+     "part": "BASE",
+     "skip_groups": [
+      0
+     ]
+    }
+   ],
+   "bbox_collision": true,
+   "clip_boxes": [
+    [
+     -52,
+     60,
+     12,
+     69,
+     100,
+     75
+    ],
+    [
+     -57,
+     52,
+     75,
+     66,
+     100,
+     103
+    ]
+   ],
+   "clip_mode": "keep"
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "BASE",
+     "slot": "Mirror",
+     "groups": [
+      0
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -3.0,
+     -7.0,
+     0
+    ]
+   },
+   "keep_boxes": [
+    [
+     30,
+     -100,
+     65,
+     55,
+     -74,
+     92
+    ]
+   ]
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CTS",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CTS",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CTS",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CTS",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CTS",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CTS",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CTS",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CTS",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      158.7,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -157.3
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      -76,
+      55,
+      -205,
+      -40,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    },
+    {
+     "slot": "Tex_SKYLINE_MISC",
+     "uv": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box": [
+      -226,
+      40,
+      55,
+      -205,
+      76,
+      81
+     ],
+     "note": "dark MISC faces over the outer tail lamps (lens covers MW draws as glass): the outer rounds were hidden"
+    }
+   ]
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -157.3,
+      158.7
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CTS",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CTS",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      205,
+      0,
+      -82
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "BASE",
+     "slot": "Mirror",
+     "groups": [
+      0
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -4.7,
+     -5.8,
+     0
+    ],
+    "mirror_frame": true
+   },
+   "keep_boxes": [
+    [
+     30,
+     -100,
+     65,
+     55,
+     -74,
+     92
+    ]
+   ]
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_SKYLINE_R",
+  "Wheel_R": "MW_SKYLINE_L",
+  "SteeringWheel": "MW_SKYLINE"
+ },
+ "wheels": {
+  "front_x": 132.3,
+  "rear_x": -133.3,
+  "half_track": 75,
+  "z": 17,
+  "rear_z": 19,
+  "radius": 33,
+  "auto_arches": true
+ },
+ "part_overrides": {
+  "Engine": "PS_SKYLINE_RB26",
+  "Transmission": "PS_SKYLINE_6MT",
+  "FinalDriveRatio": "103",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "MW_SKYLINE",
+  "Wheel1": "MW_SKYLINE",
+  "Wheel2": "MW_SKYLINE",
+  "Wheel3": "MW_SKYLINE",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "MW_SKYLINE_FrontBumper_KIT00",
+  "RearBumper": "MW_SKYLINE_RearBumper_KIT00",
+  "Bonnet": "MW_SKYLINE_Bonnet_KIT00",
+  "RearWing": "MW_SKYLINE_RearWing_STOCK"
+ },
+ "performance_source": "same drivetrain as PS_SKYLINE: ProStreet vehicle.yml skyline_track: MASS 1540, FINAL_GEAR 3.545, GEAR_RATIO R3.32/3.827/2.36/1.685/1.312/1.0/0.793, RED_LINE 7950, MAX_RPM 8600, TORQUE_SPLIT 0.5, turbocharger; torque scaled to the factory 392 Nm",
+ "TODO": [
+  "render parts (tools/render_car.py) and fix texture_slots / Body parts",
+  "steering wheel extract (front render)",
+  "dial sockets + gauge_faces (uv_to_3d)",
+  "lamps: signal rules (amber survey / uv_box)",
+  "mirrors (fortem_mirror_aim for shared-mesh bases)",
+  "seats + cockpit_camera + RoomMirror",
+  "stance from arch edges (skill: stance reference per base)",
+  "sockets: exhaust / RearWing",
+  "kits: add_body_kits(_mw).py",
+  "skins (vinyl_check 0.53)",
+  "engine sound",
+  "dealer bay (user F6)"
+ ],
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    40
+   ],
+   "size": [
+    450,
+    178,
+    50
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    92
+   ],
+   "size": [
+    215,
+    145,
+    46
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     27.98,
+     35.9,
+     62.63
+    ],
+    "rot": [
+     -14.33,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -226,
+     -40,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -226,
+     -40,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -205,
+     0,
+     82
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     116
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -228,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     23.956,
+     -6.4,
+     11.796
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -94.33
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     23.956,
+     6.35,
+     11.796
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -94.33
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     24.197,
+     -14.75,
+     8.669
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -94.33
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     24.198,
+     15.48,
+     8.627
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -94.33
+    ]
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   22,
+   22,
+   24
+  ],
+  "ink": [
+   240,
+   240,
+   236
+  ],
+  "minor_ink": [
+   170,
+   170,
+   170
+  ],
+  "red_color": [
+   225,
+   35,
+   25
+  ],
+  "font_file": "arialbd.ttf",
+  "glow_face": [
+   70,
+   78,
+   95
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  220,
+  25,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.835,
+  "Speed": 0.835,
+  "Fuel": 0.802,
+  "Temp": 0.802
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     54.11,
+     29.5,
+     68.13
+    ],
+    "rot": [
+     0,
+     -90,
+     -80.0
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     54.11,
+     42.25,
+     68.13
+    ],
+    "rot": [
+     0,
+     -90,
+     -80.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     53.57,
+     21.15,
+     65.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -80.0
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     53.56,
+     51.38,
+     65.0
+    ],
+    "rot": [
+     0,
+     -90,
+     -80.0
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": -3.0,
+   "width": 3.6,
+   "height": 0.9,
+   "out": 0.25
+  }
+ },
+ "gauge_faces": {
+  "Tex_SKYLINE_GAUGES": [
+   {
+    "center": [
+     0.293,
+     0.297
+    ],
+    "face": [
+     0.293,
+     0.297,
+     0.3
+    ],
+    "radius": 0.255,
+    "rotate": 0,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000 r/min",
+      0.22,
+      270
+     ]
+    ],
+    "caption_font": 0.1
+   },
+   {
+    "center": [
+     0.707,
+     0.703
+    ],
+    "face": [
+     0.707,
+     0.703,
+     0.3
+    ],
+    "radius": 0.255,
+    "rotate": 0,
+    "min": 0,
+    "max": 200,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.15,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.787,
+     0.205
+    ],
+    "face": [
+     0.787,
+     0.205,
+     0.2
+    ],
+    "radius": 0.165,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   },
+   {
+    "center": [
+     0.25,
+     0.79
+    ],
+    "face": [
+     0.25,
+     0.79,
+     0.2
+    ],
+    "radius": 0.165,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_SKYLINE_GAUGES",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_SKYLINE_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "texture_upscale": {
+  "Tex_SKYLINE_GAUGES": 8
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:/Users/noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_ROTOR1": "C:/Users/noust/nfs-work/mwglobal_tex/textures"
+ },
+ "ai_upscale": [
+  "Tex_SKYLINE_INTERIOR",
+  "Tex_SKYLINE_MISC",
+  "Tex_SKYLINE_BADGING",
+  "Tex_SKYLINE_ENGINE"
+ ],
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    26.9,
+    35.9,
+    63.2
+   ],
+   "radius": 19,
+   "x_range": [
+    16,
+    34
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    27.979300000000002,
+    35.9,
+    62.626050000000006
+   ],
+   "tilt_deg": 14.33
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_MWG_GRILL01",
+  "Tex_MWG_GRILL02",
+  "Tex_SKYLINE_BADGING"
+ ],
+ "mw_kits": {
+  "front_split": 158.7,
+  "rear_split": -157.3
+ },
+ "lamp_slots": {
+  "Tex_SKYLINE_HEADLIGHT": "head",
+  "Tex_SKYLINE_BRAKELIGHT": "tail",
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_BRAKELIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_MISC"
+  },
+  "Signal_L_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_SKYLINE_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_BRAKELIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_SKYLINE_MISC"
+  },
+  "Signal_R_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_SKYLINE_BRAKELIGHT"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_SKYLINE_RIM"
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_SKYLINE_BRAKELIGHT",
+   "uv_box": [
+    0.08,
+    0,
+    0.4,
+    0.62
+   ],
+   "note": "rear indicators: the amber-centred inner round lamps (R34; atlas u .1-.38)"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_SKYLINE_BRAKELIGHT",
+   "uv_box": [
+    0.2,
+    0.74,
+    0.44,
+    1.0
+   ],
+   "box": [
+    -250,
+    -60,
+    10,
+    -200,
+    60,
+    60
+   ],
+   "note": "reverse: the clear rectangle in the rear bumper (atlas bottom-left; the red one is the fog lamp)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_SKYLINE_MISC",
+   "box": [
+    198,
+    -80,
+    15,
+    228,
+    80,
+    38
+   ],
+   "note": "front indicators: amber lamps in the bumper corners"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_SKYLINE_MISC",
+   "amber": true,
+   "box": [
+    60,
+    -110,
+    30,
+    120,
+    110,
+    70
+   ],
+   "note": "fender repeaters"
+  }
+ ],
+ "recentered": {
+  "SideMirror": [
+   40.29,
+   -87.25,
+   79.11
+  ],
+  "RightSideMirror": [
+   40.29,
+   -87.25,
+   79.11
+  ]
+ },
+ "aero_parts": [
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_SKYLINE_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_SKYLINE_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_SKYLINE_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  },
+  {
+   "row": "MW_SKYLINE_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "drivetrain": "awd",
+ "remaster_note": "2026-11-06: re-ported from the MW Remaster SKYLINE34R (AJ_Lethal model, parts prefix CTS); one-piece body: doors carved by keep/drop boxes, mirror glass = BASE group 0; backup mw_skyline.before_remaster.json",
+ "add_shapes": [
+  {
+   "mesh": "Body",
+   "type": "box",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    132.3,
+    60.5,
+    33
+   ],
+   "size": [
+    12,
+    4,
+    24
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    132.3,
+    58,
+    44
+   ],
+   "axis": [
+    0,
+    -2.25,
+    18
+   ],
+   "r": 2.2,
+   "seg": 12,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "note2": "top z 62 (was 74: poked through the bonnet at ~68-70; user 2026-11-12)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "r": 0.8,
+   "seg": 6,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "points": [
+    [
+     137.8,
+     56.8,
+     56.0
+    ],
+    [
+     137.49726320473107,
+     58.47457083237883,
+     56.33
+    ],
+    [
+     136.62237993427323,
+     59.95103391688355,
+     56.67
+    ],
+    [
+     135.27166268227478,
+     61.053090416443425,
+     57.0
+    ],
+    [
+     133.59380665316644,
+     61.645658457498214,
+     57.33
+    ],
+    [
+     131.77352048592095,
+     61.6497437676347,
+     57.67
+    ],
+    [
+     130.01119239899072,
+     61.05113584754125,
+     58.0
+    ],
+    [
+     128.5008302313757,
+     59.90197234956078,
+     58.33
+    ],
+    [
+     127.40870387482829,
+     58.31499944649696,
+     58.67
+    ],
+    [
+     126.85504126869756,
+     56.451160044329264,
+     59.0
+    ],
+    [
+     126.90079297408907,
+     54.501876204184825,
+     59.33
+    ],
+    [
+     127.54092236385071,
+     52.667976232764104,
+     59.67
+    ],
+    [
+     128.70496008525015,
+     51.13758627580639,
+     60.0
+    ],
+    [
+     130.26476175670606,
+     50.065420243010806,
+     60.33
+    ],
+    [
+     132.04861488393783,
+     49.555747955961394,
+     60.67
+    ],
+    [
+     133.86014202004776,
+     49.65091648935274,
+     61.0
+    ],
+    [
+     135.49991919422544,
+     50.326688346378305,
+     61.33
+    ],
+    [
+     136.78742972041064,
+     51.4949096704063,
+     61.67
+    ],
+    [
+     137.58093657657702,
+     53.01321475990591,
+     62.0
+    ],
+    [
+     137.79308568175742,
+     54.700698554351945,
+     62.33
+    ],
+    [
+     137.40052236678036,
+     56.35783176814171,
+     62.67
+    ],
+    [
+     136.44646239888817,
+     57.78842629295334,
+     63.0
+    ],
+    [
+     135.03593452614416,
+     58.82123278290343,
+     63.33
+    ],
+    [
+     133.3242182713963,
+     59.32879282842505,
+     63.67
+    ],
+    [
+     131.49974981405265,
+     59.2414703564286,
+     64.0
+    ]
+   ],
+   "note2": "spring top 70.4 -> 64: it poked through the bonnet (hood z 70.3 at the strut, user 2026-11-11)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.5,
+   "seg": 8,
+   "points": [
+    [
+     144.3,
+     32,
+     22
+    ],
+    [
+     132.3,
+     58,
+     24
+    ],
+    [
+     120.30000000000001,
+     32,
+     22
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.2,
+   "seg": 8,
+   "points": [
+    [
+     132.3,
+     58,
+     46
+    ],
+    [
+     132.3,
+     38,
+     52
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 2.0,
+   "seg": 10,
+   "points": [
+    [
+     132.3,
+     60,
+     33
+    ],
+    [
+     132.3,
+     25,
+     30
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "box",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    132.3,
+    -60.5,
+    33
+   ],
+   "size": [
+    12,
+    4,
+    24
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    132.3,
+    -58,
+    44
+   ],
+   "axis": [
+    0,
+    2.25,
+    18
+   ],
+   "r": 2.2,
+   "seg": 12,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "note2": "top z 62 (was 74: poked through the bonnet at ~68-70; user 2026-11-12)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "r": 0.8,
+   "seg": 6,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "points": [
+    [
+     137.8,
+     -56.8,
+     56.0
+    ],
+    [
+     137.49726320473107,
+     -58.47457083237883,
+     56.33
+    ],
+    [
+     136.62237993427323,
+     -59.95103391688355,
+     56.67
+    ],
+    [
+     135.27166268227478,
+     -61.053090416443425,
+     57.0
+    ],
+    [
+     133.59380665316644,
+     -61.645658457498214,
+     57.33
+    ],
+    [
+     131.77352048592095,
+     -61.6497437676347,
+     57.67
+    ],
+    [
+     130.01119239899072,
+     -61.05113584754125,
+     58.0
+    ],
+    [
+     128.5008302313757,
+     -59.90197234956078,
+     58.33
+    ],
+    [
+     127.40870387482829,
+     -58.31499944649696,
+     58.67
+    ],
+    [
+     126.85504126869756,
+     -56.451160044329264,
+     59.0
+    ],
+    [
+     126.90079297408907,
+     -54.501876204184825,
+     59.33
+    ],
+    [
+     127.54092236385071,
+     -52.667976232764104,
+     59.67
+    ],
+    [
+     128.70496008525015,
+     -51.13758627580639,
+     60.0
+    ],
+    [
+     130.26476175670606,
+     -50.065420243010806,
+     60.33
+    ],
+    [
+     132.04861488393783,
+     -49.555747955961394,
+     60.67
+    ],
+    [
+     133.86014202004776,
+     -49.65091648935274,
+     61.0
+    ],
+    [
+     135.49991919422544,
+     -50.326688346378305,
+     61.33
+    ],
+    [
+     136.78742972041064,
+     -51.4949096704063,
+     61.67
+    ],
+    [
+     137.58093657657702,
+     -53.01321475990591,
+     62.0
+    ],
+    [
+     137.79308568175742,
+     -54.700698554351945,
+     62.33
+    ],
+    [
+     137.40052236678036,
+     -56.35783176814171,
+     62.67
+    ],
+    [
+     136.44646239888817,
+     -57.78842629295334,
+     63.0
+    ],
+    [
+     135.03593452614416,
+     -58.82123278290343,
+     63.33
+    ],
+    [
+     133.3242182713963,
+     -59.32879282842505,
+     63.67
+    ],
+    [
+     131.49974981405265,
+     -59.2414703564286,
+     64.0
+    ]
+   ],
+   "note2": "spring top 70.4 -> 64: it poked through the bonnet (hood z 70.3 at the strut, user 2026-11-11)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.5,
+   "seg": 8,
+   "points": [
+    [
+     144.3,
+     -32,
+     22
+    ],
+    [
+     132.3,
+     -58,
+     24
+    ],
+    [
+     120.30000000000001,
+     -32,
+     22
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.2,
+   "seg": 8,
+   "points": [
+    [
+     132.3,
+     -58,
+     46
+    ],
+    [
+     132.3,
+     -38,
+     52
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 2.0,
+   "seg": 10,
+   "points": [
+    [
+     132.3,
+     -60,
+     33
+    ],
+    [
+     132.3,
+     -25,
+     30
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "box",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    -133.3,
+    60.5,
+    33
+   ],
+   "size": [
+    12,
+    4,
+    24
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    -133.3,
+    58,
+    44
+   ],
+   "axis": [
+    0,
+    -3.75,
+    30
+   ],
+   "r": 2.2,
+   "seg": 12,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "r": 0.8,
+   "seg": 6,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "points": [
+    [
+     -127.80000000000001,
+     56.8,
+     56.0
+    ],
+    [
+     -128.10273679526895,
+     58.47457083237883,
+     56.33
+    ],
+    [
+     -128.9776200657268,
+     59.95103391688355,
+     56.67
+    ],
+    [
+     -130.32833731772524,
+     61.053090416443425,
+     57.0
+    ],
+    [
+     -132.00619334683358,
+     61.645658457498214,
+     57.33
+    ],
+    [
+     -133.82647951407907,
+     61.6497437676347,
+     57.67
+    ],
+    [
+     -135.5888076010093,
+     61.05113584754125,
+     58.0
+    ],
+    [
+     -137.09916976862434,
+     59.90197234956078,
+     58.33
+    ],
+    [
+     -138.19129612517173,
+     58.31499944649696,
+     58.67
+    ],
+    [
+     -138.74495873130246,
+     56.451160044329264,
+     59.0
+    ],
+    [
+     -138.69920702591094,
+     54.501876204184825,
+     59.33
+    ],
+    [
+     -138.0590776361493,
+     52.667976232764104,
+     59.67
+    ],
+    [
+     -136.89503991474987,
+     51.13758627580639,
+     60.0
+    ],
+    [
+     -135.33523824329396,
+     50.065420243010806,
+     60.33
+    ],
+    [
+     -133.5513851160622,
+     49.555747955961394,
+     60.67
+    ],
+    [
+     -131.73985797995226,
+     49.65091648935274,
+     61.0
+    ],
+    [
+     -130.10008080577458,
+     50.326688346378305,
+     61.33
+    ],
+    [
+     -128.81257027958938,
+     51.4949096704063,
+     61.67
+    ],
+    [
+     -128.019063423423,
+     53.01321475990591,
+     62.0
+    ],
+    [
+     -127.8069143182426,
+     54.700698554351945,
+     62.33
+    ],
+    [
+     -128.19947763321966,
+     56.35783176814171,
+     62.67
+    ],
+    [
+     -129.15353760111185,
+     57.78842629295334,
+     63.0
+    ],
+    [
+     -130.56406547385586,
+     58.82123278290343,
+     63.33
+    ],
+    [
+     -132.27578172860373,
+     59.32879282842505,
+     63.67
+    ],
+    [
+     -134.10025018594737,
+     59.2414703564286,
+     64.0
+    ]
+   ],
+   "note2": "spring top 70.4 -> 64: it poked through the bonnet (hood z 70.3 at the strut, user 2026-11-11)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.5,
+   "seg": 8,
+   "points": [
+    [
+     -121.30000000000001,
+     32,
+     22
+    ],
+    [
+     -133.3,
+     58,
+     24
+    ],
+    [
+     -145.3,
+     32,
+     22
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.2,
+   "seg": 8,
+   "points": [
+    [
+     -133.3,
+     58,
+     46
+    ],
+    [
+     -133.3,
+     38,
+     52
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 2.0,
+   "seg": 10,
+   "points": [
+    [
+     -133.3,
+     60,
+     33
+    ],
+    [
+     -133.3,
+     25,
+     30
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "box",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    -133.3,
+    -60.5,
+    33
+   ],
+   "size": [
+    12,
+    4,
+    24
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "center": [
+    -133.3,
+    -58,
+    44
+   ],
+   "axis": [
+    0,
+    3.75,
+    30
+   ],
+   "r": 2.2,
+   "seg": 12,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.1
+   ],
+   "r": 0.8,
+   "seg": 6,
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)",
+   "points": [
+    [
+     -127.80000000000001,
+     -56.8,
+     56.0
+    ],
+    [
+     -128.10273679526895,
+     -58.47457083237883,
+     56.33
+    ],
+    [
+     -128.9776200657268,
+     -59.95103391688355,
+     56.67
+    ],
+    [
+     -130.32833731772524,
+     -61.053090416443425,
+     57.0
+    ],
+    [
+     -132.00619334683358,
+     -61.645658457498214,
+     57.33
+    ],
+    [
+     -133.82647951407907,
+     -61.6497437676347,
+     57.67
+    ],
+    [
+     -135.5888076010093,
+     -61.05113584754125,
+     58.0
+    ],
+    [
+     -137.09916976862434,
+     -59.90197234956078,
+     58.33
+    ],
+    [
+     -138.19129612517173,
+     -58.31499944649696,
+     58.67
+    ],
+    [
+     -138.74495873130246,
+     -56.451160044329264,
+     59.0
+    ],
+    [
+     -138.69920702591094,
+     -54.501876204184825,
+     59.33
+    ],
+    [
+     -138.0590776361493,
+     -52.667976232764104,
+     59.67
+    ],
+    [
+     -136.89503991474987,
+     -51.13758627580639,
+     60.0
+    ],
+    [
+     -135.33523824329396,
+     -50.065420243010806,
+     60.33
+    ],
+    [
+     -133.5513851160622,
+     -49.555747955961394,
+     60.67
+    ],
+    [
+     -131.73985797995226,
+     -49.65091648935274,
+     61.0
+    ],
+    [
+     -130.10008080577458,
+     -50.326688346378305,
+     61.33
+    ],
+    [
+     -128.81257027958938,
+     -51.4949096704063,
+     61.67
+    ],
+    [
+     -128.019063423423,
+     -53.01321475990591,
+     62.0
+    ],
+    [
+     -127.8069143182426,
+     -54.700698554351945,
+     62.33
+    ],
+    [
+     -128.19947763321966,
+     -56.35783176814171,
+     62.67
+    ],
+    [
+     -129.15353760111185,
+     -57.78842629295334,
+     63.0
+    ],
+    [
+     -130.56406547385586,
+     -58.82123278290343,
+     63.33
+    ],
+    [
+     -132.27578172860373,
+     -59.32879282842505,
+     63.67
+    ],
+    [
+     -134.10025018594737,
+     -59.2414703564286,
+     64.0
+    ]
+   ],
+   "note2": "spring top 70.4 -> 64: it poked through the bonnet (hood z 70.3 at the strut, user 2026-11-11)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.5,
+   "seg": 8,
+   "points": [
+    [
+     -121.30000000000001,
+     -32,
+     22
+    ],
+    [
+     -133.3,
+     -58,
+     24
+    ],
+    [
+     -145.3,
+     -32,
+     22
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 1.2,
+   "seg": 8,
+   "points": [
+    [
+     -133.3,
+     -58,
+     46
+    ],
+    [
+     -133.3,
+     -38,
+     52
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Tex_MWG_ROTOR1",
+   "uv": [
+    0.7,
+    0.7
+   ],
+   "r": 2.0,
+   "seg": 10,
+   "points": [
+    [
+     -133.3,
+     -60,
+     33
+    ],
+    [
+     -133.3,
+     -25,
+     30
+    ]
+   ],
+   "note": "suspension stand-in (user 2026-11-06: no suspension visible; MW model has none)"
+  }
+ ]
+}

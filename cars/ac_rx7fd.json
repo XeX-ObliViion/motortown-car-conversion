@@ -1,0 +1,1399 @@
+{
+ "car": "AC_RX7FD",
+ "display_name": "Mazda RX-7 FD (8 Second Shootout)",
+ "prefix": "AC_RX7FD",
+ "base_vehicle": "Magis",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/rx7_fd/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/rx7_fd/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_RX7FD/meshes",
+ "cost": 90000,
+ "wheel_part": true,
+ "wheel_display_name": "Drag Wheels (8 Second RX-7 FD)",
+ "texture_slots": {
+  "carpaint": "Paint",
+  "black_ext": "Tex_AC_FD_BLACK",
+  "black_int": "Tex_AC_FD_BLACK",
+  "black_glass_ext": "Tex_AC_FD_BLACK",
+  "chrome_ext": "Trim",
+  "chrome_int": "Trim",
+  "lights_reflector_ext": "Tex_AC_FD_LIGHTS",
+  "lights_chrome": "Tex_AC_FD_LIGHTS",
+  "lights_glass_ext": "Glass",
+  "clear_lights_glass_ext": "Glass",
+  "defrost_glass": "Defrost",
+  "brake_calipers": "Tex_AC_FD_CALIPER",
+  "brake_disc": "Tex_AC_FD_DISC",
+  "misc": "Tex_AC_FD_MISC",
+  "plastic_ext": "Tex_AC_FD_PLASTIC",
+  "st_wheel": "Tex_AC_FD_STEER",
+  "stitching": "Tex_AC_FD_STITCH",
+  "interior_lod0": "Tex_AC_FD_INTERIOR",
+  "needles": "Tex_AC_FD_NEEDLEAC",
+  "display_int": "Tex_AC_FD_DISPLAY",
+  "seat_plastic": "Tex_AC_FD_SEATPL",
+  "detail_plastic_int": "Tex_AC_FD_DETAIL",
+  "plastic_int": "Tex_AC_FD_DASHPL",
+  "dash_leather": "Tex_AC_FD_DASHLE",
+  "cloth": "Tex_AC_FD_CLOTH",
+  "carpet": "Tex_AC_FD_CARPET",
+  "grill_int": "Tex_AC_FD_GRILL",
+  "headliner": "Tex_AC_FD_HEADLINER",
+  "leather_a": "Tex_AC_FD_LEATHERA",
+  "MIRROR_PLACEMENT": "Mirror",
+  "pedals": "Tex_AC_FD_PEDALS",
+  "rubber_int": "Tex_AC_FD_RUBBERI",
+  "seat_leather": "Tex_AC_FD_SEAT",
+  "glass_ext": "Glass",
+  "rubber_ext": "Tex_AC_FD_RUBBER",
+  "undercarriage": "Tex_AC_FD_UNDER",
+  "black_metal_ext": "Tex_AC_FD_WIPER",
+  "glass_int": "Glass",
+  "floormats": "Tex_AC_FD_FLOORMAT",
+  "EXT_TIR_RUBBER": "Tex_AC_FD_TIRE",
+  "_2Default_Material": "Tex_AC_FD_RIMSILVER",
+  "_28___Default": "Tex_AC_FD_RIM",
+  "scion_drag_misc": "Tex_AC_FD_WBAR",
+  "scion_drag_misc2": "Tex_AC_FD_WBAR2",
+  "ENGINE_BRUSHMETAL": "Trim",
+  "02 - Default": "Trim"
+ },
+ "texture_sources": {
+  "Tex_AC_FD_LIGHTS": "lights_lod0.dds",
+  "Tex_AC_FD_CALIPER": "EXT_CALIPER.dds",
+  "Tex_AC_FD_DISC": "EXT_BRAKEDISC.dds",
+  "Tex_AC_FD_MISC": "EXT_MISC_AO_BAKED.png",
+  "Tex_AC_FD_PLASTIC": "EXT_PLASTIC_BAKED.png",
+  "Tex_AC_FD_STEER": "ST_WHEEL_AO_BAKED.png",
+  "Tex_AC_FD_STITCH": "INT_STITICHING.dds",
+  "Tex_AC_FD_INTERIOR": "interior_lod0.dds",
+  "Tex_AC_FD_NEEDLEAC": "INT_NEEDLE_AO.dds",
+  "Tex_AC_FD_DISPLAY": "INT_DISPLAY.dds",
+  "Tex_AC_FD_SEATPL": "INT_SEAT_PLASTIC_AO_BAKED.png",
+  "Tex_AC_FD_DETAIL": "INT_DETAIL_PLASTIC_AO_BAKED.png",
+  "Tex_AC_FD_DASHPL": "INT_DASH_PLASTIC_AO_BAKED.png",
+  "Tex_AC_FD_DASHLE": "INT_DASH_LEATHER_AO_BAKED.png",
+  "Tex_AC_FD_CLOTH": "INT_CLOTH_AO_BAKED.png",
+  "Tex_AC_FD_CARPET": "INT_CARPET_AO_BAKED.png",
+  "Tex_AC_FD_GRILL": "INT_GRILL_AO_BAKED.png",
+  "Tex_AC_FD_HEADLINER": "INT_HEADLINER_AO_BAKED.png",
+  "Tex_AC_FD_LEATHERA": "INT_LEATHER_A_AO_BAKED.png",
+  "Tex_AC_FD_PEDALS": "INT_PEDALS_AO_BAKED.png",
+  "Tex_AC_FD_SEAT": "INT_SEAT_LEATHER_AO_BAKED.png",
+  "Tex_AC_FD_UNDER": "EXT_UNDERCARRIAGE.dds",
+  "Tex_AC_FD_FLOORMAT": "INT_CARPET_TEXTURE.dds",
+  "Tex_AC_FD_TIRE": "slick (3).png",
+  "Tex_AC_FD_RIM": "rimblack.dds",
+  "Tex_AC_FD_WBAR": "scion_drag_misc_diffuse.dds",
+  "Tex_AC_FD_WBAR2": "scion_drag_misc2_diffuse.dds",
+  "Tex_AC_FD_BLACK": "black.dds",
+  "Tex_AC_FD_RUBBER": "EXT_RUBBER_AO_BAKED.png",
+  "Tex_AC_FD_RUBBERI": "INT_RUBBER_AO_BAKED.png",
+  "Tex_AC_FD_WIPER": "EXT_WIPERS_AO_BAKED.png",
+  "Tex_AC_FD_RIMSILVER": "rim_silver.png"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "EXT_BODY",
+    "EXT_BODY_BLACK",
+    "EXT_BODY_MISC",
+    "EXT_BODY_PLASTIC",
+    "EXT_BODY_REFLECTOR",
+    "EXT_BODY_RUBBER",
+    "EXT_BODY_TEXTURED",
+    "EXT_BLACK_GLASS",
+    "EXT_BODY_ANTENNA",
+    "EXT_BODY_MIRROR_L",
+    "EXT_BODY_MIRROR_R",
+    "EXT_MIRROR_L_BLACK",
+    "EXT_MIRROR_L_RUBBER",
+    "EXT_MIRROR_R_BLACK",
+    "EXT_MIRROR_R_RUBBER",
+    "EXT_TRUNK",
+    "EXT_TRUNK_BLACK",
+    "EXT_TRUNK_BLACK_GLASS",
+    "EXT_TRUNK_RUBBER",
+    "EXT_UNDERCARRIAGE",
+    "EXT_WIPER_L_METAL",
+    "EXT_WIPER_L_RUBBER",
+    "EXT_WIPER_R_METAL",
+    "EXT_WIPER_R_RUBBER",
+    "GEO_EXT_WINDOWS",
+    "Z_EXT_BACKLIGHT_CLEAR_GLASS",
+    "Z_INT_GLASS_FRONT",
+    "Z_INT_GLASS_LF",
+    "Z_INT_GLASS_REAR",
+    "Z_INT_GLASS_RF",
+    "MOTORHOOD",
+    "SUSP_LF",
+    "SUSP_RF",
+    "SUSP_LR",
+    "SUSP_RR",
+    "INT_FLOORMATS",
+    "CYLINDER003_SUB0",
+    "SCION_DRAG_BOOT_LODA_SUB0",
+    "SCION_DRAG_BOOT_LODA_SUB1",
+    "TURBINA_LFG_GMT_SUB1",
+    {
+     "part": "FRONT_BUMPER",
+     "groups": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9
+     ]
+    },
+    {
+     "part": "FRONT_BUMPER",
+     "groups": [
+      3,
+      8
+     ],
+     "slot": "HeadFD"
+    },
+    {
+     "part": "FRONT_BUMPER",
+     "groups": [
+      10,
+      11,
+      12
+     ],
+     "slot": "SigF"
+    },
+    {
+     "part": "EXT_SIDE_INDICATOR_L",
+     "slot": "SigF"
+    },
+    {
+     "part": "EXT_SIDE_INDICATOR_R",
+     "slot": "SigF"
+    },
+    {
+     "part": "EXT_BRAKELIGHT",
+     "slot": "TailFD"
+    },
+    {
+     "part": "GEO_EXT_BRAKE_CENTER",
+     "slot": "TailFD"
+    },
+    {
+     "part": "EXT_INDICATOR_LR",
+     "slot": "SigR"
+    },
+    {
+     "part": "EXT_INDICATOR_RR",
+     "slot": "SigR"
+    },
+    {
+     "part": "REAR_BUMPER",
+     "groups": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "part": "REAR_BUMPER",
+     "groups": [
+      0,
+      1
+     ],
+     "slot": "RevFD"
+    },
+    {
+     "part": "COCKPIT_HR",
+     "skip_groups": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      29
+     ],
+     "note": "needles (oil kept) + room mirror glass"
+    },
+    "STEER_HR"
+   ],
+   "reduce": 0.4,
+   "drop_slots": [
+    "Defrost",
+    "Tex_AC_FD_CALIPER"
+   ],
+   "drop_boxes": [
+    [
+     11,
+     -15,
+     104,
+     22,
+     15,
+     117
+    ]
+   ],
+   "drop_note": "AC static room mirror housing (the game's RoomMirror goes there)"
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "EXT_MIRROR_L",
+     "slot": "Mirror"
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -3.5,
+     -26.0,
+     0
+    ]
+   }
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "EXT_MIRROR_R",
+     "slot": "Mirror",
+     "mirror": true
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -1.1,
+     4.0,
+     0
+    ],
+    "mirror_frame": true
+   }
+  },
+  "Popup": {
+   "parts": [
+    {
+     "part": "LIGHT_FRONT",
+     "groups": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "part": "LIGHT_FRONT",
+     "groups": [
+      0,
+      1
+     ],
+     "slot": "HeadFD"
+    }
+   ],
+   "drop_slots": [
+    "Glass"
+   ],
+   "note": "pop-up headlamp pods (closed); hinge across the car at x 168.81, z 71.39; AC lights.ksanim opens 52.4 deg (front edge up)"
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -130.5,
+      72.8,
+      -35.3
+     ]
+    },
+    {
+     "part": "DISC_LF",
+     "offset": [
+      -130.5,
+      72.8,
+      -35.3
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -130.6,
+      -72.8,
+      -35.3
+     ]
+    },
+    {
+     "part": "DISC_RF",
+     "offset": [
+      -130.6,
+      -72.8,
+      -35.3
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      112.2,
+      73.0,
+      -35.3
+     ]
+    },
+    {
+     "part": "DISC_LR",
+     "offset": [
+      112.2,
+      73.0,
+      -35.3
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      112.1,
+      -73.0,
+      -35.3
+     ]
+    },
+    {
+     "part": "DISC_RR",
+     "offset": [
+      112.1,
+      -73.0,
+      -35.3
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  }
+ },
+ "rear_wheel_meshes": true,
+ "rear_wheel_part": true,
+ "mesh_names": {
+  "Wheel_L": "AC_RX7FD_L",
+  "Wheel_R": "AC_RX7FD_R",
+  "Wheel_RL": "AC_RX7FD_REAR_L",
+  "Wheel_RR": "AC_RX7FD_REAR_R",
+  "SteeringWheel": "AC_RX7FD"
+ },
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Window",
+  "HeadFD": "HeadLight",
+  "TailFD": "TailLight",
+  "RevFD": "ReverseLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror:mirror"
+ },
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "wheels": {
+  "front_x": 130.55,
+  "rear_x": -112.15,
+  "half_track": 72.8,
+  "rear_half_track": 73.0,
+  "z": 32.0,
+  "rear_z": 35.5,
+  "radius": 31.75,
+  "auto_arches": false,
+  "note": "AC hubs; front tyre r 31.75, drag rear r 35.15 (z ~ tyre radius, as the Civic EG)"
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    45
+   ],
+   "size": [
+    418,
+    172,
+    50
+   ]
+  },
+  {
+   "center": [
+    -35,
+    0,
+    100
+   ],
+   "size": [
+    180,
+    130,
+    40
+   ]
+  },
+  {
+   "center": [
+    -294,
+    0,
+    14
+   ],
+   "size": [
+    12,
+    78,
+    12
+   ],
+   "note": "wheelie bar wheels (user: make it solid)"
+  }
+ ],
+ "strip_part_slots": [
+  "RearWing"
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     18.49,
+     39.85,
+     76.45
+    ],
+    "rot": [
+     -15.05,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -213,
+     40,
+     28
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -213,
+     40,
+     28
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -196,
+     0,
+     80
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     125
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -212,
+     0,
+     28
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     18.805,
+     -0.15,
+     9.82
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -106.15
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     19.224,
+     11.09,
+     6.722
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -106.15
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     18.013,
+     -13.96,
+     5.102
+    ],
+    "rot": [
+     -73.85,
+     0.0,
+     -180.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     19.084,
+     -7.07,
+     3.775
+    ],
+    "rot": [
+     -73.85,
+     0.0,
+     -180.0
+    ]
+   }
+  ]
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -30,
+    39.9,
+    22
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -30,
+    -39.9,
+    22
+   ]
+  },
+  "cockpit_camera": [
+   -33.0,
+   39.9,
+   104.0
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    15.2,
+    0.0,
+    110.0
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -25,
+    0,
+    112
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    190,
+    -60,
+    60
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    190,
+    60,
+    60
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    196,
+    60,
+    47
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    196,
+    -60,
+    47
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -195,
+    -62,
+    75
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -195,
+    62,
+    75
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    2.4,
+    -19.8,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -3.5,
+    -26.0,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -1.1,
+    4.0,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 860,
+  "room_mirror_aim_z": 0.017,
+  "cdo_names": {
+   "BodyMaterialName": "Body"
+  }
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    18.5,
+    39.85,
+    76.46
+   ],
+   "radius": 17.5,
+   "x_range": [
+    8,
+    30
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_FD_STEER",
+    "Tex_AC_FD_STITCH"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "reduce": 0.5,
+   "pivot": [
+    18.49435,
+    39.852500000000006,
+    76.45455
+   ],
+   "tilt_deg": 15.05
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "SigF",
+   "box": [
+    60,
+    -100,
+    0,
+    260,
+    100,
+    120
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "SigR",
+   "box": [
+    -260,
+    -100,
+    0,
+    -100,
+    100,
+    120
+   ]
+  }
+ ],
+ "lamp_slots": {
+  "HeadFD": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "TailFD": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "RevFD": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_AC_FD_LIGHTS"
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     39.2,
+     39.7,
+     81.05
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     38.8,
+     50.94,
+     77.95
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     37.21,
+     25.89,
+     76.7
+    ],
+    "rot": [
+     -88.9,
+     0,
+     -180
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     37.9,
+     32.78,
+     75.14
+    ],
+    "rot": [
+     -88.9,
+     0,
+     -180
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "note": "sockets = AC ARROW_* hubs, 0.4 cm proud; dial plane ~vertical (1.1 deg down); fuel/temp dials sit left of their hubs (turned 90, as the Supra)"
+ },
+ "texture_upscale": {
+  "Tex_AC_FD_INTERIOR": 4
+ },
+ "gauge_style": {
+  "face_color": [
+   8,
+   8,
+   8
+  ],
+  "ink": [
+   240,
+   240,
+   236
+  ],
+  "minor_ink": [
+   190,
+   190,
+   190
+  ],
+  "red_color": [
+   225,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf"
+ },
+ "texture_patches": {
+  "Tex_AC_FD_INTERIOR": [
+   {
+    "center": [
+     0.6,
+     0.665
+    ],
+    "radius": 0.085,
+    "fill": [
+     8,
+     8,
+     8
+    ],
+    "all": true
+   },
+   {
+    "center": [
+     0.9,
+     0.665
+    ],
+    "radius": 0.085,
+    "fill": [
+     8,
+     8,
+     8
+    ],
+    "all": true
+   }
+  ]
+ },
+ "gauge_faces": {
+  "Tex_AC_FD_INTERIOR": [
+   {
+    "center": [
+     0.2518,
+     0.2552
+    ],
+    "face": [
+     0.2518,
+     0.2552,
+     0.245
+    ],
+    "radius": 0.22,
+    "rotate": 0,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.12,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.08,
+    "note": "JDM 180 km/h art redrawn in mph"
+   },
+   {
+    "center": [
+     0.7481,
+     0.2506
+    ],
+    "face": [
+     0.7481,
+     0.2506,
+     0.245
+    ],
+    "radius": 0.22,
+    "rotate": 0,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 9,
+    "font": 0.13,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.07,
+    "note": "AC art 0-9k; game sweep to 10k (limiter 9000)"
+   },
+   {
+    "center": [
+     0.6512,
+     0.7082
+    ],
+    "radius": 0.11,
+    "rotate": 90,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.25,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.9947,
+     0.6704
+    ],
+    "radius": 0.11,
+    "rotate": 90,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.25,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  240,
+  90,
+  20
+ ],
+ "needle_width": 0.4,
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_AC_FD_INTERIOR",
+   "glow": 2.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_RX7FD_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_AC_FD_STITCH"
+ ],
+ "performance_source": "AC data (do_canito_rx7): TOTALMASS 1305, RWD, 6 gears 3.827/2.360/1.685/1.312/1.0/0.793 R-1.902 FINAL 3.9, LIMITER 9000, MINIMUM 750; power.lut NA 307 Nm @5000; TURBO_0 MAX_BOOST 2.5 (x3.5) ref 5000",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_RX7FD_6MT_DRAG",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_RX7FD_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Drag (8 Second RX-7 FD)",
+    "cost": 8000,
+    "mass": 60,
+    "ratios": {
+     "R": -2.241,
+     "1": 4.509,
+     "2": 2.781,
+     "3": 1.985,
+     "4": 1.546,
+     "5": 1.178,
+     "6": 0.934
+    },
+    "note": "AC final 3.9 folded in (game row FD_3.31): ratio x 3.9/3.31"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_RX7FD_ROTARY_DRAG",
+    "base_row": "I4_150HP",
+    "asset": "AC_RX7FD_ROTARY",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "Turbo Rotary Drag (8 Second RX-7 FD)",
+    "mass": 130,
+    "cost": 45000,
+    "max_torque_nm": 307.0,
+    "max_rpm": 9000,
+    "curve": [
+     [
+      0.0556,
+      0.5212
+     ],
+     [
+      0.1111,
+      0.6938
+     ],
+     [
+      0.1667,
+      0.7915
+     ],
+     [
+      0.2222,
+      0.8762
+     ],
+     [
+      0.2778,
+      0.9283
+     ],
+     [
+      0.3333,
+      0.9479
+     ],
+     [
+      0.3889,
+      0.9674
+     ],
+     [
+      0.4167,
+      0.9739
+     ],
+     [
+      0.4444,
+      0.9805
+     ],
+     [
+      0.5,
+      0.9902
+     ],
+     [
+      0.5556,
+      1.0
+     ],
+     [
+      0.6111,
+      0.9967
+     ],
+     [
+      0.6667,
+      0.9772
+     ],
+     [
+      0.7222,
+      0.9544
+     ],
+     [
+      0.7778,
+      0.9251
+     ],
+     [
+      0.8333,
+      0.8893
+     ],
+     [
+      0.8889,
+      0.8436
+     ],
+     [
+      0.9444,
+      0.798
+     ],
+     [
+      1.0,
+      0.7296
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "AC power.lut (NA, 307 Nm @5000); boost from PS_Boost_315psi (1 + 0.08 x 31.5 = x3.52 = AC 2.5 bar)",
+    "physics_from": "Cars/Parts/Engine/I4Sport_150HP",
+    "idle_throttle": 0.00045,
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_RX7FD",
+     "loops": [
+      [
+       "l1",
+       1000
+      ],
+      [
+       "l2",
+       1500
+      ],
+      [
+       "l3",
+       3000
+      ],
+      [
+       "l4",
+       4500
+      ],
+      [
+       "l5",
+       5500
+      ],
+      [
+       "l6",
+       7000
+      ]
+     ],
+     "note": "the FD bank (nzng_mazda_rx7_fd.bank, vgmstream): RX8_EX_IDLE / ONIDLE / ONVERYLOW / ONLOW / ONMID / ONHIGH; rpm from the spectrum (2-rotor firing = 4th half-order); 2 s loops. The do_canito rx7_2 low loops sounded tinny (user)"
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "AC_RX7FD_ROTARY_DRAG",
+  "Transmission": "AC_RX7FD_6MT_DRAG",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Turbocharger": "PS_Boost_315psi",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceDragTireStrip",
+  "Tire3": "PerformanceDragTireStrip",
+  "Wheel0": "AC_RX7FD",
+  "Wheel1": "AC_RX7FD",
+  "Wheel2": "AC_RX7FD_REAR",
+  "Wheel3": "AC_RX7FD_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "BrakeBalance": "BrakeBalance_F60",
+  "Headlight": "AC_RX7FD_Popup"
+ },
+ "popup": {
+  "hinge": [
+   168.81,
+   71.39
+  ],
+  "angle": 52.4,
+  "seconds": 0.5,
+  "note": "AC lights.ksanim: LIGHT_FRONT 0 -> 52.4 deg about the lateral axis through (x 168.81, z 71.39)"
+ },
+ "add_shapes": [
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Trim",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "r": 1.6,
+   "seg": 10,
+   "points": [
+    [
+     -150,
+     -32,
+     22
+    ],
+    [
+     -212,
+     -31,
+     16
+    ],
+    [
+     -292,
+     -28,
+     16
+    ]
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Trim",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "r": 1.6,
+   "seg": 10,
+   "points": [
+    [
+     -150,
+     32,
+     22
+    ],
+    [
+     -212,
+     31,
+     16
+    ],
+    [
+     -292,
+     28,
+     16
+    ]
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Trim",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "r": 1.3,
+   "seg": 8,
+   "points": [
+    [
+     -286,
+     -28,
+     16.5
+    ],
+    [
+     -286,
+     28,
+     16.5
+    ]
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Trim",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "r": 1.1,
+   "seg": 8,
+   "points": [
+    [
+     -212,
+     -31,
+     16
+    ],
+    [
+     -212,
+     31,
+     16
+    ]
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_AC_FD_BLACK",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "center": [
+    -294,
+    -33,
+    14
+   ],
+   "axis": [
+    0,
+    -4,
+    0
+   ],
+   "r": 6,
+   "seg": 16
+  },
+  {
+   "mesh": "Body",
+   "type": "cylinder",
+   "slot": "Tex_AC_FD_BLACK",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "center": [
+    -294,
+    33,
+    14
+   ],
+   "axis": [
+    0,
+    4,
+    0
+   ],
+   "r": 6,
+   "seg": 16
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "slot": "Trim",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "r": 0.8,
+   "seg": 6,
+   "points": [
+    [
+     -294,
+     -37,
+     14
+    ],
+    [
+     -294,
+     37,
+     14
+    ]
+   ]
+  }
+ ],
+ "drivetrain_note": "Magis is RWD (AC: RWD). Front street tyres, KM3-00 drag radials at the rear like the AC car.",
+ "recentered": {
+  "SideMirror": [
+   20.51,
+   -85.39,
+   89.54
+  ],
+  "RightSideMirror": [
+   20.66,
+   -85.39,
+   89.54
+  ]
+ }
+}

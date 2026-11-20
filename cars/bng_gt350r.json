@@ -1,0 +1,1964 @@
+{
+ "car": "BNG_GT350R",
+ "display_name": "Ford Shelby GT350R (BeamNG)",
+ "prefix": "GT350R",
+ "base_vehicle": "Tuscan",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/bng/gt350r/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/bng/gt350r/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/BNG_GT350R/meshes",
+ "cost": 150000,
+ "wheel_part": true,
+ "base_wheel": "Vista",
+ "wheel_display_name": "Shelby GT350R Stock (BeamNG)",
+ "texture_slots": {
+  "abs": "Tex_BNG_ABS",
+  "checkengine": "Tex_BNG_CHECKENGINE",
+  "grille": "Tex_BNG_GRILLE",
+  "gt350r_badge": "Tex_BNG_GT350R_BADGE",
+  "highbeam": "Tex_BNG_HIGHBEAM",
+  "lowpressure": "Tex_BNG_LOWPRESSURE",
+  "mirror": "Trim",
+  "parkingbrake": "Tex_BNG_PARKINGBRAKE",
+  "s550_alcantara": "Tex_BNG_S550_ALCANTARA",
+  "s550_alupattern": "Tex_BNG_S550_ALUPATTERN",
+  "s550_badge_steer_gt350": "Tex_BNG_S550_BADGE_STEER_GT350",
+  "s550_badges": "Tex_BNG_S550_BADGES",
+  "s550_carpet": "Tex_BNG_S550_CARPET",
+  "s550_chmsl": "Tex_BNG_S550_CHMSL",
+  "s550_disc_sport": "Tex_BNG_S550_DISC_SPORT",
+  "s550_gauges_screen": "Tex_BNG_S550_GAUGES_SCREEN",
+  "s550_glass": "Glass",
+  "s550_glass_int": "Glass",
+  "s550_headlight__L": "Tex_BNG_S550_HEADLIGHT_L",
+  "s550_headlight__R": "Tex_BNG_S550_HEADLIGHT_R",
+  "s550_interior": "Tex_BNG_S550_INTERIOR",
+  "s550_interior_gt350r": "Tex_BNG_S550_INTERIOR_GT350R",
+  "s550_lcd": "Tex_BNG_S550_LCD",
+  "s550_leather": "Tex_BNG_S550_LEATHER",
+  "s550_leather_steer_gt350": "Tex_BNG_S550_LEATHER_STEER_GT350",
+  "s550_leather_stitching": "Tex_BNG_S550_LEATHER_STITCHING",
+  "s550_leather_stitching_vpattern": "Tex_BNG_S550_LEATHER_STITCHING_VPATTERN",
+  "s550_lights": "Tex_BNG_S550_LIGHTS",
+  "s550_lights__L": "Tex_BNG_S550_LIGHTS_L",
+  "s550_lights__R": "Tex_BNG_S550_LIGHTS_R",
+  "s550_mesh": "Tex_BNG_S550_MESH",
+  "s550_misc": "Tex_BNG_S550_MISC",
+  "s550_paint": "Paint",
+  "s550_paint_black": "Tex_BNG_S550_PAINT_BLACK",
+  "s550_plastic": "Tex_BNG_S550_PLASTIC",
+  "s550_plastic_stitching": "Tex_BNG_S550_PLASTIC_STITCHING",
+  "s550_reverselight": "Tex_BNG_S550_REVERSELIGHT",
+  "s550_runninglight__L": "Tex_BNG_S550_RUNNINGLIGHT_L",
+  "s550_runninglight__R": "Tex_BNG_S550_RUNNINGLIGHT_R",
+  "s550_screen": "Tex_BNG_S550_SCREEN",
+  "s550_signal_L": "Tex_BNG_S550_SIGNAL_L",
+  "s550_signal_R": "Tex_BNG_S550_SIGNAL_R",
+  "s550_signal_RL_1": "Tex_BNG_S550_SIGNAL_RL_1",
+  "s550_signal_RL_2": "Tex_BNG_S550_SIGNAL_RL_2",
+  "s550_signal_RL_3": "Tex_BNG_S550_SIGNAL_RL_3",
+  "s550_signal_RR_1": "Tex_BNG_S550_SIGNAL_RR_1",
+  "s550_signal_RR_2": "Tex_BNG_S550_SIGNAL_RR_2",
+  "s550_signal_RR_3": "Tex_BNG_S550_SIGNAL_RR_3",
+  "s550_steeringwheel": "Tex_BNG_S550_STEERINGWHEEL",
+  "s550_symbols_gt350": "Tex_BNG_S550_SYMBOLS_GT350",
+  "s550_taillight_L": "Tex_BNG_S550_TAILLIGHT_L",
+  "s550_taillight_R": "Tex_BNG_S550_TAILLIGHT_R",
+  "s550_wheel_02a": "Tex_BNG_S550_WHEEL_02A",
+  "side_rearL": "Tex_BNG_SIDE_REARL",
+  "side_rearR": "Tex_BNG_SIDE_REARR",
+  "signal_L": "Tex_BNG_SIGNAL_L",
+  "signal_R": "Tex_BNG_SIGNAL_R",
+  "tire_01a": "Tex_BNG_TIRE_01A",
+  "s550_badges_mach1": "Tex_BNG_S550_BADGES_MACH1",
+  "s550_dark": "Tex_BNG_S550_DARK",
+  "s550_detail": "Tex_BNG_S550_DETAIL",
+  "s550_grille1": "Tex_BNG_S550_GRILLE1",
+  "s550_grille2": "Tex_BNG_S550_GRILLE2",
+  "s550_foglight": "Tex_BNG_S550_FOGLIGHT",
+  "shelby_badge": "Tex_BNG_SHELBY_BADGE",
+  "moonhawk_drag": "Tex_BNG_MOONHAWK_DRAG",
+  "tire_01b": "Tex_BNG_TIRE_01B",
+  "s550_decals_mach1_alt": "Tex_BNG_S550_DECALS_MACH1_ALT",
+  "s550_colorpalette_2_emissive": "Tex_BNG_S550_COLORPALETTE_2_EMISSIVE",
+  "s550_decals_mach1": "Tex_BNG_S550_DECALS_MACH1",
+  "gt350_badge": "Tex_BNG_GT350_BADGE"
+ },
+ "texture_sources": {
+  "Tex_BNG_ABS": "abs.png",
+  "Tex_BNG_CHECKENGINE": "checkengine.png",
+  "Tex_BNG_GRILLE": "grille.png",
+  "Tex_BNG_GT350R_BADGE": "gt350r_badge.png",
+  "Tex_BNG_HIGHBEAM": "highbeam.png",
+  "Tex_BNG_LOWPRESSURE": "lowpressure.png",
+  "Tex_BNG_PARKINGBRAKE": "parkingbrake.png",
+  "Tex_BNG_S550_ALCANTARA": "s550_alcantara.png",
+  "Tex_BNG_S550_ALUPATTERN": "s550_alupattern.png",
+  "Tex_BNG_S550_BADGE_STEER_GT350": "s550_badge_steer_gt350.png",
+  "Tex_BNG_S550_BADGES": "s550_badges.png",
+  "Tex_BNG_S550_CARPET": "s550_carpet.png",
+  "Tex_BNG_S550_CHMSL": "s550_lights__L.png",
+  "Tex_BNG_S550_DISC_SPORT": "s550_disc_sport.png",
+  "Tex_BNG_S550_GAUGES_SCREEN": "s550_gauges_screen.png",
+  "Tex_BNG_S550_HEADLIGHT_L": "s550_lights__L.png",
+  "Tex_BNG_S550_HEADLIGHT_R": "s550_lights__L.png",
+  "Tex_BNG_S550_INTERIOR": "s550_interior.png",
+  "Tex_BNG_S550_INTERIOR_GT350R": "s550_interior_gt350r.png",
+  "Tex_BNG_S550_LCD": "s550_lcd.png",
+  "Tex_BNG_S550_LEATHER": "s550_leather.png",
+  "Tex_BNG_S550_LEATHER_STEER_GT350": "s550_leather_steer_gt350.png",
+  "Tex_BNG_S550_LEATHER_STITCHING": "s550_leather_stitching.png",
+  "Tex_BNG_S550_LEATHER_STITCHING_VPATTERN": "s550_leather_stitching_vpattern.png",
+  "Tex_BNG_S550_LIGHTS": "s550_lights.png",
+  "Tex_BNG_S550_LIGHTS_L": "s550_lights__L.png",
+  "Tex_BNG_S550_LIGHTS_R": "s550_lights__R.png",
+  "Tex_BNG_S550_MESH": "s550_mesh.png",
+  "Tex_BNG_S550_MISC": "s550_misc.png",
+  "Tex_BNG_S550_PAINT_BLACK": "s550_paint_black.png",
+  "Tex_BNG_S550_PLASTIC": "s550_plastic.png",
+  "Tex_BNG_S550_PLASTIC_STITCHING": "s550_plastic_stitching.png",
+  "Tex_BNG_S550_REVERSELIGHT": "s550_lights__L.png",
+  "Tex_BNG_S550_RUNNINGLIGHT_L": "s550_lights__L.png",
+  "Tex_BNG_S550_RUNNINGLIGHT_R": "s550_lights__L.png",
+  "Tex_BNG_S550_SCREEN": "s550_screen.png",
+  "Tex_BNG_S550_SIGNAL_L": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_R": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RL_1": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RL_2": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RL_3": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RR_1": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RR_2": "s550_lights__L.png",
+  "Tex_BNG_S550_SIGNAL_RR_3": "s550_lights__L.png",
+  "Tex_BNG_S550_STEERINGWHEEL": "s550_steeringwheel.png",
+  "Tex_BNG_S550_SYMBOLS_GT350": "s550_symbols_gt350.png",
+  "Tex_BNG_S550_TAILLIGHT_L": "s550_lights__L.png",
+  "Tex_BNG_S550_TAILLIGHT_R": "s550_lights__L.png",
+  "Tex_BNG_S550_WHEEL_02A": "s550_wheel_02a.png",
+  "Tex_BNG_SIDE_REARL": "s550_lights__L.png",
+  "Tex_BNG_SIDE_REARR": "s550_lights__L.png",
+  "Tex_BNG_SIGNAL_L": "s550_lights__L.png",
+  "Tex_BNG_SIGNAL_R": "s550_lights__L.png",
+  "Tex_BNG_TIRE_01A": "tire_01a.png",
+  "Tex_BNG_S550_BADGES_MACH1": "s550_badges_mach1.png",
+  "Tex_BNG_S550_DARK": "s550_dark.png",
+  "Tex_BNG_S550_DETAIL": "s550_detail.png",
+  "Tex_BNG_S550_GRILLE1": "s550_grille1.png",
+  "Tex_BNG_S550_GRILLE2": "s550_grille2.png",
+  "Tex_BNG_S550_FOGLIGHT": "s550_foglight.png",
+  "Tex_BNG_SHELBY_BADGE": "shelby_badge.png",
+  "Tex_BNG_MOONHAWK_DRAG": "moonhawk_drag.png",
+  "Tex_BNG_TIRE_01B": "tire_01b.png",
+  "Tex_BNG_S550_DECALS_MACH1_ALT": "s550_decals_mach1_alt.png",
+  "Tex_BNG_S550_COLORPALETTE_2_EMISSIVE": "s550_colorpalette_2_emissive.png",
+  "Tex_BNG_S550_DECALS_MACH1": "s550_decals_mach1.png",
+  "Tex_BNG_GT350_BADGE": "gt350_badge.png"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "S550_BACKLIGHT",
+    "S550_BODY",
+    "S550_BRAKEPEDAL",
+    "S550_CHMSL",
+    "S550_CLUTCHPEDAL",
+    "S550_DASH",
+    "S550_DASH_GT350R",
+    "S550_DIFF",
+    "S550_DOORGLASS_L",
+    "S550_DOORGLASS_R",
+    "S550_DOORPANEL_L",
+    "S550_DOORPANEL_R",
+    "S550_DOOR_L",
+    "S550_DOOR_R",
+    "S550_ENGBAYCRAP",
+    "S550_ENGINE",
+    "S550_EXHAUSTTIP_L_GT350",
+    "S550_EXHAUSTTIP_R_GT350",
+    "S550_EXHAUST_L_B",
+    "S550_EXHAUST_R",
+    "S550_FUELTANK",
+    "S550_GASPEDAL",
+    "S550_GAUGEGLASS",
+    "S550_GAUGES",
+    "S550_GAUGES_SCREEN",
+    "S550_HEADLIGHTGLASS_L",
+    "S550_HEADLIGHTGLASS_R",
+    "S550_HEADLIGHT_L",
+    "S550_HEADLIGHT_R",
+    "S550_INTAKE",
+    "S550_LETTERING_TRUNK_GT350R",
+    "S550_LOWERARM_F_A",
+    "S550_LOWERARM_F_B",
+    "S550_LOWERARM_R",
+    {
+     "part": "S550_MIRROR_L",
+     "skip_groups": [
+      0
+     ]
+    },
+    {
+     "part": "S550_MIRROR_R",
+     "skip_groups": [
+      0
+     ]
+    },
+    "S550_RADIATOR",
+    "S550_RADSUPPORT",
+    "S550_SCREEN",
+    "S550_SEATDELETE_R",
+    "S550_SEAT_FL_GT350",
+    "S550_SEAT_FR_GT350",
+    "S550_SHIFTER_M_GT350",
+    "S550_SHOCK_R",
+    "S550_SIDEGLASS_L",
+    "S550_SIDEGLASS_R",
+    "S550_SIGNALSTALK",
+    "S550_SPRING_R",
+    "S550_STEERINGBOX",
+    "S550_STRUTBRACE_F",
+    "S550_STRUT_F",
+    "S550_SUBFRAME_F",
+    "S550_SUBFRAME_R",
+    "S550_SUNVISOR",
+    "S550_SWAYBAR_F",
+    "S550_SWAYBAR_R",
+    "S550_TAILLIGHTGLASS_L",
+    "S550_TAILLIGHTGLASS_R",
+    "S550_TAILLIGHT_L",
+    "S550_TAILLIGHT_R",
+    "S550_TIEROD_F",
+    "S550_TIEROD_R",
+    "S550_TRANSMISSION",
+    "S550_TRUNK",
+    "S550_UPPERARM_R",
+    "S550_WINDSHIELD",
+    "S550_WIPERS",
+    "S550_WIPERSTALK",
+    {
+     "part": "S550_STEER_GT350R",
+     "slot": "Tex_BNG_S550_STEERINGWHEEL"
+    }
+   ],
+   "reduce": 0.4
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "S550_MIRROR_L",
+     "groups": [
+      0
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "S550_MIRROR_R",
+     "groups": [
+      0
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "S550_WHEEL_02A_19X11"
+    },
+    {
+     "part": "TIRE_01A_19X11_25_S550"
+    }
+   ],
+   "reduce": 0.5
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "S550_WHEEL_02A_19X11",
+     "mirror": true
+    },
+    {
+     "part": "TIRE_01A_19X11_25_S550",
+     "mirror": true
+    }
+   ],
+   "reduce": 0.5
+  },
+  "Aero_FrontBumper_GT350R": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_GT350R"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_GT500": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_GT500"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_GT350": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_GT350"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_GT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_GT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_ECOBOOST": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_ECOBOOST"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_FL_GT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_FACELIFT_GT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_FL_ECOBOOST": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_FACELIFT_ECOBOOST"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_BULLITT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_BULLITT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_RTR": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_RTR"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_RTR_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_RTR_FACELIFT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_DEBERTI": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_DEBERTI"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_MACH1": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_F_MACH1"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_GT350": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_GT350"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_GT500": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_GT500"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_FACELIFT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_FL_DIFF": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_FACELIFT"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_FACELIFT_DIFFUSER"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_DEBERTI": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_DEBERTI"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_MACH1": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_MACH1"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_MACH1_ALT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_BUMPER_R_MACH1_ALT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_GT350": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_GT350"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_GT500": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_GT500"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_TWIN": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_TWIN"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_TWIN2": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_TWIN2"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_GT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_FACELIFT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_DEBERTI": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_DEBERTI"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_MACH1": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_MACH1"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_MACH1_ALT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_HOOD_MACH1_ALT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_GT350": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_L_GT350"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_R_GT350"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_GT500": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_L_GT500"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_R_GT500"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDERBADGE_L_GT500"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDERBADGE_R_GT500"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_GT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_L"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_R"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_L_FACELIFT"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_R_FACELIFT"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Fender_DEBERTI": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_L_DEBERTI"
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FENDER_R_DEBERTI"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_GT350R": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_GT350R",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_GT500": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_WING_GT500_A",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_WING_GT500_B",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_WING_GT500_C",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    },
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_WING_GT500_D",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_GT350": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_GT350",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_GT": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_FACELIFT",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_RTR": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_RTR",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_RTR_FL": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_RTR_FACELIFT",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_MACH1": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_SPOILER_MACH1",
+     "offset": [
+      215.0,
+      -0.0,
+      -99.0
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Trunk_NONE": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_FUELTANK",
+     "only_boxes": [
+      [
+       -90,
+       0,
+       14,
+       -70,
+       20,
+       20
+      ]
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Trunk_WHEELIEBAR": {
+   "parts": [
+    {
+     "prefix": "S550D",
+     "geo": "C:/Users/noust/nfs-work/bng/s550drag/geo",
+     "part": "S550_WHEELIEBAR"
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "BNG_GT350R_L",
+  "Wheel_R": "BNG_GT350R_R",
+  "SteeringWheel": "BNG_GT350R"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_BNG_S550_CHMSL": "TailLight",
+  "Tex_BNG_S550_HEADLIGHT_L": "HeadLight",
+  "Tex_BNG_S550_HEADLIGHT_R": "HeadLight",
+  "Tex_BNG_S550_REVERSELIGHT": "ReverseLight",
+  "Tex_BNG_S550_RUNNINGLIGHT_L": "LeftSignalLight",
+  "Tex_BNG_S550_RUNNINGLIGHT_R": "RightSignalLight",
+  "Tex_BNG_S550_SIGNAL_L": "LeftSignalLight",
+  "Tex_BNG_S550_SIGNAL_R": "RightSignalLight",
+  "Tex_BNG_S550_SIGNAL_RL_1": "LeftTailLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Tex_BNG_S550_SIGNAL_RL_2": "LeftTailLight",
+  "Tex_BNG_S550_SIGNAL_RL_3": "LeftTailLight",
+  "Tex_BNG_S550_SIGNAL_RR_1": "RightTailLight",
+  "Signal_R_R": "RightSignalLight",
+  "Tex_BNG_S550_SIGNAL_RR_2": "RightTailLight",
+  "Tex_BNG_S550_SIGNAL_RR_3": "RightTailLight"
+ },
+ "lamp_slots": {
+  "Tex_BNG_S550_CHMSL": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_CHMSL"
+  },
+  "Tex_BNG_S550_HEADLIGHT_L": {
+   "kind": "head",
+   "texture_slot": "Tex_BNG_S550_HEADLIGHT_L"
+  },
+  "Tex_BNG_S550_HEADLIGHT_R": {
+   "kind": "head",
+   "texture_slot": "Tex_BNG_S550_HEADLIGHT_R"
+  },
+  "Tex_BNG_S550_REVERSELIGHT": {
+   "kind": "reverse",
+   "texture_slot": "Tex_BNG_S550_REVERSELIGHT"
+  },
+  "Tex_BNG_S550_RUNNINGLIGHT_L": {
+   "kind": "signal",
+   "texture_slot": "Tex_BNG_S550_RUNNINGLIGHT_L"
+  },
+  "Tex_BNG_S550_RUNNINGLIGHT_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_BNG_S550_RUNNINGLIGHT_R"
+  },
+  "Tex_BNG_S550_SIGNAL_L": {
+   "kind": "signal",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_L"
+  },
+  "Tex_BNG_S550_SIGNAL_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_R"
+  },
+  "Tex_BNG_S550_SIGNAL_RL_1": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RL_1"
+  },
+  "Signal_L_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RL_1"
+  },
+  "Tex_BNG_S550_SIGNAL_RL_2": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RL_2"
+  },
+  "Tex_BNG_S550_SIGNAL_RL_3": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RL_3"
+  },
+  "Tex_BNG_S550_SIGNAL_RR_1": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RR_1"
+  },
+  "Signal_R_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RR_1"
+  },
+  "Tex_BNG_S550_SIGNAL_RR_2": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RR_2"
+  },
+  "Tex_BNG_S550_SIGNAL_RR_3": {
+   "kind": "tail",
+   "texture_slot": "Tex_BNG_S550_SIGNAL_RR_3"
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RL_1",
+   "copy": true,
+   "lift": 0.08
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RL_2",
+   "copy": true,
+   "lift": 0.08
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RL_3",
+   "copy": true,
+   "lift": 0.08
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RR_1",
+   "copy": true,
+   "lift": 0.08
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RR_2",
+   "copy": true,
+   "lift": 0.08
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_BNG_S550_SIGNAL_RR_3",
+   "copy": true,
+   "lift": 0.08
+  }
+ ],
+ "wheels": {
+  "front_x": 135.1,
+  "rear_x": -136.1,
+  "half_track": 80,
+  "z": 32,
+  "rear_z": 33,
+  "radius": 32,
+  "auto_arches": true
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    17.2,
+    -36.7,
+    85.7
+   ],
+   "radius": 20,
+   "x_range": [
+    5,
+    32
+   ],
+   "uv_slots": [
+    "Tex_BNG_S550_BADGE_STEER_GT350",
+    "Tex_BNG_S550_LEATHER_STEER_GT350",
+    "Tex_BNG_S550_STEERINGWHEEL"
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    17.116565,
+    -36.69215,
+    88.00479999999999
+   ],
+   "tilt_deg": 16.54
+  }
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     43.8,
+     -48.4,
+     87.7
+    ],
+    "rot": [
+     0,
+     -90,
+     -62.6
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     43.8,
+     -25.0,
+     87.7
+    ],
+    "rot": [
+     0,
+     -90,
+     -62.6
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     42.6,
+     -48.8,
+     85.1
+    ],
+    "rot": [
+     0,
+     -90,
+     -54.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     42.1,
+     -25.2,
+     85.3
+    ],
+    "rot": [
+     0,
+     -90,
+     -54.4
+    ]
+   }
+  ]
+ },
+ "gauge_faces": {
+  "Tex_BNG_S550_INTERIOR": [
+   {
+    "center": [
+     0.6678,
+     0.7808
+    ],
+    "face": [
+     0.6678,
+     0.7808,
+     0.215
+    ],
+    "radius": 0.2,
+    "rotate": 0,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.12,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      270
+     ]
+    ],
+    "caption_font": 0.08
+   },
+   {
+    "center": [
+     0.2263,
+     0.7793
+    ],
+    "face": [
+     0.2263,
+     0.7793,
+     0.215
+    ],
+    "radius": 0.2,
+    "rotate": 0,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8.25,
+    "font": 0.13,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.3,
+      270
+     ]
+    ],
+    "caption_font": 0.07
+   },
+   {
+    "center": [
+     0.6589,
+     0.9059
+    ],
+    "radius": 0.07,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.2085,
+     0.9015
+    ],
+    "radius": 0.07,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   12,
+   12,
+   12
+  ],
+  "ink": [
+   238,
+   238,
+   234
+  ],
+  "minor_ink": [
+   185,
+   185,
+   185
+  ],
+  "red_color": [
+   225,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf"
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 9
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  235,
+  60,
+  25
+ ],
+ "needle_width": 0.4,
+ "texture_upscale": {
+  "Tex_BNG_S550_INTERIOR": 4
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_BNG_S550_INTERIOR",
+   "glow": 2.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_GT350R_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    -7,
+    0,
+    48
+   ],
+   "size": [
+    476,
+    184,
+    68
+   ]
+  },
+  {
+   "center": [
+    -45,
+    0,
+    106
+   ],
+   "size": [
+    210,
+    140,
+    48
+   ]
+  }
+ ],
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -30,
+    -39,
+    27
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -30,
+    39,
+    27
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    13,
+    -1,
+    121
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -5,
+    0,
+    128
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    200,
+    -72,
+    70
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    200,
+    72,
+    70
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    195,
+    75,
+    66
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    195,
+    -75,
+    66
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -230,
+    -61,
+    84
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -230,
+    61,
+    84
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    6.8,
+    20.4,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -30,
+   -39,
+   106
+  ],
+  "body_mass": 1206
+ },
+ "strip_part_slots": [
+  "Bonnet",
+  "Fender",
+  "FrontBumper",
+  "RearBumper",
+  "RearWing",
+  "Trunk"
+ ],
+ "performance_source": "2016-17 Shelby GT350R: 5.2 Voodoo NA flat-plane V8 526 hp @7500, 429 lb-ft (582 Nm) @4750, limiter 8250; Tremec TR-3160 6MT 3.25/2.24/1.73/1.32/1.00/0.80 R3.07, final 3.73; curb 1656 kg; RWD Torsen",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "BNG_GT350R_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "BNG_GT350R_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "Tremec 6-Speed (Shelby GT350R)",
+    "cost": 7000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.459,
+     "1": 3.662,
+     "2": 2.524,
+     "3": 1.949,
+     "4": 1.487,
+     "5": 1.127,
+     "6": 0.901
+    },
+    "note": "real final 3.73 folded in (game row FD_3.31): ratio x 3.73/3.31"
+   }
+  ],
+  "engines": [
+   {
+    "row": "BNG_GT350R_VOODOO",
+    "base_row": "SmallBlock_320HP",
+    "asset": "BNG_GT350R_VOODOO",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "5.2 Voodoo V8 (Shelby GT350R)",
+    "mass": 200,
+    "cost": 45000,
+    "max_torque_nm": 582,
+    "max_rpm": 8250,
+    "curve": [
+     [
+      0.0606,
+      0.5
+     ],
+     [
+      0.1212,
+      0.62
+     ],
+     [
+      0.2424,
+      0.74
+     ],
+     [
+      0.3636,
+      0.85
+     ],
+     [
+      0.4848,
+      0.95
+     ],
+     [
+      0.5758,
+      1.0
+     ],
+     [
+      0.6667,
+      0.98
+     ],
+     [
+      0.7879,
+      0.93
+     ],
+     [
+      0.9091,
+      0.857
+     ],
+     [
+      1.0,
+      0.79
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "rated 526 hp @7500 = 499 Nm (0.857 of peak), peak 582 Nm @4750",
+    "physics_from": "Cars/Parts/Engine/FordSmalBlock302_V8_5L_320HP",
+    "idle_throttle": 0.0009,
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "BNG_GT350R",
+     "loops": [
+      [
+       "l1",
+       800
+      ],
+      [
+       "l2",
+       1500
+      ],
+      [
+       "l3",
+       2000
+      ],
+      [
+       "l4",
+       2500
+      ],
+      [
+       "l5",
+       3000
+      ],
+      [
+       "l6",
+       3500
+      ],
+      [
+       "l7",
+       4000
+      ],
+      [
+       "l8",
+       4500
+      ],
+      [
+       "l9",
+       5000
+      ],
+      [
+       "l10",
+       5500
+      ],
+      [
+       "l11",
+       6000
+      ],
+      [
+       "l12",
+       6500
+      ],
+      [
+       "l13",
+       7000
+      ],
+      [
+       "l14",
+       7500
+      ],
+      [
+       "l15",
+       8000
+      ]
+     ],
+     "note": "the mod's own Forza recordings (art/sound/engine/fm7/for_shelbygt350r_16, Exhaust_on_*)"
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "BNG_GT350R_VOODOO",
+  "Transmission": "BNG_GT350R_6MT",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_15",
+  "Tire1": "PerformanceTire_15",
+  "Tire2": "PerformanceTire_15",
+  "Tire3": "PerformanceTire_15",
+  "Wheel0": "BNG_GT350R",
+  "Wheel1": "BNG_GT350R",
+  "Wheel2": "BNG_GT350R",
+  "Wheel3": "BNG_GT350R",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "BNG_GT350R_FrontBumper_GT350R",
+  "RearBumper": "BNG_GT350R_RearBumper_GT350",
+  "Bonnet": "BNG_GT350R_Bonnet_GT350",
+  "Fender": "BNG_GT350R_Fender_GT350",
+  "RearWing": "BNG_GT350R_RearWing_GT350R",
+  "Trunk": "BNG_GT350R_Trunk_NONE"
+ },
+ "note": "first pass 2026-11-14: seats/camera/body_mass/wheels to be measured; gauges, mirrors, lamps boxes, sound, performance next",
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     17.12,
+     -36.69,
+     88.0
+    ],
+    "rot": [
+     -16.54,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -215.0,
+     0.0,
+     99.0
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ],
+    "note": "trunk-lid top: game universal wings sit here; our wing meshes are offset by -loc"
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     43.8,
+     -48.4,
+     87.7
+    ],
+    "rot": [
+     0,
+     -90,
+     -62.6
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     43.8,
+     -25.0,
+     87.7
+    ],
+    "rot": [
+     0,
+     -90,
+     -62.6
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     42.6,
+     -48.8,
+     85.1
+    ],
+    "rot": [
+     0,
+     -90,
+     -54.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     42.1,
+     -25.2,
+     85.3
+    ],
+    "rot": [
+     0,
+     -90,
+     -54.4
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     23.67,
+     -94.74,
+     102.13
+    ],
+    "rot": [
+     -1.61,
+     -18.76,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     23.67,
+     94.74,
+     102.13
+    ],
+    "rot": [
+     -0.98,
+     29.79,
+     0
+    ]
+   }
+  ]
+ },
+ "aero_parts": [
+  {
+   "row": "BNG_GT350R_FrontBumper_GT350R",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_GT350R",
+   "display_name": "Shelby GT350R Front Bumper (stock)"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_GT500",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_GT500",
+   "display_name": "Shelby GT500 Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_GT350",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_GT350",
+   "display_name": "Shelby GT350 Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_GT",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_GT",
+   "display_name": "Mustang GT Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_ECOBOOST",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_ECOBOOST",
+   "display_name": "EcoBoost Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_FL_GT",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_FL_GT",
+   "display_name": "Mustang GT Facelift Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_FL_ECOBOOST",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_FL_ECOBOOST",
+   "display_name": "EcoBoost Facelift Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_BULLITT",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_BULLITT",
+   "display_name": "Bullitt Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_RTR",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_RTR",
+   "display_name": "RTR Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_RTR_FL",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_RTR_FL",
+   "display_name": "RTR Facelift Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_DEBERTI",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_DEBERTI",
+   "display_name": "DeBerti Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_FrontBumper_MACH1",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_MACH1",
+   "display_name": "Mach 1 Front Bumper"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_GT350",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_GT350",
+   "display_name": "Shelby GT350 Rear Bumper (stock)"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_GT500",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_GT500",
+   "display_name": "Shelby GT500 Rear Bumper"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_FL",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_FL",
+   "display_name": "Facelift Rear Bumper"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_FL_DIFF",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_FL_DIFF",
+   "display_name": "Facelift Rear Bumper + Diffuser"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_DEBERTI",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_DEBERTI",
+   "display_name": "DeBerti Rear Bumper"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_MACH1",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MACH1",
+   "display_name": "Mach 1 Rear Bumper"
+  },
+  {
+   "row": "BNG_GT350R_RearBumper_MACH1_ALT",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_MACH1_ALT",
+   "display_name": "Mach 1 Rear Bumper (alt decals)"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_GT350",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_GT350",
+   "display_name": "Shelby GT350 Hood (stock)"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_GT500",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_GT500",
+   "display_name": "Shelby GT500 Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_TWIN",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_TWIN",
+   "display_name": "Twin Turbo Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_TWIN2",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_TWIN2",
+   "display_name": "Twin Turbo Hood (smooth)"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_GT",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_GT",
+   "display_name": "Mustang GT Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_FL",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_FL",
+   "display_name": "Facelift Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_DEBERTI",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_DEBERTI",
+   "display_name": "DeBerti Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_MACH1",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MACH1",
+   "display_name": "Mach 1 Hood"
+  },
+  {
+   "row": "BNG_GT350R_Bonnet_MACH1_ALT",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_MACH1_ALT",
+   "display_name": "Mach 1 Hood (alt decals)"
+  },
+  {
+   "row": "BNG_GT350R_Fender_GT350",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_GT350",
+   "display_name": "Shelby GT350 Fenders (stock)"
+  },
+  {
+   "row": "BNG_GT350R_Fender_GT500",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_GT500",
+   "display_name": "Shelby GT500 Fenders"
+  },
+  {
+   "row": "BNG_GT350R_Fender_GT",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_GT",
+   "display_name": "Mustang GT Fenders"
+  },
+  {
+   "row": "BNG_GT350R_Fender_FL",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_FL",
+   "display_name": "Facelift Fenders"
+  },
+  {
+   "row": "BNG_GT350R_Fender_DEBERTI",
+   "slot": "Fender",
+   "part_type": "Fender",
+   "mesh": "Aero_Fender_DEBERTI",
+   "display_name": "DeBerti Fenders"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_GT350R",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_GT350R",
+   "display_name": "Shelby GT350R Wing (stock)"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_GT500",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_GT500",
+   "display_name": "Shelby GT500 Wing"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_GT350",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_GT350",
+   "display_name": "Shelby GT350 Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_GT",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_GT",
+   "display_name": "Mustang GT Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_FL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_FL",
+   "display_name": "Facelift Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_RTR",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_RTR",
+   "display_name": "RTR Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_RTR_FL",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_RTR_FL",
+   "display_name": "RTR Facelift Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_RearWing_MACH1",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_MACH1",
+   "display_name": "Mach 1 Spoiler"
+  },
+  {
+   "row": "BNG_GT350R_Trunk_NONE",
+   "slot": "Trunk",
+   "part_type": "Trunk",
+   "mesh": "Aero_Trunk_NONE",
+   "display_name": "No Wheelie Bar (stock)"
+  },
+  {
+   "row": "BNG_GT350R_Trunk_WHEELIEBAR",
+   "slot": "Trunk",
+   "part_type": "Trunk",
+   "mesh": "Aero_Trunk_WHEELIEBAR",
+   "display_name": "Drag Wheelie Bar"
+  }
+ ],
+ "skins": {
+  "dir": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "pick": [],
+  "baked": {
+   "'Race Queen' Livery": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_drag.png",
+   "Police Livery": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_police.png",
+   "Stripes (black)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_stripes_black.png",
+   "Stripes (white)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_stripes_white.png",
+   "GT500 Stripes (black)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_stripes_gt500_black.png",
+   "GT500 Stripes (white)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_stripes_gt500_white.png",
+   "Racing Stripes Asymmetrical (black)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_racestripealt_black.png",
+   "Racing Stripes Asymmetrical (white)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_racestripealt_white.png",
+   "Racing Stripes Triple (black)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_racestripe_black.png",
+   "Racing Stripes Triple (white)": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_racestripe_white.png",
+   "Snivy Livery": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_snivy.png",
+   "Dia Kurosawa Itasha": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_dia.png",
+   "Mai Sakurajima Itasha": "C:/Users/noust/nfs-work/bng/s550drag/textures/s550_livery_mai.png"
+  }
+ },
+ "texture_dirs": {
+  "Tex_BNG_S550_BADGES_MACH1": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_DARK": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_DETAIL": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_GRILLE1": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_GRILLE2": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_FOGLIGHT": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_SHELBY_BADGE": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_MOONHAWK_DRAG": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_TIRE_01B": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_DECALS_MACH1_ALT": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_COLORPALETTE_2_EMISSIVE": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_S550_DECALS_MACH1": "C:/Users/noust/nfs-work/bng/s550drag/textures",
+  "Tex_BNG_GT350_BADGE": "C:/Users/noust/nfs-work/bng/s550drag/textures"
+ }
+}

@@ -110,8 +110,8 @@
  "car": "MW_350Z",
  "display_name": "Nissan 350Z (Most Wanted)",
  "prefix": "350Z",
- "geometry_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\geo",
- "texture_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\350Z\\tex\\textures",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mwr/350Z/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mwr/350Z/tex/textures",
  "out_dir": "C:/Users/noust/mt-work/build/MW_350Z/meshes",
  "cost": 38000,
  "wheel_display_name": "350Z Stock (Most Wanted)",
@@ -158,7 +158,9 @@
   "0x000BCBBF": "LampGlass",
   "0x02F945D8": "Tex_350Z_TIRE",
   "0x427B4565": "Tex_MWG_INTERCOOLER",
-  "0x8C283C65": "Bottom"
+  "0x8C283C65": "Bottom",
+  "0x62231A84": "Bottom",
+  "0x02B52399": "Tex_350Z_BRAKELIGHT"
  },
  "texture_sources": {
   "Tex_350Z_BRAKELIGHT": "0xEAD8676E",
@@ -258,7 +260,26 @@
      18,
      113
     ]
-   ]
+   ],
+   "inner_skin": {
+    "boxes": [
+     [
+      -128,
+      40,
+      60,
+      -45,
+      84,
+      106
+     ]
+    ],
+    "slot": "Tex_350Z_INTERIOR",
+    "uv": [
+     0.801,
+     0.508
+    ],
+    "inset": 0.0,
+    "note": "B-pillar / quarter behind the door window was see-through (user 2026-11-06); reversed black copies close it"
+   }
   },
   "Wheel_L": {
    "parts": [
@@ -315,9 +336,31 @@
      "normal_filter": {
       "axis": 0,
       "min": -0.75
-     }
+     },
+     "skip_groups": [
+      1
+     ]
     }
-   ]
+   ],
+   "inner_skin": {
+    "boxes": [
+     [
+      -80,
+      40,
+      60,
+      -40,
+      84,
+      106
+     ]
+    ],
+    "slot": "Tex_350Z_INTERIOR",
+    "uv": [
+     0.801,
+     0.508
+    ],
+    "inset": 0.0,
+    "note": "B-pillar / quarter behind the door window was see-through (user 2026-11-06); reversed black copies close it"
+   }
   },
   "SideMirror_L": {
    "parts": [
@@ -327,7 +370,10 @@
      "normal_filter": {
       "axis": 0,
       "max": -0.75
-     }
+     },
+     "groups": [
+      1
+     ]
     }
    ],
    "planar_uv": {}
@@ -356,9 +402,31 @@
      "normal_filter": {
       "axis": 0,
       "min": -0.75
-     }
+     },
+     "skip_groups": [
+      1
+     ]
     }
-   ]
+   ],
+   "inner_skin": {
+    "boxes": [
+     [
+      -80,
+      40,
+      60,
+      -40,
+      84,
+      106
+     ]
+    ],
+    "slot": "Tex_350Z_INTERIOR",
+    "uv": [
+     0.801,
+     0.508
+    ],
+    "inset": 0.0,
+    "note": "B-pillar / quarter behind the door window was see-through (user 2026-11-06); reversed black copies close it"
+   }
   },
   "SideMirror_R": {
    "parts": [
@@ -368,7 +436,10 @@
      "normal_filter": {
       "axis": 0,
       "max": -0.75
-     }
+     },
+     "groups": [
+      1
+     ]
     }
    ],
    "planar_uv": {}
@@ -862,7 +933,7 @@
   "Wheel1": "MW_350Z",
   "Wheel2": "MW_350Z",
   "Wheel3": "MW_350Z",
-  "Engine": "PS_VQ35DE_287HP",
+  "Engine": "MW_350Z_VQ",
   "Transmission": "PS_CD009_6MT",
   "FinalDriveRatio": "103",
   "Tire0": "PerformanceTire_46",
@@ -1046,13 +1117,13 @@
    {
     "name": "SideMirror_L",
     "loc": [
-     23.52,
-     -86.0,
-     82.88
+     22.84,
+     -88.31,
+     82.39
     ],
     "rot": [
-     -2.34,
-     -16.58,
+     -2.54,
+     -17.46,
      0
     ]
    }
@@ -1061,13 +1132,13 @@
    {
     "name": "SideMirror_R",
     "loc": [
-     23.52,
-     86.0,
-     82.88
+     22.84,
+     88.31,
+     82.39
     ],
     "rot": [
-     -1.37,
-     29.6,
+     -1.49,
+     29.91,
      0
     ]
    }
@@ -1343,6 +1414,7 @@
   }
  },
  "masked_texture_slots": [
+  "Tex_350Z_BADGING",
   "Tex_MWG_GRILL01",
   "Tex_MWG_GRILL02"
  ],
@@ -1361,8 +1433,8 @@
    "texture_slot": "Tex_350Z_MISC"
   },
   "Signal_L_R": {
-   "kind": "signal_tail_red",
-   "texture_slot": "Tex_350Z_BRAKELIGHT"
+   "kind": "signal",
+   "texture_slot": "Tex_350Z_MISC"
   },
   "Signal_L_V": {
    "kind": "reverse",
@@ -1373,8 +1445,8 @@
    "texture_slot": "Tex_350Z_MISC"
   },
   "Signal_R_R": {
-   "kind": "signal_tail_red",
-   "texture_slot": "Tex_350Z_BRAKELIGHT"
+   "kind": "signal",
+   "texture_slot": "Tex_350Z_MISC"
   },
   "Signal_R_V": {
    "kind": "reverse",
@@ -1639,9 +1711,8 @@
  ],
  "signal_lamps": [
   {
-   "tag": "_V",
+   "tag": "_R",
    "from": "Tex_350Z_MISC",
-   "white": true,
    "box": [
     -260,
     -100,
@@ -1650,18 +1721,13 @@
     100,
     75
    ],
-   "note": "reverse lamps: clear lenses in the two rear-bumper slots"
-  },
-  {
-   "tag": "_R",
-   "from": "Tex_350Z_BRAKELIGHT",
+   "note": "rear indicators: the clear lenses in the two rear-bumper slots (user 2026-11-06; was reverse, then the tail-lamp bar)",
    "uv_box": [
-    0.45,
-    0,
-    1,
-    0.62
-   ],
-   "note": "rear indicators: the barred section of each tail lamp (US Z33: red, combined with the tail)"
+    0.0,
+    0.24,
+    0.5,
+    0.5
+   ]
   },
   {
    "tag": "_F",
@@ -1677,5 +1743,85 @@
    ],
    "note": "front indicators: amber lenses in the bumper corner slots"
   }
- ]
+ ],
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_350Z_VQ",
+    "base_row": "I6Sport_200HP",
+    "asset": "MW_350Z_VQ",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "VQ35DE 3.5L V6 (287HP) (Most Wanted 350Z)",
+    "mass": 190,
+    "cost": 18000,
+    "max_torque_nm": 371,
+    "max_rpm": 6800,
+    "curve_note": "time = rpm/6800: 680rpm .62, 2380 .85, 4800 peak 371Nm, 6200 = 287hp (.888), 6800 limiter .78",
+    "curve": [
+     [
+      0.1,
+      0.62
+     ],
+     [
+      0.35,
+      0.85
+     ],
+     [
+      0.706,
+      1.0
+     ],
+     [
+      0.912,
+      0.888
+     ],
+     [
+      1.0,
+      0.78
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_350Z",
+     "pitch_rpm": {
+      "idle": 1100,
+      "mid": 3800,
+      "high": 6400
+     },
+     "note": "loops cut from Most Wanted SOUND/ENGINE/GIN_350Z_01d_shrt2.gin with tools/gin_loops.py (user 2026-11-02: recreated engines use the MW sound); 6 layers l1-l6 between the real idle and redline (user 2026-11-05: 3 loops broke up 2000-4500 rpm)",
+     "loops": [
+      [
+       "l1",
+       1924
+      ],
+      [
+       "l2",
+       2429
+      ],
+      [
+       "l3",
+       3092
+      ],
+      [
+       "l4",
+       3932
+      ],
+      [
+       "l5",
+       4991
+      ],
+      [
+       "l6",
+       6396
+      ]
+     ]
+    },
+    "physics_from": "Cars/Parts/Engine/V6Sport_DOHC_200HP"
+   }
+  ]
+ },
+ "remaster_note": "2026-11-06: re-sourced from the MW Remaster (user rule); same body, new BASE/INTERIOR split, lamp lens hash 0x02B52399"
 }

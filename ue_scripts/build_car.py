@@ -9,6 +9,7 @@
      by slot name, adds simple collision to the body, and saves everything.
 A mode 'axis_test' imports a lopsided triangle and prints its bounds, to learn how OBJ axes map into UE."""
 import json
+import re
 import os
 import sys
 
@@ -22,6 +23,10 @@ MEL = unreal.MaterialEditingLibrary
 GAME_MATERIALS = {
     "Paint": "/Game/Cars/Materials/Body/M_Body",
     "Paint2": "/Game/Cars/Materials/Body/M_Body",   # second paint colour (stripes; final name Body_02)
+    # rim paint slots (final names Wheel_01 / Wheel_02): the game's own paint material like its and Maja's rims; the garage
+    # keeps the rim-slot material when it swaps rims, so a textured rim material bled onto every later rim (2026-11-14)
+    "WheelPaint": "/Game/Cars/Materials/Body/M_Body",
+    "WheelPaint2": "/Game/Cars/Materials/Body/M_Body",
     "Bottom": "/Game/Cars/Materials/Body/M_Body_Bottom",
     "Trim": "/Game/Cars/Materials/Body/M_Gray",
     "Glass": "/Game/Cars/Materials/Windows/M_Glass_Base",
@@ -34,6 +39,12 @@ GAME_MATERIALS = {
     "EmergencyBlue": "/Game/Cars/Materials/M_EmergencyLight_Blue",
     # the game renders its dashboard widgets (upper MFD: turn arrows, warning icons) through this material
     "DashboardUpperMFD": "/Game/Cars/Materials/M_WidgetRender",
+    # digital dash: gauge / MFD widgets render onto Dashboard faces with these slot names (as the game Dashboard meshes)
+    "TachoMeter": "/Game/Cars/Materials/M_WidgetRender",
+    "SpeedoMeter": "/Game/Cars/Materials/M_WidgetRender",
+    "FuelGauge": "/Game/Cars/Materials/M_WidgetRender",
+    "TempGauge": "/Game/Cars/Materials/M_WidgetRender",
+    "Dashboard_MFD_01": "/Game/Cars/Materials/M_WidgetRender",
 }
 TEXTURED_MASTER = ("/Game/Cars/Materials/Palette/M_Sketchfab_Base", "Base Texture")
 
@@ -231,7 +242,9 @@ def ensure_lamp_material(path, kind, masked=False):
         mat.set_editor_property("blend_mode", unreal.BlendMode.BLEND_MASKED)
         g2 = MEL.create_material_expression(mat, unreal.MaterialExpressionMultiply, -500, 450)
         MEL.connect_material_expressions(tex, "G", g2, "A"); MEL.connect_material_expressions(tex, "G", g2, "B")
-        two = MEL.create_material_expression(mat, unreal.MaterialExpressionConstant, -500, 550); two.set_editor_property("r", 2.0)
+        # MaskGain (per instance, lamp_slots "mask_gain"): dark clear sections (MW 997TT, G ~0.18) need ~20 to show
+        two = MEL.create_material_expression(mat, unreal.MaterialExpressionScalarParameter, -500, 550)
+        two.set_editor_property("parameter_name", "MaskGain"); two.set_editor_property("default_value", 2.0)
         mask = MEL.create_material_expression(mat, unreal.MaterialExpressionMultiply, -350, 450)
         MEL.connect_material_expressions(g2, "", mask, "A"); MEL.connect_material_expressions(two, "", mask, "B")
         MEL.connect_material_property(mask, "", unreal.MaterialProperty.MP_OPACITY_MASK)
@@ -330,6 +343,15 @@ def ensure_lamp_material(path, kind, masked=False):
         one = MEL.create_material_expression(mat, unreal.MaterialExpressionConstant, -500, -150)
         one.set_editor_property("r", 1.0)
         MEL.connect_material_expressions(one, "", em, "A")
+    elif kind == "tail":
+        # brake / tail glow in pure red, scaled by the texel's red: the texture's own colour (dark red with some
+        # green/blue) at x18 bloomed to white/pink in game (PS Elise brake lights, user 2026-11-18)
+        redk = MEL.create_material_expression(mat, unreal.MaterialExpressionConstant3Vector, -650, -150)
+        redk.set_editor_property("constant", unreal.LinearColor(1.0, 0.04, 0.02, 1.0))
+        rmul = MEL.create_material_expression(mat, unreal.MaterialExpressionMultiply, -500, -150)
+        MEL.connect_material_expressions(tex, "R", rmul, "A")
+        MEL.connect_material_expressions(redk, "", rmul, "B")
+        MEL.connect_material_expressions(rmul, "", em, "A")
     elif kind in LAMP_TINT:
         tint = MEL.create_material_expression(mat, unreal.MaterialExpressionConstant3Vector, -500, -150)
         tint.set_editor_property("constant", unreal.LinearColor(*LAMP_TINT[kind], 1.0))
@@ -386,8 +408,20 @@ def build(build_dir):
     for path in GAME_MATERIALS.values():
         ensure_material(path)
     master = ensure_material(TEXTURED_MASTER[0], TEXTURED_MASTER[1])
-    paint_tex = ensure_paint_tex_material(model_dir + "/M_PaintTex") if car.get("paintable_texture_slots") else None
+    # wheel meshes are drawn in a way the game's textured master (M_Sketchfab_Base) has no shaders for: the cooked
+    # game shows such slots plain white (2026-11-14). Every textured wheel slot goes on our own M_PaintTex instead.
+    wheel_slots = set()
+    for m in car["meshes"]:
+        if m.get("dest") == "/Game/Cars/Parts/Wheels" and os.path.exists(m["obj"]):
+            wheel_slots |= {re.sub(r"^o\d_", "", l.split()[1]) for l in open(m["obj"]) if l.startswith("usemtl ")}
+    paint_tex = ensure_paint_tex_material(model_dir + "/M_PaintTex")         if car.get("paintable_texture_slots") or wheel_slots else None
     masked = ensure_masked_material(model_dir + "/M_TexMasked") if car.get("masked_texture_slots") else None
+    for mat in (paint_tex, masked):
+        if mat is not None:
+            mat.set_editor_property("used_with_skeletal_mesh", True)
+            mat.set_editor_property("used_with_instanced_static_meshes", True)
+            MEL.recompile_material(mat)
+            EAL.save_asset(mat.get_path_name().split(".")[0], only_if_is_dirty=False)
     # NFS vinyl liveries -> skin material instances (make_mt_assets adds them to the blueprint's BodyMaterialList)
     if car.get("skins"):
         vmat = ensure_vinyl_material(model_dir + "/M_VinylBody")
@@ -420,8 +454,13 @@ def build(build_dir):
         mi_path = model_dir + "/" + mi_name
         mi = unreal.load_asset(mi_path) if EAL.does_asset_exist(mi_path) else \
             AT.create_asset(mi_name, model_dir, unreal.MaterialInstanceConstant, unreal.MaterialInstanceConstantFactoryNew())
-        MEL.set_material_instance_parent(mi, paint_tex if slot in car.get("paintable_texture_slots", []) else
-                                         masked if slot in car.get("masked_texture_slots", []) else master)
+        is_masked = slot in car.get("masked_texture_slots", [])
+        on_paint = slot in car.get("paintable_texture_slots", []) or (slot in wheel_slots and not is_masked)
+        MEL.set_material_instance_parent(mi, paint_tex if on_paint else masked if is_masked else master)
+        if on_paint and slot not in car.get("paintable_texture_slots", []):   # fixed wheel part: no paint, own finish
+            rubber = re.search(r"TIRE|TYRE|RUBBER|TREAD", slot, re.I) is not None
+            MEL.set_material_instance_scalar_parameter_value(mi, "Metallic", 0.0 if rubber else 0.6)
+            MEL.set_material_instance_scalar_parameter_value(mi, "Roughness", 0.85 if rubber else 0.35)
         if tex is not None:
             MEL.set_material_instance_texture_parameter_value(mi, TEXTURED_MASTER[1], tex)
         # a parent swap alone doesn't dirty the package: force the save or an existing MI keeps its old parent
@@ -442,11 +481,16 @@ def build(build_dir):
             EAL.delete_asset(mi_path)
         mi = AT.create_asset("MI_Lamp_" + slot, model_dir, unreal.MaterialInstanceConstant, unreal.MaterialInstanceConstantFactoryNew())
         MEL.set_material_instance_parent(mi, lamp_mats[(kind, lm)])
-        if slot_textures.get(tex_slot) is not None:
-            MEL.set_material_instance_texture_parameter_value(mi, "Base Texture", slot_textures[tex_slot])
+        # tail / brake lamps: the red-lens copy of a bare reflector texture when tools/redlens.py made one
+        red = slot_textures.get(tex_slot + "_REDLENS") if kind in ("tail", "tail_red", "signal_tail", "signal_tail_red") else None
+        if red is not None or slot_textures.get(tex_slot) is not None:
+            MEL.set_material_instance_texture_parameter_value(mi, "Base Texture", red or slot_textures[tex_slot])
+        mg = car["lamp_slots"][slot].get("mask_gain") if isinstance(car["lamp_slots"][slot], dict) else None
+        if mg:
+            MEL.set_material_instance_scalar_parameter_value(mi, "MaskGain", float(mg))
         EAL.save_loaded_asset(mi)
         slot_materials[slot] = mi
-        log("lamp instance %s (%s)" % (mi_path, kind))
+        log("lamp instance %s (%s%s)" % (mi_path, kind, ", mask gain %s" % mg if mg else ""))
     if car.get("emissive_slots"):
         glow_mat = ensure_glow_material(model_dir + "/M_Glow")
         for slot, e in car["emissive_slots"].items():
@@ -485,7 +529,7 @@ def build(build_dir):
             log("FAILED to import " + mesh["obj"])
             continue
         for i, m in enumerate(smesh.static_materials):
-            slot = str(m.material_slot_name)
+            slot = re.sub(r"^o\d_", "", str(m.material_slot_name))   # wheel_mats.py order prefix (importer sorts by name)
             if slot.endswith("Mat") and slot[:-3] in slot_materials:   # the OBJ importer appends "Mat" to usemtl names
                 slot = slot[:-3]
             mat = slot_materials.get(slot)
@@ -505,6 +549,7 @@ def build(build_dir):
         for sm_ in mats:
             base = str(sm_.get_editor_property("material_slot_name"))
             base = base[:-3] if base.endswith("Mat") else base
+            base = re.sub(r"^o\d_", "", base)
             new_mats.append(unreal.StaticMaterial(material_interface=sm_.get_editor_property("material_interface"),
                                                   material_slot_name=renames.get(base, base)))
         smesh.set_editor_property("static_materials", new_mats)
@@ -528,11 +573,61 @@ def build(build_dir):
             s_obj.set_editor_property("relative_rotation", unreal.Rotator(pitch=sock["rot"][0], yaw=sock["rot"][1], roll=sock["rot"][2]))
             if existing is None:
                 smesh.add_socket(s_obj)
+        if mesh.get("reduce"):
+            # LOD0 reduction with UE's quadric reducer (keeps UVs/slots); the cook bakes the reduced mesh
+            sub = unreal.get_editor_subsystem(unreal.StaticMeshEditorSubsystem)
+            before = sub.get_number_verts(smesh, 0)
+            boxes_before = section_boxes(smesh)
+            ro = unreal.EditorScriptingMeshReductionOptions(auto_compute_lod_screen_size=False, reduction_settings=[
+                unreal.EditorScriptingMeshReductionSettings(percent_triangles=float(mesh["reduce"]), screen_size=1.0)])
+            sub.set_lods(smesh, ro)
+            log("reduced %s LOD0 to %s: verts %d -> %d" % (mesh["name"], mesh["reduce"], before, sub.get_number_verts(smesh, 0)))
+            fix_reduced_sections(smesh, sub, boxes_before, mesh["name"])
         EAL.save_loaded_asset(smesh)
         b = smesh.get_bounding_box()
         log("MESH %s/%s slots=%d bounds min=%s max=%s" % (dest, mesh["name"], len(smesh.static_materials), b.min, b.max))
     log("BUILD_DONE " + name)
 
+
+
+def section_boxes(smesh):
+    """bbox (6 floats) of each LOD0 section's vertices"""
+    out = []
+    for i in range(smesh.get_num_sections(0)):
+        v = unreal.ProceduralMeshLibrary.get_section_from_static_mesh(smesh, 0, i)[0]
+        xs, ys, zs = [p.x for p in v], [p.y for p in v], [p.z for p in v]
+        out.append((min(xs), min(ys), min(zs), max(xs), max(ys), max(zs)) if v else None)
+    return out
+
+
+def fix_reduced_sections(smesh, sub, boxes_before, name):
+    """UE's quadric reducer can delete a tiny section (a 4-triangle badge) entirely; the LOD's section info then keeps
+    the identity map, so every later section draws the material of the slot before it (F40 2026-11-19: gauges showed
+    the door-tag stickers, belts vanished, seats chrome). Re-map the surviving sections to their own slots by matching
+    each section's bbox to the pre-reduction sections in order (DP subsequence alignment)."""
+    after = section_boxes(smesh)
+    n, m = len(after), len(boxes_before)
+    if n >= m:
+        return
+    INF = float("inf")
+    cost = lambda a, b: INF if a is None or b is None else sum(abs(a[k] - b[k]) for k in range(6))
+    D = [[INF] * (m + 1) for _ in range(n + 1)]
+    D[0] = [0.0] * (m + 1)
+    for i in range(1, n + 1):
+        for j in range(i, m + 1):
+            D[i][j] = min(D[i][j - 1], D[i - 1][j - 1] + cost(after[i - 1], boxes_before[j - 1]))
+    i, j, mapping = n, m, {}
+    while i > 0:
+        if D[i][j] == D[i][j - 1] and j > i:
+            j -= 1
+        else:
+            mapping[i - 1] = j - 1; i -= 1; j -= 1
+    dropped = sorted(set(range(m)) - set(mapping.values()))
+    for s_, k in mapping.items():
+        sub.set_lod_material_slot(smesh, k, 0, s_)
+    names = [str(x.material_slot_name) for x in smesh.static_materials]
+    log("WARNING reduction removed %d section(s) of %s: %s -> sections re-mapped to their own slots"
+        % (len(dropped), name, [names[k] for k in dropped if k < len(names)]))
 
 args = [a for a in sys.argv[1:] if not a.startswith("-")]
 build_dir = os.environ.get("PSCAR_BUILD_DIR") or (args[-1] if args else "")

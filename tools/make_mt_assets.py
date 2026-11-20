@@ -9,6 +9,7 @@ in the user's own mod pak.
 
 usage: make_mt_assets.py <out_dir> <car_spec.json> [<car_spec.json> ...]"""
 import copy
+import re
 import json
 import os
 import subprocess
@@ -19,6 +20,9 @@ UAG = os.path.expanduser("~/tools/uassetgui/UAssetGUI.exe")
 # MT_BASE: client base files to build on (e.g. ~/mt-work/unpacked_maja: Maja's Wheel Works wheel table) without server mode
 UNPACKED = os.path.expanduser(os.environ.get("MT_UNPACKED", os.environ.get("MT_BASE", "~/mt-work/unpacked_maja/MotorTown/Content")))
 WHEEL_MESH_SCALE = 0.6466   # must match ps_to_mt.WHEEL_MESH_SCALE
+
+
+SUSPENSION = {"spring": 2.5, "damping": 2.0, "anti_roll": 3.0}   # multipliers on the base car's
 
 
 def win(p):
@@ -202,16 +206,29 @@ def clone_blueprint(spec, work, out_root):
     # variant blueprints live in their family's folder and reuse its wheels / steering wheel
     # (Muhan_Police: Cars/Models/Muhan/Muhan_Police.uasset, Muhan_L/R, SteeringWheels/Muhan)
     bdir, wb = spec.get("base_dir", base), spec.get("base_dir", base)
+    ww = spec.get("base_wheel_mesh", wb)   # wheel meshes named after another car (the Neo uses Micky_L/R)
     src = os.path.join(UNPACKED, "Cars/Models/%s/%s.uasset" % (bdir, base))
     d = tojson(src, os.path.join(work, "%s_base.json" % base))
+    # 0.7.20 dirt / car wash: each base car's DirtComponent carries a baked dirt topology bound to the BASE car's body
+    # components and material slot indices. On our bodies those indices are other slots (lamps, cut-out badges) and the
+    # game swapped them to its dirt/paint material (lenses lost colour, brake glow white, Elise indicators square,
+    # user 2026-11-18). Our cars get the component with no saved data (native defaults = no dirt topology).
+    for e in d["Exports"]:
+        if e.get("ObjectName") == "DirtComponent" and e["$type"].startswith("UAssetAPI.ExportTypes.NormalExport") and e.get("Data"):
+            e["Data"] = []; print("  DirtComponent: baked base-car dirt topology cleared")
+        elif e.get("ObjectName") == "DirtComponent" and e["$type"].startswith("UAssetAPI.ExportTypes.RawExport"):
+            e.update({"$type": "UAssetAPI.ExportTypes.NormalExport, UAssetAPI", "Data": [], "ObjectGuid": None,
+                      "SerializationControl": "NoExtension", "Operation": "None", "HasLeadingFourNullBytes": False,
+                      "Extras": "AAAAAA=="})
+            print("  DirtComponent: baked base-car dirt topology cleared")
     pairs = [
         ("/Game/Cars/Models/%s/%s" % (bdir, base), "/Game/Cars/Models/%s/%s" % (car, car)),
         ("Default__%s_C" % base, "Default__%s_C" % car),
         ("%s_C" % base, "%s_C" % car),
-        ("/Game/Cars/Parts/Wheels/%s_L" % wb, "/Game/Cars/Parts/Wheels/%s_L" % car),
-        ("/Game/Cars/Parts/Wheels/%s_R" % wb, "/Game/Cars/Parts/Wheels/%s_R" % car),
-        ("%s_L" % wb, "%s_L" % car),
-        ("%s_R" % wb, "%s_R" % car),
+        ("/Game/Cars/Parts/Wheels/%s_L" % ww, "/Game/Cars/Parts/Wheels/%s_L" % car),
+        ("/Game/Cars/Parts/Wheels/%s_R" % ww, "/Game/Cars/Parts/Wheels/%s_R" % car),
+        ("%s_L" % ww, "%s_L" % car),
+        ("%s_R" % ww, "%s_R" % car),
     ]
     for a, b in spec.get("base_parts", {}).items():     # e.g. Police_Body -> our Body
         pairs += [("/Game/Cars/Models/%s/%s" % (bdir, a), "/Game/Cars/Models/%s/%s" % (car, b)), (a, b)]
@@ -223,10 +240,18 @@ def clone_blueprint(spec, work, out_root):
             gc = find_prop(e, "GaugeConfigs")
             if not gc:
                 continue
+            # digital dash (spec gauge_drop): gauges the car's screen has no face for (the Kuda trucks have no Speed)
+            gc["Value"] = [kv for kv in gc["Value"] if kv[0]["Value"].split("::")[-1] not in spec.get("gauge_drop", [])]
             for kv in gc["Value"]:
                 key = kv[0]["Value"].split("::")[-1]
                 want = rng.get(key)
                 for p in kv[1]["Value"]:
+                    if p["Name"] == "Text1ValueType" and key in spec.get("gauge_text", {}):
+                        # digital readout inside the gauge widget (Kuda: RPM tacho shows the Speed)
+                        p["Value"] = spec["gauge_text"][key]; p["IsZero"] = False
+                        if p["Value"] not in d["NameMap"]:
+                            d["NameMap"].append(p["Value"])
+                        print("  gauge %s text -> %s" % (key, p["Value"]))
                     if want and p["Name"] == "MaxValue":
                         print("  gauge %s max %s -> %s" % (key, p["Value"], want["max"])); p["Value"] = float(want["max"])
                     if p["Name"] == "NiddleMeshScale" and key in spec.get("needle_scales", {}):
@@ -250,9 +275,14 @@ def clone_blueprint(spec, work, out_root):
                             if n not in d["NameMap"]:
                                 d["NameMap"].append(n)
                         print("  needle %s -> %s" % (big, pkg["ObjectName"]))
+    for a, b in spec.get("gauge_widgets", {}).items():
+        # swap a base gauge widget class for another game widget, e.g. Gauges/W_Tachometer -> Gauges/W_TachoWithDigitalSpeed
+        na, nb = a.split("/")[-1], b.split("/")[-1]
+        pairs += [("/Game/UI/InGame/Dashboard/" + a, "/Game/UI/InGame/Dashboard/" + b),
+                  ("%s_C" % na, "%s_C" % nb), ("Default__%s_C" % na, "Default__%s_C" % nb)]
     if "SteeringWheel" in spec.get("extract", {}):   # the car's own steering wheel replaces the base car's
         pairs = [("/Game/Cars/Parts/SteeringWheels/%s" % wb, "/Game/Cars/Parts/SteeringWheels/%s" % car)] + pairs
-    parts = ["Body", "Door_L", "Door_R", "Door_Left", "Door_Right", "SideMirror_L", "SideMirror_R", "SideMirror", "LeftSideMirror"] + \
+    parts = ["Body", "Door_L", "Door_R", "Door_Left", "Door_Right", "SideMirror_L", "SideMirror_R", "SideMirror", "LeftSideMirror", "SideMirror_Left", "SideMirror_Right", "Tailgate"] + \
         (["Dashboard"] if spec.get("dashboard") else [])
     for part in parts:
         pairs.append(("/Game/Cars/Models/%s/%s" % (bdir, part), "/Game/Cars/Models/%s/%s" % (car, part)))
@@ -285,6 +315,18 @@ def clone_blueprint(spec, work, out_root):
                     for n in (pkg["ObjectName"], "Dashboard"):
                         if n not in d["NameMap"]:
                             d["NameMap"].append(n)
+    if spec.get("dashboard", {}).get("attach_none"):
+        # car-space gauges on a base whose Dashboard hangs off the Body socket SteeringWheel (Raton): set
+        # DashboardAttachSocketName None as the Zino/Tuscan do (the socket-frame conversion left the Diablo's pivots off)
+        tmpl = next(copy.deepcopy(p) for e in d["Exports"] for p in e.get("Data", []) if p.get("$type", "").endswith("NamePropertyData, UAssetAPI"))
+        tmpl["Name"], tmpl["Value"] = "DashboardAttachSocketName", "None"
+        for n in ("DashboardAttachSocketName", "None"):
+            if n not in d["NameMap"]:
+                d["NameMap"].append(n)
+        for e in d["Exports"]:
+            if e.get("ObjectName") == "Dashboard" and find_prop(e, "DashboardMesh"):
+                e["Data"] = [p for p in e["Data"] if p["Name"] != "DashboardAttachSocketName"] + [tmpl]
+                print("  Dashboard: DashboardAttachSocketName -> None (car-space sockets)")
     if "SteeringWheel" in spec.get("extract", {}):
         # the StaticMesh import inside the steering wheel package is named after the base car too
         for imp in d["Imports"]:
@@ -389,6 +431,42 @@ def clone_blueprint(spec, work, out_root):
     wheel_locs = {"Wheel0": (w["front_x"], w["half_track"], w["z"]), "Wheel1": (w["front_x"], -w["half_track"], w["z"]),
                   "Wheel2": (w["rear_x"], rt, rz), "Wheel3": (w["rear_x"], -rt, rz)}
     bp = spec.get("blueprint", {})
+    # MW-style handling (user, 2026-10-31): every port rides much stiffer than the base car; springs, dampers and
+    # anti-roll bars are scaled on the blueprint so the garage's Spring/Damper parts still multiply on top
+    susp = dict(SUSPENSION, **spec.get("suspension", {}))
+    hits = []
+    def scale_props(o, names, k):
+        if isinstance(o, dict):
+            if o.get("Name") in names and isinstance(o.get("Value"), (int, float)) and not isinstance(o.get("Value"), bool):
+                o["Value"] = float(o["Value"]) * k; hits.append(o["Name"])
+            for v in o.values(): scale_props(v, names, k)
+        elif isinstance(o, list):
+            for v in o: scale_props(v, names, k)
+    # ride height: stiffer springs sag less, so the car would sit higher than the stance tuned on the base springs
+    # (user 2026-11-02: the MW Viper rose ~6.5 / 11 cm). Lower each wheel mount by the sag removed:
+    # W/k * (1 - 1/f), W = a quarter of the car's weight. Specs whose stance was tuned on the stiff springs already
+    # (Diablo, Heat R34) set "stance_after_stiff": true.
+    if susp["spring"] != 1 and not spec.get("stance_after_stiff"):
+        total = float(bp.get("body_mass", 944)) + 456.0          # body + typical engine/gearbox/tyres/parts
+        wq = total * 9.81 / 4
+        for e in d["Exports"]:
+            nm = e.get("ObjectName")
+            kp = find_prop(e, "SpringK") if nm in wheel_locs else None
+            if kp and isinstance(kp.get("Value"), (int, float)) and kp["Value"] > 0:
+                dz = wq / float(kp["Value"]) * (1 - 1 / susp["spring"]) * 100
+                x_, y_, z_ = wheel_locs[nm]
+                wheel_locs[nm] = (x_, y_, z_ + dz)
+                print("  ride height: %s mount +%.1f cm (sag lost to x%s springs, %.0f kg car)" % (nm, dz, susp["spring"], total))
+    for e in d["Exports"]:
+        if e.get("ObjectName") in wheel_locs:
+            scale_props(e.get("Data"), {"SpringK"}, susp["spring"])
+            scale_props(e.get("Data"), {"SpringBoundDamping", "SpringReboundDamping"}, susp["damping"])
+        elif str(e.get("ObjectName", "")).startswith("Default__"):
+            for p_ in e.get("Data") or []:
+                if p_.get("Name") == "AntiRollBars":
+                    scale_props(p_, {"SpringK", "SpringD"}, susp["anti_roll"])
+    print("  suspension x%s: %d SpringK, %d damper, %d anti-roll values" % (susp["spring"], hits.count("SpringK") - hits.count("SpringD"),
+          sum(h.startswith("SpringB") or h.startswith("SpringR") for h in hits), hits.count("SpringD") * 2))
     for e in d["Exports"]:
         name = e.get("ObjectName")
         if name in wheel_locs:
@@ -442,11 +520,17 @@ def clone_blueprint(spec, work, out_root):
             loc = find_prop(e, "RelativeLocation")
             if loc:
                 set_vector(loc, bp["components"][name])
+        if name in bp.get("component_scales", {}):   # e.g. the pickup bed's MTVehicleCargoSpace box sized to this bed
+            sc = find_prop(e, "RelativeScale3D")
+            if sc:
+                set_vector(sc, bp["component_scales"][name])
         if name == "Mesh" and "body_mass" in bp:   # chassis mass; the game adds each part's MassKg on top
             bi = find_prop(e, "BodyInstance")
             for q in (bi["Value"] if bi else []):
                 if q["Name"] == "MassInKgOverride":
                     q["Value"] = float(bp["body_mass"])
+                if q["Name"] == "COMNudge" and "com_nudge" in bp:   # centre-of-mass offset (the Neo's +28 cm forward flipped the Civic EG on braking)
+                    set_vector(q, bp["com_nudge"]); print("  COMNudge -> %s" % bp["com_nudge"])
         if name in bp.get("component_rotations", {}):   # [pitch, yaw, roll]
             r = find_prop(e, "RelativeRotation")
             if r:
@@ -456,11 +540,89 @@ def clone_blueprint(spec, work, out_root):
             loc = find_prop(e, "RelativeLocation")
             if loc:
                 set_vector(loc, bp["cockpit_camera"])
+    # blueprint default Name properties the base car does not set (spec blueprint "cdo_names"), e.g. BodyMaterialName: the
+    # Panther sets BodyMaterialName = Body_01 and its pop-up pods (a skeletal Headlight part) get the body paint natively;
+    # without it our pods stayed unpainted and needed a runtime repaint script that crashed the game (2026-11-13)
+    for prop, val in bp.get("cdo_names", {}).items():
+        cdo_ = next(e for e in d["Exports"] if str(e.get("ObjectName", "")).startswith("Default__"))
+        pr = find_prop(cdo_, prop)
+        if pr is None:
+            pr = {"$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI", "Name": prop, "ArrayIndex": 0,
+                  "PropertyGuid": None, "IsZero": False, "PropertyTagFlags": "None", "PropertyTypeName": None,
+                  "PropertyTagExtensions": "NoExtension", "Value": val}
+            cdo_["Data"].append(pr)
+        pr["Value"] = val
+        for n_ in (prop, val):
+            if n_ not in d["NameMap"]:
+                d["NameMap"].append(n_)
+        print("  CDO %s = %s" % (prop, val))
     if spec.get("drivetrain") == "awd":
         make_awd(d, work)
+    elif spec.get("drivetrain") == "rwd":
+        make_rwd(d)
+    extra = spec.get("extra_mesh_imports") or []
+    if extra:
+        # meshes only a runtime mod uses (PSCalipers): imported by the car blueprint so they load with the car (mod paks
+        # are not in the asset registry, so UE4SS LoadAsset cannot find them; StaticFindObject finds them once loaded)
+        tmpl = next(i for i in d["Imports"] if i["ClassName"] == "StaticMesh" and i["OuterIndex"] < 0)
+        for mname in extra:
+            pkg = copy.deepcopy(d["Imports"][-tmpl["OuterIndex"] - 1]); pkg["ObjectName"] = "/Game/Cars/Models/%s/%s" % (car, mname)
+            d["Imports"].append(pkg)
+            mi = copy.deepcopy(tmpl); mi["ObjectName"] = mname; mi["OuterIndex"] = -len(d["Imports"])
+            d["Imports"].append(mi)
+            for n in (pkg["ObjectName"], mname):
+                if n not in d["NameMap"]:
+                    d["NameMap"].append(n)
+            # an unused import is not loaded (in game: still missing): make the CDO depend on it before it is created
+            cdo = next(e for e in d["Exports"] if e["ObjectName"].startswith("Default__"))
+            cdo.setdefault("SerializationBeforeCreateDependencies", []).append(-len(d["Imports"]))
+            print("  extra mesh import %s (preload dependency of %s)" % (pkg["ObjectName"], cdo["ObjectName"]))
     out = os.path.join(out_root, "MotorTown/Content/Cars/Models/%s/%s.uasset" % (car, car))
     fromjson(d, os.path.join(work, "%s_bp.json" % car), out)
     return out
+
+
+def make_rwd(d):
+    """Rear-wheel drive on an AWD base (Raton: Transmission -> DiffernetialC -> DifferentialF/R; real Diablo SV is RWD,
+    user 2026-11-06): DifferentialR takes the Transmission directly, the front wheels lose their differential (free
+    rolling), DifferentialF is left without wheels."""
+    ex = d["Exports"]
+    if "TransmissionComponentName" not in d["NameMap"]:
+        d["NameMap"].append("TransmissionComponentName")
+    centre = next(e for e in ex if e.get("ObjectName", "").startswith("Diff") and
+                  any(p["Name"] == "TransmissionComponentName" for p in e.get("Data", [])))
+    tcn = next(p for p in centre["Data"] if p["Name"] == "TransmissionComponentName")
+    # diff names differ per base (Raton DiffernetialC/DifferentialF/R, Ranch DiffCenter/DiffFront/DiffRear): take them
+    # from the wheels (Silverado on the Ranch stayed AWD, user 2026-11-19)
+    diff_of = lambda w: next((p["Value"] for e in ex if e.get("ObjectName") == w for p in e["Data"] if p["Name"] == "DifferentialComponentName"), None)
+    front_name, rear_name = diff_of("Wheel0"), diff_of("Wheel2")
+    if front_name in (None, "None"):
+        print("  RWD: base is already rear-wheel drive (front wheels have no differential)")
+        return
+    centre_name = centre["ObjectName"].replace("_GEN_VARIABLE", "")
+    rear = next(e for e in ex if e.get("ObjectName") == rear_name + "_GEN_VARIABLE")
+    rear["Data"] = [copy.deepcopy(tcn)] + [p for p in rear["Data"] if p["Name"] != "DifferentialComponentName"]
+    tmpl = next(p for e in ex if e.get("ObjectName") == "Wheel2" for p in e["Data"] if p["Name"] == "DifferentialComponentName")
+    for e in ex:
+        if e.get("ObjectName") in ("Wheel0", "Wheel1"):
+            # explicit None: with the override just removed the wheels fell back to the class default and stayed driven
+            q = copy.deepcopy(tmpl); q["Value"] = "None"
+            e["Data"] = [q] + [p for p in e["Data"] if p["Name"] not in ("DifferentialComponentName", "LinkGearRatio")]
+    # front wheels exactly like the RWD Tuscan: no differential properties at all
+    for e in ex:
+        if e.get("ObjectName") in ("Wheel0", "Wheel1"):
+            e["Data"] = [p for p in e["Data"] if p["Name"] not in ("DifferentialComponentName", "LinkGearRatio")]
+    # and the centre / front diffs are not built at all (detaching them still left the fronts driven, user 2026-11-06):
+    # drop their SCS nodes from the construction script
+    gone = {i + 1 for i, e in enumerate(ex) if e.get("ObjectName", "").startswith("SCS_Node") and
+            any(p["Name"] == "InternalVariableName" and p["Value"] in (centre_name, front_name) for p in e.get("Data", []))}
+    for e in ex:
+        if e.get("ObjectName", "").startswith("SimpleConstructionScript"):
+            for p in e["Data"]:
+                if p["Name"] in ("RootNodes", "AllNodes"):
+                    p["Value"] = [dict(v, Name=str(k)) for k, v in enumerate(x for x in p["Value"] if x["Value"] not in gone)]
+            e["CreateBeforeSerializationDependencies"] = [x for x in e.get("CreateBeforeSerializationDependencies", []) if x not in gone]
+    print("  RWD: %s <- Transmission, front wheels undriven, %s/%s nodes removed (%d)" % (rear_name, centre_name, front_name, len(gone)))
 
 
 def make_awd(d, work):
@@ -563,7 +725,8 @@ def make_table(specs, work, out_root):
     jeep = tojson(os.path.join(UNPACKED, "DataAsset/Vehicles/Vehicles_Jeep.uasset"), os.path.join(work, "Vehicles_Jeep.json"))
     new_rows = []
     for spec in specs:
-        row = copy.deepcopy(rows[spec["base_vehicle"]])
+        # the row key isn't always the blueprint name (the Raton's row is "Sports_01"): spec base_row
+        row = copy.deepcopy(rows[spec.get("base_row", spec["base_vehicle"])])
         row["Name"] = spec["car"]
         for p in row["Value"]:
             if p["Name"] == "VehicleName":
@@ -576,8 +739,14 @@ def make_table(specs, work, out_root):
                 p["Value"] = int(spec["cost"])
             elif p["Name"] == "Parts":
                 # drop the base car's body kit and rims: those parts are its own meshes and would cover ours
-                strip = set(spec.get("strip_part_slots", []))
+                # every body part of the base car goes (user 2026-11-13: "delete all parts from the old vehicle"): the
+                # base row's hood/bumpers/wing/skirts/fenders/lamps/roof/trunk/bullbar are the base car's own meshes and
+                # float on or poke through our body; a slot the port fills itself (part_overrides) is kept
+                strip = (set(spec.get("strip_part_slots", [])) | BASE_BODY_SLOTS) - set(spec.get("part_overrides", {}))
+                gone = [str(kv[1].get("Value")) for kv in p["Value"] if str(kv[0].get("Value", "")).split("::")[-1] in strip]
                 p["Value"] = [kv for kv in p["Value"] if str(kv[0].get("Value", "")).split("::")[-1] not in strip]
+                if gone:
+                    print("  %s: base parts removed: %s" % (spec["car"], ", ".join(gone)))
                 present = set()
                 for kv in p["Value"]:   # e.g. Wheel0..3 -> the car's own rim part
                     slot = str(kv[0].get("Value", "")).split("::")[-1]
@@ -734,6 +903,10 @@ def make_sound_cue(snd, work, out_root):
             if p["Name"] == "ChildNodes":
                 for c in p["Value"]:
                     parent[c["Value"]] = i
+    if snd.get("loops"):
+        cue_loops(d, snd["loops"], new_dir, parent)
+        fromjson(d, os.path.join(work, os.path.basename(rel) + ".json"), os.path.join(out_root, "MotorTown/Content", rel + ".uasset"))
+        return "/Game/" + rel
     for i, e in enumerate(ex, 1):
         ptr = next((p for p in e.get("Data", []) if p["Name"] == "SoundWaveAssetPtr"), None)
         if not ptr:
@@ -755,10 +928,93 @@ def make_sound_cue(snd, work, out_root):
             else:
                 q = copy.deepcopy(f["MinInput"]); q["Name"] = k; q["Value"] = round(v, 4); pm["Value"].append(q)
         print("  cue %s: %s recorded at %d rpm -> pitch %.3f..%.3f over %d..%d rpm" % (rel, wave, rec, lo / rec, hi / rec, lo, hi))
+    # louder (user 2026-11-05: ports quiet next to stock cars): cue at 1.0 not 0.5, mid chain's rpm fade from 0.8 not 0.2,
+    # off-throttle at 0.6 not 0.3/0.5; the idle and high chains' own gains are left as they are
+    for p in ex[0]["Data"]:
+        if p["Name"] == "VolumeMultiplier":
+            p["Value"] = 1.0
+    for e in ex:
+        vm = next((p for p in e.get("Data", []) if p["Name"] == "VolumeModulationParams"), None)
+        if not vm:
+            continue
+        f = {q["Name"]: q for q in vm["Value"]}
+        par = f.get("ParameterName", {}).get("Value")
+        mo = f.get("MinOutput")
+        if mo is None or float(f["MaxOutput"]["Value"] if "MaxOutput" in f else 1.0) > 1.0:
+            continue
+        mo["Value"] = max(float(mo["Value"]), 0.8 if par == "RPM" else 0.6)
     if "MaxOutput" not in d["NameMap"]:
         d["NameMap"].append("MaxOutput")
     fromjson(d, os.path.join(work, os.path.basename(rel) + ".json"), os.path.join(out_root, "MotorTown/Content", rel + ".uasset"))
     return "/Game/" + rel
+
+
+def cue_loops(d, loops, new_dir, parent):
+    """Rebuild the cue's RPM mixer with one layer per loop (user 2026-11-05: 3 loops over 600-6500 rpm broke up between
+    2000 and 4500, the high loop played at 1/3 speed). loops = [[wave, recorded rpm], ...] ascending; each layer is
+    a copy of the S58 'mid' chain (crossfade -> throttle volume -> RPM pitch -> wave), full volume at its own rpm and
+    crossfading linearly into its neighbours, pitch = rpm / recorded rpm."""
+    ex = d["Exports"]
+    find = lambda pred: next(i for i, e in enumerate(ex, 1) if pred(e))
+    W = find(lambda e: any(p["Name"] == "SoundWaveAssetPtr" and p["Value"]["AssetPath"]["AssetName"] == "mid" for p in e.get("Data", [])))
+    P = parent[W]; V = parent[P]; X = parent[V]; M = parent[X]
+    prop = lambda e, n: next(p for p in e["Data"] if p["Name"] == n)
+    def child(e, idx):
+        cn = prop(e, "ChildNodes"); cn["Value"] = [dict(cn["Value"][0], Value=idx)]
+        e["CreateBeforeSerializationDependencies"] = [idx]
+    names = set(d["NameMap"])
+    def name(n):
+        if n not in names:
+            d["NameMap"].append(n); names.add(n)
+    imp = d["Imports"]
+    wave_imp = {i["ObjectName"]: -k - 1 for k, i in enumerate(imp) if i["ClassName"] == "SoundWave"}
+    pkg_t = next(i for i in imp if i["ClassName"] == "Package" and i["ObjectName"].startswith(new_dir))
+    wav_t = next(i for i in imp if i["ClassName"] == "SoundWave")
+    mix_children = []
+    for k, (wave, rec) in enumerate(loops):
+        if wave not in wave_imp:
+            imp.append(dict(copy.deepcopy(pkg_t), ObjectName=new_dir + wave)); name(new_dir + wave)
+            imp.append(dict(copy.deepcopy(wav_t), ObjectName=wave, OuterIndex=-(len(imp) - 1))); name(wave)
+            wave_imp[wave] = -len(imp)
+        base = len(ex)
+        xi, vi, pi, wi = base + 1, base + 2, base + 3, base + 4
+        for src, nm in ((X, "SoundNodeParamCrossFade_%d"), (V, "SoundNodeModulatorContinuous_%d"),
+                        (P, "SoundNodeModulatorContinuous_%d"), (W, "SoundNodeWavePlayer_%d")):
+            e = copy.deepcopy(ex[src - 1]); e["ObjectName"] = nm % (100 + len(ex)); ex.append(e)
+            d["DependsMap"].append([])
+        child(ex[xi - 1], vi); child(ex[vi - 1], pi); child(ex[pi - 1], wi)
+        w = ex[wi - 1]
+        a = prop(w, "SoundWaveAssetPtr")["Value"]["AssetPath"]; a["PackageName"] = new_dir + wave; a["AssetName"] = wave
+        w["CreateBeforeSerializationDependencies"] = [wave_imp[wave]]
+        f = {q["Name"]: q for q in prop(ex[pi - 1], "PitchModulationParams")["Value"]}
+        for key, val in (("MinInput", 100.0), ("MaxInput", 20000.0), ("MinOutput", 100.0 / rec), ("MaxOutput", 20000.0 / rec)):
+            f[key]["Value"] = round(val, 4)
+        # volume: the S58 mid chain fades 0.2 -> 1.0 over 500-10000 rpm and to 0.5 off throttle, which left idle at ~5%
+        # (user 2026-11-05: very quiet, no idle). Keep every layer near full: 0.8 -> 1.6 with rpm, 0.6 -> 1.0 with throttle.
+        for node, vals in ((ex[pi - 1], (("MinInput", 500.0), ("MaxInput", 10000.0), ("MinOutput", 0.8), ("MaxOutput", 1.6))),
+                           (ex[vi - 1], (("MinOutput", 0.6), ("MaxOutput", 1.0)))):
+            vm = prop(node, "VolumeModulationParams")["Value"]
+            have = {q["Name"]: q for q in vm}
+            for key, val in vals:
+                if key not in have:
+                    vm.append(dict(copy.deepcopy(have["MinOutput"]), Name=key)); have[key] = vm[-1]
+                have[key]["Value"] = val
+        lo = loops[k - 1][1] if k else 10.0
+        hi = loops[k + 1][1] if k + 1 < len(loops) else 1e9
+        cf = {q["Name"]: q for q in prop(ex[xi - 1], "CrossFadeInput")["Value"][0]["Value"]}
+        for key, val in (("FadeInDistanceStart", lo), ("FadeInDistanceEnd", float(rec) if k else 10.0),
+                         ("FadeOutDistanceStart", float(rec) if hi < 1e9 else 1e9), ("FadeOutDistanceEnd", hi)):
+            cf[key]["Value"] = float(val)
+        mix_children.append(xi)
+        print("  cue layer %s: recorded %d rpm, fades in %d..%d, out %d..%s" % (wave, rec, lo, rec if k else 10, rec, "-" if hi >= 1e9 else "%d" % hi))
+    vmul = next((p for p in ex[0]["Data"] if p["Name"] == "VolumeMultiplier"), None)
+    if vmul:
+        vmul["Value"] = 1.0   # S58 cue is at 0.5
+    m = ex[M - 1]
+    cn = prop(m, "ChildNodes"); cn["Value"] = [dict(cn["Value"][0], Value=i) for i in mix_children]
+    iv = prop(m, "InputVolume"); iv["Value"] = [dict(copy.deepcopy(iv["Value"][0]), Name=str(i), Value=1.0) for i in range(len(mix_children))]
+    m["CreateBeforeSerializationDependencies"] = mix_children
+    d["Generations"][0]["ExportCount"] = len(ex); d["Generations"][0]["NameCount"] = len(d["NameMap"])
 
 
 def make_engine(e, work, out_root):
@@ -801,6 +1057,8 @@ def make_engine(e, work, out_root):
         # our own engine SoundCue (make_sound_cue) in place of the base engine's main cue
         cue = make_sound_cue(e["sound_cue"], work, out_root)
         base_cue = e["sound_cue"]["cue_base"].rsplit("/", 1)[1]
+        # the base engine asset must import that cue (S58 does); otherwise the swap silently kept the base sound (Clio 2026-11-02)
+        assert any(i["ClassName"] == "SoundCue" and i["ObjectName"] == base_cue for i in d["Imports"]),             "%s: base_asset %s has no SoundCue %s; use base_asset Cars/Parts/Engine/S58" % (e["row"], e["base_asset"], base_cue)
         for imp in d["Imports"]:
             if imp["ClassName"] == "SoundCue" and imp["ObjectName"] == base_cue:
                 imp["ObjectName"] = cue.rsplit("/", 1)[1]
@@ -808,9 +1066,22 @@ def make_engine(e, work, out_root):
         for n in (cue, cue.rsplit("/", 1)[1]):
             if n not in d["NameMap"]:
                 d["NameMap"].append(n)
+    if e.get("physics_from"):
+        # the sound needs the S58 base, but its friction / inertia / idle throttle are a 600 Nm engine's: a 130 Nm
+        # Elise could not hold idle and stalled (user 2026-11-06). Take those from the engine's own game base.
+        src = tojson(os.path.join(UNPACKED, e["physics_from"] + ".uasset"), os.path.join(work, e["asset"] + "_phys_src.json"))
+        sv = {q["Name"]: q["Value"] for q in find_prop(src["Exports"][0], "EngineProperty")["Value"]}
+        n_c = 0
+        for q in find_prop(d["Exports"][0], "EngineProperty")["Value"]:
+            if q["Name"] in PHYSICS_PROPS and q["Name"] in sv:
+                q["Value"] = sv[q["Name"]]; n_c += 1
+        print("  engine %s: physics from %s (%d values)" % (e["row"], e["physics_from"], n_c))
     apply_engine_props(d, e)
     fromjson(d, os.path.join(work, e["asset"] + ".json"), os.path.join(out_root, "MotorTown/Content", eng_rel + ".uasset"))
     return "/Game/" + eng_rel, e["asset"]
+
+
+PHYSICS_PROPS = ("FrictionCoulombCoeff", "FrictionViscosityCoeff", "IdleThrottle", "Inertia", "BlipThrottle", "FuelConsumption")
 
 
 def apply_engine_props(d, e):
@@ -826,6 +1097,8 @@ def apply_engine_props(d, e):
             q["Value"] = float(q["Value"]) + float(e["rpm_add"])
         elif q["Name"] == "FuelConsumption" and e.get("fuel_scale"):
             q["Value"] = float(q["Value"]) * float(e["fuel_scale"])
+        elif q["Name"] == "IdleThrottle" and e.get("idle_throttle") is not None:
+            q["Value"] = float(e["idle_throttle"])   # idle rpm: the base engine's value idles far higher on a much stronger engine
         elif q["Name"] == "AfterFireProbability" and e.get("afterfire") is not None:
             q["Value"] = float(e["afterfire"])
 
@@ -890,6 +1163,27 @@ def make_transmission(t, work, out_root):
                           if str(next(q["Value"] for q in g["Value"] if q["Name"] == "Name")) not in t["drop_gears"]]
         for i, g in enumerate(gears["Value"]):
             g["Name"] = str(i)
+    fwd = sorted((k for k in t["ratios"] if k.isdigit()), key=int)
+    gname = lambda g: str(next(q["Value"] for q in g["Value"] if q["Name"] == "Name"))
+    have = [gname(g) for g in gears["Value"] if gname(g).isdigit()]
+    if fwd and fwd != have:
+        # gear count differs from the base asset (7.20: the More Tuning 7/10-speed bases no longer parse, user's S550
+        # 7DCT/10AT): rebuild the list R, N, 1..n from the base's own gear struct
+        tmpl = next(g for g in gears["Value"] if gname(g) == "1")
+        keep = [g for g in gears["Value"] if not gname(g).isdigit()]
+        for k in fwd:
+            g = copy.deepcopy(tmpl)
+            for q in g["Value"]:
+                if q["Name"] == "Name":
+                    q["Value"] = k
+            keep.append(g)
+        for n_ in fwd:
+            if n_ not in d["NameMap"]:
+                d["NameMap"].append(n_)
+        gears["Value"] = keep
+        for i, g in enumerate(gears["Value"]):
+            g["Name"] = str(i)
+        print("  transmission %s: %d forward gears on %s" % (t["row"], len(fwd), t["base_asset"]))
     for g in gears["Value"]:
         f = {q["Name"]: q for q in g["Value"]}
         nm = str(f["Name"]["Value"])
@@ -939,6 +1233,30 @@ def custom_part_rows(spec, work, out_root, name_map):
     return rows
 
 
+
+def rim_rgb(build_dir, mesh_name):
+    """Default paint colour for a rim row = the average colour of its rim texture (measured by wheel_mats.py into
+    car.json "rim_rgb"): the garage replaces the rim with flat paint, and white turned black steelies white (2026-11-14)."""
+    try:
+        rgb = json.load(open(os.path.join(build_dir, "car.json"))).get("rim_rgb", {}).get(mesh_name)
+    except OSError:
+        return None
+    return tuple(rgb) if rgb else None
+
+
+def set_default_color(slot_entry, rgb):
+    def walk(o):
+        if isinstance(o, dict):
+            if "ColorPropertyData" in o.get("$type", "") and isinstance(o.get("Value"), str):
+                n = len(o["Value"].split(","))
+                o["Value"] = ", ".join(str(c) for c in (list(rgb) + [255])[:n])
+            for x in o.values():
+                walk(x)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    walk(slot_entry)
+
 def make_wheel_table(specs, work, out_root):
     """Wheels_ProStreet: one Wheel part row per car (copied from the base car's rim row), pointing at the car's
     own rim meshes /Game/Cars/Parts/Wheels/<car>_L/_R."""
@@ -951,6 +1269,12 @@ def make_wheel_table(specs, work, out_root):
 
     civo = next(r for r in t["Exports"][0]["Table"]["Data"] if r["Name"] == "Civo")
     civo_colors = copy.deepcopy(next(p for p in civo["Value"] if p["Name"] == "ColorSlots"))
+    # rim packs: two pickers, face (Wheel_01) and lip (Wheel_02), from a two-tone game rim
+    # (the first row that has two pickers: the server's older Wheels table has a single-slot Stella)
+    stella = next(r for r in t["Exports"][0]["Table"]["Data"]
+                  if any(p["Name"] == "ColorSlots" and len(p["Value"]) == 2 for p in r["Value"]))
+    two_colors = copy.deepcopy(next(p for p in stella["Value"] if p["Name"] == "ColorSlots"))
+    two_decal = copy.deepcopy(next(p for p in stella["Value"] if p["Name"] == "DecalableMaterialSlotNames"))
     # satin finish by default (Civo's mirror-chrome made our textured rims glare white)
     def _finish(o):
         if isinstance(o, dict):
@@ -980,10 +1304,20 @@ def make_wheel_table(specs, work, out_root):
             for x in o:
                 _white(x)
     _white(civo_colors)
+    _finish(two_colors); _white(two_colors)
+    for o in two_colors["Value"][1][1]["Value"]:      # the lip: chrome-like by default, labelled
+        if o["Name"] == "DisplayName":
+            o["CultureInvariantString"] = "Rim lip"
+        elif o["Name"] == "DefaultMetallic":
+            o["Value"] = 0.9
+        elif o["Name"] == "DefaultRoughness":
+            o["Value"] = 0.2
+    if "Wheel_02" not in t["NameMap"]:
+        t["NameMap"].append("Wheel_02")
     if "Wheel_01" not in t["NameMap"]:
         t["NameMap"].append("Wheel_01")
 
-    def add_rim(row_name, left, right, display, base, vehicle_keys=None, cost=None, rear=None):
+    def add_rim(row_name, left, right, display, base, vehicle_keys=None, cost=None, rear=None, two_tone=False, rgb=None):
         """One Wheel part row whose meshes are /Game/Cars/Parts/Wheels/<left|right>; vehicle_keys limits which
         vehicles may fit it (rims sized for ProStreet cars look wrong on the game's own cars)."""
         meshes = {}
@@ -1019,9 +1353,11 @@ def make_wheel_table(specs, work, out_root):
             elif p["Name"] == "Cost" and cost is not None:
                 p["Value"] = int(cost)
             elif p["Name"] == "ColorSlots":
-                p["Value"] = copy.deepcopy(civo_colors["Value"])   # Wheel_01 colour picker (paintable rim)
+                p["Value"] = copy.deepcopy((two_colors if two_tone else civo_colors)["Value"])   # paintable rim pickers
+                if rgb:
+                    set_default_color(p["Value"][0], rgb)
             elif p["Name"] == "DecalableMaterialSlotNames":
-                p["Value"] = copy.deepcopy(civo_decal["Value"])
+                p["Value"] = copy.deepcopy((two_decal if two_tone else civo_decal)["Value"])
         for n in [row_name] + list(vehicle_keys or []):
             if n not in t["NameMap"]:
                 t["NameMap"].append(n)
@@ -1030,17 +1366,40 @@ def make_wheel_table(specs, work, out_root):
     for spec in specs:
         if spec.get("kind") == "rims":
             # rim pack built by ps_rims.py: rows listed in <build>/rims.json
-            for r in json.load(open(os.path.join(os.path.dirname(os.path.expanduser(spec["out_dir"])), "rims.json"))):
+            bdir = os.path.dirname(os.path.expanduser(spec["out_dir"]))
+            bcar = json.load(open(os.path.join(bdir, "car.json")))
+            fsn = bcar.get("final_slot_names", {})
+
+            def final_slots(mesh_name):
+                m = next((m for m in bcar["meshes"] if m.get("name") == mesh_name), None)
+                if not m or not os.path.exists(m["obj"]):
+                    return set()
+                names = [re.sub(r"^o\d_", "", l.split()[1]) for l in open(m["obj"]) if l.startswith("usemtl ")]
+                return {fsn.get(n, n) for n in names}
+            for r in json.load(open(os.path.join(bdir, "rims.json"))):
+                # the game paints colour picker N onto material slot N: a second (lip) picker on a rim without a
+                # Wheel_02 lip slot painted the tyre white in the garage (2026-11-14)
+                lip = all("Wheel_02" in final_slots(n) for n in (r["left"], r["right"]))
                 add_rim(r["row"], r["left"], r["right"], r["display_name"], spec.get("base_wheel", "Zino"),
-                        spec.get("vehicle_keys"), spec.get("cost"))
+                        spec.get("vehicle_keys"), spec.get("cost"), two_tone=spec.get("two_tone", True) and lip,
+                        rgb=rim_rgb(bdir, r["left"]))
             continue
         if not spec.get("wheel_part"):
             continue
         # the car's own stock rim; the meshes are swapped like spec mesh_names (Wheel_L geometry is the _R asset)
         rear = (spec["car"] + "_REAR_L", spec["car"] + "_REAR_R") if spec.get("rear_wheel_meshes") else None
+        # AC stock rims are fitted to their own car (offset, drag sizes): only that car; AC_Rims has universal copies
+        own = [spec["car"]] if spec["car"].startswith("AC_") else None
+        cbuild = os.path.join(os.path.expanduser("~/mt-work/build"), spec["car"])
         add_rim(spec["car"], spec["car"] + "_L", spec["car"] + "_R",
                 spec.get("wheel_display_name", spec["display_name"]), spec.get("base_wheel", spec["base_vehicle"]),
-                rear=rear)
+                vehicle_keys=own, rear=rear, rgb=rim_rgb(cbuild, spec["car"] + "_L"))
+        if spec.get("rear_wheel_part"):
+            # the game draws Wheel2/3 with the part's Left/RightWheelMesh (RearLeft/RightWheelMesh were not used on the
+            # Magis: RX-7 drag rears showed the narrow front rims) -> a second row with the rear meshes for Wheel2/3
+            add_rim(spec["car"] + "_REAR", spec["car"] + "_REAR_L", spec["car"] + "_REAR_R",
+                    spec.get("wheel_display_name", spec["display_name"]) + " (rear)", spec.get("base_wheel", spec["base_vehicle"]),
+                    vehicle_keys=own, rgb=rim_rgb(cbuild, spec["car"] + "_REAR_L"))
     for spec in specs:
         if spec.get("kind") != "rims":
             new_rows += custom_part_rows(spec, work, out_root, t["NameMap"])
@@ -1138,6 +1497,76 @@ def make_aero_table(specs, work, out_root):
     return out, rows, t["NameMap"]
 
 
+def make_headlight_table(specs, work, out_root):
+    """Headlights_ProStreet: pop-up headlamp parts (spec "popup", tools/make_popup.py + import_popup.py). Each row is the
+    Panther's Panther_Headlight_01 (SkelealMesh + LightOnAnim, the game plays the anim when the lights go on) pointing at
+    the car's own /Game/Cars/Models/<car>/Headlight/Headlight_Skel + Headlight_Popup, limited to that car."""
+    t = tojson(os.path.join(UNPACKED, "DataAsset/VehicleParts/Headlights.uasset"), os.path.join(work, "Headlights.json"))
+    tmpl = next(r for r in t["Exports"][0]["Table"]["Data"] if r["Name"] == "Panther_Headlight_01")
+    imps = t["Imports"]
+    def ref(path, cls, cls_pkg="/Script/Engine"):
+        name = path.rsplit("/", 1)[1]
+        imps.append({"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": path, "OuterIndex": 0, "ClassPackage": "/Script/CoreUObject",
+                     "ClassName": "Package", "PackageName": None, "bImportOptional": False})
+        imps.append({"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": name, "OuterIndex": -len(imps), "ClassPackage": cls_pkg,
+                     "ClassName": cls, "PackageName": None, "bImportOptional": False})
+        for n in (path, name, cls, cls_pkg, "Package", "/Script/CoreUObject"):
+            if n not in t["NameMap"]:
+                t["NameMap"].append(n)
+        return -len(imps)
+    name_item = lambda i, v: {"$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI", "Name": str(i),
+                              "ArrayIndex": 0, "PropertyGuid": None, "IsZero": False, "PropertyTagFlags": "None",
+                              "PropertyTypeName": None, "PropertyTagExtensions": "NoExtension", "Value": v}
+    rows = []
+    for spec in specs:
+        if not spec.get("popup"):
+            continue
+        car = spec["car"]; row_name = car + "_Popup"
+        skel = ref("/Game/Cars/Models/%s/Headlight/Headlight_Skel" % car, "SkeletalMesh")
+        anim = ref("/Game/Cars/Models/%s/Headlight/Headlight_Popup" % car, "AnimSequence")
+        row = copy.deepcopy(tmpl); row["Name"] = row_name
+        for p in row["Value"]:
+            if p["Name"] == "Name":
+                text_literal(p, row_name + "_Name", "Pop-up Headlights (%s)" % spec["display_name"])
+            elif p["Name"] == "VehicleKeys":
+                p["Value"] = [name_item(0, car)]
+            elif p["Name"] == "VehicleTypes":
+                p["Value"] = []
+            elif p["Name"] == "BodyMaterialNames":
+                # left empty like the Panther's: a BodyMaterialNames entry stopped the part spawning at all (2026-11-12)
+                p["Value"] = []
+            elif p["Name"] == "Aero":
+                for q in p["Value"]:
+                    if q["Name"] == "SkelealMesh":
+                        q["Value"] = skel
+                    elif q["Name"] == "AttachParentComponentName":
+                        # left None the skeletal part spawned unattached at the world origin (RX-7, 2026-11-12);
+                        # attach it to the car's body mesh component ("Mesh" on our blueprints)
+                        q["Value"] = spec["popup"].get("attach", "None")   # "Mesh" stopped it spawning at all (2026-11-12); the Panther uses None
+                        if q["Value"] not in t["NameMap"]:
+                            t["NameMap"].append(q["Value"])
+            elif p["Name"] == "Headlight":
+                for q in p["Value"]:
+                    if q["Name"] == "LightOnAnim":
+                        q["Value"] = anim
+        rows.append(row)
+        for n in (row_name, car):
+            if n not in t["NameMap"]:
+                t["NameMap"].append(n)
+        print("  headlight part %s: Headlight_Skel + Headlight_Popup" % row_name)
+    if not rows:
+        return None, [], t["NameMap"]
+    t["Exports"][0]["Table"]["Data"] = rows
+    t["NameMap"] = ["/Game/DataAsset/VehicleParts/Headlights_ProStreet" if n == "/Game/DataAsset/VehicleParts/Headlights" else n
+                    for n in t["NameMap"]]
+    t["Exports"][0]["ObjectName"] = "Headlights_ProStreet"
+    if "Headlights_ProStreet" not in t["NameMap"]:
+        t["NameMap"].append("Headlights_ProStreet")
+    out = os.path.join(out_root, "MotorTown/Content/DataAsset/VehicleParts/Headlights_ProStreet.uasset")
+    fromjson(t, os.path.join(work, "Headlights_ProStreet.json"), out)
+    return out, rows, t["NameMap"]
+
+
 # ProStreet-style tuning parts for our cars (Motor Town's own Turbocharger / Intake systems):
 # (row, template row in VehicleParts0, display name, cost, {struct: {field: value}})
 TUNING_PARTS = [
@@ -1182,6 +1611,10 @@ TUNING_PARTS += [(psi_row(p), "Turbocharger_Stage1", "ProStreet Adjustable Turbo
                  for p in PSI_STEPS]
 
 
+# part slots that carry a base car's own body meshes (all body-type slots used by the game's vehicle rows, 2026-11-13)
+BASE_BODY_SLOTS = {"Bonnet", "FrontBumper", "RearBumper", "RearWing", "SideSkirt", "Fender", "Headlight", "Trunk", "Roof", "Bullbar"}
+
+
 def make_tuning_table(specs, work, out_root):
     """Tuning_ProStreet: boost (Turbocharger) and cam profile (Intake) rows, copied from the game's own rows in
     VehicleParts0 and limited to our cars (VehicleKeys). More Tuning's own turbos / intakes stay separate."""
@@ -1193,7 +1626,7 @@ def make_tuning_table(specs, work, out_root):
                               "PropertyTypeName": None, "PropertyTagExtensions": "NoExtension", "Value": v}
     rows = []
     for row_name, tmpl, label, cost, fields in TUNING_PARTS:
-        row = copy.deepcopy(base[tmpl]); row["Name"] = row_name
+        row = copy.deepcopy(base[tmpl]); row["Name"] = row_name; hit = False
         for p in row["Value"]:
             if p["Name"] == "Name":
                 text_literal(p, row_name + "_Name", label)
@@ -1210,9 +1643,13 @@ def make_tuning_table(specs, work, out_root):
                     if isinstance(q, dict) and isinstance(q.get("Value"), int):
                         q["Value"] = 0
             elif p["Name"] in fields:
-                for q in p["Value"]:
+                # game 0.7.20 nests the turbo settings per fuel (Gasoline / Diesel structs): write both
+                subs = [q for q in p["Value"] if isinstance(q.get("Value"), list)] if p["Name"] == "Turbocharger" else []
+                for q in [x for sub in subs for x in sub["Value"]] + p["Value"]:
                     if q["Name"] in fields[p["Name"]]:
                         q["Value"] = float(fields[p["Name"]][q["Name"]])
+                        hit = True
+                assert p["Name"] != "Turbocharger" or hit, "turbo fields not written (%s): struct layout changed?" % row_name
         rows.append(row)
         for n in [row_name] + keys:
             if n not in t["NameMap"]:
@@ -1251,3 +1688,7 @@ if __name__ == "__main__":
         ttbl, trows, tnames = make_tuning_table(cars, work, out_root)
         print("tuning table:", ttbl, len(trows), "rows")
         print("parts composite (+tuning):", patch_composite_from(out_root, work, trows, tnames, "VehicleParts0", "Tuning_ProStreet"))
+        htbl, hrows, hnames = make_headlight_table(cars, work, out_root)
+        if hrows:
+            print("headlight table:", htbl, len(hrows), "rows")
+            print("parts composite (+headlights):", patch_composite_from(out_root, work, hrows, hnames, "Headlights", "Headlights_ProStreet"))

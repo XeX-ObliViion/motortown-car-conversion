@@ -4,15 +4,16 @@
 # OneDrive link; third-party mods (More Tuning, Maja's) are linked in the README, not included.
 set -e
 HERE=$(cd "$(dirname "$0")" && pwd)
-PAKS="/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Content/Paks"
+PAKS="${PAKS:-/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Content/Paks}"   # PAKS=<dir>: a release set instead of the installed paks
 OUT=~/OneDrive/Documents/"NFS Car Pack"
 STAGE=~/mt-work/modpack_stage
 rm -rf "$STAGE"; mkdir -p "$STAGE/NFS Car Pack" "$OUT"
 # zzKitFix_*: the friend's MW kit fitment fixes, renamed zzKitFix_X_50_P (priority 5100 > car paks 100, deterministic);
 # our per-car overrides are zzKitFix_E_<Car>_99_P (10000). Equal-priority paks resolve conflicts in an unstable order
-for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/zzKitFix_*_P.pak; do
+# ZZZZZ_FreeBuildings_P: our free depot / large garage materials (2026-11-18, also on the server)
+for f in "$PAKS"/PS_*_P.pak "$PAKS"/MW_*_P.pak "$PAKS"/HEAT_*_P.pak "$PAKS"/NFS_*_P.pak "$PAKS"/AC_*_P.pak "$PAKS"/BNG_*_P.pak "$PAKS"/zzKitFix_*_P.pak "$PAKS"/ZZZZZ_FreeBuildings_P.pak; do
     # the economy pak is on the server since 2026-10-27 (cargo + taxi data must match it): INCLUDE_ECONOMY=0 leaves it out
-    case "$f" in */NFS_Economy_P.pak) [ "$INCLUDE_ECONOMY" = 0 ] && continue ;; esac
+    case "$f" in */NFS_Economy_P.pak|*/NFS_Economy_999_P.pak) [ "$INCLUDE_ECONOMY" = 0 ] && continue ;; esac
     cp "$f" "$STAGE/NFS Car Pack/"
 done
 cp "$HERE/README.txt" "$STAGE/NFS Car Pack/README.txt"
@@ -22,6 +23,8 @@ M="$STAGE/NFS Car Pack/F8 Menu (copy into Win64)"
 SP=~/OneDrive/Documents/claude/mt-spawner
 mkdir -p "$M/ue4ss/Mods"
 cp "$W/dwmapi.dll" "$SP/build/version.dll" "$M/"
+# same menu as a qxZap Plugin Loader plugin: used instead of our version.dll when the friend has the loader (ECU Tuning etc.)
+mkdir -p "$M/plugins" && cp "$SP/build/mt_plugin_MTSpawner.dll" "$M/plugins/"
 printf '[Menu]
 ToggleKey=F8
 ' > "$M/mt_spawner.ini"
@@ -34,6 +37,11 @@ printf 'MTSpawner : 1
 ; Built-in keybinds, do not move up!
 Keybinds : 1
 ' > "$M/ue4ss/Mods/mods.txt"
+# the pack's own installer: "Install NFS Pack.cmd" + Install/install.ps1 + Install/manifest.json (this version's files)
+mkdir -p "$STAGE/NFS Car Pack/Install"
+cp "$HERE/installer/install.ps1" "$STAGE/NFS Car Pack/Install/"
+cp "$HERE/installer/Install NFS Pack.cmd" "$STAGE/NFS Car Pack/"
+py -3.13 "$HERE/installer/make_manifest.py" "$(cygpath -w "$STAGE/NFS Car Pack")" "$(cygpath -w "$STAGE/NFS Car Pack/Install/manifest.json")"
 D=$(date +%Y-%m-%d)
 rm -f "$STAGE/NFS_CarPack.zip"
 (cd "$STAGE" && /c/Windows/System32/tar.exe -a -c -f "NFS_CarPack.zip" "NFS Car Pack")   # Windows bsdtar: zip, no 2 GB limit

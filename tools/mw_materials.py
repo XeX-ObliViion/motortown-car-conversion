@@ -18,8 +18,10 @@ SHARED = {  # shared MW texture hash -> slot
     "0x03C906EF": "Bottom", "0x7811C147": "Bottom", "0x7811C146": "Bottom", "0x4E8CF857": "Bottom",
     "0xE4CEA024": "Bottom", "0xE4CEA025": "Bottom", "0xBD1F0E0A": "Bottom", "0x721AFF7C": "Bottom",
     "0x69C032BA": "Tex_MWG_GRILL02", "0x69C032B9": "Tex_MWG_GRILL01", "0x68100815": "Tex_MWG_RADIATOR",
+    "0x0AB88F5D": "Glass", "0x4CDEBFCA": "Glass", "0x60F8B13C": "Glass",   # side / rear window materials (350Z, 997TT, R34)
+    "0x427B4565": "Tex_MWG_INTERCOOLER", "0x8C283C65": "Bottom",
 }
-ROLES = ("HEADLIGHT", "BRAKELIGHT", "TIRE", "INTERIOR", "BADGING", "MISC", "ENGINE")
+ROLES = ("HEADLIGHT", "BRAKELIGHT", "TIRE", "RIM", "INTERIOR", "BADGING", "MISC", "ENGINE")
 
 
 def main():
@@ -44,7 +46,8 @@ def main():
         if role == "HEADLIGHT":     # the lamp texture (HEADLIGHT_O...), not the HEADLIGHT_G glass
             h = next((x for x in files.values() if "KIT00_HEADLIGHT_O" in x.upper()), "").split("_")[0] or h
         elif role == "BRAKELIGHT":  # ON / OFF can't be told from the truncated names: CHECK the picture (MW Supra: OFF)
-            h = sorted(x for x in files.values() if "KIT00_BRAKELIGHT" in x.upper())[0].split("_")[0]
+            # dump names are truncated (SKYLINE_KIT00_BRAKELIGH): match the stem
+            h = (sorted(x for x in files.values() if "KIT00_BRAKELIG" in x.upper()) or [h or ""])[0].split("_")[0]
         src.setdefault(slot, h)
         return slot
 
@@ -64,6 +67,42 @@ def main():
             ts[key] = slot
         else:
             left.append((key, sorted(hs)))
+    # named materials (newer Rework files: BODY, BODY_LEFT, DOORLINE...) that sample the paint material's texture are
+    # paint too (make_spec only guessed one of them); unmapped *_GLASS materials are lamp glass
+    paint_tex = {h for k, hs in mats.items() if ts.get(k) == "Paint" for h in hs}
+    for key, hs in list(left):
+        if hs and set(hs) <= paint_tex:
+            ts[key] = "Paint"; left.remove((key, hs))
+        elif key.endswith("_GLASS"):
+            ts[key] = "LampGlass"; left.remove((key, hs))
+    # some files of the same car key their groups by texture hash instead of material name (MW Clio: KIT00_BODY):
+    # give each hash its material's slot (make_spec's default-ish Bottom guesses give way)
+    for key, hs in mats.items():
+        if key in ts:
+            for h in hs:
+                if h not in ts or (ts[h] == "Bottom" and ts[key] != "Bottom"):
+                    ts[h] = ts[key]
+    if "Tex_%s_BADGING" % car in ts.values():   # badge atlases carry alpha: unmasked they show as dark squares (MW 997TT)
+        s["masked_texture_slots"] = sorted(set(s.get("masked_texture_slots", [])) | {"Tex_%s_BADGING" % car})
+    # slot names / lamps / wheel paint the game expects (make_spec's base templates carry another car's names)
+    fs = {"Paint": s.get("final_slot_names", {}).get("Paint", "Body"), "Glass": s.get("final_slot_names", {}).get("Glass", "Window")}
+    for role, name in (("HEADLIGHT", "HeadLight"), ("BRAKELIGHT", "TailLight"), ("RIM", "Wheel_01"), ("TIRE", "Wheel_01")):
+        if "Tex_%s_%s" % (car, role) in ts.values():
+            fs["Tex_%s_%s" % (car, role)] = name
+    s["final_slot_names"] = fs
+    s["lamp_slots"] = {k: v for k, v in (("Tex_%s_HEADLIGHT" % car, "head"), ("Tex_%s_BRAKELIGHT" % car, "tail")) if k in ts.values()}
+    wheel_tex = [k for k in fs if fs[k] == "Wheel_01" and k.startswith("Tex_")]
+    s["paintable_texture_slots"] = wheel_tex[:1]
+    # Body: the brake lamps (make_spec leaves them out for some cars) and no BASE copy of the window glass (z-fight)
+    parts = s["meshes"]["Body"]["parts"]
+    names = [p if isinstance(p, str) else p.get("part") for p in parts]
+    for side in ("LEFT", "RIGHT"):
+        n = "KIT00_%s_BRAKELIGHT" % side
+        if n not in names and os.path.exists(os.path.join(geo, "%s_%s_A.dae" % (car, n))):
+            parts.append(n)
+    wins = [n for n in names if n and "WINDOW" in n]
+    if "BASE" in names and wins:
+        parts[names.index("BASE")] = {"part": "BASE", "drop_coincident_with": {"prefix": car, "parts": wins, "tol": 1.0}}
     s["meshes"]["Body"]["drop_slots"] = sorted(set(s["meshes"]["Body"].get("drop_slots", [])) | {"LampGlass"})
     json.dump(s, open(path, "w"), indent=1)
     print("mapped %d materials; texture_sources %s" % (len(mats) - len(left), src))

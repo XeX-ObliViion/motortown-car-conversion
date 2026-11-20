@@ -1,7 +1,7 @@
 -- MTAdminServer: server-side half of the F8 menu's Admin tab (time and weather on a dedicated server).
 -- The menu sends ServerCommand("mta <what> [arg]"); this hook runs on the server, checks that the sender is an
 -- admin (PlayerState.bIsAdmin) and runs the game's own cheat on the server, which replicates to every player.
-local VERSION = "0.3.1"
+local VERSION = "0.4.0"
 local function log(fmt, ...) print(string.format("[MTAdminServer] " .. fmt .. "\n", ...)) end
 
 local function find_pc(name)
@@ -28,6 +28,36 @@ local function handle(pc, cmd)
             else t:ClientAddMoney(tonumber(amount), "Admin", FText("Admin"), true, "", "") end
         end)
         log("money %s %s for %s: %s", mode, amount, target, ok and "ok" or tostring(err))
+        return
+    end
+    -- spawn on the server itself (0.7.20: a client's ServerSpawnVehicle is dropped without a reason): the F8 menu sends
+    -- the vehicle key, the absolute world location and the yaw; the result is checked 2.5 s later and logged
+    local key, x, y, z, yaw = cmd:match("^mta%s+spawn%s+(%S+)%s+(%-?[%d%.]+)%s+(%-?[%d%.]+)%s+(%-?[%d%.]+)%s+(%-?[%d%.]+)$")
+    if key then
+        local admin, who = false, "?"
+        pcall(function() admin = pc.PlayerState.bIsAdmin end)
+        pcall(function() who = pc.PlayerState:GetPlayerName():ToString() end)
+        if not admin then log("refused spawn %s from %s (not admin)", key, who); return end
+        local at = { X = tonumber(x), Y = tonumber(y), Z = tonumber(z) }
+        local before = {}
+        for _, v in ipairs(FindAllOf("MTVehicle") or {}) do pcall(function() before[v:GetAddress()] = true end) end
+        local ok, err = pcall(function()
+            pc:ServerSpawnVehicle({ VehicleKey = FName(key), AbsoluteLocation = at,
+                Rotation = { Pitch = 0, Yaw = tonumber(yaw), Roll = 0 },
+                bResetOnSpawn = true, bResetIfCollide = true, bForceSimulate = true })
+        end)
+        log("spawn %s for %s at (%.0f, %.0f, %.0f): call %s", key, who, at.X, at.Y, at.Z, ok and "ok" or tostring(err))
+        ExecuteWithDelay(2500, function()
+            ExecuteInGameThread(function()
+                local new = {}
+                for _, v in ipairs(FindAllOf("MTVehicle") or {}) do
+                    local fresh = false
+                    pcall(function() fresh = not before[v:GetAddress()] end)
+                    if fresh then pcall(function() new[#new + 1] = v:GetFullName():match("([%w_]+)_C") or v:GetFullName() end) end
+                end
+                log("spawn %s result: %d new vehicle(s) %s", key, #new, table.concat(new, ", "))
+            end)
+        end)
         return
     end
     local list = cmd:match("^mta%s+payout%s+([%d%.,]+)$")

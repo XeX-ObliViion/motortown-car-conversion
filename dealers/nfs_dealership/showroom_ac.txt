@@ -1,0 +1,17 @@
+# Assetto Corsa dealership (2026-11-12): a copy of the Gangjung used-car lot (cell 8U1D2GO15DO4PJX1UGFC9I6C1) on the lot across the
+# drag strip. The user's F6 at (390816,1127728,-19010) yaw -179.9, "about 5 m forward": the compound's front edge (source y 150030,
+# the road side where the cars face, yaw ~90) sits at x 390316 facing the user (yaw 0); source +y -> world +x.
+bbox -81100 -76600 146400 150100
+# v2: user: turn it 180 to face outward, and it floated slightly -> rotated about the compound centre (source (-78850,148215)), 25 cm lower
+pivot -78850 148215 -20934
+target 388501 1127728 -19102 90
+prefix ACD_
+skip ^Resident_C$
+skip ^Char_
+skip ^MTDealerVehicleSpawnPoint$
+skip Spawner
+skip ^POI_
+skip ^MTAreaVolume$
+skip ^CarDealershipMapIconActor
+skipmesh ^(TownRoad|SM_TownRoad|CrossroadCurve|Line_White|SM_Env_Road|SM_PowerLines|SM_Env_Sidewalk|SM_utility_pole|SM_Env_Dirt|SM_billboard_carDealership)
+# the CAR DEALERSHIP billboard (text baked into its texture) is replaced by 3D letters ASSETTO CORSA: showroom_ac_sign.txt

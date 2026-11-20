@@ -1,0 +1,2101 @@
+{
+  "base_vehicle": "Vista",
+  "default_slot": "Bottom",
+  "blueprint": {
+    "seats": {
+      "DriverSeat_GEN_VARIABLE": [
+        -34,
+        38,
+        6
+      ],
+      "PassengerSeat1_GEN_VARIABLE": [
+        -34,
+        -38,
+        6
+      ]
+    },
+    "components": {
+      "RoomMirror_GEN_VARIABLE": [
+        27,
+        0,
+        103
+      ],
+      "FrontDomeLightSlot_GEN_VARIABLE": [
+        -10,
+        0,
+        108
+      ],
+      "CabinDomeLightSlot_GEN_VARIABLE": [
+        -60,
+        0,
+        108
+      ],
+      "HeadLight_Left_GEN_VARIABLE": [
+        222,
+        -58,
+        47
+      ],
+      "HeadLight_Right_GEN_VARIABLE": [
+        222,
+        58,
+        47
+      ],
+      "BlinkerLight_01_GEN_VARIABLE": [
+        228,
+        62,
+        35
+      ],
+      "BlinkerLight_02_GEN_VARIABLE": [
+        228,
+        -62,
+        35
+      ],
+      "TaliLight_01_GEN_VARIABLE": [
+        -226,
+        -56,
+        64
+      ],
+      "TaliLight_02_GEN_VARIABLE": [
+        -226,
+        56,
+        64
+      ]
+    },
+    "keep_body_materials": 1,
+    "cockpit_camera": [
+      -34,
+      38,
+      94
+    ],
+    "component_rotations": {
+      "RoomMirror_GEN_VARIABLE": [
+        4.0,
+        -15.9,
+        0
+      ],
+      "LeftSideMirror_GEN_VARIABLE": [
+        -1.5,
+        -8.2,
+        0
+      ],
+      "RightSideMirror_GEN_VARIABLE": [
+        -2.8,
+        -4.8,
+        0
+      ]
+    },
+    "body_mass": 1074,
+    "body_material": "/Game/Cars/Materials/Body/M_Body",
+    "set_props": {
+      "LeftDoor_GEN_VARIABLE": {
+        "DoorType": "PassengerDoor"
+      },
+      "RightDoor_GEN_VARIABLE": {
+        "DoorType": "DriverDoor"
+      }
+    }
+  },
+  "mirror_components": {
+    "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+    "RightSideMirror_GEN_VARIABLE": "RightSideMirror:mirror"
+  },
+  "strip_part_slots": [
+    "Fender",
+    "SideSkirt"
+  ],
+  "wheel_part": true,
+  "cost": 120000,
+  "wheels": {
+    "front_x": 133.9,
+    "rear_x": -132.7,
+    "half_track": 75,
+    "z": 21,
+    "rear_z": 23,
+    "radius": 33,
+    "auto_arches": true
+  },
+  "part_overrides": {
+    "Engine": "PS_SKYLINE_RB26",
+    "Transmission": "PS_SKYLINE_6MT",
+    "FinalDriveRatio": "103",
+    "CoolantRadiator": "SmallRadiator_110",
+    "Tire0": "PerformanceTire_46",
+    "Tire1": "PerformanceTire_46",
+    "Tire2": "PerformanceTire_46",
+    "Tire3": "PerformanceTire_46",
+    "Wheel0": "HEAT_SKYLINE",
+    "Wheel1": "HEAT_SKYLINE",
+    "Wheel2": "HEAT_SKYLINE",
+    "Wheel3": "HEAT_SKYLINE",
+    "BrakePad0": "BrakePad_Small_02",
+    "BrakePad1": "BrakePad_Small_02",
+    "BrakePad2": "BrakePad_Small_02",
+    "BrakePad3": "BrakePad_Small_02",
+    "FrontBumper": "HEAT_SKYLINE_FrontBumper_KIT00",
+    "RearBumper": "HEAT_SKYLINE_RearBumper_KIT00",
+    "Bonnet": "HEAT_SKYLINE_Bonnet_KIT00",
+    "RearWing": "HEAT_SKYLINE_RearWing_KIT00",
+    "SideSkirt": "HEAT_SKYLINE_SideSkirt_KIT00",
+    "Fender": "HEAT_SKYLINE_Fender_KIT00"
+  },
+  "performance_source": "same drivetrain as PS_SKYLINE: ProStreet vehicle.yml skyline_track: MASS 1540, FINAL_GEAR 3.545, GEAR_RATIO R3.32/3.827/2.36/1.685/1.312/1.0/0.793, RED_LINE 7950, MAX_RPM 8600, TORQUE_SPLIT 0.5, turbocharger; torque scaled to the factory 392 Nm",
+  "collision_boxes": [
+    {
+      "center": [
+        0,
+        0,
+        40
+      ],
+      "size": [
+        450,
+        178,
+        50
+      ]
+    },
+    {
+      "center": [
+        -30,
+        0,
+        92
+      ],
+      "size": [
+        215,
+        145,
+        46
+      ]
+    }
+  ],
+  "gauge_style": {
+    "face_color": [
+      16,
+      16,
+      18
+    ],
+    "ink": [
+      240,
+      240,
+      236
+    ],
+    "minor_ink": [
+      175,
+      175,
+      175
+    ],
+    "red_color": [
+      225,
+      35,
+      25
+    ],
+    "font_file": "arialbd.ttf",
+    "glow_face": [
+      90,
+      95,
+      105
+    ],
+    "glow_red": [
+      255,
+      40,
+      20
+    ]
+  },
+  "gauge_ranges": {
+    "RPM": {
+      "max": 9
+    },
+    "Speed": {
+      "max": 160,
+      "value_scale": 1.609344
+    }
+  },
+  "needle_color": [
+    220,
+    25,
+    25
+  ],
+  "not_optional_part_types": [
+    "Bonnet",
+    "Fender",
+    "FrontBumper",
+    "RearBumper",
+    "SideSkirt"
+  ],
+  "mesh_names": {
+    "Wheel_L": "HEAT_SKYLINE_L",
+    "Wheel_R": "HEAT_SKYLINE_R",
+    "SteeringWheel": "HEAT_SKYLINE"
+  },
+  "car": "HEAT_SKYLINE",
+  "display_name": "Nissan Skyline GT-R R34 (Heat)",
+  "wheel_display_name": "Skyline R34 Heat Stock",
+  "prefix": "R34",
+  "geometry_dir": "C:\\Users\\noust/nfs-work/db/heat/R34/geo",
+  "texture_dir": "C:\\Users\\noust/nfs-work/db/heat/R34/tex",
+  "out_dir": "C:\\Users\\noust/mt-work/build/HEAT_SKYLINE/meshes",
+  "source_scale": 100.0,
+  "base_note": "built from cars/mw_skyline.json (user 2026-11-01: use the MW R34 as the base); Vista, RHD",
+  "texture_slots": {
+    "M_Carpaint_Max": "Paint",
+    "M_CarPaint_Max": "Paint",
+    "M_CarpaintNormal_Max": "Paint",
+    "M_Chassis_Max": "Bottom",
+    "M_Opaque_PlasticRoughBlack_Max": "Bottom",
+    "M_Opaque_PlasticSmoothBlack_Max": "Bottom",
+    "M_GrilleA_Max": "Bottom",
+    "M_LicensePlate_Max": "Bottom",
+    "M_CarPaint_Trim_CarbonA_Max": "Bottom",
+    "M_GenericDetail_Max": "Bottom",
+    "M_InteriorTiled_Max": "Bottom",
+    "M_Glass_WindowSurroundRight_Max": "Bottom",
+    "M_Glass_WindowSurroundLeft_Max": "Bottom",
+    "M_Glass_WindowSurround_Max": "Bottom",
+    "M_Opaque_NickelRough_Max": "Trim",
+    "M_Opaque_NickelSmooth_Max": "Trim",
+    "M_Opaque_AluminumSmooth_Max": "Trim",
+    "M_Interior_Max": "Tex_Interior_D",
+    "M_Engine_Max": "Tex_Engine_D",
+    "M_Badge_Max": "Tex_Badge_D",
+    "M_Light_Max": "Tex_Light_SetA_D",
+    "M_LightBucket_Max": "Tex_Light_SetA_D",
+    "M_Rim_Main_Max": "Tex_RimGun",
+    "M_RimBadge_Max": "Tex_RimBadge_D",
+    "M_GlassOpaque_Mirror_Max": "Mirror",
+    "M_Glass_WindowFront_Max": "Glass",
+    "M_Glass_WindowRear_Max": "Glass",
+    "M_Glass_WindowSide_Max": "Glass",
+    "M_Glass_Max": "Glass",
+    "M_LightGlassNormal_Orange_Max": "Tex_LensAmber",
+    "M_LightGlassNormal_OuterRed_Max": "LampGlass",
+    "M_LightGlassNormal_Clear_Max": "LampGlass",
+    "M_LightGlass_Red_Max": "Tex_LensRed",
+    "M_LightGlass_Clear_Max": "LampGlass",
+    "M_Tire_Max": "Bottom"
+  },
+  "masked_texture_slots": [
+    "Tex_Badge_D",
+    "Tex_RimBadge_D"
+  ],
+  "meshes": {
+    "Body": {
+      "parts": [
+        "BODY_P0",
+        "BODY_P1",
+        "BODY_P2",
+        "BODY_P3",
+        "BODY_P4",
+        "FENDERSCHASSISF_SETA",
+        "FENDERSCHASSISR_SETA",
+        "BOOT_SETA",
+        "EXHAUSTS_SETA",
+        "HEADLIGHTS_SETA",
+        "TAILLIGHTS_SETA",
+        "MIRRORBASEL_SETA",
+        "MIRRORBASER_SETA",
+        {
+          "part": "MIRRORL_SETA",
+          "skip_groups": [
+            2
+          ]
+        },
+        {
+          "part": "MIRRORR_SETA",
+          "skip_groups": [
+            2
+          ]
+        }
+      ],
+      "drop_slots": [
+        "LampGlass"
+      ],
+      "uv_split": [
+        {
+          "from": "Tex_Interior_D",
+          "to": "Gauges",
+          "box": [
+            0.35,
+            0.72,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "drop_boxes": [
+        [
+          23,
+          -11.5,
+          98.5,
+          33.5,
+          11.5,
+          112.5
+        ]
+      ]
+    },
+    "Door_Left": {
+      "parts": [
+        "BODY_P5",
+        "BODY_P6",
+        "BODY_P7"
+      ],
+      "bbox_collision": true
+    },
+    "Door_Right": {
+      "parts": [
+        "BODY_P8",
+        "BODY_P9",
+        "BODY_P10"
+      ],
+      "bbox_collision": true
+    },
+    "SideMirror": {
+      "parts": [
+        {
+          "part": "MIRRORL_SETA",
+          "slot": "Mirror",
+          "groups": [
+            2
+          ]
+        }
+      ],
+      "recenter": true,
+      "planar_uv": {},
+      "counter_rotate": {
+        "rot": [
+          -1.5,
+          -8.2,
+          0
+        ]
+      }
+    },
+    "Wheel_L": {
+      "parts": [
+        {
+          "part": "WHEELFL_SETA"
+        },
+        {
+          "part": "_RACE01_FL",
+          "geo": "~/nfs-work/db/heat/TIRES/geo",
+          "prefix": "TIRE",
+          "note": "Heat shared tyre (race01), r 31.6 x 26.8 cm"
+        }
+      ]
+    },
+    "Wheel_R": {
+      "parts": [
+        {
+          "part": "WHEELFL_SETA",
+          "mirror": true
+        },
+        {
+          "part": "_RACE01_FL",
+          "geo": "~/nfs-work/db/heat/TIRES/geo",
+          "prefix": "TIRE",
+          "note": "Heat shared tyre (race01), r 31.6 x 26.8 cm",
+          "mirror": true
+        }
+      ]
+    },
+    "RightSideMirror": {
+      "parts": [
+        {
+          "part": "MIRRORR_SETA",
+          "slot": "Mirror",
+          "groups": [
+            2
+          ],
+          "mirror": true
+        }
+      ],
+      "recenter": true,
+      "planar_uv": {},
+      "counter_rotate": {
+        "rot": [
+          -2.8,
+          -4.8,
+          0
+        ],
+        "mirror_frame": true
+      }
+    },
+    "Aero_FrontBumper_KIT00": {
+      "parts": [
+        "BUMPERF_SETA",
+        "BUMPERCHASSISF_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETB": {
+      "parts": [
+        "BUMPERF_SETB",
+        "BUMPERCHASSISF_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETC": {
+      "parts": [
+        "BUMPERF_SETC",
+        "BUMPERCHASSISF_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETD": {
+      "parts": [
+        "BUMPERF_SETD",
+        "BUMPERCHASSISF_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETE": {
+      "parts": [
+        "BUMPERF_SETE",
+        "BUMPERCHASSISF_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETEDY": {
+      "parts": [
+        "BUMPERF_SETEDY",
+        "BUMPERCHASSISF_SETEDY"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETF": {
+      "parts": [
+        "BUMPERF_SETF",
+        "BUMPERCHASSISF_SETF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_FrontBumper_SETF_ALTA": {
+      "parts": [
+        "BUMPERF_SETF_ALTA",
+        "BUMPERCHASSISF_SETF_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_KIT00": {
+      "parts": [
+        "BUMPERR_SETA",
+        "BUMPERCHASSISR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETA_ALTA": {
+      "parts": [
+        "BUMPERR_SETA_ALTA",
+        "BUMPERCHASSISR_SETA_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETA_ALTB": {
+      "parts": [
+        "BUMPERR_SETA_ALTB",
+        "BUMPERCHASSISR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETD": {
+      "parts": [
+        "BUMPERR_SETD",
+        "BUMPERCHASSISR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETD_ALTA": {
+      "parts": [
+        "BUMPERR_SETD_ALTA",
+        "BUMPERCHASSISR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETD_ALTB": {
+      "parts": [
+        "BUMPERR_SETD_ALTB",
+        "BUMPERCHASSISR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETE": {
+      "parts": [
+        "BUMPERR_SETE",
+        "BUMPERCHASSISR_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETEDY": {
+      "parts": [
+        "BUMPERR_SETEDY",
+        "BUMPERCHASSISR_SETEDY"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETE_ALTA": {
+      "parts": [
+        "BUMPERR_SETE_ALTA",
+        "BUMPERCHASSISR_SETE_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearBumper_SETF": {
+      "parts": [
+        "BUMPERR_SETF",
+        "BUMPERCHASSISR_SETF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_KIT00": {
+      "parts": [
+        "SKIRTS_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETA_ALTA": {
+      "parts": [
+        "SKIRTS_SETA_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETD": {
+      "parts": [
+        "SKIRTS_SETD"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETD_ALTA": {
+      "parts": [
+        "SKIRTS_SETD_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETE": {
+      "parts": [
+        "SKIRTS_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETEDY": {
+      "parts": [
+        "SKIRTS_SETEDY"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETE_ALTA": {
+      "parts": [
+        "SKIRTS_SETE_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETE_ALTB": {
+      "parts": [
+        "SKIRTS_SETE_ALTB"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETE_ALTC": {
+      "parts": [
+        "SKIRTS_SETE_ALTC"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF": {
+      "parts": [
+        "SKIRTS_SETF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTA": {
+      "parts": [
+        "SKIRTS_SETF_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTB": {
+      "parts": [
+        "SKIRTS_SETF_ALTB"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTC": {
+      "parts": [
+        "SKIRTS_SETF_ALTC"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTD": {
+      "parts": [
+        "SKIRTS_SETF_ALTD"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTE": {
+      "parts": [
+        "SKIRTS_SETF_ALTE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTF": {
+      "parts": [
+        "SKIRTS_SETF_ALTF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_SideSkirt_SETF_ALTG": {
+      "parts": [
+        "SKIRTS_SETF_ALTG"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_KIT00": {
+      "parts": [
+        "HOOD_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_SETB": {
+      "parts": [
+        "HOOD_SETB"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_SETE": {
+      "parts": [
+        "HOOD_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_SETEDY": {
+      "parts": [
+        "HOOD_SETEDY"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_SETF": {
+      "parts": [
+        "HOOD_SETF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Bonnet_SETG": {
+      "parts": [
+        "HOOD_SETG"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_KIT00": {
+      "parts": [
+        {
+          "part": "SPOILER_SETA",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETDD": {
+      "parts": [
+        {
+          "part": "SPOILER_SETDD",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETDE": {
+      "parts": [
+        {
+          "part": "SPOILER_SETDE",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETDI": {
+      "parts": [
+        {
+          "part": "SPOILER_SETDI",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETE": {
+      "parts": [
+        {
+          "part": "SPOILER_SETE",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETEDY": {
+      "parts": [
+        {
+          "part": "SPOILER_SETEDY",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_RearWing_SETF": {
+      "parts": [
+        {
+          "part": "SPOILER_SETF",
+          "offset": [
+            205,
+            0,
+            -82
+          ]
+        }
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_KIT00": {
+      "parts": [
+        "FENDERFL_SETA",
+        "FENDERFR_SETA",
+        "FENDERSR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETA_ALTA": {
+      "parts": [
+        "FENDERFL_SETA_ALTA",
+        "FENDERFR_SETA_ALTA",
+        "FENDERSR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETA_ALTB": {
+      "parts": [
+        "FENDERFL_SETA_ALTB",
+        "FENDERFR_SETA_ALTB",
+        "FENDERSR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETB": {
+      "parts": [
+        "FENDERFL_SETB",
+        "FENDERFR_SETB",
+        "FENDERSR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETB_ALTA": {
+      "parts": [
+        "FENDERFL_SETB_ALTA",
+        "FENDERFR_SETB_ALTA",
+        "FENDERSR_SETA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETE": {
+      "parts": [
+        "FENDERFL_SETE",
+        "FENDERFR_SETE",
+        "FENDERSR_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETEDY": {
+      "parts": [
+        "FENDERFL_SETEDY",
+        "FENDERFR_SETEDY",
+        "FENDERSR_SETEDY"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETE_ALTA": {
+      "parts": [
+        "FENDERFL_SETE_ALTA",
+        "FENDERFR_SETE_ALTA",
+        "FENDERSR_SETE_ALTA"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETE_ALTB": {
+      "parts": [
+        "FENDERFL_SETE_ALTB",
+        "FENDERFR_SETE_ALTB",
+        "FENDERSR_SETE"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    },
+    "Aero_Fender_SETF": {
+      "parts": [
+        "FENDERFL_SETF",
+        "FENDERFR_SETF",
+        "FENDERSR_SETF"
+      ],
+      "aero": true,
+      "drop_slots": [
+        "LampGlass"
+      ]
+    }
+  },
+  "final_slot_names": {
+    "Paint": "Body_01",
+    "Glass": "Window",
+    "HeadLamp": "HeadLight",
+    "TailLamp": "TailLight",
+    "Signal_L_F": "LeftSignalLight",
+    "Signal_L_R": "LeftSignalLight",
+    "Signal_R_F": "RightSignalLight",
+    "Signal_R_R": "RightSignalLight",
+    "ReverseLamp": "ReverseLight",
+    "Tex_RimGun": "Wheel_01",
+    "TailLens": "TailLight",
+    "SigLens_L_R": "LeftSignalLight",
+    "SigLens_L_F": "LeftSignalLight",
+    "SigLens_R_R": "RightSignalLight",
+    "SigLens_R_F": "RightSignalLight"
+  },
+  "TODO": [
+    "render + slot check",
+    "steering wheel extract (BODY_P4 is the wheel)",
+    "dials (Interior_D texture) + dashboard sockets + gauge faces",
+    "lamps: headlight/taillight/signal/reverse from Light_SetA",
+    "wheel orientation (rim at origin, axis Y?)",
+    "stance",
+    "mirrors: aim_mirrors + check_mirrors",
+    "kits (Heat sets b-f, dy widebody)",
+    "dealer bay"
+  ],
+  "recentered": {
+    "SideMirror": [
+      40.18,
+      -87.85,
+      82.86
+    ],
+    "RightSideMirror": [
+      40.18,
+      -87.85,
+      82.86
+    ]
+  },
+  "emissive_slots": {
+    "Gauges": {
+      "texture_slot": "Tex_Interior_D",
+      "glow": 1.5,
+      "mask_from_gauges": true
+    },
+    "NeedleGlow": {
+      "texture_slot": "Tex_SKYLINE_NEEDLE",
+      "glow": 2.0
+    }
+  },
+  "gauge_faces": {
+    "Tex_Interior_D": [
+      {
+        "center": [
+          0.5703,
+          0.8472
+        ],
+        "face": [
+          0.5703,
+          0.8472,
+          0.0938
+        ],
+        "radius": 0.0826,
+        "rotate": 0,
+        "min": 0,
+        "max": 9,
+        "text_step": 1,
+        "line_step": 0.5,
+        "start": 140,
+        "end": 400,
+        "red_from": 8,
+        "font": 0.2,
+        "captions": [
+          [
+            "x1000",
+            0.22,
+            270
+          ]
+        ],
+        "caption_font": 0.11
+      },
+      {
+        "center": [
+          0.7866,
+          0.8462
+        ],
+        "face": [
+          0.7866,
+          0.8462,
+          0.0943
+        ],
+        "radius": 0.0831,
+        "rotate": 0,
+        "min": 0,
+        "max": 160,
+        "text_step": 20,
+        "line_step": 10,
+        "start": 140,
+        "end": 400,
+        "font": 0.17,
+        "captions": [
+          [
+            "MPH",
+            0.3,
+            90
+          ]
+        ],
+        "caption_font": 0.12
+      },
+      {
+        "center": [
+          0.9346,
+          0.9126
+        ],
+        "face": [
+          0.9346,
+          0.9126,
+          0.0494
+        ],
+        "radius": 0.0427,
+        "rotate": 0,
+        "min": 0,
+        "max": 1,
+        "text_step": 1,
+        "line_step": 0.25,
+        "start": 210,
+        "end": 330,
+        "font": 0.34,
+        "labels": {
+          "0": "E",
+          "1": "F"
+        }
+      },
+      {
+        "center": [
+          0.4224,
+          0.9121
+        ],
+        "face": [
+          0.4224,
+          0.9121,
+          0.0499
+        ],
+        "radius": 0.0431,
+        "rotate": 0,
+        "min": 40,
+        "max": 120,
+        "text_step": 80,
+        "line_step": 20,
+        "start": 210,
+        "end": 330,
+        "font": 0.34,
+        "labels": {
+          "40": "C",
+          "120": "H"
+        },
+        "red_from": 110
+      }
+    ]
+  },
+  "needle_scales": {
+    "RPM": 0.9,
+    "Speed": 0.9,
+    "Fuel": 0.94,
+    "Temp": 0.94
+  },
+  "texture_upscale": {
+    "Tex_Interior_D": 4
+  },
+  "extract": {
+    "SteeringWheel": {
+      "from": "Body",
+      "center": [
+        29.5,
+        37,
+        68.5
+      ],
+      "radius": 18,
+      "x_range": [
+        20,
+        40
+      ],
+      "socket": "SteeringWheel",
+      "align_x": true,
+      "pivot": [
+        30.985149999999997,
+        37.20755,
+        68.6579
+      ],
+      "tilt_deg": 18.66
+    }
+  },
+  "sockets": {
+    "Body": [
+      {
+        "name": "SteeringWheel",
+        "loc": [
+          30.99,
+          37.21,
+          68.66
+        ],
+        "rot": [
+          -18.66,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Exhaust_Left",
+        "loc": [
+          -226,
+          -47,
+          17
+        ],
+        "rot": [
+          0,
+          180,
+          0
+        ]
+      },
+      {
+        "name": "Exhaust_Right",
+        "loc": [
+          -226,
+          -34,
+          17
+        ],
+        "rot": [
+          0,
+          180,
+          0
+        ],
+        "note": "R34: twin tips on the left"
+      },
+      {
+        "name": "RearWing",
+        "loc": [
+          -205,
+          0,
+          82
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "TaxiRoofSign",
+        "loc": [
+          -40,
+          0,
+          116
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "TrailerHitch",
+        "loc": [
+          -228,
+          0,
+          25
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "Dashboard": [
+      {
+        "name": "Niddle_RPM",
+        "loc": [
+          21.079,
+          -7.17,
+          9.842
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          -89.36
+        ]
+      },
+      {
+        "name": "Niddle_Speed",
+        "loc": [
+          21.095,
+          4.46,
+          9.889
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          -89.36
+        ]
+      },
+      {
+        "name": "Niddle_Fuel",
+        "loc": [
+          21.068,
+          12.42,
+          6.312
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          -89.36
+        ]
+      },
+      {
+        "name": "Niddle_Temp",
+        "loc": [
+          21.052,
+          -15.12,
+          6.36
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          -89.36
+        ]
+      }
+    ]
+  },
+  "dashboard": {
+    "sockets": [
+      {
+        "name": "Niddle_RPM",
+        "loc": [
+          54.11,
+          30.04,
+          71.24
+        ],
+        "rot": [
+          0,
+          -90,
+          -70.7
+        ]
+      },
+      {
+        "name": "Niddle_Speed",
+        "loc": [
+          54.14,
+          41.67,
+          71.28
+        ],
+        "rot": [
+          0,
+          -90,
+          -70.7
+        ]
+      },
+      {
+        "name": "Niddle_Fuel",
+        "loc": [
+          52.97,
+          49.63,
+          67.9
+        ],
+        "rot": [
+          0,
+          -90,
+          -70.7
+        ]
+      },
+      {
+        "name": "Niddle_Temp",
+        "loc": [
+          52.97,
+          22.09,
+          67.95
+        ],
+        "rot": [
+          0,
+          -90,
+          -70.7
+        ]
+      }
+    ],
+    "parent_socket": "SteeringWheel",
+    "mfd": {
+      "anchor": [
+        "Niddle_Speed"
+      ],
+      "up": -3.6,
+      "width": 3.0,
+      "height": 0.8,
+      "out": 0.25
+    }
+  },
+  "needle_width": 0.4,
+  "mirror_meshes": {
+    "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+  },
+  "slot_boxes": [
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_L_F",
+      "box": [
+        200,
+        -75,
+        27,
+        219,
+        0,
+        40
+      ],
+      "note": "front bumper corner lamps (amber)"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_R_F",
+      "box": [
+        200,
+        0,
+        27,
+        219,
+        75,
+        40
+      ],
+      "note": "front bumper corner lamps (amber)"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_L_F",
+      "box": [
+        80,
+        -90,
+        52,
+        92,
+        -80,
+        60
+      ],
+      "note": "fender side repeater"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_R_F",
+      "box": [
+        80,
+        80,
+        52,
+        92,
+        90,
+        60
+      ],
+      "note": "fender side repeater"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "HeadLamp",
+      "box": [
+        185,
+        -80,
+        43,
+        220,
+        80,
+        61
+      ],
+      "note": "headlamp units"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_L_R",
+      "box": [
+        -222,
+        -57,
+        57,
+        -208,
+        -37,
+        80
+      ],
+      "note": "inner round tail lamps = indicators (as on the MW R34)"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "Signal_R_R",
+      "box": [
+        -222,
+        37,
+        57,
+        -208,
+        57,
+        80
+      ],
+      "note": "inner round tail lamps = indicators"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "TailLamp",
+      "box": [
+        -222,
+        -77,
+        57,
+        -208,
+        77,
+        80
+      ],
+      "note": "outer round tail lamps"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "TailLamp",
+      "box": [
+        -222,
+        -10,
+        77,
+        -216,
+        10,
+        84
+      ],
+      "note": "high-mount stop lamp"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "ReverseLamp",
+      "box": [
+        -229,
+        18,
+        33,
+        -218,
+        35,
+        45
+      ],
+      "note": "rear bumper lamp on the right = reverse (Heat: clear; the left one is the red rear fog)"
+    },
+    {
+      "from": "Tex_Light_SetA_D",
+      "to": "TailLamp",
+      "box": [
+        -228,
+        -4,
+        40,
+        -224,
+        4,
+        44
+      ],
+      "note": "number plate light (on with the tail lights)"
+    },
+    {
+      "from": "Tex_LensRed",
+      "to": "SigLens_L_R",
+      "box": [
+        -222,
+        -57,
+        57,
+        -208,
+        -37,
+        80
+      ],
+      "note": "inner round lens = amber indicator (Heat: amber inner lamps)"
+    },
+    {
+      "from": "Tex_LensRed",
+      "to": "SigLens_R_R",
+      "box": [
+        -222,
+        37,
+        57,
+        -208,
+        57,
+        80
+      ],
+      "note": "inner round lens = amber indicator"
+    },
+    {
+      "from": "Tex_LensRed",
+      "to": "TailLens",
+      "box": [
+        -224,
+        -80,
+        55,
+        -205,
+        80,
+        86
+      ],
+      "note": "outer round lenses + third stop lens"
+    },
+    {
+      "from": "Tex_LensAmber",
+      "to": "SigLens_L_F",
+      "box": [
+        200,
+        -75,
+        27,
+        219,
+        0,
+        40
+      ],
+      "note": "front bumper amber lens"
+    },
+    {
+      "from": "Tex_LensAmber",
+      "to": "SigLens_R_F",
+      "box": [
+        200,
+        0,
+        27,
+        219,
+        75,
+        40
+      ],
+      "note": "front bumper amber lens"
+    }
+  ],
+  "lamp_slots": {
+    "HeadLamp": {
+      "kind": "head",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "TailLamp": {
+      "kind": "tail",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "Signal_L_F": {
+      "kind": "signal",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "Signal_R_F": {
+      "kind": "signal",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "Signal_L_R": {
+      "kind": "signal",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "Signal_R_R": {
+      "kind": "signal",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "ReverseLamp": {
+      "kind": "reverse",
+      "texture_slot": "Tex_Light_SetA_D"
+    },
+    "TailLens": {
+      "kind": "tail",
+      "texture_slot": "Tex_LensRed"
+    },
+    "SigLens_L_R": {
+      "kind": "signal",
+      "texture_slot": "Tex_LensAmber"
+    },
+    "SigLens_R_R": {
+      "kind": "signal",
+      "texture_slot": "Tex_LensAmber"
+    },
+    "SigLens_L_F": {
+      "kind": "signal",
+      "texture_slot": "Tex_LensAmber"
+    },
+    "SigLens_R_F": {
+      "kind": "signal",
+      "texture_slot": "Tex_LensAmber"
+    }
+  },
+  "aero_parts": [
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_KIT00",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_KIT00",
+      "display_name": "Stock Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETB",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETB",
+      "display_name": "Set B Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETC",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETC",
+      "display_name": "Set C Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETD",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETD",
+      "display_name": "Set D Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETE",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETE",
+      "display_name": "Set E Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETEDY",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETEDY",
+      "display_name": "Set E Wide Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETF",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETF",
+      "display_name": "Set F Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_FrontBumper_SETF_ALTA",
+      "slot": "FrontBumper",
+      "part_type": "FrontBumper",
+      "mesh": "Aero_FrontBumper_SETF_ALTA",
+      "display_name": "Set F (alt A) Front Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_KIT00",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_KIT00",
+      "display_name": "Stock Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETA_ALTA",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETA_ALTA",
+      "display_name": "Set A (alt A) Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETA_ALTB",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETA_ALTB",
+      "display_name": "Set A (alt B) Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETD",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETD",
+      "display_name": "Set D Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETD_ALTA",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETD_ALTA",
+      "display_name": "Set D (alt A) Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETD_ALTB",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETD_ALTB",
+      "display_name": "Set D (alt B) Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETE",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETE",
+      "display_name": "Set E Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETEDY",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETEDY",
+      "display_name": "Set E Wide Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETE_ALTA",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETE_ALTA",
+      "display_name": "Set E (alt A) Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearBumper_SETF",
+      "slot": "RearBumper",
+      "part_type": "RearBumper",
+      "mesh": "Aero_RearBumper_SETF",
+      "display_name": "Set F Rear Bumper"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_KIT00",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_KIT00",
+      "display_name": "Stock Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETA_ALTA",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETA_ALTA",
+      "display_name": "Set A (alt A) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETD",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETD",
+      "display_name": "Set D Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETD_ALTA",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETD_ALTA",
+      "display_name": "Set D (alt A) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETE",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETE",
+      "display_name": "Set E Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETEDY",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETEDY",
+      "display_name": "Set E Wide Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETE_ALTA",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETE_ALTA",
+      "display_name": "Set E (alt A) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETE_ALTB",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETE_ALTB",
+      "display_name": "Set E (alt B) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETE_ALTC",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETE_ALTC",
+      "display_name": "Set E (alt C) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF",
+      "display_name": "Set F Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTA",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTA",
+      "display_name": "Set F (alt A) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTB",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTB",
+      "display_name": "Set F (alt B) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTC",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTC",
+      "display_name": "Set F (alt C) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTD",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTD",
+      "display_name": "Set F (alt D) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTE",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTE",
+      "display_name": "Set F (alt E) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTF",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTF",
+      "display_name": "Set F (alt F) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_SideSkirt_SETF_ALTG",
+      "slot": "SideSkirt",
+      "part_type": "SideSkirt",
+      "mesh": "Aero_SideSkirt_SETF_ALTG",
+      "display_name": "Set F (alt G) Side Skirts"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_KIT00",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_KIT00",
+      "display_name": "Stock Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_SETB",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_SETB",
+      "display_name": "Set B Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_SETE",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_SETE",
+      "display_name": "Set E Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_SETEDY",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_SETEDY",
+      "display_name": "Set E Wide Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_SETF",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_SETF",
+      "display_name": "Set F Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_Bonnet_SETG",
+      "slot": "Bonnet",
+      "part_type": "Bonnet",
+      "mesh": "Aero_Bonnet_SETG",
+      "display_name": "Set G Hood"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_KIT00",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_KIT00",
+      "display_name": "Stock Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETDD",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETDD",
+      "display_name": "Set DD Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETDE",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETDE",
+      "display_name": "Set DE Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETDI",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETDI",
+      "display_name": "Set DI Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETE",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETE",
+      "display_name": "Set E Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETEDY",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETEDY",
+      "display_name": "Set E Wide Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_RearWing_SETF",
+      "slot": "RearWing",
+      "part_type": "RearWing",
+      "mesh": "Aero_RearWing_SETF",
+      "display_name": "Set F Wing"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_KIT00",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_KIT00",
+      "display_name": "Stock Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETA_ALTA",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETA_ALTA",
+      "display_name": "Set A (alt A) Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETA_ALTB",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETA_ALTB",
+      "display_name": "Set A (alt B) Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETB",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETB",
+      "display_name": "Set B Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETB_ALTA",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETB_ALTA",
+      "display_name": "Set B (alt A) Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETE",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETE",
+      "display_name": "Set E Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETEDY",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETEDY",
+      "display_name": "Set E Wide Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETE_ALTA",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETE_ALTA",
+      "display_name": "Set E (alt A) Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETE_ALTB",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETE_ALTB",
+      "display_name": "Set E (alt B) Fenders"
+    },
+    {
+      "row": "HEAT_SKYLINE_Fender_SETF",
+      "slot": "Fender",
+      "part_type": "Fender",
+      "mesh": "Aero_Fender_SETF",
+      "display_name": "Set F Fenders"
+    }
+  ],
+  "paintable_texture_slots": [
+    "Tex_RimGun"
+  ],
+  "drivetrain": "awd",
+  "stance_after_stiff": true
+}

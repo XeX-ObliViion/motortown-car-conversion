@@ -1,0 +1,1528 @@
+{
+ "car": "AC_F40",
+ "display_name": "Ferrari F40 (SRP, LM-style)",
+ "prefix": "AC_F40",
+ "base_vehicle": "Raton",
+ "drivetrain": "rwd",
+ "wheel_align": true,
+ "base_row": "Sports_01",
+ "base_wheel": "Vista",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/f40/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/f40/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_F40/meshes",
+ "cost": 400000,
+ "wheel_part": true,
+ "wheel_display_name": "BBS Wheels (F40)",
+ "texture_slots": {
+  "window_banner": "Tex_AC_F40_BANNER",
+  "steer_fer": "Tex_AC_F40_FERBADGE001DIFF",
+  "Display_Symbols": "Tex_AC_F40_FERF4087SYMBOLS001DIFF",
+  "INT_Metal_Black": "Tex_AC_F40_INTMETALBLACK",
+  "INT_Skins": "Tex_AC_F40_INTSKINS",
+  "Stw_Bolts": "Tex_AC_F40_STWBOLTS",
+  "INT_Plastic": "Tex_AC_F40_INTPLASTIC",
+  "INT_Shift_BALL": "Tex_AC_F40_SHIFTBALL",
+  "Dash_Chrome": "Tex_AC_F40_DASHCHROME",
+  "INT_Belts": "Tex_AC_F40_INTBELTS",
+  "INT_MIRROR": "Tex_AC_F40_MIRROR",
+  "INT_Carpets": "Tex_AC_F40_TAPPETINI",
+  "Glass Dials": "Tex_AC_F40_GAUGEGLASS",
+  "Ferrari_Badges_009": "Tex_AC_F40_FERRARIBADGES009",
+  "INT_Symbols": "Tex_AC_F40_ICONSEMB",
+  "Button_Patterns": "Tex_AC_F40_BLACKMATERIAL",
+  "Blue_Lights": "Tex_AC_F40_ALPHA",
+  "Gauges": "Tex_AC_F40_FERF4087GAUGESDIFF",
+  "INT_Pedali_NM": "Tex_AC_F40_INTPEDALINM",
+  "Ridges_002": "Tex_AC_F40_RIDGES002OPAC",
+  "symbols": "Tex_AC_F40_FERF4087DOORTAGS001DIF",
+  "Leather_1": "Tex_AC_F40_LEATHER1",
+  "int_red": "Tex_AC_F40_INTRED",
+  "INT_Carbon": "Tex_AC_F40_INTCARBON",
+  "Leather_Perforated": "Tex_AC_F40_LEATHERPERFORATED",
+  "brake_leather": "Tex_AC_F40_BRAKELEATHER",
+  "Seats_Leather": "Tex_AC_F40_SEATSLEATHER",
+  "INT_Rubber": "Tex_AC_F40_INTRUBBER",
+  "Exterior Metal Black": "Tex_AC_F40_EXTERIORMETALBLACK",
+  "INT_Rivetti_NM": "Tex_AC_F40_DISPLAYINTF40",
+  "INT_Glass": "Glass",
+  "Stitches": "Tex_AC_F40_STITCH003",
+  "INT_DISPLAY_Plastic_Low_Ref_NM": "Tex_AC_F40_DISPLAYINTF40",
+  "disc_brake": "Tex_AC_F40_DISCBRAKE",
+  "EXT_Black": "Tex_AC_F40_BLACKMATERIAL",
+  "Grills": "Tex_AC_F40_GRILLBACKGROUNDINNERCO",
+  "Holes": "Tex_AC_F40_CIRCLES004OPAC",
+  "Setrab": "Tex_AC_F40_SETRAB001OPAC",
+  "Welding_Seams": "Tex_AC_F40_WELD002OPAC",
+  "EXT_Glass_Black": "Glass",
+  "Exterior_Lights_Mask": "Tex_AC_F40_ROUNDBUCKET001DIFF",
+  "Rear_Light_Glass": "Tex_AC_F40_REARGLASSLIGHT",
+  "Engine_Aluminium": "Tex_AC_F40_ENGINEALUMINIUM",
+  "Engine_Metal_Black": "Tex_AC_F40_ENGINEMETALBLACK",
+  "Bolts": "Tex_AC_F40_NUTSANDBOLTS",
+  "Engine_Details_Exhaust": "Tex_AC_F40_ENGINEDETAILSEXHAUST",
+  "Engine_Metal": "Tex_AC_F40_ENGINEMETAL",
+  "Ridge_008": "Tex_AC_F40_RIDGE008",
+  "Zigzag": "Tex_AC_F40_ZIGZAG002GLOS",
+  "Exterior Plastic": "Tex_AC_F40_EXTERIORPLASTIC",
+  "EXT_Carbon": "Tex_AC_F40_EXTCARBON",
+  "Lock_003": "Tex_AC_F40_LOCK003OPAC",
+  "BADGING": "Tex_AC_F40_BADGING",
+  "Front_Grids": "Tex_AC_F40_GRIDD",
+  "Mirrors": "Tex_AC_F40_MIRROR",
+  "Door_Key_Hole": "Tex_AC_F40_KEYHOLE006OPAC",
+  "carPaint": "Paint",
+  "Engine_Details": "Tex_AC_F40_ENGINEDETAILS",
+  "Exterior Metal": "Tex_AC_F40_EXTERIORMETAL",
+  "Steel_Brade": "Tex_AC_F40_STEELBRADE",
+  "Grey_Orgain": "Tex_AC_F40_GREYORGAIN",
+  "Aluminium_Foils": "Tex_AC_F40_ALUMINIUMFOILS",
+  "aero": "Tex_AC_F40_AERO",
+  "EXT_Glass": "Glass",
+  "EXT_Plastic": "Tex_AC_F40_EXTPLASTIC",
+  "EXT_Glass_Light": "Tex_AC_F40_EXTGLASSLIGHT",
+  "Rear_Light_Mask": "Tex_AC_F40_ROUNDBUCKET001DIFF",
+  "Aluminium_Textures": "Tex_AC_F40_ALUMINIUMTEXTURES",
+  "ext_plate_rear": "Tex_AC_F40_EXTPLATEREAR",
+  "ext_plate_screws": "Tex_AC_F40_EXTPLATESCREWS",
+  "Plastic_Black": "Tex_AC_F40_BLACKMATERIAL",
+  "Defrost_Line": "Tex_AC_F40_DEFROSTLINES001OPAC",
+  "Turn_Signal_Glass": "Tex_AC_F40_FRONTTURNSIGNALSGLASS",
+  "Fog_Light_Glass": "Tex_AC_F40_FOGLIGHTGLASS",
+  "Head_Light_Glass": "Tex_AC_F40_HEADLIGHTSGLASS",
+  "ext_plate_front": "Tex_AC_F40_EXTPLATEFRONT",
+  "Califers": "Tex_AC_F40_CALIFERS",
+  "RIM": "Tex_AC_F40_RIM",
+  "RIM_BLACK": "Tex_AC_F40_RIMBLACK",
+  "RIM_LIP": "Tex_AC_F40_RIMLIP",
+  "EXT_Gomme": "Tex_AC_F40_WHEELB",
+  "F40_WHITE": "Tex_AC_F40_WHITE"
+ },
+ "texture_sources": {
+  "Tex_AC_F40_BANNER": "banner.png",
+  "Tex_AC_F40_FERBADGE001DIFF": "fer_badge_001_diff.dds",
+  "Tex_AC_F40_FERF4087SYMBOLS001DIFF": "fer_f40_87_symbols_001_diff.dds",
+  "Tex_AC_F40_INTMETALBLACK": "F40BAKE_INTMETALBLACK.png",
+  "Tex_AC_F40_INTSKINS": "F40BAKE_INTSKINS.png",
+  "Tex_AC_F40_STWBOLTS": "F40BAKE_STWBOLTS.png",
+  "Tex_AC_F40_INTPLASTIC": "F40BAKE_INTPLASTIC.png",
+  "Tex_AC_F40_SHIFTBALL": "Shift_ball.dds",
+  "Tex_AC_F40_DASHCHROME": "F40BAKE_DASHCHROME.png",
+  "Tex_AC_F40_INTBELTS": "INT_Belts.dds",
+  "Tex_AC_F40_MIRROR": "Mirror.DDS",
+  "Tex_AC_F40_TAPPETINI": "Tappetini.dds",
+  "Tex_AC_F40_GAUGEGLASS": "gaugeglass.dds",
+  "Tex_AC_F40_FERRARIBADGES009": "blackmaterial.dds",
+  "Tex_AC_F40_ICONSEMB": "icons_emb.dds",
+  "Tex_AC_F40_BLACKMATERIAL": "blackmaterial.dds",
+  "Tex_AC_F40_ALPHA": "alpha.dds",
+  "Tex_AC_F40_FERF4087GAUGESDIFF": "fer_f40_87_gauges_diff.dds",
+  "Tex_AC_F40_INTPEDALINM": "Pedali.dds",
+  "Tex_AC_F40_RIDGES002OPAC": "ridges_002_opac.dds",
+  "Tex_AC_F40_FERF4087DOORTAGS001DIF": "fer_f40_87_doortags_001_diff.dds",
+  "Tex_AC_F40_LEATHER1": "F40BAKE_LEATHER1.png",
+  "Tex_AC_F40_INTRED": "F40BAKE_INTRED.png",
+  "Tex_AC_F40_INTCARBON": "F40BAKE_INTCARBON.png",
+  "Tex_AC_F40_LEATHERPERFORATED": "F40BAKE_LEATHERPERFORATED.png",
+  "Tex_AC_F40_BRAKELEATHER": "F40BAKE_BRAKELEATHER.png",
+  "Tex_AC_F40_SEATSLEATHER": "F40BAKE_SEATSLEATHER.png",
+  "Tex_AC_F40_INTRUBBER": "F40BAKE_INTRUBBER.png",
+  "Tex_AC_F40_EXTERIORMETALBLACK": "F40BAKE_EXTERIORMETALBLACK.png",
+  "Tex_AC_F40_DISPLAYINTF40": "DISPLAY_INTF40.dds",
+  "Tex_AC_F40_STITCH003": "stitch_003.dds",
+  "Tex_AC_F40_DISCBRAKE": "disc_brake.dds",
+  "Tex_AC_F40_GRILLBACKGROUNDINNERCO": "grillbackground_innercooler_001_glos.dds",
+  "Tex_AC_F40_CIRCLES004OPAC": "circles_004_opac.dds",
+  "Tex_AC_F40_SETRAB001OPAC": "setrab_001_opac.dds",
+  "Tex_AC_F40_WELD002OPAC": "weld_002_opac.dds",
+  "Tex_AC_F40_ROUNDBUCKET001DIFF": "roundbucket_001_diff.dds",
+  "Tex_AC_F40_REARGLASSLIGHT": "Rear_Glass_Light.dds",
+  "Tex_AC_F40_ENGINEALUMINIUM": "F40BAKE_ENGINEALUMINIUM.png",
+  "Tex_AC_F40_ENGINEMETALBLACK": "F40BAKE_ENGINEMETALBLACK.png",
+  "Tex_AC_F40_NUTSANDBOLTS": "nuts_and_bolts.dds",
+  "Tex_AC_F40_ENGINEDETAILSEXHAUST": "F40BAKE_ENGINEDETAILSEXHAUST.png",
+  "Tex_AC_F40_ENGINEMETAL": "F40BAKE_ENGINEMETAL.png",
+  "Tex_AC_F40_RIDGE008": "F40BAKE_RIDGE008.png",
+  "Tex_AC_F40_ZIGZAG002GLOS": "zigzag_002_glos.dds",
+  "Tex_AC_F40_EXTERIORPLASTIC": "F40BAKE_EXTERIORPLASTIC.png",
+  "Tex_AC_F40_EXTCARBON": "F40BAKE_EXTCARBON.png",
+  "Tex_AC_F40_LOCK003OPAC": "lock_003_opac.dds",
+  "Tex_AC_F40_BADGING": "badges.dds",
+  "Tex_AC_F40_GRIDD": "Grid_D.dds",
+  "Tex_AC_F40_KEYHOLE006OPAC": "key_hole_006_opac.dds",
+  "Tex_AC_F40_ENGINEDETAILS": "F40BAKE_ENGINEDETAILS.png",
+  "Tex_AC_F40_EXTERIORMETAL": "F40BAKE_EXTERIORMETAL.png",
+  "Tex_AC_F40_STEELBRADE": "F40BAKE_STEELBRADE.png",
+  "Tex_AC_F40_GREYORGAIN": "F40BAKE_GREYORGAIN.png",
+  "Tex_AC_F40_ALUMINIUMFOILS": "F40BAKE_ALUMINIUMFOILS.png",
+  "Tex_AC_F40_AERO": "F40BAKE_AERO.png",
+  "Tex_AC_F40_EXTPLASTIC": "F40BAKE_EXTPLASTIC.png",
+  "Tex_AC_F40_EXTGLASSLIGHT": "EXT_Glass_Light.dds",
+  "Tex_AC_F40_ALUMINIUMTEXTURES": "F40BAKE_ALUMINIUMTEXTURES.png",
+  "Tex_AC_F40_EXTPLATEREAR": "Plate_D.dds",
+  "Tex_AC_F40_EXTPLATESCREWS": "F40BAKE_EXTPLATESCREWS.png",
+  "Tex_AC_F40_DEFROSTLINES001OPAC": "defrostlines_001_opac.dds",
+  "Tex_AC_F40_FRONTTURNSIGNALSGLASS": "Front_TurnSignals_Glass.dds",
+  "Tex_AC_F40_FOGLIGHTGLASS": "Fog_Light_Glass.dds",
+  "Tex_AC_F40_HEADLIGHTSGLASS": "Head_Lights_Glass.dds",
+  "Tex_AC_F40_EXTPLATEFRONT": "Plate_D.dds",
+  "Tex_AC_F40_CALIFERS": "F40BAKE_CALIFERS.png",
+  "Tex_AC_F40_RIM": "F40BAKE_RIM.png",
+  "Tex_AC_F40_RIMBLACK": "F40BAKE_RIMBLACK.png",
+  "Tex_AC_F40_RIMLIP": "F40BAKE_RIMLIP.png",
+  "Tex_AC_F40_WHEELB": "wheel_B.dds",
+  "Tex_AC_F40_WHITE": "F40_WHITE.png"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "CHASSIS",
+     "groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+     ]
+    },
+    {
+     "part": "CHASSIS",
+     "groups": [
+      35
+     ],
+     "skip_boxes": [
+      [
+       -158,
+       0,
+       68,
+       -138,
+       7.5,
+       84
+      ]
+     ]
+    },
+    {
+     "part": "CHASSIS",
+     "groups": [
+      35
+     ],
+     "only_boxes": [
+      [
+       -158,
+       0,
+       68,
+       -138,
+       7.5,
+       84
+      ]
+     ],
+     "slot": "Tex_AC_F40_WHITE"
+    },
+    "INTAKEJOIN",
+    {
+     "part": "REAR_CAWL",
+     "groups": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+     ]
+    },
+    {
+     "part": "FRUNK",
+     "groups": [
+      0,
+      3,
+      4,
+      5,
+      13,
+      14,
+      15,
+      16
+     ]
+    },
+    {
+     "part": "DOOR_LEFT",
+     "groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9
+     ]
+    },
+    {
+     "part": "DOOR_LEFT",
+     "groups": [
+      7
+     ],
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     },
+     "slot": "Paint"
+    },
+    {
+     "part": "CHASSIS",
+     "groups": [
+      21
+     ],
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     },
+     "slot": "Paint"
+    },
+    {
+     "part": "COCKPIT_HR",
+     "groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+     ]
+    },
+    {
+     "part": "COCKPIT_HR",
+     "groups": [
+      7
+     ],
+     "skip_boxes": [
+      [
+       59,
+       9.5,
+       64,
+       64.5,
+       16.2,
+       72
+      ],
+      [
+       63,
+       39,
+       69,
+       70,
+       46.5,
+       76.5
+      ]
+     ]
+    },
+    "EXT_GLASS_CHASSIS",
+    "WIPER",
+    "F_PLATE",
+    "SUSP_LF",
+    "SUSP_RF",
+    "SUSP_LR",
+    "SUSP_RR",
+    "STEER_HR",
+    {
+     "part": "FRUNK",
+     "groups": [
+      2
+     ],
+     "slot": "HeadF40"
+    },
+    {
+     "part": "FRUNK",
+     "groups": [
+      1,
+      6,
+      17,
+      18
+     ],
+     "slot": "SigF40F"
+    },
+    {
+     "part": "REAR_CAWL",
+     "groups": [
+      11,
+      14,
+      20
+     ],
+     "slot": "TailF40"
+    },
+    {
+     "part": "CHASSIS",
+     "groups": [
+      7
+     ],
+     "slot": "TailF40"
+    },
+    {
+     "part": "REAR_CAWL",
+     "groups": [
+      17
+     ],
+     "slot": "RevF40"
+    },
+    {
+     "part": "REAR_CAWL",
+     "groups": [
+      16,
+      18
+     ],
+     "slot": "SigF40R"
+    }
+   ]
+  },
+  "Popup": {
+   "parts": [
+    {
+     "part": "FRUNK",
+     "groups": [
+      8,
+      10,
+      11,
+      12
+     ]
+    },
+    {
+     "part": "FRUNK",
+     "groups": [
+      7,
+      9
+     ],
+     "slot": "HeadPod"
+    }
+   ],
+   "note": "F40 pop-up pods (closed in the model); lights.ksanim Head_Lights: 35 deg about the hinge (x 146.9, z 67.5)"
+  },
+  "SideMirror_Left": {
+   "parts": [
+    {
+     "part": "DOOR_LEFT",
+     "groups": [
+      7
+     ],
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {},
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     0.9,
+     4.8,
+     0
+    ]
+   }
+  },
+  "SideMirror_Right": {
+   "parts": [
+    {
+     "part": "CHASSIS",
+     "groups": [
+      21
+     ],
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   },
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     2.2,
+     3.8,
+     0
+    ]
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -115.3,
+      81.7,
+      -34.4
+     ]
+    },
+    {
+     "part": "DISC_LF",
+     "offset": [
+      -115.3,
+      81.7,
+      -34.4
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -115.1,
+      -81.7,
+      -34.4
+     ]
+    },
+    {
+     "part": "DISC_RF",
+     "offset": [
+      -115.1,
+      -81.7,
+      -34.4
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      132.7,
+      81.6,
+      -34.4
+     ]
+    },
+    {
+     "part": "DISC_LR",
+     "offset": [
+      132.7,
+      81.6,
+      -34.4
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      132.9,
+      -81.6,
+      -34.4
+     ]
+    },
+    {
+     "part": "DISC_RR",
+     "offset": [
+      132.9,
+      -81.6,
+      -34.4
+     ]
+    }
+   ],
+   "reduce": 0.3
+  }
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror_Left",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror_Right"
+ },
+ "rear_wheel_meshes": true,
+ "rear_wheel_part": true,
+ "mesh_names": {
+  "Wheel_L": "AC_F40_L",
+  "Wheel_R": "AC_F40_R",
+  "Wheel_RL": "AC_F40_REAR_L",
+  "Wheel_RR": "AC_F40_REAR_R",
+  "SteeringWheel": "AC_F40"
+ },
+ "final_slot_names": {
+  "Paint": "Body_0",
+  "Glass": "Glass",
+  "HeadF40": "HeadLight",
+  "HeadPod": "HeadLight",
+  "TailF40": "TailLight",
+  "RevF40": "ReverseLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "wheels": {
+  "front_x": 115.2,
+  "rear_x": -132.8,
+  "half_track": 81.7,
+  "rear_half_track": 81.6,
+  "z": 38.2,
+  "rear_z": 39.2,
+  "radius": 33.7,
+  "auto_arches": false,
+  "note": "AC hubs (wheelbase 248 = real 2450 mm)"
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    5,
+    0,
+    40
+   ],
+   "size": [
+    440,
+    198,
+    50
+   ]
+  },
+  {
+   "center": [
+    -20,
+    0,
+    90
+   ],
+   "size": [
+    200,
+    150,
+    48
+   ]
+  }
+ ],
+ "strip_part_slots": [
+  "Bonnet",
+  "Fender",
+  "LSD0",
+  "LSD1",
+  "SideSkirt"
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     39.71,
+     -30.65,
+     75.88
+    ],
+    "rot": [
+     -15.97,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -222,
+     -10,
+     31
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -222,
+     10,
+     31
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -205,
+     0,
+     118
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ],
+    "note": "top of the F40's own wing"
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -20,
+     0,
+     116
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -222,
+     0,
+     22
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     69.42,
+     -24.6,
+     77.92
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.4
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     69.42,
+     -35.8,
+     77.82
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     61.4,
+     12.8,
+     67.99
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     66.2,
+     -42.8,
+     72.79
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   }
+  ]
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -5,
+    -30.6,
+    12
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -5,
+    30.6,
+    12
+   ]
+  },
+  "cockpit_camera": [
+   -5.0,
+   -30.6,
+   93.0
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    22.0,
+    0.0,
+    102.0
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    10,
+    0,
+    104
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    170,
+    -68,
+    56
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    170,
+    68,
+    56
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    192,
+    72,
+    47
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    192,
+    -72,
+    47
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -217,
+    -48,
+    66
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -217,
+    48,
+    66
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -216,
+    -70,
+    66
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -216,
+    70,
+    66
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    6.2,
+    24.0,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    0.9,
+    4.8,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    2.2,
+    3.8,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 900,
+  "cdo_names": {
+   "BodyMaterialName": "Body_0"
+  }
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    38.3,
+    -30.6,
+    75.9
+   ],
+   "radius": 18.5,
+   "x_range": [
+    26,
+    50
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_F40_INTSKINS",
+    "Tex_AC_F40_INTMETALBLACK",
+    "Tex_AC_F40_FERBADGE001DIFF",
+    "Tex_AC_F40_STWBOLTS",
+    "Tex_AC_F40_INTPLASTIC"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "reduce": 0.5,
+   "pivot": [
+    39.7101,
+    -30.647800000000004,
+    75.8783
+   ],
+   "tilt_deg": 15.97
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "SigF40F",
+   "box": [
+    140,
+    -110,
+    30,
+    210,
+    0,
+    70
+   ]
+  },
+  {
+   "tag": "_F",
+   "from": "SigF40F",
+   "box": [
+    140,
+    0,
+    30,
+    210,
+    110,
+    70
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "SigF40R",
+   "box": [
+    -230,
+    -110,
+    40,
+    -200,
+    0,
+    90
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "SigF40R",
+   "box": [
+    -230,
+    0,
+    40,
+    -200,
+    110,
+    90
+   ],
+   "note": "real F40 (EU): outer round rear lamps are the amber turn signals, inner pair stop/tail"
+  }
+ ],
+ "lamp_slots": {
+  "HeadF40": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_F40_FOGLIGHTGLASS"
+  },
+  "HeadPod": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_F40_HEADLIGHTSGLASS"
+  },
+  "TailF40": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_F40_REARGLASSLIGHT"
+  },
+  "RevF40": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_F40_REARGLASSLIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_F40_FRONTTURNSIGNALSGLASS"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_F40_FRONTTURNSIGNALSGLASS"
+  },
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_F40_REARGLASSLIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_F40_REARGLASSLIGHT"
+  }
+ },
+ "popup": {
+  "hinge": [
+   146.9,
+   67.5
+  ],
+  "angle": 35.0,
+  "seconds": 0.5,
+  "note": "lights.ksanim Head_Lights: quaternion z 0.3 = 34.9 deg about the lateral axis through the HEAD_LIGHTS node"
+ },
+ "dashboard": {
+  "attach_none": true,
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     69.42,
+     -24.6,
+     77.92
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.4
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     69.42,
+     -35.8,
+     77.82
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     61.4,
+     12.8,
+     67.99
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     66.2,
+     -42.8,
+     72.79
+    ],
+    "rot": [
+     0,
+     -90,
+     -91.1
+    ]
+   }
+  ],
+  "note": "AC ARROW_RPM / SPEED / FUEL (centre console) / WATER pivots; oil, oil-pressure and turbo keep the AC needles"
+ },
+ "gauge_style": {
+  "face_color": [
+   8,
+   8,
+   9
+  ],
+  "ink": [
+   238,
+   238,
+   238
+  ],
+  "minor_ink": [
+   205,
+   205,
+   205
+  ],
+  "red_color": [
+   225,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf"
+ },
+ "gauge_faces": {
+  "Tex_AC_F40_FERF4087GAUGESDIFF": [
+   {
+    "center": [
+     0.2408,
+     0.2479
+    ],
+    "face": [
+     0.2408,
+     0.2479,
+     0.235
+    ],
+    "radius": 0.2,
+    "rotate": 0,
+    "min": 0,
+    "max": 220,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.12,
+    "captions": [
+     [
+      "MPH",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.09,
+    "note": "Veglia 0-360 km/h redrawn in mph"
+   },
+   {
+    "center": [
+     0.7675,
+     0.2491
+    ],
+    "face": [
+     0.7675,
+     0.2491,
+     0.23
+    ],
+    "radius": 0.2,
+    "rotate": 0,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 7.75,
+    "font": 0.15,
+    "captions": [
+     [
+      "RPM x1000",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.08
+   },
+   {
+    "center": [
+     0.5058,
+     0.675
+    ],
+    "face": [
+     0.5058,
+     0.675,
+     0.1
+    ],
+    "radius": 0.085,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.329,
+     0.9448
+    ],
+    "face": [
+     0.329,
+     0.9448,
+     0.054
+    ],
+    "radius": 0.046,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 220,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  240,
+  120,
+  20
+ ],
+ "needle_width": 0.3,
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_AC_F40_FERF4087GAUGESDIFF",
+   "glow": 2.0
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_F40_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_AC_F40_CIRCLES004OPAC",
+  "Tex_AC_F40_SETRAB001OPAC",
+  "Tex_AC_F40_WELD002OPAC",
+  "Tex_AC_F40_RIDGES002OPAC",
+  "Tex_AC_F40_ICONSEMB",
+  "Tex_AC_F40_FERF4087SYMBOLS001DIFF",
+  "Tex_AC_F40_ZIGZAG002GLOS",
+  "Tex_AC_F40_GRIDD",
+  "Tex_AC_F40_LOCK003OPAC",
+  "Tex_AC_F40_KEYHOLE006OPAC",
+  "Tex_AC_F40_NUTSANDBOLTS",
+  "Tex_AC_F40_FERRARIBADGES009"
+ ],
+ "performance_source": "ui_car.json (mod tune 'factory boosted'): 681 Nm @4000, 567 bhp @7500, curve to 7850; 1175 kg; real F40 gearing",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_F40_5MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_F40_5MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "5-Speed Manual (F40)",
+    "cost": 9000,
+    "mass": 80,
+    "ratios": {
+     "R": -2.19,
+     "1": 2.427,
+     "2": 1.498,
+     "3": 1.078,
+     "4": 0.841,
+     "5": 0.675
+    },
+    "note": "final 2.9 (10/29) folded in (game row FD_3.31): ratio x 2.9/3.31"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_F40_V8TT",
+    "base_row": "SmallBlock_320HP",
+    "asset": "AC_F40_V8TT",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "2.9 Twin-Turbo V8 (F40)",
+    "mass": 210,
+    "cost": 90000,
+    "max_torque_nm": 681,
+    "max_rpm": 7850,
+    "curve": [
+     [
+      0.0637,
+      0.1957
+     ],
+     [
+      0.12,
+      0.2329
+     ],
+     [
+      0.1274,
+      0.2381
+     ],
+     [
+      0.14,
+      0.2444
+     ],
+     [
+      0.15,
+      0.2498
+     ],
+     [
+      0.16,
+      0.2557
+     ],
+     [
+      0.17,
+      0.2621
+     ],
+     [
+      0.18,
+      0.2692
+     ],
+     [
+      0.1911,
+      0.2781
+     ],
+     [
+      0.2,
+      0.2837
+     ],
+     [
+      0.21,
+      0.2909
+     ],
+     [
+      0.22,
+      0.2995
+     ],
+     [
+      0.23,
+      0.3095
+     ],
+     [
+      0.24,
+      0.3213
+     ],
+     [
+      0.25,
+      0.335
+     ],
+     [
+      0.2548,
+      0.3423
+     ],
+     [
+      0.26,
+      0.3509
+     ],
+     [
+      0.27,
+      0.3694
+     ],
+     [
+      0.28,
+      0.3908
+     ],
+     [
+      0.29,
+      0.4153
+     ],
+     [
+      0.3,
+      0.4434
+     ],
+     [
+      0.31,
+      0.4755
+     ],
+     [
+      0.3185,
+      0.5062
+     ],
+     [
+      0.32,
+      0.5136
+     ],
+     [
+      0.33,
+      0.5656
+     ],
+     [
+      0.34,
+      0.6248
+     ],
+     [
+      0.35,
+      0.6919
+     ],
+     [
+      0.36,
+      0.768
+     ],
+     [
+      0.37,
+      0.8124
+     ],
+     [
+      0.3822,
+      0.8333
+     ],
+     [
+      0.4459,
+      0.9342
+     ],
+     [
+      0.5096,
+      1.0
+     ],
+     [
+      0.5732,
+      0.9868
+     ],
+     [
+      0.7643,
+      0.9211
+     ],
+     [
+      0.9554,
+      0.7895
+     ],
+     [
+      1.0,
+      0.7434
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ui_car.json torqueCurve (boost included: 681 Nm @4000)",
+    "physics_from": "Cars/Parts/Engine/FordSmalBlock302_V8_5L_320HP",
+    "idle_throttle": 0.0009,
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_F40",
+     "loops": [
+      [
+       "l1",
+       1155
+      ],
+      [
+       "l2",
+       2200
+      ],
+      [
+       "l3",
+       2900
+      ],
+      [
+       "l4",
+       3600
+      ],
+      [
+       "l5",
+       5000
+      ],
+      [
+       "l6",
+       6400
+      ],
+      [
+       "l7",
+       7600
+      ]
+     ],
+     "note": "the car's own bank (slang_ferrari_f40.bank): F40_ex_idle / ex_on_verylow / low_2 / mid / high / max_2; all recorded at the idle pitch (77 Hz = 1155 rpm flat-plane firing), resampled to each band offline by tools/spec_gen/make_f40_loops.py (band-limited; verylow_low = 2900 band)"
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "AC_F40_V8TT",
+  "Transmission": "AC_F40_5MT",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "AC_F40",
+  "Wheel1": "AC_F40",
+  "Wheel2": "AC_F40_REAR",
+  "Wheel3": "AC_F40_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Headlight": "AC_F40_Popup"
+ },
+ "drivetrain_note": "Raton: mid-engine RWD (F40: mid-engine RWD).",
+ "recentered": {
+  "SideMirror_Left": [
+   51.5,
+   -93.16,
+   83.79
+  ],
+  "SideMirror_Right": [
+   51.27,
+   93.16,
+   83.79
+  ]
+ }
+}

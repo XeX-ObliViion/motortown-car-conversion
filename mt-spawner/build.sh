@@ -40,3 +40,11 @@ echo "Linking $OUT/version.dll"
 "$CXX" -shared -o "$OUT/version.dll" "${objs[@]}" -static -s \
     src/version.def -ld3d12 -ldxgi -ld3dcompiler_47 -ldwmapi -lpsapi -luser32 -lgdi32
 ls -la "$OUT/version.dll"
+
+# Plugin Loader build: same code, PluginInit entry instead of the version.dll proxy (no .def exports)
+"$CXX" $CXXFLAGS -DMT_PLUGIN -c src/proxy.cpp -o "$OUT/obj/proxy_plugin.o"
+pobjs=()
+for o in "${objs[@]}"; do [[ "$o" == */proxy.o ]] && pobjs+=("$OUT/obj/proxy_plugin.o") || pobjs+=("$o"); done
+echo "Linking $OUT/mt_plugin_MTSpawner.dll"
+"$CXX" -shared -o "$OUT/mt_plugin_MTSpawner.dll" "${pobjs[@]}" -static -s     -ld3d12 -ldxgi -ld3dcompiler_47 -ldwmapi -lpsapi -luser32 -lgdi32
+ls -la "$OUT/mt_plugin_MTSpawner.dll"

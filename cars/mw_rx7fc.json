@@ -1,0 +1,2552 @@
+{
+ "base_vehicle": "Fortem",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Windows",
+  "Tex_RX7FC_HEADLAMP": "HeadLight",
+  "Tex_RX7FC_BRAKELIGHT": "TailLight",
+  "Tex_RX7FC_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_P": "LeftSignalLight",
+  "Signal_R_P": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_V": "ReverseLight",
+  "HeadPod": "HeadLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -37.0,
+    35.4,
+    8.0
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -37.0,
+    -35.4,
+    8.0
+   ]
+  },
+  "cockpit_camera": [
+   -40.0,
+   35.4,
+   87.0
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    -2.0,
+    0.0,
+    93.5
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -30,
+    0,
+    98
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    205,
+    -53,
+    45
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    205,
+    53,
+    45
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    208,
+    52,
+    25
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    208,
+    -52,
+    25
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -206,
+    -47,
+    51
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -206,
+    47,
+    51
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -201,
+    68,
+    51
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -201,
+    -68,
+    51
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    3.2,
+    -21.4,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -3.9,
+    -9.8,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -6.2,
+    -2.4,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 829,
+  "cdo_names": {
+   "BodyMaterialName": "Body"
+  }
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
+  "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    38
+   ],
+   "size": [
+    372,
+    165,
+    46
+   ]
+  },
+  {
+   "center": [
+    -15,
+    0,
+    80
+   ],
+   "size": [
+    140,
+    125,
+    38
+   ]
+  }
+ ],
+ "car": "MW_RX7FC",
+ "display_name": "Mazda RX-7 Savanna FC (Most Wanted)",
+ "prefix": "RX7FC",
+ "geometry_dir": "C:\\Users\\noust/nfs-work/db/mwr/RX7FC/geo",
+ "texture_dir": "C:\\Users\\noust/nfs-work/db/mwr/RX7FC/tex/textures",
+ "out_dir": "C:\\Users\\noust/mt-work/build/MW_RX7FC/meshes",
+ "cost": 42000,
+ "wheel_display_name": "RX-7 FC 15in",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "0x943D5ECE": "Paint",
+  "0x428A2D74": "Tex_RX7FC_MISC",
+  "0x64C0CA74": "Tex_RX7FC_BADGING",
+  "0x7353CEE1": "Tex_RX7FC_BRAKELIGHT",
+  "0x808F3574": "Tex_RX7FC_INTERIOR",
+  "0x0DCB6701": "Bottom",
+  "0xE1326F01": "Bottom",
+  "0x32283A11": "Bottom",
+  "0xE2A5C626": "Glass",
+  "0x7811C146": "Bottom",
+  "0xF96AA794": "Bottom",
+  "0x841740E6": "Tex_RX7FC_BRAKELIGHT",
+  "0x01F40B32": "Tex_RX7FC_BRAKELIGHT",
+  "0x87E1ACA8": "Tex_RX7FC_BRAKELIGHT",
+  "0xDDCDAA3F": "Tex_RX7FC_BRAKELIGHT",
+  "0x02B52399": "Tex_RX7FC_BRAKELIGHT",
+  "0x428E03FC": "Tex_RX7FC_TIRE",
+  "0xB470E050": "Tex_RX7FC_RIM"
+ },
+ "texture_sources": {
+  "Tex_RX7FC_MISC": "0x428A2D74",
+  "Tex_RX7FC_BADGING": "0x64C0CA74",
+  "Tex_RX7FC_BRAKELIGHT": "0x841740E6",
+  "Tex_RX7FC_INTERIOR": "0x808F3574",
+  "Tex_RX7FC_TIRE": "0x428E03FC",
+  "Tex_RX7FC_RIM": "0xB470E050",
+  "Tex_RX7FC_HEADLAMP": "0x841740E6"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BASE",
+     "groups": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "x_clip": true
+    },
+    {
+     "part": "BASE",
+     "groups": [
+      4
+     ],
+     "slot": "Paint"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_LEFT_SIDE_MIRROR",
+    "KIT00_RIGHT_SIDE_MIRROR",
+    {
+     "part": "BASE",
+     "groups": [
+      5
+     ],
+     "slot": "Paint",
+     "normal_filter": {
+      "axis": 0,
+      "min": -0.75
+     }
+    }
+   ],
+   "drop_boxes": [
+    [
+     -12,
+     -12,
+     88,
+     3,
+     12,
+     97.5
+    ]
+   ],
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_RX7FC_INTERIOR",
+     "uv": [
+      0.56,
+      0.79,
+      0.63,
+      0.85
+     ],
+     "box": [
+      28,
+      20,
+      52,
+      38,
+      50,
+      68
+     ],
+     "note": "needles (white triangle art)"
+    },
+    {
+     "slot": "Tex_RX7FC_INTERIOR",
+     "uv": [
+      0.66,
+      0.83,
+      0.72,
+      0.89
+     ],
+     "box": [
+      28,
+      20,
+      52,
+      38,
+      50,
+      68
+     ],
+     "note": "tach hub"
+    }
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_RX7FC_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.12,
+      0.12,
+      1.0,
+      1.0
+     ],
+     "box3d": [
+      28,
+      20,
+      52,
+      38,
+      50,
+      68
+     ]
+    }
+   ],
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   },
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "LeftSideMirror": {
+   "parts": [
+    {
+     "part": "BASE",
+     "groups": [
+      5
+     ],
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     },
+     "box": [
+      10,
+      -110,
+      55,
+      35,
+      -60,
+      85
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "drop_slots": [
+    "Drop"
+   ],
+   "counter_rotate": {
+    "rot": [
+     -3.9,
+     -9.8,
+     0
+    ]
+   }
+  },
+  "Popup": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD",
+     "box": [
+      165,
+      -70,
+      36,
+      206,
+      -36,
+      58
+     ]
+    },
+    {
+     "xform": {
+      "rot_y": {
+       "deg": 20.0,
+       "pivot": [
+        175.0,
+        49.0
+       ]
+      }
+     },
+     "part": "STYLE02_HOOD",
+     "groups": [
+      0,
+      3,
+      4,
+      6,
+      7
+     ],
+     "box": [
+      168,
+      -72,
+      10,
+      212,
+      -36,
+      60
+     ]
+    },
+    {
+     "xform": {
+      "rot_y": {
+       "deg": 20.0,
+       "pivot": [
+        175.0,
+        49.0
+       ]
+      }
+     },
+     "part": "STYLE02_HOOD",
+     "groups": [
+      2,
+      5
+     ],
+     "box": [
+      168,
+      -72,
+      10,
+      212,
+      -36,
+      60
+     ],
+     "slot": "HeadPod"
+    },
+    {
+     "part": "KIT00_HOOD",
+     "box": [
+      165,
+      36,
+      36,
+      206,
+      70,
+      58
+     ]
+    },
+    {
+     "xform": {
+      "rot_y": {
+       "deg": 20.0,
+       "pivot": [
+        175.0,
+        49.0
+       ]
+      }
+     },
+     "part": "STYLE02_HOOD",
+     "groups": [
+      0,
+      3,
+      4,
+      6,
+      7
+     ],
+     "box": [
+      168,
+      36,
+      10,
+      212,
+      72,
+      60
+     ]
+    },
+    {
+     "xform": {
+      "rot_y": {
+       "deg": 20.0,
+       "pivot": [
+        175.0,
+        49.0
+       ]
+      }
+     },
+     "part": "STYLE02_HOOD",
+     "groups": [
+      2,
+      5
+     ],
+     "box": [
+      168,
+      36,
+      10,
+      212,
+      72,
+      60
+     ],
+     "slot": "HeadPod"
+    }
+   ],
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "RX7FC",
+      "tol": 1.0
+     },
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Bottom",
+    "Drop"
+   ],
+   "lift": {
+    "prefix": "RX7FC",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "RX7FC",
+      "tol": 1.0
+     },
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Bottom",
+    "Drop"
+   ],
+   "lift": {
+    "prefix": "RX7FC",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "RX7FC",
+      "tol": 1.0
+     },
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Bottom",
+    "Drop"
+   ],
+   "lift": {
+    "prefix": "RX7FC",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "RX7FC",
+      "tol": 1.0
+     },
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Bottom",
+    "Drop"
+   ],
+   "lift": {
+    "prefix": "RX7FC",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      160.0,
+      99999
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -160.0
+     ],
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -160.0,
+      160.0
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "RX7FC",
+      "tol": 1.0,
+      "keep_boxes": [
+       [
+        -161,
+        -112,
+        22,
+        -100,
+        -52,
+        78
+       ],
+       [
+        -161,
+        52,
+        22,
+        -100,
+        112,
+        78
+       ],
+       [
+        85,
+        -112,
+        22,
+        161,
+        -52,
+        78
+       ],
+       [
+        85,
+        52,
+        22,
+        161,
+        112,
+        78
+       ]
+      ]
+     },
+     "x_clip": true
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Bottom",
+    "Drop"
+   ],
+   "lift": {
+    "prefix": "RX7FC",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ],
+   "drop_boxes": [
+    [
+     165,
+     -72,
+     10,
+     212,
+     -36,
+     70
+    ],
+    [
+     165,
+     36,
+     10,
+     212,
+     72,
+     70
+    ]
+   ],
+   "boxes_union": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      200,
+      0,
+      -72
+     ]
+    }
+   ],
+   "aero": true,
+   "drop_slots": [
+    "Drop"
+   ]
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "BASE",
+     "groups": [
+      5
+     ],
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     },
+     "box": [
+      10,
+      -110,
+      55,
+      35,
+      -60,
+      85
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "drop_slots": [
+    "Drop"
+   ],
+   "counter_rotate": {
+    "rot": [
+     -6.2,
+     -2.4,
+     0
+    ],
+    "mirror_frame": true
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_RX7FC_R",
+  "Wheel_R": "MW_RX7FC_L",
+  "SteeringWheel": "MW_RX7FC"
+ },
+ "wheels": {
+  "front_x": 122.4,
+  "rear_x": -121.8,
+  "half_track": 72.5,
+  "rear_half_track": 72.0,
+  "z": 13.5,
+  "rear_z": 17.0,
+  "radius": 31.1,
+  "auto_arches": true,
+  "note": "MW track 1450/1440; 205/60R15 (r 31.4)"
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_RX7FC_ENG",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_RX7FC_ENG",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "13B-T Rotary Turbo (RX-7 FC)",
+    "mass": 220,
+    "cost": 30000,
+    "max_torque_nm": 298.3,
+    "max_rpm": 7000.0,
+    "curve": [
+     [
+      0.1143,
+      0.5
+     ],
+     [
+      0.2517,
+      0.825
+     ],
+     [
+      0.3893,
+      0.95
+     ],
+     [
+      0.5269,
+      1.0
+     ],
+     [
+      0.6643,
+      0.95
+     ],
+     [
+      0.8017,
+      0.875
+     ],
+     [
+      0.9393,
+      0.75
+     ],
+     [
+      1.0769,
+      0.65
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "MW Remaster rx7fc TORQUE x HIGH_BOOST 1.1 (turbo at full boost), lb-ft -> Nm",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_RX7FC",
+     "note": "MW Remaster SOUND/ENGINE/GIN_Mazda_RX7.gin (engineaudio maz_rx7, used by rx7fc), 6 loops",
+     "loops": [
+      [
+       "l1",
+       1563
+      ],
+      [
+       "l2",
+       2058
+      ],
+      [
+       "l3",
+       2838
+      ],
+      [
+       "l4",
+       3761
+      ],
+      [
+       "l5",
+       5048
+      ],
+      [
+       "l6",
+       6779
+      ]
+     ]
+    }
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_RX7FC_5MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "MW_RX7FC_5MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "5-Speed Manual (RX-7 FC)",
+    "cost": 8000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.282,
+     "1": 3.462,
+     "2": 1.995,
+     "3": 1.367,
+     "4": 0.998,
+     "5": 0.718
+    },
+    "note": "MW Remaster rx7fc ratios; final 4.10 (game row 112 = 4.11)"
+   }
+  ]
+ },
+ "part_overrides": {
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Engine": "MW_RX7FC_ENG",
+  "Transmission": "MW_RX7FC_5MT",
+  "FinalDriveRatio": "112",
+  "Wheel0": "MW_RX7FC",
+  "Wheel1": "MW_RX7FC",
+  "Wheel2": "MW_RX7FC",
+  "Wheel3": "MW_RX7FC",
+  "Headlight": "MW_RX7FC_Popup",
+  "FrontBumper": "MW_RX7FC_FrontBumper_KIT00",
+  "RearBumper": "MW_RX7FC_RearBumper_KIT00",
+  "Bonnet": "MW_RX7FC_Bonnet_KIT00",
+  "RearWing": "MW_RX7FC_RearWing_STOCK"
+ },
+ "performance_source": "MW Remaster rx7fc: 200 lb-ft (+10% boost), red line 7000, 5MT 3.47/2.00/1.37/1.00/0.72 R3.29 FD4.10, 1285 kg",
+ "drivetrain": "rwd",
+ "slot_boxes": [
+  {
+   "from": "Tex_RX7FC_BRAKELIGHT",
+   "to": "Tex_RX7FC_HEADLAMP",
+   "box": [
+    100,
+    -120,
+    -10,
+    260,
+    120,
+    120
+   ],
+   "note": "front lamps (bumper, corners, fogs)"
+  },
+  {
+   "meshes": [
+    "Aero_SideSkirt_KIT01",
+    "Aero_SideSkirt_KIT02",
+    "Aero_SideSkirt_KIT03",
+    "Aero_SideSkirt_KIT04",
+    "Aero_SideSkirt_KIT05"
+   ],
+   "from": "Tex_RX7FC_MISC",
+   "to": "Tex_RX7FC_MISC",
+   "drop": true,
+   "abs_y": true,
+   "kit_wells": true,
+   "box": [
+    82,
+    50,
+    -5,
+    162,
+    102,
+    60
+   ]
+  },
+  {
+   "meshes": [
+    "Aero_SideSkirt_KIT01",
+    "Aero_SideSkirt_KIT02",
+    "Aero_SideSkirt_KIT03",
+    "Aero_SideSkirt_KIT04",
+    "Aero_SideSkirt_KIT05"
+   ],
+   "from": "Tex_RX7FC_MISC",
+   "to": "Tex_RX7FC_MISC",
+   "drop": true,
+   "abs_y": true,
+   "kit_wells": true,
+   "box": [
+    -162,
+    50,
+    -5,
+    -82,
+    102,
+    62
+   ]
+  }
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_RX7FC_BRAKELIGHT",
+   "box": [
+    100,
+    -120,
+    -10,
+    260,
+    120,
+    120
+   ],
+   "uv_box": [
+    0.0,
+    0.14,
+    0.34,
+    0.26
+   ],
+   "uv_centroid": true,
+   "note": "amber front corner lamps (atlas amber bar)"
+  },
+  {
+   "tag": "_P",
+   "from": "Tex_RX7FC_BRAKELIGHT",
+   "box": [
+    100,
+    -120,
+    -10,
+    260,
+    120,
+    120
+   ],
+   "uv_box": [
+    0.46,
+    0.34,
+    0.98,
+    0.48
+   ],
+   "uv_centroid": true,
+   "note": "clear bumper turn/park lamps (FC S5 front turn signals)"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_RX7FC_BRAKELIGHT",
+   "box": [
+    -260,
+    -120,
+    30,
+    -150,
+    120,
+    70
+   ],
+   "uv_box": [
+    0.0,
+    0.66,
+    0.3,
+    0.93
+   ],
+   "uv_centroid": true,
+   "note": "rear turn: outer round lens (stays amber-tinted in every MW lamp state)"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_RX7FC_BRAKELIGHT",
+   "box": [
+    -260,
+    -120,
+    30,
+    -150,
+    120,
+    70
+   ],
+   "uv_box": [
+    0.66,
+    0.66,
+    0.8,
+    0.93
+   ],
+   "uv_centroid": true,
+   "note": "reverse: the white box beside the plate"
+  }
+ ],
+ "lamp_slots": {
+  "Tex_RX7FC_HEADLAMP": "head",
+  "Tex_RX7FC_BRAKELIGHT": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_HEADLAMP"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_HEADLAMP"
+  },
+  "Signal_L_P": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_HEADLAMP"
+  },
+  "Signal_R_P": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_HEADLAMP"
+  },
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_RX7FC_BRAKELIGHT"
+  },
+  "Signal_L_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_RX7FC_BRAKELIGHT"
+  },
+  "Signal_R_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_RX7FC_BRAKELIGHT"
+  },
+  "HeadPod": {
+   "kind": "head",
+   "texture_slot": "Tex_RX7FC_HEADLAMP"
+  }
+ },
+ "no_red_lens": true,
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    7.0,
+    35.4,
+    57.8
+   ],
+   "radius": 20.0,
+   "x_range": [
+    -3,
+    17
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "uv_slots": [
+    "Tex_RX7FC_INTERIOR"
+   ],
+   "pivot": [
+    7.8779,
+    35.4493,
+    57.812
+   ],
+   "tilt_deg": 20.76
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     34.75,
+     45.31,
+     60.35
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.5
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     35.12,
+     35.62,
+     61.52
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.5
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     35.48,
+     28.52,
+     62.68
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.5
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     33.99,
+     28.82,
+     57.87
+    ],
+    "rot": [
+     0,
+     -90,
+     -72.5
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel"
+ },
+ "gauge_faces": {
+  "Tex_RX7FC_INTERIOR": [
+   {
+    "center": [
+     0.785,
+     0.355
+    ],
+    "face": [
+     0.785,
+     0.355,
+     0.2
+    ],
+    "radius": 0.19,
+    "min": 0,
+    "max": 120,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 120
+  }
+ },
+ "mw_kits": {
+  "front_split": 160.0,
+  "rear_split": -160.0
+ },
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     7.88,
+     35.45,
+     57.81
+    ],
+    "rot": [
+     -20.76,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -210,
+     60,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -210,
+     -60,
+     12
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -200,
+     0,
+     72
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -45,
+     0,
+     107
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -214,
+     0,
+     22
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     24.225,
+     9.86,
+     11.899
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -93.26
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     24.156,
+     0.17,
+     13.124
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -93.26
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     24.082,
+     -6.93,
+     14.337
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -93.26
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     24.393,
+     -6.63,
+     9.311
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -93.26
+    ]
+   }
+  ]
+ },
+ "skins": {
+  "dir": "~/nfs-work/db/mwr/RX7FC/vin/textures",
+  "pick": [
+   "BODY01",
+   "BODY02",
+   "BODY03",
+   "BODY04",
+   "BODY05",
+   "BODY06",
+   "BODY07",
+   "BODY08",
+   "BODY09",
+   "BODY10",
+   "BODY11",
+   "BODY12",
+   "BODYFLAME01",
+   "BODYFLAME02",
+   "BODYFLAME03",
+   "BODYFLAME04",
+   "BODYFLAME05",
+   "BODYFLAME06",
+   "BODYFLAME07",
+   "BODYFLAME08",
+   "BODYFLAME10",
+   "BODYTRIBAL01",
+   "BODYTRIBAL02",
+   "BODYTRIBAL03",
+   "BODYTRIBAL04",
+   "BODYTRIBAL05",
+   "BODYTRIBAL06",
+   "BODYTRIBAL07",
+   "BODYTRIBAL08",
+   "BODYTRIBAL09",
+   "BODYTRIBAL10",
+   "BODYSTRIPE01",
+   "BODYSTRIPE02",
+   "BODYSTRIPE03",
+   "BODYSTRIPE04",
+   "BODYSTRIPE05",
+   "BODYSTRIPE06",
+   "BODYSTRIPE07",
+   "BODYSTRIPE08",
+   "BODYSTRIPE09",
+   "BODYSTRIPE10",
+   "01RAZORCALLAHAN",
+   "02TUROSATO",
+   "03RONNIEMCCREA",
+   "04JOEVEGA",
+   "05WESALLEN",
+   "06HECTORDOMINGO",
+   "07KIRANAZAKATO",
+   "08JADEBARRETT",
+   "09PIERREDUPONT",
+   "10KARLSMIT",
+   "11LOUPARK",
+   "12ISABELDIAZ",
+   "13VICTORVASQUEZ",
+   "14VINCEKILIC",
+   "15TONYHO",
+   "CARBONFIBER",
+   "COPGTO",
+   "BMW_24",
+   "CROSS"
+  ],
+  "labels": {
+   "01RAZORCALLAHAN": "Blacklist 01 Razorcallahan",
+   "02TUROSATO": "Blacklist 02 Turosato",
+   "03RONNIEMCCREA": "Blacklist 03 Ronniemccrea",
+   "04JOEVEGA": "Blacklist 04 Joevega",
+   "05WESALLEN": "Blacklist 05 Wesallen",
+   "06HECTORDOMINGO": "Blacklist 06 Hectordomingo",
+   "07KIRANAZAKATO": "Blacklist 07 Kiranazakato",
+   "08JADEBARRETT": "Blacklist 08 Jadebarrett",
+   "09PIERREDUPONT": "Blacklist 09 Pierredupont",
+   "10KARLSMIT": "Blacklist 10 Karlsmit",
+   "11LOUPARK": "Blacklist 11 Loupark",
+   "12ISABELDIAZ": "Blacklist 12 Isabeldiaz",
+   "13VICTORVASQUEZ": "Blacklist 13 Victorvasquez",
+   "14VINCEKILIC": "Blacklist 14 Vincekilic",
+   "15TONYHO": "Blacklist 15 Tonyho"
+  }
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_RX7FC_INTERIOR",
+   "glow": 2.0,
+   "mask_from_gauges": true,
+   "glow_circles": [
+    [
+     0.786,
+     0.781,
+     0.21
+    ],
+    [
+     0.244,
+     0.649,
+     0.115
+    ],
+    [
+     0.479,
+     0.649,
+     0.115
+    ],
+    [
+     0.244,
+     0.884,
+     0.115
+    ],
+    [
+     0.474,
+     0.884,
+     0.115
+    ]
+   ]
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_RX7FC_BADGING"
+ ],
+ "popup": {
+  "hinge": [
+   175.0,
+   49.0
+  ],
+  "angle": 20.0,
+  "seconds": 0.5,
+  "note": "MW KIT00 (closed) vs STYLE02 (raised) hood lids: 20 deg about (175, 49)"
+ },
+ "aero_parts": [
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_RX7FC_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_RX7FC_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_RX7FC_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_RX7FC_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  },
+  {
+   "row": "MW_RX7FC_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "recentered": {
+  "LeftSideMirror": [
+   23.12,
+   -86.26,
+   69.88
+  ],
+  "RightSideMirror": [
+   23.12,
+   -86.26,
+   69.88
+  ]
+ },
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ }
+}

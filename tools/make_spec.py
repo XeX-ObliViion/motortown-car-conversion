@@ -4,7 +4,8 @@ Fills: car key, prefix, dirs, source_scale, base template (by base vehicle), tex
 the car's own textures by role), Body parts (stock parts, game naming), wheels radius, performance (engine curve in
 N·m, gears, nearest FinalDriveRatio row, body_mass), engine sound hint. Leaves a "TODO" list for the measured steps
 (steering wheel, dials, lamps, mirrors, seats/eye, stance, sockets, kits, dealer bay) - see the skill checklist.
-usage: make_spec.py <game:CAR e.g. mw:CORVETTEC6R> <base: Cora|Fortem|Tuscan|Zino|Vista|Magis> <out cars/<name>.json> [CAR_KEY]"""
+usage: make_spec.py <game:CAR e.g. mw:CORVETTEC6R> <base: Cora|Fortem|Tuscan|Zino|Vista|Magis|...> <out cars/<name>.json> [CAR_KEY] [TEMPLATE]
+TEMPLATE: a finished spec to copy the base patterns from (e.g. mw_viper for the Corvette, mw_350z for the Neo)"""
 import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +14,7 @@ ROOT = os.path.dirname(HERE)
 TEMPLATES = {"Cora": "mw_m3gtr", "Fortem": "mw_993rwb", "Tuscan": "challenger71", "Zino": "350z", "Vista": "skyline",
              "Magis": "supra"}
 # material hashes seen across cars (same meaning in both games unless noted)
-SHARED = {"0x65FF171E": "Paint", "0xBEBC83C2": "Paint", "0xE5F6A5ED": "Bottom", "0x027FF2DC": "Bottom", "0xCC772AFB": "Bottom",
+SHARED = {"0x65FF171E": "Paint", "0xBEBC83C2": "Paint", "0xE5F6A5ED": "Bottom", "0x027FF2DC": "Bottom", "0xCC772AFB": "Paint",
           "0xCC7AEEF9": "Bottom", "0xBF30889B": "Trim", "0xE4CEA024": "Bottom", "0xE4CEA025": "Bottom", "0x4441A26B": "Trim",
           "0x48A68363": "Trim", "0x7B220DDF": "Glass", "0xD195BE56": "Glass", "0x1B049702": "Bottom", "0x41751DC1": "Bottom",
           "0x721AFF7C": "Bottom", "0x4C95C6F8": "Bottom", "0xE38806E3": "Bottom", "0x4E8CF857": "Bottom"}
@@ -26,15 +27,15 @@ def main():
     db = json.load(open(os.path.join(ROOT, "db", "cars.json")))
     r = db[key]
     game, car = r["game"], r["car"]
-    ck = sys.argv[4] if len(sys.argv) > 4 else ("%s_%s" % ("MW" if game == "mw" else "PS", re.sub(r"[^A-Z0-9]", "", car.upper())))
-    t = json.load(open(os.path.join(ROOT, "cars", TEMPLATES[base] + ".json")))
+    ck = sys.argv[4] if len(sys.argv) > 4 else ("%s_%s" % ("MW" if game in ("mw", "mwr") else "PS", re.sub(r"[^A-Z0-9]", "", car.upper())))
+    t = json.load(open(os.path.join(ROOT, "cars", (sys.argv[5] if len(sys.argv) > 5 else TEMPLATES[base]) + ".json")))
     keep = ("base_vehicle", "base_wheel", "default_slot", "keep_body_materials", "final_slot_names", "blueprint",
-            "mirror_components", "mirror_meshes", "strip_part_slots", "wheel_part")
+            "mirror_components", "mirror_meshes", "strip_part_slots", "wheel_part", "collision_boxes", "drivetrain")
     s = {k: json.loads(json.dumps(t[k])) for k in keep if k in t}
-    s.update({"car": ck, "display_name": "%s (%s)" % (car.title(), "Most Wanted" if game == "mw" else "ProStreet"),
-              "prefix": car if game == "mw" else car + "_KIT00", "geometry_dir": r["geometry_dir"], "texture_dir": r["texture_dir"],
+    s.update({"car": ck, "display_name": "%s (%s)" % (car.title(), "Most Wanted" if game in ("mw", "mwr") else "ProStreet"),
+              "prefix": car if game in ("mw", "mwr") else car + "_KIT00", "geometry_dir": r["geometry_dir"], "texture_dir": r["texture_dir"],
               "out_dir": "~/mt-work/build/%s/meshes" % ck, "cost": 100000, "base_vehicle": base,
-              "wheel_display_name": "%s Stock" % car.title(), "source_scale": 100.0 if game == "mw" else 1000.0})
+              "wheel_display_name": "%s Stock" % car.title(), "source_scale": 100.0 if game in ("mw", "mwr") else 1000.0})
     ts = dict(SHARED)
     if r.get("paint_guess"):
         ts[r["paint_guess"]] = "Paint"
@@ -61,7 +62,7 @@ def main():
     tyre = next((p for p in r.get("stock_parts", []) if "FRONT_TIRE" in p or "WHEEL_TIRE_FRONT" in p), None)
     s["meshes"] = {"Body": {"parts": body}}
     if tyre:
-        part = tyre if game == "mw" else tyre.replace("KIT00_", "")
+        part = tyre if game in ("mw", "mwr") else tyre.replace("KIT00_", "")
         s["meshes"]["Wheel_L"] = {"parts": [{"part": part, "offset": [0, 11.0, 0]}], "slot_rename": {"Trim": "Bottom"}}
         s["meshes"]["Wheel_R"] = {"parts": [{"part": part, "mirror": True, "offset": [0, -11.0, 0]}], "slot_rename": {"Trim": "Bottom"}}
     s["mesh_names"] = {"Wheel_L": ck + "_R", "Wheel_R": ck + "_L", "SteeringWheel": ck}

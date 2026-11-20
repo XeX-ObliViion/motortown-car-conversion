@@ -1,43 +1,28 @@
 {
- "base_vehicle": "Tuscan",
+ "base_vehicle": "Raton",
  "base_wheel": "Vista",
  "default_slot": "Bottom",
  "blueprint": {
   "seats": {
    "DriverSeat_GEN_VARIABLE": [
-    10,
+    8,
     -34,
-    -10
+    -1
    ],
    "PassengerSeat1_GEN_VARIABLE": [
-    10,
+    8,
     34,
-    -10
-   ],
-   "PassengerSeat2_GEN_VARIABLE": [
-    10,
-    34,
-    -10
-   ],
-   "PassengerSeat3_GEN_VARIABLE": [
-    10,
-    -34,
-    -10
+    -1
    ]
   },
   "components": {
    "RoomMirror_GEN_VARIABLE": [
-    38,
+    52.5,
     0,
-    88
+    85.7
    ],
    "FrontDomeLightSlot_GEN_VARIABLE": [
     30,
-    0,
-    92
-   ],
-   "CabinDomeLightSlot_GEN_VARIABLE": [
-    0,
     0,
     92
    ],
@@ -70,19 +55,39 @@
     -210,
     65,
     64
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -212,
+    -40,
+    60
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -212,
+    40,
+    60
    ]
   },
   "keep_body_materials": 1,
   "cockpit_camera": [
-   10,
+   8,
    -34,
-   74
+   80
   ],
   "body_mass": 950,
   "component_rotations": {
    "RoomMirror_GEN_VARIABLE": [
-    3.7,
-    13.9,
+    2.0,
+    18.6,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -1.8,
+    12.6,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -0.1,
+    -1.6,
     0
    ]
   }
@@ -90,6 +95,8 @@
  "strip_part_slots": [
   "Bonnet",
   "Fender",
+  "LSD0",
+  "LSD1",
   "SideSkirt"
  ],
  "wheel_part": true,
@@ -175,52 +182,9 @@
     "note": "engine-cover tail: the SV wing mount; universal wings sit here"
    }
   ],
-  "SideMirror_L": [
-   {
-    "name": "SideMirror_L",
-    "loc": [
-     81.39,
-     -98.75,
-     63.79
-    ],
-    "rot": [
-     -3.35,
-     -16.76,
-     0
-    ]
-   }
-  ],
-  "SideMirror_R": [
-   {
-    "name": "SideMirror_R",
-    "loc": [
-     81.39,
-     98.75,
-     63.79
-    ],
-    "rot": [
-     -2.37,
-     26.55,
-     0
-    ]
-   }
-  ],
   "Dashboard": [
    {
     "name": "Niddle_RPM",
-    "loc": [
-     91.37,
-     -35.54,
-     59.56
-    ],
-    "rot": [
-     0,
-     -90,
-     -90
-    ]
-   },
-   {
-    "name": "Niddle_Speed",
     "loc": [
      91.37,
      -26.35,
@@ -233,10 +197,23 @@
     ]
    },
    {
+    "name": "Niddle_Speed",
+    "loc": [
+     91.37,
+     -35.54,
+     59.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -90
+    ]
+   },
+   {
     "name": "Niddle_Fuel",
     "loc": [
      91.37,
-     -42.89,
+     -18.63,
      57.85
     ],
     "rot": [
@@ -249,8 +226,8 @@
     "name": "Niddle_Temp",
     "loc": [
      91.37,
-     -18.63,
-     57.85
+     -30.99,
+     61.36
     ],
     "rot": [
      0,
@@ -333,10 +310,10 @@
   25
  ],
  "needle_scales": {
-  "RPM": 1.003,
-  "Speed": 0.856,
-  "Fuel": 0.918,
-  "Temp": 0.709
+  "RPM": 0.802,
+  "Speed": 0.685,
+  "Fuel": 0.734,
+  "Temp": 0.567
  },
  "ai_upscale": [
   "Tex_DIABLO_LOGO"
@@ -375,20 +352,20 @@
   "Tex_DIABLO_BADGING": "0xD2A4A875"
  },
  "final_slot_names": {
-  "Paint": "Body_01",
-  "Glass": "Window",
+  "Paint": "Body_0",
+  "Glass": "Glass",
   "Tex_DIABLO_RIM": "Wheel_01",
   "Signal_L_V": "ReverseLight",
   "Signal_L_R": "LeftSignalLight",
   "Signal_L_T": "LeftTailLight",
-  "Signal_L_B": "TailLight",
+  "Signal_L_B": "LeftTailLight",
   "Signal_L_H": "HeadLight",
   "Signal_L_G": "HeadLight",
   "Signal_L_F": "LeftSignalLight",
   "Signal_R_V": "ReverseLight",
   "Signal_R_R": "RightSignalLight",
   "Signal_R_T": "RightTailLight",
-  "Signal_R_B": "TailLight",
+  "Signal_R_B": "RightTailLight",
   "Signal_R_H": "HeadLight",
   "Signal_R_G": "HeadLight",
   "Signal_R_F": "RightSignalLight"
@@ -422,6 +399,32 @@
       0.4
      ]
     }
+   ],
+   "drop_boxes": [
+    [
+     81.9,
+     -97,
+     57.9,
+     89.5,
+     -82.5,
+     68.3
+    ],
+    [
+     81.9,
+     82.5,
+     57.9,
+     89.5,
+     97,
+     68.3
+    ],
+    [
+     47,
+     -11.5,
+     81,
+     58,
+     11,
+     92
+    ]
    ]
   },
   "Wheel_L": {
@@ -471,54 +474,6 @@
      "Tex_DIABLO_RIM"
     ],
     "note": "rim lip/barrel: its UVs land on a patterned corner of the rim texture (grid in game) -> plain metal"
-   }
-  },
-  "SideMirror_L": {
-   "parts": [
-    {
-     "part": "KIT00_BODY",
-     "slot": "Mirror",
-     "normal_filter": {
-      "axis": 0,
-      "max": -0.75
-     }
-    }
-   ],
-   "keep_boxes": [
-    [
-     76,
-     -103,
-     54,
-     94,
-     -93,
-     72
-    ]
-   ],
-   "planar_uv": {}
-  },
-  "SideMirror_R": {
-   "parts": [
-    {
-     "part": "KIT00_BODY",
-     "slot": "Mirror",
-     "normal_filter": {
-      "axis": 0,
-      "max": -0.75
-     }
-    }
-   ],
-   "keep_boxes": [
-    [
-     76,
-     93,
-     54,
-     94,
-     103,
-     72
-    ]
-   ],
-   "planar_uv": {
-    "flip_u": true
    }
   },
   "Wheel_RL": {
@@ -970,6 +925,70 @@
    "drop_slots": [
     "DriverFigure"
    ]
+  },
+  "SideMirror_Left": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "keep_boxes": [
+    [
+     76,
+     -103,
+     54,
+     94,
+     -82,
+     72
+    ]
+   ],
+   "planar_uv": {},
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -1.8,
+     12.6,
+     0
+    ]
+   }
+  },
+  "SideMirror_Right": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "keep_boxes": [
+    [
+     76,
+     82,
+     54,
+     94,
+     103,
+     72
+    ]
+   ],
+   "planar_uv": {
+    "flip_u": true
+   },
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -0.1,
+     -1.6,
+     0
+    ]
+   }
   }
  },
  "mesh_names": {
@@ -982,9 +1001,9 @@
  "wheels": {
   "front_x": 130.1,
   "rear_x": -126.6,
-  "half_track": 79,
-  "z": 25.5,
-  "rear_z": 30,
+  "half_track": 73,
+  "z": 20,
+  "rear_z": 22,
   "radius": 33,
   "auto_arches": true,
   "rear_half_track": 80
@@ -995,7 +1014,7 @@
     "row": "MW_DIABLOSV_V12",
     "base_row": "SmallBlock_320HP",
     "asset": "MW_DIABLOSV_V12",
-    "base_asset": "Cars/Parts/Engine/Ferrari_275_V12_400HP",
+    "base_asset": "Cars/Parts/Engine/S58",
     "display_name": "5.7L V12 (Lamborghini Diablo SV)",
     "mass": 260,
     "cost": 60000,
@@ -1047,7 +1066,44 @@
       0.15
      ]
     ],
-    "curve_note": "605 Nm @ 5500, 530 PS @ 7100 (0.878 x 605 = 531 Nm), limiter 7500; the game's Ferrari 275 V12 for the V12 sound"
+    "curve_note": "605 Nm @ 5500, 530 PS @ 7100 (0.878 x 605 = 531 Nm), limiter 7500; the game's Ferrari 275 V12 for the V12 sound",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_DIABLOSV",
+     "pitch_rpm": {
+      "idle": 1020,
+      "mid": 4010,
+      "high": 7010
+     },
+     "note": "loops cut from Most Wanted SOUND/ENGINE/GIN_Diablo.gin with tools/gin_loops.py (user 2026-11-02: recreated engines use the MW sound); 6 layers l1-l6 between the real idle and redline (user 2026-11-05: 3 loops broke up 2000-4500 rpm)",
+     "loops": [
+      [
+       "l1",
+       1364
+      ],
+      [
+       "l2",
+       1861
+      ],
+      [
+       "l3",
+       2600
+      ],
+      [
+       "l4",
+       3615
+      ],
+      [
+       "l5",
+       4978
+      ],
+      [
+       "l6",
+       6872
+      ]
+     ]
+    },
+    "physics_from": "Cars/Parts/Engine/Ferrari_275_V12_400HP"
    }
   ],
   "transmissions": [
@@ -1297,12 +1353,25 @@
    "abs_y": true,
    "note": "mirror glass is in the SideMirror meshes",
    "drop": true
+  },
+  {
+   "meshes": [
+    "Body"
+   ],
+   "from": "Tex_DIABLO_MISC",
+   "to": "OldKnob",
+   "box": [
+    45,
+    -1,
+    42,
+    51,
+    4,
+    49
+   ],
+   "drop": true,
+   "note": "MW floating grey knob; add_shapes puts the real chrome gated shifter there"
   }
  ],
- "mirror_sockets": {
-  "SideMirror_L": "SideMirror_L",
-  "SideMirror_R": "SideMirror_R"
- },
  "extract": {
   "SteeringWheel": {
    "from": "Body",
@@ -1323,7 +1392,9 @@
     -32.2652,
     58.661150000000006
    ],
-   "tilt_deg": 18.6
+   "tilt_deg": 18.6,
+   "discard": true,
+   "note": "MW wheel was a blocky Bottom-only ring; add_shapes builds the real car round leather wheel in its place"
   }
  },
  "gauge_faces": {
@@ -1335,29 +1406,6 @@
     ],
     "face": [
      0.18,
-     0.345,
-     0.026
-    ],
-    "radius": 0.023,
-    "aspect": 1.0,
-    "rotate": 0,
-    "min": 0,
-    "max": 9,
-    "text_step": 1,
-    "line_step": 0.5,
-    "start": 140,
-    "end": 400,
-    "red_from": 7.5,
-    "font": 0.26,
-    "captions": []
-   },
-   {
-    "center": [
-     0.28,
-     0.345
-    ],
-    "face": [
-     0.28,
      0.345,
      0.026
     ],
@@ -1382,11 +1430,60 @@
    },
    {
     "center": [
-     0.1,
+     0.28,
+     0.345
+    ],
+    "face": [
+     0.28,
+     0.345,
+     0.026
+    ],
+    "radius": 0.023,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 0,
+    "max": 9,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 7.5,
+    "font": 0.26,
+    "captions": []
+   },
+   {
+    "center": [
+     0.2295,
+     0.3313
+    ],
+    "face": [
+     0.2295,
+     0.3313,
+     0.017
+    ],
+    "radius": 0.014,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.36,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   },
+   {
+    "center": [
+     0.364,
      0.358
     ],
     "face": [
-     0.1,
+     0.364,
      0.358,
      0.016
     ],
@@ -1407,29 +1504,91 @@
    },
    {
     "center": [
-     0.364,
+     0.1,
      0.358
     ],
     "face": [
-     0.364,
+     0.1,
      0.358,
      0.016
     ],
     "radius": 0.013,
     "aspect": 1.0,
     "rotate": 0,
-    "min": 40,
-    "max": 120,
-    "text_step": 80,
-    "line_step": 20,
+    "min": 0,
+    "max": 100,
+    "text_step": 100,
+    "line_step": 25,
     "start": 210,
     "end": 330,
     "font": 0.36,
-    "labels": {
-     "40": "C",
-     "120": "H"
-    },
-    "red_from": 110
+    "captions": [
+     [
+      "OIL PSI",
+      0.35,
+      90
+     ]
+    ],
+    "caption_font": 0.3
+   },
+   {
+    "center": [
+     0.132,
+     0.337
+    ],
+    "face": [
+     0.132,
+     0.337,
+     0.016
+    ],
+    "radius": 0.013,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 100,
+    "max": 300,
+    "text_step": 200,
+    "line_step": 50,
+    "start": 210,
+    "end": 330,
+    "font": 0.36,
+    "captions": [
+     [
+      "OIL F",
+      0.35,
+      90
+     ]
+    ],
+    "caption_font": 0.3,
+    "red_from": 270
+   },
+   {
+    "center": [
+     0.3284,
+     0.336
+    ],
+    "face": [
+     0.3284,
+     0.336,
+     0.016
+    ],
+    "radius": 0.013,
+    "aspect": 1.0,
+    "rotate": 0,
+    "min": 8,
+    "max": 16,
+    "text_step": 8,
+    "line_step": 2,
+    "start": 210,
+    "end": 330,
+    "font": 0.36,
+    "captions": [
+     [
+      "VOLT",
+      0.35,
+      90
+     ]
+    ],
+    "caption_font": 0.3
    }
   ]
  },
@@ -1448,7 +1607,7 @@
     "name": "Niddle_RPM",
     "loc": [
      91.37,
-     -35.54,
+     -26.35,
      59.56
     ],
     "rot": [
@@ -1461,7 +1620,7 @@
     "name": "Niddle_Speed",
     "loc": [
      91.37,
-     -26.35,
+     -35.54,
      59.56
     ],
     "rot": [
@@ -1474,7 +1633,7 @@
     "name": "Niddle_Fuel",
     "loc": [
      91.37,
-     -42.89,
+     -18.63,
      57.85
     ],
     "rot": [
@@ -1487,8 +1646,8 @@
     "name": "Niddle_Temp",
     "loc": [
      91.37,
-     -18.63,
-     57.85
+     -30.99,
+     61.36
     ],
     "rot": [
      0,
@@ -1499,13 +1658,14 @@
   ],
   "mfd": {
    "anchor": [
-    "Niddle_RPM"
+    "Niddle_Speed"
    ],
    "up": -3.2,
    "width": 3.0,
    "height": 0.8,
    "out": 0.25
-  }
+  },
+  "attach_none": true
  },
  "mw_kits": {
   "front_split": 168.0,
@@ -1646,5 +1806,662 @@
  ],
  "masked_texture_slots": [
   "Tex_DIABLO_SKIN4"
- ]
+ ],
+ "texture_region_gain": {
+  "Tex_DIABLO_LOGO": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.36,
+     0.3
+    ],
+    "gain": 0.22,
+    "note": "cabin leather: real MY99 SV interior is black"
+   }
+  ]
+ },
+ "add_shapes": [
+  {
+   "mesh": "SteeringWheel",
+   "type": "torus",
+   "note": "leather rim (real wheel ~36 cm)",
+   "center": [
+    -1,
+    0,
+    0
+   ],
+   "normal": [
+    1,
+    0,
+    0
+   ],
+   "R": 14.6,
+   "r": [
+    1.7,
+    2.1
+   ],
+   "seg": 48,
+   "tseg": 12,
+   "slot": "Bottom"
+  },
+  {
+   "mesh": "SteeringWheel",
+   "type": "spokes",
+   "note": "4 spokes: 3/9 o'clock + lower pair",
+   "center": [
+    0,
+    0,
+    0
+   ],
+   "angles": [
+    -8,
+    188,
+    -62,
+    -118
+   ],
+   "r0": 4.5,
+   "r1": 13.5,
+   "x0": 1.2,
+   "x1": -0.8,
+   "section": [
+    1.0,
+    2.6
+   ],
+   "slot": "Bottom"
+  },
+  {
+   "mesh": "SteeringWheel",
+   "type": "cylinder",
+   "note": "airbag hub pad (99 SV)",
+   "center": [
+    0.2,
+    0,
+    0
+   ],
+   "axis": [
+    3.6,
+    0,
+    0
+   ],
+   "r": [
+    6.6,
+    6.0
+   ],
+   "seg": 28,
+   "slot": "Bottom"
+  },
+  {
+   "mesh": "SteeringWheel",
+   "type": "ellipsoid",
+   "note": "padded airbag cushion face",
+   "center": [
+    -0.2,
+    0,
+    0
+   ],
+   "r": [
+    1.6,
+    6.4,
+    5.8
+   ],
+   "seg": 20,
+   "slot": "Bottom"
+  },
+  {
+   "mesh": "SteeringWheel",
+   "type": "disc",
+   "note": "Lamborghini shield on the hub",
+   "center": [
+    -1.85,
+    0,
+    0.2
+   ],
+   "normal": [
+    -1,
+    0,
+    0
+   ],
+   "r": [
+    2.1,
+    2.4
+   ],
+   "seg": 20,
+   "slot": "Tex_DIABLO_LOGO",
+   "uv_box": [
+    0.171,
+    0.806,
+    0.288,
+    0.938
+   ],
+   "flip_u": true
+  },
+  {
+   "mesh": "Body",
+   "type": "box",
+   "note": "chrome open shift gate",
+   "center": [
+    48,
+    0,
+    44
+   ],
+   "snap": [
+    2,
+    -1,
+    -0.25
+   ],
+   "size": [
+    10,
+    6.5,
+    0.5
+   ],
+   "slot": "Tex_DIABLO_LOGO",
+   "uv": [
+    0.475,
+    0.115
+   ],
+   "top_uv_box": [
+    0.195,
+    0.555,
+    0.265,
+    0.625
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "tube",
+   "note": "chrome shift stalk",
+   "center": [
+    48,
+    0,
+    44
+   ],
+   "snap": [
+    2,
+    -1,
+    0
+   ],
+   "points": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     9
+    ],
+    [
+     -2.5,
+     0,
+     17
+    ]
+   ],
+   "r": 0.55,
+   "seg": 10,
+   "slot": "Trim"
+  },
+  {
+   "mesh": "Body",
+   "type": "ellipsoid",
+   "note": "polished aluminium shift ball",
+   "center": [
+    48,
+    0,
+    44
+   ],
+   "snap": [
+    2,
+    -1,
+    0
+   ],
+   "offset": [
+    -2.8,
+    0,
+    18.8
+   ],
+   "r": [
+    1.9,
+    1.9,
+    2.0
+   ],
+   "slot": "Trim"
+  },
+  {
+   "mesh": "Body",
+   "type": "torus",
+   "note": "round dash vent bezel",
+   "center": [
+    70,
+    -64,
+    56
+   ],
+   "snap": [
+    0,
+    1,
+    -0.45
+   ],
+   "normal": [
+    -1,
+    0,
+    0
+   ],
+   "R": 3.6,
+   "r": 0.45,
+   "seg": 28,
+   "tseg": 8,
+   "slot": "Trim",
+   "align": true
+  },
+  {
+   "mesh": "Body",
+   "type": "disc",
+   "note": "round dash vent",
+   "center": [
+    70,
+    -64,
+    56
+   ],
+   "snap": [
+    0,
+    1,
+    -0.3
+   ],
+   "normal": [
+    -1,
+    0,
+    0
+   ],
+   "r": 3.4,
+   "slot": "Tex_DIABLO_LOGO",
+   "align": true,
+   "uv_box": [
+    0.37,
+    0.02,
+    0.44,
+    0.09
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "torus",
+   "note": "round dash vent bezel",
+   "center": [
+    70,
+    64,
+    56
+   ],
+   "snap": [
+    0,
+    1,
+    -0.45
+   ],
+   "normal": [
+    -1,
+    0,
+    0
+   ],
+   "R": 3.6,
+   "r": 0.45,
+   "seg": 28,
+   "tseg": 8,
+   "slot": "Trim",
+   "align": true
+  },
+  {
+   "mesh": "Body",
+   "type": "disc",
+   "note": "round dash vent",
+   "center": [
+    70,
+    64,
+    56
+   ],
+   "snap": [
+    0,
+    1,
+    -0.3
+   ],
+   "normal": [
+    -1,
+    0,
+    0
+   ],
+   "r": 3.4,
+   "slot": "Tex_DIABLO_LOGO",
+   "align": true,
+   "uv_box": [
+    0.37,
+    0.02,
+    0.44,
+    0.09
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "disc",
+   "note": "dash-top speaker grille",
+   "center": [
+    100,
+    24,
+    95
+   ],
+   "snap": [
+    2,
+    -1,
+    -0.25
+   ],
+   "normal": [
+    0,
+    0,
+    1
+   ],
+   "r": 3.2,
+   "slot": "Tex_DIABLO_LOGO",
+   "align": true,
+   "uv_box": [
+    0.37,
+    0.1,
+    0.41,
+    0.14
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "torus",
+   "note": "speaker ring",
+   "center": [
+    100,
+    24,
+    95
+   ],
+   "snap": [
+    2,
+    -1,
+    -0.3
+   ],
+   "normal": [
+    0,
+    0,
+    1
+   ],
+   "R": 3.3,
+   "r": 0.3,
+   "seg": 24,
+   "tseg": 6,
+   "slot": "Trim",
+   "align": true
+  },
+  {
+   "mesh": "Body",
+   "type": "disc",
+   "note": "dash-top speaker grille",
+   "center": [
+    100,
+    33,
+    95
+   ],
+   "snap": [
+    2,
+    -1,
+    -0.25
+   ],
+   "normal": [
+    0,
+    0,
+    1
+   ],
+   "r": 3.2,
+   "slot": "Tex_DIABLO_LOGO",
+   "align": true,
+   "uv_box": [
+    0.37,
+    0.1,
+    0.41,
+    0.14
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "torus",
+   "note": "speaker ring",
+   "center": [
+    100,
+    33,
+    95
+   ],
+   "snap": [
+    2,
+    -1,
+    -0.3
+   ],
+   "normal": [
+    0,
+    0,
+    1
+   ],
+   "R": 3.3,
+   "r": 0.3,
+   "seg": 24,
+   "tseg": 6,
+   "slot": "Trim",
+   "align": true
+  },
+  {
+   "mesh": "Body",
+   "type": "piping",
+   "note": "red seat piping",
+   "box": [
+    -15,
+    -58,
+    8,
+    46,
+    -15,
+    84
+   ],
+   "angle": 38,
+   "min_len": 3,
+   "r": 0.32,
+   "slot": "Tex_DIABLO_LOGO",
+   "uv": [
+    0.435,
+    0.115
+   ]
+  },
+  {
+   "mesh": "Body",
+   "type": "piping",
+   "note": "red seat piping",
+   "box": [
+    -15,
+    15,
+    8,
+    46,
+    58,
+    84
+   ],
+   "angle": 38,
+   "min_len": 3,
+   "r": 0.32,
+   "slot": "Tex_DIABLO_LOGO",
+   "uv": [
+    0.435,
+    0.115
+   ]
+  }
+ ],
+ "texture_paint": {
+  "Tex_DIABLO_LOGO": [
+   {
+    "op": "alcantara",
+    "note": "carbon fascia -> the real car's satin black (gauge faces are drawn on top)",
+    "box": [
+     0.02,
+     0.3,
+     0.69,
+     0.495
+    ],
+    "color": [
+     22,
+     22,
+     24
+    ],
+    "grain": 4,
+    "mottle": 2.5
+   },
+   {
+    "op": "alcantara",
+    "note": "carbon rear bulkhead -> black",
+    "box": [
+     0.46,
+     0.53,
+     0.79,
+     0.82
+    ],
+    "color": [
+     20,
+     20,
+     22
+    ],
+    "grain": 4,
+    "mottle": 2.5
+   },
+   {
+    "op": "buttons",
+    "note": "MW aftermarket radios -> the centre stack's climate keys",
+    "box": [
+     0.005,
+     0.502,
+     0.149,
+     0.613
+    ],
+    "color": [
+     16,
+     16,
+     18
+    ],
+    "rows": 3,
+    "cols": 5
+   },
+   {
+    "op": "gate",
+    "box": [
+     0.195,
+     0.555,
+     0.265,
+     0.625
+    ]
+   },
+   {
+    "op": "swatch",
+    "note": "red piping",
+    "box": [
+     0.42,
+     0.1,
+     0.45,
+     0.13
+    ],
+    "color": [
+     185,
+     25,
+     20
+    ]
+   },
+   {
+    "op": "swatch",
+    "note": "dark grey grilles/slats",
+    "box": [
+     0.46,
+     0.1,
+     0.49,
+     0.13
+    ],
+    "color": [
+     52,
+     52,
+     55
+    ]
+   },
+   {
+    "op": "vent",
+    "box": [
+     0.37,
+     0.02,
+     0.44,
+     0.09
+    ]
+   },
+   {
+    "op": "grille",
+    "box": [
+     0.37,
+     0.1,
+     0.41,
+     0.14
+    ]
+   }
+  ]
+ },
+ "cabin_remap": [
+  {
+   "note": "plain Bottom cabin panels (seats, console sides, floor) -> the alcantara region",
+   "from": "Bottom",
+   "to": "Tex_DIABLO_LOGO",
+   "box": [
+    -60,
+    -70,
+    15,
+    110,
+    70,
+    100
+   ],
+   "uv_box": [
+    0.47,
+    0.54,
+    0.78,
+    0.81
+   ],
+   "size_cm": 180
+  }
+ ],
+ "tessellate": [
+  {
+   "note": "round off the low-poly MW cabin (dash, binnacle, console, seats)",
+   "slots": [
+    "Tex_DIABLO_LOGO"
+   ],
+   "box": [
+    -60,
+    -70,
+    15,
+    110,
+    70,
+    100
+   ],
+   "level": 3,
+   "alpha": 0.6,
+   "angle": 45
+  }
+ ],
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror_Left",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror_Right"
+ },
+ "recentered": {
+  "SideMirror_Left": [
+   85.19,
+   -91.47,
+   63.41
+  ],
+  "SideMirror_Right": [
+   85.19,
+   91.47,
+   63.41
+  ]
+ },
+ "base_row": "Sports_01",
+ "needle_width": 0.35,
+ "drivetrain": "rwd",
+ "stance_note": "2026-11-06 front half_track 79 -> 73 (fronts stuck out past the fenders), drivetrain rwd (real SV is RWD; Raton base is AWD)"
 }

@@ -1,0 +1,1976 @@
+{
+ "base_vehicle": "Neo",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "Tex_CLIO_HEADLIGHT": "HeadLight",
+  "Tex_CLIO_BRAKELIGHT": "TailLight",
+  "Tex_CLIO_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "ReverseLamp": "ReverseLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -35,
+    31.6,
+    37
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -35,
+    -31.6,
+    37
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -35,
+    -31.6,
+    37
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -35,
+    31.6,
+    37
+   ]
+  },
+  "cockpit_camera": [
+   -35,
+   31.6,
+   100
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    24,
+    0,
+    103
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -40,
+    0,
+    110
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    8,
+    0,
+    111
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    200,
+    -62,
+    66
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    200,
+    62,
+    66
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    208,
+    58,
+    48
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    208,
+    -58,
+    48
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -210,
+    -58,
+    66
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -210,
+    58,
+    66
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -172,
+    -62,
+    55
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -172,
+    62,
+    55
+   ]
+  },
+  "hide_meshes": [],
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    3.0,
+    -14.0,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 944
+ },
+ "strip_part_slots": [
+  "Fender",
+  "Headlight",
+  "SideSkirt",
+  "Trunk"
+ ],
+ "wheel_part": true,
+ "car": "MW_CLIO",
+ "display_name": "Renault Clio V6 (Most Wanted)",
+ "prefix": "CLIO",
+ "geometry_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\CLIO\\geo",
+ "texture_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\CLIO\\tex\\textures",
+ "out_dir": "C:\\Users\\noust/mt-work/build/MW_CLIO/meshes",
+ "cost": 48000,
+ "wheel_display_name": "Clio V6 Stock",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "BODY_RIGHT": "Paint",
+  "0x2FC3C2B1": "Tex_CLIO_INTERIOR",
+  "0x4E97A431": "Tex_CLIO_MISC",
+  "0x52CA2411": "Tex_CLIO_BADGING",
+  "0x7B5B01AB": "Tex_CLIO_HEADLIGHT",
+  "0x805DD4BC": "Tex_CLIO_BRAKELIGHT",
+  "BADGING": "Tex_CLIO_BADGING",
+  "BODY_ALUMINUM": "Tex_CLIO_MISC",
+  "BODY_CHROME": "Tex_CLIO_MISC",
+  "BODY_DULL_PLASTIC": "Tex_CLIO_MISC",
+  "BODY_MOLDING": "Tex_CLIO_MISC",
+  "BODY_PLAINNOTHING": "Bottom",
+  "BODY_RUBBER_ACCORDIAN": "Bottom",
+  "BOTTOM": "Bottom",
+  "BRAKE_KIT00_CALIPER": "Tex_CLIO_MISC",
+  "BRAKE_KIT00_HUB": "Bottom",
+  "BRAKE_KIT00_ROTOR": "Bottom",
+  "CARBONFIBRE_BODY": "Bottom",
+  "CENTRE_BRAKELIGHT": "Tex_CLIO_BRAKELIGHT",
+  "DOORLINE": "Paint",
+  "DRIVER_PLAYER": "Bottom",
+  "GRILL_01": "Tex_MWG_GRILL01",
+  "GRILL_02": "Tex_MWG_GRILL02",
+  "INTERCOOLER": "Tex_MWG_INTERCOOLER",
+  "INTERIOR": "Tex_CLIO_INTERIOR",
+  "LEFT_BRAKELIGHT_KIT00_ALUMINUM": "Tex_CLIO_BRAKELIGHT",
+  "LEFT_BRAKELIGHT_KIT00_BULB": "Tex_CLIO_BRAKELIGHT",
+  "LEFT_BRAKELIGHT_KIT00_CHROME": "Tex_CLIO_BRAKELIGHT",
+  "LEFT_HEADLIGHT_KIT00_BULB": "Tex_CLIO_HEADLIGHT",
+  "LEFT_HEADLIGHT_KIT00_CHROME": "Tex_CLIO_HEADLIGHT",
+  "LEFT_HEADLIGHT_KIT00_DULL_PLASTIC": "Tex_CLIO_HEADLIGHT",
+  "LEFT_HEADLIGHT_KIT00_GLASS": "LampGlass",
+  "LICENSE_PLATE": "Bottom",
+  "PLAIN_ALUMINUM": "Trim",
+  "RADIATOR": "Tex_MWG_RADIATOR",
+  "RIGHT_BRAKELIGHT_KIT00_ALUMINUM": "Tex_CLIO_BRAKELIGHT",
+  "RIGHT_BRAKELIGHT_KIT00_BULB": "Tex_CLIO_BRAKELIGHT",
+  "RIGHT_BRAKELIGHT_KIT00_CHROME": "Tex_CLIO_BRAKELIGHT",
+  "RIGHT_BRAKELIGHT_KIT00_GLASS": "LampGlass",
+  "RIGHT_HEADLIGHT_KIT00_BULB": "Tex_CLIO_HEADLIGHT",
+  "RIGHT_HEADLIGHT_KIT00_CHROME": "Tex_CLIO_HEADLIGHT",
+  "RIGHT_HEADLIGHT_KIT00_DULL_PLASTIC": "Tex_CLIO_HEADLIGHT",
+  "RIGHT_HEADLIGHT_KIT00_GLASS": "LampGlass",
+  "RIM_KIT00_SILVER": "Tex_CLIO_TIRE",
+  "TIRE_KIT00_BACK": "Bottom",
+  "TIRE_KIT00_SIDEWALL": "Tex_CLIO_TIRE",
+  "TIRE_KIT00_TREAD": "Bottom",
+  "WINDOW_FRONT": "Glass",
+  "WINDOW_FRONT_MASK": "Bottom",
+  "WINDOW_LEFT_FRONT": "Glass",
+  "WINDOW_LEFT_REAR": "Glass",
+  "WINDOW_LEFT_REAR_MASK": "Bottom",
+  "WINDOW_REAR_DEFROST": "Glass",
+  "WINDOW_REAR_DEFROST_MASK": "Bottom",
+  "WINDOW_RIGHT_FRONT": "Glass",
+  "WINDOW_RIGHT_REAR": "Glass",
+  "WINDOW_RIGHT_REAR_MASK": "Bottom",
+  "WINDOW_TOP": "Glass",
+  "BODY": "Paint",
+  "BODY_LEFT": "Paint",
+  "BODY_MISC": "Paint",
+  "BODY_REAR": "Paint",
+  "BODY_TOP": "Paint",
+  "LEFT_BRAKELIGHT_KIT00_GLASS": "LampGlass",
+  "0x4CDEBFCA": "Glass",
+  "0x0AB88F5D": "Glass",
+  "0x21F9AD2B": "Paint",
+  "0xE7E4EF49": "Glass",
+  "0x3617DCFC": "Tex_CLIO_BRAKELIGHT",
+  "0x60F8B13C": "Glass",
+  "0xBD1F0E0A": "Bottom",
+  "0x7811C146": "Bottom",
+  "0x4E9B7AB9": "Tex_CLIO_TIRE",
+  "0x03C906EF": "Bottom",
+  "0xD947F346": "Tex_CLIO_BRAKELIGHT",
+  "0x000BCBBF": "LampGlass",
+  "0xA7E6EA53": "Tex_CLIO_HEADLIGHT",
+  "0x267D188C": "LampGlass",
+  "0x02B52399": "Tex_CLIO_BRAKELIGHT",
+  "0x01F40B32": "LampGlass",
+  "0xA532FC46": "Tex_CLIO_HEADLIGHT",
+  "0xF68EF19F": "LampGlass",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x8C283C65": "Bottom",
+  "0x68100815": "Tex_MWG_RADIATOR"
+ },
+ "texture_sources": {
+  "Tex_CLIO_INTERIOR": "0x2FC3C2B1",
+  "Tex_CLIO_MISC": "0x4E97A431",
+  "Tex_CLIO_BADGING": "0x52CA2411",
+  "Tex_CLIO_HEADLIGHT": "0x7B5B01AB",
+  "Tex_CLIO_BRAKELIGHT": "0x805DD4BC",
+  "Tex_CLIO_TIRE": "0x4E9B7AB9",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_MWG_RADIATOR": "0x68100815"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BASE",
+     "drop_coincident_with": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_FRONT_LEFT_WINDOW",
+       "KIT00_FRONT_RIGHT_WINDOW",
+       "KIT00_FRONT_WINDOW",
+       "KIT00_REAR_LEFT_WINDOW",
+       "KIT00_REAR_RIGHT_WINDOW",
+       "KIT00_REAR_WINDOW"
+      ],
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -158,
+      145
+     ]
+    },
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW"
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_LEFT_HEADLIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "KIT00_REAR_LEFT_WINDOW"
+    },
+    {
+     "part": "KIT00_REAR_RIGHT_WINDOW"
+    },
+    {
+     "part": "KIT00_REAR_WINDOW"
+    },
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "skip_groups": [
+      1
+     ]
+    },
+    "KIT00_LEFT_BRAKELIGHT",
+    "KIT00_RIGHT_BRAKELIGHT"
+   ],
+   "drop_slots": [
+    "LampGlass"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_CLIO_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.49,
+      0.43,
+      0.82,
+      0.58
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     20,
+     -11.5,
+     97.5,
+     28,
+     11.5,
+     113
+    ]
+   ],
+   "inner_skin": {
+    "boxes": [
+     [
+      -80,
+      45,
+      85,
+      -40,
+      70,
+      115
+     ],
+     [
+      -62,
+      40,
+      72,
+      -33,
+      75,
+      100
+     ]
+    ],
+    "slot": "Tex_CLIO_INTERIOR",
+    "uv": [
+     0.188,
+     0.719
+    ],
+    "inset": 0.0,
+    "note": "B-pillar: the MW model lacks an outer face there (see-through, user 2026-11-06 x2); reversed black copies close it"
+   },
+   "recolor_boxes": [
+    {
+     "from": "Tex_CLIO_INTERIOR",
+     "to": "Paint",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      -90,
+      35,
+      60,
+      -30,
+      80,
+      120
+     ],
+     "only_uv": [
+      0.188,
+      0.719
+     ],
+     "outward_only": true,
+     "note": "pillar fill: outside faces body colour (user 2026-11-06: black patch)"
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -158,
+      145
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CLIO",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CLIO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -158,
+      145
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CLIO",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CLIO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -158,
+      145
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CLIO",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CLIO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -158,
+      145
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CLIO",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CLIO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      145,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -99999,
+      -158
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT05": {
+   "parts": [
+    {
+     "part": "KIT05_BODY",
+     "x_range": [
+      -158,
+      145
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CLIO",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CLIO",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CLIO",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_CLIO_R",
+  "Wheel_R": "MW_CLIO_L",
+  "SteeringWheel": "MW_CLIO"
+ },
+ "wheels": {
+  "front_x": 117.4,
+  "rear_x": -134.2,
+  "half_track": 76,
+  "z": 20,
+  "rear_z": 20,
+  "radius": 31.6,
+  "auto_arches": true
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_CLIO_ENG",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_CLIO_ENG",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "3.0 V6 24v (255 PS)",
+    "mass": 220,
+    "cost": 30000,
+    "max_torque_nm": 300,
+    "max_rpm": 7500,
+    "curve": [
+     [
+      0.1333,
+      0.55
+     ],
+     [
+      0.2667,
+      0.68
+     ],
+     [
+      0.4,
+      0.82
+     ],
+     [
+      0.5333,
+      0.95
+     ],
+     [
+      0.62,
+      1.0
+     ],
+     [
+      0.7333,
+      0.98
+     ],
+     [
+      0.8667,
+      0.92
+     ],
+     [
+      0.9533,
+      0.837
+     ],
+     [
+      1.0,
+      0.78
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "real Clio V6 phase 2: 300 Nm @ 4650, 255 PS @ 7150 (251 Nm), V6 sound; sound: Most Wanted's own Clio V6 engine recording (GIN_TVR_Tuscan)",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_CLIO",
+     "pitch_rpm": {
+      "idle": 1265,
+      "mid": 4000,
+      "high": 6817
+     },
+     "note": "loops cut from Most Wanted SOUND/ENGINE/GIN_TVR_Tuscan.gin with tools/gin_loops.py (user 2026-11-02: recreated engines use the MW sound); 6 layers l1-l6 between the real idle and redline (user 2026-11-05: 3 loops broke up 2000-4500 rpm)",
+     "loops": [
+      [
+       "l1",
+       1402
+      ],
+      [
+       "l2",
+       1918
+      ],
+      [
+       "l3",
+       2668
+      ],
+      [
+       "l4",
+       3690
+      ],
+      [
+       "l5",
+       5078
+      ],
+      [
+       "l6",
+       6971
+      ]
+     ]
+    },
+    "physics_from": "Cars/Parts/Engine/V6Sport_DOHC_200HP"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_CLIO_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "MW_CLIO_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed (Clio V6)",
+    "cost": 8000,
+    "mass": 100,
+    "ratios": {
+     "R": -2.799999952316284,
+     "1": 3.9100000858306885,
+     "2": 2.109999895095825,
+     "3": 1.4800000190734863,
+     "4": 1.100000023841858,
+     "5": 0.8999999761581421,
+     "6": 0.7599999904632568
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Engine": "MW_CLIO_ENG",
+  "Transmission": "MW_CLIO_6MT",
+  "FinalDriveRatio": "105",
+  "Wheel0": "MW_CLIO",
+  "Wheel1": "MW_CLIO",
+  "Wheel2": "MW_CLIO",
+  "Wheel3": "MW_CLIO",
+  "FrontBumper": "MW_CLIO_FrontBumper_KIT00",
+  "RearBumper": "MW_CLIO_RearBumper_KIT00",
+  "Bonnet": "MW_CLIO_Bonnet_KIT00"
+ },
+ "performance_source": "db mw:CLIO: {'mass': 1400.0, 'final_gear': 3.940000057220459, 'red_line': 8500.0, 'max_rpm': 9500.0, 'peak_hp_est': 340}",
+ "TODO": [
+  "render parts (tools/render_car.py) and fix texture_slots / Body parts",
+  "steering wheel extract (front render)",
+  "dial sockets + gauge_faces (uv_to_3d)",
+  "lamps: signal rules (amber survey / uv_box)",
+  "mirrors (fortem_mirror_aim for shared-mesh bases)",
+  "seats + cockpit_camera + RoomMirror",
+  "stance from arch edges (skill: stance reference per base)",
+  "sockets: exhaust / RearWing",
+  "kits: add_body_kits(_mw).py",
+  "skins (vinyl_check 0.4)",
+  "engine sound",
+  "dealer bay (user F6)"
+ ],
+ "masked_texture_slots": [
+  "Tex_CLIO_BADGING",
+  "Tex_MWG_GRILL01",
+  "Tex_MWG_GRILL02"
+ ],
+ "lamp_slots": {
+  "Tex_CLIO_HEADLIGHT": "head",
+  "Tex_CLIO_BRAKELIGHT": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CLIO_HEADLIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CLIO_HEADLIGHT"
+  },
+  "ReverseLamp": {
+   "kind": "reverse",
+   "texture_slot": "Tex_CLIO_BRAKELIGHT"
+  },
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_CLIO_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_CLIO_BRAKELIGHT"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_CLIO_TIRE"
+ ],
+ "gauge_faces": {
+  "Tex_CLIO_INTERIOR": [
+   {
+    "center": [
+     0.5615,
+     0.5127
+    ],
+    "face": [
+     0.5615,
+     0.5127,
+     0.055
+    ],
+    "radius": 0.0477,
+    "rotate": 0,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 7,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000",
+      0.22,
+      270
+     ]
+    ],
+    "caption_font": 0.11
+   },
+   {
+    "center": [
+     0.748,
+     0.5127
+    ],
+    "face": [
+     0.748,
+     0.5127,
+     0.055
+    ],
+    "radius": 0.0477,
+    "rotate": 0,
+    "min": 0,
+    "max": 160,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.6836,
+     0.467
+    ],
+    "face": [
+     0.6836,
+     0.467,
+     0.027
+    ],
+    "radius": 0.0225,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.63,
+     0.467
+    ],
+    "face": [
+     0.63,
+     0.467,
+     0.027
+    ],
+    "radius": 0.0225,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   26,
+   30,
+   42
+  ],
+  "ink": [
+   238,
+   238,
+   234
+  ],
+  "minor_ink": [
+   170,
+   170,
+   175
+  ],
+  "red_color": [
+   225,
+   35,
+   25
+  ],
+  "font_file": "arialbd.ttf",
+  "glow_face": [
+   90,
+   95,
+   115
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 160,
+   "value_scale": 1.609344
+  }
+ },
+ "texture_upscale": {
+  "Tex_CLIO_INTERIOR": 4
+ },
+ "needle_color": [
+  235,
+  45,
+  25
+ ],
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_CLIO_INTERIOR",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_CLIO_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    31,
+    31.6,
+    72
+   ],
+   "radius": 21,
+   "x_range": [
+    14,
+    46
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    26.2383,
+    32.21055,
+    69.0091
+   ],
+   "tilt_deg": 30.41,
+   "uv_box": [
+    0.44,
+    0.69,
+    0.73,
+    1.0
+   ],
+   "uv_slots": [
+    "Tex_CLIO_INTERIOR"
+   ]
+  }
+ },
+ "base_wheel_mesh": "Micky",
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     26.24,
+     32.21,
+     69.01
+    ],
+    "rot": [
+     -30.41,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -192,
+     -10,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -192,
+     10,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -160,
+     0,
+     114
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     138
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -193,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     47.02,
+     20.81,
+     70.86
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     47.02,
+     39.17,
+     70.86
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     49.03,
+     27.55,
+     74.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     49.03,
+     32.81,
+     74.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     49.36,
+     -86.6,
+     77.02
+    ],
+    "rot": [
+     -5.27,
+     -22.76,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     49.36,
+     86.6,
+     77.02
+    ],
+    "rot": [
+     -6.87,
+     12.01,
+     0
+    ]
+   }
+  ]
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     47.02,
+     20.81,
+     70.86
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     47.02,
+     39.17,
+     70.86
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     49.03,
+     27.55,
+     74.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     49.03,
+     32.81,
+     74.94
+    ],
+    "rot": [
+     0,
+     -90,
+     -63.8
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": -3.6,
+   "width": 3.0,
+   "height": 0.8,
+   "out": 0.25
+  }
+ },
+ "needle_scales": {
+  "RPM": 0.95,
+  "Speed": 0.95,
+  "Fuel": 0.9,
+  "Temp": 0.9
+ },
+ "needle_width": 0.4,
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "slot_boxes": [
+  {
+   "from": "Tex_CLIO_BRAKELIGHT",
+   "to": "ReverseLamp",
+   "box": [
+    -178,
+    -70,
+    48,
+    -165,
+    -54,
+    62
+   ],
+   "note": "round clear centre = reverse lamp (user MW screenshots: both light white when reversing)"
+  },
+  {
+   "from": "Tex_CLIO_BRAKELIGHT",
+   "to": "ReverseLamp",
+   "box": [
+    -178,
+    54,
+    48,
+    -165,
+    70,
+    62
+   ],
+   "note": "round clear centre = reverse lamp"
+  },
+  {
+   "from": "Tex_CLIO_BADGING",
+   "to": "Paint",
+   "box": [
+    -44,
+    -90,
+    38,
+    -12,
+    -74,
+    56
+   ],
+   "note": "door handle in body colour (real Clio V6; the chrome decal smeared)"
+  },
+  {
+   "from": "Tex_CLIO_BADGING",
+   "to": "Paint",
+   "box": [
+    -44,
+    74,
+    38,
+    -12,
+    90,
+    56
+   ],
+   "note": "door handle in body colour"
+  }
+ ],
+ "mw_kits": {
+  "front_split": 145,
+  "rear_split": -158
+ },
+ "aero_parts": [
+  {
+   "row": "MW_CLIO_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_CLIO_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_CLIO_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_CLIO_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_CLIO_FrontBumper_KIT05",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT05",
+   "display_name": "Kit 5 Front Bumper"
+  },
+  {
+   "row": "MW_CLIO_RearBumper_KIT05",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT05",
+   "display_name": "Kit 5 Rear Bumper"
+  },
+  {
+   "row": "MW_CLIO_SideSkirt_KIT05",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT05",
+   "display_name": "Kit 5 Side Skirts"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_CLIO_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:/Users/noust/nfs-work/mwglobal_tex/textures",
+  "Tex_CLIO_BRAKELIGHT": "C:/Users/noust/nfs-work/db/mw/CLIO/custom_tex",
+  "Tex_CLIO_HEADLIGHT": "C:/Users/noust/nfs-work/db/mw/CLIO/custom_tex"
+ },
+ "base_wheel": "Vista",
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "Tex_CLIO_BRAKELIGHT",
+   "note": "bottom slit of the tail lamp = rear indicator (user 2026-11-06 screenshot; round centre = reverse). Cut at z 49.5: the slit's big triangles straddled the old uv band (patchy blinker)",
+   "cuts": [
+    [
+     2,
+     49.5
+    ]
+   ],
+   "box": [
+    -200,
+    -95,
+    30,
+    -140,
+    95,
+    49.5
+   ]
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_CLIO_HEADLIGHT",
+   "uv_box": [
+    0.37,
+    0.04,
+    0.92,
+    0.46
+   ],
+   "note": "amber strip across the top of the headlamp = front indicator"
+  }
+ ],
+ "collision_boxes": [
+  {
+   "center": [
+    -4,
+    0,
+    37
+   ],
+   "size": [
+    356,
+    172,
+    46
+   ]
+  },
+  {
+   "center": [
+    -24,
+    0,
+    98
+   ],
+   "size": [
+    178,
+    135,
+    72
+   ]
+  }
+ ]
+}

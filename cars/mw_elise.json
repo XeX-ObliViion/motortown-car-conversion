@@ -89,6 +89,16 @@
     4.4,
     12.5,
     0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -4.6,
+    8.2,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -3.3,
+    -0.0,
+    0
    ]
   },
   "keep_body_materials": 1,
@@ -98,16 +108,13 @@
   "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
   "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
  },
- "mirror_meshes": {
-  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
- },
  "strip_part_slots": [],
  "wheel_part": true,
  "car": "MW_ELISE",
  "display_name": "Lotus Elise (Most Wanted)",
  "prefix": "ELISE",
- "geometry_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\geo",
- "texture_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\ELISE\\tex\\textures",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mwr/ELISE/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mwr/ELISE/tex/textures",
  "out_dir": "C:/Users/noust/mt-work/build/MW_ELISE/meshes",
  "cost": 60000,
  "wheel_display_name": "Elise Stock (Most Wanted)",
@@ -152,7 +159,9 @@
   "0xF68EF19F": "LampGlass",
   "0x681597F7": "Paint",
   "0x427B4565": "Tex_MWG_INTERCOOLER",
-  "0x8C283C65": "Bottom"
+  "0x8C283C65": "Bottom",
+  "0x7CE9E521": "Bottom",
+  "0x02B52399": "Tex_ELISE_BRAKELIGHT"
  },
  "texture_sources": {
   "Tex_ELISE_INTERIOR": "0x04BEBD9C",
@@ -171,7 +180,6 @@
   "Body": {
    "parts": [
     "BASE",
-    "KIT00_ATTACHMENT0",
     {
      "part": "KIT00_BODY",
      "x_range": [
@@ -183,21 +191,40 @@
     "KIT00_LEFT_BRAKELIGHT",
     {
      "part": "KIT00_LEFT_SIDE_MIRROR",
-     "normal_filter": {
-      "axis": 0,
-      "min": -0.75
-     }
+     "skip_groups": [
+      2
+     ],
+     "slot": "Paint"
     },
     {
      "part": "KIT00_RIGHT_SIDE_MIRROR",
-     "normal_filter": {
-      "axis": 0,
-      "min": -0.75
-     }
-    }
+     "skip_groups": [
+      2
+     ],
+     "slot": "Paint"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_FRONT_WINDOW",
+    "KIT00_FRONT_LEFT_WINDOW",
+    "KIT00_FRONT_RIGHT_WINDOW",
+    "KIT00_REAR_WINDOW",
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_BRAKELIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    "KIT00_RIGHT_HEADLIGHT_GLASS"
    ],
    "drop_slots": [
     "LampGlass"
+   ],
+   "drop_boxes": [
+    [
+     21.5,
+     -9.5,
+     84,
+     26.6,
+     9.5,
+     90.4
+    ]
    ]
   },
   "Wheel_L": {
@@ -239,11 +266,25 @@
      "normal_filter": {
       "axis": 0,
       "max": -0.75
-     }
+     },
+     "groups": [
+      2
+     ]
     }
    ],
    "recenter": true,
-   "planar_uv": {}
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -4.6,
+     8.2,
+     0
+    ]
+   },
+   "smooth_outline": {
+    "segments": 40,
+    "power": 4.0
+   }
   },
   "Aero_FrontBumper_KIT00": {
    "parts": [
@@ -569,316 +610,6 @@
     "depth": 1.0
    }
   },
-  "Aero_FrontBumper_KIT06": {
-   "parts": [
-    {
-     "part": "KIT06_BODY",
-     "x_range": [
-      128.8,
-      99999
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_RearBumper_KIT06": {
-   "parts": [
-    {
-     "part": "KIT06_BODY",
-     "x_range": [
-      -99999,
-      -135.5
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_SideSkirt_KIT06": {
-   "parts": [
-    {
-     "part": "KIT06_BODY",
-     "x_range": [
-      -135.5,
-      128.8
-     ],
-     "drop_coincident_with": {
-      "parts": [
-       "KIT00_BODY"
-      ],
-      "prefix": "ELISE",
-      "tol": 1.0
-     }
-    }
-   ],
-   "aero": true,
-   "lift": {
-    "prefix": "ELISE",
-    "parts": [
-     "KIT00_BODY"
-    ],
-    "off": 0.6,
-    "box": [
-     -300,
-     0,
-     -50,
-     300,
-     200,
-     200
-    ],
-    "edge": 2.0,
-    "depth": 1.0
-   }
-  },
-  "Aero_FrontBumper_KIT07": {
-   "parts": [
-    {
-     "part": "KIT07_BODY",
-     "x_range": [
-      128.8,
-      99999
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_RearBumper_KIT07": {
-   "parts": [
-    {
-     "part": "KIT07_BODY",
-     "x_range": [
-      -99999,
-      -135.5
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_SideSkirt_KIT07": {
-   "parts": [
-    {
-     "part": "KIT07_BODY",
-     "x_range": [
-      -135.5,
-      128.8
-     ],
-     "drop_coincident_with": {
-      "parts": [
-       "KIT00_BODY"
-      ],
-      "prefix": "ELISE",
-      "tol": 1.0,
-      "keep_boxes": [
-       [
-        95,
-        -200,
-        -50,
-        129,
-        200,
-        200
-       ]
-      ]
-     }
-    }
-   ],
-   "aero": true,
-   "lift": {
-    "prefix": "ELISE",
-    "parts": [
-     "KIT00_BODY"
-    ],
-    "off": 0.6,
-    "box": [
-     -300,
-     0,
-     -50,
-     300,
-     200,
-     200
-    ],
-    "edge": 2.0,
-    "depth": 1.0
-   }
-  },
-  "Aero_FrontBumper_KIT08": {
-   "parts": [
-    {
-     "part": "KIT08_BODY",
-     "x_range": [
-      128.8,
-      99999
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_RearBumper_KIT08": {
-   "parts": [
-    {
-     "part": "KIT08_BODY",
-     "x_range": [
-      -99999,
-      -135.5
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_SideSkirt_KIT08": {
-   "parts": [
-    {
-     "part": "KIT08_BODY",
-     "x_range": [
-      -135.5,
-      128.8
-     ],
-     "drop_coincident_with": {
-      "parts": [
-       "KIT00_BODY"
-      ],
-      "prefix": "ELISE",
-      "tol": 1.0
-     }
-    }
-   ],
-   "aero": true,
-   "lift": {
-    "prefix": "ELISE",
-    "parts": [
-     "KIT00_BODY"
-    ],
-    "off": 0.6,
-    "box": [
-     -300,
-     0,
-     -50,
-     300,
-     200,
-     200
-    ],
-    "edge": 2.0,
-    "depth": 1.0
-   }
-  },
-  "Aero_FrontBumper_KIT09": {
-   "parts": [
-    {
-     "part": "KIT09_BODY",
-     "x_range": [
-      128.8,
-      99999
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_RearBumper_KIT09": {
-   "parts": [
-    {
-     "part": "KIT09_BODY",
-     "x_range": [
-      -99999,
-      -135.5
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_SideSkirt_KIT09": {
-   "parts": [
-    {
-     "part": "KIT09_BODY",
-     "x_range": [
-      -135.5,
-      128.8
-     ],
-     "drop_coincident_with": {
-      "parts": [
-       "KIT00_BODY"
-      ],
-      "prefix": "ELISE",
-      "tol": 1.0
-     }
-    }
-   ],
-   "aero": true,
-   "lift": {
-    "prefix": "ELISE",
-    "parts": [
-     "KIT00_BODY"
-    ],
-    "off": 0.6,
-    "box": [
-     -300,
-     0,
-     -50,
-     300,
-     200,
-     200
-    ],
-    "edge": 2.0,
-    "depth": 1.0
-   }
-  },
-  "Aero_FrontBumper_KIT10": {
-   "parts": [
-    {
-     "part": "KIT10_BODY",
-     "x_range": [
-      128.8,
-      99999
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_RearBumper_KIT10": {
-   "parts": [
-    {
-     "part": "KIT10_BODY",
-     "x_range": [
-      -99999,
-      -135.5
-     ]
-    }
-   ],
-   "aero": true
-  },
-  "Aero_SideSkirt_KIT10": {
-   "parts": [
-    {
-     "part": "KIT10_BODY",
-     "x_range": [
-      -135.5,
-      128.8
-     ],
-     "drop_coincident_with": {
-      "parts": [
-       "KIT00_BODY"
-      ],
-      "prefix": "ELISE",
-      "tol": 1.0
-     }
-    }
-   ],
-   "aero": true,
-   "lift": {
-    "prefix": "ELISE",
-    "parts": [
-     "KIT00_BODY"
-    ],
-    "off": 0.6,
-    "box": [
-     -300,
-     0,
-     -50,
-     300,
-     200,
-     200
-    ],
-    "edge": 2.0,
-    "depth": 1.0
-   }
-  },
   "Aero_Bonnet_KIT00": {
    "parts": [
     {
@@ -1022,6 +753,35 @@
     }
    ],
    "aero": true
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     },
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -3.3,
+     -0.0,
+     0
+    ],
+    "mirror_frame": true
+   },
+   "smooth_outline": {
+    "segments": 40,
+    "power": 4.0
+   }
   }
  },
  "mesh_names": {
@@ -1040,7 +800,7 @@
   "rear_half_track": 73.5
  },
  "part_overrides": {
-  "Engine": "PS_ELISE_I4",
+  "Engine": "MW_ELISE_I4",
   "Transmission": "PS_ELISE_6MT",
   "FinalDriveRatio": "106",
   "CoolantRadiator": "SmallRadiator_110",
@@ -1510,11 +1270,13 @@
   "Tex_ELISE_BRAKELIGHT": "tail",
   "Signal_L_R": {
    "kind": "signal_overlay",
-   "texture_slot": "Tex_ELISE_BRAKELIGHT"
+   "texture_slot": "Tex_ELISE_BRAKELIGHT",
+   "mask_gain": 8
   },
   "Signal_R_R": {
    "kind": "signal_overlay",
-   "texture_slot": "Tex_ELISE_BRAKELIGHT"
+   "texture_slot": "Tex_ELISE_BRAKELIGHT",
+   "mask_gain": 8
   },
   "Signal_L_F": {
    "kind": "signal",
@@ -1526,11 +1288,13 @@
   },
   "Signal_L_V": {
    "kind": "reverse_overlay",
-   "texture_slot": "Tex_ELISE_BRAKELIGHT"
+   "texture_slot": "Tex_ELISE_BRAKELIGHT",
+   "mask_gain": 8
   },
   "Signal_R_V": {
    "kind": "reverse_overlay",
-   "texture_slot": "Tex_ELISE_BRAKELIGHT"
+   "texture_slot": "Tex_ELISE_BRAKELIGHT",
+   "mask_gain": 8
   }
  },
  "signal_lamps": [
@@ -1577,9 +1341,14 @@
  "paintable_texture_slots": [],
  "recentered": {
   "LeftSideMirror": [
-   31.17,
-   -75.93,
-   68.53
+   27.03,
+   -84.71,
+   68.5
+  ],
+  "RightSideMirror": [
+   27.03,
+   -84.71,
+   68.5
   ]
  },
  "aero_parts": [
@@ -1701,111 +1470,6 @@
    "part_type": "SideSkirt",
    "mesh": "Aero_SideSkirt_KIT05",
    "display_name": "Kit 5 Side Skirts"
-  },
-  {
-   "row": "MW_ELISE_FrontBumper_KIT06",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_KIT06",
-   "display_name": "Kit 6 Front Bumper"
-  },
-  {
-   "row": "MW_ELISE_RearBumper_KIT06",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_KIT06",
-   "display_name": "Kit 6 Rear Bumper"
-  },
-  {
-   "row": "MW_ELISE_SideSkirt_KIT06",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_KIT06",
-   "display_name": "Kit 6 Side Skirts"
-  },
-  {
-   "row": "MW_ELISE_FrontBumper_KIT07",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_KIT07",
-   "display_name": "Kit 7 Front Bumper"
-  },
-  {
-   "row": "MW_ELISE_RearBumper_KIT07",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_KIT07",
-   "display_name": "Kit 7 Rear Bumper"
-  },
-  {
-   "row": "MW_ELISE_SideSkirt_KIT07",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_KIT07",
-   "display_name": "Kit 7 Side Skirts"
-  },
-  {
-   "row": "MW_ELISE_FrontBumper_KIT08",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_KIT08",
-   "display_name": "Kit 8 Front Bumper"
-  },
-  {
-   "row": "MW_ELISE_RearBumper_KIT08",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_KIT08",
-   "display_name": "Kit 8 Rear Bumper"
-  },
-  {
-   "row": "MW_ELISE_SideSkirt_KIT08",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_KIT08",
-   "display_name": "Kit 8 Side Skirts"
-  },
-  {
-   "row": "MW_ELISE_FrontBumper_KIT09",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_KIT09",
-   "display_name": "Kit 9 Front Bumper"
-  },
-  {
-   "row": "MW_ELISE_RearBumper_KIT09",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_KIT09",
-   "display_name": "Kit 9 Rear Bumper"
-  },
-  {
-   "row": "MW_ELISE_SideSkirt_KIT09",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_KIT09",
-   "display_name": "Kit 9 Side Skirts"
-  },
-  {
-   "row": "MW_ELISE_FrontBumper_KIT10",
-   "slot": "FrontBumper",
-   "part_type": "FrontBumper",
-   "mesh": "Aero_FrontBumper_KIT10",
-   "display_name": "Kit 10 Front Bumper"
-  },
-  {
-   "row": "MW_ELISE_RearBumper_KIT10",
-   "slot": "RearBumper",
-   "part_type": "RearBumper",
-   "mesh": "Aero_RearBumper_KIT10",
-   "display_name": "Kit 10 Rear Bumper"
-  },
-  {
-   "row": "MW_ELISE_SideSkirt_KIT10",
-   "slot": "SideSkirt",
-   "part_type": "SideSkirt",
-   "mesh": "Aero_SideSkirt_KIT10",
-   "display_name": "Kit 10 Side Skirts"
   },
   {
    "row": "MW_ELISE_Bonnet_KIT00",
@@ -2012,5 +1676,112 @@
    ],
    "abs_y": true
   }
- ]
+ ],
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_ELISE_I4",
+    "base_row": "I4_150HP",
+    "asset": "MW_ELISE_I4",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "1.8 VVTL-i I4 (Most Wanted Elise)",
+    "mass": 130,
+    "cost": 15000,
+    "max_torque_nm": 130.0,
+    "max_rpm": 8600,
+    "curve": [
+     [
+      0.093,
+      0.3677
+     ],
+     [
+      0.1601,
+      0.4485
+     ],
+     [
+      0.2427,
+      0.5569
+     ],
+     [
+      0.3286,
+      0.6654
+     ],
+     [
+      0.4851,
+      0.8446
+     ],
+     [
+      0.5866,
+      0.9377
+     ],
+     [
+      0.6795,
+      0.9815
+     ],
+     [
+      0.7776,
+      1.0
+     ],
+     [
+      0.8515,
+      0.9938
+     ],
+     [
+      0.9186,
+      0.9785
+     ],
+     [
+      1.0,
+      0.9077
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ProStreet elise_track TORQUE; ~141 hp at the 7900 redline",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_ELISE",
+     "pitch_rpm": {
+      "idle": 1015,
+      "mid": 4200,
+      "high": 7590
+     },
+     "note": "loops cut from Most Wanted SOUND/ENGINE/GIN_Lotus_Elise.gin with tools/gin_loops.py (user 2026-11-02: recreated engines use the MW sound); 6 layers l1-l6 between the real idle and redline (user 2026-11-05: 3 loops broke up 2000-4500 rpm)",
+     "loops": [
+      [
+       "l1",
+       1470
+      ],
+      [
+       "l2",
+       2056
+      ],
+      [
+       "l3",
+       2932
+      ],
+      [
+       "l4",
+       4140
+      ],
+      [
+       "l5",
+       5834
+      ],
+      [
+       "l6",
+       8242
+      ]
+     ]
+    },
+    "physics_from": "Cars/Parts/Engine/I4Sport_150HP"
+   }
+  ]
+ },
+ "remaster_note": "2026-11-06: re-sourced from the MW Remaster (user rule); Rework-only KIT00_ATTACHMENT0 and kits 6-10 dropped; Remaster splits interior/windows/right lamps into their own parts"
 }

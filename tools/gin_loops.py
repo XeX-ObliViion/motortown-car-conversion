@@ -11,7 +11,14 @@ def grains(gin):
     assert b[:4] == b"Gnsu"
     mn, mx = struct.unpack_from("<2f", b, 8)
     nb, n, total, rate = struct.unpack_from("<4I", b, 16)
-    starts = list(struct.unpack_from("<%dI" % (n + nb), b, 32)) + [total]
+    tab = struct.unpack_from("<%dI" % (n + nb), b, 32)
+    # the first nb entries are an rpm -> offset index (each spans many cycles; using them as grains made the low loops
+    # a sped-up sweep of the whole rev range, user 2026-11-05); the grain table follows, after one end-offset entry
+    starts = list(tab[nb:])
+    if starts[0] > starts[1]:
+        starts = starts[1:]
+    assert starts[0] < 1024, "grain table does not start at the audio start: %r" % (starts[:3],)
+    starts += [total]
     gs = [(starts[i], starts[i + 1]) for i in range(len(starts) - 1) if starts[i + 1] > starts[i]]
     return mn, mx, rate, gs
 

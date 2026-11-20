@@ -7776,7 +7776,9 @@
   "Signal_L_R": "LeftSignalLight",
   "Signal_R_R": "RightSignalLight",
   "Signal_L_M": "LeftSignalLight",
-  "Signal_R_M": "RightSignalLight"
+  "Signal_R_M": "RightSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_V": "ReverseLight"
  },
  "lamp_slots": {
   "Tex_ELISE_KIT00_HEADLIGHT_ON": "head",
@@ -7790,12 +7792,14 @@
    "texture_slot": "Tex_ELISE_BADGING"
   },
   "Signal_L_R": {
-   "kind": "signal_tail",
-   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF"
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "mask_gain": 8
   },
   "Signal_R_R": {
-   "kind": "signal_tail",
-   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF"
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "mask_gain": 8
   },
   "Signal_L_M": {
    "kind": "signal",
@@ -7804,6 +7808,16 @@
   "Signal_R_M": {
    "kind": "signal",
    "texture_slot": "Tex_ELISE_MISC"
+  },
+  "Signal_L_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "mask_gain": 8
+  },
+  "Signal_R_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "mask_gain": 8
   }
  },
  "paintable_texture_slots": [
@@ -9083,19 +9097,6 @@
    "note": "front indicators: the oval amber/clear lens in the clam inboard of each headlight"
   },
   {
-   "tag": "_R",
-   "from": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
-   "box": [
-    -183,
-    -47,
-    52,
-    -178.5,
-    47,
-    70
-   ],
-   "note": "rear indicators: the inner pair of round lamps"
-  },
-  {
    "tag": "_M",
    "from": "Tex_ELISE_MISC",
    "amber": true,
@@ -9108,6 +9109,32 @@
     45
    ],
    "note": "front side markers: amber lenses at the bumper corners"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "uv_box": [
+    0,
+    0,
+    0.42,
+    1
+   ],
+   "copy": true,
+   "lift": 0.08,
+   "note": "rear indicators: clear centre of the OUTER round lamp (masked overlay; ring stays TailLight) - user 2026-11-18"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_ELISE_KIT00_BRAKELIGHT_OFF",
+   "uv_box": [
+    0.43,
+    0,
+    0.85,
+    1
+   ],
+   "copy": true,
+   "lift": 0.08,
+   "note": "reverse: clear centre of the INNER round lamp (masked overlay; ring stays TailLight, lit with lights/brake) - user 2026-11-18"
   }
  ],
  "masked_texture_slots": [

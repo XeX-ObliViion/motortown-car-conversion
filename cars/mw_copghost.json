@@ -1,0 +1,1245 @@
+{
+ "car": "MW_COPGHOST",
+ "display_name": "Rockport PD1U Unmarked (Most Wanted)",
+ "base_vehicle": "Police",
+ "base_dir": "Police",
+ "base_wheel": "Zager",
+ "base_parts": {},
+ "prefix": "COPGHOST",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mwr/COPGHOST/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mwr/COPGHOST/tex/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_COPGHOST/meshes",
+ "cost": 100000,
+ "wheel_display_name": "Rockport PD1U Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "default_slot": "Bottom",
+ "wheel_part": true,
+ "performance_source": "real 2003-05 Ford Crown Victoria Police Interceptor (P71): 4.6 SOHC V8 250 hp @ 4900 / 403 Nm @ 4000, 4R70W 4-speed auto, 3.27 axle (FD_3.31), RWD, ~1870 kg. MW pvehicle copghost: MASS 1600, engineaudio for_mus_b (GIN_MUSTANGGT)",
+ "strip_part_slots": [],
+ "texture_slots": {
+  "0xCC772AFB": "Bottom",
+  "0xBD1F0E0A": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0x1B049702": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0xD195BE56": "Glass",
+  "0x7B220DDF": "Glass",
+  "0x03C906EF": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x7811C146": "Bottom",
+  "0xBF19330C": "DriverFigure",
+  "0x7A15152B": "Tex_COPGHOST_SKIN1",
+  "0x1F5F8C11": "Tex_COPGHOST_BADGING",
+  "0xDCE9E2B9": "Tex_COPGHOST_TIRE",
+  "0xD947F346": "Tex_COPGHOST_BRAKELIGHT",
+  "0x02B52399": "Tex_COPGHOST_BRAKELIGHT",
+  "0xA7E6EA53": "Tex_COPGHOST_HEADLIGHT",
+  "0xA532FC46": "Tex_COPGHOST_HEADLIGHT",
+  "0x69C032BA": "Tex_MWG_GRILL02"
+ },
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Glass",
+  "Tex_COPGHOST_HEADLIGHT": "HeadLight",
+  "Tex_COPGHOST_BRAKELIGHT": "TailLight",
+  "Tex_COPGHOST_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_V": "ReverseLight",
+  "Mirror": "Mirror"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "KIT00_DAMAGE0_BODY",
+    "KIT00_DAMAGE0_FRONT_BUMPER",
+    "KIT00_DAMAGE0_HOOD",
+    "KIT00_DAMAGE0_LEFT_BRAKELIGHT",
+    "KIT00_DAMAGE0_RIGHT_BRAKELIGHT",
+    {
+     "part": "KIT00_DAMAGE0_LEFT_DOOR",
+     "skip_groups": [
+      6
+     ]
+    },
+    {
+     "part": "KIT00_DAMAGE0_RIGHT_DOOR",
+     "skip_groups": [
+      6
+     ]
+    },
+    "KIT00_DAMAGE0_LEFT_REAR_DOOR",
+    "KIT00_DAMAGE0_RIGHT_REAR_DOOR",
+    "KIT00_DAMAGE0_LEFT_HEADLIGHT",
+    "KIT00_DAMAGE0_RIGHT_HEADLIGHT",
+    "KIT00_DAMAGE0_REAR_BUMPER",
+    "KIT00_DAMAGE0_TRUNK",
+    "KIT00_DAMAGE0_FRONT_WINDOW"
+   ],
+   "drop_slots": [
+    "DriverFigure"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_COPGHOST_SKIN1",
+     "to": "Gauges",
+     "box": [
+      0.43,
+      0.575,
+      0.65,
+      0.665
+     ]
+    }
+   ],
+   "clip_boxes": [
+    [
+     238,
+     -82,
+     38,
+     264,
+     -73.3,
+     66
+    ],
+    [
+     238,
+     73.3,
+     38,
+     264,
+     82,
+     66
+    ]
+   ],
+   "clip_mode": "split",
+   "clip_note": "cut the headlamp faces at the amber corner's inner edge (u 0.13 = |y| 73.3) so _F takes only the amber lens",
+   "inner_skin": {
+    "boxes": [
+     [
+      -20,
+      58,
+      90,
+      -6,
+      72,
+      112
+     ]
+    ],
+    "slot": "Tex_COPGHOST_SKIN1",
+    "uv": [
+     0.05,
+     0.05
+    ],
+    "inset": 0.0,
+    "note": "B-pillar inner face was single-sided (driver-eye raycast backface at -13,-64,103); uv = black texel"
+   },
+   "recolor_boxes": [
+    {
+     "from": "Tex_COPGHOST_SKIN1",
+     "to": "EmergencyRed",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      50,
+      15,
+      105,
+      70,
+      60,
+      120
+     ],
+     "uv_box": [
+      0.629,
+      0,
+      0.752,
+      0.123
+     ],
+     "note": "flashing: MW visor bar / rear bumper strobes (user 2026-11-06: some lights did not flash)"
+    },
+    {
+     "from": "Tex_COPGHOST_SKIN1",
+     "to": "EmergencyBlue",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      50,
+      15,
+      105,
+      70,
+      60,
+      120
+     ],
+     "uv_box": [
+      0.752,
+      0,
+      0.875,
+      0.123
+     ],
+     "note": "flashing: MW visor bar / rear bumper strobes (user 2026-11-06: some lights did not flash)"
+    },
+    {
+     "from": "Tex_COPGHOST_SKIN1",
+     "to": "EmergencyRed",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      -237,
+      50,
+      20,
+      -226,
+      75,
+      28
+     ],
+     "side": -1,
+     "note": "flashing: MW visor bar / rear bumper strobes (user 2026-11-06: some lights did not flash)",
+     "uv_box": [
+      0.555,
+      0.55,
+      0.62,
+      0.58
+     ]
+    },
+    {
+     "from": "Tex_COPGHOST_SKIN1",
+     "to": "EmergencyBlue",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      -237,
+      50,
+      20,
+      -226,
+      75,
+      28
+     ],
+     "side": 1,
+     "note": "flashing: MW visor bar / rear bumper strobes (user 2026-11-06: some lights did not flash)",
+     "uv_box": [
+      0.555,
+      0.55,
+      0.62,
+      0.58
+     ]
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "SideMirror_Left": {
+   "parts": [
+    {
+     "part": "KIT00_DAMAGE0_LEFT_DOOR",
+     "groups": [
+      6
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {},
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -9.5,
+     -1.4,
+     0
+    ]
+   }
+  },
+  "SideMirror_Right": {
+   "parts": [
+    {
+     "part": "KIT00_DAMAGE0_RIGHT_DOOR",
+     "groups": [
+      6
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   },
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -6.7,
+     15.6,
+     0
+    ]
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_COPGHOST_R",
+  "Wheel_R": "MW_COPGHOST_L",
+  "SteeringWheel": "MW_COPGHOST"
+ },
+ "wheels": {
+  "front_x": 177.8,
+  "rear_x": -128.7,
+  "half_track": 80,
+  "z": 22,
+  "rear_z": 22,
+  "radius": 34,
+  "auto_arches": true,
+  "note": "wheel mesh x WHEEL_MESH_SCALE 0.6466 = 34.3 cm (real 225/60R16 34.6); mount 34-4 sag-4 lift = 26 -> ~15 cm clearance (underbody 11.3 above origin)"
+ },
+ "part_overrides": {
+  "Wheel0": "MW_COPGHOST",
+  "Wheel1": "MW_COPGHOST",
+  "Wheel2": "MW_COPGHOST",
+  "Wheel3": "MW_COPGHOST",
+  "Engine": "MW_COPGHOST_ENG",
+  "Transmission": "MW_COPGHOST_4AT",
+  "FinalDriveRatio": "FD_3.31"
+ },
+ "blueprint": {
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   10,
+   -44,
+   110
+  ],
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    10,
+    -44,
+    31
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    10,
+    44,
+    31
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -62,
+    40,
+    31
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -62,
+    -40,
+    31
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    58,
+    0,
+    114
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    30,
+    0,
+    120
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -40,
+    0,
+    120
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    252,
+    -59,
+    53
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    252,
+    59,
+    53
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    250,
+    76,
+    53
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    250,
+    -76,
+    53
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -226,
+    78,
+    65
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -226,
+    -78,
+    65
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -226,
+    -70,
+    67
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -226,
+    70,
+    67
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -231,
+    -56,
+    69
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -231,
+    56,
+    69
+   ]
+  },
+  "body_mass": 1410,
+  "body_mass_note": "real CVPI curb ~1870 kg = body + 456 kg parts",
+  "component_rotations": {
+   "LeftSideMirror_GEN_VARIABLE": [
+    -9.5,
+    -1.4,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -6.7,
+    15.6,
+    0
+   ]
+  }
+ },
+ "gauge_style": {
+  "face_color": [
+   14,
+   14,
+   16
+  ],
+  "ink": [
+   240,
+   240,
+   236
+  ],
+  "minor_ink": [
+   170,
+   170,
+   170
+  ],
+  "red_color": [
+   225,
+   40,
+   25
+  ],
+  "font_file": "seguisb.ttf",
+  "ring": [
+   [
+    150,
+    150,
+    156
+   ],
+   0.06
+  ],
+  "glow_face": [
+   80,
+   110,
+   140
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 6
+  },
+  "Speed": {
+   "max": 140,
+   "value_scale": 1.609344
+  }
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_COPGHOST_SKIN1",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_COPGHOST_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "needle_color": [
+  230,
+  30,
+  25
+ ],
+ "needle_scales": {
+  "RPM": 0.5,
+  "Speed": 0.5,
+  "Fuel": 0.25,
+  "Temp": 0.25
+ },
+ "stance_note": "real 2003-05 CVPI ground clearance ~15 cm; higher mount = lower body",
+ "texture_sources": {
+  "Tex_COPGHOST_SKIN1": "0x7A15152B",
+  "Tex_COPGHOST_BADGING": "0x1F5F8C11",
+  "Tex_COPGHOST_TIRE": "0xDCE9E2B9",
+  "Tex_COPGHOST_BRAKELIGHT": "0x72F2C1C5",
+  "Tex_COPGHOST_BRAKELIGHTON": "0xD14AF9A3",
+  "Tex_COPGHOST_HEADLIGHT": "0x233977F2",
+  "Tex_MWG_GRILL02": "0x69C032BA"
+ },
+ "texture_dirs": {
+  "Tex_MWG_GRILL02": "C:/Users/noust/nfs-work/mwglobal_tex/textures"
+ },
+ "masked_texture_slots": [
+  "Tex_COPGHOST_BADGING"
+ ],
+ "lamp_slots": {
+  "Tex_COPGHOST_HEADLIGHT": "head",
+  "Tex_COPGHOST_BRAKELIGHT": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_COPGHOST_HEADLIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_COPGHOST_HEADLIGHT"
+  },
+  "Signal_L_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_COPGHOST_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_COPGHOST_BRAKELIGHT"
+  },
+  "Signal_L_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_COPGHOST_BRAKELIGHT"
+  },
+  "Signal_R_V": {
+   "kind": "reverse",
+   "texture_slot": "Tex_COPGHOST_BRAKELIGHT"
+  }
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    14,
+    0,
+    68
+   ],
+   "size": [
+    505,
+    206,
+    118
+   ]
+  }
+ ],
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror_Left",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror_Right"
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    81,
+    -43.8,
+    69.6
+   ],
+   "radius": 21,
+   "x_range": [
+    74,
+    89
+   ],
+   "uv_box": [
+    0.16,
+    0.86,
+    0.3,
+    0.99
+   ],
+   "uv_slots": [
+    "Tex_COPGHOST_SKIN1"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    81.40350000000001,
+    -43.86555,
+    69.43705
+   ],
+   "tilt_deg": 13.73,
+   "socket_offset": [
+    0,
+    0,
+    -10
+   ],
+   "socket_offset_note": "user 2026-11-06 x2: rim top crossed the dial centres at -5 (sightline eye->dial bottom passes the rim at z ~82.5 at x 76); -10 clears the dials"
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     94.2,
+     -35.0,
+     80.43
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     94.2,
+     -50.42,
+     80.19
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     94.1,
+     -26.19,
+     78.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     94.1,
+     -59.1,
+     78.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": -2.5,
+   "width": 2.5,
+   "height": 0.7,
+   "out": 0.25
+  },
+  "attach_none": true
+ },
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     81.4,
+     -43.87,
+     59.44
+    ],
+    "rot": [
+     -13.73,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -240,
+     -55,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -240,
+     55,
+     22
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -245,
+     0,
+     30
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     94.2,
+     -35.0,
+     80.43
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     94.2,
+     -50.42,
+     80.19
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     94.1,
+     -26.19,
+     78.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     94.1,
+     -59.1,
+     78.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -87
+    ]
+   }
+  ]
+ },
+ "gauge_faces": {
+  "Tex_COPGHOST_SKIN1": [
+   {
+    "center": [
+     0.51,
+     0.628
+    ],
+    "face": [
+     0.51,
+     0.628,
+     0.0175
+    ],
+    "radius": 0.0165,
+    "flip_x": true,
+    "min": 0,
+    "max": 140,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.24,
+    "captions": [
+     [
+      "MPH",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.15
+   },
+   {
+    "center": [
+     0.57,
+     0.629
+    ],
+    "face": [
+     0.57,
+     0.629,
+     0.0175
+    ],
+    "radius": 0.0165,
+    "flip_x": true,
+    "min": 0,
+    "max": 6,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 5,
+    "font": 0.28,
+    "captions": []
+   },
+   {
+    "center": [
+     0.476,
+     0.638
+    ],
+    "face": [
+     0.476,
+     0.638,
+     0.008
+    ],
+    "radius": 0.007,
+    "flip_x": true,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.4,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.604,
+     0.638
+    ],
+    "face": [
+     0.604,
+     0.638,
+     0.008
+    ],
+    "radius": 0.007,
+    "flip_x": true,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.4,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_COPGHOST_HEADLIGHT",
+   "uv_box": [
+    0,
+    0,
+    0.135,
+    1
+   ],
+   "note": "real 2003-05 CVPI: amber park/turn lamp in the outer corner of each headlamp"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_COPGHOST_BRAKELIGHT",
+   "uv_box": [
+    0,
+    0,
+    0.23,
+    1
+   ],
+   "note": "clear round reverse lamp, inboard in each tail lamp"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_COPGHOST_BRAKELIGHT",
+   "uv_box": [
+    0.23,
+    0,
+    1,
+    1
+   ],
+   "note": "US red rear turn (real P71 shares the 3157 stop/turn bulb): the two round red lenses flash red; Police_01 has no Left/RightTailLight, so the outer red section stays TailLight for brake/tail; 2026-11-06 whole lamp except the reverse round (user: broken tail lamps); 2026-11-17 user: whole lamp = brake + night tail (TailLight), red section blinks as a lifted overlay copy (as the Mustang)",
+   "copy": true,
+   "lift": 0.08
+  }
+ ],
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_COPGHOST_ENG",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_COPGHOST_ENG",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "4.6 SOHC V8 Police Interceptor (250 hp)",
+    "mass": 200,
+    "cost": 15000,
+    "max_torque_nm": 403,
+    "max_rpm": 5900,
+    "curve": [
+     [
+      0.1,
+      0.55
+     ],
+     [
+      0.2,
+      0.72
+     ],
+     [
+      0.34,
+      0.86
+     ],
+     [
+      0.5,
+      0.95
+     ],
+     [
+      0.678,
+      1.0
+     ],
+     [
+      0.83,
+      0.9
+     ],
+     [
+      0.95,
+      0.75
+     ],
+     [
+      1.0,
+      0.68
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "axis rpm/5900: 403 Nm @ 4000, 250 hp @ 4900",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_COPGHOST",
+     "loops": [
+      [
+       "l1",
+       1392
+      ],
+      [
+       "l2",
+       1861
+      ],
+      [
+       "l3",
+       2433
+      ],
+      [
+       "l4",
+       3251
+      ],
+      [
+       "l5",
+       4305
+      ],
+      [
+       "l6",
+       5730
+      ]
+     ],
+     "note": "Remaster SOUND/ENGINE/GIN_Mustang_GT_B.gin (Ford 4.6 V8 Mustang GT, same engine family as the P71; MW's for_mus_b names Rework-only GIN_MUSTANGGT) -> vgmstream -> cut6 idle 650 / redline 5900"
+    },
+    "physics_from": "Cars/Parts/Engine/FordSmalBlock302_V8_5L_320HP"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_COPGHOST_4AT",
+    "base_row": "302",
+    "asset": "MW_COPGHOST_4AT",
+    "base_asset": "Cars/Parts/Transmission/TQ4SpeedMuscle",
+    "display_name": "Ford 4R70W 4-Speed Auto (CVPI)",
+    "cost": 5000,
+    "mass": 85,
+    "ratios": {
+     "R": -2.33,
+     "1": 2.84,
+     "2": 1.55,
+     "3": 1.0,
+     "4": 0.7
+    }
+   }
+  ]
+ },
+ "recentered": {
+  "SideMirror_Left": [
+   79.91,
+   -93.64,
+   89.25
+  ],
+  "SideMirror_Right": [
+   79.91,
+   93.64,
+   89.25
+  ]
+ },
+ "add_shapes": [
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "Glass",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     -15,
+     -68,
+     105.5
+    ],
+    [
+     -97,
+     -68.5,
+     103.8
+    ],
+    [
+     -88,
+     -64,
+     111
+    ],
+    [
+     -15,
+     -64,
+     116.5
+    ]
+   ],
+   "note": "rear door glass up to the roof rail (MW rear window ends short: see-through slit); refit 2026-11-06 under the rail (inner edge |y| 64.6), rear end at the C-pillar"
+  },
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "Glass",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     -15,
+     68,
+     105.5
+    ],
+    [
+     -97,
+     68.5,
+     103.8
+    ],
+    [
+     -88,
+     64,
+     111
+    ],
+    [
+     -15,
+     64,
+     116.5
+    ]
+   ],
+   "note": "rear door glass up to the roof rail (MW rear window ends short: see-through slit); refit 2026-11-06 under the rail (inner edge |y| 64.6), rear end at the C-pillar"
+  },
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "EmergencyRed",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     264.6,
+     -24,
+     50
+    ],
+    [
+     264.6,
+     -9,
+     50
+    ],
+    [
+     264.6,
+     -9,
+     54
+    ],
+    [
+     264.6,
+     -24,
+     54
+    ]
+   ],
+   "note": "hidden police lights (user: sirens/lights did not work; Police_01 flashes the EmergencyRed/Blue body slots)"
+  },
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "EmergencyRed",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     -145.5,
+     -38.400000000000006,
+     97.5
+    ],
+    [
+     -145.5,
+     -14.4,
+     97.5
+    ],
+    [
+     -145.5,
+     -14.4,
+     100.5
+    ],
+    [
+     -145.5,
+     -38.400000000000006,
+     100.5
+    ]
+   ],
+   "note": "hidden police lights (user: sirens/lights did not work; Police_01 flashes the EmergencyRed/Blue body slots)"
+  },
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "EmergencyBlue",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     264.6,
+     9,
+     50
+    ],
+    [
+     264.6,
+     24,
+     50
+    ],
+    [
+     264.6,
+     24,
+     54
+    ],
+    [
+     264.6,
+     9,
+     54
+    ]
+   ],
+   "note": "hidden police lights (user: sirens/lights did not work; Police_01 flashes the EmergencyRed/Blue body slots)"
+  },
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "EmergencyBlue",
+   "uv": [
+    0.5,
+    0.5
+   ],
+   "points": [
+    [
+     -145.5,
+     14.4,
+     97.5
+    ],
+    [
+     -145.5,
+     38.400000000000006,
+     97.5
+    ],
+    [
+     -145.5,
+     38.400000000000006,
+     100.5
+    ],
+    [
+     -145.5,
+     14.4,
+     100.5
+    ]
+   ],
+   "note": "hidden police lights (user: sirens/lights did not work; Police_01 flashes the EmergencyRed/Blue body slots)"
+  }
+ ],
+ "dealer_note": "F8: listed in mt-spawner vehicles.h (Modded). Dealer bay not placed yet: needs a spots.txt line from the user screenshot + F6 position (dealers/rebuild_dealers.sh)",
+ "base_row": "Police_01",
+ "texture_upscale": {
+  "Tex_COPGHOST_SKIN1": 4
+ }
+}

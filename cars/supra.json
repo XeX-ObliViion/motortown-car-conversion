@@ -12771,7 +12771,8 @@
   "Signal_L_F": "LeftSignalLight",
   "Signal_R_F": "RightSignalLight",
   "Signal_L_R": "LeftSignalLight",
-  "Signal_R_R": "RightSignalLight"
+  "Signal_R_R": "RightSignalLight",
+  "RevLamp": "ReverseLight"
  },
  "mirror_components": {
   "LeftSideMirror_GEN_VARIABLE": "SideMirror",
@@ -13365,6 +13366,10 @@
   },
   "Signal_R_R": {
    "kind": "signal_tail",
+   "texture_slot": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF"
+  },
+  "RevLamp": {
+   "kind": "reverse",
    "texture_slot": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF"
   }
  },
@@ -14394,34 +14399,6 @@
  ],
  "signal_lamps": [
   {
-   "tag": "_R",
-   "from": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
-   "amber": true,
-   "box": [
-    -230,
-    -80,
-    50,
-    -190,
-    -17,
-    90
-   ],
-   "note": "rear indicators (left): amber texels of the tail clusters"
-  },
-  {
-   "tag": "_R",
-   "from": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
-   "amber": true,
-   "box": [
-    -230,
-    17,
-    50,
-    -190,
-    80,
-    90
-   ],
-   "note": "rear indicators (right)"
-  },
-  {
    "tag": "_F",
    "from": "Tex_SUPRA_BADGING",
    "amber": true,
@@ -15241,6 +15218,44 @@
     -200,
     43,
     62
+   ],
+   "abs_y": true
+  },
+  {
+   "from": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
+   "to": "Signal_L_R",
+   "box": [
+    -245,
+    -53.5,
+    55,
+    -180,
+    -40.5,
+    88
+   ],
+   "note": "Mk4 rear lamps like the AC Supra (user 2026-11-18): outer + third lamp tail/brake, second from outside turn signal, inner reverse"
+  },
+  {
+   "from": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
+   "to": "Signal_R_R",
+   "box": [
+    -245,
+    40.5,
+    55,
+    -180,
+    53.5,
+    88
+   ]
+  },
+  {
+   "from": "Tex_SUPRA_KIT00_BRAKELIGHT_OFF",
+   "to": "RevLamp",
+   "box": [
+    -245,
+    16,
+    55,
+    -180,
+    29.5,
+    88
    ],
    "abs_y": true
   }

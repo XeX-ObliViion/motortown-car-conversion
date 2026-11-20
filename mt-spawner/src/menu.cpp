@@ -72,7 +72,7 @@ std::vector<Entry> LoadEntries() {
         auto it = info.find(k);
         if (it != info.end())
             out.push_back({k, it->second->name, it->second->category, it->second->hidden});
-        else if (k.rfind("PS_", 0) == 0 || k.rfind("MW_", 0) == 0)
+        else if (k.rfind("PS_", 0) == 0 || k.rfind("MW_", 0) == 0 || k.rfind("HEAT_", 0) == 0)
             out.push_back({k, k, "Modded", false});
         else
             out.push_back({k, k, "Other", false});
@@ -164,6 +164,121 @@ std::vector<Player> LoadPlayers() {
         fclose(f);
     }
     return out;
+}
+
+// tab-separated lines of a file Lua writes in %LOCALAPPDATA%\MTSpawner
+std::vector<std::vector<std::string>> LoadTsv(const wchar_t* name) {
+    std::vector<std::vector<std::string>> out;
+    wchar_t buf[MAX_PATH];
+    GetEnvironmentVariableW(L"LOCALAPPDATA", buf, MAX_PATH);
+    std::wstring path = std::wstring(buf) + L"\\MTSpawner\\" + name;
+    if (FILE* f = _wfopen(path.c_str(), L"rb")) {
+        char line[1024];
+        while (fgets(line, sizeof line, f)) {
+            std::string l = line;
+            while (!l.empty() && (l.back() == '\n' || l.back() == '\r')) l.pop_back();
+            if (l.empty()) continue;
+            std::vector<std::string> cols;
+            for (size_t a = 0;;) {
+                size_t b = l.find('\t', a);
+                cols.push_back(l.substr(a, b == std::string::npos ? std::string::npos : b - a));
+                if (b == std::string::npos) break;
+                a = b + 1;
+            }
+            out.push_back(cols);
+        }
+        fclose(f);
+    }
+    return out;
+}
+
+// Companies (companies.txt: index, name, owner, money, added slots, corp) and the nearest construction site
+// (construction.txt: key, step, distance, delivered materials). Lua refreshes both when the Admin tab opens.
+void DrawCompaniesAndConstruction(bool host) {
+    static std::vector<std::vector<std::string>> cos, site;
+    static ULONGLONG loaded_at;
+    static int pick = -1;
+    static int amount = 1000000;
+    if (GetTickCount64() - loaded_at > 1000) {
+        cos = LoadTsv(L"companies.txt");
+        site = LoadTsv(L"construction.txt");
+        loaded_at = GetTickCount64();
+    }
+    ImGui::SeparatorText("Companies and corporations");
+    ImGui::BeginChild("companies", ImVec2(0, ImGui::GetTextLineHeightWithSpacing() * 5.5f), ImGuiChildFlags_Borders);
+    for (int i = 0; i < (int)cos.size(); i++) {
+        auto& c = cos[i];
+        if (c.size() < 6) continue;
+        std::string label = c[1] + (c[5] == "corp" ? "  [corporation]" : "") + "   owner " + c[2] + "   $" + c[3] +
+                            "   +" + c[4] + " slots##co" + c[0];
+        if (ImGui::Selectable(label.c_str(), pick == i)) pick = i;
+    }
+    if (cos.empty()) ImGui::TextDisabled("No companies known to this game yet (press Refresh).");
+    ImGui::EndChild();
+    if (ImGui::Button("Refresh")) ipc::Send("companies_refresh");
+    bool ok = pick >= 0 && pick < (int)cos.size() && cos[pick].size() >= 6;
+    std::string idx = ok ? cos[pick][0] : "";
+    ImGui::BeginDisabled(!ok);
+    ImGui::SetNextItemWidth(ImGui::GetFontSize() * 10);
+    ImGui::InputInt("##comoney", &amount, 10000, 1000000);
+    ImGui::SameLine();
+    if (ImGui::Button("Add money")) ipc::Send("company", {"money", idx, std::to_string(amount)});
+    ImGui::SameLine();
+    if (ImGui::Button("Remove money")) ipc::Send("company", {"money", idx, std::to_string(-amount)});
+    if (ImGui::Button("+1 vehicle slot")) ipc::Send("company", {"slot_add", idx});
+    ImGui::SameLine();
+    if (ImGui::Button("-1 vehicle slot")) ipc::Send("company", {"slot_remove", idx});
+    ImGui::EndDisabled();
+
+    ImGui::SeparatorText("Construction (nearest site within 150 m)");
+    if (site.empty() || site[0].size() < 4) {
+        ImGui::TextDisabled("No building under construction nearby. Walk up to one and press Refresh.");
+    } else {
+        auto& b = site[0];
+        ImGui::Text("%s  -  step %s  -  %s m away", b[0].c_str(), b[1].c_str(), b[2].c_str());
+        ImGui::TextWrapped("Delivered: %s", b[3].empty() ? "nothing yet" : b[3].c_str());
+        ImGui::BeginDisabled(!host);
+        if (ImGui::Button("Finish next step")) ipc::Send("finish_step");
+        ImGui::EndDisabled();
+        if (!host) ImGui::TextDisabled("Finishing works in your own world; on the server it needs the server-side admin mod.");
+    }
+}
+
+// Cargo (cargo.txt: id, cargo, count, from, to, km away; nearest first). Refresh asks Lua to re-read the jobs.
+void DrawCargo() {
+    static std::vector<std::vector<std::string>> jobs;
+    static ULONGLONG loaded_at;
+    static char filter[64];
+    static std::string pick;
+    if (GetTickCount64() - loaded_at > 1000) {
+        jobs = LoadTsv(L"cargo.txt");
+        loaded_at = GetTickCount64();
+    }
+    auto lower = [](std::string t) { for (auto& ch : t) ch = (char)tolower((unsigned char)ch); return t; };
+    ImGui::SeparatorText("Cargo");
+    if (ImGui::Button("Refresh jobs")) ipc::Send("cargo_refresh");
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(ImGui::GetFontSize() * 14);
+    ImGui::InputTextWithHint("##cargofilter", "search cargo or place (e.g. concrete)", filter, sizeof filter);
+    ImGui::BeginChild("cargo", ImVec2(0, ImGui::GetTextLineHeightWithSpacing() * 8.5f), ImGuiChildFlags_Borders);
+    std::string f = lower(filter);
+    for (auto& j : jobs) {
+        if (j.size() < 6) continue;
+        std::string label = j[1] + " x" + j[2] + "   " + j[3] + " -> " + j[4] + "   (pickup " + j[5] + " km" +
+                            (j.size() > 6 ? ", drop-off " + j[6] + " km" : "") + ")##job" + j[0];
+        if (!f.empty() && lower(label).find(f) == std::string::npos) continue;
+        if (ImGui::Selectable(label.c_str(), pick == j[0])) pick = j[0];
+    }
+    if (jobs.empty()) ImGui::TextDisabled("Press Refresh jobs.");
+    ImGui::EndChild();
+    ImGui::BeginDisabled(pick.empty());
+    if (ImGui::Button("Fetch (teleport, load, come back)")) ipc::Send("cargo_fetch", {pick});
+    ImGui::SameLine();
+    if (ImGui::Button("Load here")) ipc::Send("cargo_load", {pick});
+    ImGui::SameLine();
+    if (ImGui::Button("Go to pickup (with car)")) ipc::Send("cargo_goto", {pick});
+    ImGui::EndDisabled();
+    ImGui::TextDisabled("Loads a real job, so delivering it pays and counts toward construction.");
 }
 
 void DrawAdminTab(const State& s, bool can, bool host) {
@@ -289,6 +404,9 @@ void DrawAdminTab(const State& s, bool can, bool host) {
         State st = ipc::State();
         ipc::Send("style", {Get(st, "style", "1"), Get(st, "style_level", "4"), std::to_string(style_mult)});
     }
+
+    DrawCargo();
+    DrawCompaniesAndConstruction(host);
 }
 
 // Tuning tab: the boost picker for the ProStreet Adjustable Turbo. Lua reports the fitted turbo (turbo=<row>,
@@ -431,6 +549,11 @@ void DrawMenu(bool* open) {
     }
     if (admin_visible) {
         DrawAdminTab(s, can, host);
+        ImGui::EndTabItem();
+    }
+    if (ImGui::BeginTabItem("Hotkeys")) {
+        const Entry* hs = Find(g_selected);
+        DrawHotkeysTab(g_selected, hs ? hs->name : g_selected);
         ImGui::EndTabItem();
     }
     if (!ImGui::BeginTabItem("Spawner")) {

@@ -1,0 +1,15 @@
+{
+ "kind": "rims",
+ "car": "AC_Rims",
+ "out_dir": "~/mt-work/build/AC_Rims/meshes",
+ "cost": 1500,
+ "base_wheel": "Zino",
+ "two_tone": false,
+ "cars": [
+  {"car": "AC_SUPRA", "name": "AC Supra Mk4 TRD"},
+  {"car": "AC_GALLARDO", "name": "AC Gallardo"},
+  {"car": "AC_CIVICEG", "name": "AC Civic EG"},
+  {"car": "AC_RX7FD", "name": "AC RX-7 FD"},
+  {"car": "AC_UNICORN", "name": "AC Unicorn C5 drag"}
+ ]
+}

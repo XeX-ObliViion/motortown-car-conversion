@@ -177,9 +177,9 @@
      "to": "Gauges",
      "box": [
       0.88,
-      0.03,
+      0.0,
       1.0,
-      0.33
+      0.37
      ]
     }
    ]
@@ -773,9 +773,9 @@
    {
     "name": "Niddle_Speed",
     "loc": [
-     49.56,
-     -54.15,
-     65.22
+     49.61,
+     -46.5,
+     65.45
     ],
     "rot": [
      0,
@@ -786,9 +786,9 @@
    {
     "name": "Niddle_RPM",
     "loc": [
-     50.06,
-     -34.75,
-     67.11
+     49.61,
+     -32.5,
+     65.45
     ],
     "rot": [
      0,
@@ -799,9 +799,9 @@
    {
     "name": "Niddle_Fuel",
     "loc": [
-     50.06,
-     -43.34,
-     67.11
+     49.31,
+     -63.3,
+     64.3
     ],
     "rot": [
      0,
@@ -812,9 +812,9 @@
    {
     "name": "Niddle_Temp",
     "loc": [
-     50.06,
-     -26.5,
-     67.11
+     49.31,
+     -58.7,
+     64.3
     ],
     "rot": [
      0,
@@ -941,9 +941,9 @@
    {
     "name": "Niddle_Speed",
     "loc": [
-     49.56,
-     -54.15,
-     65.22
+     49.61,
+     -46.5,
+     65.45
     ],
     "rot": [
      0,
@@ -954,9 +954,9 @@
    {
     "name": "Niddle_RPM",
     "loc": [
-     50.06,
-     -34.75,
-     67.11
+     49.61,
+     -32.5,
+     65.45
     ],
     "rot": [
      0,
@@ -967,9 +967,9 @@
    {
     "name": "Niddle_Fuel",
     "loc": [
-     50.06,
-     -43.34,
-     67.11
+     49.31,
+     -63.3,
+     64.3
     ],
     "rot": [
      0,
@@ -980,9 +980,9 @@
    {
     "name": "Niddle_Temp",
     "loc": [
-     50.06,
-     -26.5,
-     67.11
+     49.31,
+     -58.7,
+     64.3
     ],
     "rot": [
      0,
@@ -1007,18 +1007,18 @@
  "gauge_faces": {
   "Tex_CHALLENGER71_INTERIOR": [
    {
-    "center": [
-     0.94,
-     0.278
-    ],
-    "face": [
-     0.94,
-     0.278,
-     0.028
-    ],
-    "radius": 0.024640000000000002,
     "aspect": 1.365,
     "rotate": 90,
+    "center": [
+     0.938,
+     0.2335
+    ],
+    "face": [
+     0.938,
+     0.2335,
+     0.0255
+    ],
+    "radius": 0.0225,
     "min": 0,
     "max": 150,
     "text_step": 20,
@@ -1033,21 +1033,29 @@
       90
      ]
     ],
-    "caption_font": 0.12
+    "caption_font": 0.12,
+    "ring": [
+     [
+      150,
+      150,
+      155
+     ],
+     0.06
+    ]
    },
    {
-    "center": [
-     0.925,
-     0.165
-    ],
-    "face": [
-     0.925,
-     0.165,
-     0.017
-    ],
-    "radius": 0.014960000000000001,
     "aspect": 1.365,
     "rotate": 90,
+    "center": [
+     0.938,
+     0.1518
+    ],
+    "face": [
+     0.938,
+     0.1518,
+     0.0255
+    ],
+    "radius": 0.0225,
     "min": 0,
     "max": 8,
     "text_step": 1,
@@ -1055,93 +1063,126 @@
     "start": 140,
     "end": 400,
     "red_from": 5.5,
-    "font": 0.24,
-    "captions": []
+    "font": 0.2,
+    "captions": [
+     [
+      "RPM x1000",
+      0.35,
+      90
+     ]
+    ],
+    "caption_font": 0.11,
+    "ring": [
+     [
+      150,
+      150,
+      155
+     ],
+     0.06
+    ]
    },
    {
-    "center": [
-     0.925,
-     0.215
-    ],
-    "face": [
-     0.925,
-     0.215,
-     0.017
-    ],
-    "radius": 0.014960000000000001,
     "aspect": 1.365,
     "rotate": 90,
+    "center": [
+     0.947,
+     0.3314
+    ],
+    "radius": 0.0115,
     "min": 0,
     "max": 1,
     "text_step": 1,
     "line_step": 0.25,
-    "start": 210,
-    "end": 330,
-    "font": 0.34,
+    "start": 225,
+    "end": 315,
+    "font": 0.38,
     "labels": {
      "0": "E",
      "1": "F"
-    }
+    },
+    "number_radius": 0.62
    },
    {
-    "center": [
-     0.925,
-     0.117
-    ],
-    "face": [
-     0.925,
-     0.117,
-     0.017
-    ],
-    "radius": 0.014960000000000001,
     "aspect": 1.365,
     "rotate": 90,
+    "center": [
+     0.947,
+     0.3046
+    ],
+    "radius": 0.0115,
     "min": 40,
     "max": 120,
     "text_step": 80,
     "line_step": 20,
-    "start": 210,
-    "end": 330,
-    "font": 0.34,
+    "start": 225,
+    "end": 315,
+    "font": 0.38,
     "labels": {
      "40": "C",
      "120": "H"
     },
-    "red_from": 110
+    "red_from": 110,
+    "number_radius": 0.62
    },
    {
-    "center": [
-     0.925,
-     0.066
-    ],
-    "face": [
-     0.925,
-     0.066,
-     0.017
-    ],
-    "radius": 0.014960000000000001,
     "aspect": 1.365,
     "rotate": 90,
+    "center": [
+     0.947,
+     0.0807
+    ],
+    "radius": 0.0115,
     "min": 0,
     "max": 10,
     "text_step": 5,
     "line_step": 1,
-    "start": 210,
-    "end": 330,
-    "font": 0.32,
+    "start": 225,
+    "end": 315,
+    "font": 0.38,
     "labels": {
      "0": "0",
-     "5": "5",
-     "10": "10"
+     "5": "50",
+     "10": "100"
     },
     "captions": [
      [
       "OIL",
-      0.45,
-      90
+      0.5,
+      270
      ]
     ],
-    "caption_font": 0.2
+    "caption_font": 0.3,
+    "number_radius": 0.62
+   },
+   {
+    "aspect": 1.365,
+    "rotate": 90,
+    "center": [
+     0.947,
+     0.0539
+    ],
+    "radius": 0.0115,
+    "min": -1,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 225,
+    "end": 315,
+    "font": 0.38,
+    "labels": {
+     "-1": "D",
+     "0": "",
+     "1": "C"
+    },
+    "captions": [
+     [
+      "AMP",
+      0.5,
+      270
+     ]
+    ],
+    "caption_font": 0.3,
+    "number_radius": 0.62
    }
   ]
  },
@@ -6904,5 +6945,69 @@
   "Speed": 0.5,
   "Fuel": 0.7,
   "Temp": 0.7
- }
+ },
+ "texture_paint": {
+  "Tex_CHALLENGER71_INTERIOR": [
+   {
+    "op": "wood",
+    "note": "1971 Rallye dash: woodgrain cluster panel, grain along the dash",
+    "box": [
+     0.893,
+     0.012,
+     0.983,
+     0.366
+    ],
+    "vertical": true,
+    "color": [
+     124,
+     74,
+     40
+    ]
+   },
+   {
+    "op": "wood",
+    "note": "wheel rim: walnut instead of flat tan",
+    "box": [
+     0.127,
+     0.9415,
+     0.359,
+     0.988
+    ],
+    "color": [
+     105,
+     58,
+     30
+    ]
+   },
+   {
+    "op": "pod",
+    "box": [
+     0.9045,
+     0.2932,
+     0.9715,
+     0.3428
+    ],
+    "color": [
+     14,
+     14,
+     15
+    ]
+   },
+   {
+    "op": "pod",
+    "box": [
+     0.9045,
+     0.0425,
+     0.9715,
+     0.0921
+    ],
+    "color": [
+     14,
+     14,
+     15
+    ]
+   }
+  ]
+ },
+ "rallye_note": "2026-10-31: cluster redrawn as the real 1971 R/T Rallye dash (woodgrain panel, round pods: fuel/temp combo, 150 mph speedo, 8K tach, oil/amp); was 1 speedo + 4 small dials on black"
 }

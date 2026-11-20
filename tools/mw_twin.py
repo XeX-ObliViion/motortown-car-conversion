@@ -10,7 +10,7 @@ import json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 COPY = ("wheels", "collision_boxes", "sockets", "part_overrides", "blueprint", "gauge_style", "gauge_ranges",
         "needle_color", "needle_scales", "dashboard", "gauge_faces", "emissive_slots", "texture_upscale", "texture_dirs",
-        "texture_gain", "grille_backing", "ai_upscale", "cost", "default_engine")
+        "texture_gain", "grille_backing", "ai_upscale", "cost", "default_engine", "drivetrain")
 AERO = ("FrontBumper", "RearBumper", "Bonnet", "SideSkirt", "Fender", "RearWing")
 
 

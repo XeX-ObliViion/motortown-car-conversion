@@ -57,7 +57,20 @@ DWORD WINAPI Boot(LPVOID) {
 
 }  // namespace
 
+#ifdef MT_PLUGIN
+// qxZap Plugin Loader build (plugins\mt_plugin_MTSpawner.dll): the loader owns version.dll, so the menu starts here
+// instead of from DllMain. The loader wants PluginInit to return 0 and do its work on its own thread.
+extern "C" __declspec(dllexport) int PluginInit(const void*) {
+    CloseHandle(CreateThread(nullptr, 0, Boot, nullptr, 0, nullptr));
+    return 0;
+}
+#endif
+
 BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID) {
+#ifdef MT_PLUGIN
+    if (reason == DLL_PROCESS_ATTACH) DisableThreadLibraryCalls(inst);
+    return TRUE;
+#endif
     if (reason == DLL_PROCESS_ATTACH) {
         DisableThreadLibraryCalls(inst);
         LoadReal();

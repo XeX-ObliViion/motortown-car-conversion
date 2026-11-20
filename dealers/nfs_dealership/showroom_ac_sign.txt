@@ -1,0 +1,9 @@
+# AC dealership rooftop sign: the 13 letters of one TOSAN TRAILERS wall (Tosan cell, centre (175411.8,82841.7,-21005), yaw 140,
+# facing yaw 230) re-lettered ASSETTO CORSA and stood where the Gangjung CAR DEALERSHIP billboard was (world (388486,1126637),
+# z -18702 + 30), facing the same way as the turned compound (yaw 180 -> letter yaw 90 -> tyaw -50).
+bbox 175000 175850 82450 83200
+pivot 175411.8 82841.7 -21005
+target 388486 1126637 -18672 -50
+prefix ACDS_
+onlymesh ^SM_Sign_3dText
+text 175000 175850 82450 83200 TOSANTRAILERS ASSETTO_CORSA 75

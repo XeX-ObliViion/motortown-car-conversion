@@ -1,0 +1,1618 @@
+{
+ "base_vehicle": "Fortem",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Windows",
+  "Tex_997TT_HEADLIGHT": "HeadLight",
+  "Tex_997TT_BRAKELIGHT": "TailLight",
+  "Tex_997TT_RIM": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_R_V": "ReverseLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -33,
+    -35.5,
+    4
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -33,
+    35.5,
+    4
+   ]
+  },
+  "cockpit_camera": [
+   -33,
+   -35.5,
+   92
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    9,
+    0,
+    103
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -15,
+    0,
+    108
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    191,
+    -64,
+    53
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    191,
+    64,
+    53
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    205,
+    62,
+    40
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    205,
+    -62,
+    40
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -218,
+    -62,
+    55
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -218,
+    62,
+    55
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    9.5,
+    19.9,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -8.4,
+    4.0,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -6.1,
+    7.8,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 1149
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
+  "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
+ },
+ "strip_part_slots": [
+  "Fender",
+  "SideSkirt"
+ ],
+ "wheel_part": true,
+ "car": "MW_997TT",
+ "display_name": "Porsche 911 Turbo (Most Wanted)",
+ "prefix": "997TT",
+ "geometry_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\997TT\\geo",
+ "texture_dir": "C:\\Users\\noust\\nfs-work/db\\mw\\997TT\\tex\\textures",
+ "out_dir": "C:/Users/noust/mt-work/build/MW_997TT/meshes",
+ "cost": 140000,
+ "wheel_display_name": "911 Turbo Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "0x191FC595": "Paint",
+  "0x12BA049C": "Tex_997TT_HEADLIGHT",
+  "0x1FC7575B": "Tex_997TT_MISC",
+  "0x5284E3AF": "Tex_997TT_BRAKELIGHT",
+  "0xAA8CFADB": "Tex_997TT_INTERIOR",
+  "0xABD7FEFB": "Tex_997TT_BADGING",
+  "0x02B52399": "Tex_997TT_BRAKELIGHT",
+  "0x267D188C": "LampGlass",
+  "0x29534DD5": "Tex_997TT_HEADLIGHT",
+  "0x3617DCFC": "Tex_997TT_BRAKELIGHT",
+  "0x68100815": "Tex_MWG_RADIATOR",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x7811C147": "Bottom",
+  "0xA532FC46": "Tex_997TT_HEADLIGHT",
+  "0xA7E6EA53": "Tex_997TT_HEADLIGHT",
+  "0xBD1F0E0A": "Bottom",
+  "0xE7E4EF49": "Glass",
+  "0xF68EF19F": "LampGlass",
+  "0x0AB88F5D": "Glass",
+  "0x4CDEBFCA": "Glass",
+  "0x60F8B13C": "Glass",
+  "0x427B4565": "Tex_MWG_INTERCOOLER",
+  "0x8C283C65": "Bottom",
+  "0xDA2CE957": "Tex_997TT_RIM"
+ },
+ "texture_sources": {
+  "Tex_997TT_HEADLIGHT": "0x12BA049C",
+  "Tex_997TT_MISC": "0x1FC7575B",
+  "Tex_997TT_BRAKELIGHT": "0xA32158CD",
+  "Tex_997TT_INTERIOR": "0xAA8CFADB",
+  "Tex_997TT_BADGING": "0xABD7FEFB",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_MWG_RADIATOR": "0x68100815",
+  "Tex_997TT_RIM": "0xDA2CE957"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BASE",
+     "drop_coincident_with": {
+      "prefix": "997TT",
+      "parts": [
+       "KIT00_FRONT_LEFT_WINDOW",
+       "KIT00_FRONT_RIGHT_WINDOW",
+       "KIT00_REAR_LEFT_WINDOW",
+       "KIT00_REAR_RIGHT_WINDOW",
+       "KIT00_FRONT_WINDOW",
+       "KIT00_REAR_WINDOW"
+      ],
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -136.8,
+      143.4
+     ]
+    },
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_LEFT_HEADLIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "skip_groups": [
+      1
+     ]
+    },
+    {
+     "part": "KIT00_REAR_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "skip_groups": [
+      1
+     ]
+    },
+    "KIT00_LEFT_BRAKELIGHT",
+    "KIT00_RIGHT_BRAKELIGHT"
+   ],
+   "drop_slots": [
+    "LampGlass"
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "LeftSideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     },
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -8.4,
+     4.0,
+     0
+    ]
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      143.4,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -136.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      143.4,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -136.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -136.8,
+      143.4
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "997TT",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "997TT",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      143.4,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -136.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -136.8,
+      143.4
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "997TT",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "997TT",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      143.4,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -136.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -136.8,
+      143.4
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "997TT",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "997TT",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      143.4,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -136.8
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -136.8,
+      143.4
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "997TT",
+      "tol": 1.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "997TT",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE01": {
+   "parts": [
+    {
+     "part": "STYLE01_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE02": {
+   "parts": [
+    {
+     "part": "STYLE02_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE08": {
+   "parts": [
+    {
+     "part": "STYLE08_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearWing_STOCK": {
+   "parts": [
+    {
+     "part": "KIT00_SPOILER",
+     "offset": [
+      195,
+      0,
+      -77
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     },
+     "groups": [
+      1
+     ]
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -6.1,
+     7.8,
+     0
+    ],
+    "mirror_frame": true
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_997TT_R",
+  "Wheel_R": "MW_997TT_L",
+  "SteeringWheel": "MW_997TT"
+ },
+ "wheels": {
+  "front_x": 116.5,
+  "rear_x": -116.4,
+  "half_track": 75,
+  "z": 18,
+  "rear_z": 20,
+  "radius": 33,
+  "auto_arches": true
+ },
+ "part_overrides": {
+  "Engine": "MW_997TT_F6",
+  "Transmission": "PS_997TT_6MT",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "MW_997TT",
+  "Wheel1": "MW_997TT",
+  "Wheel2": "MW_997TT",
+  "Wheel3": "MW_997TT",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "FrontBumper": "MW_997TT_FrontBumper_KIT00",
+  "RearBumper": "MW_997TT_RearBumper_KIT00",
+  "Bonnet": "MW_997TT_Bonnet_KIT00",
+  "RearWing": "MW_997TT_RearWing_STOCK"
+ },
+ "performance_source": "same drivetrain as PS_997TT: ProStreet vehicle.yml 997tt_track: MASS 1585, FINAL_GEAR 3.36, GEAR_RATIO R3.446/3.82/2.14/1.48/1.18/0.97/0.75, RED_LINE 6750, MAX_RPM 7750, TORQUE_SPLIT 0.5, turbocharger 6.5 psi",
+ "TODO": [
+  "render parts (tools/render_car.py) and fix texture_slots / Body parts",
+  "steering wheel extract (front render)",
+  "dial sockets + gauge_faces (uv_to_3d)",
+  "lamps: signal rules (amber survey / uv_box)",
+  "mirrors (fortem_mirror_aim for shared-mesh bases)",
+  "seats + cockpit_camera + RoomMirror",
+  "stance from arch edges (skill: stance reference per base)",
+  "sockets: exhaust / RearWing",
+  "kits: add_body_kits(_mw).py",
+  "skins (vinyl_check 0.58)",
+  "engine sound",
+  "dealer bay (user F6)"
+ ],
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    38
+   ],
+   "size": [
+    425,
+    180,
+    50
+   ]
+  },
+  {
+   "center": [
+    -25,
+    0,
+    88
+   ],
+   "size": [
+    200,
+    140,
+    52
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     28.56,
+     -36.05,
+     61.87
+    ],
+    "rot": [
+     -14.62,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -216,
+     -50,
+     18
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -216,
+     50,
+     18
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -195,
+     0,
+     77
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -30,
+     0,
+     115
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -222,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     11.917,
+     -7.05,
+     8.989
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -113.52
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     9.606,
+     1.68,
+     10.639
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -118.72
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     12.008,
+     10.18,
+     8.837
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -113.52
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     14.176,
+     16.14,
+     7.501
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -112.92
+    ]
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   12,
+   12,
+   14
+  ],
+  "ink": [
+   240,
+   240,
+   240
+  ],
+  "red_color": [
+   230,
+   40,
+   30
+  ],
+  "font_file": "bahnschrift.ttf",
+  "glow_color": [
+   235,
+   238,
+   255
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  255,
+  75,
+  20
+ ],
+ "needle_scales": {
+  "RPM": 0.709,
+  "Speed": 0.647,
+  "Fuel": 1.259,
+  "Temp": 1.038
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     42.36,
+     -43.1,
+     67.56
+    ],
+    "rot": [
+     0,
+     -90,
+     -98.9
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     40.54,
+     -34.37,
+     69.74
+    ],
+    "rot": [
+     0,
+     -90,
+     -104.1
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     42.41,
+     -25.87,
+     67.39
+    ],
+    "rot": [
+     0,
+     -90,
+     -98.9
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     44.17,
+     -19.91,
+     65.55
+    ],
+    "rot": [
+     0,
+     -90,
+     -98.3
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "mfd": {
+   "anchor": [
+    "Niddle_RPM"
+   ],
+   "up": -3.2,
+   "width": 4.4,
+   "height": 1.2,
+   "out": 0.25
+  }
+ },
+ "gauge_faces": {
+  "Tex_997TT_INTERIOR": [
+   {
+    "center": [
+     0.121,
+     0.2735
+    ],
+    "face": [
+     0.121,
+     0.2735,
+     0.0185
+    ],
+    "radius": 0.01628,
+    "aspect": 0.892,
+    "min": 0,
+    "max": 10,
+    "text_step": 5,
+    "line_step": 1,
+    "start": 210,
+    "end": 330,
+    "font": 0.32,
+    "labels": {
+     "0": "0",
+     "5": "5",
+     "10": "10"
+    },
+    "captions": [
+     [
+      "OIL",
+      0.45,
+      90
+     ]
+    ],
+    "caption_font": 0.2
+   },
+   {
+    "center": [
+     0.155,
+     0.265
+    ],
+    "face": [
+     0.155,
+     0.265,
+     0.0205
+    ],
+    "radius": 0.01804,
+    "aspect": 1.083,
+    "min": 0,
+    "max": 200,
+    "text_step": 40,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.204,
+     0.257
+    ],
+    "face": [
+     0.204,
+     0.257,
+     0.0225
+    ],
+    "radius": 0.019799999999999998,
+    "aspect": 1.156,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 6.8,
+    "font": 0.22,
+    "captions": [
+     [
+      "x1000",
+      0.22,
+      270
+     ]
+    ],
+    "caption_font": 0.11
+   },
+   {
+    "center": [
+     0.2525,
+     0.2655
+    ],
+    "face": [
+     0.2525,
+     0.2655,
+     0.0205
+    ],
+    "radius": 0.01804,
+    "aspect": 1.083,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.284,
+     0.274
+    ],
+    "face": [
+     0.284,
+     0.274,
+     0.0165
+    ],
+    "radius": 0.01452,
+    "aspect": 0.939,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_997TT_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_997TT_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "texture_upscale": {
+  "Tex_997TT_INTERIOR": 4
+ },
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures"
+ },
+ "ai_upscale": [
+  "Tex_997TT_INTERIOR",
+  "Tex_997TT_MISC",
+  "Tex_997TT_BADGING",
+  "Tex_997TT_ENGINE"
+ ],
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    27,
+    -35.5,
+    62.6
+   ],
+   "radius": 19,
+   "x_range": [
+    17,
+    36
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    28.5591,
+    -36.05055,
+    61.868449999999996
+   ],
+   "tilt_deg": 14.62
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_997TT_BADGING",
+  "Tex_MWG_GRILL01",
+  "Tex_MWG_GRILL02"
+ ],
+ "mw_kits": {
+  "front_split": 143.4,
+  "rear_split": -136.8
+ },
+ "paintable_texture_slots": [
+  "Tex_997TT_RIM"
+ ],
+ "lamp_slots": {
+  "Tex_997TT_HEADLIGHT": "head",
+  "Tex_997TT_BRAKELIGHT": "tail",
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_997TT_HEADLIGHT"
+  },
+  "Signal_L_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_997TT_BRAKELIGHT",
+   "mask_gain": 20
+  },
+  "Signal_L_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_997TT_BRAKELIGHT",
+   "mask_gain": 20
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_997TT_HEADLIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_overlay",
+   "texture_slot": "Tex_997TT_BRAKELIGHT",
+   "mask_gain": 20
+  },
+  "Signal_R_V": {
+   "kind": "reverse_overlay",
+   "texture_slot": "Tex_997TT_BRAKELIGHT",
+   "mask_gain": 20
+  }
+ },
+ "recentered": {
+  "LeftSideMirror": [
+   26.81,
+   -86.96,
+   76.17
+  ],
+  "RightSideMirror": [
+   26.81,
+   -86.96,
+   76.17
+  ]
+ },
+ "aero_parts": [
+  {
+   "row": "MW_997TT_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "Stock Front Bumper"
+  },
+  {
+   "row": "MW_997TT_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "Stock Rear Bumper"
+  },
+  {
+   "row": "MW_997TT_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_997TT_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_997TT_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_997TT_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_997TT_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_997TT_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_997TT_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_997TT_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_997TT_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_997TT_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_997TT_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_997TT_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_997TT_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE01",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE01",
+   "display_name": "Hood 1"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE02",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE02",
+   "display_name": "Hood 2"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_997TT_Bonnet_STYLE08",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE08",
+   "display_name": "Hood 8"
+  },
+  {
+   "row": "MW_997TT_RearWing_STOCK",
+   "slot": "RearWing",
+   "part_type": "RearWing",
+   "mesh": "Aero_RearWing_STOCK",
+   "display_name": "Stock Wing"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_997TT_HEADLIGHT",
+   "box": [
+    185,
+    -85,
+    8,
+    215,
+    85,
+    32
+   ],
+   "note": "front indicators: amber lamp units in the bumper intakes"
+  },
+  {
+   "tag": "_V",
+   "from": "Tex_997TT_BRAKELIGHT",
+   "copy": true,
+   "lift": 0.08,
+   "box": [
+    -225,
+    -56,
+    35,
+    -160,
+    56,
+    75
+   ],
+   "note": "reverse: inner end of each tail lamp's clear section (masked to clear texels)"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_997TT_BRAKELIGHT",
+   "copy": true,
+   "lift": 0.08,
+   "box": [
+    -225,
+    -100,
+    35,
+    -160,
+    -56,
+    75
+   ],
+   "note": "left indicator: outer end of the clear section"
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_997TT_BRAKELIGHT",
+   "copy": true,
+   "lift": 0.08,
+   "box": [
+    -225,
+    56,
+    35,
+    -160,
+    100,
+    75
+   ],
+   "note": "right indicator"
+  }
+ ],
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "slot_boxes": [
+  {
+   "meshes": [
+    "Body"
+   ],
+   "from": "Tex_997TT_MISC",
+   "to": "MirrorBacking",
+   "box": [
+    22.9,
+    78.5,
+    70.5,
+    30.6,
+    97,
+    82
+   ],
+   "abs_y": true,
+   "nx_max": -0.75,
+   "drop": true,
+   "note": "backing plate on the mirror glass plane (z-fights the live glass)"
+  }
+ ],
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_997TT_F6",
+    "base_row": "I6Sport_200HP",
+    "asset": "MW_997TT_F6",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "3.6 Twin-Turbo Flat-6 (Most Wanted 911 Turbo)",
+    "mass": 200,
+    "cost": 45000,
+    "max_torque_nm": 797.0,
+    "max_rpm": 7750,
+    "curve": [
+     [
+      0.1032,
+      0.3475
+     ],
+     [
+      0.1966,
+      0.5004
+     ],
+     [
+      0.277,
+      0.6134
+     ],
+     [
+      0.3348,
+      0.6682
+     ],
+     [
+      0.3853,
+      0.6948
+     ],
+     [
+      0.3968,
+      0.6965
+     ],
+     [
+      0.4637,
+      0.9092
+     ],
+     [
+      0.5,
+      1.0
+     ],
+     [
+      0.5871,
+      0.954
+     ],
+     [
+      0.7254,
+      0.8773
+     ],
+     [
+      0.8655,
+      0.8128
+     ],
+     [
+      1.0,
+      0.7791
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "ProStreet 997tt_track TORQUE (800..7750 rpm, 183..372 Nm) x turbocharger 6.5 psi from 3875 rpm (ramp 3075-3875); redline 6750, limiter 7750; scaled x1.513 to ~610 hp at 6700 rpm (the user: factory twin-turbo flat-6 ~610 hp)",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "MW_997TT",
+     "pitch_rpm": {
+      "idle": 1259,
+      "mid": 3850,
+      "high": 6690
+     },
+     "note": "loops cut from Most Wanted SOUND/ENGINE/GIN_POR_996.gin with tools/gin_loops.py (user 2026-11-02: recreated engines use the MW sound); 6 layers l1-l6 between the real idle and redline (user 2026-11-05: 3 loops broke up 2000-4500 rpm)",
+     "loops": [
+      [
+       "l1",
+       2076
+      ],
+      [
+       "l2",
+       2650
+      ],
+      [
+       "l3",
+       3264
+      ],
+      [
+       "l4",
+       4187
+      ],
+      [
+       "l5",
+       5210
+      ],
+      [
+       "l6",
+       6530
+      ]
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -41,7 +41,14 @@ PAK_SRC = {"client": "/d/SteamLibrary/steamapps/common/Motor Town/MotorTown/Cont
            "server": os.path.expanduser("~/mt-server/local/MotorTown/Content/Paks/MotorTown-WindowsServer.pak")}
 REPAK = os.path.expanduser("~/tools/repak/bin/repak.exe")
 WORK = os.path.expanduser(f"~/mt-work/economy_{TARGET}")
-OUT = os.path.expanduser("~/mt-work/build/server/NFS_Economy_P.pak" if TARGET == "server" else "~/mt-work/build/NFS_Economy_P.pak")
+# 0.7.20: priority 999 (above qxZap's DataTable Framework _99, which ships its own GameResource): the old name
+# NFS_Economy_P.pak is retired
+OUT = os.path.expanduser("~/mt-work/build/server/NFS_Economy_999_P.pak" if TARGET == "server" else "~/mt-work/build/NFS_Economy_999_P.pak")
+# the framework's own GameResource only repoints the Decals table to /Game/DataTableFramework/Decals/Decals: ours is
+# built from the game's file (client, or the server's versioned one) with that same change (DTF=0: left out)
+DTF = os.environ.get("DTF", "1") == "1"
+# 0.7.20: the game's Cargos is a composite of these two tables (the framework's Cargos lists them as parents too)
+CARGO_TABLES = ("Cargos_01", "Cargos_Deprecated")
 GAME_PAKS = "D:/SteamLibrary/steamapps/common/Motor Town/MotorTown/Content/Paks"
 
 
@@ -56,14 +63,16 @@ def main():
     key = open(os.path.expanduser("~/mt-work/aes.key")).read().strip()
     src = os.path.join(WORK, "src")
     os.makedirs(src)
-    for name in ("Cargos", "GameResource"):
+    for name in CARGO_TABLES + ("GameResource",):
         for ext in ("uasset", "uexp"):
             data = subprocess.check_output([REPAK, "--aes-key", key, "get", sh(PAK_SRC[TARGET]), f"MotorTown/Content/DataAsset/{name}.{ext}"])
             open(os.path.join(src, f"{name}.{ext}"), "wb").write(data)
 
     # cargo table: every delivery BASE x, the hard ones HARD x
-    t = m.tojson(os.path.join(src, "Cargos.uasset"), os.path.join(WORK, "Cargos.json"))
-    rows = {r["Name"]: r for r in t["Exports"][0]["Table"]["Data"]}
+    rows, tabs = {}, {}
+    for tn in CARGO_TABLES:
+        tabs[tn] = m.tojson(os.path.join(src, tn + ".uasset"), os.path.join(WORK, tn + ".json"))
+        rows.update({r["Name"]: r for r in tabs[tn]["Exports"][0]["Table"]["Data"]})
     missing = [c for c in HARD_CARGO + FARM_CARGO if c not in rows]
     if missing:
         print("not in this game version:", missing)
@@ -73,7 +82,8 @@ def main():
             if p["Name"] in PAY_FIELDS and isinstance(p.get("Value"), (int, float)):
                 v = p["Value"] * mult
                 p["Value"] = int(round(v)) if isinstance(p["Value"], int) else float(v)
-    m.fromjson(t, os.path.join(WORK, "Cargos_out.json"), os.path.join(stage, "MotorTown/Content/DataAsset/Cargos.uasset"))
+    for tn, t in tabs.items():
+        m.fromjson(t, os.path.join(WORK, tn + "_out.json"), os.path.join(stage, "MotorTown/Content/DataAsset/%s.uasset" % tn))
 
     # balance table (DataAsset/GameResource): taxi pay per 100 m, like the old Easy Money mod (x1000 there). Reading
     # the value from memory showed the vanilla 25, but a real taxi ride paid the new rate (2026-10-27): it works.
@@ -88,6 +98,13 @@ def main():
             for x in o: scale(x)
     scale(t)
     print("balance fields scaled:", hits)
+    if DTF:
+        for i, n_ in enumerate(t["NameMap"]):
+            if n_ == "/Game/DataAsset/Decals":
+                t["NameMap"][i] = "/Game/DataTableFramework/Decals/Decals"
+        for imp in t["Imports"]:
+            if imp["ObjectName"] == "/Game/DataAsset/Decals":
+                imp["ObjectName"] = "/Game/DataTableFramework/Decals/Decals"; print("decals -> DataTable Framework")
     m.fromjson(t, os.path.join(WORK, "GameResource_out.json"), os.path.join(stage, "MotorTown/Content/DataAsset/GameResource.uasset"))
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

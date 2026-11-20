@@ -27,7 +27,7 @@ def main():
     designs = sorted({m.group(1) for f in os.listdir(geo) for m in [re.match(r"(\w+_STYLE\d\d)_%s_\d\d_A\.dae$" % size, f)] if m})
     gspec = {"car": spec["car"], "geometry_dir": geo, "prefix": "", "out_dir": out_root, "texture_dir": tex,
              "source_scale": spec.get("source_scale", 100.0), "default_slot": "Trim",
-             "texture_slots": {TYRE: "Bottom", CHROME: "Trim", "0xE38806E3": "Bottom"}, "meshes": {}, "mesh_names": {},
+             "texture_slots": {TYRE: "Bottom", CHROME: "Tex_RIMLIP", "0xE38806E3": "Bottom"}, "meshes": {}, "mesh_names": {},
              "texture_sources": {}}
     rims = []
     for i, dsn in enumerate(designs, 1):
@@ -53,8 +53,10 @@ def main():
     textures = P.write_textures(gspec)
     build_dir = os.path.dirname(out_root)
     rim_slots = sorted(textures)
+    textures["Tex_RIMLIP"] = P.rim_lip_png(build_dir)
     json.dump({"car": spec["car"], "meshes": meshes, "textures": textures,
-               "final_slot_names": {s_: "Wheel_01" for s_ in rim_slots}, "paintable_texture_slots": rim_slots},
+               "final_slot_names": dict({s_: "Wheel_01" for s_ in rim_slots}, Tex_RIMLIP="Wheel_02"),
+               "paintable_texture_slots": rim_slots + ["Tex_RIMLIP"]},
               open(os.path.join(build_dir, "car.json"), "w"), indent=1)
     json.dump(rims, open(os.path.join(build_dir, "rims.json"), "w"), indent=1)
     print("%d MW rims, %d meshes, %d textures -> %s" % (len(rims), len(meshes), len(textures), build_dir))

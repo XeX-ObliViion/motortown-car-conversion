@@ -1,8 +1,9 @@
 #!/bin/sh
 # Pull newer mod paks from the Bisect server into the local copies (the user's friend also updates the server).
 #   sh sync_from_server.sh          -> report only
-#   sh sync_from_server.sh --pull   -> download every server pak with a different size, or uploaded 30+ min after our copy
-#                                      (our own uploads land a few minutes after the build)
+#   sh sync_from_server.sh --pull   -> download every server pak uploaded 30+ min after our copy (or missing locally)
+#                                      (our own uploads land a few minutes after the build; a different size with our
+#                                      copy newer is only reported: that's an unuploaded local build, never overwrite it)
 # Server paks are WindowsServer builds: they go to ~/mt-work/build/server and the local server test copy
 # (~/mt-server/local), never into the client game (client paks come from the friend's modpack zip).
 # Replaced files are kept in ~/mt-work/build/server/replaced/<date>/.
@@ -17,7 +18,9 @@ mkdir -p "$LOCAL"
     lsize=$( [ -f "$f" ] && stat -c %s "$f" || echo 0 )
     lt=$( [ -f "$f" ] && date -r "$f" +%s || echo 0 )
     st=$(date -d "$day ${time%%.*}" +%s)
-    if [ "$lsize" != "$size" ] || [ "$st" -gt "$((lt + 1800))" ]; then
+    if [ "$lsize" != "$size" ] && [ "$st" -le "$((lt + 1800))" ]; then
+        echo "ours newer (not uploaded yet): $name"
+    elif [ "$st" -gt "$((lt + 1800))" ]; then
         echo "newer on server: $name ($size bytes, $day ${time%%.*}; ours $lsize)"
         if [ "$1" = --pull ]; then
             bak="$LOCAL/replaced/$(date +%Y-%m-%d)"; mkdir -p "$bak"

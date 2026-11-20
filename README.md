@@ -35,6 +35,17 @@ Cars converted from EA games are for personal use; don't publish them.
 Paths in the scripts and the skill are the original author's (`C:\Users\noust\...`, `D:\SteamLibrary\...`);
 change them to yours, or let Claude Code adapt them while it follows the skill.
 
+## What's new (2026-11-20)
+- **Game 0.7.20:** turbo parts write both the Gasoline and Diesel fuel sub-structs (`make_mt_assets.py`); new paks start disabled in the game's mod review list.
+- **Assetto Corsa cars** (`tools/kn5_to_obj.py`, `ac_cut_loops.py`, `ac_rims.py`): 8 Second Shootout Supra / Gallardo / Civic EG / RX-7 FD / Unicorn C5, Silverado, F40 (`cars/ac_*.json`). Dense meshes use per-mesh `reduce`.
+- **NFS Heat and BeamNG cars** (`tools/heat/`, `cars/heat_*.json`, `cars/bng_*.json`).
+- **Pop-up headlights** (`tools/make_popup.py`, `ue_scripts/import_popup.py`): a Headlight part with a skeletal pod mesh + open animation; pods painted natively via blueprint `cdo_names {BodyMaterialName}`. RX-7 FC builds its pods from MW's raised-pod hood (`tools/spec_gen/make_rx7fc_spec.py`).
+- **Spec generators** (`tools/spec_gen/`): one script per car writes `cars/<car>.json`; kit fixups (x_clip seams, lifted skirts, widebody keep boxes, double-sided vent shells) run after `add_body_kits_mw.py`.
+- **Gates:** `check_gauges.py` and `check_mirrors.py` must pass before a build; `aim_mirrors.py` aims every mirror from this car's eye; `render_cockpit.py` / `render_body.py` for quick checks.
+- **Cabin swaps:** parts can come from another game's geometry (`geo`, `prefix`, `xform`), e.g. the AC Supra cabin in the MW Supra (`tools/spec_gen/mw_supra_accabin.py`).
+- **Gauges:** `drop_uv_boxes` removes a source model's static 3D needles; `emissive_slots.glow_circles` backlights dials kept as source art; `masked_texture_slots` for badge atlases with alpha.
+- **F8 menu:** works under qxZap's Plugin Loader (`mt_plugin_MTSpawner.dll`), 0.7.20 flip fix, server-side spawn via MTAdminServer.
+
 ## What's new (2026-10-31)
 - **Most Wanted twins** (`tools/mw_twin.py`, `tools/mw_materials.py`): build a car on its own MW body (so MW body kits fit natively), copying drivetrain, stance, blueprint and gauges from an existing ProStreet port, and mapping MW materials to Motor Town slots by texture. Examples: `cars/mw_supra.json`, `mw_viper.json`, `mw_elise.json`, `mw_350z.json`.
 - **One-piece bodies on door bases:** `drop_coincident_with` takes `keep_only` (cut doors out of a one-piece body along a reference car's door panels).

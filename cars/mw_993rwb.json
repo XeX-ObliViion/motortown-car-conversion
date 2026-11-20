@@ -619,8 +619,8 @@
    "planar_uv": {},
    "counter_rotate": {
     "rot": [
-     -4.3,
-     7.6,
+     -4.0,
+     8.4,
      0
     ]
    }
@@ -632,7 +632,8 @@
      "slot": "Mirror",
      "groups": [
       4
-     ]
+     ],
+     "mirror": true
     }
    ],
    "drop_boxes": [
@@ -649,8 +650,8 @@
    "planar_uv": {},
    "counter_rotate": {
     "rot": [
-     -2.8,
-     3.8,
+     -2.7,
+     4.6,
      0
     ],
     "mirror_frame": true
@@ -1000,13 +1001,13 @@
     0
    ],
    "LeftSideMirror_GEN_VARIABLE": [
-    -4.3,
-    7.6,
+    -4.0,
+    8.4,
     0
    ],
    "RightSideMirror_GEN_VARIABLE": [
-    -2.8,
-    3.8,
+    -2.7,
+    4.6,
     0
    ]
   }
@@ -1069,12 +1070,37 @@
     "sound_cue": {
      "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
      "dir": "MW_993RWB",
-     "pitch_rpm": {
-      "idle": 3550,
-      "mid": 5296,
-      "high": 7295
-     },
-     "note": "loops from MW SOUND/ENGINE/GIN_964.gin (air-cooled flat-6; Rework assigns hon_s2k_b to this car)"
+     "note": "l1-l3 from MW GIN_POR_DP6 (flat-6 recorded down to 1240 rpm; GIN_964 starts at 3420), l4-l7 from GIN_964",
+     "loops": [
+      [
+       "l1",
+       1244
+      ],
+      [
+       "l2",
+       1825
+      ],
+      [
+       "l3",
+       2599
+      ],
+      [
+       "l4",
+       3480
+      ],
+      [
+       "l5",
+       4297
+      ],
+      [
+       "l6",
+       5296
+      ],
+      [
+       "l7",
+       6595
+      ]
+     ]
     }
    }
   ],
@@ -1108,8 +1134,8 @@
   "Tire3": "PerformanceTire_46",
   "Wheel0": "MW_993RWB",
   "Wheel1": "MW_993RWB",
-  "Wheel2": "MW_993RWB",
-  "Wheel3": "MW_993RWB",
+  "Wheel2": "MW_993RWB_REAR",
+  "Wheel3": "MW_993RWB_REAR",
   "BrakePad0": "BrakePad_Small_02",
   "BrakePad1": "BrakePad_Small_02",
   "BrakePad2": "BrakePad_Small_02",
@@ -1703,7 +1729,7 @@
  ],
  "mirror_components": {
   "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
-  "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror:mirror"
  },
  "mirror_meshes": {
   "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
@@ -1715,9 +1741,9 @@
    80.47
   ],
   "RightSideMirror": [
-   35.84,
-   -79.27,
-   80.47
+   27.68,
+   -78.89,
+   80.85
   ]
  },
  "gauge_style": {
@@ -1767,5 +1793,10 @@
   "Speed": 0.592,
   "Fuel": 0.852,
   "Temp": 0.387
- }
+ },
+ "mirror_check": {
+  "hidden_max": 0.3,
+  "note": "left mirror partly behind the RWB roll-cage A-pillar tube and the pillar gauge pod (real car)"
+ },
+ "rear_wheel_part": true
 }

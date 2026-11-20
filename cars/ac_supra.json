@@ -1,0 +1,1606 @@
+{
+ "car": "AC_SUPRA",
+ "display_name": "Toyota Supra (8 Second Shootout)",
+ "prefix": "AC_SUPRA",
+ "base_vehicle": "Magis",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/toyota_supra_nasher/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/toyota_supra_nasher/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_SUPRA/meshes",
+ "cost": 95000,
+ "wheel_display_name": "CCW Drag (8 Second Shootout)",
+ "wheel_part": true,
+ "skip_parts": [
+  "COCKPIT_LR",
+  "STEER_LR",
+  "SUPRA_LOD_A_LR_SEATS"
+ ],
+ "texture_slots": {
+  "supra_body": "Paint",
+  "supra_glass": "Glass",
+  "supra_int_windows": "Glass",
+  "supra_ext_windows_seam": "Glass",
+  "supra_interior_glass": "Glass",
+  "supra_mirror": "Mirror",
+  "supra_exterior_plastic": "Bottom",
+  "supra_exterior_rubber": "Bottom",
+  "supra_exterior_window_frame": "Bottom",
+  "supra_exterior_underside": "Bottom",
+  "BLACK": "Bottom",
+  "Interior_black": "Bottom",
+  "supra_exterior_metal": "Trim",
+  "chrome": "Trim",
+  "EXH": "Trim",
+  "supra_exterior_lights": "Tex_AC_SUPRA_HEADLIGHT",
+  "supra_glass_detail": "Glass",
+  "supra_exterior_lights_mask": "Bottom",
+  "supra_exterior_light_detail": "Tex_AC_SUPRA_LIGHTPLASTIC",
+  "supra_defrost": "Tex_AC_SUPRA_DEFROST",
+  "Carbon": "Paint",
+  "TRD_emblem": "Tex_AC_SUPRA_TRD",
+  "intercooller": "Tex_AC_SUPRA_INTERCOOLER",
+  "coller": "Tex_AC_SUPRA_COOLER",
+  "plate_1": "Tex_AC_SUPRA_PLATE",
+  "plate_number": "Tex_AC_SUPRA_PLATE_NUMBER",
+  "supra_interior_details": "Tex_AC_SUPRA_INT_DETAILS",
+  "supra_interior_pedals": "Tex_AC_SUPRA_INT_DETAILS",
+  "supra_interior_needles": "Tex_AC_SUPRA_INT_DETAILS",
+  "supra_interior_plastic_detail": "Tex_AC_SUPRA_INT_PLASTICS",
+  "supra_interior_metal": "Tex_AC_SUPRA_INT_PLASTICS",
+  "supra_interior_seatbelt": "Tex_AC_SUPRA_SEATBELT",
+  "supra_interior_shift_base": "Tex_AC_SUPRA_SHIFTER",
+  "supra_interior_shift_top": "Tex_AC_SUPRA_SHIFTER",
+  "supra_interior_car_paint": "Paint",
+  "supra_interior_dash": "Tex_AC_SUPRA_INT_AO",
+  "supra_interior_leather": "Tex_AC_SUPRA_INT_AO",
+  "supra_interior_leather_seats": "Tex_AC_SUPRA_INT_AO",
+  "supra_interior_carpet": "Tex_AC_SUPRA_INT_AO",
+  "supra_interior_rubber": "Tex_AC_SUPRA_INT_AO",
+  "supra_interior_steer_01": "Tex_AC_SUPRA_STEER",
+  "supra_interior_steer_02": "Tex_AC_SUPRA_STEER",
+  "EXT_tyres": "Tex_AC_SUPRA_TIRE",
+  "MAZ_MX5_RADBUL_TIRE": "Tex_AC_SUPRA_TIRE_R",
+  "MAZ_MX5_RADBUL_TREAD": "Tex_AC_SUPRA_TREAD_R",
+  "wheel_color": "Trim",
+  "center_colts": "Trim",
+  "bolts_001": "Trim",
+  "Bolt_plus": "Bottom",
+  "ac_Material": "Trim",
+  "ac_Material_003": "Bottom",
+  "AP_racing": "Tex_AC_SUPRA_CALIPER",
+  "EXT_Disc": "Tex_AC_SUPRA_DISC",
+  "cap_color__CCW_LOGO_dark_jpg": "Tex_AC_SUPRA_CCW",
+  "ac_Material #25": "Tex_AC_SUPRA_CCW",
+  "plate_light_number": "Bottom",
+  "supra_exterior_radiator": "Bottom",
+  "supra_interior_LR": "Bottom",
+  "supra_interior_LR_seats": "Bottom",
+  "supra_interior_black_grade": "Bottom",
+  "supra_interior_fuel_switch": "Tex_AC_SUPRA_FUEL_LIGHT",
+  "supra_interior_speakers": "Bottom",
+  "supra_interior_step": "Trim",
+  "__lightglass_texture": "Tex_AC_SUPRA_LIGHTGLASS"
+ },
+ "texture_sources": {
+  "Tex_AC_SUPRA_HEADLIGHT": "exterior_lights_diffuse.dds",
+  "Tex_AC_SUPRA_LIGHTGLASS": "exterior_lights_glass_diffuse.dds",
+  "Tex_AC_SUPRA_LIGHTPLASTIC": "exterior_light_plastic_diff.dds",
+  "Tex_AC_SUPRA_DEFROST": "exterior_defrost_lines.dds",
+  "Tex_AC_SUPRA_CARBON": "Carbon_Wing_D.dds",
+  "Tex_AC_SUPRA_TRD": "trd_emblem.dds",
+  "Tex_AC_SUPRA_INTERCOOLER": "intercoll.dds",
+  "Tex_AC_SUPRA_COOLER": "cooler.dds",
+  "Tex_AC_SUPRA_PLATE": "plate.png",
+  "Tex_AC_SUPRA_PLATE_NUMBER": "number.png",
+  "Tex_AC_SUPRA_INT_DETAILS": "interior_details_diff.dds",
+  "Tex_AC_SUPRA_INT_PLASTICS": "interior_plastics_metals_diff.dds",
+  "Tex_AC_SUPRA_SEATBELT": "interior_seatbelt_diff.dds",
+  "Tex_AC_SUPRA_SHIFTER": "interior_shifter_diff.dds",
+  "Tex_AC_SUPRA_INT_AO": "interior_AO.dds",
+  "Tex_AC_SUPRA_TIRE": "Tyre_D.dds",
+  "Tex_AC_SUPRA_TIRE_R": "00b880b0.dds",
+  "Tex_AC_SUPRA_TREAD_R": "000b1960.dds",
+  "Tex_AC_SUPRA_CALIPER": "Ap_racing_D.dds",
+  "Tex_AC_SUPRA_DISC": "Brake_Disk_D.dds",
+  "Tex_AC_SUPRA_CCW": "CCW_LOGO_dark.jpg",
+  "Tex_AC_SUPRA_FUEL_LIGHT": "Fuel Light.dds",
+  "Tex_AC_SUPRA_STEER": "interior_AO.dds"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "SUPRA_BODY06",
+    "SUPRA_EXT_PLASTIC_001",
+    "SUPRA_EXT_RUBBER_001",
+    "SUPRA_EXT_FUEL_TANK",
+    "SUPRA_EXT_METAL_DETAILS",
+    "SUPRA_EXT_UNDERSIDE_002",
+    "SUPRA_EXT_PLASTIC_003",
+    "SUPRA_EXT_WINDOW_FRAME",
+    "FRONT_BUMPER",
+    "REAR_BUMPER",
+    "MOTORHOOD",
+    "TRD_WING",
+    "TRUNK_EMBLEM",
+    "EXH_B_M_SHINY",
+    "INTERCOOLER",
+    "SUPRA_RADIATOR",
+    "SUPRA_EXT_FRONT_LIGHTS",
+    {
+     "part": "SUPRA_LIGHTS",
+     "slot": "TailAC"
+    },
+    "SUPRA_LIGHTS_GLASS",
+    "SUPRA_LIGHTS_GLASS_002",
+    "SUPRA_GLASS_EXT_REAR_LIGHTS",
+    "SUPRA_FRONT_LIGHT_MAIN_MASK",
+    {
+     "part": "SUPRA_FRONT_LIGHT_MAIN_001",
+     "slot": "HeadAC"
+    },
+    {
+     "part": "SUPRA_FRONT_LIGHT_MAIN_002",
+     "slot": "HeadAC"
+    },
+    {
+     "part": "SUPRA_FRONT_LIGHT_MAIN_003",
+     "slot": "HeadAC"
+    },
+    {
+     "part": "SUPRA_FRONT_LIGHT_BULBS",
+     "slot": "HeadAC"
+    },
+    "SUPRA_GLASS_EXT_FRONT",
+    "SUPRA_GLASS_INT_FRONT",
+    "SUPRA_GLASS_EXT_REAR",
+    "SUPRA_GLASS_INT_REAR",
+    "SUPRA_GLASS_EXT_DEFROST",
+    "SUPRA_GLASS_INT_DEFROST",
+    "SUPRA_GLASS_EXT_SIDE",
+    "SUPRA_GLASS_EXT_SIDE001",
+    "SUPRA_WIPER_00",
+    "SUPRA_WIPER_05",
+    "SUPRA_WIPER_08",
+    {
+     "part": "COCKPIT_HR",
+     "skip_groups": [
+      38,
+      39,
+      40,
+      42
+     ],
+     "note": "AC needles of speedo/tach/temp/fuel out (game needles); boost needle stays"
+    },
+    "SHIFT_BASE",
+    "SUPRA_INT_SHIFT_BASE",
+    "SUPRA_BRAKE04",
+    "SUPRA_BRAKE05",
+    "SUPRA_BRAKE_RING",
+    {
+     "part": "DOOR_L",
+     "skip_groups": [
+      0
+     ]
+    },
+    {
+     "part": "DOOR_R",
+     "skip_groups": [
+      0
+     ]
+    },
+    "SUSP_LR",
+    "SUSP_RR",
+    {
+     "part": "WHEEL_LR",
+     "groups": [
+      9
+     ]
+    },
+    {
+     "part": "WHEEL_RR",
+     "groups": [
+      9
+     ]
+    },
+    "STEER_HR"
+   ],
+   "reduce": 0.5,
+   "uv_split": [
+    {
+     "from": "Tex_AC_SUPRA_INT_DETAILS",
+     "to": "Gauges",
+     "box": [
+      0,
+      -1.0,
+      1.0,
+      -0.57
+     ],
+     "box3d": [
+      33,
+      14,
+      66,
+      44,
+      58,
+      86
+     ]
+    },
+    {
+     "from": "TailAC",
+     "to": "ReverseLamp",
+     "box": [
+      0.72,
+      -0.29,
+      1.0,
+      0.0
+     ],
+     "box3d": [
+      -260,
+      -100,
+      40,
+      -150,
+      100,
+      110
+     ],
+     "note": "clear round reverse lens art"
+    },
+    {
+     "from": "Glass",
+     "to": "AmberLens",
+     "box": [
+      0,
+      -1.0,
+      0.25,
+      -0.75
+     ],
+     "box3d": [
+      -232,
+      -100,
+      45,
+      -188,
+      100,
+      90
+     ]
+    },
+    {
+     "from": "Glass",
+     "to": "RedLens",
+     "box": [
+      0.25,
+      -1.0,
+      0.75,
+      -0.75
+     ],
+     "box3d": [
+      -232,
+      -100,
+      45,
+      -188,
+      100,
+      90
+     ]
+    },
+    {
+     "from": "Glass",
+     "to": "ClearLens",
+     "box": [
+      0.75,
+      -1.0,
+      1.0,
+      -0.75
+     ],
+     "box3d": [
+      -232,
+      -100,
+      45,
+      -188,
+      100,
+      90
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     6,
+     -14,
+     102,
+     23,
+     14,
+     113.5
+    ]
+   ],
+   "drop_slots": [
+    "Tex_AC_SUPRA_CALIPER",
+    "Tex_AC_SUPRA_DISC"
+   ]
+  },
+  "SideMirror": {
+   "parts": [
+    {
+     "part": "DOOR_L",
+     "groups": [
+      0
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -1.5,
+     -14.4,
+     0
+    ]
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -127.75,
+      77.5,
+      -33.7
+     ]
+    }
+   ],
+   "reduce": 0.35
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -128.95,
+      -77.5,
+      -33.7
+     ]
+    }
+   ],
+   "reduce": 0.35
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      126.25,
+      79.5,
+      -33.7
+     ],
+     "skip_groups": [
+      9
+     ]
+    }
+   ],
+   "reduce": 0.35
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      125.1,
+      -79.5,
+      -33.7
+     ],
+     "skip_groups": [
+      9
+     ]
+    }
+   ],
+   "reduce": 0.35
+  },
+  "RightSideMirror": {
+   "parts": [
+    {
+     "part": "DOOR_R",
+     "groups": [
+      0
+     ],
+     "slot": "Mirror",
+     "mirror": true,
+     "note": "own right glass (sits 1.5 cm off the mirrored left)"
+    }
+   ],
+   "recenter": true,
+   "planar_uv": {},
+   "counter_rotate": {
+    "rot": [
+     -2.6,
+     4.0,
+     0
+    ],
+    "mirror_frame": true
+   }
+  }
+ },
+ "wheels": {
+  "front_x": 128.4,
+  "rear_x": -125.6,
+  "half_track": 77.5,
+  "rear_half_track": 79.5,
+  "z": 31,
+  "rear_z": 32,
+  "radius": 30.5,
+  "auto_arches": false
+ },
+ "performance": {
+  "drivetrain": "RWD",
+  "mass_kg": 1477,
+  "gears": [
+   3.8,
+   2.36,
+   1.69,
+   1.31,
+   1.0,
+   0.79
+  ],
+  "reverse": -3.153,
+  "final_drive": 2.88,
+  "rev_limit": 8500,
+  "idle": 980,
+  "turbo": {
+   "max_boost": 3.8,
+   "reference_rpm": 5000,
+   "gamma": 3
+  },
+  "na_peak_torque_nm": 351.0,
+  "boosted_peak_torque_nm": 1512,
+  "boosted_peak_torque_rpm": 5000,
+  "boosted_peak_power_kw": 981,
+  "boosted_peak_power_rpm": 8000,
+  "torque_curve_rpm_nm": [
+   [
+    0,
+    0
+   ],
+   [
+    500,
+    153
+   ],
+   [
+    900,
+    183
+   ],
+   [
+    1000,
+    185
+   ],
+   [
+    1100,
+    192
+   ],
+   [
+    1200,
+    195
+   ],
+   [
+    1300,
+    197
+   ],
+   [
+    1400,
+    206
+   ],
+   [
+    1500,
+    215
+   ],
+   [
+    1600,
+    236
+   ],
+   [
+    1700,
+    253
+   ],
+   [
+    1800,
+    259
+   ],
+   [
+    1900,
+    266
+   ],
+   [
+    2000,
+    274
+   ],
+   [
+    2100,
+    282
+   ],
+   [
+    2200,
+    291
+   ],
+   [
+    2300,
+    315
+   ],
+   [
+    2400,
+    327
+   ],
+   [
+    2500,
+    354
+   ],
+   [
+    2600,
+    368
+   ],
+   [
+    2700,
+    400
+   ],
+   [
+    2800,
+    434
+   ],
+   [
+    2900,
+    470
+   ],
+   [
+    3000,
+    510
+   ],
+   [
+    3100,
+    553
+   ],
+   [
+    3200,
+    599
+   ],
+   [
+    3300,
+    649
+   ],
+   [
+    3400,
+    702
+   ],
+   [
+    3500,
+    760
+   ],
+   [
+    3600,
+    822
+   ],
+   [
+    3700,
+    864
+   ],
+   [
+    3800,
+    907
+   ],
+   [
+    3900,
+    981
+   ],
+   [
+    4000,
+    1031
+   ],
+   [
+    4100,
+    1086
+   ],
+   [
+    4200,
+    1119
+   ],
+   [
+    4300,
+    1162
+   ],
+   [
+    4400,
+    1210
+   ],
+   [
+    4500,
+    1259
+   ],
+   [
+    4600,
+    1306
+   ],
+   [
+    4700,
+    1347
+   ],
+   [
+    4800,
+    1396
+   ],
+   [
+    4900,
+    1442
+   ],
+   [
+    5000,
+    1512
+   ],
+   [
+    5100,
+    1512
+   ],
+   [
+    5200,
+    1512
+   ],
+   [
+    5300,
+    1512
+   ],
+   [
+    5400,
+    1512
+   ],
+   [
+    5500,
+    1512
+   ],
+   [
+    5600,
+    1502
+   ],
+   [
+    5700,
+    1493
+   ],
+   [
+    5800,
+    1483
+   ],
+   [
+    5900,
+    1474
+   ],
+   [
+    6000,
+    1464
+   ],
+   [
+    6100,
+    1450
+   ],
+   [
+    6200,
+    1435
+   ],
+   [
+    6300,
+    1421
+   ],
+   [
+    6400,
+    1406
+   ],
+   [
+    6500,
+    1392
+   ],
+   [
+    6600,
+    1378
+   ],
+   [
+    6700,
+    1368
+   ],
+   [
+    6800,
+    1354
+   ],
+   [
+    6900,
+    1339
+   ],
+   [
+    7000,
+    1325
+   ],
+   [
+    7100,
+    1306
+   ],
+   [
+    7200,
+    1286
+   ],
+   [
+    7300,
+    1272
+   ],
+   [
+    7400,
+    1258
+   ],
+   [
+    7500,
+    1245
+   ],
+   [
+    7600,
+    1229
+   ],
+   [
+    7700,
+    1214
+   ],
+   [
+    7800,
+    1200
+   ],
+   [
+    7900,
+    1186
+   ],
+   [
+    8000,
+    1171
+   ],
+   [
+    8100,
+    1152
+   ],
+   [
+    8200,
+    1128
+   ],
+   [
+    8300,
+    1104
+   ],
+   [
+    8400,
+    1080
+   ]
+  ]
+ },
+ "performance_source": "Assetto Corsa '8 Second Shootout' toyota_supra_nasher data/: power.lut x (1+boost) with TURBO_0 MAX_BOOST 3.8 @ REFERENCE_RPM 5000 (GAMMA 3, spool approximated), drivetrain.ini RWD 6-speed FINAL 2.88, car.ini TOTALMASS 1477. DRAG TUNE KEPT (user rule).",
+ "part_overrides": {
+  "Engine": "AC_SUPRA_2JZ_DRAG",
+  "Transmission": "AC_SUPRA_6MT_DRAG",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "Wheel0": "AC_SUPRA",
+  "Wheel1": "AC_SUPRA",
+  "Wheel2": "AC_SUPRA_REAR",
+  "Wheel3": "AC_SUPRA_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Turbocharger": "PS_Boost_475psi"
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "rear_wheel_meshes": true,
+ "mesh_names": {
+  "Wheel_L": "AC_SUPRA_L",
+  "Wheel_R": "AC_SUPRA_R",
+  "SteeringWheel": "AC_SUPRA",
+  "Wheel_RL": "AC_SUPRA_REAR_L",
+  "Wheel_RR": "AC_SUPRA_REAR_R"
+ },
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Window",
+  "HeadAC": "HeadLight",
+  "TailAC": "TailLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "ReverseLamp": "ReverseLight",
+  "RedLens": "TailLight",
+  "ClearLens": "ReverseLight",
+  "Signal_L_RL": "LeftSignalLight",
+  "Signal_R_RL": "RightSignalLight"
+ },
+ "lamp_slots": {
+  "HeadAC": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "TailAC": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "ReverseLamp": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_SUPRA_HEADLIGHT"
+  },
+  "RedLens": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_SUPRA_LIGHTGLASS"
+  },
+  "ClearLens": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_SUPRA_LIGHTGLASS"
+  },
+  "Signal_L_RL": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_SUPRA_LIGHTGLASS"
+  },
+  "Signal_R_RL": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_SUPRA_LIGHTGLASS"
+  }
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror",
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror:mirror"
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    43
+   ],
+   "size": [
+    430,
+    174,
+    58
+   ]
+  },
+  {
+   "center": [
+    -25,
+    0,
+    92
+   ],
+   "size": [
+    170,
+    140,
+    40
+   ]
+  }
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     16.51,
+     33.98,
+     72.61
+    ],
+    "rot": [
+     -17.43,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -223,
+     -46,
+     20
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -223,
+     -46,
+     20
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -200,
+     0,
+     86
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -30,
+     0,
+     113
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -222,
+     0,
+     28
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     19.789,
+     -12.16,
+     10.049
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -95.43
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     20.107,
+     0.07,
+     12.14
+    ],
+    "rot": [
+     0.0,
+     -90.0,
+     -95.43
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     18.904,
+     17.05,
+     7.79
+    ],
+    "rot": [
+     -84.57,
+     0.0,
+     -180.0
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     19.273,
+     10.83,
+     8.22
+    ],
+    "rot": [
+     -84.57,
+     0.0,
+     -180.0
+    ]
+   }
+  ]
+ },
+ "strip_part_slots": [
+  "RearWing"
+ ],
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -33,
+    34,
+    15
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -33,
+    -34,
+    15
+   ]
+  },
+  "cockpit_camera": [
+   -36,
+   34,
+   98
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    12,
+    0,
+    109
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -25,
+    0,
+    106
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    201,
+    -53,
+    46
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    201,
+    53,
+    46
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    212,
+    66,
+    44
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    212,
+    -66,
+    44
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -220,
+    -52,
+    68
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -220,
+    52,
+    68
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    6.5,
+    -17.5,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -1.5,
+    -14.4,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -2.6,
+    4.0,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 1031,
+  "room_mirror_aim_z": -0.03
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    14.5,
+    34,
+    75.6
+   ],
+   "radius": 26,
+   "x_range": [
+    0,
+    30
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    14.505605000000001,
+    33.9842,
+    75.6134
+   ],
+   "tilt_deg": 17.43,
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_SUPRA_STEER"
+   ],
+   "reduce": 0.3,
+   "socket_offset": [
+    2,
+    0,
+    -3
+   ]
+  }
+ },
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_SUPRA_6MT_DRAG",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_SUPRA_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Drag (8 Second Supra)",
+    "cost": 9000,
+    "mass": 100,
+    "ratios": {
+     "R": -2.743,
+     "1": 3.306,
+     "2": 2.053,
+     "3": 1.47,
+     "4": 1.14,
+     "5": 0.87,
+     "6": 0.687
+    },
+    "note": "AC final 2.88 folded in (game row FD_3.31): ratio x 2.88/3.31 keeps every overall ratio"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_SUPRA_2JZ_DRAG",
+    "base_row": "I6Sport_200HP",
+    "asset": "AC_SUPRA_2JZ",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "2JZ Drag (8 Second Supra)",
+    "mass": 230,
+    "cost": 60000,
+    "max_torque_nm": 351.0,
+    "max_rpm": 8500,
+    "curve_note": "AC power.lut (naturally aspirated, 351 Nm @4100); boost comes from the stock turbo part (AC TURBO_0: T x (1 + 3.8) = x4.8 from 5000 rpm -> PS_Boost_475psi, 1 + 0.08 x 47.5 = 4.8)",
+    "curve": [
+     [
+      0.0588,
+      0.433
+     ],
+     [
+      0.1176,
+      0.5128
+     ],
+     [
+      0.1765,
+      0.5556
+     ],
+     [
+      0.2353,
+      0.6268
+     ],
+     [
+      0.2941,
+      0.6838
+     ],
+     [
+      0.3529,
+      0.7977
+     ],
+     [
+      0.4118,
+      0.9402
+     ],
+     [
+      0.4706,
+      0.9972
+     ],
+     [
+      0.4824,
+      1.0
+     ],
+     [
+      0.5294,
+      0.9516
+     ],
+     [
+      0.5882,
+      0.8974
+     ],
+     [
+      0.6471,
+      0.8974
+     ],
+     [
+      0.7059,
+      0.8689
+     ],
+     [
+      0.7647,
+      0.8262
+     ],
+     [
+      0.8235,
+      0.7863
+     ],
+     [
+      0.8824,
+      0.739
+     ],
+     [
+      0.9412,
+      0.695
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_SUPRA",
+     "loops": [
+      [
+       "l1",
+       1140
+      ],
+      [
+       "l2",
+       3458
+      ],
+      [
+       "l3",
+       4764
+      ],
+      [
+       "l4",
+       5600
+      ],
+      [
+       "l5",
+       6366
+      ],
+      [
+       "l6",
+       7380
+      ]
+     ],
+     "note": "the AC car's own FMOD bank (sfx/toyota_supra_Nasher.bank, vgmstream): steady exterior 2JZ loops IDLE(GSC2Idlecams)/test-2jz_low/2JZ_PULL_COMPR_02/test-2jzO26/EXNEARVELOW/HIGHEXNEAR; rpm from the spectrum (half-order harmonics, firing = rpm/20)"
+    },
+    "physics_from": "Cars/Parts/Engine/2JZ320HP"
+   }
+  ]
+ },
+ "recentered": {
+  "SideMirror": [
+   26.69,
+   -88.65,
+   88.66
+  ],
+  "RightSideMirror": [
+   28.09,
+   -88.65,
+   88.66
+  ]
+ },
+ "masked_texture_slots": [
+  "Tex_AC_SUPRA_DEFROST",
+  "Tex_AC_SUPRA_LIGHTPLASTIC",
+  "Tex_AC_SUPRA_INT_DETAILS"
+ ],
+ "gauge_style": {
+  "face_color": [
+   10,
+   10,
+   12
+  ],
+  "ink": [
+   240,
+   236,
+   226
+  ],
+  "red_color": [
+   235,
+   60,
+   30
+  ],
+  "font_file": "arialbd.ttf",
+  "ring": [
+   [
+    60,
+    60,
+    64
+   ],
+   0.05
+  ],
+  "glow_color": [
+   255,
+   125,
+   25
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "texture_upscale": {
+  "Tex_AC_SUPRA_INT_DETAILS": 2
+ },
+ "texture_patches": {
+  "Tex_AC_SUPRA_INT_DETAILS": [
+   {
+    "center": [
+     0.0586,
+     0.0977
+    ],
+    "radius": 0.075,
+    "fill": [
+     30,
+     30,
+     32
+    ],
+    "all": true
+   },
+   {
+    "center": [
+     0.0703,
+     0.2803
+    ],
+    "radius": 0.07,
+    "fill": [
+     30,
+     30,
+     32
+    ],
+    "all": true
+   }
+  ]
+ },
+ "gauge_faces": {
+  "Tex_AC_SUPRA_INT_DETAILS": [
+   {
+    "center": [
+     0.793,
+     0.2129
+    ],
+    "face": [
+     0.793,
+     0.2129,
+     0.19
+    ],
+    "radius": 0.17,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 8.5,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000 RPM",
+      0.5,
+      90
+     ]
+    ],
+    "caption_font": 0.1
+   },
+   {
+    "center": [
+     0.376,
+     0.2021
+    ],
+    "face": [
+     0.376,
+     0.2021,
+     0.19
+    ],
+    "radius": 0.17,
+    "min": 0,
+    "max": 200,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.15,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.1
+   },
+   {
+    "center": [
+     0.1719,
+     0.083
+    ],
+    "radius": 0.1,
+    "rotate": 90,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.166,
+     0.2803
+    ],
+    "radius": 0.1,
+    "rotate": 90,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "needle_color": [
+  255,
+  90,
+  20
+ ],
+ "needle_scales": {
+  "RPM": 0.95,
+  "Speed": 0.95,
+  "Fuel": 1.0,
+  "Temp": 1.0
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     38.4,
+     21.82,
+     76.27
+    ],
+    "rot": [
+     0,
+     -90,
+     -78
+    ]
+   },
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     39.33,
+     34.05,
+     78.17
+    ],
+    "rot": [
+     0,
+     -90,
+     -78
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     36.88,
+     51.03,
+     74.38
+    ],
+    "rot": [
+     -102,
+     0,
+     -180
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     37.36,
+     44.81,
+     74.68
+    ],
+    "rot": [
+     -102,
+     0,
+     -180
+    ]
+   }
+  ],
+  "parent_socket": "SteeringWheel",
+  "note": "dial plane faces 12 deg up (roll -78); fuel/temp dials sit left of their hubs: sockets turned 90 deg"
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_AC_SUPRA_INT_DETAILS",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_SUPRA_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_R",
+   "from": "TailAC",
+   "uv_box": [
+    0,
+    0.54,
+    0.245,
+    0.79
+   ],
+   "note": "rear: the amber round lamp art (inner lamps, Mk4 JDM)"
+  },
+  {
+   "tag": "_F",
+   "from": "Tex_AC_SUPRA_HEADLIGHT",
+   "amber": true,
+   "box": [
+    140,
+    -100,
+    20,
+    240,
+    100,
+    80
+   ],
+   "note": "front bumper corner lenses + fender markers"
+  },
+  {
+   "tag": "_RL",
+   "from": "AmberLens",
+   "box": [
+    -260,
+    -100,
+    0,
+    -150,
+    100,
+    120
+   ],
+   "note": "amber outer rear lens covers"
+  }
+ ],
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "rear_wheel_part": true
+}

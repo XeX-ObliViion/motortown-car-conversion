@@ -35,7 +35,7 @@ def main():
         kits = sorted({m.group(1) for f in os.listdir(geo)
                        for m in [re.match(r"%s_(KIT\d+)_WHEEL_TIRE_%s_A\.dae$" % (gid, spec["variant"]), f)] if m})
         gspec = {"car": spec["car"], "geometry_dir": geo, "prefix": gid, "out_dir": out_root, "texture_dir": tex,
-                 "default_slot": "Trim", "texture_slots": {TYRE: "Bottom", CHROME: "Trim"}, "meshes": {}, "mesh_names": {}}
+                 "default_slot": "Trim", "texture_slots": {TYRE: "Bottom", CHROME: "Tex_RIMLIP"}, "meshes": {}, "mesh_names": {}}
         for kit in kits:
             part = "%s_WHEEL_TIRE_%s" % (kit, spec["variant"])
             hashes = {t for t, _ in P.load_dae(os.path.join(geo, "%s_%s_A.dae" % (gid, part)))}
@@ -59,8 +59,10 @@ def main():
     # paintable rims: every rim texture slot uses the paintable textured material and is renamed Wheel_01, the slot
     # name the rows' ColorSlots picker targets (like the game's Civo/Bulko rims)
     rim_slots = sorted(all_textures)
+    all_textures["Tex_RIMLIP"] = P.rim_lip_png(build_dir)
     json.dump({"car": spec["car"], "meshes": all_meshes, "textures": all_textures,
-               "final_slot_names": {s_: "Wheel_01" for s_ in rim_slots}, "paintable_texture_slots": rim_slots},
+               "final_slot_names": dict({s_: "Wheel_01" for s_ in rim_slots}, Tex_RIMLIP="Wheel_02"),
+               "paintable_texture_slots": rim_slots + ["Tex_RIMLIP"]},
               open(os.path.join(build_dir, "car.json"), "w"), indent=1)
     json.dump(rims, open(os.path.join(build_dir, "rims.json"), "w"), indent=1)
     print("total %d rims, %d meshes, %d textures -> %s" % (len(rims), len(all_meshes), len(all_textures), build_dir))

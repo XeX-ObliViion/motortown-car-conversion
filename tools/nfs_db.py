@@ -20,6 +20,9 @@ GAMES = {
            "vlt": os.path.join(HOME, "nfs-work/ps_vlt/main/attributes/db")},
     "mw": {"root": r"D:/SSD GANG/Need for Speed - Most Wanted Rework IV/CARS", "ad": "MostWanted", "scale": 100.0,
            "vlt": os.path.join(HOME, "nfs-work/mw_vlt/main/attributes/db")},
+    # MW Remaster Edition (user rule: MW assets come from here); exports in ~/nfs-work/db/mwr, attributes unpacked to mwr_vlt
+    "mwr": {"root": r"C:/Program Files (x86)/needforspeed/Need For Speed Most Wanted Remaster Edition/CARS", "ad": "MostWanted",
+            "scale": 100.0, "vlt": os.path.join(HOME, "nfs-work/mwr_vlt/main/attributes/db")},
 }
 SKIP = ("COP", "TRAF", "TRAILER", "TRANE", "PLATES", "SPOILER", "WHEELS", "BRAKE", "ROOF", "RAMP", "YTMRIM", "MOB",
         "RESCHELI", "CEMTR", "GARB", "PIZZA", "TAXI", "BUS", "SEMI", "PETERBILT", "MINIVAN", "PICKUPA", "GROUP", "VINYLS",
@@ -82,14 +85,14 @@ def performance(game, car):
             x0, x1, y0, y1 = (float(v) for v in tq.groups())
             out["torque_nm"] = [[round(x0 + x * (x1 - x0)), round(y0 + y * (y1 - y0), 1)] for x, y in zip(xs, ys)]
         return out
-    pv = vlt("mw", "pvehicle")
+    pv = vlt(game, "pvehicle")
     name = next((k for k, v in pv.items() if re.search(r"MODEL: %s\b" % re.escape(car), v)), lc)
     rec = pv.get(name, "")
     def ref(cls):
         m = re.search(r"ClassKey: %s\s+CollectionKey: (\S+)" % cls, rec)
         return m.group(1) if m else name
-    e = vlt("mw", "engine").get(ref("engine"), ""); t = vlt("mw", "transmission").get(ref("transmission"), "")
-    a = vlt("mw", "engineaudio").get(ref("engineaudio"), "")
+    e = vlt(game, "engine").get(ref("engine"), ""); t = vlt(game, "transmission").get(ref("transmission"), "")
+    a = vlt(game, "engineaudio").get(ref("engineaudio"), "")
     tq = floats_after(e, "TORQUE"); idle = scalar(e, "IDLE") or 800; mx = scalar(e, "MAX_RPM")
     out = {"record": name, "mass": scalar(rec, "MASS"), "final_gear": scalar(t, "FINAL_GEAR"), "gears": floats_after(t, "GEAR_RATIO"),
            "red_line": scalar(e, "RED_LINE"), "max_rpm": mx, "engine_audio": ref("engineaudio"),

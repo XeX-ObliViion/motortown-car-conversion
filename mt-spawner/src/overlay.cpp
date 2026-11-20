@@ -237,6 +237,8 @@ void Render(IDXGISwapChain3* sc) {
 }
 
 HRESULT __stdcall hk_present(IDXGISwapChain3* sc, UINT sync, UINT flags) {
+    MenuTick();      // IPC + hotkeys run every frame, also before the menu was first opened
+    HotkeysTick();
     bool pressed = (GetAsyncKeyState(g_toggle_key) & 0x8000) != 0;
     if (!g_imgui_ready && !g_failed && g_queue && ((pressed && !g_toggle_down) || HudWanted())) {
         // nothing is created in the game's renderer until the player first opens the menu
@@ -252,7 +254,6 @@ HRESULT __stdcall hk_present(IDXGISwapChain3* sc, UINT sync, UINT flags) {
         if (down && !g_toggle_down && GetForegroundWindow() == g_hwnd) SetOpen(!g_open);
         g_toggle_down = down;
 
-        MenuTick();
         if (g_open || HudWanted()) {
             ImGui_ImplDX12_NewFrame();
             ImGui_ImplWin32_NewFrame();
@@ -371,5 +372,14 @@ bool Install() {
 
 bool MenuOpen() { return g_open; }
 const char* ToggleKeyName() { return g_toggle_name.c_str(); }
+void SetToggleKey(int vk, const char* name) {
+    char path[MAX_PATH];
+    GetModuleFileNameA(nullptr, path, MAX_PATH);
+    if (char* slash = strrchr(path, '\\')) strcpy(slash + 1, "mt_spawner.ini");
+    WritePrivateProfileStringA("Menu", "ToggleKey", name, path);
+    g_toggle_name = name;
+    g_toggle_down = true;   // the capturing press must not toggle the menu
+    g_toggle_key = vk;
+}
 
 }  // namespace overlay

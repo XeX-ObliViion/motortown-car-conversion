@@ -1,0 +1,1104 @@
+{
+ "car": "AC_GALLARDO",
+ "display_name": "Lamborghini Gallardo UGR (8 Second Shootout)",
+ "prefix": "AC_GALLARDO",
+ "base_vehicle": "Raton",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/gallardo_tx2k/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/gallardo_tx2k/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_GALLARDO/meshes",
+ "cost": 180000,
+ "wheel_part": true,
+ "wheel_display_name": "HRE Drag (8 Second Gallardo)",
+ "texture_slots": {
+  "Carpaint": "Paint",
+  "Ceramic": "Paint",
+  "03 - Default": "Paint",
+  "21 - Default": "Paint",
+  "Carbon_Mult80": "Bottom",
+  "INT_OCC_Carpaint": "Paint",
+  "Plastic": "Bottom",
+  "Matte_Black": "Bottom",
+  "Windows_Mask": "Bottom",
+  "Windows": "Glass",
+  "Glass": "Glass",
+  "INT_Windows": "Glass",
+  "INT_Decals_Glass": "Glass",
+  "MIRROR": "Mirror",
+  "INT_Mirror": "Mirror",
+  "Metal": "Trim",
+  "EXT_Gauge": "Trim",
+  "INT_Decals_METAL_Chrome": "Trim",
+  "INT_Decals_METAL_Chrome_ALFA": "Trim",
+  "Brake_Caliper": "Tex_AC_GALL_CALIPER",
+  "Mechanicals": "Tex_AC_GALL_MECH",
+  "Details": "Tex_AC_GALL_DETAILS",
+  "EXT_RIm": "Tex_AC_GALL_RIM",
+  "EXT_Lugnut": "Tex_AC_GALL_RIM",
+  "EXT_Cap": "Tex_AC_GALL_CAP",
+  "jante_1": "Tex_AC_GALL_TIRE",
+  "Brake_Disk": "Tex_AC_GALL_DISC",
+  "Lights": "Tex_AC_GALL_LIGHTS",
+  "Lights_REAR": "Tex_AC_GALL_LIGHTS",
+  "Grid_Mult50": "Tex_AC_GALL_GRID",
+  "DECAL_EXT": "Tex_AC_GALL_DECAL",
+  "INT_INDICATORS": "Tex_AC_GALL_INDICATORS",
+  "INT_Speakers": "Tex_AC_GALL_SPEAKERS",
+  "INT_Belt": "Tex_AC_GALL_BELT",
+  "PEDALS": "Tex_AC_GALL_PEDALS",
+  "INT_SeatStrip": "Tex_AC_GALL_SEATSTRIP",
+  "INT_DISPLAY_CENTRE": "Tex_AC_GALL_DISPLAY",
+  "INT_seams": "Tex_AC_GALL_SEAMS",
+  "ENG_CHROME": "Tex_AC_GALL_ENG_TURBO",
+  "ENG_BLACK": "Tex_AC_GALL_ENGINE",
+  "ENG_TURBO": "Tex_AC_GALL_EXT_TURBO",
+  "02 - Default": "Tex_AC_GALL_FIREWALL",
+  "ac_Material #166": "Tex_AC_GALL_PLATE",
+  "INT_OCC_Alcantara": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_Carbon": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_Steer_Fabric_pointed": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_Skin": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_METAL_Alu": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_Plastic_Black": "Tex_AC_GALL_COCKPIT",
+  "INT_OCC_Carpet_grey": "Tex_AC_GALL_COCKPIT",
+  "INT_Decals_Flat": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_METAL_Alu": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Plastic_REF": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Plastic_Grey": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Flat_alfa": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_logo_carpaint": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Dials_plastic": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Ref_alfa": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Emissive": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_Dials_plastic_2": "Tex_AC_GALL_INT_DECALS",
+  "INT_Decals_gauge_AT": "Tex_AC_GALL_INT_DECALS",
+  "__steer_texture": "Tex_AC_GALL_STEER"
+ },
+ "texture_sources": {
+  "Tex_AC_GALL_CALIPER": "Brake_Caliper_D.dds",
+  "Tex_AC_GALL_MECH": "mechanicals_D.dds",
+  "Tex_AC_GALL_DETAILS": "Details_D.dds",
+  "Tex_AC_GALL_RIM": "EXT_Rim.dds",
+  "Tex_AC_GALL_CAP": "hre_carbon_logo.dds",
+  "Tex_AC_GALL_TIRE": "Tire_AO.dds",
+  "Tex_AC_GALL_DISC": "Brake_Disk_D.dds",
+  "Tex_AC_GALL_LIGHTS": "Lights_D.dds",
+  "Tex_AC_GALL_GRID": "Grid_D.dds",
+  "Tex_AC_GALL_DECAL": "Superleggera_Decal_D.dds",
+  "Tex_AC_GALL_INDICATORS": "indicators_D.dds",
+  "Tex_AC_GALL_SPEAKERS": "Speakers.dds",
+  "Tex_AC_GALL_BELT": "INT_Belt.DDS",
+  "Tex_AC_GALL_PEDALS": "INT_pedals.dds",
+  "Tex_AC_GALL_SEATSTRIP": "Dots_Strip.dds",
+  "Tex_AC_GALL_DISPLAY": "INT_DISPLAY.dds",
+  "Tex_AC_GALL_SEAMS": "INT_seams_diff.dds",
+  "Tex_AC_GALL_ENG_TURBO": "ENG_TURBO.dds",
+  "Tex_AC_GALL_ENGINE": "EXT_ENGINEBB.dds",
+  "Tex_AC_GALL_EXT_TURBO": "EXT_TURBO.dds",
+  "Tex_AC_GALL_FIREWALL": "firewall.dds",
+  "Tex_AC_GALL_PLATE": "Plate_D.dds",
+  "Tex_AC_GALL_COCKPIT": "Cockpit_HR_occ.dds",
+  "Tex_AC_GALL_INT_DECALS": "INT_Decals_diff.dds",
+  "Tex_AC_GALL_STEER": "Cockpit_HR_occ.dds"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "SUSP_LR",
+    "WINDOWS",
+    "FRONT_BUMPER",
+    "GEO_INDICATOR",
+    "SUSP_RR",
+    "HOOD",
+    "LIGHT_FOG",
+    "REAR_HOOD",
+    "REAR_BUMPER",
+    "G_BODY",
+    "G_LIGHT_HEAD",
+    {
+     "part": "G_LIGHT_REVERSE",
+     "slot": "RevGal"
+    },
+    {
+     "part": "G_LIGHT_BRAKE",
+     "slot": "TailGal"
+    },
+    "G_STRIP",
+    "WIPER3",
+    "WIPER1",
+    "WIPER2",
+    {
+     "part": "COCKPIT_HR",
+     "skip_groups": [
+      11,
+      13,
+      14,
+      15,
+      16,
+      21
+     ],
+     "note": "AC needles out (tach/speedo/water/fuel): the game turns its own"
+    },
+    {
+     "part": "STEER_HR",
+     "slot": "Tex_AC_GALL_STEER"
+    },
+    {
+     "part": "DOOR_L_1",
+     "skip_groups": [
+      5,
+      7
+     ]
+    },
+    {
+     "part": "DOOR_R_1",
+     "skip_groups": [
+      5,
+      7
+     ]
+    },
+    "MISC_E_SUB0",
+    "INTAKE_SUB0",
+    "OBJECT001",
+    "OBJECT002",
+    "OBJECT003",
+    "BOX001",
+    "G_BOOT_SUB3",
+    "SKIRTS",
+    "MIRRORS",
+    "MANUFACTURERPLATE"
+   ],
+   "reduce": 0.35,
+   "uv_split": [
+    {
+     "from": "Tex_AC_GALL_LIGHTS",
+     "to": "HeadGal",
+     "box": [
+      0,
+      -0.68,
+      1,
+      -0.5
+     ],
+     "box3d": [
+      100,
+      -100,
+      30,
+      240,
+      100,
+      90
+     ],
+     "note": "grey reflector rows (image .32-.5)"
+    },
+    {
+     "from": "Tex_AC_GALL_LIGHTS",
+     "to": "TailGal",
+     "box": [
+      0,
+      -1.0,
+      1,
+      -0.85
+     ],
+     "box3d": [
+      -240,
+      -100,
+      30,
+      -150,
+      100,
+      100
+     ],
+     "note": "red hex rows (image 0-.15)"
+    }
+   ],
+   "drop_boxes": [
+    [
+     40,
+     -16,
+     96,
+     56,
+     16,
+     111
+    ]
+   ],
+   "drop_slots": [
+    "Tex_AC_GALL_CALIPER"
+   ]
+  },
+  "SideMirror_Left": {
+   "parts": [
+    {
+     "part": "DOOR_L_1",
+     "groups": [
+      5
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {},
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -1.5,
+     -23.8,
+     0
+    ]
+   },
+   "recenter_shift": [
+    -13,
+    -4,
+    2
+   ]
+  },
+  "SideMirror_Right": {
+   "parts": [
+    {
+     "part": "DOOR_R_1",
+     "groups": [
+      5
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   },
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -0.7,
+     32.9,
+     0
+    ]
+   },
+   "recenter_shift": [
+    -13,
+    4,
+    2
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -112.93,
+      79.04,
+      -33.45
+     ]
+    },
+    {
+     "part": "DISC_LF",
+     "offset": [
+      -112.93,
+      79.04,
+      -33.45
+     ],
+     "note": "disc on the wheel (steers + spins)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -112.42,
+      -79.21,
+      -33.45
+     ]
+    },
+    {
+     "part": "DISC_RF",
+     "offset": [
+      -112.42,
+      -79.21,
+      -33.45
+     ],
+     "note": "disc on the wheel (steers + spins)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      142.98,
+      80.22,
+      -33.45
+     ]
+    },
+    {
+     "part": "DISC_LR",
+     "offset": [
+      142.98,
+      80.22,
+      -33.45
+     ],
+     "note": "disc on the wheel (steers + spins)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      143.59,
+      -80.54,
+      -33.44
+     ]
+    },
+    {
+     "part": "DISC_RR",
+     "offset": [
+      143.59,
+      -80.54,
+      -33.44
+     ],
+     "note": "disc on the wheel (steers + spins)"
+    }
+   ],
+   "reduce": 0.3
+  }
+ },
+ "rear_wheel_meshes": true,
+ "mesh_names": {
+  "Wheel_L": "AC_GALLARDO_L",
+  "Wheel_R": "AC_GALLARDO_R",
+  "SteeringWheel": "AC_GALLARDO",
+  "Wheel_RL": "AC_GALLARDO_REAR_L",
+  "Wheel_RR": "AC_GALLARDO_REAR_R"
+ },
+ "final_slot_names": {
+  "Paint": "Body_0",
+  "Glass": "Glass",
+  "HeadGal": "HeadLight",
+  "RevGal": "ReverseLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_L_T": "LeftTailLight",
+  "Signal_R_T": "RightTailLight"
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror_Left",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror_Right"
+ },
+ "wheels": {
+  "front_x": 112.9,
+  "rear_x": -142.95,
+  "half_track": 79.05,
+  "rear_half_track": 80.2,
+  "z": 34,
+  "rear_z": 35,
+  "radius": 32.5,
+  "auto_arches": false
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    32
+   ],
+   "size": [
+    420,
+    190,
+    40
+   ]
+  },
+  {
+   "center": [
+    -10,
+    0,
+    80
+   ],
+   "size": [
+    180,
+    140,
+    34
+   ]
+  }
+ ],
+ "strip_part_slots": [
+  "Bonnet",
+  "Fender",
+  "LSD0",
+  "LSD1",
+  "SideSkirt"
+ ],
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -15,
+    -36,
+    12
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -15,
+    36,
+    12
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    46,
+    0,
+    103.5
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    10,
+    0,
+    110
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    202,
+    -58,
+    55
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    202,
+    58,
+    55
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    185,
+    70,
+    55
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    185,
+    -70,
+    55
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -205,
+    -60,
+    77
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -205,
+    60,
+    77
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -205,
+    -60,
+    80
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -205,
+    60,
+    80
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -15,
+   -36,
+   93
+  ],
+  "body_mass": 965,
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    7.3,
+    15.2,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -1.5,
+    -23.8,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -0.7,
+    32.9,
+    0
+   ]
+  },
+  "room_mirror_aim_z": -0.1
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    35,
+    -36,
+    72
+   ],
+   "radius": 26,
+   "x_range": [
+    20,
+    50
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_GALL_STEER"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "reduce": 0.4,
+   "pivot": [
+    34.963049999999996,
+    -35.9864,
+    71.9432
+   ],
+   "tilt_deg": 15.24
+  }
+ },
+ "performance_source": "AC data: TOTALMASS 1415, AWD, 6MT 3.133/2.083/1.575/1.244/0.979/0.788 R-2.647, FINAL 3.0, LIMITER 8500, idle 1000; power.lut NA 454 Nm @6500; TURBO_0 + TURBO_1 1.3 bar each (x3.6) ref 3700/5700; ctrl_turbo0 per-gear boost (not modelled)",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_GALLARDO_6MT_DRAG",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_GALLARDO_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Drag (8 Second Gallardo)",
+    "cost": 9000,
+    "mass": 100,
+    "ratios": {
+     "R": -2.399,
+     "1": 2.84,
+     "2": 1.888,
+     "3": 1.427,
+     "4": 1.127,
+     "5": 0.887,
+     "6": 0.714
+    },
+    "note": "AC final 3.0 folded in (FD_3.31)"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_GALLARDO_V10_DRAG",
+    "base_row": "SmallBlock_320HP",
+    "asset": "AC_GALLARDO_V10",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "5.0 V10 Twin Turbo Drag (8 Second Gallardo)",
+    "mass": 240,
+    "cost": 70000,
+    "max_torque_nm": 454,
+    "max_rpm": 8500,
+    "curve": [
+     [
+      0.0294,
+      0.2863
+     ],
+     [
+      0.0588,
+      0.5507
+     ],
+     [
+      0.1176,
+      0.7577
+     ],
+     [
+      0.1765,
+      0.7753
+     ],
+     [
+      0.2353,
+      0.7974
+     ],
+     [
+      0.2941,
+      0.8392
+     ],
+     [
+      0.3529,
+      0.8722
+     ],
+     [
+      0.4118,
+      0.9097
+     ],
+     [
+      0.4706,
+      0.9361
+     ],
+     [
+      0.5294,
+      0.9163
+     ],
+     [
+      0.5882,
+      0.9339
+     ],
+     [
+      0.6471,
+      0.9471
+     ],
+     [
+      0.7059,
+      0.989
+     ],
+     [
+      0.7647,
+      1.0
+     ],
+     [
+      0.8235,
+      0.9427
+     ],
+     [
+      0.8824,
+      0.8877
+     ],
+     [
+      0.9412,
+      0.804
+     ],
+     [
+      1.0,
+      0.7137
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "AC power.lut (NA, 454 Nm @6500); boost from the stock turbo PS_Boost_325psi (1+0.08x32.5 = x3.6 = AC twin turbos 1.3+1.3 bar)",
+    "physics_from": "Cars/Parts/Engine/Ferrari_275_V12_400HP",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_GALLARDO",
+     "loops": [
+      [
+       "l1",
+       1370
+      ],
+      [
+       "l2",
+       2000
+      ],
+      [
+       "l3",
+       2570
+      ],
+      [
+       "l4",
+       3545
+      ],
+      [
+       "l5",
+       5115
+      ],
+      [
+       "l6",
+       6200
+      ],
+      [
+       "l7",
+       7895
+      ]
+     ],
+     "note": "the AC car's own FMOD bank (vgmstream): idle_1372, onlow_near_01, ONLOAD_V10_TT_MID, gk_onload_ttv10, 4085g, 6185f, 7881f; rpm from a harmonic fit (half orders + V10 firing x12): '4085g' is really ~5115 rpm (tuned as 4085 it played pitched down, deep/distorted 4000-5500, user 2026-11-07)"
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "AC_GALLARDO_V10_DRAG",
+  "Transmission": "AC_GALLARDO_6MT_DRAG",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_15",
+  "Tire1": "PerformanceTire_15",
+  "Tire2": "PerformanceTire_15",
+  "Tire3": "PerformanceTire_15",
+  "Wheel0": "AC_GALLARDO",
+  "Wheel1": "AC_GALLARDO",
+  "Wheel2": "AC_GALLARDO_REAR",
+  "Wheel3": "AC_GALLARDO_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Turbocharger": "PS_Boost_325psi"
+ },
+ "recentered": {
+  "SideMirror_Left": [
+   40.8,
+   -102.34,
+   87.05
+  ],
+  "SideMirror_Right": [
+   40.34,
+   102.34,
+   87.05
+  ]
+ },
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     34.96,
+     -35.99,
+     71.94
+    ],
+    "rot": [
+     -15.24,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -215,
+     -30,
+     35
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -215,
+     30,
+     35
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -215,
+     0,
+     28
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -20,
+     0,
+     116
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     58.64,
+     -44.05,
+     74.87
+    ],
+    "rot": [
+     0,
+     -90,
+     -53.1
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     58.73,
+     -27.83,
+     75.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -53.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     55.58,
+     -50.7,
+     71.12
+    ],
+    "rot": [
+     0,
+     -90,
+     -58.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     55.51,
+     -21.34,
+     71.12
+    ],
+    "rot": [
+     0,
+     -90,
+     -58.4
+    ]
+   }
+  ]
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "Tex_AC_GALL_LIGHTS",
+   "amber": true,
+   "box": [
+    100,
+    -100,
+    20,
+    240,
+    100,
+    90
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "Tex_AC_GALL_LIGHTS",
+   "amber": true,
+   "box": [
+    -240,
+    -100,
+    20,
+    -150,
+    100,
+    110
+   ]
+  },
+  {
+   "tag": "_T",
+   "from": "TailGal",
+   "box": [
+    -240,
+    -100,
+    0,
+    -150,
+    100,
+    120
+   ],
+   "note": "Raton lights tail lamps per side"
+  }
+ ],
+ "lamp_slots": {
+  "HeadGal": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "RevGal": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_L_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  },
+  "Signal_R_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_GALL_LIGHTS"
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     58.64,
+     -44.05,
+     74.87
+    ],
+    "rot": [
+     0,
+     -90,
+     -53.1
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     58.73,
+     -27.83,
+     75.04
+    ],
+    "rot": [
+     0,
+     -90,
+     -53.1
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     55.58,
+     -50.7,
+     71.12
+    ],
+    "rot": [
+     0,
+     -90,
+     -58.4
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     55.51,
+     -21.34,
+     71.12
+    ],
+    "rot": [
+     0,
+     -90,
+     -58.4
+    ]
+   }
+  ],
+  "attach_none": true,
+  "note": "sockets on the dial-art centres (3D via the decal UVs); the AC dummy hubs read 1.5 cm off (wheel-bbox hub estimate)"
+ },
+ "gauge_style": {
+  "face_color": [
+   12,
+   12,
+   12
+  ],
+  "ink": [
+   240,
+   200,
+   40
+  ],
+  "red_color": [
+   235,
+   70,
+   30
+  ],
+  "font_file": "arialbd.ttf"
+ },
+ "gauge_faces": {
+  "Tex_AC_GALL_INT_DECALS": [
+   {
+    "center": [
+     0.467,
+     0.3039
+    ],
+    "radius": 0.138,
+    "min": 0,
+    "max": 220,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.12,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.1,
+    "note": "km/h art (to 340) redrawn in mph; tach, water and fuel keep the AC art (already on the game's sweep)"
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 220,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  240,
+  90,
+  20
+ ],
+ "needle_scales": {
+  "RPM": 1.16,
+  "Speed": 1.09,
+  "Fuel": 0.9,
+  "Temp": 0.9
+ },
+ "emissive_slots": {
+  "NeedleGlow": {
+   "texture_slot": "Tex_GALLARDO_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "texture_patches": {
+  "Tex_AC_GALL_INT_DECALS": [
+   {
+    "center": [
+     0.467,
+     0.3039
+    ],
+    "radius": 0.156,
+    "all": true,
+    "fill": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "max_row": 0.515
+   }
+  ]
+ },
+ "drivetrain_note": "Raton is AWD from the factory (DifferentialF/R + DiffernetialC); the Diablo spec converts it to RWD",
+ "base_row": "Sports_01",
+ "needle_width": 0.25,
+ "masked_texture_slots": [
+  "Tex_AC_GALL_DECAL",
+  "Tex_AC_GALL_GRID",
+  "Tex_AC_GALL_DETAILS"
+ ],
+ "mirror_outward": 0.03,
+ "wheels_note": "each wheel centred on its own tyre (right-side wheels sit 0.5-0.6 cm further back; one offset per axle made them wobble, user 2026-11-07)",
+ "mirror_aim_note": "the game reflects about the mirror COMPONENT's -X, not the glass normal (Gallardo glass faces 20 deg inward, so aim_mirrors was ~45 deg off: views sideways). Aimed so the eye ray reflects straight back, 2.3 deg outward. Do not re-run aim_mirrors --write.",
+ "rear_wheel_part": true,
+ "mirror_check": {
+  "hidden_max": 0.22,
+  "note": "right mirror 20% hidden = its own housing rim (y 87-91) from the LHD seat at that steep angle, as on the real car; the glass is aimed, don't move it (2026-11-14)"
+ }
+}

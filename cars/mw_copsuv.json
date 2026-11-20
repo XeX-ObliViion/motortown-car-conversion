@@ -252,8 +252,8 @@
   "front_x": 157.9,
   "rear_x": -135.8,
   "half_track": 80,
-  "z": 50,
-  "rear_z": 50,
+  "z": 26,
+  "rear_z": 26,
   "radius": 40,
   "auto_arches": true
  },
@@ -881,5 +881,10 @@
   "Speed": 0.5,
   "Fuel": 0.25,
   "Temp": 0.25
- }
+ },
+ "masked_texture_slots": [
+  "Tex_COPSUV_BADGING"
+ ],
+ "stance_after_stiff": true,
+ "stance_note": "2026-11-06 user: sits too low. MW model underbody 12 cm with wheels on the axle line; real Tahoe-type PPV ~23 cm (9 in). Mount z 50 (+3.3/4.1 auto sag) -> 42, auto sag off: body ~11-12 cm higher (higher mount = lower body) | 2026-11-06 user: still slammed at z 42 -> on the Muhan_Police base a HIGHER mount raises the body (opposite of the Tuscan): z 62 | z 62 worse (user): a higher mount always lowers the body; stock Muhan mounts at 40.4; model sits right at axle ~40, stiff-spring sag ~4, +11 for the real PPV clearance -> z 26"
 }

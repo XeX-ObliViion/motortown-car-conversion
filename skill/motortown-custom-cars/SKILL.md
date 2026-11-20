@@ -27,7 +27,8 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
      - After the first in-game look, compare front and rear wheels in a side screenshot and adjust rear_z / rear_half_track if they still differ.
    - Seats and `cockpit_camera` at the steering wheel's Y and the right height (no head through the roof).
    - `components` for RoomMirror, dome lights, headlight and blinker points inside the new body.
-   - `strip_part_slots` (base car's body kit), `keep_body_materials: 1`.
+   - **Base car parts (MANDATORY, user 2026-11-13: "delete all parts from the old vehicle"):** make_mt_assets now strips every base body slot automatically (BASE_BODY_SLOTS: Bonnet, FrontBumper, RearBumper, RearWing, SideSkirt, Fender, Headlight, Trunk, Roof, Bullbar) unless the port overrides that slot. On EVERY build, read its `<CAR>: base parts removed: ...` line, and in the first in-game look check nose, tail, hood, roof and sides for anything that isn't the source car. Add any other leftover slot to `strip_part_slots`, and bump the dealer spot version so the bay spawns a fresh car.
+   - `keep_body_materials: 1`.
    - `final_slot_names {Paint: Body_01, Glass: Window}`.
 5. **Interior:**
    - `extract.SteeringWheel` (find the ring in a cockpit render; `align_x`).
@@ -40,6 +41,9 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
    - `mirror_sockets` aimed from the cockpit camera.
    - RoomMirror `component_rotations` aimed through the rear glass.
 7. **Performance from the real car's specs** (look them up):
+   - **Drivetrain must match the real car:** AWD/4WD bases (Raton, Ranch) stay AWD unless the spec sets `"drivetrain": "rwd"` (the Silverado and F40 shipped AWD by mistake). Check it on every port.
+   - **Source sound files can be clipped:** measure each recording (share of samples at peak); AC banks may hold hard-clipped exterior loops (F40: 20-29%). Use a clean set (interior) for those bands.
+   - **STANDARD (user rule): MATCH the source car's rated hp and torque, never scale or adjust them.** Use the source mod's own figures (AC: ui_car.json torqueCurve/specs, which include turbo boost). If the output depends on a boost part, verify that the in-game peak hp actually reaches the rating; otherwise bake the boosted curve into the engine and fit no boost part. Print the expected peak Nm/hp at every build and compare it with the target.
    - Custom engine: torque N·m, peak-power rpm, limiter, a torque curve that reproduces the rated hp, and an engine `sound` (V6Sport_02 for V6s).
    - Custom gearbox with the real ratios; the nearest FinalDriveRatio row.
    - Tyres/brakes/radiator matching the class AND allowed for the car's vehicle type (each part row has `VehicleTypes`; the Zino-based cars are "Small", so no BrakePad_Medium_*/MediumRadiator_*, which are truck-only and trigger the garage "Incompatible Parts" warning). Small-car choices: BrakePad_Small_02, SmallRadiator_110, PerformanceTire_46. `body_mass` = curb weight − parts mass.
@@ -60,6 +64,8 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
 ## Fixed facts
 - **Game:** `D:\SteamLibrary\steamapps\common\Motor Town`. UE 5.5.4, pak v11, encrypted index. The AES key is in `~/mt-work/aes.key` (local only; never print or publish it).
 - **Mod loading:** the game loads `*_P.pak` from `MotorTown/Content/Paks`. Later alphabetical names win on conflicts.
+- **Mesh reduction can shift materials:** UE's LOD0 reduction (spec `reduce`) can delete a tiny section (a 4-triangle badge), after which every later section draws the previous slot's material (F40: gauges showed the sticker sheet, belts vanished). build_car.py re-maps sections after reduction and logs "WARNING reduction removed"; if a car shows wrong textures on whole groups of parts, check for that line.
+- **New pak names need approval (0.7.20+):** the game lists every custom pak in `%LOCALAPPDATA%/MotorTown/Saved/Config/Windows/CustomPak.ini` ([CustomPakStateV2]). A NEW file name starts UserEnabled=False / ReviewPending=True and is never opened (the car is missing at its dealer and from F8, with nothing in any log). Rebuilt existing names stay enabled. After installing a new car pak, tell the user to enable it in the game's mod review (friends too).
 - **Mappings:** `~/mt-work/MotorTown-current.usmap` (dumped with UE4SS). Re-dump it after game updates.
 - **Unpacked game files:** `~/mt-work/unpacked/MotorTown/Content`. Fetch any single file with `repak -a $(cat ~/mt-work/aes.key) get <MotorTown-Windows.pak> <path> > out`.
 - **Tools:**
@@ -120,6 +126,7 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
   - **Row part `RearWing=MagisStock`:** strip it. Springs 12/13 (rear_z = z+1); chassis 1120 kg; Body sockets include Exhaust_Right too.
 - `default_engine: "/Game/Cars/Parts/Engine/<asset>"` sets the blueprint's default EngineData to any engine asset, e.g. More Tuning's 2JZ320HP for the Supra (420 N·m, 7000 rpm, with real 2JZ sound samples). The user asked to use More Tuning engines where they match the real car: accepted dependency on More Tuning.
 - **Glow mask:** when the dial triangles are large (Supra: they span the whole dash face), cover the dash with `uv_split` and set `emissive_slots.<slot>.mask_from_gauges: true`. ps_to_mt writes `<tex>_GLOW.png` (black except the gauge-face circles), and M_Glow's separate "Glow Texture" param reads it.
+- **Raton base is AWD from the factory** (DifferentialF/R + DiffernetialC): leave `drivetrain` unset for AWD cars; `drivetrain: "rwd"` converts it (Diablo). make_awd only works on RWD bases with a single `Differential`.
 - **Fortem base** (small roadster/coupe; used for the Elise, the user's pick). Same as the Magis except:
   - The mirror mesh is called **`LeftSideMirror`** (make_mt_assets' parts list includes it): spec mesh `LeftSideMirror` (recenter, planar_uv) + `mirror_components {LeftSideMirror_GEN_VARIABLE: "LeftSideMirror", RightSideMirror_GEN_VARIABLE: "LeftSideMirror:mirror"}`.
   - The colour slot for glass is `Windows` (`final_slot_names {Paint: Body, Glass: Windows}`).
@@ -129,6 +136,8 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
 - **Dealer bay placement:** ask the user to stand where the car should go, facing the direction its nose should point, and press F6 (it logs the player position and camera yaw to `MotorTown/Binaries/Win64/ue4ss/UE4SS.log`, line `[PSCar] player at (...) camera yaw ...`). If they stand at the bay entrance line, put the car centre ~2.5 m ahead along the yaw; z = ground ≈ player z − 90. Then add the spots.txt line and run rebuild_dealers.sh.
 
 ## Interior / first person
+
+- **Missing/crude cabin details (MW Diablo):** `tools/shapes.py` via spec `add_shapes` (primitives: torus, tube, spokes, disc, cylinder, ellipsoid, box, `piping` = tubes along a box's sharp seat edges; `snap: [axis, sign, offset]` ray-casts onto the Body, `align: true` faces the hit surface; colour from a `uv` swatch or a `uv_box` texture rect) and `texture_paint` (fill / buttons / gate / vent / grille / swatch on an atlas, after upscale and before gauge faces). A crude source wheel: `extract.SteeringWheel.discard: true` + add_shapes on mesh SteeringWheel (hub frame, spin axis X, driver at -X). Check with a z-buffered cockpit render before building.
 - **Steering wheel:** the game spins the mesh `/Game/Cars/Parts/SteeringWheels/<name>` around its local X axis, hub at the origin. The Zino's wheel is about 19.5 cm in radius and 6 cm thick in X. It is attached at the Body socket `SteeringWheel`.
   - Spec `extract.SteeringWheel = {from: Body, center, radius (Y-Z), x_range, socket, align_x}` moves the source car's own wheel triangles into that mesh. It centres them on the hub, stands the wheel upright (fits its tilt) and writes the socket location plus pitch = −tilt.
   - Find the centre by rendering the cockpit region (front view Y-Z); the wheel shows as a ring.
@@ -420,7 +429,7 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
 - **Additive MW decal atlases (993 crest/RWB atlas 0x3B904E9A, fully opaque, black = no effect):** drawn opaque they turn panels black. Spec `overlay_textures {hash: {base: Paint, slot: Tex_<X>_DECALS, parts: [...], lift: 0.05}}`: those groups render as the base slot plus a lifted copy in a masked overlay slot. `alpha_from_luma: [slot]` makes write_textures derive opacity from brightness. Add the slot to masked_texture_slots and texture_sources, plus a dummy texture_slots entry so it gets exported. Outside the listed parts (seals, interior) map the hash to Bottom. render_car.py honours alpha.
 - **Lamp lens material without a car texture (993 0x02B52399):** it samples the car's lamp atlas at runtime. Map it to that atlas (0x9C85D2CC = unlit; 0xD63299CE = lit-brake copy) and split the lamps by position boxes: front bumper indicators, fender repeaters, outer tail-bar ends = amber signals (Euro); the bar's inner sections = Left/RightTailLight; the centre reflector (left half only, `_X`) = the TailLight sliver; the headlamps keep the atlas slot = HeadLight.
 - **Gauges in reverse:** when the dial art is scattered in an atlas, find the pod centres in a front render, read the UV of the front-most face under each (barycentric), mark them on the texture, then pick the true dial centres in the art and map them back with uv_to_3d. 993: speedo (.234,.254), tach (.771,.23), fuel (.156,.68), oil temp (.518,.60); ~15 cm per texture unit, upright, roll −77.5. The atlas also textures the whole interior, so uv_split covers most of it (dark texels don't glow).
-- **Engine sound choice:** Rework gives the 993 RWB `hon_s2k_b` (a Honda S2000 sound!). Use the period-correct GIN_964 (air-cooled flat-6) instead. Its range is 3470–9471, so cut loops inside it (3550/5300/7300); a target below the range picks a stray grain (660 rpm).
+- **Engine sound choice:** Rework gives the 993 RWB `hon_s2k_b` (a Honda S2000 sound!). Use the period-correct GIN_964 (air-cooled flat-6) instead. Its grains run 3420–9190; below that the layers come from GIN_POR_DP6 (see Engine sound).
 - 993 values: MW torque ×1.05 (induction HIGH_BOOST) → 566.6 N·m peak, ~400 hp at 7500; gears R 3.35, 3.82/2.05/1.41/1.12/0.92/0.75, FD_3.31 (MW 3.38); 1295 kg → body_mass 849; wheels radius 38.4, z 10/14, half_track 73.7 / rear 80.3, rears ×1.25 wide; wheel pivot (26.9,−30.6,67.9) (6404-tri wheel); eye (−32,−30.6,93); room mirror (18,0,106) aim (7.4,15.5); kit splits 158 / −146 → 35 parts.
 - **Engine loops MUST be named exactly `idle.wav` / `mid.wav` / `high.wav`.** make_sound_cue only swaps the S58 cue's folder path, so the wave names have to match the S58 ones. gin_loops' `<prefix>_idle.wav` names imported as-is made the M3 GTR and 993 RWB silent in game. Copy the loops to idle/mid/high in a separate import folder, and import only those three (not the full GIN wav).
 - **M3 GTR first in-game feedback (2026-10-18), and the fixes:**
@@ -601,3 +610,109 @@ The project journal is `~/OneDrive/Documents/claude/ps2motortown/MODLOG.md`. Rea
 - **Variant base blueprints** (police etc.): `base_vehicle: Muhan_Police, base_dir: Muhan, base_parts: {Police_Body: Body}`; copy the folder into ~/mt-work/unpacked AND unpacked_server. Police = Vehicles row tags Vehicle.Police (+Vehicle.Delivery.Police), flags 24, CL_Police, MTPoliceVehicleComponent, AIControllerClass AC_PoliceVehicle. Light bar lenses = slots EmergencyRed / EmergencyBlue (game materials M_EmergencyLight_Red/Blue, stand-ins in build_car).
 - **Fixed world bay in a copied showroom:** showroom file `bay <CAR> x y z yaw`; `skip <class regex>` drops source actors (MW showroom: ^DisplayStand_01_C$, the turntable).
 - **Never edit spots.txt while a dealer rebuild runs**; after stopping an editor build, check the next build log for "Error deleting file" / "WARNING slot".
+
+## Lesson: PS_Common spec list
+- make_mt_assets for pak_PS_Common (client AND server) must get EVERY car spec, or the omitted cars vanish from the dealers (2026-10-31: a stale template list dropped MW_997TT/MW_DIABLOSV/MW_SKYLINE). Before packing, check Vehicles_ProStreet.uasset contains <KEY>_C for every car.
+- **Stiff suspension (user, 2026-10-31): every car rides MW-stiff.** make_mt_assets SUSPENSION multiplies the base blueprint wheel SpringK/dampers and the CDO AntiRollBars; per-car override `suspension: {spring, damping, anti_roll}`. A suspension change means repacking EVERY car pak (the blueprint lives in the car pak).
+- **Low-poly cabin upgrade:** spec `cabin_remap` (flat slot -> textured region) and `tessellate` (Phong, level 3) in shapes.py; texture_paint op `alcantara`.
+
+## Mirror check (user, 2026-11-01: every MW car's mirrors must work)
+- After ps_to_mt (and make_mt_assets for component cars), run `python tools/check_mirrors.py cars/<car>.json` (all MW specs: `ls cars/mw_*.json | grep -v before_`). It must print "all mirrors ok". `CHECK_DETAIL=1` lists the offending faces. Look at the live glass from the eye too (scratchpad mirror_view.py idea: Body + glass placed as built through zcock).
+- Glass = the mirror part's GLASS texture group (`groups: [g]`: the group whose triangles all face rearward and isn't Paint/Bottom), never `normal_filter` alone (it grabbed the housing lip / backing plate). Body/Door parts that include the same mirror part get `skip_groups: [g]`, or the glass sits twice (z-fight / chrome over the mirror).
+- Source cars carry their own rear-view mirror: drop it (`drop_boxes`) and put RoomMirror where it was.
+- Component-placed mirrors (Magis, Fortem, Vista, Raton): `python tools/aim_mirrors.py cars/<car>.json --write`, then ps_to_mt again. A shared right mirror (scale Y -1) gets its own RightSideMirror copy; if the source's right glass isn't the mirror image of the left (993 RWB), the right mesh is the right glass with part `mirror: true` and `mirror_components` Right = "RightSideMirror:mirror".
+- Every texture hash of window glass must map to Glass (MW Supra 0x60F8B13C was unmapped -> opaque panel over the passenger window).
+- Real occluders (roll cage, pillar pods) are allowed per car with spec `mirror_check {hidden_max, note}`.
+
+## Base choice (user rule, 2026-11-01)
+- Always pick the base that most resembles the real car (layout, engine position, wheelbase, seating). Mid-engine long-wheelbase supercars (Diablo) -> **Raton** (row key "Sports_01": spec `base_row`). Clio V6 -> **Neo**; Corvette C6 -> from the MW Viper spec (Tuscan).
+- Raton facts: SideMirror_Left/_Right components with their own meshes (spec meshes SideMirror_Left/_Right, recenter, mirror_components, aim_mirrors), paint Body_0, glass Glass, lamps Left/RightTailLight + Left/RightSignalLight + ReverseLight + HeadLight (no TailLight), shared Dashboard_01 on the SteeringWheel socket, SteeringWheel component without mesh, 2 seats (pitch 10), AWD, springs 8/11 cm, 50000. Needs `dashboard.parent_socket: "SteeringWheel"` (shared Dashboard_01 hangs off that socket; car-space sockets broke the gauges). Stance: from the Tuscan's confirmed z 12.5/17 the Raton needed z 17/19 (higher mount = lower body), not lower.
+
+## NFS Heat cars (2026-11-01, first: Heat R34 cars/heat_skyline.json)
+- Export: ps2motortown/heat/exporter (HeatExport.exe on FrostySdk, run with cwd C:/Users/noust/nfs-work/heat_cache: `export <filter> <raw> <tex>`), then heat/heat_dae.py <raw> <geo> <CAR> <prefix> -> <CAR>_<PART>_A.dae; spec source_scale 100 (already X fwd, Y left, Z up). Notes: heat/NOTES.md. Never run Heat itself.
+- Start a Heat car from the matching finished spec of the same car (user: "use the MW R34 as the base"): keep base/blueprint/performance/stance, swap geometry, textures, dials, lamps, kits.
+- Materials are shader names (M_Carpaint_Max, M_Interior_Max, M_Light_Max, M_GlassOpaque_Mirror_Max, M_LightGlass*...): map in texture_slots; Tex_ slots are named by the texture suffix (Tex_Interior_D -> *_Interior_D.png). ps_to_mt prefers the .png (Heat .dds is BC sRGB, unreadable by PIL).
+- Body is a composite (BODY_P0..P10): shell/chassis/engine, glass, roof, interior, steering wheel (P4), doors (left P5-7 at -Y, right P8-10). Kits: per-slot parts <PART>_SET<x>[_ALT<y>] (seta = stock, *DY = widebody) -> aero_parts generated per slot, stock = KIT00 defaults.
+- Heat paints the needles into the dial art: redraw faces with gauge_faces (measure the dark dial discs in the texture), sockets via uv_to_3d, roll = -90 + panel tilt.
+- Full spec list for builds: tools/ALL_SPECS.txt (missing specs vanish from the dealers).
+
+- **No collision_boxes = invisible car (2026-11-01, MW Clio/Corvette):** a spec without collision_boxes builds and cooks fine, but the car falls through the ground: empty dealer bay, F8 spawn "does nothing". Every spec needs boxes (body bbox minus mirrors/antenna, lower box from ~14 cm). make_spec now copies them from the template; check before the first build.
+
+## Ride height (user rule 2026-11-01, every car)
+- make_mt_assets stiffens springs x2.5 and raises each wheel mount by the sag that removes (W/k·(1−1/2.5), W = (body_mass+456 kg)·9.81/4). Higher mount z = lower body.
+- Specs tuned in game on the stiff springs set `"stance_after_stiff": true` (heat_skyline only; user 2026-11-02: Diablo gets it) to skip it.
+- Always compare the finished stance with the real car's ground clearance (browser lookup) and the user's side screenshots.
+
+## Engine sound (user rule 2026-11-02, every car)
+- Always try the source game's original engine recording first. MW: GIN_*.gin → vgmstream-cli → tools/gin_loops.py → Scripts/import_sounds.py (Git Bash: prefix MSYS_NO_PATHCONV=1, or /Game/... gets mangled into C:/Program Files/Git/Game/...) → spec engine `sound_cue {cue_base, dir, pitch_rpm}`. Other NFS games: locate their engine banks before falling back to a game/More Tuning sound.
+- `sound_cue` only works on an engine whose base_asset imports the cue named in cue_base (S58 → SC_V8Engine). make_mt_assets now asserts this; the Clio had silently kept V6Sport_03. Only recreated engines get the source sound; engines from other mods or the user's picks stay.
+- **Layered cue (2026-11-05):** use `sound_cue.loops [[wave, recorded rpm], ...]` (cue_loops builds one crossfaded layer per loop), not 3 loops with pitch_rpm: the user heard breakup at 2000-4500 rpm with 3 loops. Cut 6 loops from the real idle to 0.97x the real redline with `~/mt-work/sound/cut6.py <DIR>` (add the car to its CARS table).
+- **GIN format:** the first nb entries are an rpm index, not grains (gin_loops now skips them). If the recording's lowest grain is more than ~2x the real idle (UE pitch floor 0.4), blend low layers from a similar engine that goes lower (993 RWB: GIN_POR_DP6 below 3400 rpm, GIN_964 above).
+- **Volume:** cue_loops sets every layer to 0.8-1.6 by rpm and 0.6-1.0 by throttle, cue x1.0; the S58 defaults left idle at ~5% ("very quiet, no idle").
+- **Interior holes (MW models have no door interior):** add the ProStreet twin's DOOR_LEFT/RIGHT with normal_filter y >= 0.3 / <= -0.3 (door cards only), then Body `inner_skin {boxes [[x0,|y|0,z0,x1,|y|1,z1]], slot: <interior Tex slot>, uv: <a pure black texel>}` (never Bottom: M_Body_Bottom renders light beige) for door tops / gaps / mirror backs. Check with a driver-eye raycast (culled backface hit = see-through). Keep the eye ~11 cm under the headliner, re-aim the RoomMirror, and lower the wheel (extract socket_offset) if the rim covers the dials.
+- **Wheel extract on a cluster-adjacent wheel:** limit it with `uv_slots` (and `uv_box`) so dash/gauge strips behind the rim stay in Body; otherwise a socket_offset moves them too and they show as lines across the dials (MW Corvette). **Tuscan US tail lamps:** put combined tail+turn lamps in Left/RightTailLight (kind signal_tail_red), never Left/RightSignalLight (TurnLight only: they never glow as tail/brake). Check exterior views through the windows too (holes from outside = single-sided cabin trim).
+- **Interiors come from the source car (user rule 2026-11-06):** use the car's own interior parts (MW: BASE + KIT00_INTERIOR; PS: BASE/SEAT_*/DOOR_*; Heat: BODY_P* interior groups). Never swap in another game's cabin because a part "looks corrupt": check the export first (NFS_DEBUG_SOLID=<part> with ~/tools/assetdumper-vfix prints vertex count vs index range). Rework IV can store wrong vertex counts; the vfix exporter reads the true count from the buffer. Compare with an in-game screenshot of the source car.
+- **MW exporter:** use ~/tools/assetdumper-vfix-x86 (32-bit, vertex-count fix). A 64-bit build cannot load LZCompressLib.dll and drops compressed textures silently; always compare the texture count with the TPK (`TPKDBG fail` lines). Source = MW Remaster Edition install.
+- **Cabin materials:** M_Body_Bottom (slot Bottom) renders beige in light; inside the cabin use `recolor_boxes` to a black interior texel. Limit the dial glow with `uv_split.box3d` when trims reuse the dial art.
+- **Re-sourcing a car from another export:** material names/group order can change. ps_to_mt resolves slots by name, then by the effect's texture hash; still compare per-slot face counts (top-facing Paint etc.) against the old build, and re-check every `groups`/`skip_groups` index (Remaster Elise swapped mirror glass/housing).
+- **MW engine sound on an S58 clone:** always set the engine's `physics_from` to its own game base engine (friction/inertia/idle throttle of the S58 stall small engines). Steering wheel vs dials: score visibility on points of the dial circles (wheelfit2), not on all Gauges triangles.
+- **Ride height rule (all bases):** wheel mount z higher = body lower. Start from body-origin-on-ground: mount ≈ tyre radius − sag (stiff springs ~3-4 cm); raise the body by lowering the mount by the same cm (PD4: 40 − 4 − 11 = 26 for a real 23 cm PPV clearance).
+- **Assetto Corsa sources (AC Supra, 2026-11-07):** `tools/kn5_to_obj.py` -> DAEs (source_scale 100); `texture_sources` may be plain file names. Dense AC meshes: per-mesh `reduce` (LOD0 triangle fraction; also `extract.<name>.reduce`) makes build_car run UE's reducer (Body 0.5, wheels 0.12). AC wheels sit at the hub dummies in car space: centre them with part `offset` = -hub; drag cars need `rear_wheel_meshes`; move the brake disc group into Body (`groups`) and skip it on the wheel. AC needles are separate needle-material groups: `skip_groups` them (keep static ones like a boost gauge) and redraw faces on the dial texture (UV v may run 1..2: image row = 1 - frac(v); `uv_split` box rows = image row - 1). Map dial art <-> 3D with barycentric lookups on the dial triangles. Engine sound: the car's sfx .bank decodes with `~/tools/vgmstream/vgmstream-cli.exe -s N -o <C:/fwd/slash/path>` (backslash -o paths lose variables in Git Bash); AC engine files are steady-rpm loops: read rpm from the spectrum (half-order spacing x 120), cut 3 s crossfaded loops, `sound_cue.loops`, base_asset S58 + `physics_from`. Run import_sounds with MSYS_NO_PATHCONV=1 (Git Bash rewrites /Game/...). pack_common packs Sound/PS_|MW_|AC_ waves only. Meshes only a UE4SS mod uses: list them in `extra_mesh_imports` (car blueprint imports them; UE4SS LoadAsset cannot see mod-pak assets). AC alpha-tested cockpit decal textures (INT_Decals etc.) must stay opaque: masking them punches holes all over the dash; mask only exterior badge/decal textures. Side mirrors: the game reflects the eye ray about the mirror COMPONENT -X axis, not the glass normal; aim_mirrors (glass-normal model) is only right when the glass faces ~-X (AC Gallardo glass 20 deg inward -> views 45 deg sideways; aim with X = -unit(r - d)). Never touch CSP-encrypted cars.
+
+## Base car leftovers and AC textures (2026-11-13, Unicorn C5)
+- Base body parts are stripped automatically (see checklist step 4). The Unicorn showed why: the Tuscan's Bonnet/FrontBumper/RearBumper (Tuscan_*_01) appeared as a floating hood panel and white bumpers. Base rows: pak_PS_Common/_work/Vehicles.json.
+- AC multimap materials: the diffuse is grey AO, and the colour comes from txDetail and the skin's metal_detail_* files. Bake AO x colour per material (rims, interior, cage) before the first build, and delete backfacing liners (hood/trunk) that poke through.
+
+## Pop-up headlights (native, 2026-11-13)
+- A pop-up part = Headlight row (copy of Panther_Headlight_01) + skeletal mesh/anim (tools/make_popup.py, Scripts/import_popup.py; PSCAR_POPUP_FINAL maps raw slots to the car's paint slot name).
+- The pods are painted by the GAME when the car blueprint's CDO sets `BodyMaterialName` to the pods' paint slot, as the Panther does (Body_01). Use spec `blueprint.cdo_names {"BodyMaterialName": "<paint slot>"}` (Magis: Body, Tuscan: Body_01). Never use a runtime UE4SS repaint script: the PSRaceLine paint/glow loops crashed the game repeatedly and are switched off.
+- The pod lamp slot uses our M_Lamp_Head instance (HeadLight parameter, skeletal usage set by import_popup).
+
+## NFS Heat engine audio (2026-11-13)
+- `HeatExport.exe sound audio/vehicles/cars/<car>/ <out>` dumps the car's audio assets (properties .txt + raw chunks .bin).
+- Idle/ignition/shutdown (NewWaveAsset) chunks are EA SPS: copy to .sps and decode with vgmstream.
+- Octane accel/decel layers (OctaneAsset 'Octn21'): `ps2motortown/heat/octane.py` decodes them (EA-XAS v0) and prints the rpm map.
+- `heat/octane_loops.py <sound_dir> <Car_Prefix> ~/mt-work/sounds/<CAR> <idle> rpm...` builds the l1..lN loops; then run Scripts/import_sounds.py and set the engine's sound_cue dir/loops. Rule: every port uses its source game's own engine sound.
+
+## Gauges + mirrors gate (MANDATORY, user 2026-11-13: "there should never be a car rendered with no gauges or mirrors")
+- After every ps_to_mt run and BEFORE building: `python tools/check_gauges.py cars/<car>.json` (each redrawn dial face sits on its needle socket, on the Gauges slot when one is split out, not inside the steering wheel mesh) and `python tools/check_mirrors.py cars/<car>.json` (glass placed + visible, room mirror clear). Build scripts stop on failure.
+- Set mirror rotations with `tools/aim_mirrors.py cars/<car>.json` from THIS car's eye and glass. Never copy another car's mirror angles: the Heat RX-7 with the AC RX-7's values showed sky / a dark fill.
+- uv_split for gauges: always add a box3d around the cluster (dash plastic often samples the same texture background as the dial art; the Heat RX-7 put 4,500 cabin triangles on the glow material). Converted-mesh UV v = 1 - image row.
+- Steering wheel extract: restrict it to the wheel's own triangles (uv_slots on a slot only the wheel part has). A hub cylinder alone also takes the cluster behind the wheel.
+- `tools/render_cockpit.py` gives a quick driver's-eye render. It has flat per-triangle colour, so use check_gauges for the dial art.
+
+## Lamps: only the bulb lights (user 2026-11-13)
+- In a lamp with a real reflector/bulb model, only the BULB glows. Never light the whole bucket or a coloured lens ("it's not a backlit texture unless it's flat or low poly"). Use ps_to_mt `bulb_rules` (box + mask channel threshold, or the amber diffuse texels for a turn bulb) with Heat's _E masks (R brake, G running, B reverse, A turn/park), and `lamp_masks` with threshold ~150 at the front. Leave coloured lenses as plain textures.
+- Check the real car's lamp layout (photos/video) and count the lamps: the '99-spec FD has 3 rounds per side (outer amber turn), and the reverse lights are in the rear bumper.
+
+## Lua syntax check (2026-11-13)
+- `py -3.13 ps2motortown/tools/luacheck.py <file.lua> ...` compiles Lua mods with Lua 5.4 (lupa, the UE4SS version) without running them. Run it after every edit to a UE4SS mod, before copying the mod into the game.
+
+## Universal rims from a car (2026-11-13)
+- A car's own wheel meshes are fitted to that car (sideways hub offset, drag sizes), so they look wrong on other cars even though empty VehicleKeys/VehicleTypes offer them everywhere (Maja's Wheel Works empties both on every rim).
+- For a universal copy: `tools/ac_rims.py cars/ac_rims.json` centres each `<CAR>_L/_R` (+ `_REAR`) mesh and scales it to 32.2 cm radius → build dir AC_Rims (rims.json); `ue_build.sh AC_Rims`, make_mt_assets with all specs, cook, `pack_car.py cars/ac_rims.json`. Spec `two_tone: false` keeps the single rim colour picker.
+- AC stock rim rows get VehicleKeys = own car (make_mt_assets), so the fitted versions stay on their own car. Add new AC cars to cars/ac_rims.json.
+
+## Wheel materials (2026-11-13, automatic)
+- **The garage paints colour picker N onto wheel material slot N** (an M_Body MID). So the rim MUST be slot 0 and the lip slot 1, and a rim row gets a second (lip) picker only if its mesh has a Wheel_02 slot; otherwise the garage paints the tyre/cap white (2026-11-14). UE's OBJ importer names and orders slots by the `g` group name (alphabetically), so wheel_mats.py writes `g o<N>_<slot>`; build_car strips the prefix. Diagnose wheels in game with PSRaceLine Shift+F4 ("wheel diag" lines).
+- **Wheel meshes need materials with skeletal + instanced-static-mesh usage.** The game's M_Sketchfab_Base has neither, so a textured wheel slot on it cooks to plain WHITE (2026-11-14). build_car.py puts every textured wheel slot on the car's own flagged M_PaintTex (rubber matte, metal shiny); M_TexMasked is flagged too. Existing builds: Scripts/fix_wheel_mats.py.
+- Never leave `Bottom`/`Trim` on a wheel mesh: body materials take the HOST car's colours, so rims fitted to other cars showed white tyres/tread. `tools/wheel_mats.py` (run by `ue_build.sh`) swaps them for fixed Tex_WHEEL_RUBBER / Tex_WHEEL_METAL, gives every wheel exactly one paintable `Wheel_01` rim (auto-picks the rim on AC/Heat wheels), and moves tyre faces of a paintable texture that reaches the tread to a non-paint `<slot>_TYRE` copy.
+- Re-import only the wheels of many cars: `tools/wheels_only.py <build>` → `_wheels/<CAR>`, then `PSCAR_DIRS="dir1;dir2" UnrealEditor ... -ExecutePythonScript=Scripts/build_many.py`, then fix_rim_parents.py.
+- AC car bodies carry their own brake calipers (Tex_AC_*_CALIPER): dropped (they clipped through other rims).
+
+
+## BeamNG cars (2026-11-14, Shelby GT350R first)
+- Only mods that ship real `.dae` models (`.cached.dts`/`.cdae`-only mods are protected caches: skip, tell the user).
+- `bng/bng_config.py <vehicle dir> <config.pc>` resolves parts; `bng/bng_to_parts.py <vehicle dir> <pc> ~/nfs-work/bng/<car> <PREFIX>` writes per-mesh DAEs + PNG textures in the AC/kn5 layout (source_scale 100). Props (steering wheel, pedals) included, needles left out.
+- Needle pivots = the needle props' DAE node translation; dial tilt from the node matrix (roll = -90 + tilt).
+- Lamp lenses have no texture (lit at runtime): point their Tex slots at the car's lights atlas.
+- Engine sound: the mod's own rpm-labelled loops (e.g. art/sound/engine/fm7/<car>/Exhaust_on_<rpm>.wav) -> ~/mt-work/sounds/<CAR>/l<N>.wav + import_sounds.py.
+- Spec generator per car in tools/spec_gen/ (make_gt350r_spec.py as the template). Quick look: tools/render_body.py.
+
+## Digital dash (game widgets on the car's own screen)
+- Game Dashboard meshes have slots TachoMeter, SpeedoMeter, FuelGauge, TempGauge and Dashboard_MFD_01 (all M_WidgetRender). The Dashboard component renders each GaugeConfigs widget, and the MFDParams widget, onto its slot.
+- Spec `dashboard.screens: [{slot, center [x,y,z] car cm, width, height, tilt}]`: ps_to_mt adds those quads to our Dashboard mesh (facing -X).
+- Keep `dashboard.sockets` Niddle_* at the quad centres, so the needles turn on the screen.
+- `gauge_widgets {"Gauges/W_Tachometer": "Gauges/W_TachoWithDigitalSpeed"}` swaps a widget class (other widgets: W_HorizontalGauge, MFD/W_MFD_01..03, MFD/W_MFD_EV1).
+- `gauge_text {"RPM": "Speed"}` adds the digital speed readout. `gauge_drop ["Speed"]` removes the analog speedo (the Kuda trucks' setup).
+- First user: cars/bng_gt500d.json (make_s550drag_spec.py).

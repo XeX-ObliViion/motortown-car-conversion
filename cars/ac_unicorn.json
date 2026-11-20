@@ -1,0 +1,1396 @@
+{
+ "car": "AC_UNICORN",
+ "display_name": "Corvette C5 Z06 'Unicorn' 1320Video (8 Second Shootout)",
+ "prefix": "AC_UNICORN",
+ "base_vehicle": "Tuscan",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/unicorn/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/unicorn/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_UNICORN/meshes",
+ "cost": 140000,
+ "wheel_part": true,
+ "wheel_display_name": "Drag Wheels (Unicorn C5)",
+ "base_wheel": "Vista",
+ "texture_slots": {
+  "c6logos2": "Tex_AC_UC_C6LOGOS",
+  "c6cockpit01a": "Tex_AC_UC_C6COCKPIT01",
+  "backfacingGeo": "Tex_AC_UC_RGBA000000FF",
+  "Exterior Chrome": "Trim",
+  "ac_Material #957": "Tex_AC_UC_BLACK",
+  "ac_Material #188": "Defrost",
+  "gls_clear|bumperrbadge_a": "Tex_AC_UC_RGBA022BC7FF",
+  "ac_Material #255": "Tex_AC_UC_RGBA19191966",
+  "car_paint": "Paint",
+  "Glass": "Glass",
+  "ac_Material #172": "Tex_AC_UC_VENT",
+  "Black Glass": "Tex_AC_UC_GLASSMASK",
+  "Mirror": "Mirror",
+  "ac_Material #431": "Tex_AC_UC_RED",
+  "ac_Material #868": "Tex_AC_UC_KSREDGLASS",
+  "frame": "Tex_AC_UC_RGBA010101FF",
+  "enginelow": "Tex_AC_UC_LONGV8FIMDIFF",
+  "Glass Int": "Glass",
+  "ac_Material #170": "Tex_AC_UC_GRILLE",
+  "ac_Material #402": "Tex_AC_UC_BLACK",
+  "ac_Material #736": "Tex_AC_UC_LOCK002GLOS",
+  "ac_Material #171": "Tex_AC_UC_BLACK",
+  "HeadLight Chrome": "Tex_AC_UC_HEADLIGHTCHROME",
+  "Body Plastic": "Tex_AC_UC_BODYPLASTIC",
+  "HeadLight Glass": "Glass",
+  "Interior Chrome": "Trim",
+  "ac_Material #958": "Tex_AC_UC_BLACK",
+  "INT_symbolsCustom_001_0A0A0AFF": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "INT_symbolsCustom_001|shifterassy_a": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "ac_Material #787": "Tex_AC_UC_RGBAFFFFFFFF",
+  "INT_symbolsCustom_001": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "ac_Material #668": "Tex_AC_UC_BLACK",
+  "blkpaint_lgl|centerstackstructure_a": "Tex_AC_UC_GLOSSVARIATIONGRUNGE00",
+  "radio_symbols|centerstackstructure_a": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "INT_symbolsCustom_001|vents_a": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "Interior Leather": "Tex_AC_UC_INTLEATHER",
+  "ac_Material #802": "Tex_AC_UC_CORVETTE003OPAC",
+  "INT_symbolsCustom_002|gaugepod_a": "Tex_AC_UC_CHECORVETTEZ0602SYMBOL",
+  "ac_Material #830": "Tex_AC_UC_RGBAFF5C0099",
+  "ac_Material #403": "Glass",
+  "ac_Material #803": "Tex_AC_UC_RED",
+  "ac_Material #895": "Tex_AC_UC_RGBA19191966",
+  "Carpet": "Tex_AC_UC_CARPETB",
+  "ac_Material #816": "Tex_AC_UC_BLACK",
+  "Interior Plastic": "Tex_AC_UC_INTPLASTIC",
+  "ac_Material #789": "Tex_AC_UC_HEADLINER",
+  "ac_Material #774": "Tex_AC_UC_GRILLE",
+  "ac_Material #405": "Tex_AC_UC_DIGITALGAUGECAPTURE",
+  "ac_Material #404": "Tex_AC_UC_CHECORVETTEZ0602GAUGES",
+  "ac_Material #869": "Tex_AC_UC_BLACK",
+  "c6steerwh01": "Tex_AC_UC_C6STEERWH01",
+  "c6stitch": "Tex_AC_UC_C6COCKPITSTITCH",
+  "metal_rgh_003_#FFFFFFFF": "Tex_AC_UC_CALIPER",
+  "rubber_smooth_#FFFFFFFF": "Tex_AC_UC_RGBAFFFFFFFF",
+  "c4lights01": "Tex_AC_UC_C4LIGHTS",
+  "c4hlightson": "Tex_AC_UC_C4LIGHTSON",
+  "window": "Glass",
+  "detail_glass_clear": "Tex_AC_UC_LIGHTSLOD0",
+  "detail_glass_red": "Tex_AC_UC_LIGHTSLOD0",
+  "textured_reflector": "Tex_AC_UC_LIGHTSLOD0",
+  "c6logos1": "Tex_AC_UC_C6LOGOS",
+  "misc": "Tex_AC_UC_CAM02NODAMAGELOD0",
+  "c4license": "Tex_AC_UC_PLATED",
+  "detail_glass_amber2": "Tex_AC_UC_LIGHTSLOD000",
+  "misc.001": "Tex_AC_UC_NODAMAGELOD000",
+  "detail_glass_amber": "Tex_AC_UC_LIGHTSLOD000",
+  "textured_reflector.001": "Tex_AC_UC_LIGHTSLOD000",
+  "tail_light_lod0": "Tex_AC_UC_LIGHTSLOD000",
+  "detail_glass_red.001": "Tex_AC_UC_LIGHTSLOD000",
+  "lights_glass": "Tex_AC_UC_LIGHTSLOD000",
+  "ac_Material #256": "Tex_AC_UC_KSREDGLASS",
+  "ac_Material #430": "Tex_AC_UC_KSREDGLASS",
+  "disc": "Tex_AC_UC_DISK02",
+  "carpet": "Tex_AC_UC_CARPETR",
+  "rollcage": "Tex_AC_UC_CAGE",
+  "EXT_RRimBlack": "Tex_AC_UC_RRIMBLACK",
+  "EXT_RRimChrome": "Trim",
+  "ac_Material #267": "Trim",
+  "ac_Material #130": "Tex_AC_UC_TYREHOOSIER2",
+  "ac_Material #131": "Tex_AC_UC_TREAD",
+  "ac_Material #7443": "Tex_AC_UC_RRIMBLACK",
+  "ac_Material #30": "Tex_AC_UC_TREAD",
+  "ac_Material #58": "Tex_AC_UC_TYREHOOSIER4",
+  "EXT_FRimBlack": "Tex_AC_UC_RIMBLACK",
+  "EXT_FRimChrome": "Trim",
+  "EXT_FRimLugs": "Tex_AC_UC_RIMBLACK",
+  "b375_real_st": "Tex_AC_UC_1320STICKER",
+  "ac_Material #2522": "Tex_AC_UC_HURON",
+  "ac_Material #2677": "Tex_AC_UC_RPMTRANS",
+  "scion_drag_misc": "Tex_AC_UC_CHUTE",
+  "scion_drag_misc2": "Tex_AC_UC_CHUTE2"
+ },
+ "texture_sources": {
+  "Tex_AC_UC_C6LOGOS": "c6logos.DDS",
+  "Tex_AC_UC_C6COCKPIT01": "c6cockpit01.dds",
+  "Tex_AC_UC_RGBA000000FF": "rgba000000ff.dds",
+  "Tex_AC_UC_BLACK": "black.dds",
+  "Tex_AC_UC_RGBA022BC7FF": "rgba022bc7ff.dds",
+  "Tex_AC_UC_RGBA19191966": "rgba19191966.dds",
+  "Tex_AC_UC_BODYAO": "body_ao.dds",
+  "Tex_AC_UC_RED": "Red.dds",
+  "Tex_AC_UC_KSREDGLASS": "ks_red_glass.dds",
+  "Tex_AC_UC_RGBA010101FF": "rgba010101ff.dds",
+  "Tex_AC_UC_LONGV8FIMDIFF": "long_v8_fi_m_diff.dds",
+  "Tex_AC_UC_GRILLE": "grille.png",
+  "Tex_AC_UC_LOCK002GLOS": "lock_002_glos.dds",
+  "Tex_AC_UC_HEADLIGHTCHROME": "HeadLight Chrome.dds",
+  "Tex_AC_UC_BODYPLASTIC": "Body Plastic_UCBAKE_BODYPLASTIC.png",
+  "Tex_AC_UC_CHECORVETTEZ0602SYMBOL": "che_corvettez06_02_symbols_diff.dds",
+  "Tex_AC_UC_RGBAFFFFFFFF": "rgbaffffffff.dds",
+  "Tex_AC_UC_GLOSSVARIATIONGRUNGE00": "glossvariation_grunge_001_diff.dds",
+  "Tex_AC_UC_INTERIORLEATHER": "Interior Leather.dds",
+  "Tex_AC_UC_CORVETTE003OPAC": "corvette_003_opac.dds",
+  "Tex_AC_UC_RGBAFF5C0099": "rgbaff5c0099.dds",
+  "Tex_AC_UC_CARPET": "Carpet.dds",
+  "Tex_AC_UC_INTERIORPLASTIC": "Interior Plastic.dds",
+  "Tex_AC_UC_ROOFGREY": "roof_grey.dds",
+  "Tex_AC_UC_DIGITALGAUGECAPTURE": "digitalgaugecapture.dds",
+  "Tex_AC_UC_CHECORVETTEZ0602GAUGES": "che_corvettez06_02_gauges_lite_8c301655-cfbe-42e9-b018-fcde8c141074.dds",
+  "Tex_AC_UC_C6STEERWH01": "c6steerwh01.dds",
+  "Tex_AC_UC_C6COCKPITSTITCH": "c6cockpit-stitch.DDS",
+  "Tex_AC_UC_CALIPERCOLOUR": "caliper_colour.dds",
+  "Tex_AC_UC_C4LIGHTS": "c4_lights.dds",
+  "Tex_AC_UC_C4LIGHTSON": "c4_lights_on.dds",
+  "Tex_AC_UC_LIGHTSLOD0": "lights_lod0.png",
+  "Tex_AC_UC_CAM02NODAMAGELOD0": "cam02_nodamage_lod0.png",
+  "Tex_AC_UC_PLATED": "Plate_D.dds",
+  "Tex_AC_UC_LIGHTSLOD000": "lights_lod000.dds",
+  "Tex_AC_UC_NODAMAGELOD000": "nodamage_lod000.png",
+  "Tex_AC_UC_DISK02": "disk02.dds",
+  "Tex_AC_UC_INTERIORD": "interior_d.dds",
+  "Tex_AC_UC_CALIPERD": "caliper_d.dds",
+  "Tex_AC_UC_EXTRRIM": "EXT_RRim.dds",
+  "Tex_AC_UC_TYREHOOSIER2": "tyre_hoosier2.png",
+  "Tex_AC_UC_TREAD": "tread.png",
+  "Tex_AC_UC_TYREHOOSIER4": "tyre_hoosier4.png",
+  "Tex_AC_UC_EXTFRIM": "EXT_FRim.dds",
+  "Tex_AC_UC_1320STICKER": "1320sticker.png",
+  "Tex_AC_UC_HURON": "huron.png",
+  "Tex_AC_UC_RPMTRANS": "rpmtrans.png",
+  "Tex_AC_UC_RIMBLACK": "EXT_FRim_UCBAKE_RIMBLACK.png",
+  "Tex_AC_UC_RRIMBLACK": "EXT_RRim_UCBAKE_RRIMBLACK.png",
+  "Tex_AC_UC_CAGE": "caliper_d_UCBAKE_CAGE.png",
+  "Tex_AC_UC_INTPLASTIC": "Interior Plastic_UCBAKE_INTPLASTIC.png",
+  "Tex_AC_UC_INTLEATHER": "Interior Leather_UCBAKE_INTLEATHER.png",
+  "Tex_AC_UC_CARPETB": "Carpet_UCBAKE_CARPETB.png",
+  "Tex_AC_UC_CARPETR": "interior_d_UCBAKE_CARPETR.png",
+  "Tex_AC_UC_CALIPER": "caliper_colour_UCBAKE_CALIPER.png",
+  "Tex_AC_UC_VENT": "body_ao_UCBAKE_VENT.png",
+  "Tex_AC_UC_HEADLINER": "roof_grey_UCBAKE_HEADLINER.png",
+  "Tex_AC_UC_DASHTOP": "UC_DASHTOP.png",
+  "Tex_AC_UC_CHUTE": "C:/Users/noust/nfs-work/ac/rx7_fd/textures/scion_drag_misc_diffuse.dds",
+  "Tex_AC_UC_CHUTE2": "C:/Users/noust/nfs-work/ac/rx7_fd/textures/scion_drag_misc2_diffuse.dds",
+  "Tex_AC_UC_GLASSMASK": "EXT_glass_mask.dds"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    "BODY_BLACK",
+    "BODY_PLASTIC",
+    "GRILL_MESH",
+    "OBJECT001",
+    "GRILLS",
+    "EXTERIOR_CHROME",
+    "RUBBER",
+    "LOCKS",
+    "LOD_A",
+    "BLACK_GLASS",
+    "_$$3DSIMED$$_",
+    "WIPERS_A_SUB0",
+    "WIPERS_A_SUB1",
+    "GLASS",
+    "CHE_3_CORVETTEC5R_04_COCKPIT_LEXANLF_WINDOW_",
+    "CHE_3_CORVETTEC5R_04_COCKPIT_LEXANRF_WINDOW_",
+    "SUSP_LF",
+    "SUSP_RF",
+    "SUSP_LR",
+    "SUSP_RR",
+    "_$$3DSIMED$$__008",
+    "_$$3DSIMED$$__023",
+    "_$$3DSIMED$$__028",
+    "_$$3DSIMED$$__029",
+    "LICENSE_SUB2",
+    "BUMPERR_A_SUB2",
+    "NUMBER_PLATE_LIGHTS",
+    {
+     "part": "SCION_DRAG_BOOT_LODA_SUB0",
+     "geo": "C:/Users/noust/nfs-work/ac/rx7_fd/geo",
+     "prefix": "AC_RX7FD",
+     "src_scale": 100.0,
+     "xform": {
+      "t": [
+       8,
+       0,
+       3
+      ]
+     }
+    },
+    {
+     "part": "SCION_DRAG_BOOT_LODA_SUB1",
+     "geo": "C:/Users/noust/nfs-work/ac/rx7_fd/geo",
+     "prefix": "AC_RX7FD",
+     "src_scale": 100.0,
+     "xform": {
+      "t": [
+       8,
+       0,
+       3
+      ]
+     }
+    },
+    "REAL2",
+    "REAL003",
+    "REAL004",
+    "ROLLCAGE",
+    "INTERIOR_PLASTIC",
+    "INTERIOR_LEATHER",
+    "CARPET",
+    "CARPET_S1",
+    "ROOF_LINER",
+    "STITCH",
+    "DOORSILL_A_SUB0",
+    "EVLRABBIT_C5_DRIFT",
+    "CENTERCONSOLESTRUCTURE_A_SUB3",
+    "CENTERCONSOLESTRUCTURE_A_SUB5",
+    "CENTERCONSOLESTRUCTURE_A_SUB6",
+    "CENTERSTACKBEZELS_A_SUB0",
+    "CENTERSTACKBEZELS_A_SUB2",
+    "CENTERSTACKBEZELS_A_SUB3",
+    "CENTERSTACKBEZELS_A_SUB5",
+    "DASHPAD_A_SUB0",
+    "DASHPAD_A_SUB1",
+    "DASHPAD_A_SUB5",
+    "DASHSTRUCTURE_A_SUB1",
+    "DASHSTRUCTURE_A_SUB5",
+    "DOORCARDLF_A_SUB0",
+    "DOORCARDLF_A_SUB4",
+    "DOORCARDLF_A_SUB6",
+    "SPEAKERDOORLF_A_SUB0",
+    "SPEAKERDOORLF_A_SUB1",
+    "STEERINGCOLUMN_A_SUB0",
+    "GAUGECLUSTER_A_SUB0",
+    "GAUGECLUSTER_A_SUB1",
+    "SHIFT_LIGHT",
+    "STEER_HR",
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_BUMPERFA_TEXTURED_REFLECTOR_",
+     "slot": "HeadUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_BUMPERFA_DETAIL_GLASS_RED_",
+     "slot": "HeadUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_BUMPERFA_DETAIL_GLASS_CLEAR_",
+     "slot": "Glass"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_TAILLIGHTL_TEXTURED_REFLECTOR_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_TAILLIGHTR_TEXTURED_REFLECTOR_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_TAILLIGHTL_TAIL_LIGHT_LOD0_.001",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_TAILLIGHTR_TAIL_LIGHT_LOD0_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_LEXANLTL_DETAIL_GLASS_RED_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_LEXANRTL_DETAIL_GLASS_RED_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_LEXANLTL_DETAIL_GLASS_AMBER_",
+     "slot": "TailUC"
+    },
+    {
+     "part": "CHE_3_CORVETTEC5R_04_LOD0_LEXANRTL_DETAIL_GLASS_AMBER_",
+     "slot": "TailUC"
+    },
+    "CHE_3_CORVETTEC5R_04_LOD0_LEXANLTL_MISC_",
+    "CHE_3_CORVETTEC5R_04_LOD0_LEXANRTL_MISC_",
+    {
+     "part": "BRAKELIGHT_BUBLS",
+     "slot": "TailUC"
+    },
+    {
+     "part": "BRAKELIGHTS.001",
+     "slot": "TailUC"
+    },
+    {
+     "part": "TAILLIGHT_GLASS.001",
+     "slot": "TailUC"
+    },
+    {
+     "part": "GLASSBODYSIDEMARKERR_A_SUB1",
+     "slot": "TailUC"
+    },
+    {
+     "part": "REVERSE_LIGHTS",
+     "slot": "RevUC"
+    },
+    {
+     "part": "LICENSE",
+     "slot": "RevUC"
+    }
+   ],
+   "reduce": 0.4,
+   "drop_slots": [
+    "Defrost",
+    "Tex_AC_UC_CALIPER"
+   ],
+   "drop_boxes": [
+    [
+     3,
+     -17,
+     102,
+     15,
+     11,
+     114.5
+    ],
+    [
+     45,
+     -28,
+     75.5,
+     50.5,
+     -22,
+     80.5
+    ],
+    [
+     44,
+     -57,
+     75,
+     49.5,
+     -51,
+     80
+    ]
+   ],
+   "drop_note": "boxes in MT frame (y right)"
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "WINGMIRRORL_A_SUB2",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "WINGMIRRORR_A_SUB3",
+     "slot": "Mirror",
+     "normal_filter": {
+      "axis": 0,
+      "max": -0.75
+     }
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Popup": {
+   "parts": [
+    {
+     "part": "HEADLIGHT_L",
+     "groups": [
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "part": "HEADLIGHT_L",
+     "groups": [
+      2
+     ],
+     "slot": "HeadPod"
+    },
+    {
+     "part": "HEADLIGHT_R",
+     "groups": [
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "part": "HEADLIGHT_R",
+     "groups": [
+      1
+     ],
+     "slot": "HeadPod"
+    }
+   ],
+   "note": "C5 pop-up pods (closed in the model; glass left out like the RX-7); AC Lights.ksanim: hinge x 180.3 z 72.6, 25 deg front-up"
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -145.9,
+      73.8,
+      -36.7
+     ]
+    },
+    {
+     "part": "DISC_LF",
+     "offset": [
+      -145.9,
+      73.8,
+      -36.7
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -145.3,
+      -73.8,
+      -36.7
+     ]
+    },
+    {
+     "part": "DISC_RF",
+     "offset": [
+      -145.3,
+      -73.8,
+      -36.7
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      119.5,
+      72.6,
+      -36.7
+     ]
+    },
+    {
+     "part": "DISC_LR.001",
+     "offset": [
+      119.5,
+      72.6,
+      -36.7
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      120.1,
+      -72.6,
+      -36.7
+     ]
+    },
+    {
+     "part": "DISC_RR",
+     "offset": [
+      120.1,
+      -72.6,
+      -36.7
+     ],
+     "note": "disc on the wheel (spins with it)"
+    }
+   ],
+   "reduce": 0.3
+  }
+ },
+ "rear_wheel_meshes": true,
+ "rear_wheel_part": true,
+ "mesh_names": {
+  "Wheel_L": "AC_UNICORN_L",
+  "Wheel_R": "AC_UNICORN_R",
+  "Wheel_RL": "AC_UNICORN_REAR_L",
+  "Wheel_RR": "AC_UNICORN_REAR_R",
+  "SteeringWheel": "AC_UNICORN"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "HeadUC": "HeadLight",
+  "HeadPod": "HeadLight",
+  "TailUC": "TailLight",
+  "RevUC": "ReverseLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftTailLight",
+  "Signal_R_R": "RightTailLight"
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "wheels": {
+  "front_x": 145.6,
+  "rear_x": -119.8,
+  "half_track": 73.8,
+  "rear_half_track": 72.6,
+  "z": 32.5,
+  "rear_z": 35.5,
+  "radius": 32.5,
+  "auto_arches": false,
+  "note": "AC hubs (wheelbase 265.4 = AC 2.654); front tyre r 32.5, rear Hoosier drag radial r ~35.5"
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    16,
+    0,
+    45
+   ],
+   "size": [
+    450,
+    182,
+    50
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    98
+   ],
+   "size": [
+    190,
+    140,
+    40
+   ]
+  }
+ ],
+ "strip_part_slots": [
+  "Bonnet",
+  "FrontBumper",
+  "RearBumper"
+ ],
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     22.22,
+     -38.46,
+     79.53
+    ],
+    "rot": [
+     -13.88,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -212,
+     -24,
+     27
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -212,
+     24,
+     27
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -195,
+     0,
+     96
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     126
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -212,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     47.95,
+     -43.82,
+     80.57
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     48.0,
+     -34.8,
+     80.95
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     48.21,
+     -25.83,
+     79.51
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     47.29,
+     -53.0,
+     78.96
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     15.42,
+     -96.47,
+     89.35
+    ],
+    "rot": [
+     -5.44,
+     -18.67,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     14.58,
+     96.47,
+     89.35
+    ],
+    "rot": [
+     -3.41,
+     29.63,
+     0
+    ]
+   }
+  ]
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -38,
+    -38.5,
+    21
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -38,
+    38.5,
+    21
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -38,
+    38.5,
+    21
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -38,
+    -38.5,
+    21
+   ]
+  },
+  "cockpit_camera": [
+   -40.0,
+   -38.5,
+   103.0
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    9.0,
+    -3.0,
+    108.5
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -25,
+    0,
+    117
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -75,
+    0,
+    116
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    210,
+    -64,
+    66
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    210,
+    64,
+    66
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    222,
+    82,
+    39
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    222,
+    -82,
+    39
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -204,
+    -45,
+    82
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -204,
+    45,
+    82
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    2.1,
+    17.9,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 1110,
+  "room_mirror_aim_z": 0.02,
+  "cdo_names": {
+   "BodyMaterialName": "Body_01"
+  }
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    23.9,
+    -38.5,
+    78.4
+   ],
+   "radius": 19.5,
+   "x_range": [
+    10,
+    34
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_UC_C6STEERWH01",
+    "Tex_AC_UC_C6COCKPITSTITCH"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "reduce": 0.5,
+   "pivot": [
+    22.223049999999997,
+    -38.4636,
+    79.53435
+   ],
+   "tilt_deg": 13.88
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "HeadUC",
+   "box": [
+    190,
+    -95,
+    30,
+    235,
+    -79,
+    50
+   ]
+  },
+  {
+   "tag": "_F",
+   "from": "HeadUC",
+   "box": [
+    190,
+    79,
+    30,
+    235,
+    95,
+    50
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "TailUC",
+   "box": [
+    -215,
+    -80,
+    70,
+    -190,
+    -53,
+    95
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "TailUC",
+   "box": [
+    -215,
+    53,
+    70,
+    -190,
+    80,
+    95
+   ]
+  }
+ ],
+ "lamp_slots": {
+  "HeadUC": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD0"
+  },
+  "HeadPod": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_UC_HEADLIGHTCHROME"
+  },
+  "TailUC": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD000"
+  },
+  "RevUC": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_UC_C4LIGHTSON"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD0"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD0"
+  },
+  "Signal_L_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD000"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_AC_UC_LIGHTSLOD000"
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     47.95,
+     -43.82,
+     80.57
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     48.0,
+     -34.8,
+     80.95
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     48.21,
+     -25.83,
+     79.51
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     47.29,
+     -53.0,
+     78.96
+    ],
+    "rot": [
+     0,
+     -90,
+     -65.6
+    ]
+   }
+  ],
+  "note": "AC ARROW_RPM/SPEED hubs; fuel/temp = the C5 cluster's own fuel and coolant dials (texture centres mapped to 3D)"
+ },
+ "gauge_style": {
+  "face_color": [
+   2,
+   2,
+   4
+  ],
+  "ink": [
+   150,
+   178,
+   245
+  ],
+  "minor_ink": [
+   120,
+   145,
+   210
+  ],
+  "red_color": [
+   235,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf"
+ },
+ "gauge_faces": {
+  "Tex_AC_UC_CHECORVETTEZ0602GAUGES": [
+   {
+    "center": [
+     0.1954,
+     0.6095
+    ],
+    "face": [
+     0.1954,
+     0.6095,
+     0.19
+    ],
+    "radius": 0.165,
+    "rotate": 0,
+    "min": 0,
+    "max": 8,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 7.5,
+    "font": 0.14,
+    "captions": [
+     [
+      "RPM x1000",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.08,
+    "note": "C5 art 0-7k; the Unicorn revs to 8000"
+   },
+   {
+    "center": [
+     0.5847,
+     0.6022
+    ],
+    "face": [
+     0.5847,
+     0.6022,
+     0.19
+    ],
+    "radius": 0.165,
+    "rotate": 0,
+    "min": 0,
+    "max": 200,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.12,
+    "captions": [
+     [
+      "MPH",
+      0.32,
+      90
+     ]
+    ],
+    "caption_font": 0.09
+   },
+   {
+    "center": [
+     0.9379,
+     0.6071
+    ],
+    "face": [
+     0.9379,
+     0.6071,
+     0.07
+    ],
+    "radius": 0.06,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.336,
+     0.3256
+    ],
+    "face": [
+     0.336,
+     0.3256,
+     0.07
+    ],
+    "radius": 0.06,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.3,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 8
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  240,
+  90,
+  20
+ ],
+ "needle_width": 0.35,
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_AC_UC_CHECORVETTEZ0602GAUGES",
+   "glow": 2.0
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_UNICORN_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "masked_texture_slots": [
+  "Tex_AC_UC_GLASSMASK",
+  "Tex_AC_UC_C6COCKPITSTITCH",
+  "Tex_AC_UC_C4LIGHTSON",
+  "Tex_AC_UC_1320STICKER",
+  "Tex_AC_UC_HURON",
+  "Tex_AC_UC_RPMTRANS",
+  "Tex_AC_UC_CORVETTE003OPAC"
+ ],
+ "performance_source": "AC data (gbe_1320video_unicorn): TOTALMASS 1651, RWD, 6 gears 2.97/2.07/1.43/1.00/0.71/0.57 R-3.28 FINAL 3.15, LIMITER 8000, MINIMUM 900; power.lut NA 560 Nm @5000; TURBO_0+TURBO_1 MAX_BOOST 0.8 each (x2.6 = 1456 Nm, ui 1253 whp)",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_UNICORN_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_UNICORN_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "T56 6-Speed Drag (Unicorn C5)",
+    "cost": 8000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.121,
+     "1": 2.826,
+     "2": 1.97,
+     "3": 1.361,
+     "4": 0.952,
+     "5": 0.676,
+     "6": 0.542
+    },
+    "note": "AC final 3.15 folded in (game row FD_3.31): ratio x 3.15/3.31"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_UNICORN_LS_TT",
+    "base_row": "SmallBlock_320HP",
+    "asset": "AC_UNICORN_LS_TT",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "Twin-Turbo LS V8 (Unicorn C5)",
+    "mass": 230,
+    "cost": 60000,
+    "max_torque_nm": 560.19,
+    "max_rpm": 8000,
+    "curve": [
+     [
+      0.0625,
+      0.5786
+     ],
+     [
+      0.125,
+      0.7213
+     ],
+     [
+      0.1875,
+      0.7721
+     ],
+     [
+      0.25,
+      0.8246
+     ],
+     [
+      0.3125,
+      0.8582
+     ],
+     [
+      0.375,
+      0.8842
+     ],
+     [
+      0.4375,
+      0.9182
+     ],
+     [
+      0.5,
+      0.9591
+     ],
+     [
+      0.5625,
+      0.9919
+     ],
+     [
+      0.5938,
+      1.0
+     ],
+     [
+      0.625,
+      1.0
+     ],
+     [
+      0.6875,
+      0.9802
+     ],
+     [
+      0.75,
+      0.9371
+     ],
+     [
+      0.8125,
+      0.8984
+     ],
+     [
+      0.875,
+      0.8698
+     ],
+     [
+      0.9375,
+      0.8169
+     ],
+     [
+      1.0,
+      0.7283
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "AC power.lut (NA, 560 Nm @4750-5000); boost from PS_Boost_200psi (1 + 0.08 x 20 = x2.6 = AC twin turbos 0.8 + 0.8)",
+    "physics_from": "Cars/Parts/Engine/FordSmalBlock302_V8_5L_320HP",
+    "idle_throttle": 0.0009,
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_UNICORN",
+     "loops": [
+      [
+       "l1",
+       1120
+      ],
+      [
+       "l2",
+       2650
+      ],
+      [
+       "l3",
+       3470
+      ],
+      [
+       "l4",
+       4640
+      ],
+      [
+       "l5",
+       5420
+      ],
+      [
+       "l6",
+       6710
+      ],
+      [
+       "l7",
+       7810
+      ]
+     ],
+     "note": "the car's own bank (gbe_1320video_unicorn.bank, vgmstream): SLS_ral idle, SLS_acc_02/05/08/10/13/16 loops; rpm from the spectrum (V8 firing = 8th half-order)"
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "AC_UNICORN_LS_TT",
+  "Transmission": "AC_UNICORN_6MT",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Turbocharger": "PS_Boost_200psi",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceDragTireStrip",
+  "Tire3": "PerformanceDragTireStrip",
+  "Wheel0": "AC_UNICORN",
+  "Wheel1": "AC_UNICORN",
+  "Wheel2": "AC_UNICORN_REAR",
+  "Wheel3": "AC_UNICORN_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "BrakeBalance": "BrakeBalance_F60",
+  "Headlight": "AC_UNICORN_Popup"
+ },
+ "popup": {
+  "hinge": [
+   180.3,
+   72.6
+  ],
+  "angle": 25.0,
+  "seconds": 0.5,
+  "note": "AC Lights.ksanim: HEADLIGHT_L/R rotate 25 deg about the lateral axis through their node (x 180.3, z 72.6)"
+ },
+ "add_shapes": [
+  {
+   "mesh": "Body",
+   "type": "quad",
+   "slot": "Tex_AC_UC_INTPLASTIC",
+   "uv": [
+    0.24,
+    1.309
+   ],
+   "points": [
+    [
+     62,
+     -74,
+     87.0
+    ],
+    [
+     62,
+     74,
+     87.0
+    ],
+    [
+     93,
+     74,
+     79.5
+    ],
+    [
+     93,
+     -74,
+     79.5
+    ]
+   ]
+  }
+ ],
+ "drivetrain_note": "Tuscan is RWD (AC: RWD). Front street tyres, Hoosier drag radials at the rear like the AC car."
+}

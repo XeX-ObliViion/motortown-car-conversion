@@ -1,0 +1,1083 @@
+{
+ "car": "AC_CIVICEG",
+ "display_name": "Honda Civic EG AWD (8 Second Shootout)",
+ "prefix": "AC_CIVICEG",
+ "base_vehicle": "Neo",
+ "base_wheel": "Vista",
+ "base_wheel_mesh": "Micky",
+ "default_slot": "Bottom",
+ "source_scale": 100.0,
+ "geometry_dir": "C:/Users/noust/nfs-work/ac/eg_awd/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/ac/eg_awd/textures",
+ "out_dir": "C:/Users/noust/mt-work/build/AC_CIVICEG/meshes",
+ "cost": 95000,
+ "wheel_part": true,
+ "wheel_display_name": "Drag Wheels (8 Second Civic EG)",
+ "texture_slots": {
+  "EXT_glass": "Glass",
+  "Body_molding": "Bottom",
+  "black_solid": "Bottom",
+  "EXT_plastik": "Bottom",
+  "Honda_chrome": "Trim",
+  "ac_Material #2282": "Paint",
+  "glass_mask": "Bottom",
+  "SUSP_green": "Tex_AC_EG_SUSPG",
+  "SUSP_grey": "Tex_AC_EG_SUSPGR",
+  "supra_exterior_metal": "Bottom",
+  "teplinka": "Defrost",
+  "Body_boot": "Paint",
+  "Body": "Paint",
+  "Body_hood": "Paint",
+  "skin_paint": "Paint",
+  "Body_mirror": "Paint",
+  "Lights_int": "Tex_AC_EG_LIGHTS",
+  "Lights_steklo_nm": "Tex_AC_EG_LIGHTS",
+  "glass_lights": "Glass",
+  "EXT_glass_lights": "Glass",
+  "MIRROR": "Mirror",
+  "Lights_steklo_refl": "Tex_AC_EG_FRLIGHTS",
+  "Interior": "Tex_AC_EG_INTERIOR",
+  "Interior_stick": "Tex_AC_EG_INTSTICK",
+  "Plastik_black": "Bottom",
+  "carp": "Tex_AC_EG_CARPET",
+  "int_glass": "Glass",
+  "Plastik_grey": "Tex_AC_EG_PLASTIC",
+  "leither": "Tex_AC_EG_LEATHER",
+  "Interior_metall": "Trim",
+  "pedal": "Tex_AC_EG_PEDAL",
+  "leither_white": "Tex_AC_EG_LEATHERW",
+  "tkan": "Tex_AC_EG_FABRIC",
+  "INT_leather_SW": "Tex_AC_EG_STEER",
+  "INT_details_SW_metal": "Tex_AC_EG_STEERD",
+  "INT_details_PLASTIC": "Tex_AC_EG_STEERD",
+  "INT_seam": "Tex_AC_EG_SEAM",
+  "INT_belts": "Tex_AC_EG_BELT",
+  "Belt": "Tex_AC_EG_BELT",
+  "INT_metal": "Tex_AC_EG_GRAD",
+  "INT_plastic": "Tex_AC_EG_GRAD",
+  "cargrace": "Trim",
+  "INT_interiors_carbon": "Tex_AC_EG_SEATS",
+  "INT_interiors_seat": "Tex_AC_EG_SEATS",
+  "INT_chassis": "Tex_AC_EG_CHASSIS",
+  "INT_decals": "Tex_AC_EG_DECALS",
+  "EXT_calipers": "Tex_AC_EG_CALIPER",
+  "SUSP_black": "Bottom",
+  "_civicccplastic_detail": "Tex_AC_EG_BAY",
+  "Intercooler_Mishimoto_MLine": "Tex_AC_EG_INTERCOOLER",
+  "ac_Material #30": "Tex_AC_EG_TIRE",
+  "ac_Material #34": "Tex_AC_EG_TREAD",
+  "ac_Material #39": "Tex_AC_EG_RIM",
+  "ac_Material #41": "Tex_AC_EG_RIM",
+  "ac_Material #38": "Tex_AC_EG_RIM2",
+  "ac_Material #42": "Tex_AC_EG_CAP",
+  "ac_Material #40": "Tex_AC_EG_RIMB",
+  "ac_Material #27": "Tex_AC_EG_SKUNK",
+  "ac_Material #1008": "Tex_AC_EG_ROTOR",
+  "ac_Material #25": "Tex_AC_EG_PRECISION",
+  "ac_Material #28": "Tex_AC_EG_TRI"
+ },
+ "texture_sources": {
+  "Tex_AC_EG_SUSPG": "SUSP_green.dds",
+  "Tex_AC_EG_SUSPGR": "SUSP_grey.dds",
+  "Tex_AC_EG_LIGHTS": "lights_lod0.dds",
+  "Tex_AC_EG_FRLIGHTS": "fr_lights.dds",
+  "Tex_AC_EG_INTERIOR": "interior.dds",
+  "Tex_AC_EG_INTSTICK": "interior_lod0.dds",
+  "Tex_AC_EG_CARPET": "carp1.dds",
+  "Tex_AC_EG_PLASTIC": "Plastic1.png",
+  "Tex_AC_EG_LEATHER": "leather.dds",
+  "Tex_AC_EG_PEDAL": "pedal.dds",
+  "Tex_AC_EG_LEATHERW": "leather_white.dds",
+  "Tex_AC_EG_FABRIC": "Djinsa1.dds",
+  "Tex_AC_EG_STEER": "interiors_ao.dds",
+  "Tex_AC_EG_STEERD": "interiors_details.dds",
+  "Tex_AC_EG_SEAM": "seam.dds",
+  "Tex_AC_EG_BELT": "Cockpit_Belt.png",
+  "Tex_AC_EG_GRAD": "gradients.dds",
+  "Tex_AC_EG_SEATS": "interiors_ao_st185.dds",
+  "Tex_AC_EG_CHASSIS": "interiors_objects.dds",
+  "Tex_AC_EG_DECALS": "decals.dds",
+  "Tex_AC_EG_CALIPER": "details_st185.dds",
+  "Tex_AC_EG_BAY": "plastic_detail.dds",
+  "Tex_AC_EG_INTERCOOLER": "Intercooler_Mishimoto_MLine_Albedo.png",
+  "Tex_AC_EG_TIRE": "tyre_hoosier2.png",
+  "Tex_AC_EG_TREAD": "tread.png",
+  "Tex_AC_EG_RIM": "gray 1.dds",
+  "Tex_AC_EG_RIM2": "gray.dds",
+  "Tex_AC_EG_CAP": "mtcap.png",
+  "Tex_AC_EG_RIMB": "black 1.dds",
+  "Tex_AC_EG_SKUNK": "png-clipart-sticker-bomb-skunk-2-racing-logo.png",
+  "Tex_AC_EG_ROTOR": "ROTOR0.DDS",
+  "Tex_AC_EG_PRECISION": "precisionturbo.png",
+  "Tex_AC_EG_TRI": "IlUk66sh.png"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BODY",
+    {
+     "part": "BOOT",
+     "skip_groups": [
+      3
+     ],
+     "note": "rear-window defroster lines (teplinka) out"
+    },
+    "R_BUMP",
+    {
+     "part": "R_OPTICA",
+     "groups": [
+      0,
+      2
+     ]
+    },
+    {
+     "part": "R_OPTICA",
+     "groups": [
+      1,
+      3,
+      4
+     ],
+     "slot": "TailEG"
+    },
+    {
+     "part": "R_OPTICA",
+     "groups": [
+      5,
+      6
+     ],
+     "slot": "SigR"
+    },
+    {
+     "part": "R_OPTICA",
+     "groups": [
+      7
+     ],
+     "slot": "Glass"
+    },
+    {
+     "part": "ILR",
+     "slot": "SigR"
+    },
+    {
+     "part": "REV_L",
+     "slot": "RevEG"
+    },
+    {
+     "part": "DOOR",
+     "skip_groups": [
+      4,
+      5
+     ],
+     "note": "mirror glass -> SideMirror_L/R"
+    },
+    {
+     "part": "F_OPTICA",
+     "groups": [
+      0,
+      2,
+      4
+     ]
+    },
+    {
+     "part": "F_OPTICA",
+     "groups": [
+      1,
+      5
+     ],
+     "slot": "HeadEG"
+    },
+    {
+     "part": "F_OPTICA",
+     "groups": [
+      3,
+      6,
+      7
+     ],
+     "slot": "SigF"
+    },
+    {
+     "part": "IRF",
+     "slot": "SigF"
+    },
+    "SKIRT",
+    {
+     "part": "COCKPIT_HR",
+     "skip_groups": [
+      21,
+      22
+     ],
+     "note": "belts-on (worn) set out; the off set stays"
+    },
+    "STEER_HR",
+    "SUSP_LR",
+    "SUSP_RR",
+    "BAY004",
+    "INTERCOOLER_MISHIMOTO_MLINE",
+    "FRONT_BUMPER",
+    "OBJECT140",
+    "OBJECT141",
+    "OBJECT143",
+    "OBJECT144",
+    "RE",
+    "PRECISION",
+    "PRECISION2",
+    "SKUNK1",
+    "SKUNK2",
+    "TRI"
+   ],
+   "reduce": 0.4,
+   "drop_slots": [
+    "Defrost",
+    "Tex_AC_EG_CALIPER"
+   ],
+   "drop_boxes": [
+    [
+     15,
+     -14,
+     108,
+     24,
+     14,
+     120
+    ]
+   ],
+   "drop_note": "AC static room mirror (the game's RoomMirror goes there)"
+  },
+  "SideMirror_L": {
+   "parts": [
+    {
+     "part": "DOOR",
+     "groups": [
+      5
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {}
+  },
+  "SideMirror_R": {
+   "parts": [
+    {
+     "part": "DOOR",
+     "groups": [
+      4
+     ],
+     "slot": "Mirror"
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   }
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "WHEEL_LF",
+     "offset": [
+      -131.35,
+      80.05,
+      -30.05
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "WHEEL_RF",
+     "offset": [
+      -128.35,
+      -78.3,
+      -30.05
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RL": {
+   "parts": [
+    {
+     "part": "WHEEL_LR",
+     "offset": [
+      123.75,
+      76.1,
+      -30.05
+     ]
+    }
+   ],
+   "reduce": 0.3
+  },
+  "Wheel_RR": {
+   "parts": [
+    {
+     "part": "WHEEL_RR",
+     "offset": [
+      126.45,
+      -72.15,
+      -30.05
+     ]
+    }
+   ],
+   "reduce": 0.3
+  }
+ },
+ "rear_wheel_meshes": true,
+ "mesh_names": {
+  "Wheel_L": "AC_CIVICEG_L",
+  "Wheel_R": "AC_CIVICEG_R",
+  "Wheel_RL": "AC_CIVICEG_REAR_L",
+  "Wheel_RR": "AC_CIVICEG_REAR_R",
+  "SteeringWheel": "AC_CIVICEG"
+ },
+ "final_slot_names": {
+  "Paint": "Body_01",
+  "Glass": "Window",
+  "HeadEG": "HeadLight",
+  "TailEG": "TailLight",
+  "RevEG": "ReverseLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight"
+ },
+ "mirror_sockets": {
+  "SideMirror_L": "SideMirror_L",
+  "SideMirror_R": "SideMirror_R"
+ },
+ "wheels": {
+  "front_x": 128.1,
+  "rear_x": -129.0,
+  "half_track": 79.2,
+  "rear_half_track": 74.1,
+  "z": 27.5,
+  "rear_z": 27.5,
+  "radius": 30.05,
+  "auto_arches": false,
+  "note": "z 30.5 -> 27.5 (user 2026-11-12: ride height up slightly)"
+ },
+ "collision_boxes": [
+  {
+   "center": [
+    6,
+    0,
+    38
+   ],
+   "size": [
+    400,
+    168,
+    46
+   ]
+  },
+  {
+   "center": [
+    -30,
+    0,
+    100
+   ],
+   "size": [
+    200,
+    140,
+    56
+   ]
+  }
+ ],
+ "strip_part_slots": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet",
+  "Fender",
+  "Headlight",
+  "SideSkirt",
+  "Trunk",
+  "RearWing"
+ ],
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -36,
+    31.8,
+    37
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -36,
+    -31.8,
+    37
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -36,
+    -31.8,
+    37
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -36,
+    31.8,
+    37
+   ]
+  },
+  "cockpit_camera": [
+   -36.0,
+   31.8,
+   100.0
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    19.4,
+    0.0,
+    114.0
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -40,
+    0,
+    120
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    8,
+    0,
+    120
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    203,
+    -48,
+    55
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    203,
+    48,
+    55
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    193,
+    72,
+    55
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    193,
+    -72,
+    55
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -193,
+    -66,
+    72
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -193,
+    66,
+    72
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -190,
+    -50,
+    76
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -190,
+    50,
+    76
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    5.4,
+    -14.8,
+    0
+   ]
+  },
+  "hide_meshes": [],
+  "keep_body_materials": 1,
+  "body_mass": 855,
+  "com_nudge": [
+   0,
+   0,
+   -25
+  ]
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    24.1,
+    31.8,
+    71.1
+   ],
+   "radius": 19,
+   "x_range": [
+    10,
+    36
+   ],
+   "uv_box": [
+    -99,
+    -99,
+    99,
+    99
+   ],
+   "uv_slots": [
+    "Tex_AC_EG_STEER",
+    "Tex_AC_EG_STEERD",
+    "Tex_AC_EG_SEAM"
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "reduce": 0.5,
+   "pivot": [
+    23.75065,
+    31.77985,
+    72.14095
+   ],
+   "tilt_deg": 18.9,
+   "socket_offset": [
+    0,
+    0,
+    5
+   ]
+  }
+ },
+ "signal_lamps": [
+  {
+   "tag": "_F",
+   "from": "SigF",
+   "box": [
+    100,
+    -100,
+    0,
+    260,
+    100,
+    120
+   ]
+  },
+  {
+   "tag": "_R",
+   "from": "SigR",
+   "box": [
+    -260,
+    -100,
+    0,
+    -100,
+    100,
+    120
+   ]
+  }
+ ],
+ "lamp_slots": {
+  "HeadEG": {
+   "kind": "head",
+   "texture_slot": "Tex_AC_EG_FRLIGHTS"
+  },
+  "TailEG": {
+   "kind": "tail",
+   "texture_slot": "Tex_AC_EG_LIGHTS"
+  },
+  "RevEG": {
+   "kind": "reverse",
+   "texture_slot": "Tex_AC_EG_LIGHTS"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_EG_FRLIGHTS"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_EG_FRLIGHTS"
+  },
+  "Signal_L_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_EG_LIGHTS"
+  },
+  "Signal_R_R": {
+   "kind": "signal",
+   "texture_slot": "Tex_AC_EG_LIGHTS"
+  }
+ },
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     58.81,
+     21.43,
+     78.83
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     59.1,
+     31.14,
+     79.6
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     59.05,
+     38.28,
+     79.68
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     61.5,
+     38.28,
+     78.0
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ],
+    "note": "AC has no temp needle: tucked behind the face"
+   }
+  ],
+  "note": "sockets = AC needle hubs (ARROW_* dummies); dial face tilted 34.8 deg up -> roll -55.2"
+ },
+ "texture_upscale": {
+  "Tex_AC_EG_INTERIOR": 4
+ },
+ "gauge_style": {
+  "face_color": [
+   8,
+   8,
+   8
+  ],
+  "ink": [
+   255,
+   255,
+   255
+  ],
+  "minor_ink": [
+   230,
+   230,
+   230
+  ],
+  "red_color": [
+   225,
+   30,
+   25
+  ],
+  "font_file": "arialbd.ttf",
+  "tick_w_major": 0.07,
+  "tick_w_minor": 0.04
+ },
+ "gauge_faces": {
+  "Tex_AC_EG_INTERIOR": [
+   {
+    "center": [
+     0.7603,
+     0.2344
+    ],
+    "face": [
+     0.7603,
+     0.2344,
+     0.235
+    ],
+    "radius": 0.2,
+    "rotate": 0,
+    "min": 0,
+    "max": 120,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.169,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.112,
+    "note": "JDM km/h art (to 180) redrawn in mph",
+    "tick_w_major": 0.07,
+    "tick_w_minor": 0.04,
+    "number_radius": 0.58,
+    "tick_major": 0.78
+   },
+   {
+    "center": [
+     0.7744,
+     0.7005
+    ],
+    "face": [
+     0.7744,
+     0.7005,
+     0.215
+    ],
+    "radius": 0.185,
+    "rotate": 0,
+    "min": 0,
+    "max": 10,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 9,
+    "font": 0.188,
+    "captions": [
+     [
+      "x1000",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.098,
+    "note": "AC art 0-9k; redrawn on the game sweep to 10k (limiter 9500)",
+    "tick_w_major": 0.07,
+    "tick_w_minor": 0.04,
+    "number_radius": 0.58,
+    "tick_major": 0.78
+   }
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 10
+  },
+  "Speed": {
+   "max": 120,
+   "value_scale": 1.609344
+  }
+ },
+ "needle_color": [
+  240,
+  90,
+  20
+ ],
+ "needle_width": 0.4,
+ "masked_texture_slots": [
+  "Tex_AC_EG_PRECISION",
+  "Tex_AC_EG_TRI",
+  "Tex_AC_EG_SKUNK",
+  "Tex_AC_EG_INTERCOOLER"
+ ],
+ "performance_source": "AC data: TOTALMASS 1300, AWD 50/50, 6 gears 2.58/2.07/1.67/1.40/1.21/1.05 R-2.449 FINAL 3.3, LIMITER 9500, idle 850; power.lut NA 393 Nm @6250 (K20); TURBO_0 1.75 bar ref 3200",
+ "custom_parts": {
+  "transmissions": [
+   {
+    "row": "AC_CIVICEG_6SEQ_DRAG",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "AC_CIVICEG_6SEQ",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed Sequential Drag (8 Second Civic EG)",
+    "cost": 8000,
+    "mass": 60,
+    "ratios": {
+     "R": -2.442,
+     "1": 2.572,
+     "2": 2.064,
+     "3": 1.665,
+     "4": 1.396,
+     "5": 1.206,
+     "6": 1.047
+    },
+    "note": "AC final 3.3 folded in (FD_3.31)"
+   }
+  ],
+  "engines": [
+   {
+    "row": "AC_CIVICEG_K20_DRAG",
+    "base_row": "I4_150HP",
+    "asset": "AC_CIVICEG_K20",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "K20 Turbo Drag (8 Second Civic EG)",
+    "mass": 150,
+    "cost": 45000,
+    "max_torque_nm": 393.0,
+    "max_rpm": 9500,
+    "curve": [
+     [
+      0.0526,
+      0.6489
+     ],
+     [
+      0.1053,
+      0.7634
+     ],
+     [
+      0.1579,
+      0.7888
+     ],
+     [
+      0.2105,
+      0.8142
+     ],
+     [
+      0.2632,
+      0.8295
+     ],
+     [
+      0.3158,
+      0.8473
+     ],
+     [
+      0.3684,
+      0.8804
+     ],
+     [
+      0.4211,
+      0.9008
+     ],
+     [
+      0.4737,
+      0.9109
+     ],
+     [
+      0.5263,
+      0.9186
+     ],
+     [
+      0.5789,
+      0.9211
+     ],
+     [
+      0.6158,
+      0.9288
+     ],
+     [
+      0.6368,
+      0.9924
+     ],
+     [
+      0.6579,
+      1.0
+     ],
+     [
+      0.6842,
+      0.9949
+     ],
+     [
+      0.7368,
+      0.9796
+     ],
+     [
+      0.7895,
+      0.9873
+     ],
+     [
+      0.8421,
+      0.972
+     ],
+     [
+      0.8947,
+      0.9415
+     ],
+     [
+      0.9474,
+      0.9084
+     ],
+     [
+      1.0,
+      0.88
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "AC power.lut (NA, 393 Nm @6250); boost from PS_Boost_220psi (x2.76 = AC 1.75 bar)",
+    "physics_from": "Cars/Parts/Engine/I4Sport_150HP",
+    "sound_cue": {
+     "cue_base": "Cars/Parts/Engine/Sound/s58/SC_V8Engine",
+     "dir": "AC_CIVICEG",
+     "loops": [
+      [
+       "l1",
+       1500
+      ],
+      [
+       "l2",
+       2230
+      ],
+      [
+       "l3",
+       3240
+      ],
+      [
+       "l4",
+       4490
+      ],
+      [
+       "l5",
+       5970
+      ],
+      [
+       "l6",
+       6860
+      ],
+      [
+       "l7",
+       8500
+      ]
+     ],
+     "note": "the AC car's own FMOD bank (honda_civic_eg_awd.bank, vgmstream): on-load set 4-8_4_SR20_pot_Insert 2/4/6/8/10/11/13; rpm from the spectrum (I4 firing = 4th half-order), octave picked so the 13 inserts climb ~1.2x each"
+    },
+    "idle_throttle": 0.0007,
+    "idle_note": "idle = IdleThrottle x MaxTorque vs friction: 0.0024 still idled ~2000; AC Supra/Gallardo (idle fine) have IdleThrottle*MaxTorque/Coulomb ~0.014 -> 0.0007 here"
+   }
+  ]
+ },
+ "part_overrides": {
+  "Engine": "AC_CIVICEG_K20_DRAG",
+  "Transmission": "AC_CIVICEG_6SEQ_DRAG",
+  "FinalDriveRatio": "FD_3.31",
+  "CoolantRadiator": "SmallRadiator_110",
+  "Turbocharger": "PS_Boost_220psi",
+  "Tire0": "PerformanceDragTireStrip",
+  "Tire1": "PerformanceDragTireStrip",
+  "Tire2": "PerformanceDragTireStrip",
+  "Tire3": "PerformanceDragTireStrip",
+  "Wheel0": "AC_CIVICEG",
+  "Wheel1": "AC_CIVICEG",
+  "Wheel2": "AC_CIVICEG_REAR",
+  "Wheel3": "AC_CIVICEG_REAR",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "BrakeBalance": "BrakeBalance_F60"
+ },
+ "drivetrain_note": "Neo is AWD from the factory (the EG is AWD in AC: FRONT_SHARE 50)",
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     23.75,
+     31.78,
+     77.14
+    ],
+    "rot": [
+     -18.9,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     58.81,
+     21.43,
+     78.83
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     59.1,
+     31.14,
+     79.6
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     59.05,
+     38.28,
+     79.68
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     61.5,
+     38.28,
+     78.0
+    ],
+    "rot": [
+     0,
+     -90,
+     -55.2
+    ],
+    "note": "AC has no temp needle: tucked behind the face"
+   }
+  ],
+  "SideMirror_L": [
+   {
+    "name": "SideMirror_L",
+    "loc": [
+     44.81,
+     -84.71,
+     90.56
+    ],
+    "rot": [
+     -0.54,
+     -26.18,
+     0
+    ]
+   }
+  ],
+  "SideMirror_R": [
+   {
+    "name": "SideMirror_R",
+    "loc": [
+     41.65,
+     84.71,
+     90.56
+    ],
+    "rot": [
+     -4.9,
+     12.83,
+     0
+    ]
+   }
+  ]
+ },
+ "emissive_slots": {
+  "NeedleGlow": {
+   "texture_slot": "Tex_CIVICEG_NEEDLE",
+   "glow": 2.0
+  },
+  "Gauges": {
+   "texture_slot": "Tex_AC_EG_INTERIOR",
+   "glow": 3.0,
+   "mask_from_gauges": true
+  }
+ },
+ "rear_wheel_part": true,
+ "mirror_aim_z": {
+  "SideMirror_L": -0.05,
+  "SideMirror_R": 0.06
+ },
+ "mirror_outward": {
+  "SideMirror_L": 0.05,
+  "SideMirror_R": 0.15
+ },
+ "mirror_note": "user 2026-11-12: left (passenger) mirror aimed high + a little out -> lower + inward; right showed mostly road -> up",
+ "mirror_check": {
+  "room_max": 80,
+  "note": "room mirror: the faces 7 cm ahead of the game mirror (x 26-28, z 118) are the windscreen mount base strip, not a second mirror face (2026-11-14)"
+ }
+}

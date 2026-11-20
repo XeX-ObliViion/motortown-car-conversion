@@ -1,0 +1,2085 @@
+{
+ "base_vehicle": "Police",
+ "base_wheel": "Vista",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Glass": "Window",
+  "Tex_CORVETTE_HEADLIGHT": "HeadLight",
+  "Tex_CORVETTE_BRAKELIGHT": "TailLight",
+  "Tex_CORVETTE_TIRE": "Wheel_01",
+  "Signal_L_R": "LeftTailLight",
+  "Signal_R_R": "RightTailLight",
+  "Signal_L_T": "LeftTailLight",
+  "Signal_R_T": "RightTailLight",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -46,
+    -39.8,
+    12
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -46,
+    39.8,
+    12
+   ],
+   "PassengerSeat2_GEN_VARIABLE": [
+    -46,
+    39.8,
+    12
+   ],
+   "PassengerSeat3_GEN_VARIABLE": [
+    -46,
+    -39.8,
+    12
+   ]
+  },
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    6,
+    0,
+    94.5
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -30,
+    0,
+    104
+   ],
+   "CabinDomeLightSlot_GEN_VARIABLE": [
+    -75,
+    0,
+    104
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    200,
+    -66,
+    52
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    200,
+    66,
+    52
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    182,
+    82,
+    50
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    182,
+    -82,
+    50
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -212,
+    -66,
+    62
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -212,
+    66,
+    62
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -212,
+    66,
+    62
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -212,
+    -66,
+    62
+   ],
+   "ReverseLight_01_GEN_VARIABLE": [
+    -215,
+    -30,
+    45
+   ],
+   "ReverseLight_02_GEN_VARIABLE": [
+    -215,
+    30,
+    45
+   ]
+  },
+  "keep_body_materials": 1,
+  "cockpit_camera": [
+   -46,
+   -39.8,
+   91
+  ],
+  "body_mass": 1015,
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    2.7,
+    18.7,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -0.6,
+    2.6,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    3.1,
+    8.4,
+    0
+   ]
+  }
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "car": "MW_COPSPORT",
+ "display_name": "Rockport PD5U (Most Wanted)",
+ "prefix": "CORVETTE",
+ "geometry_dir": "C:/Users/noust/nfs-work/db/mwr/CORVETTE/geo",
+ "texture_dir": "C:/Users/noust/nfs-work/db/mwr/CORVETTE/tex/textures",
+ "out_dir": "C:\\Users\\noust/mt-work/build/MW_COPSPORT/meshes",
+ "cost": 95000,
+ "wheel_display_name": "Rockport PD5U Stock (Most Wanted)",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Tex_COPSPORT_BLACK",
+  "0xBEBC83C2": "Tex_COPSPORT_BLACK",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Tex_COPSPORT_BLACK",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "BODY_LEFT": "Tex_COPSPORT_BLACK",
+  "0x15DE574A": "Tex_CORVETTE_BRAKELIGHT",
+  "0x7526F216": "Tex_CORVETTE_BADGING",
+  "0x8E0EA856": "Tex_CORVETTE_MISC",
+  "0x971C3A50": "Tex_CORVETTE_HEADLIGHT",
+  "0x9DBA5156": "Tex_CORVETTE_INTERIOR",
+  "BADGING": "Tex_CORVETTE_BADGING",
+  "BODY_ALUMINUM": "Tex_CORVETTE_MISC",
+  "BODY_CHROME": "Tex_CORVETTE_MISC",
+  "BODY_CLEAR_PLASTIC": "Tex_CORVETTE_MISC",
+  "BODY_DULL_PLASTIC": "Tex_CORVETTE_MISC",
+  "BODY_MOLDING_x0002_L_x0013_": "Tex_CORVETTE_MISC",
+  "BODY_MOLDING\u00f0D\u00d3_x000E_WINDOW_FRONT\u00f0D\u00d3_x000E__x00A0__x00BD__x001C__x0007_Px\u00d3_x000E_v": "Tex_CORVETTE_MISC",
+  "BODY_MOLDING\u00f1_x00A2_\u00d3_x000E__x008C_": "Tex_CORVETTE_MISC",
+  "BODY_PLAINNOTHING": "Bottom",
+  "BODY_RUBBER_ACCORDIAN": "Bottom",
+  "BOTTOM": "Bottom",
+  "BRAKE_KIT00_CALIPER": "Tex_CORVETTE_MISC",
+  "CARBONFIBRE_BODY_x0002_L_x0013_": "Bottom",
+  "CENTRE_BRAKELIGHT": "Tex_CORVETTE_BRAKELIGHT",
+  "DOORLINE_x0002_L_x0013_": "Tex_COPSPORT_BLACK",
+  "DRIVER_PLAYER": "Bottom",
+  "GRILL_01_x0002_L_x0013_": "Tex_MWG_GRILL01",
+  "GRILL_02_x0002_L_x0013_": "Tex_MWG_GRILL02",
+  "GRILL_02f": "Tex_MWG_GRILL02",
+  "INTERIOR": "Tex_CORVETTE_INTERIOR",
+  "LEFT_BRAKELIGHT_KIT00_BULB": "Tex_CORVETTE_BRAKELIGHT",
+  "LEFT_BRAKELIGHT_KIT00_MOLDINGS": "Tex_CORVETTE_BRAKELIGHT",
+  "LEFT_HEADLIGHT_KIT00_BULB": "Tex_CORVETTE_HEADLIGHT",
+  "LEFT_HEADLIGHT_KIT00_CHROME": "Tex_CORVETTE_HEADLIGHT",
+  "LEFT_HEADLIGHT_KIT00_GLASS": "LampGlass",
+  "LEFT_HEADLIGHT_KIT00_GLASS_DECAL": "LampGlass",
+  "LICENSE_PLATE": "Bottom",
+  "PLAIN_ALUMINUM": "Trim",
+  "RADIATOR_x0002_L_x0013_": "Tex_MWG_RADIATOR",
+  "RIGHT_BRAKELIGHT_KIT00_BULB": "Tex_CORVETTE_BRAKELIGHT",
+  "RIGHT_BRAKELIGHT_KIT00_GLASS": "LampGlass",
+  "RIGHT_BRAKELIGHT_KIT00_MOLDINGS": "Tex_CORVETTE_BRAKELIGHT",
+  "RIGHT_HEADLIGHT_KIT00_BULB": "Tex_CORVETTE_HEADLIGHT",
+  "RIGHT_HEADLIGHT_KIT00_CHROME_x0002_L_x0013_": "Tex_CORVETTE_HEADLIGHT",
+  "RIGHT_HEADLIGHT_KIT00_GLASS": "LampGlass",
+  "RIGHT_HEADLIGHT_KIT00_GLASS_DECAL": "LampGlass",
+  "RIM_KIT00_CHROME": "Tex_CORVETTE_TIRE",
+  "TIRE_KIT00_BACK": "Bottom",
+  "TIRE_KIT00_SIDEWALL": "Tex_CORVETTE_TIRE",
+  "TIRE_KIT00_TREAD_x0002_L_x0013_": "Bottom",
+  "WINDOW_FRONT_MASK": "Bottom",
+  "WINDOW_FRONT_x0002_L_x0013_": "Glass",
+  "WINDOW_FRONT\u00f0D\u00d3_x000E__x00A0__x00BD__x001C__x0007_Px\u00d3_x000E_v": "Glass",
+  "WINDOW_LEFT_FRONT": "Glass",
+  "WINDOW_REAR_DEFROST": "Glass",
+  "WINDOW_REAR_MASK_x0002_L_x0013_": "Bottom",
+  "WINDOW_RIGHT_FRONT": "Glass",
+  "WINDOW_TOP": "Glass",
+  "BODY_MISC": "Tex_COPSPORT_BLACK",
+  "BODY_REAR": "Tex_COPSPORT_BLACK",
+  "BODY_RIGHT": "Tex_COPSPORT_BLACK",
+  "BODY_TOP": "Tex_COPSPORT_BLACK",
+  "BODY_TOP_x0002_L_x0013_": "Tex_COPSPORT_BLACK",
+  "BODY_TOPf": "Tex_COPSPORT_BLACK",
+  "BODY_TOPv": "Tex_COPSPORT_BLACK",
+  "BODY_x0002_L_x0013_": "Tex_COPSPORT_BLACK",
+  "DOORLINE": "Tex_COPSPORT_BLACK",
+  "LEFT_BRAKELIGHT_KIT00_GLASS": "LampGlass",
+  "LIGHTS_CARSKIN": "Tex_COPSPORT_BLACK",
+  "0xE7E4EF49": "Glass",
+  "0x60F8B13C": "Glass",
+  "0x505135F0": "Tex_COPSPORT_BLACK",
+  "0x3617DCFC": "Tex_CORVETTE_BRAKELIGHT",
+  "0xBD1F0E0A": "Bottom",
+  "0x8E127EDE": "Tex_CORVETTE_TIRE",
+  "0x03C906EF": "Bottom",
+  "0xD947F346": "Tex_CORVETTE_BRAKELIGHT",
+  "0x000BCBBF": "LampGlass",
+  "0xA7E6EA53": "Tex_CORVETTE_HEADLIGHT",
+  "0x267D188C": "LampGlass",
+  "0x02B52399": "Tex_CORVETTE_BRAKELIGHT",
+  "0x01F40B32": "LampGlass",
+  "0xA532FC46": "Tex_CORVETTE_HEADLIGHT",
+  "0xF68EF19F": "LampGlass",
+  "0x69C032BA": "Tex_MWG_GRILL02",
+  "0x69C032B9": "Tex_MWG_GRILL01",
+  "0x68100815": "Tex_MWG_RADIATOR",
+  "0x8C283C65": "Bottom",
+  "0xEE80485E": "Tex_COPSPORT_BLACK",
+  "0x644E2504": "Tex_COPSPORT_MISC",
+  "0x5B645804": "Tex_COPSPORT_BADGING"
+ },
+ "texture_sources": {
+  "Tex_CORVETTE_BRAKELIGHT": "0x15DE574A",
+  "Tex_CORVETTE_BADGING": "0x7526F216",
+  "Tex_CORVETTE_MISC": "0x8E0EA856",
+  "Tex_CORVETTE_HEADLIGHT": "0x971C3A50",
+  "Tex_CORVETTE_INTERIOR": "0x9DBA5156",
+  "Tex_CORVETTE_TIRE": "0x8E127EDE",
+  "Tex_MWG_CARBONFIBRE": "0x721AFF7C",
+  "Tex_MWG_GRILL02": "0x69C032BA",
+  "Tex_MWG_GRILL01": "0x69C032B9",
+  "Tex_MWG_INTERCOOLER": "0x427B4565",
+  "Tex_MWG_RADIATOR": "0x68100815",
+  "Tex_COPSPORT_SKIN1": "0xEE80485E_COPSPORT_SKIN1.dds",
+  "Tex_COPSPORT_MISC": "0x644E2504_COPSPORT_MISC.dds",
+  "Tex_COPSPORT_BADGING": "0x5B645804_COPSPORT_BADGING.dds",
+  "Tex_COPSPORT_BLACK": "COPSPORT_FLATBLACK.png"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    {
+     "part": "BASE",
+     "drop_coincident_with": {
+      "prefix": "CORVETTE",
+      "parts": [
+       "KIT00_FRONT_LEFT_WINDOW",
+       "KIT00_FRONT_RIGHT_WINDOW",
+       "KIT00_FRONT_WINDOW",
+       "KIT00_REAR_WINDOW"
+      ],
+      "tol": 1.0
+     }
+    },
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -165,
+      158
+     ]
+    },
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_LEFT_HEADLIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "skip_groups": [
+      1,
+      2
+     ]
+    },
+    {
+     "part": "KIT00_REAR_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_HEADLIGHT_GLASS",
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "skip_groups": [
+      1,
+      2
+     ]
+    },
+    "KIT00_LEFT_BRAKELIGHT",
+    "KIT00_RIGHT_BRAKELIGHT",
+    {
+     "part": "KIT00_INTERIOR",
+     "note": "MW Remaster stock C6 interior (seats, dash, door cards, rear deck); Rework IV had the C6.R caged one with a broken vertex count"
+    },
+    {
+     "prefix": "COPSPORT",
+     "geo": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/geo",
+     "part": "KIT00_DAMAGE0_COP_LIGHTS",
+     "note": "PD5U light-bar rear wing (MW Remaster COPSPORT)"
+    },
+    {
+     "prefix": "COPSPORT",
+     "geo": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/geo",
+     "part": "KIT00_DAMAGE0_REAR_BUMPER",
+     "groups": [
+      1
+     ],
+     "only_boxes": [
+      [
+       -226,
+       42,
+       36,
+       -214,
+       54,
+       55
+      ]
+     ],
+     "offset": [
+      -0.15,
+      0,
+      0
+     ],
+     "note": "rear bumper strobes"
+    },
+    {
+     "prefix": "COPSPORT",
+     "geo": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/geo",
+     "part": "KIT00_DAMAGE0_FRONT_BUMPER",
+     "groups": [
+      0
+     ],
+     "only_boxes": [
+      [
+       194,
+       50,
+       4,
+       213,
+       73,
+       27
+      ]
+     ],
+     "offset": [
+      0.15,
+      0,
+      0
+     ],
+     "note": "front splitter strobes"
+    }
+   ],
+   "drop_slots": [
+    "LampGlass"
+   ],
+   "uv_split": [
+    {
+     "from": "Tex_CORVETTE_INTERIOR",
+     "to": "Gauges",
+     "box": [
+      0.0,
+      0.2,
+      0.42,
+      0.4
+     ],
+     "box3d": [
+      26,
+      -70,
+      50,
+      40,
+      -10,
+      76
+     ]
+    },
+    {
+     "from": "Bottom",
+     "to": "EmergencyRed",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      -240,
+      -80,
+      70,
+      -180,
+      0,
+      110
+     ],
+     "note": "wing light bar, driver side red (user screenshots 2026-11-15)"
+    },
+    {
+     "from": "Bottom",
+     "to": "EmergencyBlue",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      -240,
+      0,
+      70,
+      -180,
+      80,
+      110
+     ],
+     "note": "wing light bar, passenger side blue"
+    },
+    {
+     "from": "Tex_COPSPORT_MISC",
+     "to": "EmergencyRed",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      -230,
+      -60,
+      30,
+      -210,
+      0,
+      60
+     ]
+    },
+    {
+     "from": "Tex_COPSPORT_MISC",
+     "to": "EmergencyBlue",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      -230,
+      0,
+      30,
+      -210,
+      60,
+      60
+     ]
+    },
+    {
+     "from": "Bottom",
+     "to": "EmergencyRed",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      190,
+      -80,
+      0,
+      216,
+      0,
+      30
+     ]
+    },
+    {
+     "from": "Bottom",
+     "to": "EmergencyBlue",
+     "box": [
+      -9,
+      -9,
+      9,
+      9
+     ],
+     "box3d": [
+      190,
+      0,
+      0,
+      216,
+      80,
+      30
+     ]
+    }
+   ],
+   "drop_boxes": [
+    [
+     2.5,
+     -11.5,
+     90,
+     6,
+     11.5,
+     99
+    ]
+   ],
+   "inner_skin": {
+    "boxes": [
+     [
+      -160,
+      60,
+      40,
+      90,
+      110,
+      125
+     ],
+     [
+      -160,
+      40,
+      80,
+      0,
+      110,
+      125
+     ],
+     [
+      25,
+      45,
+      75,
+      90,
+      110,
+      125
+     ],
+     [
+      30,
+      0,
+      95,
+      90,
+      110,
+      125
+     ]
+    ],
+    "slot": "Tex_CORVETTE_INTERIOR",
+    "uv": [
+     0.238,
+     0.965
+    ],
+    "inset": 0.0,
+    "note": "black backs for single-sided cabin sides/pillars/roof edge seen through the windows (user 2026-11-06); uv = black texel of the MW interior atlas (never Bottom: M_Body_Bottom is light beige); flush (an inset poked out at corners)"
+   },
+   "recolor_boxes": [
+    {
+     "from": "Bottom",
+     "to": "Tex_CORVETTE_INTERIOR",
+     "uv": [
+      0.238,
+      0.965
+     ],
+     "box": [
+      -160,
+      0,
+      54,
+      60,
+      78,
+      112
+     ],
+     "note": "cabin-side Bottom lips (hatch corners, dash ends) to black: M_Body_Bottom renders beige"
+    },
+    {
+     "from": "Tex_CORVETTE_INTERIOR",
+     "to": "Tex_COPSPORT_BLACK",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      -175,
+      55,
+      62,
+      -145,
+      75,
+      80
+     ],
+     "note": "hatch-corner gap: the rear-deck edge (and its black back) seen from outside -> body colour (user 2026-11-06 black spot)",
+     "only_uv": [
+      0.238,
+      0.965
+     ]
+    },
+    {
+     "from": "Tex_CORVETTE_INTERIOR",
+     "to": "Tex_COPSPORT_BLACK",
+     "uv": [
+      0.5,
+      0.5
+     ],
+     "box": [
+      -100,
+      36,
+      88,
+      -75,
+      54,
+      104
+     ],
+     "note": "roof rear corner where the hatch glass meets the sail: black inner faces seen from outside (user 2026-11-06 screenshot)",
+     "only_uv": [
+      0.238,
+      0.965
+     ]
+    }
+   ],
+   "drop_uv_boxes": [
+    {
+     "slot": "Tex_CORVETTE_INTERIOR",
+     "uv": [
+      0.1,
+      0.58,
+      0.34,
+      0.666
+     ],
+     "box": [
+      14,
+      -57,
+      48,
+      41,
+      -27,
+      67
+     ],
+     "note": "cluster hood lip 8-10 cm in front of the dials: crossed the dials from our eye height (user 2026-11-06)"
+    }
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Aero_FrontBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      158,
+      99999
+     ],
+     "skip_boxes": [
+      [
+       150,
+       -66,
+       -50,
+       400,
+       66,
+       50
+      ]
+     ]
+    },
+    {
+     "prefix": "COPSPORT",
+     "geo": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/geo",
+     "part": "KIT00_DAMAGE0_FRONT_BUMPER"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_RearBumper_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_BODY",
+     "x_range": [
+      -99999,
+      -165
+     ]
+    },
+    {
+     "prefix": "COPSPORT",
+     "geo": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/geo",
+     "part": "KIT00_DAMAGE0_REAR_BUMPER"
+    }
+   ],
+   "aero": true,
+   "double_sided": true
+  },
+  "Aero_FrontBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      158,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -99999,
+      -165
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT01": {
+   "parts": [
+    {
+     "part": "KIT01_BODY",
+     "x_range": [
+      -165,
+      158
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CORVETTE",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CORVETTE",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CORVETTE",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      158,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -99999,
+      -165
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT02": {
+   "parts": [
+    {
+     "part": "KIT02_BODY",
+     "x_range": [
+      -165,
+      158
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CORVETTE",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CORVETTE",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CORVETTE",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      158,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -99999,
+      -165
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT03": {
+   "parts": [
+    {
+     "part": "KIT03_BODY",
+     "x_range": [
+      -165,
+      158
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CORVETTE",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CORVETTE",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CORVETTE",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_FrontBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      158,
+      99999
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_RearBumper_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -99999,
+      -165
+     ]
+    }
+   ],
+   "aero": true
+  },
+  "Aero_SideSkirt_KIT04": {
+   "parts": [
+    {
+     "part": "KIT04_BODY",
+     "x_range": [
+      -165,
+      158
+     ],
+     "drop_coincident_with": {
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "prefix": "CORVETTE",
+      "tol": 1.0
+     },
+     "drop_on_surface": {
+      "prefix": "CORVETTE",
+      "parts": [
+       "KIT00_BODY"
+      ],
+      "tol": 2.5,
+      "far": 6.0
+     }
+    }
+   ],
+   "aero": true,
+   "lift": {
+    "prefix": "CORVETTE",
+    "parts": [
+     "KIT00_BODY"
+    ],
+    "off": 0.6,
+    "box": [
+     -300,
+     0,
+     -50,
+     300,
+     200,
+     200
+    ],
+    "edge": 2.0,
+    "depth": 1.0
+   }
+  },
+  "Aero_Bonnet_KIT00": {
+   "parts": [
+    {
+     "part": "KIT00_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE03": {
+   "parts": [
+    {
+     "part": "STYLE03_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE04": {
+   "parts": [
+    {
+     "part": "STYLE04_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE05": {
+   "parts": [
+    {
+     "part": "STYLE05_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE06": {
+   "parts": [
+    {
+     "part": "STYLE06_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE07": {
+   "parts": [
+    {
+     "part": "STYLE07_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE09": {
+   "parts": [
+    {
+     "part": "STYLE09_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE10": {
+   "parts": [
+    {
+     "part": "STYLE10_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE13": {
+   "parts": [
+    {
+     "part": "STYLE13_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE16": {
+   "parts": [
+    {
+     "part": "STYLE16_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE17": {
+   "parts": [
+    {
+     "part": "STYLE17_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE20": {
+   "parts": [
+    {
+     "part": "STYLE20_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE21": {
+   "parts": [
+    {
+     "part": "STYLE21_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE23": {
+   "parts": [
+    {
+     "part": "STYLE23_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE26": {
+   "parts": [
+    {
+     "part": "STYLE26_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE31": {
+   "parts": [
+    {
+     "part": "STYLE31_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "Aero_Bonnet_STYLE32": {
+   "parts": [
+    {
+     "part": "STYLE32_HOOD"
+    }
+   ],
+   "aero": true
+  },
+  "SideMirror_Left": {
+   "parts": [
+    {
+     "part": "KIT00_LEFT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {},
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     -0.6,
+     2.6,
+     0
+    ]
+   }
+  },
+  "SideMirror_Right": {
+   "parts": [
+    {
+     "part": "KIT00_RIGHT_SIDE_MIRROR",
+     "slot": "Mirror",
+     "groups": [
+      2
+     ]
+    }
+   ],
+   "planar_uv": {
+    "flip_u": true
+   },
+   "recenter": true,
+   "counter_rotate": {
+    "rot": [
+     3.1,
+     8.4,
+     0
+    ]
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_COPSPORT_R",
+  "Wheel_R": "MW_COPSPORT_L",
+  "SteeringWheel": "MW_COPSPORT"
+ },
+ "wheels": {
+  "front_x": 130.0,
+  "rear_x": -140.0,
+  "half_track": 76,
+  "z": 24.7,
+  "rear_z": 28.4,
+  "radius": 33.3,
+  "auto_arches": false
+ },
+ "part_overrides": {
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_15",
+  "Tire1": "PerformanceTire_15",
+  "Tire2": "PerformanceTire_15",
+  "Tire3": "PerformanceTire_15",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Engine": "MW_CORVETTE_ENG",
+  "Transmission": "MW_CORVETTE_6MT",
+  "FinalDriveRatio": "FD_3.31",
+  "Wheel0": "MW_COPSPORT",
+  "Wheel1": "MW_COPSPORT",
+  "Wheel2": "MW_COPSPORT",
+  "Wheel3": "MW_COPSPORT",
+  "FrontBumper": "MW_COPSPORT_FrontBumper_KIT00",
+  "RearBumper": "MW_COPSPORT_RearBumper_KIT00",
+  "Bonnet": "MW_COPSPORT_Bonnet_KIT00"
+ },
+ "performance_source": "db mw:CORVETTE: {'mass': 1471.0, 'final_gear': 3.4200000762939453, 'red_line': 6500.0, 'max_rpm': 6700.0, 'peak_hp_est': 402}",
+ "masked_texture_slots": [
+  "Tex_CORVETTE_BADGING",
+  "Tex_MWG_GRILL01",
+  "Tex_MWG_GRILL02"
+ ],
+ "lamp_slots": {
+  "Tex_CORVETTE_HEADLIGHT": "head",
+  "Tex_CORVETTE_BRAKELIGHT": "tail",
+  "Signal_L_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CORVETTE_BRAKELIGHT"
+  },
+  "Signal_R_R": {
+   "kind": "signal_tail_red",
+   "texture_slot": "Tex_CORVETTE_BRAKELIGHT"
+  },
+  "Signal_L_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CORVETTE_BRAKELIGHT"
+  },
+  "Signal_R_T": {
+   "kind": "tail",
+   "texture_slot": "Tex_CORVETTE_BRAKELIGHT"
+  },
+  "Signal_L_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CORVETTE_BADGING"
+  },
+  "Signal_R_F": {
+   "kind": "signal",
+   "texture_slot": "Tex_CORVETTE_BADGING"
+  }
+ },
+ "paintable_texture_slots": [
+  "Tex_CORVETTE_TIRE"
+ ],
+ "texture_dirs": {
+  "Tex_MWG_CARBONFIBRE": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL02": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_GRILL01": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_INTERCOOLER": "C:\\Users\\noust/nfs-work/mwglobal_tex/textures",
+  "Tex_MWG_RADIATOR": "C:/Users/noust/nfs-work/mwglobal_tex/textures",
+  "Tex_COPSPORT_SKIN1": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/tex/textures",
+  "Tex_COPSPORT_MISC": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/tex/textures",
+  "Tex_COPSPORT_BADGING": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/tex/textures",
+  "Tex_COPSPORT_BLACK": "C:/Users/noust/nfs-work/db/mwr/COPSPORT/tex/textures"
+ },
+ "extract": {
+  "SteeringWheel": {
+   "from": "Body",
+   "center": [
+    11.7,
+    -39.8,
+    62.4
+   ],
+   "radius": 19,
+   "x_range": [
+    2,
+    21
+   ],
+   "socket": "SteeringWheel",
+   "align_x": true,
+   "pivot": [
+    12.42315,
+    -39.7577,
+    61.8693
+   ],
+   "tilt_deg": 14.91,
+   "socket_offset": [
+    0,
+    0,
+    0
+   ],
+   "uv_box": [
+    0.6,
+    0.38,
+    1.0,
+    0.8
+   ],
+   "uv_slots": [
+    "Tex_CORVETTE_INTERIOR"
+   ],
+   "note": "uv_slots leaves the Gauges strip (cluster face behind the wheel) in the dash: lowered 4 cm with the wheel it showed as a line across the dials (user 2026-11-06)"
+  }
+ },
+ "sockets": {
+  "Body": [
+   {
+    "name": "SteeringWheel",
+    "loc": [
+     12.42,
+     -39.76,
+     61.87
+    ],
+    "rot": [
+     -14.91,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Left",
+    "loc": [
+     -222,
+     -25,
+     24
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "Exhaust_Right",
+    "loc": [
+     -222,
+     25,
+     24
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ]
+   },
+   {
+    "name": "RearWing",
+    "loc": [
+     -208,
+     0,
+     83
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TaxiRoofSign",
+    "loc": [
+     -40,
+     0,
+     112
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "TrailerHitch",
+    "loc": [
+     -223,
+     0,
+     25
+    ],
+    "rot": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "Dashboard": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     28.23,
+     -47.11,
+     62.97
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     28.21,
+     -35.87,
+     63.09
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     28.7,
+     -24.24,
+     59.25
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     28.69,
+     -57.74,
+     59.32
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   }
+  ]
+ },
+ "gauge_faces": {
+  "Tex_CORVETTE_INTERIOR": [
+   {
+    "center": [
+     0.188,
+     0.288
+    ],
+    "face": [
+     0.188,
+     0.288,
+     0.036
+    ],
+    "radius": 0.0306,
+    "rotate": 0,
+    "min": 0,
+    "max": 7,
+    "text_step": 1,
+    "line_step": 0.5,
+    "start": 140,
+    "end": 400,
+    "red_from": 6.5,
+    "font": 0.2,
+    "captions": [
+     [
+      "x1000",
+      0.22,
+      270
+     ]
+    ],
+    "caption_font": 0.11
+   },
+   {
+    "center": [
+     0.2594,
+     0.2869
+    ],
+    "face": [
+     0.2594,
+     0.2869,
+     0.043
+    ],
+    "radius": 0.0369,
+    "rotate": 0,
+    "min": 0,
+    "max": 200,
+    "text_step": 20,
+    "line_step": 10,
+    "start": 140,
+    "end": 400,
+    "font": 0.17,
+    "captions": [
+     [
+      "MPH",
+      0.3,
+      90
+     ]
+    ],
+    "caption_font": 0.12
+   },
+   {
+    "center": [
+     0.334,
+     0.3217
+    ],
+    "face": [
+     0.334,
+     0.3217,
+     0.0184
+    ],
+    "radius": 0.0148,
+    "rotate": 0,
+    "min": 0,
+    "max": 1,
+    "text_step": 1,
+    "line_step": 0.25,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "E",
+     "1": "F"
+    }
+   },
+   {
+    "center": [
+     0.119,
+     0.321
+    ],
+    "face": [
+     0.119,
+     0.321,
+     0.0176
+    ],
+    "radius": 0.014,
+    "rotate": 0,
+    "min": 40,
+    "max": 120,
+    "text_step": 80,
+    "line_step": 20,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "40": "C",
+     "120": "H"
+    },
+    "red_from": 110
+   },
+   {
+    "center": [
+     0.133,
+     0.2955
+    ],
+    "face": [
+     0.133,
+     0.2955,
+     0.0163
+    ],
+    "radius": 0.0129,
+    "rotate": 0,
+    "min": 0,
+    "max": 80,
+    "text_step": 80,
+    "line_step": 20.0,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "0": "0",
+     "80": "80"
+    }
+   },
+   {
+    "center": [
+     0.319,
+     0.2955
+    ],
+    "face": [
+     0.319,
+     0.2955,
+     0.0163
+    ],
+    "radius": 0.0129,
+    "rotate": 0,
+    "min": 8,
+    "max": 18,
+    "text_step": 10,
+    "line_step": 2.5,
+    "start": 210,
+    "end": 330,
+    "font": 0.34,
+    "labels": {
+     "8": "8",
+     "18": "18"
+    }
+   }
+  ]
+ },
+ "gauge_style": {
+  "face_color": [
+   52,
+   52,
+   54
+  ],
+  "ink": [
+   238,
+   238,
+   234
+  ],
+  "minor_ink": [
+   170,
+   170,
+   170
+  ],
+  "red_color": [
+   225,
+   35,
+   25
+  ],
+  "font_file": "arialbd.ttf",
+  "glow_face": [
+   90,
+   95,
+   105
+  ],
+  "glow_red": [
+   255,
+   40,
+   20
+  ]
+ },
+ "gauge_ranges": {
+  "RPM": {
+   "max": 7
+  },
+  "Speed": {
+   "max": 200,
+   "value_scale": 1.609344
+  }
+ },
+ "texture_upscale": {
+  "Tex_CORVETTE_INTERIOR": 4
+ },
+ "emissive_slots": {
+  "Gauges": {
+   "texture_slot": "Tex_CORVETTE_INTERIOR",
+   "glow": 1.5,
+   "mask_from_gauges": true
+  },
+  "NeedleGlow": {
+   "texture_slot": "Tex_COPSPORT_NEEDLE",
+   "glow": 2.0
+  }
+ },
+ "needle_color": [
+  235,
+  60,
+  25
+ ],
+ "dashboard": {
+  "sockets": [
+   {
+    "name": "Niddle_RPM",
+    "loc": [
+     28.23,
+     -47.11,
+     62.97
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Speed",
+    "loc": [
+     28.21,
+     -35.87,
+     63.09
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Fuel",
+    "loc": [
+     28.7,
+     -24.24,
+     59.25
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   },
+   {
+    "name": "Niddle_Temp",
+    "loc": [
+     28.69,
+     -57.74,
+     59.32
+    ],
+    "rot": [
+     0,
+     -90,
+     -97.2
+    ]
+   }
+  ],
+  "mfd": {
+   "anchor": [
+    "Niddle_Speed"
+   ],
+   "up": -3.6,
+   "width": 3.0,
+   "height": 0.8,
+   "out": 0.25
+  },
+  "attach_none": true
+ },
+ "needle_scales": {
+  "RPM": 0.97,
+  "Speed": 1.17,
+  "Fuel": 0.67,
+  "Temp": 0.67
+ },
+ "needle_width": 0.4,
+ "slot_boxes": [
+  {
+   "from": "Tex_CORVETTE_BRAKELIGHT",
+   "to": "Signal_L_R",
+   "box": [
+    -222,
+    -80,
+    58,
+    -204,
+    -50,
+    84
+   ],
+   "note": "outer round tail lamps: red US blinker (Tuscan logic)"
+  },
+  {
+   "from": "Tex_CORVETTE_BRAKELIGHT",
+   "to": "Signal_R_R",
+   "box": [
+    -222,
+    50,
+    58,
+    -204,
+    80,
+    84
+   ],
+   "note": "outer round tail lamps: red US blinker"
+  },
+  {
+   "from": "Tex_CORVETTE_BRAKELIGHT",
+   "to": "Signal_L_T",
+   "box": [
+    -222,
+    -50,
+    58,
+    -204,
+    -25,
+    84
+   ],
+   "note": "inner round tail lamps -> LeftTailLight"
+  },
+  {
+   "from": "Tex_CORVETTE_BRAKELIGHT",
+   "to": "Signal_R_T",
+   "box": [
+    -222,
+    25,
+    58,
+    -204,
+    50,
+    84
+   ],
+   "note": "inner round tail lamps -> RightTailLight"
+  },
+  {
+   "from": "Tex_CORVETTE_BADGING",
+   "to": "Signal_L_F",
+   "box": [
+    160,
+    -92,
+    32,
+    195,
+    -80,
+    42
+   ],
+   "note": "amber front corner markers = front turn signals"
+  },
+  {
+   "from": "Tex_CORVETTE_BADGING",
+   "to": "Signal_R_F",
+   "box": [
+    160,
+    80,
+    32,
+    195,
+    92,
+    42
+   ],
+   "note": "amber front corner markers = front turn signals"
+  }
+ ],
+ "mw_kits": {
+  "front_split": 158,
+  "rear_split": -165
+ },
+ "aero_parts": [
+  {
+   "row": "MW_COPSPORT_FrontBumper_KIT00",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT00",
+   "display_name": "PD5U Front Splitter"
+  },
+  {
+   "row": "MW_COPSPORT_RearBumper_KIT00",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT00",
+   "display_name": "PD5U Rear Diffuser"
+  },
+  {
+   "row": "MW_COPSPORT_FrontBumper_KIT01",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT01",
+   "display_name": "Kit 1 Front Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_RearBumper_KIT01",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT01",
+   "display_name": "Kit 1 Rear Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_SideSkirt_KIT01",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT01",
+   "display_name": "Kit 1 Side Skirts"
+  },
+  {
+   "row": "MW_COPSPORT_FrontBumper_KIT02",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT02",
+   "display_name": "Kit 2 Front Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_RearBumper_KIT02",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT02",
+   "display_name": "Kit 2 Rear Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_SideSkirt_KIT02",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT02",
+   "display_name": "Kit 2 Side Skirts"
+  },
+  {
+   "row": "MW_COPSPORT_FrontBumper_KIT03",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT03",
+   "display_name": "Kit 3 Front Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_RearBumper_KIT03",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT03",
+   "display_name": "Kit 3 Rear Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_SideSkirt_KIT03",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT03",
+   "display_name": "Kit 3 Side Skirts"
+  },
+  {
+   "row": "MW_COPSPORT_FrontBumper_KIT04",
+   "slot": "FrontBumper",
+   "part_type": "FrontBumper",
+   "mesh": "Aero_FrontBumper_KIT04",
+   "display_name": "Kit 4 Front Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_RearBumper_KIT04",
+   "slot": "RearBumper",
+   "part_type": "RearBumper",
+   "mesh": "Aero_RearBumper_KIT04",
+   "display_name": "Kit 4 Rear Bumper"
+  },
+  {
+   "row": "MW_COPSPORT_SideSkirt_KIT04",
+   "slot": "SideSkirt",
+   "part_type": "SideSkirt",
+   "mesh": "Aero_SideSkirt_KIT04",
+   "display_name": "Kit 4 Side Skirts"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_KIT00",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_KIT00",
+   "display_name": "Stock Hood"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE03",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE03",
+   "display_name": "Hood 3"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE04",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE04",
+   "display_name": "Hood 4"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE05",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE05",
+   "display_name": "Hood 5"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE06",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE06",
+   "display_name": "Hood 6"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE07",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE07",
+   "display_name": "Hood 7"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE09",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE09",
+   "display_name": "Hood 9"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE10",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE10",
+   "display_name": "Hood 10"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE13",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE13",
+   "display_name": "Hood 13"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE16",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE16",
+   "display_name": "Hood 16"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE17",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE17",
+   "display_name": "Hood 17"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE20",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE20",
+   "display_name": "Hood 20"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE21",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE21",
+   "display_name": "Hood 21"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE23",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE23",
+   "display_name": "Hood 23"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE26",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE26",
+   "display_name": "Hood 26"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE31",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE31",
+   "display_name": "Hood 31"
+  },
+  {
+   "row": "MW_COPSPORT_Bonnet_STYLE32",
+   "slot": "Bonnet",
+   "part_type": "Bonnet",
+   "mesh": "Aero_Bonnet_STYLE32",
+   "display_name": "Hood 32"
+  }
+ ],
+ "not_optional_part_types": [
+  "FrontBumper",
+  "RearBumper",
+  "Bonnet"
+ ],
+ "collision_boxes": [
+  {
+   "center": [
+    -8,
+    0,
+    37
+   ],
+   "size": [
+    410,
+    182,
+    46
+   ]
+  },
+  {
+   "center": [
+    -28,
+    0,
+    85
+   ],
+   "size": [
+    205,
+    142,
+    46
+   ]
+  }
+ ],
+ "base_dir": "Police",
+ "base_row": "Police_01",
+ "base_parts": {},
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "SideMirror_Left",
+  "RightSideMirror_GEN_VARIABLE": "SideMirror_Right"
+ },
+ "note": "PD5U = MW Corvette port + COPSPORT cop parts on the Police base (2026-11-15)",
+ "recentered": {
+  "SideMirror_Left": [
+   0.22,
+   -94.62,
+   73.09
+  ],
+  "SideMirror_Right": [
+   0.22,
+   94.62,
+   73.09
+  ]
+ }
+}

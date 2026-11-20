@@ -1,6 +1,8 @@
 #!/bin/sh
 # Build one car's meshes in the hidden full editor; retries the sporadic exit 127 (editor not launched, empty log).
 # usage: ue_build.sh <BUILD_NAME e.g. MW_M3GTR>
+# wheel materials: no body materials on rims/tyres, one paintable rim slot, paint kept off the tyre (tools/wheel_mats.py)
+python "$(dirname "$0")/wheel_mats.py" C:/Users/noust/mt-work/build/$1 | tail -1
 for try in 1 2 3; do
   PSCAR_BUILD_DIR=C:/Users/noust/mt-work/build/$1 PSCAR_QUIT=1 /c/UE/UE_5.5/Engine/Binaries/Win64/UnrealEditor.exe C:/UE/Projects/MotorTown/MotorTown.uproject -ExecutePythonScript="C:/UE/Projects/MotorTown/Scripts/build_car.py" -unattended -nop4 -nosplash -RenderOffscreen > /c/Users/noust/mt-work/build/$1_build.log 2>&1
   rc=$?

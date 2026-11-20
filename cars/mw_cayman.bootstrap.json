@@ -1,0 +1,380 @@
+{
+ "base_vehicle": "Fortem",
+ "default_slot": "Bottom",
+ "final_slot_names": {
+  "Paint": "Body",
+  "Glass": "Windows",
+  "Tex_ELISE_HEADLIGHT": "HeadLight",
+  "Tex_ELISE_BRAKELIGHT": "TailLight",
+  "Tex_ELISE_TIRE": "Wheel_01",
+  "Signal_L_F": "LeftSignalLight",
+  "Signal_R_F": "RightSignalLight",
+  "Signal_L_R": "LeftSignalLight",
+  "Signal_R_R": "RightSignalLight",
+  "Signal_L_V": "ReverseLight",
+  "Signal_R_V": "ReverseLight"
+ },
+ "blueprint": {
+  "seats": {
+   "DriverSeat_GEN_VARIABLE": [
+    -26,
+    -25,
+    0
+   ],
+   "PassengerSeat1_GEN_VARIABLE": [
+    -26,
+    25,
+    0
+   ]
+  },
+  "cockpit_camera": [
+   -29,
+   -25,
+   79
+  ],
+  "components": {
+   "RoomMirror_GEN_VARIABLE": [
+    24,
+    0,
+    90
+   ],
+   "FrontDomeLightSlot_GEN_VARIABLE": [
+    -20,
+    0,
+    94
+   ],
+   "HeadLight_Left_GEN_VARIABLE": [
+    151,
+    -63,
+    47
+   ],
+   "HeadLight_Right_GEN_VARIABLE": [
+    151,
+    63,
+    47
+   ],
+   "BlinkerLight_01_GEN_VARIABLE": [
+    177,
+    40,
+    38
+   ],
+   "BlinkerLight_02_GEN_VARIABLE": [
+    177,
+    -40,
+    38
+   ],
+   "TaliLight_01_GEN_VARIABLE": [
+    -184,
+    -56,
+    60
+   ],
+   "TaliLight_02_GEN_VARIABLE": [
+    -184,
+    56,
+    60
+   ],
+   "BlinkerLight_03_GEN_VARIABLE": [
+    -186,
+    40,
+    61
+   ],
+   "BlinkerLight_04_GEN_VARIABLE": [
+    -186,
+    -40,
+    61
+   ]
+  },
+  "component_rotations": {
+   "RoomMirror_GEN_VARIABLE": [
+    4.4,
+    12.5,
+    0
+   ],
+   "LeftSideMirror_GEN_VARIABLE": [
+    -4.6,
+    8.2,
+    0
+   ],
+   "RightSideMirror_GEN_VARIABLE": [
+    -3.3,
+    -0.0,
+    0
+   ]
+  },
+  "keep_body_materials": 1,
+  "body_mass": 884
+ },
+ "mirror_components": {
+  "LeftSideMirror_GEN_VARIABLE": "LeftSideMirror",
+  "RightSideMirror_GEN_VARIABLE": "LeftSideMirror:mirror"
+ },
+ "mirror_meshes": {
+  "RightSideMirror_GEN_VARIABLE": "RightSideMirror"
+ },
+ "strip_part_slots": [],
+ "wheel_part": true,
+ "collision_boxes": [
+  {
+   "center": [
+    0,
+    0,
+    38
+   ],
+   "size": [
+    372,
+    165,
+    46
+   ]
+  },
+  {
+   "center": [
+    -15,
+    0,
+    80
+   ],
+   "size": [
+    140,
+    125,
+    38
+   ]
+  }
+ ],
+ "car": "MW_CAYMAN",
+ "display_name": "Porsche Cayman S (Most Wanted)",
+ "prefix": "CAYMANS",
+ "geometry_dir": "~/nfs-work/db/mwr/CAYMANS/geo",
+ "texture_dir": "~/nfs-work/db/mwr/CAYMANS/tex/textures",
+ "out_dir": "~/mt-work/build/MW_CAYMAN/meshes",
+ "cost": 100000,
+ "wheel_display_name": "Caymans Stock",
+ "source_scale": 100.0,
+ "texture_slots": {
+  "0x65FF171E": "Paint",
+  "0xBEBC83C2": "Paint",
+  "0xE5F6A5ED": "Bottom",
+  "0x027FF2DC": "Bottom",
+  "0xCC772AFB": "Paint",
+  "0xCC7AEEF9": "Bottom",
+  "0xBF30889B": "Trim",
+  "0xE4CEA024": "Bottom",
+  "0xE4CEA025": "Bottom",
+  "0x4441A26B": "Trim",
+  "0x48A68363": "Trim",
+  "0x7B220DDF": "Glass",
+  "0xD195BE56": "Glass",
+  "0x1B049702": "Bottom",
+  "0x41751DC1": "Bottom",
+  "0x721AFF7C": "Bottom",
+  "0x4C95C6F8": "Bottom",
+  "0xE38806E3": "Bottom",
+  "0x4E8CF857": "Bottom",
+  "BODY_LEFT": "Paint",
+  "0x076B2CD6": "Tex_CAYMAN_MISC",
+  "0x09AB2696": "Tex_CAYMAN_BADGING",
+  "0x487EC448": "Tex_CAYMAN_BRAKELIGHT",
+  "0xC2C515D6": "Tex_CAYMAN_INTERIOR",
+  "0xCE1FFED0": "Tex_CAYMAN_HEADLIGHT"
+ },
+ "texture_sources": {
+  "Tex_CAYMAN_MISC": "0x076B2CD6",
+  "Tex_CAYMAN_BADGING": "0x09AB2696",
+  "Tex_CAYMAN_BRAKELIGHT": "0x487EC448",
+  "Tex_CAYMAN_INTERIOR": "0xC2C515D6",
+  "Tex_CAYMAN_HEADLIGHT": "0xCE1FFED0"
+ },
+ "meshes": {
+  "Body": {
+   "parts": [
+    "BASE",
+    "KIT00_BODY",
+    {
+     "part": "KIT00_FRONT_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_FRONT_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_INTERIOR",
+    "KIT00_LEFT_HEADLIGHT",
+    "KIT00_LEFT_HEADLIGHT_GLASS",
+    "KIT00_LEFT_SIDE_MIRROR",
+    {
+     "part": "KIT00_REAR_LEFT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_RIGHT_WINDOW",
+     "slot": "Glass"
+    },
+    {
+     "part": "KIT00_REAR_WINDOW",
+     "slot": "Glass"
+    },
+    "KIT00_RIGHT_HEADLIGHT",
+    "KIT00_RIGHT_HEADLIGHT_GLASS",
+    "KIT00_RIGHT_SIDE_MIRROR"
+   ]
+  },
+  "Wheel_L": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "offset": [
+      0,
+      11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  },
+  "Wheel_R": {
+   "parts": [
+    {
+     "part": "KIT00_FRONT_TIRE",
+     "mirror": true,
+     "offset": [
+      0,
+      -11.0,
+      0
+     ]
+    }
+   ],
+   "slot_rename": {
+    "Trim": "Bottom"
+   }
+  }
+ },
+ "mesh_names": {
+  "Wheel_L": "MW_CAYMAN_R",
+  "Wheel_R": "MW_CAYMAN_L",
+  "SteeringWheel": "MW_CAYMAN"
+ },
+ "wheels": {
+  "front_x": 140,
+  "rear_x": -130,
+  "half_track": 76,
+  "z": 20,
+  "rear_z": 20,
+  "radius": 32.3,
+  "auto_arches": true
+ },
+ "custom_parts": {
+  "engines": [
+   {
+    "row": "MW_CAYMAN_ENG",
+    "base_row": "SmallBlock_320HP",
+    "asset": "MW_CAYMAN_ENG",
+    "base_asset": "Cars/Parts/Engine/S58",
+    "display_name": "Caymans engine",
+    "mass": 220,
+    "cost": 30000,
+    "max_torque_nm": 338.8,
+    "max_rpm": 7300.0,
+    "curve": [
+     [
+      0.1096,
+      0.4002
+     ],
+     [
+      0.2208,
+      0.4642
+     ],
+     [
+      0.3322,
+      0.619
+     ],
+     [
+      0.4436,
+      0.8307
+     ],
+     [
+      0.5548,
+      1.0
+     ],
+     [
+      0.666,
+      0.9876
+     ],
+     [
+      0.7774,
+      0.9468
+     ],
+     [
+      0.8888,
+      0.9004
+     ],
+     [
+      1.0,
+      0.8531
+     ],
+     [
+      5.0,
+      0.15
+     ]
+    ],
+    "curve_note": "from db mw:CAYMANS; sound: cut GIN loops (GIN_POR_996.gin) or pick a More Tuning engine"
+   }
+  ],
+  "transmissions": [
+   {
+    "row": "MW_CAYMAN_6MT",
+    "base_row": "6SpeedSportsLP670",
+    "asset": "MW_CAYMAN_6MT",
+    "base_asset": "Cars/Parts/Transmission/Manual6SpeedSports_LP670",
+    "display_name": "6-Speed (Caymans)",
+    "cost": 8000,
+    "mass": 100,
+    "ratios": {
+     "R": -3.0,
+     "1": 3.309999942779541,
+     "2": 1.9500000476837158,
+     "3": 1.409999966621399,
+     "4": 1.1299999952316284,
+     "5": 0.9700000286102295,
+     "6": 0.8199999928474426
+    }
+   }
+  ]
+ },
+ "part_overrides": {
+  "CoolantRadiator": "SmallRadiator_110",
+  "Tire0": "PerformanceTire_46",
+  "Tire1": "PerformanceTire_46",
+  "Tire2": "PerformanceTire_46",
+  "Tire3": "PerformanceTire_46",
+  "BrakePad0": "BrakePad_Small_02",
+  "BrakePad1": "BrakePad_Small_02",
+  "BrakePad2": "BrakePad_Small_02",
+  "BrakePad3": "BrakePad_Small_02",
+  "Engine": "MW_CAYMAN_ENG",
+  "Transmission": "MW_CAYMAN_6MT",
+  "FinalDriveRatio": "105",
+  "Wheel0": "MW_CAYMAN",
+  "Wheel1": "MW_CAYMAN",
+  "Wheel2": "MW_CAYMAN",
+  "Wheel3": "MW_CAYMAN"
+ },
+ "performance_source": "db mw:CAYMANS: {'mass': 1340.0, 'final_gear': 3.880000114440918, 'red_line': 7000.0, 'max_rpm': 7300.0, 'peak_hp_est': 296}",
+ "TODO": [
+  "render parts (tools/render_car.py) and fix texture_slots / Body parts",
+  "steering wheel extract (front render)",
+  "dial sockets + gauge_faces (uv_to_3d)",
+  "lamps: signal rules (amber survey / uv_box)",
+  "mirrors (fortem_mirror_aim for shared-mesh bases)",
+  "seats + cockpit_camera + RoomMirror",
+  "stance from arch edges (skill: stance reference per base)",
+  "sockets: exhaust / RearWing",
+  "kits: add_body_kits(_mw).py",
+  "skins (vinyl_check 0.88)",
+  "engine sound",
+  "dealer bay (user F6)"
+ ]
+}

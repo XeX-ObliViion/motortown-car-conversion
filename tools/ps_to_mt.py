@@ -15,10 +15,21 @@ WHEEL_MESH_SCALE = 0.6466   # 32.2 cm (ProStreet/MW tyre) / 49.8 cm (game wheel 
 _COINCIDENT_CACHE = {}       # drop_coincident_with reference surfaces, by option
 
 
+MAT_HASH = {}   # material name -> its effect's texture hash (see load_dae)
+
+
 def load_dae(path):
     """-> list of (material_texture_hash, [((pos,nrm,uv) x3) ...])"""
     root = ET.parse(path).getroot()
     mats = [m.get("name", "").replace("TextureMTL-", "") for m in root.iterfind(".//c:material", NS)]
+    # named materials (newer exports: "BODY_TOP") also remember their effect's texture hash, so hash-keyed specs
+    # still find their slot (Remaster Supra/Elise came out with black paint and no textures, 2026-11-06)
+    fx_ = {e.get("id"): (re.findall(r"texture-(0x[0-9A-Fa-f]+)", ET.tostring(e, encoding="unicode")) or [None])[0]
+           for e in root.iterfind(".//c:effect", NS)}
+    for m_, n_ in zip(root.iterfind(".//c:material", NS), mats):
+        h_ = fx_.get(m_.find("c:instance_effect", NS).get("url", "#")[1:]) if m_.find("c:instance_effect", NS) is not None else None
+        if h_ and not n_.startswith("0x"):
+            MAT_HASH[n_] = h_
     if any(mats.count(m) > 1 or m.startswith("Material") for m in mats if not m.startswith("0x")):
         # modder cars (Remaster Diablo): generic names ("Material", repeated) -> key by the effect's texture hash
         fx = {e.get("id"): (re.findall(r"texture-(0x[0-9A-Fa-f]+)", ET.tostring(e, encoding="unicode")) or ["?"])[0]
@@ -95,6 +106,9 @@ def zone_depth(z_, q, tol):
     return min(z_[2] - rr, abs(q[1]) - z_[3])
 
 
+_MASK_CACHE = {}
+
+
 def load_src(geo, prefix, pname, lod, opts):
     """load_dae for a part, honouring per-part source options (Most Wanted pieces on a ProStreet car):
     "geo" (another export dir), "src_scale" (that game's DAE scale) and "xform" {"s": [sx,sy,sz], "t": [tx,ty,tz]}, a
@@ -114,13 +128,29 @@ def load_src(geo, prefix, pname, lod, opts):
     if rz:
         import math
         cz, sz_ = math.cos(math.radians(rz)), math.sin(math.radians(rz))
+    ry = (xf or {}).get("rot_y")             # {deg, pivot [x, z] cm}: swing a part round an axle (AC front calipers -> top of the disc)
+    if ry:
+        import math
+        cy_, sy_ = math.cos(math.radians(ry["deg"])), math.sin(math.radians(ry["deg"]))
+        px_, pz_ = ry["pivot"]
+    def rot_y(x, z, piv=True):
+        x0, z0 = (x - px_, z - pz_) if piv else (x, z)
+        x1, z1 = x0 * cy_ + z0 * sy_, -x0 * sy_ + z0 * cy_
+        return (x1 + px_, z1 + pz_) if piv else (x1, z1)
     def mp(p):
         q = [p[0] * ss, -p[1] * ss, p[2] * ss]
         if rz:
             q = [q[0] * cz - q[1] * sz_, q[0] * sz_ + q[1] * cz, q[2]]
+        if ry:
+            q[0], q[2] = rot_y(q[0], q[2])
         q = [q[k] * s[k] + t[k] for k in range(3)]
         return (q[0] / PS_SCALE, -q[1] / PS_SCALE, q[2] / PS_SCALE)
-    return [(tex, [tuple((mp(cn[0]),) + tuple(cn[1:]) for cn in tri) for tri in tris]) for tex, tris in groups]
+    def mn(n):
+        if not ry:
+            return n
+        x, z = rot_y(n[0], n[2], False)
+        return (x, n[1], z)
+    return [(tex, [tuple((mp(cn[0]), mn(cn[1])) + tuple(cn[2:]) for cn in tri) for tri in tris]) for tex, tris in groups]
 
 
 def build(spec):
@@ -150,15 +180,16 @@ def build(spec):
                     continue
                 if gi in opts.get("skip_groups", []):                # ...and leave them out of the housing
                     continue
-                slot = force or tex_slot.get(tex, default_slot)
+                slot = force or tex_slot.get(tex) or tex_slot.get(MAT_HASH.get(tex, ""), default_slot)
                 # overlay_textures {hash: {base, slot, parts, lift}}: MW draws some atlases additively over the paint
                 # (993 RWB crest/RWB badging: black = no effect). Those groups render as the base slot (Paint) plus a
                 # copy lifted along the normal into a masked overlay slot (alpha from luminance, see write_textures)
                 ov = spec.get("overlay_textures", {}).get(tex)
                 ovb = None
-                if ov and not force and pname in ov.get("parts", [pname]):
+                if ov and not force and pname in ov.get("parts", [pname]) and mesh_name in ov.get("meshes", [mesh_name]):
                     slot = ov["base"]
-                    ovb = slots.setdefault(ov["slot"], {"positions": [], "normals": [], "uvs": []})
+                    # slot_by_mesh: one source paint layer, a different livery texture per mesh (S550 livery parts)
+                    ovb = slots.setdefault(ov.get("slot_by_mesh", {}).get(mesh_name, ov["slot"]), {"positions": [], "normals": [], "uvs": []})
                 bucket = slots.setdefault(slot, {"positions": [], "normals": [], "uvs": []})
                 nf = opts.get("normal_filter")   # keep only triangles whose average normal[axis] is within [min, max]
                 dc = opts.get("drop_coincident_with")
@@ -594,6 +625,10 @@ def build(spec):
                         cx = sum(to_mt(cn[0])[0] for cn in corners) / 3
                         if not (xr[0] <= cx <= xr[1]):
                             continue
+                    if opts.get("box"):   # keep only triangles centred in [x0,y0,z0,x1,y1,z1] (a cabin taken from a twin)
+                        cm_ = [sum(to_mt(cn[0], mirror, offset)[k] for cn in corners) / 3 for k in range(3)]
+                        if not all(opts["box"][k] <= cm_[k] <= opts["box"][k + 3] for k in range(3)):
+                            continue
                     if nf:
                         nv = sum(nrm_mt(cn[1], mirror)[nf.get("axis", 0)] for cn in corners) / 3
                         if nv < nf.get("min", -9) or nv > nf.get("max", 9):
@@ -627,12 +662,61 @@ def build(spec):
                 for k in dst: dst[k] += src[k]
         for k in mdef.get("drop_slots", []):   # e.g. the tyre on a wheel: Motor Town draws its own tyre around the rim
             slots.pop(k, None)
+        cb = mdef.get("clip_boxes")
+        if cb:
+            # clip_boxes [[x0,y0,z0,x1,y1,z1], ...] + clip_mode keep|drop: cut triangles exactly at the box faces. One-piece
+            # bodies whose big triangles run across the door seams (MW Remaster R34) can't be split by whole triangles:
+            # keep = the pieces inside any box (a door), drop = the exact remainder (the body), so the two fit seamlessly
+            def lerp(A, B, t):
+                return tuple([A[k][i] + t * (B[k][i] - A[k][i]) for i in range(len(A[k]))] for k in range(3))
+            def split(poly, ax, val, keep_ge):
+                fs = [(q[0][ax] - val) * (1 if keep_ge else -1) for q in poly]
+                if min(fs) >= 0:
+                    return poly, []        # wholly inside (incl. lying in the plane): never copied to both sides
+                if max(fs) <= 0:
+                    return [], poly
+                ins, outs = [], []
+                for k in range(len(poly)):
+                    A, B = poly[k], poly[(k + 1) % len(poly)]
+                    fa, fb = A[0][ax] - val, B[0][ax] - val
+                    if not keep_ge:
+                        fa, fb = -fa, -fb
+                    if fa >= 0:
+                        ins.append(A)
+                    if fa <= 0:            # a corner on the plane belongs to both pieces (lost roof area otherwise, R34)
+                        outs.append(A)
+                    if fa * fb < 0:
+                        X = lerp(A, B, fa / (fa - fb)); ins.append(X); outs.append(X)
+                return ins, outs
+            def tris_of(poly):
+                return [(poly[0], poly[k], poly[k + 1]) for k in range(1, len(poly) - 1)] if len(poly) >= 3 else []
+            for b in slots.values():
+                pieces = [tuple((b["positions"][i + j], b["normals"][i + j], b["uvs"][i + j]) for j in range(3))
+                          for i in range(0, len(b["positions"]), 3)]
+                inside_all = []
+                for bx in cb:
+                    rest = []
+                    for tri in pieces:
+                        poly, outside = list(tri), []
+                        for ax, val, ge in ((0, bx[0], True), (0, bx[3], False), (1, bx[1], True), (1, bx[4], False), (2, bx[2], True), (2, bx[5], False)):
+                            poly, o = split(poly, ax, val, ge)
+                            outside += tris_of(o)
+                            if len(poly) < 3:
+                                poly = []; break
+                        inside_all += tris_of(poly); rest += outside
+                    pieces = rest
+                mode = mdef.get("clip_mode", "keep")   # split: keep both, cut at the box faces (lamp sections for uv rules)
+                res = inside_all if mode == "keep" else inside_all + pieces if mode == "split" else pieces
+                b["positions"] = [list(v[0]) for t in res for v in t]
+                b["normals"] = [list(v[1]) for t in res for v in t]
+                b["uvs"] = [list(v[2]) for t in res for v in t]
         for box in mdef.get("drop_boxes", []):   # remove source parts the game supplies itself, e.g. its own room mirror
             lo, hi = box[:3], box[3:]
             for b in slots.values():
                 keep = {k: [] for k in b}
                 for i in range(0, len(b["positions"]), 3):
-                    if not all(all(lo[a] <= b["positions"][i + j][a] <= hi[a] for a in range(3)) for j in range(3)):
+                    inside_ = (lambda q: any(all(bb[a] <= q[a] <= bb[a + 3] for a in range(3)) for bb in mdef["drop_boxes"]))                         if mdef.get("boxes_union") else (lambda q: all(lo[a] <= q[a] <= hi[a] for a in range(3)))
+                    if not all(inside_(b["positions"][i + j]) for j in range(3)):
                         for k in b:
                             keep[k] += b[k][i:i + 3]
                 b.update(keep)
@@ -646,7 +730,9 @@ def build(spec):
             keep = {k: [] for k in b}
             n0 = len(b["positions"]) // 3
             for i in range(0, len(b["positions"]), 3):
-                if not all(u0 <= b["uvs"][i + j][0] <= u1 and v0 <= b["uvs"][i + j][1] <= v1 for j in range(3)):
+                bx_ = db.get("box")   # optional car-space box as well (C6 hood lip: same art as faces elsewhere)
+                inb = not bx_ or all(bx_[k] <= b["positions"][i + j][k] <= bx_[k + 3] for j in range(3) for k in range(3))
+                if not (inb and all(u0 <= b["uvs"][i + j][0] <= u1 and v0 <= b["uvs"][i + j][1] <= v1 for j in range(3))):
                     for k in b:
                         keep[k] += b[k][i:i + 3]
             b.update(keep)
@@ -656,8 +742,10 @@ def build(spec):
             for b in slots.values():
                 keep = {k: [] for k in b}
                 for i in range(0, len(b["positions"]), 3):
-                    if any(all(all(bx[a] <= b["positions"][i + j][a] <= bx[a + 3] for a in range(3)) for j in range(3))
-                           for bx in kb):
+                    # boxes_union: a corner may sit in any of the boxes (a door outline made of several boxes, MW R34)
+                    if (all(any(all(bx[a] <= b["positions"][i + j][a] <= bx[a + 3] for a in range(3)) for bx in kb) for j in range(3))
+                            if mdef.get("boxes_union") else
+                            any(all(all(bx[a] <= b["positions"][i + j][a] <= bx[a + 3] for a in range(3)) for j in range(3)) for bx in kb)):
                         for k in b:
                             keep[k] += b[k][i:i + 3]
                 b.update(keep)
@@ -743,6 +831,76 @@ def build(spec):
                         b["positions"].append(list(b["positions"][i + j]))
                         b["normals"].append([-v for v in b["normals"][i + j]])
                         b["uvs"].append(list(b["uvs"][i + j]))
+        isk = mdef.get("inner_skin")
+        if isk:
+            # inner_skin {boxes [[x0,|y|0,z0,x1,|y|1,z1]], slot}: reversed copies of the outer panels in the boxes (both
+            # sides), so from inside the cabin the door tops, the gap ahead of the door card and the mirror backs show a
+            # dark inner surface instead of a hole (single-sided MW skin, culled from behind; Corvette 2026-11-06)
+            dst = slots.setdefault(isk.get("slot", "Bottom"), {"positions": [], "normals": [], "uvs": []})
+            n_add = 0
+            n0 = {sl: len(b["positions"]) for sl, b in slots.items()}   # the dst slot's own faces count too, not its new copies
+            for sl, b in list(slots.items()):
+                if sl == "Glass":
+                    continue
+                for i in range(0, n0[sl], 3):
+                    c = [sum(b["positions"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                    if not any(bx[0] <= c[0] <= bx[3] and bx[1] <= abs(c[1]) <= bx[4] and bx[2] <= c[2] <= bx[5] for bx in isk["boxes"]):
+                        continue
+                    nf_ = [sum(b["normals"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                    ln_ = sum(x * x for x in nf_) ** 0.5 or 1
+                    for j in (0, 2, 1):   # 0.5 cm inward: an exactly coincident reversed copy did not show in game
+                        dst["positions"].append([b["positions"][i + j][k] - nf_[k] / ln_ * isk.get("inset", 0.5) for k in range(3)])
+                        dst["normals"].append([-v for v in b["normals"][i + j]]); dst["uvs"].append(list(isk.get("uv", [0.5, 0.5])))
+                    n_add += 1
+            print("inner skin on %s: %d tris" % (mesh_name, n_add))
+        for ub_ in mdef.get("uv_fill_boxes", []):
+            # {slot, box [x0,|y|0,z0,x1,|y|1,z1], uv, min_lum}: faces of that slot in the box whose texel is brighter
+            # than min_lum are moved to one texel (PS C6 door-card tops sampled a white patch: choppy white shards)
+            from PIL import Image as _Im
+            b = slots.get(ub_["slot"])
+            tp = os.path.join(os.path.dirname(spec["out_dir"]), "textures", ub_["slot"][4:] + ".png")
+            if not b or not os.path.exists(tp):
+                continue
+            im_ = _Im.open(tp).convert("L"); w_, h_ = im_.size; bx = ub_["box"]; n_f = 0
+            for i in range(0, len(b["positions"]), 3):
+                c = [sum(b["positions"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                if not (bx[0] <= c[0] <= bx[3] and bx[1] <= abs(c[1]) <= bx[4] and bx[2] <= c[2] <= bx[5]):
+                    continue
+                uu = [sum(b["uvs"][i + j][k] for j in range(3)) / 3 for k in range(2)]
+                if im_.getpixel((int(uu[0] % 1 * w_) % w_, int((1 - uu[1]) % 1 * h_) % h_)) > ub_.get("min_lum", 150):
+                    for j in range(3):
+                        b["uvs"][i + j] = list(ub_["uv"])
+                    n_f += 1
+            print("uv_fill %s: %d faces" % (ub_["slot"], n_f))
+        def _uv_in(us, ub):   # face centroid uv in [u0,v0,u1,v1] (PD1U visor bar: one light colour per uv cell)
+            uu = [sum(x[k] for x in us) / 3 for k in range(2)]
+            return ub[0] <= uu[0] <= ub[2] and ub[1] <= uu[1] <= ub[3]
+        def _face_out(ps, c):
+            # face normal points away from the centreline (seen from outside the car): Clio pillar fill shows black outside
+            u = [ps[1][k] - ps[0][k] for k in range(3)]; v = [ps[2][k] - ps[0][k] for k in range(3)]
+            return (u[2] * v[0] - u[0] * v[2]) * c[1] > 0
+        for rb in mdef.get("recolor_boxes", []):
+            # {from, to, uv, box [x0,|y|0,z0,x1,|y|1,z1]}: faces of one slot in the box move to another slot at one texel
+            # (MW C6: Bottom = M_Body_Bottom renders beige; its cabin-side lips at the hatch corners showed light)
+            b = slots.get(rb["from"])
+            if not b:
+                continue
+            dst = slots.setdefault(rb["to"], {"positions": [], "normals": [], "uvs": []}); keep = {k: [] for k in b}; bx = rb["box"]; n_r = 0
+            for i in range(0, len(b["positions"]), 3):
+                c = [sum(b["positions"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                ou = rb.get("only_uv")   # only faces sitting on this one texel (the inner_skin's black copies)
+                if bx[0] <= c[0] <= bx[3] and bx[1] <= abs(c[1]) <= bx[4] and bx[2] <= c[2] <= bx[5] and (
+                        not ou or all(abs(b["uvs"][i + j][0] - ou[0]) < 1e-3 and abs(b["uvs"][i + j][1] - ou[1]) < 1e-3 for j in range(3))) and (
+                        not rb.get("outward_only") or _face_out(b["positions"][i:i + 3], c)) and (
+                        not rb.get("side") or c[1] * rb["side"] > 0) and (   # side -1 = car's left only
+                        not rb.get("uv_box") or _uv_in(b["uvs"][i:i + 3], rb["uv_box"])):
+                    dst["positions"] += b["positions"][i:i + 3]; dst["normals"] += b["normals"][i:i + 3]
+                    dst["uvs"] += [list(rb["uv"])] * 3; n_r += 1
+                else:
+                    for k in b:
+                        keep[k] += b[k][i:i + 3]
+            slots[rb["from"]] = keep
+            print("recolor %s -> %s: %d faces" % (rb["from"], rb["to"], n_r))
         mi = mdef.get("min_island")
         if mi:
             # trimmed kit shells (x_range / drop_coincident_with / drop_on_surface) leave loose fragments: teeth along
@@ -814,6 +972,39 @@ def build(spec):
                 b.update(keep)
             for k in [k for k, b in slots.items() if not b["positions"]]:
                 slots.pop(k)
+        if mesh_name.startswith("Wheel_") and spec.get("wheel_align"):
+            # AC wheels are modelled with static camber (Silverado/F40 0.5-0.9 deg, tyre and rim alike), so they sway side to
+            # side when the game spins them about Y (user 2026-11-19). Measure the tilt from the tyre SIDEWALLS (outer and
+            # inner face, per-angle lateral extremes at 0.75-0.92 R, order-1 fit; the tread pattern misleads a crown fit
+            # and a non-rigid "true-up" made it worse) and rotate the whole wheel rigidly about the hub. Two passes.
+            import numpy as np
+            for _pass in range(2):
+                allp = np.array([p for b in slots.values() for p in b["positions"]], float)
+                m = (allp.min(0) + allp.max(0)) / 2
+                X, Y, Z = allp[:, 0] - m[0], allp[:, 1], allp[:, 2] - m[2]
+                r, th = np.hypot(X, Z), np.arctan2(Z, X)
+                R = r.max(); sel = (r > 0.75 * R) & (r < 0.92 * R)
+                bins = np.floor((th + np.pi) / (2 * np.pi) * 36).astype(int)
+                rows = [(-np.pi + (k + 0.5) * 2 * np.pi / 36, Y[q].max() + Y[q].min()) for k in range(36)
+                        for q in [sel & (bins == k)] if q.sum() > 5]
+                t_ = np.array([a_ for a_, _ in rows]); v_ = np.array([b_ for _, b_ in rows]) / 2
+                c_ = np.linalg.lstsq(np.column_stack([np.ones_like(t_), np.cos(t_), np.sin(t_)]), v_, rcond=None)[0]
+                rr = 0.835 * R
+                ax = np.array([-c_[1] / rr, 1.0, -c_[2] / rr]); ax /= np.linalg.norm(ax)   # y = c1 x/rr + c2 z/rr plane normal
+                v = np.cross(ax, [0, 1, 0]); s_, cc = np.linalg.norm(v), ax[1]
+                K = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
+                Rm = np.eye(3) + K + K @ K * ((1 - cc) / (s_ * s_)) if s_ > 1e-9 else np.eye(3)
+                ctr = np.array([m[0], c_[0], m[2]])
+                for b in slots.values():
+                    b["positions"] = [list(Rm @ (np.array(p) - ctr) + ctr) for p in b["positions"]]
+                    b["normals"] = [list(Rm @ np.array(n)) for n in b["normals"]]
+                if _pass == 0:
+                    first = (np.degrees(np.arctan(c_[1] / rr)), np.degrees(np.arctan(c_[2] / rr)))
+            allp = np.array([p for b in slots.values() for p in b["positions"]], float)
+            m = (allp.min(0) + allp.max(0)) / 2
+            for b in slots.values():
+                b["positions"] = [[p[0] - m[0], p[1], p[2] - m[2]] for p in b["positions"]]
+            print("wheel_align %s: toe %.2f camber %.2f deg removed (rigid), hub shift x %.2f z %.2f" % (mesh_name, first[0], first[1], m[0], m[2]))
         if mesh_name.startswith("Wheel_"):
             # Motor Town wheel components are scaled down (game rims are modelled ~50 cm in radius; Zino 0.61, Cora
             # 0.665): ours use WHEEL_MESH_SCALE so the game's rims fit at ~32 cm, and our own wheels are pre-enlarged
@@ -827,6 +1018,9 @@ def build(spec):
             allp = [p for b in slots.values() for p in b["positions"]]
             if allp:
                 c = [sum(p[k] for p in allp) / len(allp) for k in range(3)]
+                # recenter_shift [dx,dy,dz] (car cm): the component (and the game's mirror capture at its origin) moves,
+                # the glass stays put; Gallardo: the capture sat on the glass, looking straight down the mirror stalk
+                c = [c[k] + mdef.get("recenter_shift", [0, 0, 0])[k] for k in range(3)]
                 for b in slots.values():
                     b["positions"] = [[p[0] - c[0], p[1] - c[1], p[2] - c[2]] for p in b["positions"]]
                 spec.setdefault("recentered", {})[mesh_name] = [round(v, 2) for v in c]
@@ -858,6 +1052,34 @@ def build(spec):
                     l_ = math.sqrt(sum(v * v for v in acc)) or 1.0
                     out.append([v / l_ for v in acc])
                 b_["normals"] = out
+        so = mdef.get("smooth_outline")
+        if so:
+            # {segments, power}: replace a low-poly flat piece (Remaster Elise mirror glass: an 8-corner polygon whose
+            # reflection looked jagged, user 2026-11-06) with a smooth superellipse fan of the same plane and extent
+            import numpy as np
+            for b_ in slots.values():
+                P_ = np.array(b_["positions"], float)
+                if len(P_) < 3:
+                    continue
+                c_ = P_.mean(0); nrm_ = np.array(b_["normals"], float).mean(0); nrm_ /= np.linalg.norm(nrm_) or 1
+                Q = P_ - c_; Q -= np.outer(Q @ nrm_, nrm_)
+                ax1 = np.linalg.svd(Q, full_matrices=False)[2][0]; ax2 = np.cross(nrm_, ax1)
+                a, bq = np.abs(Q @ ax1).max(), np.abs(Q @ ax2).max()
+                pw = so.get("power", 2.6); seg = so.get("segments", 32); ring = []
+                for k in range(seg):
+                    t = 2 * np.pi * k / seg; ct, st = np.cos(t), np.sin(t)
+                    ring.append(c_ + ax1 * a * np.sign(ct) * abs(ct) ** (2 / pw) + ax2 * bq * np.sign(st) * abs(st) ** (2 / pw))
+                pos = []
+                for k in range(seg):
+                    tri = [c_, ring[k], ring[(k + 1) % seg]]
+                    if np.dot(np.cross(tri[1] - tri[0], tri[2] - tri[0]), nrm_) < 0:
+                        tri = [tri[0], tri[2], tri[1]]
+                    pos += [list(map(float, q)) for q in tri]
+                # keep the source winding convention (this pipeline's faces wind opposite to their stored normals)
+                e1 = P_[1] - P_[0]; e2 = P_[2] - P_[0]
+                if np.dot(np.cross(e1, e2), b_["normals"][0]) < 0:
+                    pos = [q for i in range(0, len(pos), 3) for q in (pos[i], pos[i + 2], pos[i + 1])]
+                b_["positions"] = pos; b_["normals"] = [list(map(float, nrm_))] * len(pos); b_["uvs"] = [[0.5, 0.5]] * len(pos)
         pu = mdef.get("planar_uv")
         if pu is not None:
             # e.g. side-mirror glass: the game stretches the live reflection over UV 0..1, so project the glass flat
@@ -888,13 +1110,20 @@ def build(spec):
                 # (S R^-1 S is a proper rotation, det +1: the winding stays)
         for sp in mdef.get("uv_split", []):
             # triangles of one slot whose UVs fall in a texture box (u0, row0, u1, row1; row = 1 - v) get their own
-            # slot, e.g. the instrument faces so they can glow
+            # slot, e.g. the instrument faces so they can glow. box3d [x0,y0,z0,x1,y1,z1] (car space) limits it to one
+            # place: MW C6 trims elsewhere reuse the dial art and glowed (user 2026-11-06)
             if sp["from"] not in slots:
                 continue
-            src = slots[sp["from"]]; keep = {k: [] for k in src}; take = slots.setdefault(sp["to"], {k: [] for k in src})
-            u0, r0, u1, r1 = sp["box"]
+            src = slots[sp["from"]]; keep = {k: [] for k in src}
+            # "drop": true removes the matched triangles (Heat RX-7 cluster glass: a grey plane in front of the dials,
+            # drawn with a glass shader in Heat, opaque here, user 2026-11-13: "the gauges still do not exist")
+            take = {k: [] for k in src} if sp.get("drop") else slots.setdefault(sp["to"], {k: [] for k in src})
+            u0, r0, u1, r1 = sp["box"]; b3 = sp.get("box3d")
             for i in range(0, len(src["uvs"]), 3):
                 inside = all(u0 <= src["uvs"][i + j][0] <= u1 and r0 <= 1 - src["uvs"][i + j][1] <= r1 for j in range(3))
+                if inside and b3:
+                    c = [sum(src["positions"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                    inside = all(b3[k] <= c[k] <= b3[k + 3] for k in range(3))
                 dst = take if inside else keep
                 for k in src:
                     dst[k] += src[k][i:i + 3]
@@ -1138,7 +1367,11 @@ def build(spec):
             n = {"Signal_L": 0, "Signal_R": 0}
             for i in range(0, len(src["positions"]), 3):
                 P3 = src["positions"][i:i + 3]; U3 = src["uvs"][i:i + 3]
-                ok = (not box or all(all(box[a] <= q[a] <= box[a + 3] for a in range(3)) for q in P3)) and                      (not ubox or all(ubox[0] <= q[0] % 1 <= ubox[2] and ubox[1] <= (1 - q[1]) % 1 <= ubox[3] for q in U3)) and                      (img is None or amber(U3))
+                if ubox and rule.get("uv_centroid"):   # faces spanning the lens edge: centroid test (overlay mask hides the rest)
+                    U3c = [[sum(q[0] for q in U3) / 3, sum(q[1] for q in U3) / 3]] * 3
+                else:
+                    U3c = U3
+                ok = (not box or all(all(box[a] <= q[a] <= box[a + 3] for a in range(3)) for q in P3)) and                      (not ubox or all(ubox[0] <= (q[0] if 0 <= q[0] <= 1 else q[0] % 1) <= ubox[2] and ubox[1] <= ((1 - q[1]) if 0 <= q[1] <= 1 else (1 - q[1]) % 1) <= ubox[3] for q in U3c)) and                      (img is None or amber(U3))
                 side = "Signal_L" if sum(q[1] for q in P3) < 0 else "Signal_R"
                 n[side] += ok
                 if ok and rule.get("copy"):
@@ -1175,6 +1408,11 @@ def build(spec):
                 ay = sb.get("abs_y")     # box y range applies to |y| (both sides)
                 inside = all(all(bx[a] <= (abs(src["positions"][i + j][a]) if ay and a == 1 else src["positions"][i + j][a]) <= bx[a + 3]
                                  for a in range(3)) for j in range(3))
+                if inside and "nx_max" in sb:   # only faces turned that way, e.g. a backing plate on the mirror glass
+                    q = src["positions"][i:i + 3]
+                    e1 = [q[1][a] - q[0][a] for a in range(3)]; e2 = [q[2][a] - q[0][a] for a in range(3)]
+                    n_ = [e1[1] * e2[2] - e1[2] * e2[1], e1[2] * e2[0] - e1[0] * e2[2], e1[0] * e2[1] - e1[1] * e2[0]]
+                    inside = n_[0] <= sb["nx_max"] * (sum(v * v for v in n_) ** 0.5 or 1)
                 for k in src:
                     (dst if inside else keep)[k] += src[k][i:i + 3]
             slots[sb["from"]] = keep
@@ -1182,6 +1420,80 @@ def build(spec):
                 slots.pop(sb["to"], None)
             for k in [k for k in (sb["from"], sb["to"]) if k in slots and not slots[k]["positions"]]:
                 slots.pop(k)
+        for br in spec.get("bulb_rules", []):
+            # only the bulb lights (user 2026-11-13: "only the bulb should be lighting up in any light bar like this, it's
+            # not a backlit texture unless it's flat or low poly"): triangles of a lamp slot inside a car-space box whose
+            # texel passes a test move to the lamp slot; the rest of the reflector stays plain texture.
+            # test: {"mask": png, "ch": "r|g|b|a", "min": 0-255} or {"diffuse": png, "amber": true}; "{side}" = L/R by y
+            from PIL import Image as _I
+            if br["from"] not in slots:
+                continue
+            img_path = br.get("mask") or br.get("diffuse")
+            im_ = _MASK_CACHE.get(img_path)
+            if im_ is None:
+                im_ = _MASK_CACHE[img_path] = _I.open(os.path.expanduser(img_path)).convert("RGBA")
+            W_, H_ = im_.size; bx = br["box"]; ch = "rgba".index(br["ch"]) if br.get("ch") else None
+            src = slots[br["from"]]; keep = {k: [] for k in src}; moved = {}
+            for i in range(0, len(src["positions"]), 3):
+                c = [sum(src["positions"][i + j][k] for j in range(3)) / 3 for k in range(3)]
+                hit = all(bx[k] <= c[k] <= bx[k + 3] for k in range(3))
+                if hit:
+                    u = sum(src["uvs"][i + j][0] for j in range(3)) / 3; v = sum(src["uvs"][i + j][1] for j in range(3)) / 3
+                    p_ = im_.getpixel((int((u % 1.0) * (W_ - 1)), int(((1.0 - v) % 1.0) * (H_ - 1))))
+                    if br.get("amber"):
+                        hit = p_[0] > 150 and 60 < p_[1] < 170 and p_[2] < 90
+                    else:
+                        hit = p_[ch] >= br.get("min", 128)
+                to = br["to"].format(side="L" if c[1] < 0 else "R") if hit else None
+                dst = keep if to is None else moved.setdefault(to, {k: [] for k in src})
+                for k in src:
+                    dst[k] += src[k][i:i + 3]
+            slots[br["from"]] = keep
+            for to, d in moved.items():
+                tgt = slots.setdefault(to, {k: [] for k in src})
+                for k in d:
+                    tgt.setdefault(k, []).extend(d[k])
+            if moved:
+                print("bulb rule %s %s -> %s" % (mesh_name, br["from"], {k: len(v["positions"]) // 3 for k, v in moved.items()}))
+            if not slots[br["from"]]["positions"]:
+                slots.pop(br["from"])
+        for lm in spec.get("lamp_masks", []):
+            # NFS Heat lamp function masks (<car>_Light_*_E): A = turn signal, B = reverse, R = brake, G = running light
+            # (head/park at the front, tail glow at the rear). Each triangle of a lamp slot goes to the slot of the
+            # function its texel lights (UV centroid; DAE v = 1 - image row); unlit texels stay on the plain texture.
+            # Position boxes put the RX-7's tail lamps in the wrong slots (user 2026-11-13).
+            from PIL import Image as _I
+            mk = _MASK_CACHE.get(lm["mask"])
+            if mk is None:
+                mk = _MASK_CACHE[lm["mask"]] = _I.open(os.path.expanduser(lm["mask"])).convert("RGBA")
+            W_, H_ = mk.size; th = lm.get("threshold", 64); names = lm["slots"]
+            for frm in lm["from"]:
+                if frm not in slots:
+                    continue
+                src = slots[frm]; keep = {k: [] for k in src}; moved = {}
+                for i in range(0, len(src["positions"]), 3):
+                    u = sum(src["uvs"][i + j][0] for j in range(3)) / 3; v = sum(src["uvs"][i + j][1] for j in range(3)) / 3
+                    r_, g_, b_, a_ = mk.getpixel((int((u % 1.0) * (W_ - 1)), int(((1.0 - v) % 1.0) * (H_ - 1))))
+                    x_ = sum(src["positions"][i + j][0] for j in range(3)) / 3
+                    y_ = sum(src["positions"][i + j][1] for j in range(3)) / 3
+                    side, end = ("L" if y_ < 0 else "R"), ("F" if x_ > 0 else "R")
+                    if a_ >= th: to = names["turn"].format(side=side, end=end)
+                    elif b_ >= th: to = names["reverse"]
+                    elif r_ >= th: to = names["brake"]
+                    elif g_ >= th: to = names["run_front"] if end == "F" else names["run_rear"]
+                    else: to = None
+                    dst = keep if to is None else moved.setdefault(to, {k: [] for k in src})
+                    for k in src:
+                        dst[k] += src[k][i:i + 3]
+                slots[frm] = keep
+                for to, d in moved.items():
+                    tgt = slots.setdefault(to, {k: [] for k in src})
+                    for k in d:
+                        tgt.setdefault(k, []).extend(d[k])
+                if moved:
+                    print("lamp masks %s %s: %s, unlit %d" % (mesh_name, frm, {k: len(v["positions"]) // 3 for k, v in moved.items()}, len(keep["positions"]) // 3))
+                if not slots[frm]["positions"]:
+                    slots.pop(frm)
         gb = mdef.get("grille_backing") or spec.get("grille_backing")
         if gb:
             # a dark surface `depth` cm behind each grille face (MW mesh grilles: the openings behind them were empty,
@@ -1260,9 +1572,14 @@ def extract_meshes(spec):
             k = {"slot": sl["slot"], "positions": [], "normals": [], "uvs": []}
             t = {"slot": sl["slot"], "positions": [], "normals": [], "uvs": []}
             P = sl["positions"]
+            ub = e.get("uv_box")   # [u0, row0, u1, row1]: only faces using the wheel's own texture art (the
+            U = sl["uvs"]           # cylinder alone also took dash pieces behind a tilted wheel: MW Clio)
             for i in range(0, len(P), 3):
                 inside = all(math.hypot(P[i + j][1] - cy, P[i + j][2] - cz) <= e["radius"] and
                              e["x_range"][0] <= P[i + j][0] <= e["x_range"][1] for j in range(3))
+                if inside and ub:
+                    inside = sl["slot"] in e.get("uv_slots", [sl["slot"]]) and all(
+                        ub[0] <= U[i + j][0] <= ub[2] and ub[1] <= 1 - U[i + j][1] <= ub[3] for j in range(3))
                 dst = t if inside else k
                 for key in ("positions", "normals", "uvs"):
                     dst[key] += sl[key][i:i + 3]
@@ -1305,6 +1622,8 @@ def extract_meshes(spec):
                 sock["loc"] = [round(piv[k] + so[k], 2) for k in range(3)]
                 sock["rot"] = [-e["tilt_deg"], 0, 0]   # pitch down along the steering column
         json.dump({"name": e["from"], "slots": keep_slots}, open(path, "w"))
+        if e.get("discard"):   # the source wheel only gives the pivot/tilt; add_shapes builds a new one in its place
+            take_slots = []
         json.dump({"name": name, "slots": take_slots}, open(os.path.join(spec["out_dir"], name + ".json"), "w"))
         print("extracted %s from %s: %d tris, pivot (%.1f, %.1f, %.1f), radius %.1f" % (
             name, e["from"], len(allp) // 3, piv[0], piv[1], piv[2],
@@ -1358,8 +1677,10 @@ def place_mirror_sockets(spec):
             # aim like an adjusted real mirror: the driver's eye ray reflects to straight back, a little outward.
             # The mirror normal is parallel to (reflected - incoming); socket X = -normal (Zino convention).
             d = [c[k] - eye[k] for k in range(3)]; dl = math.sqrt(sum(v * v for v in d)); d = [v / dl for v in d]
-            out = spec.get("mirror_outward", 0.15) * (1 if c[1] > 0 else -1)
-            r = [-1.0, out, 0.0]; rl = math.sqrt(sum(v * v for v in r)); r = [v / rl for v in r]
+            side = lambda k, dflt: (spec.get(k, dflt).get(sock_name, dflt) if isinstance(spec.get(k), dict) else spec.get(k, dflt))
+            out = side("mirror_outward", 0.15) * (1 if c[1] > 0 else -1)   # per mirror: {socket: value}
+            # mirror_aim_z: reflected view tilt (+ = up; ~0.06 per 3.4 deg), e.g. a mirror showing mostly road
+            r = [-1.0, out, side("mirror_aim_z", 0.0)]; rl = math.sqrt(sum(v * v for v in r)); r = [v / rl for v in r]
             nn = [r[k] - d[k] for k in range(3)]; nl = math.sqrt(sum(v * v for v in nn))
             x = [-v / nl for v in nn]
         rot = [round(math.degrees(math.asin(max(-1, min(1, x[2])))), 2), round(math.degrees(math.atan2(x[1], x[0])), 2), 0]
@@ -1436,6 +1757,23 @@ def make_dashboard(spec):
             nl = n
         slots_out.append({"slot": "DashboardUpperMFD", "positions": quad, "normals": [nl] * 6, "uvs": uvs})
         print("dashboard MFD strip at %s (%sx%s cm)" % ([round(x, 1) for x in cen], mfd.get("width", 8), mfd.get("height", 1.6)))
+    for sc in dash.get("screens", []):
+        # digital dash: a flat quad (car space, facing the driver = -X, tilted back "tilt" deg) named after the game
+        # widget slot (TachoMeter / SpeedoMeter / FuelGauge / TempGauge / Dashboard_MFD_01); the game draws that widget on it
+        t = math.radians(sc.get("tilt", 0))
+        n = [-math.cos(t), 0.0, -math.sin(t)]; up = [-math.sin(t), 0.0, math.cos(t)]; right = [0.0, 1.0, 0.0]
+        cen = sc["center"]; w, h = sc["width"] / 2, sc["height"] / 2
+        P = lambda a, b: [cen[k] + a * w * right[k] + b * h * up[k] for k in range(3)]
+        quad = [P(-1, -1), P(-1, 1), P(1, -1), P(1, -1), P(-1, 1), P(1, 1)]
+        nl = n
+        if dash.get("parent_socket"):
+            parent = next(x for x in spec["sockets"]["Body"] if x["name"] == dash["parent_socket"])
+            quad = [to_parent_frame(q, [0, 0, 0], parent["loc"], parent.get("rot", [0, 0, 0]))[0] for q in quad]
+            nl = to_parent_frame([parent["loc"][k] + n[k] for k in range(3)], [0, 0, 0], parent["loc"], parent.get("rot", [0, 0, 0]))[0]
+        # json v=1 is the image top after import (the MFD strip's [0,1]-at-bottom showed the widgets upside down, user 2026-11-16)
+        slots_out.append({"slot": sc["slot"], "positions": quad, "normals": [nl] * 6,
+                          "uvs": [[0, 0], [0, 1], [1, 0], [1, 0], [0, 1], [1, 1]]})
+        print("dashboard screen %s at %s (%sx%s cm)" % (sc["slot"], cen, sc["width"], sc["height"]))
     json.dump({"name": "Dashboard", "slots": slots_out}, open(os.path.join(spec["out_dir"], "Dashboard.json"), "w"))
     socks = dash["sockets"]
     if dash.get("parent_socket"):
@@ -1544,6 +1882,9 @@ def write_objs(spec, to_obj):
                                      "size": [round(max(1.0, hi[k] - lo[k]), 2) for k in range(3)]}]
         if mesh_name in spec.get("sockets", {}):
             m["sockets"] = spec["sockets"][mesh_name]
+        red_ = spec.get("meshes", {}).get(mesh_name, {}).get("reduce") or spec.get("extract", {}).get(mesh_name, {}).get("reduce")
+        if red_:
+            m["reduce"] = red_   # LOD0 triangle fraction for UE's reducer (dense AC/Heat sources)
         meshes.append(m)
     return meshes
 
@@ -1655,8 +1996,12 @@ def tex_files(spec, name):
     ts = spec.get("texture_sources", {})
     h = ts.get(name) or ts.get("Tex_" + name)   # keyed by slot name, with or without "Tex_"
     if h:
+        if os.path.isfile(os.path.join(tex_dir(spec, name), h)):   # a plain file name (Assetto Corsa textures)
+            return [h]
         return [f for f in os.listdir(tex_dir(spec, name)) if f.upper().startswith(h.upper() + "_")]
-    return [f for f in os.listdir(tex_dir(spec, name)) if f.endswith("_" + name + ".dds")]
+    fs = os.listdir(tex_dir(spec, name))
+    # Heat exports a .png beside each .dds (its BC1/BC7 sRGB .dds formats aren't readable by PIL): prefer it
+    return [f for f in fs if f.endswith("_" + name + ".png")] or [f for f in fs if f.endswith("_" + name + ".dds")]
 
 
 def tex_dir(spec, name):
@@ -1705,6 +2050,17 @@ def write_skins(spec):
     print("skins: %d" % len(out))
     return out
 
+def rim_lip_png(build_dir):
+    """Rim packs: the lip / chrome parts used the generic chrome texture (not in the dumps) on the fixed Trim material,
+    so they stayed white when the rim was painted (user 2026-10-31). They get this plain silver texture on the paintable
+    material instead, renamed Wheel_02 = the rim rows' second colour picker (like the game's Stella / Mitage rims)."""
+    from PIL import Image
+    d = os.path.join(build_dir, "textures"); os.makedirs(d, exist_ok=True)
+    png = os.path.join(d, "RIMLIP.png")
+    Image.new("RGBA", (16, 16), (205, 206, 210, 255)).save(png)
+    return png.replace(chr(92), "/")
+
+
 def write_textures(spec):
     from PIL import Image
     out = {}
@@ -1733,13 +2089,15 @@ def write_textures(spec):
             # erase painted (red) needles inside a circle, so only the game's live needles show on the dial
             W, H = im.size
             cx, cy, r = patch["center"][0] * W, patch["center"][1] * H, patch["radius"] * W
-            fill = tuple(patch.get("fill", [18, 18, 20])) + (255,)
+            fill = tuple(patch.get("fill", [18, 18, 20]))
+            fill = fill if len(fill) == 4 else fill + (255,)   # 4 values: e.g. alpha 0 clears decal art (AC Gallardo)
             px = im.load()
-            for y in range(max(0, int(cy - r)), min(H, int(cy + r) + 1)):
+            y_end = min(H, int(cy + r) + 1, int(patch.get("max_row", 1.0) * H))   # max_row: spare art packed below
+            for y in range(max(0, int(cy - r)), y_end):
                 for x in range(max(0, int(cx - r)), min(W, int(cx + r) + 1)):
                     if (x - cx) ** 2 + (y - cy) ** 2 <= r * r:
                         R, G, B, A = px[x, y]
-                        if R > 100 and R > 1.7 * G and R > 1.7 * B:
+                        if patch.get("all") or (R > 100 and R > 1.7 * G and R > 1.7 * B):   # all: blank old dial art
                             px[x, y] = fill
         scale = spec.get("texture_upscale", {}).get(slot, 1)
         if slot in spec.get("ai_upscale", []):
@@ -1748,6 +2106,18 @@ def write_textures(spec):
             scale = max(1, scale // 4)
         if scale > 1:
             im = im.resize((im.width * scale, im.height * scale), Image.LANCZOS)
+        for rg in spec.get("texture_region_gain", {}).get(slot, []):
+            # darken one rectangle of an atlas (image coords 0..1): MW Diablo's light-grey cabin leather -> the real
+            # car's black interior, leaving the rest of the atlas (lamps, dash art) alone. After the upscale: ai_upscale works from the cached source file, not from im
+            from PIL import ImageEnhance
+            W, H = im.size
+            bx = (int(rg["box"][0] * W), int(rg["box"][1] * H), int(rg["box"][2] * W), int(rg["box"][3] * H))
+            part = im.crop(bx)
+            part = Image.merge("RGBA", ImageEnhance.Brightness(part.convert("RGB")).enhance(rg["gain"]).split() + (part.getchannel("A"),))
+            im.paste(part, bx[:2])
+        if spec.get("texture_paint", {}).get(slot):
+            import shapes
+            shapes.texture_paint(im, spec["texture_paint"][slot])
         style = spec.get("gauge_style", {})
         faces = [dict(style, **g) for g in spec.get("gauge_faces", {}).get(slot, [])]
         for g in faces:
@@ -1786,6 +2156,9 @@ def write_textures(spec):
                         if "face" in g:
                             fx, fy, fr = g["face"][0] * im.width, g["face"][1] * im.height, g["face"][2] * im.width
                             md.ellipse([fx - fr, fy - fr, fx + fr, fy + fr], fill=255)
+                    for fx, fy, fr in es.get("glow_circles", []):   # dials kept as source art (u, row, r): glow only
+                        fx, fy, fr = fx * im.width, fy * im.height, fr * im.width
+                        md.ellipse([fx - fr, fy - fr, fx + fr, fy + fr], fill=255)
                     glow.paste(im, (0, 0), mask)
                 gpng = os.path.join(tdir, tex_name + "_GLOW.png")
                 glow.save(gpng)
@@ -1839,6 +2212,8 @@ if __name__ == "__main__":
             spec[k] = os.path.expanduser(spec[k])
     print(json.dumps(build(spec), indent=1))
     extract_meshes(spec)
+    import shapes
+    shapes.add_shapes(spec)
     if "wheels" in spec:
         measure_arches(spec)
     make_dashboard(spec)
@@ -1859,6 +2234,9 @@ if __name__ == "__main__":
                "lamp_slots": spec.get("lamp_slots", {}),
                "paintable_texture_slots": spec.get("paintable_texture_slots", []),
                "masked_texture_slots": spec.get("masked_texture_slots", [])}
+        import redlens   # tail / brake lamps seen through a red lens (bare reflector textures, user 2026-11-18)
+        if not spec.get("no_red_lens"):   # lamp art with its own red/clear sections (MW Cayman): the copy reddened the clear parts
+            redlens.apply(car, os.path.dirname(spec["out_dir"]))
         with open(os.path.join(os.path.dirname(spec["out_dir"]), "car.json"), "w") as f:
             json.dump(car, f, indent=1)
         print("wrote car.json with %d meshes, %d textures" % (len(car["meshes"]), len(car["textures"])))
